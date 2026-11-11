@@ -103,7 +103,7 @@ Disadvantages:
 – No backstab multiplier.
 – May only distribute 20 skill points per level among thieving skills.~)
 	
-    briefdesc     = RESOLVE_STR_REF(~ARTIFICER: Lantanese artificers are master innovators and craftsmen, making up for their lack of combat or cloak-and-dagger skills with expert knowledge in use of arcane runes, deadly alchemical traps and metal automatons.~)
+    briefdesc     = RESOLVE_STR_REF(~奇械师：兰坦的奇械师是革新与巧作的宗师，他们以对奥术符文、致命的炼金陷阱与金属自动机械的精通，弥补了自身在战斗与暗行之术上的不足。~)
 	
 	// fallen = 0
 	
@@ -224,9 +224,9 @@ LAF ADD_KIT_EX
 	
 	visible = 0
 	
-    mixed         = RESOLVE_STR_REF(~Illusionist / Artificer~)
+    mixed         = RESOLVE_STR_REF(~幻术师／奇械师~)
 	
-    lower         = RESOLVE_STR_REF(~illusionist / artificer~)
+    lower         = RESOLVE_STR_REF(~幻术师／奇械师~)
 	
     help          = RESOLVE_STR_REF(~ILLUSIONIST/ARTIFICER: This character can use the abilities of a Mage and an Artificer, though Mage spells cannot be cast while wearing armor.
   
@@ -380,7 +380,7 @@ END
 
 COPY_EXISTING ~c0aukt1.spl~ ~override~
 
-      PRINT ~Installed Aura as an Illusionist / Artificer~
+      PRINT ~已将奥拉安装为幻术师／奇械师~
       END
       ACTION_IF ("auraclass" = 3) THEN BEGIN	
 COPY ~%MOD_FOLDER%/2da/cleric~ ~override~
@@ -412,9 +412,9 @@ LAF ADD_KIT_EX
 	
 	visible = 0
 	
-    mixed         = RESOLVE_STR_REF(~Priestess / Artificer~)
+    mixed         = RESOLVE_STR_REF(~女祭司／奇械师~)
 	
-    lower         = RESOLVE_STR_REF(~priestess / artificer~)
+    lower         = RESOLVE_STR_REF(~女祭司／奇械师~)
 	
     help          = RESOLVE_STR_REF(~PRIESTESS/ARTIFICER: This character can use the abilities of a Priestess and an Artificer, though weapons are restricted to only those allowed by the Priestess's ethos. Thieving skills cannot be used while wearing more than studded leather armor.
   
@@ -580,9 +580,9 @@ Disadvantages:
 END
 
 COPY_EXISTING ~c0aucl1.spl~ OVERRIDE
-SAY NAME1 ~Spiritual Blessing~
-SAY UNIDENTIFIED_DESC ~Spiritual Blessing
-The priestess invokes a prayer to heavenly spirits, bestowing a random blessing upon the target. There is a 25% chance of gaining +2 THAC0 and +10% increased damage, a 25% chance of gaining +2 to Luck and Saving Throws, and a 25% chance of gaining +2 to Armor Class and +10% resistance to all damage. Regardless of the blessing, the target is also healed for ten hit points and cured of all diseases and poisons. However, the fickle nature of spirits means there is a 25% chance that no blessing is granted at all. From 12th level onwards, Spiritual Blessing is cast in a 15-ft. radius around the priestess, affecting all allies.~
+SAY NAME1 ~灵性祝福~
+SAY UNIDENTIFIED_DESC ~灵性祝福
+女祭司向天界诸灵祈祷，为受术者随机赐下一道祝福。有 25% 几率获得 THAC0+2 与伤害+10%；25% 几率获得幸运+2 与豁免检定+2；25% 几率获得防御等级+2 与全类型伤害抗性+10%。无论得到哪种祝福，受术者同时恢复十点生命值，并治愈一切疾病与毒素。然而诸灵性情无常，也有 25% 几率什么祝福都不给。自 12 级起，灵性祝福以女祭司为中心、15 尺半径施放，影响所有友方。~
   LPF ADD_SPELL_EFFECT
     INT_VAR
       opcode = 139
@@ -590,7 +590,7 @@ The priestess invokes a prayer to heavenly spirits, bestowing a random blessing 
 	  timing = 1
 	  probability1 = 100
 	  probability2 = 76
-	  parameter1 = RESOLVE_STR_REF (~Spirit's Whim: no blessing~)
+	  parameter1 = RESOLVE_STR_REF (~诸灵无常：无祝福~)
 END
 
 COPY_EXISTING ~c0aucl1a.spl~ OVERRIDE
@@ -599,7 +599,7 @@ COPY_EXISTING ~c0aucl1a.spl~ OVERRIDE
       opcode = 139
 	  target = 2
 	  timing = 1
-	  parameter1 = RESOLVE_STR_REF (~Good Fortune: +2 to Luck and Saving Throws~)
+	  parameter1 = RESOLVE_STR_REF (~好运：幸运+2、豁免检定+2~)
 END
 
 COPY_EXISTING ~c0aucl1b.spl~ OVERRIDE
@@ -608,7 +608,7 @@ COPY_EXISTING ~c0aucl1b.spl~ OVERRIDE
       opcode = 139
 	  target = 2
 	  timing = 1
-	  parameter1 = RESOLVE_STR_REF (~Strength of Many: +2 to THAC0, +10% to all damage~)
+	  parameter1 = RESOLVE_STR_REF (~众力：THAC0+2、全类型伤害+10%~)
 END
 
 COPY_EXISTING ~c0aucl1c.spl~ OVERRIDE
@@ -617,7 +617,7 @@ COPY_EXISTING ~c0aucl1c.spl~ OVERRIDE
       opcode = 139
 	  target = 2
 	  timing = 1
-	  parameter1 = RESOLVE_STR_REF (~Spirit's Guard: +2 to Armor Class, +10% to all resistances~)
+	  parameter1 = RESOLVE_STR_REF (~诸灵守护：防御等级+2、全类型抗性+10%~)
 END
 
 COPY_EXISTING ~c0aucl1d.spl~ OVERRIDE
@@ -626,7 +626,7 @@ COPY_EXISTING ~c0aucl1d.spl~ OVERRIDE
       opcode = 139
 	  target = 2
 	  timing = 1
-	  parameter1 = RESOLVE_STR_REF (~Cured of all poisons and diseases~)
+	  parameter1 = RESOLVE_STR_REF (~已治愈一切毒素与疾病~)
 END
 
 COPY_EXISTING ~sppr408.spl~ ~override/c0aupr2.spl~
@@ -677,7 +677,7 @@ COPY_EXISTING_REGEXP GLOB ~.*\.itm~ ~override~ //copies all item files
   END
 BUT_ONLY_IF_IT_CHANGES
 
-      PRINT ~Installed Aura as a Priestess / Artificer~
+      PRINT ~已将奥拉安装为女祭司／奇械师~
       END
 	      ACTION_IF ("auraclass" = 4) THEN BEGIN	
 COPY ~%MOD_FOLDER%/artificer/eeex~ ~override~
@@ -924,34 +924,34 @@ COPY_EXISTING ~c0aukt5a.spl~ ~override~
 LPF ALTER_EFFECT INT_VAR match_opcode = 326 parameter2 = C0AULORE END
 
 COPY_EXISTING ~c0auhl1.spl~ ~override~
-SAY NAME1 ~Elemental Mastery~
-SAY UNIDENTIFIED_DESC ~The artificer has mastered the use of elemental energies in their craft, permanently gaining 30% resistance to and increased damage dealt with acid, cold, electricity, fire and magical damage.~
+SAY NAME1 ~元素精通~
+SAY UNIDENTIFIED_DESC ~奇械师已精通在工艺中运用元素能量，永久获得对酸、冷、电、火与魔法伤害的 30% 抗性，并提升这些伤害的输出。~
 
 COPY_EXISTING ~c0auhl2.spl~ ~override~
-SAY NAME1 ~Ontological Inertia~
-SAY UNIDENTIFIED_DESC ~Through use of thaumaturgical mechanisms, the artificer prolongs the effects of magic beyond their usual expiration date, permanently increasing the duration of all arcane spells by 50%.~
+SAY NAME1 ~本体惰性~
+SAY UNIDENTIFIED_DESC ~借助奇术机构，奇械师把魔法的效力延长到超出其原本的失效时限，永久使所有奥术法术的持续时间增加 50%。~
 
 COPY_EXISTING ~c0auhl3.spl~ ~override~
-SAY NAME1 ~Thaumaturgical Matrix~
-SAY UNIDENTIFIED_DESC ~This ability allows the artificer to store spells in a magical ability (accessed via the Special Ability button) that is created by the spell. This item, the matrix, can store three spells of the maximum spell level the artificer may cast to be released simultaneously at the maximum spell power and a doubled duration modifier. An artificer can only possess one thaumaturgical matrix at a time, and the matrix may not be given to other characters. Once the thaumaturgical matrix is used, the icon will disappear from the Special Ability button.~
+SAY NAME1 ~奇术矩阵~
+SAY UNIDENTIFIED_DESC ~此能力让奇械师把法术储存进一个由法术生成的魔法能力（通过「特殊能力」按钮取用）。这件物品——矩阵——可储存三个法术，等级不超过奇械师可施的最高法术等级，能同时以最高法术威力释放，并获得双倍持续时间修正。奇械师同时只能持有一个奇术矩阵，且矩阵不能交给其他角色。奇术矩阵一旦使用，图标就会从「特殊能力」按钮上消失。~
 
 COPY_EXISTING ~c0auhl3d.spl~ ~override~
-SAY NAME1 ~Thaumaturgical Matrix~
-SAY UNIDENTIFIED_DESC ~This ability allows the artificer to store spells in a magical ability (accessed via the Special Ability button) that is created by the spell. This item, the matrix, can store three spells of the maximum spell level the artificer may cast to be released simultaneously at the maximum spell power and a doubled duration modifier. An artificer can only possess one thaumaturgical matrix at a time, and the matrix may not be given to other characters. Once the thaumaturgical matrix is used, the icon will disappear from the Special Ability button.~
+SAY NAME1 ~奇术矩阵~
+SAY UNIDENTIFIED_DESC ~此能力让奇械师把法术储存进一个由法术生成的魔法能力（通过「特殊能力」按钮取用）。这件物品——矩阵——可储存三个法术，等级不超过奇械师可施的最高法术等级，能同时以最高法术威力释放，并获得双倍持续时间修正。奇械师同时只能持有一个奇术矩阵，且矩阵不能交给其他角色。奇术矩阵一旦使用，图标就会从「特殊能力」按钮上消失。~
 
 COPY_EXISTING ~c0auhl3p.spl~ ~override~
-SAY NAME1 ~Thaumaturgical Matrix~
-SAY UNIDENTIFIED_DESC ~This ability allows the artificer to store spells in a magical ability (accessed via the Special Ability button) that is created by the spell. This item, the matrix, can store three spells of the maximum spell level the artificer may cast to be released simultaneously at the maximum spell power and a doubled duration modifier. An artificer can only possess one thaumaturgical matrix at a time, and the matrix may not be given to other characters. Once the thaumaturgical matrix is used, the icon will disappear from the Special Ability button.~
+SAY NAME1 ~奇术矩阵~
+SAY UNIDENTIFIED_DESC ~此能力让奇械师把法术储存进一个由法术生成的魔法能力（通过「特殊能力」按钮取用）。这件物品——矩阵——可储存三个法术，等级不超过奇械师可施的最高法术等级，能同时以最高法术威力释放，并获得双倍持续时间修正。奇械师同时只能持有一个奇术矩阵，且矩阵不能交给其他角色。奇术矩阵一旦使用，图标就会从「特殊能力」按钮上消失。~
 
-OUTER_SET thaumaturgical_matrix_tip = RESOLVE_STR_REF (~Thaumaturgical Matrix is much like Spell Sequencer in that it allows the caster to store several spells in a trigger item that can be released upon any target, including the caster. The spells stored in the matrix are cast as any other spell and can be accessed through the Special Abilities button on the main screen. It is important to note that when you choose the spells to be stored in the matrix, they will disappear from the ones you have memorized. However, the matrix will last until used, so the caster may rest and gain those spells back. The main use for this spell would be to allow the caster to release multiple spells upon a target very quickly in combat without the possibility of being interrupted.~)
+OUTER_SET thaumaturgical_matrix_tip = RESOLVE_STR_REF (~奇术矩阵与「法术连锁触发」颇为相似：它让施法者把若干法术存入一件触发物品，可对任意目标（包括施法者本人）释放。存入矩阵的法术如同其他法术一样施放，可通过主界面的「特殊能力」按钮取用。需要特别注意的是，当你选择要存入矩阵的法术时，它们会从你已记忆的法术中消失。不过矩阵会一直保存到使用为止，所以施法者可以休息并把那些法术重新记回。此法的主要用途，是让施法者在战斗中迅速对目标连发多个法术，而不必担心被打断。~)
 
-OUTER_SET thaumaturgical_matrix_title = RESOLVE_STR_REF (~Thaumaturgical Matrix~)
+OUTER_SET thaumaturgical_matrix_title = RESOLVE_STR_REF (~奇术矩阵~)
 
-OUTER_SET thaumaturgical_matrix_label = RESOLVE_STR_REF (~Add spells to your matrix~)
+OUTER_SET thaumaturgical_matrix_label = RESOLVE_STR_REF (~将法术加入矩阵~)
 
 APPEND	~BGEE.LUA~	~mageBookStrings['C0AUHL3'] = {tip = %thaumaturgical_matrix_tip%, title = 'C0AURA_SEQUENCER_TITLE', action = "C0AURA_SEQUENCER_LABEL"}~
-APPEND	~L_en_US.LUA~	~uiStrings['C0AURA_SEQUENCER_TITLE'] = "Thaumaturgical Matrix"
-uiStrings['C0AURA_SEQUENCER_LABEL'] = "Add spells to your matrix"~
+APPEND	~L_en_US.LUA~	~uiStrings['C0AURA_SEQUENCER_TITLE'] = "法术矩阵"
+uiStrings['C0AURA_SEQUENCER_LABEL'] = "将法术加入你的矩阵"~
 
       PRINT ~Installed Aura as an Artificer (EEex Version)~
       END
@@ -1144,25 +1144,25 @@ COPY_EXISTING ~c0aurn01.spl~ ~override/c0aurn10.spl~
 COPY_EXISTING ~c0aurn01.spl~ ~override/c0aurn11.spl~
 		LPF ALTER_EFFECT INT_VAR match_opcode = 167 parameter1 = 11 END
 
-OUTER_SET multikitname = RESOLVE_STR_REF (~Artificer~)
+OUTER_SET multikitname = RESOLVE_STR_REF (~奇械师~)
 COPY_EXISTING ~c0aunam.eff~ ~override~
 WRITE_LONG 0x1c %multikitname%
 
 COPY_EXISTING ~c0aubear.spl~ ~override~
-SAY NAME1 ~I Hate Bears!~
-SAY NAME2 ~I Hate Bears!~
+SAY NAME1 ~我讨厌熊！~
+SAY NAME2 ~我讨厌熊！~
 
 COPY_EXISTING ~c0auin1.2da~ ~override~
 COPY_EXISTING ~c0auin1.spl~ ~override~
-SAY NAME1 ~Set Alchemical Snare~
-SAY NAME2 ~Set Alchemical Snare~
-SAY UNIDENTIFIED_DESC ~Set Alchemical Snare
-Set a trap in the targeted location when no hostile creatures are in sight. Traps deal 2d4 (+1d4 extra damage per 3 levels) fire, cold, acid or electrical damage of the artificer's choice in a 10' radius, inflicting additional effects that last for 2 rounds + 1 round per 3 levels of the artificer. Effects are dependent on the chosen element. Alchemical Snares can only be set off by enemies, but affect all within its area of effect.
+SAY NAME1 ~布置炼金陷阱~
+SAY NAME2 ~布置炼金陷阱~
+SAY UNIDENTIFIED_DESC ~布置炼金陷阱
+在目标地点布下陷阱，需附近无敌对生物。陷阱造成奇械师所选元素（火、冷、酸、电）伤害 2d4（每 3 级额外 +1d4），范围 10 尺，并附加持续 2 轮 + 每 3 级 1 轮的效果。效果依所选元素而定。炼金陷阱只会被敌人触发，但会影响范围内的所有生物。
 
-  ALCHEMIST'S FIRE: Trap damage increases to d6 and sets targets Aflame, dealing an additional 1d4 fire damage per round.
-  RAPID FREEZE: Targets become Slowed, suffering a -4 penalty to THAC0 and Armor Class.
-  ACIDIC COMPOUND: Targets are afflicted with Corrosion, suffering a -25% penalty to Physical Resistance and Damage.
-  ELECTRIC CHARGE: Targets become Shocked, suffering a 10% chance every round to become Paralyzed for 1 round.~
+  炼金师之火：陷阱伤害提升为 d6，并使目标「着火」，每轮额外受 1d4 火焰伤害。
+  急速冷冻：目标陷入「缓慢」，THAC0 与防御等级 -4。
+  酸性化合物：目标染上「腐蚀」，物理抗性与伤害 -25%。
+  电荷：目标陷入「电击」，每轮有 10% 几率被麻痹 1 轮。~
 
 ADD_PROJECTILE ~%MOD_FOLDER%/artificer/projectiles/c0atrap1.PRO~
 ADD_PROJECTILE ~%MOD_FOLDER%/artificer/projectiles/c0atrap2.PRO~
@@ -1205,12 +1205,12 @@ END
       LPF ALTER_EFFECT
       INT_VAR
         match_opcode      = 139
-        parameter1 		  = RESOLVE_STR_REF (~Aflame~)
+        parameter1 		  = RESOLVE_STR_REF (~着火~)
       END
 COPY_EXISTING ~c0auin1a.spl~ ~override~
-SAY NAME1 ~Set Alchemical Trap: Alchemist's Fire~
-SAY UNIDENTIFIED_DESC ~Set Alchemical Trap: Alchemist's Fire
-Trap damage increases to d6 and sets targets Aflame, dealing an additional 1d4 fire damage per round.~
+SAY NAME1 ~布置炼金陷阱：炼金师之火~
+SAY UNIDENTIFIED_DESC ~布置炼金陷阱：炼金师之火
+陷阱伤害提升为 d6，并使目标「着火」，每轮额外受 1d4 火焰伤害。~
 
 COPY_EXISTING ~c0atrap2.spl~ ~override~
 READ_LONG 0x64 "abil_off"
@@ -1239,12 +1239,12 @@ END
       LPF ALTER_EFFECT
       INT_VAR
         match_opcode      = 139
-        parameter1 		  = RESOLVE_STR_REF (~Slowed~)
+        parameter1 		  = RESOLVE_STR_REF (~缓慢~)
       END
 COPY_EXISTING ~c0auin1b.spl~ ~override~
-SAY NAME1 ~Set Alchemical Trap: Rapid Freezing Reagent~
-SAY UNIDENTIFIED_DESC ~Set Alchemical Trap: Rapid Freezing Reagent
-Targets become Slowed, suffering a -4 penalty to THAC0 and Armor Class.~
+SAY NAME1 ~布置炼金陷阱：急速冷冻试剂~
+SAY UNIDENTIFIED_DESC ~布置炼金陷阱：急速冷冻试剂
+目标陷入「缓慢」，THAC0 与防御等级 -4。~
 
 COPY_EXISTING ~c0atrap3.spl~ ~override~
 READ_LONG 0x64 "abil_off"
@@ -1273,12 +1273,12 @@ END
       LPF ALTER_EFFECT
       INT_VAR
         match_opcode      = 139
-        parameter1 		  = RESOLVE_STR_REF (~Corroded~)
+        parameter1 		  = RESOLVE_STR_REF (~腐蚀~)
       END
 COPY_EXISTING ~c0auin1c.spl~ ~override~
-SAY NAME1 ~Set Alchemical Trap: Corrosive Acidic Compound~
-SAY UNIDENTIFIED_DESC ~Set Alchemical Trap: Corrosive Acidic Compound
-Targets are afflicted with Corrosion, suffering a -25% penalty to Physical Resistance and Damage.~
+SAY NAME1 ~布置炼金陷阱：腐蚀性酸液~
+SAY UNIDENTIFIED_DESC ~布置炼金陷阱：腐蚀性酸液
+目标染上「腐蚀」，物理抗性与伤害 -25%。~
 
 COPY_EXISTING ~c0atrap4.spl~ ~override~
 READ_LONG 0x64 "abil_off"
@@ -1312,21 +1312,21 @@ END
       LPF ALTER_EFFECT
       INT_VAR
         match_opcode      = 139
-        parameter1 		  = RESOLVE_STR_REF (~Shocked~)
+        parameter1 		  = RESOLVE_STR_REF (~电击~)
       END
 COPY_EXISTING ~c0aparal.spl~ ~override~
       LPF ALTER_EFFECT
       INT_VAR
         match_opcode      = 139
-        parameter1 		  = RESOLVE_STR_REF (~Paralyzed~)
+        parameter1 		  = RESOLVE_STR_REF (~麻痹~)
       END
 COPY_EXISTING ~c0auin1d.spl~ ~override~
-SAY NAME1 ~Set Alchemical Trap: Conductive Fluid~
-SAY UNIDENTIFIED_DESC ~Set Alchemical Trap: Conductive Fluid
-Targets become Shocked, suffering a 10% chance every round to become Paralyzed for 1 round.~
+SAY NAME1 ~布置炼金陷阱：导电液~
+SAY UNIDENTIFIED_DESC ~布置炼金陷阱：导电液
+目标陷入「电击」，每轮有 10% 几率被麻痹 1 轮。~
 
-OUTER_SET runecast = RESOLVE_STR_REF (~Cast Rune~)
-OUTER_SET runeimbue = RESOLVE_STR_REF (~Imbue Rune~)
+OUTER_SET runecast = RESOLVE_STR_REF (~施放符文~)
+OUTER_SET runeimbue = RESOLVE_STR_REF (~灌注符文~)
 APPEND TOOLTIP.2DA ~C0ARUNE1 %runecast% %runeimbue% -1
 C0ARUNE2 %runecast% %runeimbue% -1
 C0ARUNE3 %runecast% %runeimbue% -1
@@ -1338,324 +1338,324 @@ C0ARUNE8 %runecast% %runeimbue% -1
 C0ARUNE9 %runecast% %runeimbue% -1~ UNLESS ~C0ARUNE1~
 
 COPY_EXISTING ~c0rune1.spl~ ~override~
-SAY NAME1 ~Igneus Blaze~
-SAY UNIDENTIFIED_DESC ~Igneus Blaze
-(Evocation)
+SAY NAME1 ~炽焰喷涌~
+SAY UNIDENTIFIED_DESC ~炽焰喷涌
+（塑能系）
 
-Range: 40-ft.
-Duration: 5 rounds
-Casting Time: 1
-Area of Effect: Special
-Saving Throw: 1/2
+范围：40 尺
+持续时间：5 轮
+施法时间：1
+效果范围：特殊
+豁免检定：1/2
 
-The Ignus Rune allows the user to cast Igneus Blaze. A 45-degree cone of fire erupts from the user's hands, pushing away all enemies in its range and dealing 1d6 fire damage per level of the user. Additionally, all creatures struck by the cone are set Aflame, suffering an additional 1d4 fire damage per round. A successful Saving Throw vs. Spell halves the initial fire damage dealt.
+火之符文让使用者可施放炽焰喷涌。一道 45 度的火焰锥自使用者手中喷出，推开范围内的所有敌人，并造成每使用者等级 1d6 火焰伤害。此外，被此锥扫中的生物都会「着火」，每轮额外受 1d4 火焰伤害。对抗法术豁免成功则初始火焰伤害减半。
 
-From 10th level onwards, the cone expands to a 60-degree angle, and a 90-degree angle from 20th level onwards.~
+自 10 级起，锥角扩大为 60 度；自 20 级起为 90 度。~
 COPY_EXISTING ~c0rune1.spl~ ~override/c0rune2.spl~
-SAY NAME1 ~Cryoshock~
-SAY UNIDENTIFIED_DESC ~Cryoshock
-(Evocation)
+SAY NAME1 ~冰震~
+SAY UNIDENTIFIED_DESC ~冰震
+（塑能系）
 
-Range: Visual range of the caster
-Duration: 1 round
-Casting Time: 1
-Area of Effect: 1 creature
-Saving Throw: None
+范围：施法者视野内
+持续时间：1 轮
+施法时间：1
+效果范围：1 个生物
+豁免检定：无
 
-The Cryon Rune allows the user to cast Cryoshock. Cryoshock launches a freezing jet of energy towards a target creature, dealing 1d4 cold damage per level of the user. Due to the disruptive nature of the chilling ray, targets are afflicted with a 90% chance to miscast spells for one round. A successful Saving Throw vs. Spells halves the damage dealt.~
+冰之符文让使用者可施放冰震。冰震向目标生物射出一道冰寒能量，造成每使用者等级 1d4 寒冷伤害。由于寒流具有干扰性，目标在一轮内有 90% 几率施法失败。对抗法术豁免成功则伤害减半。~
 	LPF ALTER_SPELL_HEADER STR_VAR icon = c0rune2c END
 	LPF ALTER_EFFECT INT_VAR match_opcode = 122 STR_VAR resource = c0arune2 END
 	WRITE_ASCII 0x3a ~c0rune2c~
 COPY_EXISTING ~c0rune1.spl~ ~override/c0rune3.spl~
-SAY NAME1 ~Energy Barrage~
-SAY UNIDENTIFIED_DESC ~Energy Barrage
-(Evocation)
+SAY NAME1 ~能量弹幕~
+SAY UNIDENTIFIED_DESC ~能量弹幕
+（塑能系）
 
-Range: Visual range of the caster
-Duration: Instant
-Casting Time: 1
-Area of Effect: 1 creature
-Saving Throw: None 
+范围：施法者视野内
+持续时间：瞬间
+施法时间：1
+效果范围：1 个生物
+豁免检定：无 
 
-The Arcana Rune allows the user to cast Energy Barrage. Energy Barrage unleashes a missile of pure arcane energy, dealing 1d4+1 magical damage. An additional missile is created for every two levels of the caster beyond level 1, up to a maximum of eight missiles at level 15.~
+奥秘符文让使用者可施放能量弹幕。能量弹幕释放一枚纯奥术能量飞弹，造成 1d4+1 魔法伤害。自 1 级之后每两级额外生成一枚飞弹，15 级时最多八枚。~
 	LPF ALTER_SPELL_HEADER STR_VAR icon = c0rune3c END
 	LPF ALTER_EFFECT INT_VAR match_opcode = 122 STR_VAR resource = c0arune3 END
 	WRITE_ASCII 0x3a ~c0rune3c~
 COPY_EXISTING ~c0rune1.spl~ ~override/c0rune4.spl~
-SAY NAME1 ~Lunar Butterfly~
-SAY UNIDENTIFIED_DESC ~Lunar Butterfly
-(Illusion/Phantasm)
+SAY NAME1 ~月蝶~
+SAY UNIDENTIFIED_DESC ~月蝶
+（幻术/幻影系）
 
-Range: 40 ft.
-Duration: Special
-Casting Time: 1
-Area of Effect: Special
-Saving Throw: Neg.
+范围：40 尺
+持续时间：特殊
+施法时间：1
+效果范围：特殊
+豁免检定：无效
 
-The Lunacy Rune allows the user to cast Lunar Butterfly. Lunar Butterfly launches a bolt of moonlight towards a target. The effects of the bolt vary depending on whether the target is an ally or an enemy.
+月狂符文让使用者可施放月蝶。月蝶向目标射出一束月光。其效果取决于目标是友方还是敌方。
 
-Ally cast: Target gains the effects of Mirror Image for 3 rounds + 1 round/user level.
-Enemy cast: Target must make a Save vs. Spells or become Confused and Intoxicated for one turn.
+对友方施放：目标获得「镜影术」效果，持续 3 轮 + 每使用者等级 1 轮。
+对敌方施放：目标须通过对抗法术豁免，否则陷入「混乱」与「醉酒」状态一轮。
 
-From 15th level onwards, the bolt of moonlight spreads to all nearby creatures around the target, inflicting the spell's effects on each target.~
+自 15 级起，月光束会散及目标周围的所有生物，对每个目标分别施加本法术的效果。~
 	LPF ALTER_SPELL_HEADER STR_VAR icon = c0rune4c END
 	LPF ALTER_EFFECT INT_VAR match_opcode = 122 STR_VAR resource = c0arune4 END
 	WRITE_ASCII 0x3a ~c0rune4c~
 COPY_EXISTING ~c0rune1.spl~ ~override/c0rune5.spl~
-SAY NAME1 ~Aerial Judgment~
-SAY UNIDENTIFIED_DESC ~Aerial Judgment
-(Alteration)
+SAY NAME1 ~天降裁决~
+SAY UNIDENTIFIED_DESC ~天降裁决
+（变化系）
 
-Range: Visual range of the caster
-Duration: 4 rounds
-Casting Time: 1
-Area of Effect: 1 creature
-Saving Throw: 1/2, Neg.
+范围：施法者视野内
+持续时间：4 轮
+施法时间：1
+效果范围：1 个生物
+豁免检定：1/2、无效
 
-The Aether Rune allows the user to cast Aerial Judgment. A bolt of lightning from the sky strikes a chosen target, dealing 6d8 electrical damage + 1d8 per level past user level 10 and Stunning the target for four rounds. A successful Saving Throw vs. Spells halves the damage dealt and negates the stun.
+以太符文让使用者可施放天降裁决。一道天雷击中选定目标，造成 6d8 电击伤害 + 使用者 10 级之后每级 1d8，并使目标「震慑」四轮。对抗法术豁免成功则伤害减半且不受震慑。
 
-From 15th level onwards, enemies around the target suffer half regular damage with no save or stun.~
+自 15 级起，目标周围的敌人受到一半常规伤害，且无需豁免、不会被震慑。~
 	LPF ALTER_SPELL_HEADER STR_VAR icon = c0rune5c END
 	LPF ALTER_EFFECT INT_VAR match_opcode = 122 STR_VAR resource = c0arune5 END
 	WRITE_ASCII 0x3a ~c0rune5c~
 COPY_EXISTING ~c0rune1.spl~ ~override/c0rune6.spl~
-SAY NAME1 ~Gaia Shield~
-SAY UNIDENTIFIED_DESC ~Gaia Shield
-(Alteration)
+SAY NAME1 ~盖亚护盾~
+SAY UNIDENTIFIED_DESC ~盖亚护盾
+（变化系）
 
-Range: 0
-Duration: 1 turn
-Casting Time: 1
-Area of Effect: Special
-Saving Throw: None
+范围：0
+持续时间：1 回合
+施法时间：1
+效果范围：特殊
+豁免检定：无
 
-The Adamant Rune allows the user to cast Gaia Shield. This powerful spell grants five protective layers of stone and iron to the caster, protecting them from the damage of one physical damage per skin. Additionally, as long as at least one skin is active, the caster gains a +6 bonus to Armor Class.
+金刚符文让使用者可施放盖亚护盾。此法为施法者加上五层石与铁的护层，每层可挡下一次物理伤害。此外，只要至少一层护层仍在，施法者便获得防御等级 +6 加成。
 
-From 20th level onwards, Gaia Shield also bestows protective skins to all allies around the caster.~
+自 20 级起，盖亚护盾也会为施法者周围的所有友方加上护层。~
 	LPF ALTER_SPELL_HEADER STR_VAR icon = c0rune6c END
 	LPF ALTER_EFFECT INT_VAR match_opcode = 122 STR_VAR resource = c0arune6 END
 	WRITE_ASCII 0x3a ~c0rune6c~
 COPY_EXISTING ~c0rune1.spl~ ~override/c0rune7.spl~
-SAY NAME1 ~Chronos Warp~
-SAY UNIDENTIFIED_DESC ~Chronos Warp
-(Alteration)
+SAY NAME1 ~时空扭曲~
+SAY UNIDENTIFIED_DESC ~时空扭曲
+（变化系）
 
-Range: 40 ft.
-Duration: 5 rounds
-Casting Time: 1
-Area of Effect: One creature
-Saving Throw: None
+范围：40 尺
+持续时间：5 轮
+施法时间：1
+效果范围：1 个生物
+豁免检定：无
 
-The Chrono Rune allows the user to cast Chronos Warp. For 5 rounds, the target creature moves with increased movement rate, has doubled attacks per round, and increased casting speed of 4. However, in order to negate the side-effects of hastening time, the effects reverse after the duration has expired, slowing the target and reducing their Armor Class, THAC0 and casting speed by 4 for another 5 rounds.~
+时序符文让使用者可施放时空扭曲。在 5 轮内，目标生物的移动速度加快、每轮攻击次数翻倍、施法速度提高 4。然而为了抵消加速时间的副作用，法术时效过后效果会反向：目标陷入缓慢，防御等级、THAC0 与施法速度再降 4，持续另 5 轮。~
 	LPF ALTER_SPELL_HEADER STR_VAR icon = c0rune7c END
 	LPF ALTER_EFFECT INT_VAR match_opcode = 122 STR_VAR resource = c0arune7 END
 	WRITE_ASCII 0x3a ~c0rune7c~
 COPY_EXISTING ~c0rune1.spl~ ~override/c0rune8.spl~
-SAY NAME1 ~Panacea Circle~
-SAY UNIDENTIFIED_DESC ~Panacea Circle
-(Necromancy)
+SAY NAME1 ~万灵法环~
+SAY UNIDENTIFIED_DESC ~万灵法环
+（死灵系）
 
-Range: 15 ft.
-Duration: Instant
-Casting Time: 1
-Area of Effect: 15-ft. radius
-Saving Throw: None
+范围：15 尺
+持续时间：瞬间
+施法时间：1
+效果范围：15 尺半径
+豁免检定：无
 
-The Mederi Rune allows the user to cast Panacea Circle. All allies within a 15-ft. radius are healed for 20% of their maximum hit points and are cured of diseases, poisons, blindness, feeblemind, deafness and intoxication. ~
+治愈符文让使用者可施放万灵法环。15 尺半径内的所有友方恢复其最大生命值的 20%，并治愈疾病、毒素、目盲、弱智、耳聋与醉酒状态。 ~
 	LPF ALTER_SPELL_HEADER STR_VAR icon = c0rune8c END
 	LPF ALTER_EFFECT INT_VAR match_opcode = 122 STR_VAR resource = c0arune8 END
 	WRITE_ASCII 0x3a ~c0rune8c~
 COPY_EXISTING ~c0rune1.spl~ ~override/c0rune9.spl~
-SAY NAME1 ~Red Meteor~
-SAY UNIDENTIFIED_DESC ~Red Meteor
-(Evocation)
+SAY NAME1 ~赤色流星~
+SAY UNIDENTIFIED_DESC ~赤色流星
+（塑能系）
 
-Range: 270 ft.
-Duration: Instant
-Casting Time: 1
-Area of Effect: 15-ft. radius
-Saving Throw: Special
+范围：270 尺
+持续时间：瞬间
+施法时间：1
+效果范围：15 尺半径
+豁免检定：特殊
 
-The Calamity Rune allows the user to cast Red Meteor. A crimson-colored mass of magical energy is shaped several hundred feet above the caster and their target and strikes down with massive speed and force, dealing 8d8 damage (half magic, half fire) with no save. Targets are knocked away from the center of impact by the shockwave and must make a Saving Throw vs. Paralysis or be stunned for 3 rounds.
+灾厄符文让使用者可施放赤色流星。一团绯红色的魔法能量在施法者与目标上方数百尺处成形，以极快的速度与巨力砸落，造成 8d8 伤害（一半魔法、一半火焰），无法豁免。目标会被冲击波从爆心推开，并且必须通过对抗麻痹豁免，否则被震慑 3 轮。
 
-This spell will not harm party members.~
+此法不会伤害队友。~
 	LPF ALTER_SPELL_HEADER STR_VAR icon = c0rune9c END
 	LPF DELETE_SPELL_HEADER STR_VAR min_level = 20 END
 	LPF ALTER_EFFECT INT_VAR match_opcode = 122 STR_VAR resource = c0arune9 END
 	WRITE_ASCII 0x3a ~c0rune9c~
 
 COPY_EXISTING ~c0auin2.spl~ ~override~
-SAY NAME1 ~Craft Rune~
-SAY NAME2 ~Craft Rune~
-SAY UNIDENTIFIED_DESC ~Craft Rune
-Artificers that have knowledge of magic are capable of creating and using runes charged with arcane energy. When the Craft Rune ability is used, a rune may be chosen from a selection that may be either expended immediately, or imbued on a target to discharge under specific triggers (Enemy Sighted, Target Hit, Hit Points at 50%, Hit Points at 25%, Helpless) to cast a powerful arcane spell.
+SAY NAME1 ~刻制符文~
+SAY NAME2 ~刻制符文~
+SAY UNIDENTIFIED_DESC ~刻制符文
+通晓魔法的奇械师能够制造并使用充有奥术能量的符文。使用「刻制符文」能力时，可从列表中选取一枚符文，或立即消耗，或灌注到目标身上，在特定触发条件下（发现敌人、被击中、生命值降至 50%、生命值降至 25%、陷入无力）释放一道强力奥术法术。
 
-1st level: Igneus Blaze, Cryoshock, Energy Barrage
-8th level: Lunar Butterfly
-12th level: Aerial Judgment
-16th level: Gaia Shield
-20th level: Chronos Warp, Panacea Circle
-24th level: Red Meteor
+1 级：炽焰喷涌、冰震、能量弹幕
+8 级：月蝶
+12 级：天降裁决
+16 级：盖亚护盾
+20 级：时空扭曲、万灵法环
+24 级：赤色流星
 
-Runes may not be crafted during combat, and lose their potency if not used within 24 hours.
-From 22nd level onwards, two runes are created per selection, except for Red Meteor.~
+战斗中无法刻制符文，且符文若在 24 小时内未使用便会失效。
+自 22 级起，每次选取会生成两枚符文，「赤色流星」除外。~
 
 COPY_EXISTING ~c0arune1.itm~ ~override~
-SAY NAME1 ~Ignus Rune~
-SAY NAME2 ~Ignus Rune~
-SAY DESC ~This rune may be activated as any normal wand. When used, the inscribed spell may be either discharged immediately or imbued upon a target under specific triggers (Enemy Sighted, Target Hit, Hit Points at 50%, Hit Points at 25%, Helpless). An imbued rune lasts eight hours from the time of inscription, and only one rune may be imbued per target.
+SAY NAME1 ~火之符文~
+SAY NAME2 ~火之符文~
+SAY DESC ~此符文可像普通魔杖一样激活。使用时，所刻法术可以立即释放，也可灌注到目标身上，在特定触发条件下（发现敌人、被击中、生命值降至 50%、生命值降至 25%、陷入无力）发动。灌注的符文集从刻制时起可维持八小时，每个目标身上只能灌注一枚。
 
-Igneus Blaze
-(Evocation)
+炽焰喷涌
+（塑能系）
 
-Range: 40-ft.
-Duration: 5 rounds
-Casting Time: 1
-Area of Effect: Special
-Saving Throw: 1/2
+范围：40 尺
+持续时间：5 轮
+施法时间：1
+效果范围：特殊
+豁免检定：1/2
 
-The Ignus Rune allows the user to cast Igneus Blaze. A 45-degree cone of fire erupts from the user's hands, pushing away all enemies in its range and dealing 1d6 fire damage per level of the user. Additionally, all creatures struck by the cone are set Aflame, suffering an additional 1d4 fire damage per round. A successful Saving Throw vs. Spell halves the initial fire damage dealt.
+火之符文让使用者可施放炽焰喷涌。一道 45 度的火焰锥自使用者手中喷出，推开范围内的所有敌人，并造成每使用者等级 1d6 火焰伤害。此外，被此锥扫中的生物都会「着火」，每轮额外受 1d4 火焰伤害。对抗法术豁免成功则初始火焰伤害减半。
 
-From 10th level onwards, the cone expands to a 60-degree angle, and a 90-degree angle from 20th level onwards.~
+自 10 级起，锥角扩大为 60 度；自 20 级起为 90 度。~
 
 COPY_EXISTING ~c0arune2.itm~ ~override~
-SAY NAME1 ~Cryon Rune~
-SAY NAME2 ~Cryon Rune~
-SAY DESC ~This rune may be activated as any normal wand. When used, the inscribed spell may be either discharged immediately or imbued upon a target under specific triggers (Enemy Sighted, Target Hit, Hit Points at 50%, Hit Points at 25%, Helpless). An imbued rune lasts eight hours from the time of inscription, and only one rune may be imbued per target.
+SAY NAME1 ~冰之符文~
+SAY NAME2 ~冰之符文~
+SAY DESC ~此符文可像普通魔杖一样激活。使用时，所刻法术可以立即释放，也可灌注到目标身上，在特定触发条件下（发现敌人、被击中、生命值降至 50%、生命值降至 25%、陷入无力）发动。灌注的符文集从刻制时起可维持八小时，每个目标身上只能灌注一枚。
 
-Cryoshock
-(Evocation)
+冰震
+（塑能系）
 
-Range: Visual range of the caster
-Duration: 1 round
-Casting Time: 1
-Area of Effect: 1 creature
-Saving Throw: None
+范围：施法者视野内
+持续时间：1 轮
+施法时间：1
+效果范围：1 个生物
+豁免检定：无
 
-The Cryon Rune allows the user to cast Cryoshock. Cryoshock launches a freezing jet of energy is launched towards a target creature, dealing 1d4 cold damage per level of the user. Due to the disruptive nature of the chilling ray, targets are afflicted with a 90% chance to miscast spells for one round. A successful Saving Throw vs. Spells halves the damage dealt.~
+冰之符文让使用者可施放冰震。冰震向目标生物射出一道冰寒能量，造成每使用者等级 1d4 寒冷伤害。由于寒流具有干扰性，目标在一轮内有 90% 几率施法失败。对抗法术豁免成功则伤害减半。~
 
 COPY_EXISTING ~c0arune3.itm~ ~override~
-SAY NAME1 ~Arcana Rune~
-SAY NAME2 ~Arcana Rune~
-SAY DESC ~This rune may be activated as any normal wand. When used, the inscribed spell may be either discharged immediately or imbued upon a target under specific triggers (Enemy Sighted, Target Hit, Hit Points at 50%, Hit Points at 25%, Helpless). An imbued rune lasts eight hours from the time of inscription, and only one rune may be imbued per target.
+SAY NAME1 ~奥秘符文~
+SAY NAME2 ~奥秘符文~
+SAY DESC ~此符文可像普通魔杖一样激活。使用时，所刻法术可以立即释放，也可灌注到目标身上，在特定触发条件下（发现敌人、被击中、生命值降至 50%、生命值降至 25%、陷入无力）发动。灌注的符文集从刻制时起可维持八小时，每个目标身上只能灌注一枚。
 
-Energy Barrage
-(Evocation)
+能量弹幕
+（塑能系）
 
-Range: Visual range of the caster
-Duration: Instant
-Casting Time: 1
-Area of Effect: 1 creature
-Saving Throw: None 
+范围：施法者视野内
+持续时间：瞬间
+施法时间：1
+效果范围：1 个生物
+豁免检定：无 
 
-The Arcana Rune allows the user to cast Energy Barrage. Energy Barrage unleashes a missile of pure arcane energy, dealing 1d4+1 magical damage. An additional missile is created for every two levels of the caster beyond level 1, up to a maximum of eight missiles at level 15.~
+奥秘符文让使用者可施放能量弹幕。能量弹幕释放一枚纯奥术能量飞弹，造成 1d4+1 魔法伤害。自 1 级之后每两级额外生成一枚飞弹，15 级时最多八枚。~
 
 COPY_EXISTING ~c0arune4.itm~ ~override~
-SAY NAME1 ~Lunacy Rune~
-SAY NAME2 ~Lunacy Rune~
-SAY DESC ~This rune may be activated as any normal wand. When used, the inscribed spell may be either discharged immediately or imbued upon a target under specific triggers (Enemy Sighted, Target Hit, Hit Points at 50%, Hit Points at 25%, Helpless). An imbued rune lasts eight hours from the time of inscription, and only one rune may be imbued per target.
+SAY NAME1 ~月狂符文~
+SAY NAME2 ~月狂符文~
+SAY DESC ~此符文可像普通魔杖一样激活。使用时，所刻法术可以立即释放，也可灌注到目标身上，在特定触发条件下（发现敌人、被击中、生命值降至 50%、生命值降至 25%、陷入无力）发动。灌注的符文集从刻制时起可维持八小时，每个目标身上只能灌注一枚。
 
-Lunar Butterfly
-(Illusion/Phantasm)
+月蝶
+（幻术/幻影系）
 
-Range: 40 ft.
-Duration: Special
-Casting Time: 1
-Area of Effect: Special
-Saving Throw: Neg.
+范围：40 尺
+持续时间：特殊
+施法时间：1
+效果范围：特殊
+豁免检定：无效
 
-The Lunacy Rune allows the user to cast Lunar Butterfly. Lunar Butterfly launches a bolt of moonlight towards a target. The effects of the bolt vary depending on whether the target is an ally or an enemy.
+月狂符文让使用者可施放月蝶。月蝶向目标射出一束月光。其效果取决于目标是友方还是敌方。
 
-Ally cast: Target gains the effects of Mirror Image for 3 rounds + 1 round/user level.
-Enemy cast: Target must make a Save vs. Spells or become Confused and Intoxicated for one turn.
+对友方施放：目标获得「镜影术」效果，持续 3 轮 + 每使用者等级 1 轮。
+对敌方施放：目标须通过对抗法术豁免，否则陷入「混乱」与「醉酒」状态一轮。
 
-From 15th level onwards, the bolt of moonlight spreads to all nearby creatures around the target, inflicting the spell's effects on each target.~
+自 15 级起，月光束会散及目标周围的所有生物，对每个目标分别施加本法术的效果。~
 
 COPY_EXISTING ~c0arune5.itm~ ~override~
-SAY NAME1 ~Aether Rune~
-SAY NAME2 ~Aether Rune~
-SAY DESC ~This rune may be activated as any normal wand. When used, the inscribed spell may be either discharged immediately or imbued upon a target under specific triggers (Enemy Sighted, Target Hit, Hit Points at 50%, Hit Points at 25%, Helpless). An imbued rune lasts eight hours from the time of inscription, and only one rune may be imbued per target.
+SAY NAME1 ~以太符文~
+SAY NAME2 ~以太符文~
+SAY DESC ~此符文可像普通魔杖一样激活。使用时，所刻法术可以立即释放，也可灌注到目标身上，在特定触发条件下（发现敌人、被击中、生命值降至 50%、生命值降至 25%、陷入无力）发动。灌注的符文集从刻制时起可维持八小时，每个目标身上只能灌注一枚。
 
-Aerial Judgment
-(Alteration)
+天降裁决
+（变化系）
 
-Range: Visual range of the caster
-Duration: 4 rounds
-Casting Time: 1
-Area of Effect: 1 creature
-Saving Throw: 1/2, Neg.
+范围：施法者视野内
+持续时间：4 轮
+施法时间：1
+效果范围：1 个生物
+豁免检定：1/2、无效
 
-The Aether Rune allows the user to cast Aerial Judgment. A bolt of lightning from the sky strikes a chosen target, dealing 6d8 electrical damage + 1d8 per level past user level 10 and Stunning the target for four rounds. A successful Saving Throw vs. Spells halves the damage dealt and negates the stun.
+以太符文让使用者可施放天降裁决。一道天雷击中选定目标，造成 6d8 电击伤害 + 使用者 10 级之后每级 1d8，并使目标「震慑」四轮。对抗法术豁免成功则伤害减半且不受震慑。
 
-From 15th level onwards, enemies around the target suffer half regular damage with no save or stun.~
+自 15 级起，目标周围的敌人受到一半常规伤害，且无需豁免、不会被震慑。~
 	
 COPY_EXISTING ~c0arune6.itm~ ~override~
-SAY NAME1 ~Adamant Rune~
-SAY NAME2 ~Adamant Rune~
-SAY DESC ~This rune may be activated as any normal wand. When used, the inscribed spell may be either discharged immediately or imbued upon a target under specific triggers (Enemy Sighted, Target Hit, Hit Points at 50%, Hit Points at 25%, Helpless). An imbued rune lasts eight hours from the time of inscription, and only one rune may be imbued per target.
+SAY NAME1 ~金刚符文~
+SAY NAME2 ~金刚符文~
+SAY DESC ~此符文可像普通魔杖一样激活。使用时，所刻法术可以立即释放，也可灌注到目标身上，在特定触发条件下（发现敌人、被击中、生命值降至 50%、生命值降至 25%、陷入无力）发动。灌注的符文集从刻制时起可维持八小时，每个目标身上只能灌注一枚。
 
-Gaia Shield
-(Alteration)
+盖亚护盾
+（变化系）
 
-Range: 0
-Duration: 1 turn
-Casting Time: 1
-Area of Effect: Special
-Saving Throw: None
+范围：0
+持续时间：1 回合
+施法时间：1
+效果范围：特殊
+豁免检定：无
 
-The Adamant Rune allows the user to cast Gaia Shield. This powerful spell grants five protective layers of stone and iron to the caster, protecting them from the damage of one physical damage per skin. Additionally, as long as at least one skin is active, the caster gains a +6 bonus to Armor Class.
+金刚符文让使用者可施放盖亚护盾。此法为施法者加上五层石与铁的护层，每层可挡下一次物理伤害。此外，只要至少一层护层仍在，施法者便获得防御等级 +6 加成。
 
-From 20th level onwards, Gaia Shield also bestows protective skins to all allies around the caster.~
+自 20 级起，盖亚护盾也会为施法者周围的所有友方加上护层。~
 	
 COPY_EXISTING ~c0arune7.itm~ ~override~
-SAY NAME1 ~Chrono Rune~
-SAY NAME2 ~Chrono Rune~
-SAY DESC ~This rune may be activated as any normal wand. When used, the inscribed spell may be either discharged immediately or imbued upon a target under specific triggers (Enemy Sighted, Target Hit, Hit Points at 50%, Hit Points at 25%, Helpless). An imbued rune lasts eight hours from the time of inscription, and only one rune may be imbued per target.
+SAY NAME1 ~时序符文~
+SAY NAME2 ~时序符文~
+SAY DESC ~此符文可像普通魔杖一样激活。使用时，所刻法术可以立即释放，也可灌注到目标身上，在特定触发条件下（发现敌人、被击中、生命值降至 50%、生命值降至 25%、陷入无力）发动。灌注的符文集从刻制时起可维持八小时，每个目标身上只能灌注一枚。
 
-Chronos Warp
-(Alteration)
+时空扭曲
+（变化系）
 
-Range: 40 ft.
-Duration: 5 rounds
-Casting Time: 1
-Area of Effect: One creature
-Saving Throw: None
+范围：40 尺
+持续时间：5 轮
+施法时间：1
+效果范围：1 个生物
+豁免检定：无
 
-The Chrono Rune allows the user to cast Chronos Warp. For 5 rounds, the target creature moves with increased movement rate, has doubled attacks per round, and increased casting speed of 4. However, in order to negate the side-effects of hastening time, the effects reverse after the duration has expired, slowing the target and reducing their Armor Class, THAC0 and casting speed by 4 for another 5 rounds.~
+时序符文让使用者可施放时空扭曲。在 5 轮内，目标生物的移动速度加快、每轮攻击次数翻倍、施法速度提高 4。然而为了抵消加速时间的副作用，法术时效过后效果会反向：目标陷入缓慢，防御等级、THAC0 与施法速度再降 4，持续另 5 轮。~
 	
 COPY_EXISTING ~c0arune8.itm~ ~override~
-SAY NAME1 ~Mederi Rune~
-SAY NAME2 ~Mederi Rune~
-SAY DESC ~This rune may be activated as any normal wand. When used, the inscribed spell may be either discharged immediately or imbued upon a target under specific triggers (Enemy Sighted, Target Hit, Hit Points at 50%, Hit Points at 25%, Helpless). An imbued rune lasts eight hours from the time of inscription, and only one rune may be imbued per target.
+SAY NAME1 ~治愈符文~
+SAY NAME2 ~治愈符文~
+SAY DESC ~此符文可像普通魔杖一样激活。使用时，所刻法术可以立即释放，也可灌注到目标身上，在特定触发条件下（发现敌人、被击中、生命值降至 50%、生命值降至 25%、陷入无力）发动。灌注的符文集从刻制时起可维持八小时，每个目标身上只能灌注一枚。
 
-Panacea Circle
-(Necromancy)
+万灵法环
+（死灵系）
 
-Range: 15 ft.
-Duration: Instant
-Casting Time: 1
-Area of Effect: 15-ft. radius
-Saving Throw: None
+范围：15 尺
+持续时间：瞬间
+施法时间：1
+效果范围：15 尺半径
+豁免检定：无
 
-The Mederi Rune allows the user to cast Panacea Circle. All allies within a 15-ft. radius are healed for 20% of their maximum hit points and are cured of diseases, poisons, blindness, feeblemind, deafness and intoxication.~
+治愈符文让使用者可施放万灵法环。15 尺半径内的所有友方恢复其最大生命值的 20%，并治愈疾病、毒素、目盲、弱智、耳聋与醉酒状态。~
 	
 COPY_EXISTING ~c0arune9.itm~ ~override~
-SAY NAME1 ~Calamity Rune~
-SAY NAME2 ~Calamity Rune~
-SAY DESC ~This rune may be activated as any normal wand. When used, the inscribed spell may be either discharged immediately or imbued upon a target under specific triggers (Enemy Sighted, Target Hit, Hit Points at 50%, Hit Points at 25%, Helpless). An imbued rune lasts eight hours from the time of inscription, and only one rune may be imbued per target.
+SAY NAME1 ~灾厄符文~
+SAY NAME2 ~灾厄符文~
+SAY DESC ~此符文可像普通魔杖一样激活。使用时，所刻法术可以立即释放，也可灌注到目标身上，在特定触发条件下（发现敌人、被击中、生命值降至 50%、生命值降至 25%、陷入无力）发动。灌注的符文集从刻制时起可维持八小时，每个目标身上只能灌注一枚。
 
-Red Meteor
-(Evocation)
+赤色流星
+（塑能系）
 
-Range: 270 ft.
-Duration: Instant
-Casting Time: 1
-Area of Effect: 15-ft. radius
-Saving Throw: Special
+范围：270 尺
+持续时间：瞬间
+施法时间：1
+效果范围：15 尺半径
+豁免检定：特殊
 
-The Calamity Rune allows the user to cast Red Meteor. A crimson-colored mass of magical energy is shaped several hundred feet above the caster and their target and strikes down with massive speed and force, dealing 8d8 damage (half magic, half fire) with no save. Targets are knocked away from the center of impact by the shockwave and must make a Saving Throw vs. Paralysis or be stunned for 3 rounds.
+灾厄符文让使用者可施放赤色流星。一团绯红色的魔法能量在施法者与目标上方数百尺处成形，以极快的速度与巨力砸落，造成 8d8 伤害（一半魔法、一半火焰），无法豁免。目标会被冲击波从爆心推开，并且必须通过对抗麻痹豁免，否则被震慑 3 轮。
 
-This spell will not harm party members.~
+此法不会伤害队友。~
 
 	
 // STONESKINS
@@ -1675,20 +1675,20 @@ COPY_EXISTING ~splprot.2da~ ~override~
 COPY_EXISTING ~c0arune1.spl~ ~override~
 	LPF	ADD_SPELL_EFFECT INT_VAR insert_point = 0 opcode = 324 target = 2 parameter2 = FIRE duration = 1 STR_VAR resource = EVAL ~%SOURCE_RES%~ END
 	LPF ALTER_EFFECT INT_VAR match_opcode = 142 parameter2 = c0aicon3 END
-	LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1 = RESOLVE_STR_REF (~Aflame~) END
-SAY NAME1 ~Igneus Blaze~
-SAY UNIDENTIFIED_DESC ~Igneus Blaze
-(Evocation)
+	LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1 = RESOLVE_STR_REF (~着火~) END
+SAY NAME1 ~炽焰喷涌~
+SAY UNIDENTIFIED_DESC ~炽焰喷涌
+（塑能系）
 
-Range: 40-ft.
-Duration: 5 rounds
-Casting Time: 1
-Area of Effect: Special
-Saving Throw: 1/2
+范围：40 尺
+持续时间：5 轮
+施法时间：1
+效果范围：特殊
+豁免检定：1/2
 
-The Ignus Rune allows the user to cast Igneus Blaze. A 45-degree cone of fire erupts from the user's hands, pushing away all enemies in its range and dealing 1d6 fire damage per level of the user. Additionally, all creatures struck by the cone are set Aflame, suffering an additional 1d4 fire damage per round. A successful Saving Throw vs. Spell halves the initial fire damage dealt.
+火之符文让使用者可施放炽焰喷涌。一道 45 度的火焰锥自使用者手中喷出，推开范围内的所有敌人，并造成每使用者等级 1d6 火焰伤害。此外，被此锥扫中的生物都会「着火」，每轮额外受 1d4 火焰伤害。对抗法术豁免成功则初始火焰伤害减半。
 
-From 10th level onwards, the cone expands to a 60-degree angle, and a 90-degree angle from 20th level onwards.~
+自 10 级起，锥角扩大为 60 度；自 20 级起为 90 度。~
 	LPF ALTER_SPELL_HEADER INT_VAR header = 1 projectile = c0acone1 END
 	LPF ALTER_SPELL_HEADER INT_VAR header = 2 projectile = c0acone1 END
 	LPF ALTER_SPELL_HEADER INT_VAR header = 3 projectile = c0acone1 END
@@ -1704,274 +1704,274 @@ From 10th level onwards, the cone expands to a 60-degree angle, and a 90-degree 
 	
 COPY_EXISTING ~c0arun1a.spl~ ~override~
 	LPF ALTER_EFFECT INT_VAR match_opcode = 142 parameter2 = c0aicr01 END
-SAY NAME1 ~Imbue: See Enemy~
+SAY NAME1 ~灌注：发现敌人~
 COPY_EXISTING ~c0arun1b.spl~ ~override~
 	LPF ALTER_EFFECT INT_VAR match_opcode = 142 parameter2 = c0aicr02 END
-SAY NAME1 ~Imbue: Attacked~
+SAY NAME1 ~灌注：被攻击~
 COPY_EXISTING ~c0arun1c.spl~ ~override~
 	LPF ALTER_EFFECT INT_VAR match_opcode = 142 parameter2 = c0aicr03 END
-SAY NAME1 ~Imbue: Hit Points at 50%~
+SAY NAME1 ~灌注：生命值 50%~
 COPY_EXISTING ~c0arun1d.spl~ ~override~
 	LPF ALTER_EFFECT INT_VAR match_opcode = 142 parameter2 = c0aicr04 END
-SAY NAME1 ~Imbue: Hit Points at 25%~
+SAY NAME1 ~灌注：生命值 25%~
 COPY_EXISTING ~c0arun1e.spl~ ~override~
 	LPF ALTER_EFFECT INT_VAR match_opcode = 142 parameter2 = c0aicr05 END
-SAY NAME1 ~Imbue: Helpless~
+SAY NAME1 ~灌注：无力~
 
 COPY_EXISTING ~c0arun1a.spl~ ~override/c0arun2a.spl~
 	LPF ALTER_SPELL_HEADER STR_VAR icon = c0arun2a END
 	LPF ALTER_EFFECT INT_VAR match_opcode = 142 parameter2 = c0aicr06 END
 	LPF ALTER_EFFECT INT_VAR match_opcode = 232 STR_VAR resource = C0ARUNE2 END
-SAY NAME1 ~Imbue: See Enemy~
+SAY NAME1 ~灌注：发现敌人~
 COPY_EXISTING ~c0arun1b.spl~ ~override/c0arun2b.spl~
 	LPF ALTER_SPELL_HEADER STR_VAR icon = c0arun2b END
 	LPF ALTER_EFFECT INT_VAR match_opcode = 142 parameter2 = c0aicr07 END
 	LPF ALTER_EFFECT INT_VAR match_opcode = 232 STR_VAR resource = C0ARUNE2 END
-SAY NAME1 ~Imbue: Attacked~
+SAY NAME1 ~灌注：被攻击~
 COPY_EXISTING ~c0arun1c.spl~ ~override/c0arun2c.spl~
 	LPF ALTER_SPELL_HEADER STR_VAR icon = c0arun2c END
 	LPF ALTER_EFFECT INT_VAR match_opcode = 142 parameter2 = c0aicr08 END
 	LPF ALTER_EFFECT INT_VAR match_opcode = 232 STR_VAR resource = C0ARUNE2 END
-SAY NAME1 ~Imbue: Hit Points at 50%~
+SAY NAME1 ~灌注：生命值 50%~
 COPY_EXISTING ~c0arun1d.spl~ ~override/c0arun2d.spl~
 	LPF ALTER_SPELL_HEADER STR_VAR icon = c0arun2d END
 	LPF ALTER_EFFECT INT_VAR match_opcode = 142 parameter2 = c0aicr09 END
 	LPF ALTER_EFFECT INT_VAR match_opcode = 232 STR_VAR resource = C0ARUNE2 END
-SAY NAME1 ~Imbue: Hit Points at 25%~
+SAY NAME1 ~灌注：生命值 25%~
 COPY_EXISTING ~c0arun1e.spl~ ~override/c0arun2e.spl~
 	LPF ALTER_SPELL_HEADER STR_VAR icon = c0arun2e END
 	LPF ALTER_EFFECT INT_VAR match_opcode = 142 parameter2 = c0aicr10 END
 	LPF ALTER_EFFECT INT_VAR match_opcode = 232 STR_VAR resource = C0ARUNE2 END
-SAY NAME1 ~Imbue: Helpless~
+SAY NAME1 ~灌注：无力~
 
 COPY_EXISTING ~c0arun1a.spl~ ~override/c0arun3a.spl~
 	LPF ALTER_SPELL_HEADER STR_VAR icon = c0arun3a END
 	LPF ALTER_EFFECT INT_VAR match_opcode = 142 parameter2 = c0aicr11 END
 	LPF ALTER_EFFECT INT_VAR match_opcode = 232 STR_VAR resource = C0ARUNE3 END
-SAY NAME1 ~Imbue: See Enemy~
+SAY NAME1 ~灌注：发现敌人~
 COPY_EXISTING ~c0arun1b.spl~ ~override/c0arun3b.spl~
 	LPF ALTER_SPELL_HEADER STR_VAR icon = c0arun3b END
 	LPF ALTER_EFFECT INT_VAR match_opcode = 142 parameter2 = c0aicr12 END
 	LPF ALTER_EFFECT INT_VAR match_opcode = 232 STR_VAR resource = C0ARUNE3 END
-SAY NAME1 ~Imbue: Attacked~
+SAY NAME1 ~灌注：被攻击~
 COPY_EXISTING ~c0arun1c.spl~ ~override/c0arun3c.spl~
 	LPF ALTER_SPELL_HEADER STR_VAR icon = c0arun3c END
 	LPF ALTER_EFFECT INT_VAR match_opcode = 142 parameter2 = c0aicr13 END
 	LPF ALTER_EFFECT INT_VAR match_opcode = 232 STR_VAR resource = C0ARUNE3 END
-SAY NAME1 ~Imbue: Hit Points at 50%~
+SAY NAME1 ~灌注：生命值 50%~
 COPY_EXISTING ~c0arun1d.spl~ ~override/c0arun3d.spl~
 	LPF ALTER_SPELL_HEADER STR_VAR icon = c0arun3d END
 	LPF ALTER_EFFECT INT_VAR match_opcode = 142 parameter2 = c0aicr14 END
 	LPF ALTER_EFFECT INT_VAR match_opcode = 232 STR_VAR resource = C0ARUNE3 END
-SAY NAME1 ~Imbue: Hit Points at 25%~
+SAY NAME1 ~灌注：生命值 25%~
 COPY_EXISTING ~c0arun1e.spl~ ~override/c0arun3e.spl~
 	LPF ALTER_SPELL_HEADER STR_VAR icon = c0arun3e END
 	LPF ALTER_EFFECT INT_VAR match_opcode = 142 parameter2 = c0aicr15 END
 	LPF ALTER_EFFECT INT_VAR match_opcode = 232 STR_VAR resource = C0ARUNE3 END
-SAY NAME1 ~Imbue: Helpless~
+SAY NAME1 ~灌注：无力~
 
 COPY_EXISTING ~c0arun1a.spl~ ~override/c0arun4a.spl~
 	LPF ALTER_SPELL_HEADER STR_VAR icon = c0arun4a END
 	LPF ALTER_EFFECT INT_VAR match_opcode = 142 parameter2 = c0aicr16 END
 	LPF ALTER_EFFECT INT_VAR match_opcode = 232 STR_VAR resource = C0ARUNE4 END
-SAY NAME1 ~Imbue: See Enemy~
+SAY NAME1 ~灌注：发现敌人~
 COPY_EXISTING ~c0arun1b.spl~ ~override/c0arun4b.spl~
 	LPF ALTER_SPELL_HEADER STR_VAR icon = c0arun4b END
 	LPF ALTER_EFFECT INT_VAR match_opcode = 142 parameter2 = c0aicr17 END
 	LPF ALTER_EFFECT INT_VAR match_opcode = 232 STR_VAR resource = C0ARUNE4 END
-SAY NAME1 ~Imbue: Attacked~
+SAY NAME1 ~灌注：被攻击~
 COPY_EXISTING ~c0arun1c.spl~ ~override/c0arun4c.spl~
 	LPF ALTER_SPELL_HEADER STR_VAR icon = c0arun4c END
 	LPF ALTER_EFFECT INT_VAR match_opcode = 142 parameter2 = c0aicr18 END
 	LPF ALTER_EFFECT INT_VAR match_opcode = 232 STR_VAR resource = C0ARUNE4 END
-SAY NAME1 ~Imbue: Hit Points at 50%~
+SAY NAME1 ~灌注：生命值 50%~
 COPY_EXISTING ~c0arun1d.spl~ ~override/c0arun4d.spl~
 	LPF ALTER_SPELL_HEADER STR_VAR icon = c0arun4d END
 	LPF ALTER_EFFECT INT_VAR match_opcode = 142 parameter2 = c0aicr19 END
 	LPF ALTER_EFFECT INT_VAR match_opcode = 232 STR_VAR resource = C0ARUNE4 END
-SAY NAME1 ~Imbue: Hit Points at 25%~
+SAY NAME1 ~灌注：生命值 25%~
 COPY_EXISTING ~c0arun1e.spl~ ~override/c0arun4e.spl~
 	LPF ALTER_SPELL_HEADER STR_VAR icon = c0arun4e END
 	LPF ALTER_EFFECT INT_VAR match_opcode = 142 parameter2 = c0aicr20 END
 	LPF ALTER_EFFECT INT_VAR match_opcode = 232 STR_VAR resource = C0ARUNE4 END
-SAY NAME1 ~Imbue: Helpless~
+SAY NAME1 ~灌注：无力~
 
 COPY_EXISTING ~c0arun1a.spl~ ~override/c0arun5a.spl~
 	LPF ALTER_SPELL_HEADER STR_VAR icon = c0arun5a END
 	LPF ALTER_EFFECT INT_VAR match_opcode = 142 parameter2 = c0aicr21 END
 	LPF ALTER_EFFECT INT_VAR match_opcode = 232 STR_VAR resource = C0ARUNE5 END
-SAY NAME1 ~Imbue: See Enemy~
+SAY NAME1 ~灌注：发现敌人~
 COPY_EXISTING ~c0arun1b.spl~ ~override/c0arun5b.spl~
 	LPF ALTER_SPELL_HEADER STR_VAR icon = c0arun5b END
 	LPF ALTER_EFFECT INT_VAR match_opcode = 142 parameter2 = c0aicr22 END
 	LPF ALTER_EFFECT INT_VAR match_opcode = 232 STR_VAR resource = C0ARUNE5 END
-SAY NAME1 ~Imbue: Attacked~
+SAY NAME1 ~灌注：被攻击~
 COPY_EXISTING ~c0arun1c.spl~ ~override/c0arun5c.spl~
 	LPF ALTER_SPELL_HEADER STR_VAR icon = c0arun5c END
 	LPF ALTER_EFFECT INT_VAR match_opcode = 142 parameter2 = c0aicr23 END
 	LPF ALTER_EFFECT INT_VAR match_opcode = 232 STR_VAR resource = C0ARUNE5 END
-SAY NAME1 ~Imbue: Hit Points at 50%~
+SAY NAME1 ~灌注：生命值 50%~
 COPY_EXISTING ~c0arun1d.spl~ ~override/c0arun5d.spl~
 	LPF ALTER_SPELL_HEADER STR_VAR icon = c0arun5d END
 	LPF ALTER_EFFECT INT_VAR match_opcode = 142 parameter2 = c0aicr24 END
 	LPF ALTER_EFFECT INT_VAR match_opcode = 232 STR_VAR resource = C0ARUNE5 END
-SAY NAME1 ~Imbue: Hit Points at 25%~
+SAY NAME1 ~灌注：生命值 25%~
 COPY_EXISTING ~c0arun1e.spl~ ~override/c0arun5e.spl~
 	LPF ALTER_SPELL_HEADER STR_VAR icon = c0arun5e END
 	LPF ALTER_EFFECT INT_VAR match_opcode = 142 parameter2 = c0aicr25 END
 	LPF ALTER_EFFECT INT_VAR match_opcode = 232 STR_VAR resource = C0ARUNE5 END
-SAY NAME1 ~Imbue: Helpless~
+SAY NAME1 ~灌注：无力~
 
 COPY_EXISTING ~c0arun1a.spl~ ~override/c0arun6a.spl~
 	LPF ALTER_SPELL_HEADER STR_VAR icon = c0arun6a END
 	LPF ALTER_EFFECT INT_VAR match_opcode = 232 parameter1 = 0 END
 	LPF ALTER_EFFECT INT_VAR match_opcode = 142 parameter2 = c0aicr26 END
 	LPF ALTER_EFFECT INT_VAR match_opcode = 232 STR_VAR resource = C0ARUNE6 END
-SAY NAME1 ~Imbue: See Enemy~
+SAY NAME1 ~灌注：发现敌人~
 COPY_EXISTING ~c0arun1b.spl~ ~override/c0arun6b.spl~
 	LPF ALTER_SPELL_HEADER STR_VAR icon = c0arun6b END
 	LPF ALTER_EFFECT INT_VAR match_opcode = 232 parameter1 = 0 END
 	LPF ALTER_EFFECT INT_VAR match_opcode = 142 parameter2 = c0aicr27 END
 	LPF ALTER_EFFECT INT_VAR match_opcode = 232 STR_VAR resource = C0ARUNE6 END
-SAY NAME1 ~Imbue: Attacked~
+SAY NAME1 ~灌注：被攻击~
 COPY_EXISTING ~c0arun1c.spl~ ~override/c0arun6c.spl~
 	LPF ALTER_SPELL_HEADER STR_VAR icon = c0arun6c END
 	LPF ALTER_EFFECT INT_VAR match_opcode = 232 parameter1 = 0 END
 	LPF ALTER_EFFECT INT_VAR match_opcode = 142 parameter2 = c0aicr28 END
 	LPF ALTER_EFFECT INT_VAR match_opcode = 232 STR_VAR resource = C0ARUNE6 END
-SAY NAME1 ~Imbue: Hit Points at 50%~
+SAY NAME1 ~灌注：生命值 50%~
 COPY_EXISTING ~c0arun1d.spl~ ~override/c0arun6d.spl~
 	LPF ALTER_SPELL_HEADER STR_VAR icon = c0arun6d END
 	LPF ALTER_EFFECT INT_VAR match_opcode = 232 parameter1 = 0 END
 	LPF ALTER_EFFECT INT_VAR match_opcode = 142 parameter2 = c0aicr29 END
 	LPF ALTER_EFFECT INT_VAR match_opcode = 232 STR_VAR resource = C0ARUNE6 END
-SAY NAME1 ~Imbue: Hit Points at 25%~
+SAY NAME1 ~灌注：生命值 25%~
 COPY_EXISTING ~c0arun1e.spl~ ~override/c0arun6e.spl~
 	LPF ALTER_SPELL_HEADER STR_VAR icon = c0arun6e END
 	LPF ALTER_EFFECT INT_VAR match_opcode = 232 parameter1 = 0 END
 	LPF ALTER_EFFECT INT_VAR match_opcode = 142 parameter2 = c0aicr30 END
 	LPF ALTER_EFFECT INT_VAR match_opcode = 232 STR_VAR resource = C0ARUNE6 END
-SAY NAME1 ~Imbue: Helpless~
+SAY NAME1 ~灌注：无力~
 
 COPY_EXISTING ~c0arun1a.spl~ ~override/c0arun7a.spl~
 	LPF ALTER_SPELL_HEADER STR_VAR icon = c0arun7a END
 	LPF ALTER_EFFECT INT_VAR match_opcode = 232 parameter1 = 0 END
 	LPF ALTER_EFFECT INT_VAR match_opcode = 142 parameter2 = c0aicr31 END
 	LPF ALTER_EFFECT INT_VAR match_opcode = 232 STR_VAR resource = C0ARUNE7 END
-SAY NAME1 ~Imbue: See Enemy~
+SAY NAME1 ~灌注：发现敌人~
 COPY_EXISTING ~c0arun1b.spl~ ~override/c0arun7b.spl~
 	LPF ALTER_SPELL_HEADER STR_VAR icon = c0arun7b END
 	LPF ALTER_EFFECT INT_VAR match_opcode = 232 parameter1 = 0 END
 	LPF ALTER_EFFECT INT_VAR match_opcode = 142 parameter2 = c0aicr32 END
 	LPF ALTER_EFFECT INT_VAR match_opcode = 232 STR_VAR resource = C0ARUNE7 END
-SAY NAME1 ~Imbue: Attacked~
+SAY NAME1 ~灌注：被攻击~
 COPY_EXISTING ~c0arun1c.spl~ ~override/c0arun7c.spl~
 	LPF ALTER_SPELL_HEADER STR_VAR icon = c0arun7c END
 	LPF ALTER_EFFECT INT_VAR match_opcode = 232 parameter1 = 0 END
 	LPF ALTER_EFFECT INT_VAR match_opcode = 142 parameter2 = c0aicr33 END
 	LPF ALTER_EFFECT INT_VAR match_opcode = 232 STR_VAR resource = C0ARUNE7 END
-SAY NAME1 ~Imbue: Hit Points at 50%~
+SAY NAME1 ~灌注：生命值 50%~
 COPY_EXISTING ~c0arun1d.spl~ ~override/c0arun7d.spl~
 	LPF ALTER_SPELL_HEADER STR_VAR icon = c0arun7d END
 	LPF ALTER_EFFECT INT_VAR match_opcode = 232 parameter1 = 0 END
 	LPF ALTER_EFFECT INT_VAR match_opcode = 142 parameter2 = c0aicr34 END
 	LPF ALTER_EFFECT INT_VAR match_opcode = 232 STR_VAR resource = C0ARUNE7 END
-SAY NAME1 ~Imbue: Hit Points at 25%~
+SAY NAME1 ~灌注：生命值 25%~
 COPY_EXISTING ~c0arun1e.spl~ ~override/c0arun7e.spl~
 	LPF ALTER_SPELL_HEADER STR_VAR icon = c0arun7e END
 	LPF ALTER_EFFECT INT_VAR match_opcode = 232 parameter1 = 0 END
 	LPF ALTER_EFFECT INT_VAR match_opcode = 142 parameter2 = c0aicr35 END
 	LPF ALTER_EFFECT INT_VAR match_opcode = 232 STR_VAR resource = C0ARUNE7 END
-SAY NAME1 ~Imbue: Helpless~
+SAY NAME1 ~灌注：无力~
 
 COPY_EXISTING ~c0arun1a.spl~ ~override/c0arun8a.spl~
 	LPF ALTER_SPELL_HEADER STR_VAR icon = c0arun8a END
 	LPF ALTER_EFFECT INT_VAR match_opcode = 232 parameter1 = 0 END
 	LPF ALTER_EFFECT INT_VAR match_opcode = 142 parameter2 = c0aicr36 END
 	LPF ALTER_EFFECT INT_VAR match_opcode = 232 STR_VAR resource = C0ARUNE8 END
-SAY NAME1 ~Imbue: See Enemy~
+SAY NAME1 ~灌注：发现敌人~
 COPY_EXISTING ~c0arun1b.spl~ ~override/c0arun8b.spl~
 	LPF ALTER_SPELL_HEADER STR_VAR icon = c0arun8b END
 	LPF ALTER_EFFECT INT_VAR match_opcode = 232 parameter1 = 0 END
 	LPF ALTER_EFFECT INT_VAR match_opcode = 142 parameter2 = c0aicr37 END
 	LPF ALTER_EFFECT INT_VAR match_opcode = 232 STR_VAR resource = C0ARUNE8 END
-SAY NAME1 ~Imbue: Attacked~
+SAY NAME1 ~灌注：被攻击~
 COPY_EXISTING ~c0arun1c.spl~ ~override/c0arun8c.spl~
 	LPF ALTER_SPELL_HEADER STR_VAR icon = c0arun8c END
 	LPF ALTER_EFFECT INT_VAR match_opcode = 232 parameter1 = 0 END
 	LPF ALTER_EFFECT INT_VAR match_opcode = 142 parameter2 = c0aicr38 END
 	LPF ALTER_EFFECT INT_VAR match_opcode = 232 STR_VAR resource = C0ARUNE8 END
-SAY NAME1 ~Imbue: Hit Points at 50%~
+SAY NAME1 ~灌注：生命值 50%~
 COPY_EXISTING ~c0arun1d.spl~ ~override/c0arun8d.spl~
 	LPF ALTER_SPELL_HEADER STR_VAR icon = c0arun8d END
 	LPF ALTER_EFFECT INT_VAR match_opcode = 232 parameter1 = 0 END
 	LPF ALTER_EFFECT INT_VAR match_opcode = 142 parameter2 = c0aicr39 END
 	LPF ALTER_EFFECT INT_VAR match_opcode = 232 STR_VAR resource = C0ARUNE8 END
-SAY NAME1 ~Imbue: Hit Points at 25%~
+SAY NAME1 ~灌注：生命值 25%~
 COPY_EXISTING ~c0arun1e.spl~ ~override/c0arun8e.spl~
 	LPF ALTER_SPELL_HEADER STR_VAR icon = c0arun8e END
 	LPF ALTER_EFFECT INT_VAR match_opcode = 232 parameter1 = 0 END
 	LPF ALTER_EFFECT INT_VAR match_opcode = 142 parameter2 = c0aicr40 END
 	LPF ALTER_EFFECT INT_VAR match_opcode = 232 STR_VAR resource = C0ARUNE8 END
-SAY NAME1 ~Imbue: Helpless~
+SAY NAME1 ~灌注：无力~
 
 COPY_EXISTING ~c0arun1a.spl~ ~override/c0arun9a.spl~
 	LPF ALTER_SPELL_HEADER STR_VAR icon = c0arun9a END
 	LPF ALTER_EFFECT INT_VAR match_opcode = 142 parameter2 = c0aicr41 END
 	LPF ALTER_EFFECT INT_VAR match_opcode = 232 STR_VAR resource = C0ARUNE9 END
-SAY NAME1 ~Imbue: See Enemy~
+SAY NAME1 ~灌注：发现敌人~
 COPY_EXISTING ~c0arun1b.spl~ ~override/c0arun9b.spl~
 	LPF ALTER_SPELL_HEADER STR_VAR icon = c0arun9b END
 	LPF ALTER_EFFECT INT_VAR match_opcode = 142 parameter2 = c0aicr42 END
 	LPF ALTER_EFFECT INT_VAR match_opcode = 232 STR_VAR resource = C0ARUNE9 END
-SAY NAME1 ~Imbue: Attacked~
+SAY NAME1 ~灌注：被攻击~
 COPY_EXISTING ~c0arun1c.spl~ ~override/c0arun9c.spl~
 	LPF ALTER_SPELL_HEADER STR_VAR icon = c0arun9c END
 	LPF ALTER_EFFECT INT_VAR match_opcode = 142 parameter2 = c0aicr43 END
 	LPF ALTER_EFFECT INT_VAR match_opcode = 232 STR_VAR resource = C0ARUNE9 END
-SAY NAME1 ~Imbue: Hit Points at 50%~
+SAY NAME1 ~灌注：生命值 50%~
 COPY_EXISTING ~c0arun1d.spl~ ~override/c0arun9d.spl~
 	LPF ALTER_SPELL_HEADER STR_VAR icon = c0arun9d END
 	LPF ALTER_EFFECT INT_VAR match_opcode = 142 parameter2 = c0aicr44 END
 	LPF ALTER_EFFECT INT_VAR match_opcode = 232 STR_VAR resource = C0ARUNE9 END
-SAY NAME1 ~Imbue: Hit Points at 25%~
+SAY NAME1 ~灌注：生命值 25%~
 COPY_EXISTING ~c0arun1e.spl~ ~override/c0arun9e.spl~
 	LPF ALTER_SPELL_HEADER STR_VAR icon = c0arun9e END
 	LPF ALTER_EFFECT INT_VAR match_opcode = 142 parameter2 = c0aicr45 END
 	LPF ALTER_EFFECT INT_VAR match_opcode = 232 STR_VAR resource = C0ARUNE9 END
-SAY NAME1 ~Imbue: Helpless~
+SAY NAME1 ~灌注：无力~
 
 // Cryoshock
 
 COPY_EXISTING ~c0arune2.spl~ ~override~
 	LPF	ADD_SPELL_EFFECT INT_VAR insert_point = 0 opcode = 324 target = 2 parameter2 = COLD duration = 1 STR_VAR resource = EVAL ~%SOURCE_RES%~ END
-SAY NAME1 ~Cryoshock~
-SAY UNIDENTIFIED_DESC ~Cryoshock
-(Evocation)
+SAY NAME1 ~冰震~
+SAY UNIDENTIFIED_DESC ~冰震
+（塑能系）
 
-Range: Visual range of the caster
-Duration: 1 round
-Casting Time: 1
-Area of Effect: 1 creature
-Saving Throw: None
+范围：施法者视野内
+持续时间：1 轮
+施法时间：1
+效果范围：1 个生物
+豁免检定：无
 
-The Cryon Rune allows the user to cast Cryoshock. Cryoshock launches a freezing jet of energy is launched towards a target creature, dealing 1d4 cold damage per level of the user. Due to the disruptive nature of the chilling ray, targets are afflicted with a 90% chance to miscast spells for one round. A successful Saving Throw vs. Spells halves the damage dealt.~
+冰之符文让使用者可施放冰震。冰震向目标生物射出一道冰寒能量，造成每使用者等级 1d4 寒冷伤害。由于寒流具有干扰性，目标在一轮内有 90% 几率施法失败。对抗法术豁免成功则伤害减半。~
 	LPF ALTER_SPELL_HEADER INT_VAR projectile = c0acryo1 END
 
 // Energy Barrage
 
 COPY_EXISTING ~c0arune3.spl~ ~override~
-SAY NAME1 ~Energy Barrage~
-SAY UNIDENTIFIED_DESC ~Energy Barrage
-(Evocation)
+SAY NAME1 ~能量弹幕~
+SAY UNIDENTIFIED_DESC ~能量弹幕
+（塑能系）
 
-Range: Visual range of the caster
-Duration: Instant
-Casting Time: 1
-Area of Effect: 1 creature
-Saving Throw: None 
+范围：施法者视野内
+持续时间：瞬间
+施法时间：1
+效果范围：1 个生物
+豁免检定：无 
 
-The Arcana Rune allows the user to cast Energy Barrage. Energy Barrage unleashes a missile of pure arcane energy, dealing 1d4+1 magical damage. An additional missile is created for every two levels of the caster beyond level 1, up to a maximum of eight missiles at level 15.~
+奥秘符文让使用者可施放能量弹幕。能量弹幕释放一枚纯奥术能量飞弹，造成 1d4+1 魔法伤害。自 1 级之后每两级额外生成一枚飞弹，15 级时最多八枚。~
 	LPF ALTER_SPELL_HEADER INT_VAR header = 1 projectile = c0amiss1 END
 	LPF ALTER_SPELL_HEADER INT_VAR header = 2 projectile = c0amiss2 END
 	LPF ALTER_SPELL_HEADER INT_VAR header = 3 projectile = c0amiss3 END
@@ -1986,126 +1986,126 @@ The Arcana Rune allows the user to cast Energy Barrage. Energy Barrage unleashes
 // LUNAR BUTTERFLY
 
 COPY_EXISTING ~c0arune4.spl~ ~override~
-SAY NAME1 ~Lunar Butterfly~
-SAY UNIDENTIFIED_DESC ~Lunar Butterfly
-(Illusion/Phantasm)
+SAY NAME1 ~月蝶~
+SAY UNIDENTIFIED_DESC ~月蝶
+（幻术/幻影系）
 
-Range: 40 ft.
-Duration: Special
-Casting Time: 1
-Area of Effect: Special
-Saving Throw: Neg.
+范围：40 尺
+持续时间：特殊
+施法时间：1
+效果范围：特殊
+豁免检定：无效
 
-The Lunacy Rune allows the user to cast Lunar Butterfly. Lunar Butterfly launches a bolt of moonlight towards a target. The effects of the bolt vary depending on whether the target is an ally or an enemy.
+月狂符文让使用者可施放月蝶。月蝶向目标射出一束月光。其效果取决于目标是友方还是敌方。
 
-Ally cast: Target gains the effects of Mirror Image for 3 rounds + 1 round/user level.
-Enemy cast: Target must make a Save vs. Spells or become Confused and Intoxicated for one turn.
+对友方施放：目标获得「镜影术」效果，持续 3 轮 + 每使用者等级 1 轮。
+对敌方施放：目标须通过对抗法术豁免，否则陷入「混乱」与「醉酒」状态一轮。
 
-From 15th level onwards, the bolt of moonlight spreads to all nearby creatures around the target, inflicting the spell's effects on each target.~
+自 15 级起，月光束会散及目标周围的所有生物，对每个目标分别施加本法术的效果。~
 	LPF ALTER_SPELL_HEADER INT_VAR header = 1 projectile = c0aluna3 END
 	LPF ALTER_SPELL_HEADER INT_VAR header = 2 projectile = c0aluna4 END
 COPY_EXISTING ~c0rune4a.spl~ ~override~
-	LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1 = RESOLVE_STR_REF (~Confused~) END
+	LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1 = RESOLVE_STR_REF (~混乱~) END
 COPY_EXISTING ~c0rune4b.spl~ ~override~
-	LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1 = RESOLVE_STR_REF (~Mirror Imaged~) END
+	LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1 = RESOLVE_STR_REF (~镜影~) END
 
 // AERIAL JUDGMENT
 COPY_EXISTING ~c0arune5.spl~ ~override~
 	LPF	ADD_SPELL_EFFECT INT_VAR insert_point = 0 opcode = 324 target = 2 parameter2 = ELEC duration = 1 STR_VAR resource = EVAL ~%SOURCE_RES%~ END
 	LPF ALTER_SPELL_HEADER INT_VAR projectile = c0albolt END
-	LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1 = RESOLVE_STR_REF (~Stunned~) END
-SAY NAME1 ~Aerial Judgment~
-SAY UNIDENTIFIED_DESC ~Aerial Judgment
-(Alteration)
+	LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1 = RESOLVE_STR_REF (~震慑~) END
+SAY NAME1 ~天降裁决~
+SAY UNIDENTIFIED_DESC ~天降裁决
+（变化系）
 
-Range: Visual range of the caster
-Duration: 4 rounds
-Casting Time: 1
-Area of Effect: 1 creature
-Saving Throw: 1/2, Neg.
+范围：施法者视野内
+持续时间：4 轮
+施法时间：1
+效果范围：1 个生物
+豁免检定：1/2、无效
 
-The Aether Rune allows the user to cast Aerial Judgment. A bolt of lightning from the sky strikes a chosen target, dealing 6d8 electrical damage + 1d8 per level past user level 10 and Stunning the target for four rounds. A successful Saving Throw vs. Spells halves the damage dealt and negates the stun.
+以太符文让使用者可施放天降裁决。一道天雷击中选定目标，造成 6d8 电击伤害 + 使用者 10 级之后每级 1d8，并使目标「震慑」四轮。对抗法术豁免成功则伤害减半且不受震慑。
 
-From 15th level onwards, enemies around the target suffer half regular damage with no save or stun.~
+自 15 级起，目标周围的敌人受到一半常规伤害，且无需豁免、不会被震慑。~
 COPY_EXISTING ~c0rune5a.spl~ ~override~
 	LPF	ADD_SPELL_EFFECT INT_VAR insert_point = 0 opcode = 324 target = 2 parameter2 = ELEC duration = 1 STR_VAR resource = EVAL ~%SOURCE_RES%~ END
 	LPF ALTER_SPELL_HEADER INT_VAR projectile = c0albol2 END
 
 // GAIA SHIELD
 COPY_EXISTING ~c0arune6.spl~ ~override~
-SAY NAME1 ~Gaia Shield~
-SAY UNIDENTIFIED_DESC ~Gaia Shield
-(Alteration)
+SAY NAME1 ~盖亚护盾~
+SAY UNIDENTIFIED_DESC ~盖亚护盾
+（变化系）
 
-Range: 0
-Duration: 1 turn
-Casting Time: 1
-Area of Effect: Special
-Saving Throw: None
+范围：0
+持续时间：1 回合
+施法时间：1
+效果范围：特殊
+豁免检定：无
 
-The Adamant Rune allows the user to cast Gaia Shield. This powerful spell grants five protective layers of stone and iron to the caster, protecting them from the damage of one physical damage per skin. Additionally, as long as at least one skin is active, the caster gains a +6 bonus to Armor Class.
+金刚符文让使用者可施放盖亚护盾。此法为施法者加上五层石与铁的护层，每层可挡下一次物理伤害。此外，只要至少一层护层仍在，施法者便获得防御等级 +6 加成。
 
-From 20th level onwards, Gaia Shield also bestows protective skins to all allies around the caster.~
+自 20 级起，盖亚护盾也会为施法者周围的所有友方加上护层。~
 COPY_EXISTING ~c0rune6a.eff~ ~override~
   WRITE_SHORT 0x20 ~C0STSKIN~
 
 // CHRONOS WARP
 COPY_EXISTING ~c0arune7.spl~ ~override~
-SAY NAME1 ~Chronos Warp~
-SAY UNIDENTIFIED_DESC ~Chronos Warp
-(Alteration)
+SAY NAME1 ~时空扭曲~
+SAY UNIDENTIFIED_DESC ~时空扭曲
+（变化系）
 
-Range: 40 ft.
-Duration: 5 rounds
-Casting Time: 1
-Area of Effect: One creature
-Saving Throw: None
+范围：40 尺
+持续时间：5 轮
+施法时间：1
+效果范围：1 个生物
+豁免检定：无
 
-The Chrono Rune allows the user to cast Chronos Warp. For 5 rounds, the target creature moves with increased movement rate, has doubled attacks per round, and increased casting speed of 4. However, in order to negate the side-effects of hastening time, the effects reverse after the duration has expired, slowing the target and reducing their Armor Class, THAC0 and casting speed by 4 for another 5 rounds.~
+时序符文让使用者可施放时空扭曲。在 5 轮内，目标生物的移动速度加快、每轮攻击次数翻倍、施法速度提高 4。然而为了抵消加速时间的副作用，法术时效过后效果会反向：目标陷入缓慢，防御等级、THAC0 与施法速度再降 4，持续另 5 轮。~
 
 // PANACEA CIRCLE
 COPY_EXISTING ~c0arune8.spl~ ~override~
 	LPF ALTER_SPELL_HEADER INT_VAR projectile = c0pring END
-SAY NAME1 ~Panacea Circle~
-SAY UNIDENTIFIED_DESC ~Panacea Circle
-(Necromancy)
+SAY NAME1 ~万灵法环~
+SAY UNIDENTIFIED_DESC ~万灵法环
+（死灵系）
 
-Range: 15 ft.
-Duration: Instant
-Casting Time: 1
-Area of Effect: 15-ft. radius
-Saving Throw: None
+范围：15 尺
+持续时间：瞬间
+施法时间：1
+效果范围：15 尺半径
+豁免检定：无
 
-The Mederi Rune allows the user to cast Panacea Circle. All allies within a 15-ft. radius are healed for 20% of their maximum hit points and are cured of diseases, poisons, blindness, feeblemind, deafness and intoxication.~
+治愈符文让使用者可施放万灵法环。15 尺半径内的所有友方恢复其最大生命值的 20%，并治愈疾病、毒素、目盲、弱智、耳聋与醉酒状态。~
 
 // RED METEOR
 COPY_EXISTING ~c0arune9.spl~ ~override~
 	LPF ALTER_SPELL_HEADER INT_VAR projectile = c0acomet END
-SAY NAME1 ~Red Meteor~
-SAY UNIDENTIFIED_DESC ~Red Meteor
-(Evocation)
+SAY NAME1 ~赤色流星~
+SAY UNIDENTIFIED_DESC ~赤色流星
+（塑能系）
 
-Range: 270 ft.
-Duration: Instant
-Casting Time: 1
-Area of Effect: 15-ft. radius
-Saving Throw: Special
+范围：270 尺
+持续时间：瞬间
+施法时间：1
+效果范围：15 尺半径
+豁免检定：特殊
 
-The Calamity Rune allows the user to cast Red Meteor. A crimson-colored mass of magical energy is shaped several hundred feet above the caster and their target and strikes down with massive speed and force, dealing 8d8 damage (half magic, half fire) with no save. Targets are knocked away from the center of impact by the shockwave and must make a Saving Throw vs. Paralysis or be stunned for 3 rounds.
+灾厄符文让使用者可施放赤色流星。一团绯红色的魔法能量在施法者与目标上方数百尺处成形，以极快的速度与巨力砸落，造成 8d8 伤害（一半魔法、一半火焰），无法豁免。目标会被冲击波从爆心推开，并且必须通过对抗麻痹豁免，否则被震慑 3 轮。
 
-This spell will not harm party members.~
+此法不会伤害队友。~
 
 COPY_EXISTING ~c0aualc.spl~ ~override~
-SAY NAME1 ~Advanced Alchemy~
-SAY NAME2 ~Advanced Alchemy~
-SAY UNIDENTIFIED_DESC ~Advanced Alchemy
-Lantanese artificers are exceptionally skilled in chemistry and potion-making. This skill may be used to craft a number of potions or alchemical weapons equal to half of the artificer's level. The types of potions available for crafting increase with the artificer's level.
+SAY NAME1 ~高级炼金~
+SAY NAME2 ~高级炼金~
+SAY UNIDENTIFIED_DESC ~高级炼金
+兰坦奇械师在化学与配药方面技艺出众。此技能可用来制作数量相当于奇械师等级一半的药水或炼金武器。可制作的药水种类随奇械师等级增加而增多。
 
-This ability may be used an unlimited times per day, but the artificer's stock only refreshes after resting. Alchemy may not be performed while in combat.~
+此能力每天可使用无限次，但奇械师的存货只在休息后补满。战斗中无法进行炼金。~
 
 COPY_EXISTING ~c0aualch.cre~ ~override~
-SAY NAME1 ~Alchemy~
-SAY NAME2 ~Alchemy~
+SAY NAME1 ~炼金~
+SAY NAME2 ~炼金~
   WRITE_ASCII 0x248 ~c0aualch~ #8  //override script
   WRITE_ASCII 0x280 ~c0aualch~ #32  //DV
   WRITE_ASCII 0x2cc ~c0aualch~ #8   //pre-joining dialogue file
@@ -2118,13 +2118,13 @@ COPY_EXISTING ~c0autinv.sto~ ~override~
 SAY 0xc ~Clockwork Servant Automaton~
 
 COPY_EXISTING ~c0aupot1.sto~ ~override/c0aupot1.sto~
-SAY 0xc ~Alchemy - Standard Potions~
+SAY 0xc ~炼金 - 标准药水~
   
 COPY_EXISTING ~c0aupot1.sto~ ~override/c0aubom1.sto~
-SAY 0xc ~Alchemy - Explosives~
+SAY 0xc ~炼金 - 爆炸物~
 
 COPY_EXISTING ~c0aupot1.sto~ ~override/c0aupoth.sto~
-SAY 0xc ~Alchemy - Advanced Potions~
+SAY 0xc ~炼金 - 高级药水~
 
 ACTION_IF FILE_EXISTS_IN_GAME ~baldur.bcs~ THEN BEGIN
 EXTEND_TOP ~baldur.bcs~ ~%MOD_FOLDER%/scripts/baldur.baf~
@@ -2141,12 +2141,12 @@ END
 COPY_EXISTING ~c0ausumm.cre~ ~override~
   COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/dialogue/c0auin3.d~
 COPY_EXISTING ~c0auin3.spl~ ~override~
-SAY NAME1 ~Craft Automaton~
-SAY NAME2 ~Craft Automaton~
-SAY UNIDENTIFIED_DESC ~Craft Automaton
-The artificer spends two rounds to assimilate a powerful automaton which can be controlled at will. Automatons last until destroyed and cannot be controlled but will defend their creators, are disabled if their creator is incapacitated, lose control if their creator's mind is affected and fall apart if their creator is killed.
+SAY NAME1 ~制造自动机械~
+SAY NAME2 ~制造自动机械~
+SAY UNIDENTIFIED_DESC ~制造自动机械
+奇械师花两轮时间组装一具可随意操纵的强力自动机械。自动机械会一直存在直到被摧毁；它无法被他人操控，但会保护自己的制造者；制造者失去行动能力时它会停摆，制造者心智受影响时它会失控，制造者被杀时它会崩解。
 
-Only one automaton can be controlled at any given time.~
+同一时间只能操控一具自动机械。~
 
 COPY_EXISTING ~c0auin3a.cre~ ~override~
 COPY_EXISTING ~c0auin3a.cre~ ~override/c0auin3b.cre~
@@ -2154,8 +2154,8 @@ COPY_EXISTING ~c0auin3a.cre~ ~override/c0auin3c.cre~
 
 COPY_EXISTING ~c0auin3a.cre~ ~override~
   WRITE_ASCII 0X34 ~ABronzL~ #8   //small portrait
-SAY NAME1 ~Bronze Automaton~
-SAY NAME2 ~Bronze Automaton~
+SAY NAME1 ~青铜自动机械~
+SAY NAME2 ~青铜自动机械~
 WRITE_BYTE 0x234 8
 WRITE_ASCII 0x2cc ~c0auin3~  #8  // dialogue
   WRITE_ASCII 0x280 ~c0auin3~ #32  //DV
@@ -2184,8 +2184,8 @@ WRITE_ASCII 0x2cc ~c0auin3~  #8  // dialogue
 
 COPY_EXISTING ~c0auin3b.cre~ ~override~
   WRITE_ASCII 0X34 ~AJadeL~ #8   //small portrait
-SAY NAME1 ~Jade Automaton~
-SAY NAME2 ~Jade Automaton~
+SAY NAME1 ~翡翠自动机械~
+SAY NAME2 ~翡翠自动机械~
 WRITE_BYTE 0x234 14
 WRITE_BYTE 0x238 21
 WRITE_BYTE 0x2e 32
@@ -2216,8 +2216,8 @@ WRITE_ASCII 0x2cc ~c0auin3~  #8  // dialogue
 
 COPY_EXISTING ~c0auin3c.cre~ ~override~
   WRITE_ASCII 0X34 ~ABlackL~ #8   //small portrait
-SAY NAME1 ~Adamantine Automaton~
-SAY NAME2 ~Adamantine Automaton~
+SAY NAME1 ~精金自动机械~
+SAY NAME2 ~精金自动机械~
 WRITE_BYTE 0x234 22
 WRITE_BYTE 0x238 21
 WRITE_BYTE 0x2e 75
@@ -2308,18 +2308,18 @@ WRITE_BYTE 0x90 1
 WRITE_ASCII 0x94 ~C0IBSP~
 
 COPY_EXISTING ~c0auto2.itm~ ~override~
-SAY NAME2 ~Sword Stance~
-SAY DESC ~While in this stance, the automaton uses its sword to attack at one base attack per round, dealing 1d10 slashing damage per hit. There is a 20% chance on each hit to deal 3d6 additional slashing damage on eacch hit.~
+SAY NAME2 ~剑击姿态~
+SAY DESC ~处于此姿态时，自动机械以剑攻击，每轮一次基础攻击，每次命中造成 1d10 挥砍伤害。每次命中有 20% 几率额外造成 3d6 挥砍伤害。~
 COPY_EXISTING ~c0auto3.itm~ ~override~
-SAY NAME2 ~Unarmed Stance~
-SAY DESC ~While in this stance, the automaton uses its fists to attack at two base attacks per round, dealing 1d6 crushing damage per hit.~
+SAY NAME2 ~拳击姿态~
+SAY DESC ~处于此姿态时，自动机械以拳攻击，每轮两次基础攻击，每次命中造成 1d6 钝击伤害。~
 COPY_EXISTING ~c0auto31.spl~ ~override~
   LPF ALTER_EFFECT
     INT_VAR
       check_globals = 1
       check_headers = 1
       match_opcode = 139 // display string
- parameter1 = RESOLVE_STR_REF (~Stunned~)
+ parameter1 = RESOLVE_STR_REF (~震慑~)
 END
 COPY_EXISTING ~c0auto6a.itm~ ~override/c0auto6b.itm~
   LPF ALTER_EFFECT
@@ -2341,12 +2341,12 @@ COPY_EXISTING ~c0autos1.spl~ ~override~
       timing = 9
   END
 COPY_EXISTING ~c0autos2.spl~ ~override~
-SAY NAME1 ~Activate: Barrier Sphere~
-SAY NAME2 ~Activate: Barrier Sphere~
-SAY UNIDENTIFIED_DESC ~Barrier Sphere
-With this ability, the automaton activates a device which causes it to surround the target with a protective Sphere of energy, rendering her unable to interact with the outside world and vice versa, as per the spell Otiluke's Resilient Sphere. Unlike the spell, this ability is not magical in nature and is thus not affected by magic resistance, but the automaton is unable to act so long as it continues to charge the Sphere. This ability may be deactivated at will.
+SAY NAME1 ~激活：障壁球~
+SAY NAME2 ~激活：障壁球~
+SAY UNIDENTIFIED_DESC ~障壁球
+使用此能力时，自动机械启动一件装置，在目标周围形成护罩般的能量球，使其无法与外界互动，外界也无法触及它，效果如「奥提卢克强韧法球」。与本法术不同的是，此能力并非魔法性质，因此不受魔法抗性影响；但只要自动机械持续维持此球，它自身便无法行动。此能力可随意关闭。
 
-Enemies may make a save vs. breath at -3 to avoid being trapped by the Sphere.~
+敌人可通过对抗吐息豁免（-3）以避开被此球困住。~
 COPY_EXISTING ~c0autos3.spl~ ~override~
   LPF ADD_SPELL_CFEFFECT
     INT_VAR
@@ -2354,20 +2354,20 @@ COPY_EXISTING ~c0autos3.spl~ ~override~
 	  target = 1
 	  timing = 4
 	  duration = 24
-	  parameter1 = RESOLVE_STR_REF (~Barrier Sphere Ready~)
+	  parameter1 = RESOLVE_STR_REF (~障壁球就绪~)
 END
-SAY NAME1 ~Deactivate: Barrier Sphere~
-SAY NAME2 ~Deactivate: Barrier Sphere~
-SAY UNIDENTIFIED_DESC ~Barrier Sphere
-Use this ability to deactivate Barrier Sphere.~
+SAY NAME1 ~关闭：障壁球~
+SAY NAME2 ~关闭：障壁球~
+SAY UNIDENTIFIED_DESC ~障壁球
+使用此能力可关闭障壁球。~
 COPY_EXISTING ~c0autos4.spl~ ~override~
-SAY NAME1 ~Activate: Enlarge~
-SAY NAME2 ~Activate: Enlarge~
-SAY UNIDENTIFIED_DESC ~Enlarge
-With this ability, the automaton activates an internal device which causes it to become magically empowered for one turn, altering its stats:
-  - +5 to THAC0
-  - +30% to Damage
-  - +40% Physical Resistance~
+SAY NAME1 ~激活：增幅~
+SAY NAME2 ~激活：增幅~
+SAY UNIDENTIFIED_DESC ~增幅
+使用此能力时，自动机械启动内部装置，在一回合内获得魔法强化，各项数值改动如下：
+  - THAC0 +5
+  - 伤害 +30%
+  - 物理抗性 +40%~
 COPY_EXISTING ~c0autos8.spl~ ~override~
   LPF ADD_SPELL_CFEFFECT
     INT_VAR
@@ -2375,37 +2375,37 @@ COPY_EXISTING ~c0autos8.spl~ ~override~
 	  target = 1
 	  timing = 4
 	  duration = 120
-	  parameter1 = RESOLVE_STR_REF (~Static Burst Ready~)
+	  parameter1 = RESOLVE_STR_REF (~静电爆发就绪~)
 END
-SAY NAME1 ~Activate: Static Burst~
-SAY NAME2 ~Activate: Static Burst~
-SAY UNIDENTIFIED_DESC ~Static Burst
-With this ability, the automaton activates an internal device which releases a colossal burst of static electricity, dealing 12d6 electrical damage (Save vs. Breath Weapons at -4 for half damage)~
+SAY NAME1 ~激活：静电爆发~
+SAY NAME2 ~激活：静电爆发~
+SAY UNIDENTIFIED_DESC ~静电爆发
+使用此能力时，自动机械启动内部装置，释放一阵巨大的静电荷，造成 12d6 电击伤害（对抗吐息武器豁免 -4，成功则伤害减半）。~
 COPY_EXISTING ~c0autos9.spl~ ~override~
 COPY_EXISTING ~c0autosa.spl~ ~override~
-SAY NAME1 ~Activate: Self-Destruct~
-SAY NAME2 ~Activate: Self-Destruct~
-SAY UNIDENTIFIED_DESC ~Self-Destruct
-With this ability, the automation activates an internal device which causes it to explode after one turn of channelling, dealing 24d6 damage (half fire, half electrical) and knocking all creatures unconscious and away from the automaton. This devastating explosion immediately destroys the automaton.~
+SAY NAME1 ~激活：自毁~
+SAY NAME2 ~激活：自毁~
+SAY UNIDENTIFIED_DESC ~自毁
+使用此能力时，自动机械启动内部装置，蓄能一回合后爆炸，造成 24d6 伤害（一半火焰、一半电击），并使所有生物昏迷、被推离自动机械。这场毁灭性的爆炸会立刻摧毁自动机械本身。~
 
 COPY_EXISTING ~c0auinh.spl~ ~override~
-LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1 = RESOLVE_STR_REF (~Healed~) END
+LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1 = RESOLVE_STR_REF (~已治疗~) END
 
 COPY_EXISTING ~c0auin7.spl~ ~override~
-SAY NAME1 ~Infusion~
-SAY UNIDENTIFIED_DESC ~Infusion
-The artificer infuses their allies' weapons with empowering elements, increasing their effectiveness. When using the ability, an artificer may enhance a particular type of physical damage, refreshing once per 8 hours. All party members' weapons of the corresponding type are treated as having a higher enchantment (based on the artificer's level) for the purposes of determining what they can hit for 8 hours and gain a 10% bonus to damage with the selected damage type +1% additional damage per two levels, capping at 30% at 40th level, with an additional effect:
-  SLASHING: Increases critical hit rate with slashing weapons by 1.
-  CRUSHING: Attacks with crushing weapons reduce target's THAC0 by 2 points for 2 rounds (non-cumulative).
-  PIERCING: Attacks with piercing weapons reduce target's piercing resistance by 25% for 2 rounds (non-cumulative).
-  MISSILES: Additional +1 bonus to hit and damage with ranged weapons.
+SAY NAME1 ~灌注~
+SAY UNIDENTIFIED_DESC ~灌注
+奇械师把强化元素灌注入盟友的武器，提升其效力。使用此能力时，奇械师可强化某一类物理伤害，每 8 小时恢复一次。队伍中对应类型的武器在判定可击中何物时视为附魔等级更高（依奇械师等级），持续 8 小时，并令所选伤害类型的伤害提高 10%，每两级再 +1%，40 级时封顶 30%，另附带一项效果：
+  挥砍：挥砍武器的暴击率 +1。
+  钝击：钝击武器的攻击使目标 THAC0 降低 2 点，持续 2 轮（不叠加）。
+  穿刺：穿刺武器的攻击使目标穿刺抗性降低 25%，持续 2 轮（不叠加）。
+  投射：远程武器的命中与伤害额外 +1。
 
-From 12th level onwards, the artificer may instead use Elemental Infusions, which do not empower weapons but instead a particular type of elemental damage.
+自 12 级起，奇械师也可改用「元素灌注」，不强化武器，而是强化某一类元素伤害。
 
-ELEMENTAL INFUSIONS
-The artificer may now use Infusion to instead empower an elemental type (fire, cold, acid, electrical), granting a 10% bonus to damage with and resistance to that element from all sources with an additional +1% additional per level, capping at 50% at 40th level.
+元素灌注
+奇械师现在可用「灌注」强化某一元素类型（火、冷、酸、电），令该元素的伤害与抗性（来自任何来源）提高 10%，每级再 +1%，40 级时封顶 50%。
 
-This ability can only be used outside of combat.~
+此能力只能在战斗之外使用。~
 
 COPY_EXISTING ~c0au7001.eff~ ~override/c0au7002.eff~
 WRITE_BYTE 0x64 25
@@ -2636,7 +2636,7 @@ WRITE_BYTE 0x1c 6
 
 
 COPY_EXISTING ~c0auin7a.spl~ ~override~
-SAY NAME1 ~Infusion: Blades~
+SAY NAME1 ~灌注：刃器~
   LPF ALTER_EFFECT
     INT_VAR
       match_opcode = 142
@@ -2644,7 +2644,7 @@ SAY NAME1 ~Infusion: Blades~
 END
 
 COPY_EXISTING ~c0auin7b.spl~ ~override~
-SAY NAME1 ~Infusion: Bludgeon~
+SAY NAME1 ~灌注：钝器~
   LPF ALTER_EFFECT
     INT_VAR
       match_opcode = 142
@@ -2652,7 +2652,7 @@ SAY NAME1 ~Infusion: Bludgeon~
 END
 
 COPY_EXISTING ~c0auin7c.spl~ ~override~
-SAY NAME1 ~Infusion: Piercer~
+SAY NAME1 ~灌注：刺器~
   LPF ALTER_EFFECT
     INT_VAR
       match_opcode = 142
@@ -2660,7 +2660,7 @@ SAY NAME1 ~Infusion: Piercer~
 END
 
 COPY_EXISTING ~c0auin7d.spl~ ~override~
-SAY NAME1 ~Infusion: Missiles~
+SAY NAME1 ~灌注：投射武器~
   LPF ALTER_EFFECT
     INT_VAR
       match_opcode = 142
@@ -2668,7 +2668,7 @@ SAY NAME1 ~Infusion: Missiles~
 END
 
 COPY_EXISTING ~c0auin7e.spl~ ~override~
-SAY NAME1 ~Infusion: Flames~
+SAY NAME1 ~灌注：火焰~
   LPF ALTER_EFFECT
     INT_VAR
       match_opcode = 142
@@ -2676,7 +2676,7 @@ SAY NAME1 ~Infusion: Flames~
 END
 
 COPY_EXISTING ~c0auin7f.spl~ ~override~
-SAY NAME1 ~Infusion: Frost~
+SAY NAME1 ~灌注：冰霜~
   LPF ALTER_EFFECT
     INT_VAR
       match_opcode = 142
@@ -2684,7 +2684,7 @@ SAY NAME1 ~Infusion: Frost~
 END
 
 COPY_EXISTING ~c0auin7g.spl~ ~override~
-SAY NAME1 ~Infusion: Acid~
+SAY NAME1 ~灌注：酸液~
   LPF ALTER_EFFECT
     INT_VAR
       match_opcode = 142
@@ -2692,7 +2692,7 @@ SAY NAME1 ~Infusion: Acid~
 END
 
 COPY_EXISTING ~c0auin7h.spl~ ~override~
-SAY NAME1 ~Infusion: Lightning~
+SAY NAME1 ~灌注：闪电~
   LPF ALTER_EFFECT
     INT_VAR
       match_opcode = 142
@@ -2700,25 +2700,25 @@ SAY NAME1 ~Infusion: Lightning~
 END
 
 COPY_EXISTING ~c0auin4.spl~ ~override~
-SAY NAME1 ~Craft Wand~
-SAY NAME2 ~Craft Wand~
-SAY UNIDENTIFIED_DESC ~Craft Wand
-The master artificer may use this ability at will to craft a variety of magical wands at a cost.
+SAY NAME1 ~制造魔杖~
+SAY NAME2 ~制造魔杖~
+SAY UNIDENTIFIED_DESC ~制造魔杖
+大师级奇械师可随意使用此能力，付出代价制造各式魔法魔杖。
 
-Requires: Use Any Item~
+需求：使用任意物品~
   COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/dialogue/c0auin4.d~
 COPY_EXISTING ~c0aualch.cre~ ~override/c0auin4.cre~
-SAY NAME1 ~Wandcrafting~
-SAY NAME2 ~Wandcrafting~
+SAY NAME1 ~魔杖工艺~
+SAY NAME2 ~魔杖工艺~
   WRITE_ASCII 0x248 ~c0auin4~ #8  //override script
   WRITE_ASCII 0x280 ~c0auin4~ #32  //DV
   WRITE_ASCII 0x2cc ~c0auin4~ #8   //pre-joining dialogue file
   WRITE_ASCII 0x268 ~c0auin4~ #8   //default
 COPY_EXISTING ~c0auin5.spl~ ~override~
-SAY NAME1 ~Master Alchemist~
-SAY NAME2 ~Master Alchemist~
-SAY UNIDENTIFIED_DESC ~Master Alchemist
-The master artificer may access a completely new level of alchemy, gaining the ability to craft Potions of Divine Might, Potions of Complete Healing, Potions of True Sight and Potions of Hardiness with their Advanced Alchemy ability. They also gain the ability to craft a single Potion of Ultimate Mastery once in their lifetime.~
+SAY NAME1 ~炼金大师~
+SAY NAME2 ~炼金大师~
+SAY UNIDENTIFIED_DESC ~炼金大师
+大师级奇械师可触及炼金的崭新层次，得以用「高级炼金」制作神力药水、完全治疗药水、真实视域药水与坚韧补剂。此外，他们一生可获得一次制作「终极掌握药水」的机会。~
 
 COPY_EXISTING ~c0auin6.spl~ ~override~
       LPF ALTER_EFFECT
@@ -2729,14 +2729,14 @@ COPY_EXISTING ~c0auin6.spl~ ~override~
         match_parameter2  = 82    // Called Shot icon
         parameter2        = c0aicon5
       END
-LPF ADD_SPELL_EFFECT INT_VAR opcode = 290 target = 2 timing = 9 parameter1 = RESOLVE_STR_REF (~Grand Artificer~) special = 4 END
+LPF ADD_SPELL_EFFECT INT_VAR opcode = 290 target = 2 timing = 9 parameter1 = RESOLVE_STR_REF (~宗师奇械师~) special = 4 END
 LPF ADD_SPELL_EFFECT INT_VAR opcode = 318 target = 2 timing = 9 parameter2 = 0 STR_VAR resource = C0AUNAM END
-SAY NAME1 ~Grand Artifice~
-SAY NAME2 ~Grand Artifice~
-SAY UNIDENTIFIED_DESC ~Grand Artifice
-The master artificer takes her craft beyond that of any regular artisan, ensuring that her allies' tools and skills are optimized. As long as the artificer is alive and within the party, all party members gain a +2 bonus to Armor Class and Saving Throws, +1 bonus to casting time, +25% to all thieving skills, and +10% critical hit chance.
+SAY NAME1 ~宗师技艺~
+SAY NAME2 ~宗师技艺~
+SAY UNIDENTIFIED_DESC ~宗师技艺
+大师级奇械师把技艺推进到超越任何寻常工匠的地步，确保盟友的器具与技能都处于最佳状态。只要奇械师存活且在队伍中，所有队员获得防御等级与豁免检定 +2、施法时间 +1、全部盗贼技能 +25%、暴击率 +10%。
 
-Requires: Use Any Item~
+需求：使用任意物品~
 
 ACTION_IF FILE_EXISTS_IN_GAME ~SPCL915.SPL~ BEGIN
 COPY_EXISTING ~SPCL915.SPL~ ~OVERRIDE/C0AUIN8.SPL~
@@ -2747,399 +2747,399 @@ END
 ///////////////////////////////////////////////////////////////////////////////
 
 COPY_EXISTING ~c0apot01.spl~ ~override~
-SAY NAME1 ~Potion of Renewal~
-SAY NAME2 ~Potion of Renewal~
+SAY NAME1 ~复苏药水~
+SAY NAME2 ~复苏药水~
 COPY_EXISTING ~c0apot01.itm~ ~override~
-SAY NAME1 ~Lantanese Potion of Renewal~
-SAY NAME2 ~Lantanese Potion of Renewal~
-SAY DESC ~This potion is composed of several exotic medicinal herbs and alchemical ingredients, giving it significant healing properties.
+SAY NAME1 ~兰坦复苏药水~
+SAY NAME2 ~兰坦复苏药水~
+SAY DESC ~此药水由数种珍奇药草与炼金材料调配而成，具有显著的疗效。
 
-STATISTICS:
+属性：
 
-Special: Restores 30% of maximum Hit Points and cures all poisons and diseases.
+特殊：恢复 30% 最大生命值，并治愈一切毒素与疾病。
 
-Weight: 1~
+重量：1~
 WRITE_LONG 0x34 300
  
 COPY_EXISTING ~c0apot02.spl~ ~override~
-SAY NAME1 ~Potion of Fire Resistance~
-SAY NAME2 ~Potion of Fire Resistance~
+SAY NAME1 ~防火药水~
+SAY NAME2 ~防火药水~
 COPY_EXISTING ~c0apot02.itm~ ~override~
-SAY NAME1 ~Lantanese Potion of Fire Resistance~
-SAY NAME2 ~Lantanese Potion of Fire Resistance~
-SAY DESC ~This exotic potion provides the imbiber with a significant resistance to heat. Those who drink this potion would be capable of leaping through a wall of flame without suffering the slightest injury.
+SAY NAME1 ~兰坦防火药水~
+SAY NAME2 ~兰坦防火药水~
+SAY DESC ~这种珍奇药水让饮用者对高温有极强的耐受力。喝下它的人能径直穿过火墙而不受丝毫损伤。
 
-STATISTICS:
+属性：
 
-Fire Resistance: +100%
-Special: Fire Resistance decreases by 10% per round to a minimum of 50% after 5 rounds.
-Duration: 2 hours
+火焰抗性：+100%
+特殊：火焰抗性每轮降低 10%，5 轮后最低降至 50%。
+持续时间：2 小时
 
-Weight: 1~
+重量：1~
 WRITE_LONG 0x34 375
 
 COPY_EXISTING ~c0apot03.spl~ ~override~
-SAY NAME1 ~Potion of Cold Resistance~
-SAY NAME2 ~Potion of Cold Resistance~
+SAY NAME1 ~防寒药水~
+SAY NAME2 ~防寒药水~
 COPY_EXISTING ~c0apot03.itm~ ~override~
-SAY NAME1 ~Lantanese Potion of Cold Resistance~
-SAY NAME2 ~Lantanese Potion of Cold Resistance~
-SAY DESC ~This potion was designed for Lantanese researchers to allow them to survive at near-fatally low temperatures while experimenting with certain cold-dwelling creatures or plants. Those who drink this potion find themselves in a state of perpetual warmth.
+SAY NAME1 ~兰坦防寒药水~
+SAY NAME2 ~兰坦防寒药水~
+SAY DESC ~此药水是为兰坦研究者设计的，好让他们在研究某些栖于寒冷环境的生物或植物时，能在近乎致命的低温下存活。喝下它的人会感到周身持续温暖。
 
-STATISTICS:
+属性：
 
-Cold Resistance: +100%
-Special: Cold Resistance decreases by 10% per round to a minimum of 50% after 5 rounds.
-Duration: 2 hours
+寒冷抗性：+100%
+特殊：寒冷抗性每轮降低 10%，5 轮后最低降至 50%。
+持续时间：2 小时
 
-Weight: 1~
+重量：1~
 WRITE_LONG 0x34 375
 
 COPY_EXISTING ~c0apot04.spl~ ~override~
-SAY NAME1 ~Potion of Stamina~
-SAY NAME2 ~Potion of Stamina~
+SAY NAME1 ~精力药水~
+SAY NAME2 ~精力药水~
 COPY_EXISTING ~c0apot04.itm~ ~override~
-SAY NAME1 ~Lantanese Elixir of Stamina~
-SAY NAME2 ~Lantanese Elixir of Stamina~
-SAY DESC ~This phial contains a highly nutritious and energy-rich liquid, designed to allow travellers to go on long journeys without the need for food or rest for an entire day... among other uses.
+SAY NAME1 ~兰坦精力灵药~
+SAY NAME2 ~兰坦精力灵药~
+SAY DESC ~这只小瓶里装着营养丰富、能量充沛的液体，专为让旅人整日长途跋涉而无需进食与休息……另有他用。
 
-Maximum Hit Points: +10%
-Special: Removes and grants immunity to fatigue
-Duration: 2 hours
+最大生命值：+10%
+特殊：移除疲劳并获得疲劳免疫
+持续时间：2 小时
 
-Weight: 1~
+重量：1~
 WRITE_LONG 0x34 240
 
 COPY_EXISTING ~c0apot05.spl~ ~override~
-SAY NAME1 ~Potion of Invisibility~
-SAY NAME2 ~Potion of Invisibility~
+SAY NAME1 ~隐身药水~
+SAY NAME2 ~隐身药水~
 COPY_EXISTING ~c0apot05.itm~ ~override~
-SAY NAME1 ~Lantanese Potion of Invisibility~
-SAY NAME2 ~Lantanese Potion of Invisibility~
-SAY DESC ~The natives of Lantan are known for being relatively pacifistic and prefer to avoid conflict wherever possible. To this end, their potions of invisibility are among the most popular of their alchemical creations, as it allows them to escape nearly any situation completely unscathed.
+SAY NAME1 ~兰坦隐身药水~
+SAY NAME2 ~兰坦隐身药水~
+SAY DESC ~兰坦人素以相对平和、尽量避免冲突著称。为此，他们的隐身药水成为最受欢迎的炼金制品之一，因为它能让人几乎毫发无伤地脱出任何处境。
 
-STATISTICS:
+属性：
 
-Special: Invisibility and Non-Detection
-Duration: 1 hour
+特殊：隐身与反侦测
+持续时间：1 小时
 
-Weight: 1~
+重量：1~
 WRITE_LONG 0x34 270
 
 COPY_EXISTING ~c0apot06.spl~ ~override~
-SAY NAME1 ~Trollblood Extract~
-SAY NAME2 ~Trollblood Extract~
+SAY NAME1 ~巨魔血萃取液~
+SAY NAME2 ~巨魔血萃取液~
 COPY_EXISTING ~c0apot06.itm~ ~override~
-SAY NAME1 ~Lantanese Trollblood Extract~
-SAY NAME2 ~Lantanese Trollblood Extract~
-SAY DESC ~As foul-looking as this liquid appears to be, it has the undeniably effective property of bestowing its drinker with cellular regeneration of shocking rates. However, the concoction also temporarily bestows some of the weaknesses of trollkin as a result.
+SAY NAME1 ~兰坦巨魔血萃取液~
+SAY NAME2 ~兰坦巨魔血萃取液~
+SAY DESC ~尽管这液体看起来十分恶心，它却有不容置疑的实效：能让饮用者的细胞以惊人的速度再生。不过作为代价，这剂调配也会暂时带来部分巨魔的弱点。
 
-STATISTICS:
+属性：
 
-Fire Resistance: -50%
-Acid Resistance: -50%
-Special: Regenerate two hit points per second
-Duration: 5 rounds
+火焰抗性：-50%
+酸液抗性：-50%
+特殊：每秒再生两点生命值
+持续时间：5 轮
 
-Weight: 1~
+重量：1~
 WRITE_LONG 0x34 750
 
 COPY_EXISTING ~c0apot07.spl~ ~override~
-SAY NAME1 ~Tonic of Alertness~
-SAY NAME2 ~Tonic of Alertness~
+SAY NAME1 ~警觉补剂~
+SAY NAME2 ~警觉补剂~
 COPY_EXISTING ~c0apot07.itm~ ~override~
-SAY NAME1 ~Lantanese Tonic of Alertness~
-SAY NAME2 ~Lantanese Tonic of Alertness~
-SAY DESC ~This strongly-scented potion puts its drinker into a state of constant and total awareness, to the point where they can hear the slightest movement and practically see out of the back of their heads.
+SAY NAME1 ~兰坦警觉补剂~
+SAY NAME2 ~兰坦警觉补剂~
+SAY DESC ~这种气味浓烈的药水使饮用者进入持续而全面的警觉状态，连最细微的动静都能听见，简直像后脑勺长了眼睛。
 
-STATISTICS:
+属性：
 
-Dexterity: +1
-Find Traps: +25%
-Detect Illusions: +25%
-Special: Immunity to backstab
-Duration: 1 hour
+敏捷：+1
+发现陷阱：+25%
+侦测幻象：+25%
+特殊：免疫背刺
+持续时间：1 小时
 
-Weight: 1~
+重量：1~
 WRITE_LONG 0x34 900
 
 COPY_EXISTING ~c0apot08.spl~ ~override~
-SAY NAME1 ~Elixir of Harmony~
-SAY NAME2 ~Elixir of Harmony~
+SAY NAME1 ~谐和灵药~
+SAY NAME2 ~谐和灵药~
 COPY_EXISTING ~c0apot08.itm~ ~override~
-SAY NAME1 ~Lantanese Elixir of Harmony~
-SAY NAME2 ~Lantanese Elixir of Harmony~
-SAY DESC ~This powerful potion subscribes to the principle of "the best offense is a good defense". The drinker becomes nearly invulnerable to physical harm, yet finds their own blows significantly weakened in return.
+SAY NAME1 ~兰坦谐和灵药~
+SAY NAME2 ~兰坦谐和灵药~
+SAY DESC ~这种强效药水信奉「最好的进攻是良好的防御」这一原则。饮用者几乎不受物理伤害，但自身的攻击也会相应大幅减弱。
 
-STATISTICS:
+属性：
 
-Armor Class: +6
-Physical Resistance: +50%
-Special: Damage output is reduced by 50%
-Duration: 5 rounds
+防御等级：+6
+物理抗性：+50%
+特殊：输出伤害降低 50%
+持续时间：5 轮
 
-Weight: 1~
+重量：1~
 WRITE_LONG 0x34 900
 
 COPY_EXISTING ~c0apot09.spl~ ~override~
-SAY NAME1 ~Potion of Antimagic~
-SAY NAME2 ~Potion of Antimagic~
+SAY NAME1 ~反魔法药水~
+SAY NAME2 ~反魔法药水~
 COPY_EXISTING ~c0apot09.itm~ ~override~
-SAY NAME1 ~Lantanese Potion of Antimagic~
-SAY NAME2 ~Lantanese Potion of Antimagic~
-SAY DESC ~This powerful potion expunges all traces of magic from its imbiber and prevents them from being affected by all but the most powerful spells until its effects dissipate.
+SAY NAME1 ~兰坦反魔法药水~
+SAY NAME2 ~兰坦反魔法药水~
+SAY DESC ~这种强效药水驱除饮用者身上一切魔法痕迹，并在效果消失前使其不受除最强大法术以外的一切法术影响。
 
-STATISTICS:
+属性：
 
-Magic Resistance: +50%
-Special: Immunity to spells of 5th level and below, all spell effects are removed from the imbiber and <PRO_HESHE> may not cast spells for the duration.
-Duration: 2 rounds
+魔法抗性：+50%
+特殊：免疫 5 级及以下法术，饮用者身上所有法术效果被移除，且在此期间无法施法。
+持续时间：2 轮
 
-Weight: 1~
+重量：1~
 WRITE_LONG 0x34 1500
 
 COPY_EXISTING ~c0apot10.spl~ ~override~
-SAY NAME1 ~Potion of Equanimity~
-SAY NAME2 ~Potion of Equanimity~
+SAY NAME1 ~平心药水~
+SAY NAME2 ~平心药水~
 COPY_EXISTING ~c0apot10.itm~ ~override~
-SAY NAME1 ~Lantanese Potion of Equanimity~
-SAY NAME2 ~Lantanese Potion of Equanimity~
-SAY DESC ~This potion clears the drinker's mind of distracting and inhibiting thoughts, allowing them to think and act with greater efficiency. Their hand-eye coordination is also significantly improved as a result.
+SAY NAME1 ~兰坦平心药水~
+SAY NAME2 ~兰坦平心药水~
+SAY DESC ~此药水清除饮用者脑中令人分心与受限的念头，使其思考与行动都更为高效，手眼协调也随之显著改善。
 
-STATISTICS:
+属性：
 
-Special: Prevents feeblemind, confusion, fear, and charm
-Intelligence: +4
-Dexterity: +4
-Duration: 1 hour
+特殊：预防弱智、混乱、恐惧与魅惑
+智力：+4
+敏捷：+4
+持续时间：1 小时
 
-Weight: 1~
+重量：1~
 WRITE_LONG 0x34 1350
 
 COPY_EXISTING ~c0apot11.spl~ ~override~
-SAY NAME1 ~Oil of Speed~
-SAY NAME2 ~Oil of Speed~
+SAY NAME1 ~速度之油~
+SAY NAME2 ~速度之油~
 COPY_EXISTING ~c0apot11.itm~ ~override~
-SAY NAME1 ~Lantanese Oil of Speed~
-SAY NAME2 ~Lantanese Oil of Speed~
-SAY DESC ~This oil, when applied on the user, hastens their actions greatly, doubling their movement and combat capacities. However, this does not reduce spellcasting time.
+SAY NAME1 ~兰坦速度之油~
+SAY NAME2 ~兰坦速度之油~
+SAY DESC ~把这种油抹在身上，会大幅加快其行动，移动与战斗能力翻倍。不过这并不会缩短施法时间。
 
-STATISTICS:
+属性：
 
-Special: Doubles movement and attack rates
-Duration: 1 turn
+特殊：移动与攻击频率翻倍
+持续时间：1 回合
 
-Weight: 1~
+重量：1~
 WRITE_LONG 0x34 500
 
 COPY_EXISTING ~c0apot12.spl~ ~override~
-SAY NAME1 ~Potion of Invulnerability~
-SAY NAME2 ~Potion of Invulnerability~
+SAY NAME1 ~无敌药水~
+SAY NAME2 ~无敌药水~
 COPY_EXISTING ~c0apot12.itm~ ~override~
-SAY NAME1 ~Lantanese Potion of Invulnerability~
-SAY NAME2 ~Lantanese Potion of Invulnerability~
-SAY DESC ~This potion confers very high resistance to all attacks while giving bonuses to all Saving Throws. Unlike regular Potions of Invulnerability, this potion can be used by those of any profession.
+SAY NAME1 ~兰坦无敌药水~
+SAY NAME2 ~兰坦无敌药水~
+SAY DESC ~此药水赋予饮用者对一切攻击的极高抗性，并提升所有豁免检定。与普通无敌药水不同，任何职业都可以使用它。
 
-STATISTICS:
+属性：
 
-Armor Class: +2
-Saving Throws: +5
-Duration: 1 hour
+防御等级：+2
+豁免检定：+5
+持续时间：1 小时
 
-Weight: 1~
+重量：1~
 WRITE_LONG 0x34 1050
 
 COPY_EXISTING ~c0apot13.spl~ ~override~
-SAY NAME1 ~Elixir of Luck~
-SAY NAME2 ~Elixir of Luck~
+SAY NAME1 ~幸运灵药~
+SAY NAME2 ~幸运灵药~
 COPY_EXISTING ~c0apot13.itm~ ~override~
-SAY NAME1 ~Lantanese Elixir of Luck~
-SAY NAME2 ~Lantanese Elixir of Luck~
-SAY DESC ~Also known informally as 'liquid luck', this gold-colored liquid provides the drinker with an sense of temporary luck and confidence, as though nothing could go wrong.
+SAY NAME1 ~兰坦幸运灵药~
+SAY NAME2 ~兰坦幸运灵药~
+SAY DESC ~这种金色液体也被俗称为「液体好运」，给饮用者一种短暂的幸运与自信，仿佛什么都不会出错。
 
-STATISTICS:
+属性：
 
-Saving Throws: +2
-Find Traps: +10%
-Pick Pockets: +10%
-Move Silently: +10%
-Hide In Shadows: +10%
-Detect Illusion: +10%
-Set Traps: +10%
-Luck: +2
-Duration: 1 hour
+豁免检定：+2
+发现陷阱：+10%
+扒窃：+10%
+潜行：+10%
+隐匿：+10%
+侦测幻象：+10%
+设置陷阱：+10%
+幸运：+2
+持续时间：1 小时
 
-Weight: 1~
+重量：1~
 WRITE_LONG 0x34 1500
 
 COPY_EXISTING ~c0apot14.spl~ ~override~
-SAY NAME1 ~Elixir of Restoration~
-SAY NAME2 ~Elixir of Restoration~
+SAY NAME1 ~复原灵药~
+SAY NAME2 ~复原灵药~
 COPY_EXISTING ~c0apot14.itm~ ~override~
-SAY NAME1 ~Lantanese Elixir of Restoration~
-SAY NAME2 ~Lantanese Elixir of Restoration~
-SAY DESC ~This elixir was designed and patented by the Lantanese priesthood of Gond. Concocted from several restorative ingredients and a dash of holy water, it is effective against the draining touch of vampires and wights.
+SAY NAME1 ~兰坦复原灵药~
+SAY NAME2 ~兰坦复原灵药~
+SAY DESC ~此灵药由兰坦的贡德神殿设计并取得专利。它以数种复原性材料加一滴圣水调配而成，对吸血鬼与尸妖的吸取之触有效。
 
-STATISTICS:
+属性：
 
-Special: Restores lost levels
-Duration: Permanent
+特殊：恢复失去的等级
+持续时间：永久
 
-Weight: 1~
+重量：1~
 WRITE_LONG 0x34 250
 
 COPY_EXISTING ~c0apot15.spl~ ~override~
-SAY NAME1 ~Potion of Freedom~
-SAY NAME2 ~Potion of Freedom~
+SAY NAME1 ~自由药水~
+SAY NAME2 ~自由药水~
 COPY_EXISTING ~c0apot15.itm~ ~override~
-SAY NAME1 ~Lantanese Potion of Freedom~
-SAY NAME2 ~Lantanese Potion of Freedom~
-SAY DESC ~This potion acts like the spell Free Action when consumed. The drinker becomes completely immune to any effects that influence action or movement, whether it is magical in origin or not.
+SAY NAME1 ~兰坦自由药水~
+SAY NAME2 ~兰坦自由药水~
+SAY DESC ~饮下后作用如「行动自如」法术。饮用者完全免疫一切影响行动或移动的效果，无论其是否来自魔法。
 
-STATISTICS:
+属性：
 
-Special: Free Action
-Duration: 1 hour
+特殊：行动自如
+持续时间：1 小时
 
-Weight: 1~
+重量：1~
 WRITE_LONG 0x34 675
 
 COPY_EXISTING ~c0apot16.spl~ ~override~
-SAY NAME1 ~Elixir of Lifeshield~
-SAY NAME2 ~Elixir of Lifeshield~
+SAY NAME1 ~护命灵药~
+SAY NAME2 ~护命灵药~
 COPY_EXISTING ~c0apot16.itm~ ~override~
-SAY NAME1 ~Lantanese Elixir of Lifeshield~
-SAY NAME2 ~Lantanese Elixir of Lifeshield~
-SAY DESC ~This elixir was designed and patented by the Lantanese priesthood of Gond. The drinker's soul becomes protected by magical energies, preventing it from being separated from their body through unnatural means.
+SAY NAME1 ~兰坦护命灵药~
+SAY NAME2 ~兰坦护命灵药~
+SAY DESC ~此灵药由兰坦的贡德神殿设计并取得专利。饮用者的灵魂受到魔法能量守护，无法以非自然手段被剥离肉体。
 
-STATISTICS:
+属性：
 
-Special: Death Ward
-Duration: 1 hour
+特殊：防死结界
+持续时间：1 小时
 
-Weight: 1~
+重量：1~
 WRITE_LONG 0x34 750
 
 COPY_EXISTING ~c0apot17.spl~ ~override~
-SAY NAME1 ~Elixir of Might~
-SAY NAME2 ~Elixir of Might~
+SAY NAME1 ~力量灵药~
+SAY NAME2 ~力量灵药~
 COPY_EXISTING ~c0apot17.itm~ ~override~
-SAY NAME1 ~Lantanese Elixir of Might~
-SAY NAME2 ~Lantanese Elixir of Might~
-SAY DESC ~This elixir was concocted from a combination of various ingredients including giants' blood. When imbibed, the drinker's strength increases dramatically.
+SAY NAME1 ~兰坦力量灵药~
+SAY NAME2 ~兰坦力量灵药~
+SAY DESC ~此灵药由多种材料调配而成，其中包括巨人之血。饮下后，饮用者的力量大幅增强。
 
-STATISTICS:
+属性：
 
-Strength: +2
-Duration: 1 hour
+力量：+2
+持续时间：1 小时
 
-Weight: 1~
+重量：1~
 WRITE_LONG 0x34 750
 
 COPY_EXISTING ~c0apot18.spl~ ~override~
-SAY NAME1 ~Thrym Extract~
-SAY NAME2 ~Thrym Extract~
+SAY NAME1 ~斯利姆萃取液~
+SAY NAME2 ~斯利姆萃取液~
 COPY_EXISTING ~c0apot18.itm~ ~override~
-SAY NAME1 ~Lantanese Thrym Extract~
-SAY NAME2 ~Lantanese Thrym Extract~
-SAY DESC ~This thick liquid is harvested and distilled from the glands of dead polar worms.  It is the substance that helps keep the huge creatures warm in the desolate north.  Drinking the liquid straight from the creature's body is almost always fatal, so alchemists attempt to distill the substance until it is relatively safe to consume.  Even in its current state, however, it can still be deadly.
+SAY NAME1 ~兰坦斯利姆萃取液~
+SAY NAME2 ~兰坦斯利姆萃取液~
+SAY DESC ~这种浓稠液体取自死去的极地蠕虫的腺体，经蒸馏而得。正是这种东西让那些庞然大物在荒凉的北方保持体温。直接从虫体上饮用几乎必死无疑，因此炼金师会反复蒸馏，直到它相对可以安全饮用。不过即便经过处理，它仍可能致命。
 
-STATISTICS:
+属性：
 
-Special: Imbiber takes 8d6 fire damage (Save vs. Death at -4 for half damage) in exchange for immunity to cold damage and +3 to Strength and Dexterity
-Duration: 1 turn
+特殊：饮用者受 8d6 火焰伤害（对抗死亡豁免 -4，成功则减半），换来寒冷伤害免疫与力量、敏捷 +3
+持续时间：1 回合
 
-Weight: 1~
+重量：1~
 WRITE_LONG 0x34 900
 
 COPY_EXISTING ~c0apot19.spl~ ~override~
-SAY NAME1 ~Potion of Etherealness~
-SAY NAME2 ~Potion of Etherealness~
+SAY NAME1 ~虚体药水~
+SAY NAME2 ~虚体药水~
 COPY_EXISTING ~c0apot19.itm~ ~override~
-SAY NAME1 ~Lantanese Potion of Etherealness~
-SAY NAME2 ~Lantanese Potion of Etherealness~
-SAY DESC ~This potion is composed of ectoplasm and dust from will-o'-wisps. The drinker takes on some of their ghostly properties, temporarily becoming ethereal.
+SAY NAME1 ~兰坦虚体药水~
+SAY NAME2 ~兰坦虚体药水~
+SAY DESC ~此药水由灵质与鬼火的尘埃调配而成。饮用者会获得一部分幽灵般的特性，暂时化为虚体。
 
-STATISTICS:
+属性：
 
-Special: Imbiber becomes ethereal for 5 rounds. While in this state <PRO_HESHE> is immune to normal weapons and gains 20% magic resistance. Spells and weapons may still be used.
-Duration: 1 turn
+特殊：饮用者在 5 轮内化为虚体。此状态下免疫普通武器，并获得 20% 魔法抗性。仍可施法及使用武器。
+持续时间：1 回合
 
-Weight: 1~
+重量：1~
 WRITE_LONG 0x34 1050
 
 COPY_EXISTING ~c0apot20.spl~ ~override~
-SAY NAME1 ~Elixir of Focus~
-SAY NAME2 ~Elixir of Focus~
+SAY NAME1 ~专注灵药~
+SAY NAME2 ~专注灵药~
 COPY_EXISTING ~c0apot20.itm~ ~override~
-SAY NAME1 ~Lantanese Elixir of Focus~
-SAY NAME2 ~Lantanese Elixir of Focus~
-SAY DESC ~This potion temporarily sharpens the drinker's senses to their absolute limit, making them feel as if time has stopped for a brief duration. However, they will find it nearly impossible to take action during this state.
+SAY NAME1 ~兰坦专注灵药~
+SAY NAME2 ~兰坦专注灵药~
+SAY DESC ~此药水暂时把饮用者的感知提升到极限，使其觉得时间在短暂的一瞬停滞。然而在这种状态下，他几乎无法采取任何行动。
 
-STATISTICS:
+属性：
 
-Special: Imbiber may move freely for one round while others are frozen in time. The imbiber may not attack or use spells while in this state.
-Duration: 1 round
+特殊：饮用者可在他人被时间定住时自由移动一轮。此状态下无法攻击或施法。
+持续时间：1 轮
 
-Weight: 1~
+重量：1~
 WRITE_LONG 0x34 1050
 
 COPY_EXISTING ~c0apot21.spl~ ~override~
-SAY NAME1 ~Potion of Life Transference~
-SAY NAME2 ~Potion of Life Transference~
+SAY NAME1 ~生命转移药水~
+SAY NAME2 ~生命转移药水~
 COPY_EXISTING ~c0apot21.itm~ ~override~
-SAY NAME1 ~Lantanese Potion of Life Transference~
-SAY NAME2 ~Lantanese Potion of Life Transference~
-SAY DESC ~This dangerous potion sacrifices vitality for power. The drinker finds <PRO_HISHER> strength dramatically increased at the cost of their health.
+SAY NAME1 ~兰坦生命转移药水~
+SAY NAME2 ~兰坦生命转移药水~
+SAY DESC ~这种危险的药水以生命力换取力量。饮用者的力量会大幅提升，代价是健康。
 
-STATISTICS:
+属性：
 
-Strength: +6
-Maximum Hit Points: -50%
-Duration: 8 hours
+力量：+6
+最大生命值：-50%
+持续时间：8 小时
 
-Weight: 1~
+重量：1~
 WRITE_LONG 0x34 1800
 
 COPY_EXISTING ~c0apot22.spl~ ~override~
-SAY NAME1 ~Potion of Arcane Barrier~
-SAY NAME2 ~Potion of Arcane Barrier~
+SAY NAME1 ~奥术障壁药水~
+SAY NAME2 ~奥术障壁药水~
 COPY_EXISTING ~c0apot22.itm~ ~override~
-SAY NAME1 ~Lantanese Potion of Arcane Barrier~
-SAY NAME2 ~Lantanese Potion of Arcane Barrier~
-SAY DESC ~This potion causes the drinker's very skin itself to repel magical energies, making them all but immune to the majority of spells. However, they may still cast their own spells if they so choose.
+SAY NAME1 ~兰坦奥术障壁药水~
+SAY NAME2 ~兰坦奥术障壁药水~
+SAY DESC ~此药水让饮用者的皮肤本身就能弹开魔法能量，使其几乎免疫大多数法术。不过，若他愿意，仍可施放自己的法术。
 
-STATISTICS:
+属性：
 
-Damage Resistance: +75% against all forms of magical non-physical damage
-Special: All Saving Throws are automatically successful
-Duration: 3 turns
+伤害抗性：对一切非物理性魔法伤害 +75%
+特殊：所有豁免检定自动成功
+持续时间：3 回合
 
-Weight: 1~
+重量：1~
 WRITE_LONG 0x34 2250
 
 COPY_EXISTING ~c0apoth1.itm~ ~override~
-SAY NAME1 ~Lantanese Elixir of Divine Might~
-SAY NAME2 ~Lantanese Elixir of Divine Might~
-SAY DESC ~Elixirs of Divine Might increase the imbiber's Strength, Dexterity and Constitution by four points each for ten rounds.~
+SAY NAME1 ~兰坦神力灵药~
+SAY NAME2 ~兰坦神力灵药~
+SAY DESC ~神力灵药使饮用者的力量、敏捷与体质各提高四点，持续十轮。~
 WRITE_LONG 0x34 2500
 
 COPY_EXISTING ~c0apoth2.itm~ ~override~
-SAY NAME1 ~Lantanese Potion of Complete Healing~
-SAY NAME2 ~Lantanese Potion of Complete Healing~
-SAY DESC ~Potions of Complete Healing are the ultimate healing potion, fully restoring the imbiber's hit points and curing all diseases, poisons and mental injuries.~
+SAY NAME1 ~兰坦完全治疗药水~
+SAY NAME2 ~兰坦完全治疗药水~
+SAY DESC ~完全治疗药水是终极的治疗药水，能完全恢复饮用者的生命值，并治愈一切疾病、毒素与精神损伤。~
 WRITE_LONG 0x34 2500
 
 COPY_EXISTING ~c0apoth3.itm~ ~override~
-SAY NAME1 ~Lantanese Potion of Truth~
-SAY NAME2 ~Lantanese Potion of Truth~
-SAY DESC ~Philters of Truth allow the imbiber to see through and dispel all illusions in their line of sight for ten rounds.~
+SAY NAME1 ~兰坦真实药水~
+SAY NAME2 ~兰坦真实药水~
+SAY DESC ~真实药水让饮用者可在十轮内看穿并驱散视线内一切幻象。~
 WRITE_LONG 0x34 2500
 
 COPY_EXISTING ~c0apoth4.itm~ ~override~
-SAY NAME1 ~Lantanese Tonic of Hardiness~
-SAY NAME2 ~Lantanese Tonic of Hardiness~
-SAY DESC ~Tonics of Hardiness toughen the imbiber's skin to the hardness of steel, providing 40% resistance to physical damage for ten rounds.~
+SAY NAME1 ~兰坦坚韧补剂~
+SAY NAME2 ~兰坦坚韧补剂~
+SAY DESC ~坚韧补剂把饮用者的皮肤硬化到钢铁般的硬度，在十轮内提供 40% 物理伤害抗性。~
 WRITE_LONG 0x34 2500
 
 COPY_EXISTING ~c0apoth5.spl~ ~override~
@@ -3154,383 +3154,383 @@ COPY_EXISTING ~c0apoth5.spl~ ~override~
       check_globals = 1
       check_headers = 1
       match_opcode = 139 // display string
-	  parameter1 = RESOLVE_STR_REF (~Permanent Ability Increase~)
+	  parameter1 = RESOLVE_STR_REF (~永久属性提升~)
   END
-SAY NAME1 ~Ultimate Mastery~
+SAY NAME1 ~终极掌握~
 COPY_EXISTING ~c0apoth5.itm~ ~override~
-SAY NAME1 ~Lantanese Potion of Ultimate Mastery~
-SAY NAME2 ~Lantanese Potion of Ultimate Mastery~
-SAY DESC ~A Potion of Ultimate Mastery permanently enhances the imbiber's skills in their chosen profession.
+SAY NAME1 ~兰坦终极掌握药水~
+SAY NAME2 ~兰坦终极掌握药水~
+SAY DESC ~终极掌握药水永久强化饮用者在其所选职业上的能力。
 
-   - Fighters, Rangers and Paladins gain +2 to Strength.
-   - Thieves and Monks gain +2 to Dexterity.
-   - Shamans gain +2 to Constitution.
-   - Mages and Artificers gain +2 to Intelligence.
-   - Clerics and Druids gain +2 to Wisdom.
-   - Sorcerers and Bards gain +2 to Charisma.
-   - Spellcasting classes take precedence over warrior classes.
-   - Arcane classes take precedence over divine classes.~
+   - 战士、游侠与圣武士获得力量 +2。
+   - 盗贼与武僧获得敏捷 +2。
+   - 萨满获得体质 +2。
+   - 法师与奇械师获得智力 +2。
+   - 牧师与德鲁伊获得感知 +2。
+   - 术士与吟游诗人获得魅力 +2。
+   - 施法职业优先于战士职业。
+   - 奥术职业优先于神术职业。~
 WRITE_LONG 0x34 20000
 
 COPY_EXISTING ~c0agre1a.itm~ ~override~
   LPF ALTER_ITEM_HEADER INT_VAR projectile = c0agren1 END
-SAY NAME1 ~Grenade~
-SAY NAME2 ~Alchemist's Fire I~
-SAY DESC ~Alchemist's fire is a viscous liquid that stuck to most everything it touched. Upon contact with air, it burst into flames and burned until it is consumed or put out. Because of this, alchemist's fire is frequently stored in breakable flasks and used as a thrown weapon and in traps.
+SAY NAME1 ~投掷弹~
+SAY NAME2 ~炼金师之火 I~
+SAY DESC ~炼金师之火是一种黏稠液体，几乎能粘住它接触到的一切。一遇空气便腾起火焰，一直燃烧到烧尽或被扑灭。因此，炼金师之火常装在易碎的瓶中，用作投掷武器与陷阱。
 
-STATISTICS:
+属性：
 
-Special: All creatures in a 10-ft. radius take 1d6 fire damage and must Save vs. Breath or take an additional 1d6 fire damage after one round.
+特殊：10 尺半径内所有生物受 1d6 火焰伤害，且须通过对抗吐息豁免，否则一轮后再受 1d6 火焰伤害。
 
-Weight: 0~
+重量：0~
 
 COPY_EXISTING ~c0agre1b.itm~ ~override~
   LPF ALTER_ITEM_HEADER INT_VAR projectile = c0agren1 END
-SAY NAME1 ~Grenade~
-SAY NAME2 ~Alchemist's Fire II~
-SAY DESC ~Alchemist's fire is a viscous liquid that stuck to most everything it touched. Upon contact with air, it burst into flames and burned until it is consumed or put out. Because of this, alchemist's fire is frequently stored in breakable flasks and used as a thrown weapon and in traps.
+SAY NAME1 ~投掷弹~
+SAY NAME2 ~炼金师之火 II~
+SAY DESC ~炼金师之火是一种黏稠液体，几乎能粘住它接触到的一切。一遇空气便腾起火焰，一直燃烧到烧尽或被扑灭。因此，炼金师之火常装在易碎的瓶中，用作投掷武器与陷阱。
 
-STATISTICS:
+属性：
 
-Special: All creatures in a 10-ft. radius take 1d8 fire damage and must Save vs. Breath or take an additional 1d8 fire damage after one round.
+特殊：10 尺半径内所有生物受 1d8 火焰伤害，且须通过对抗吐息豁免，否则一轮后再受 1d8 火焰伤害。
 
-Weight: 0~
+重量：0~
 
 COPY_EXISTING ~c0agre1c.itm~ ~override~
   LPF ALTER_ITEM_HEADER INT_VAR projectile = c0agren1 END
-SAY NAME1 ~Grenade~
-SAY NAME2 ~Alchemist's Fire III~
-SAY DESC ~Alchemist's fire is a viscous liquid that stuck to most everything it touched. Upon contact with air, it burst into flames and burned until it is consumed or put out. Because of this, alchemist's fire is frequently stored in breakable flasks and used as a thrown weapon and in traps.
+SAY NAME1 ~投掷弹~
+SAY NAME2 ~炼金师之火 III~
+SAY DESC ~炼金师之火是一种黏稠液体，几乎能粘住它接触到的一切。一遇空气便腾起火焰，一直燃烧到烧尽或被扑灭。因此，炼金师之火常装在易碎的瓶中，用作投掷武器与陷阱。
 
-STATISTICS:
+属性：
 
-Special: All creatures in a 10-ft. radius take 1d10 fire damage and must Save vs. Breath or take an additional 1d10 fire damage after one round.
+特殊：10 尺半径内所有生物受 1d10 火焰伤害，且须通过对抗吐息豁免，否则一轮后再受 1d10 火焰伤害。
 
-Weight: 0~
+重量：0~
 
 COPY_EXISTING ~c0agre1d.itm~ ~override~
   LPF ALTER_ITEM_HEADER INT_VAR projectile = c0agren1 END
-SAY NAME1 ~Grenade~
-SAY NAME2 ~Alchemist's Fire IV~
-SAY DESC ~Alchemist's fire is a viscous liquid that stuck to most everything it touched. Upon contact with air, it burst into flames and burned until it is consumed or put out. Because of this, alchemist's fire is frequently stored in breakable flasks and used as a thrown weapon and in traps.
+SAY NAME1 ~投掷弹~
+SAY NAME2 ~炼金师之火 IV~
+SAY DESC ~炼金师之火是一种黏稠液体，几乎能粘住它接触到的一切。一遇空气便腾起火焰，一直燃烧到烧尽或被扑灭。因此，炼金师之火常装在易碎的瓶中，用作投掷武器与陷阱。
 
-STATISTICS:
+属性：
 
-Special: All creatures in a 10-ft. radius take 2d8 fire damage and must Save vs. Breath or take an additional 2d8 fire damage after one round.
+特殊：10 尺半径内所有生物受 2d8 火焰伤害，且须通过对抗吐息豁免，否则一轮后再受 2d8 火焰伤害。
 
-Weight: 0~
+重量：0~
 
 COPY_EXISTING ~c0agre1e.itm~ ~override~
   LPF ALTER_ITEM_HEADER INT_VAR projectile = c0agren1 END
-SAY NAME1 ~Grenade~
-SAY NAME2 ~Alchemist's Fire V~
-SAY DESC ~Alchemist's fire is a viscous liquid that stuck to most everything it touched. Upon contact with air, it burst into flames and burned until it is consumed or put out. Because of this, alchemist's fire is frequently stored in breakable flasks and used as a thrown weapon and in traps.
+SAY NAME1 ~投掷弹~
+SAY NAME2 ~炼金师之火 V~
+SAY DESC ~炼金师之火是一种黏稠液体，几乎能粘住它接触到的一切。一遇空气便腾起火焰，一直燃烧到烧尽或被扑灭。因此，炼金师之火常装在易碎的瓶中，用作投掷武器与陷阱。
 
-STATISTICS:
+属性：
 
-Special: All creatures in a 10-ft. radius take 2d12 fire damage and must Save vs. Breath or take an additional 2d12 fire damage after one round.
+特殊：10 尺半径内所有生物受 2d12 火焰伤害，且须通过对抗吐息豁免，否则一轮后再受 2d12 火焰伤害。
 
-Weight: 0~
+重量：0~
 
 COPY_EXISTING ~c0agre2a.itm~ ~override~
   LPF ALTER_ITEM_HEADER INT_VAR projectile = c0agren2 END
-SAY NAME1 ~Grenade~
-SAY NAME2 ~Acid Flask I~
-SAY DESC ~This glass flask holds a highly corrosive acid. If thrown, the glass shatters, spraying acid on all unfortunate victims in range of the blast.
+SAY NAME1 ~投掷弹~
+SAY NAME2 ~酸液瓶 I~
+SAY DESC ~这只玻璃瓶里装着腐蚀性极强的酸液。投掷出去后玻璃碎裂，把酸液喷向爆炸范围内的所有倒霉蛋。
 
-STATISTICS:
+属性：
 
-Special: All creatures in a 10-ft. radius take 1d3 acid damage immediately and every following round for two rounds.
+特殊：10 尺半径内所有生物立即受 1d3 酸液伤害，并在之后两轮内每轮再受一次。
 
-Weight: 0~
+重量：0~
 
 COPY_EXISTING ~c0agre2b.itm~ ~override~
   LPF ALTER_ITEM_HEADER INT_VAR projectile = c0agren2 END
-SAY NAME1 ~Grenade~
-SAY NAME2 ~Acid Flask II~
-SAY DESC ~This glass flask holds a highly corrosive acid. If thrown, the glass shatters, spraying acid on all unfortunate victims in range of the blast.
+SAY NAME1 ~投掷弹~
+SAY NAME2 ~酸液瓶 II~
+SAY DESC ~这只玻璃瓶里装着腐蚀性极强的酸液。投掷出去后玻璃碎裂，把酸液喷向爆炸范围内的所有倒霉蛋。
 
-STATISTICS:
+属性：
 
-Special: All creatures in a 10-ft. radius take 1d3 acid damage immediately and every following round for three rounds.
+特殊：10 尺半径内所有生物立即受 1d3 酸液伤害，并在之后三轮内每轮再受一次。
 
-Weight: 0~
+重量：0~
 
 COPY_EXISTING ~c0agre2c.itm~ ~override~
   LPF ALTER_ITEM_HEADER INT_VAR projectile = c0agren2 END
-SAY NAME1 ~Grenade~
-SAY NAME2 ~Acid Flask III~
-SAY DESC ~This glass flask holds a highly corrosive acid. If thrown, the glass shatters, spraying acid on all unfortunate victims in range of the blast.
+SAY NAME1 ~投掷弹~
+SAY NAME2 ~酸液瓶 III~
+SAY DESC ~这只玻璃瓶里装着腐蚀性极强的酸液。投掷出去后玻璃碎裂，把酸液喷向爆炸范围内的所有倒霉蛋。
 
-STATISTICS:
+属性：
 
-Special: All creatures in a 10-ft. radius take 1d3 acid damage immediately and every following round for four rounds.
+特殊：10 尺半径内所有生物立即受 1d3 酸液伤害，并在之后四轮内每轮再受一次。
 
-Weight: 0~
+重量：0~
 
 COPY_EXISTING ~c0agre2d.itm~ ~override~
   LPF ALTER_ITEM_HEADER INT_VAR projectile = c0agren2 END
-SAY NAME1 ~Grenade~
-SAY NAME2 ~Acid Flask IV~
-SAY DESC ~This glass flask holds a highly corrosive acid. If thrown, the glass shatters, spraying acid on all unfortunate victims in range of the blast.
+SAY NAME1 ~投掷弹~
+SAY NAME2 ~酸液瓶 IV~
+SAY DESC ~这只玻璃瓶里装着腐蚀性极强的酸液。投掷出去后玻璃碎裂，把酸液喷向爆炸范围内的所有倒霉蛋。
 
-STATISTICS:
+属性：
 
-Special: All creatures in a 10-ft. radius take 1d3 acid damage immediately and every following round for five rounds.
+特殊：10 尺半径内所有生物立即受 1d3 酸液伤害，并在之后五轮内每轮再受一次。
 
-Weight: 0~
+重量：0~
 
 COPY_EXISTING ~c0agre2e.itm~ ~override~
   LPF ALTER_ITEM_HEADER INT_VAR projectile = c0agren2 END
-SAY NAME1 ~Grenade~
-SAY NAME2 ~Acid Flask V~
-SAY DESC ~This glass flask holds a highly corrosive acid. If thrown, the glass shatters, spraying acid on all unfortunate victims in range of the blast.
+SAY NAME1 ~投掷弹~
+SAY NAME2 ~酸液瓶 V~
+SAY DESC ~这只玻璃瓶里装着腐蚀性极强的酸液。投掷出去后玻璃碎裂，把酸液喷向爆炸范围内的所有倒霉蛋。
 
-STATISTICS:
+属性：
 
-Special: All creatures in a 10-ft. radius take 1d3 acid damage immediately and every following round for six rounds.
+特殊：10 尺半径内所有生物立即受 1d3 酸液伤害，并在之后六轮内每轮再受一次。
 
-Weight: 0~
+重量：0~
 
 COPY_EXISTING ~c0agre3a.itm~ ~override~
   LPF ALTER_ITEM_HEADER INT_VAR projectile = c0agren3 END
-SAY NAME1 ~Grenade~
-SAY NAME2 ~Choking Powder I~
-SAY DESC ~Choking powder is made from various herbs and causes uncontrollable coughing fits. When thrown, the pack of choking powder creates a brief cloud which disorients all creatures who breathe it in.
+SAY NAME1 ~投掷弹~
+SAY NAME2 ~窒息粉 I~
+SAY DESC ~窒息粉由多种药草制成，会引起无法抑制的剧烈咳嗽。投掷出去后，这一包粉末会形成短暂的烟云，让吸入者神志昏乱。
 
-STATISTICS:
+属性：
 
-Special: All creatures in a 10-ft. radius must make a Save vs. Breath or be dazed for one round, unable to take any actions.
+特殊：10 尺半径内所有生物须通过对抗吐息豁免，否则晕眩一轮，无法采取任何行动。
 
-Weight: 0~
+重量：0~
 
 COPY_EXISTING ~c0agre3b.itm~ ~override~
   LPF ALTER_ITEM_HEADER INT_VAR projectile = c0agren3 END
-SAY NAME1 ~Grenade~
-SAY NAME2 ~Choking Powder II~
-SAY DESC ~Choking powder is made from various herbs and causes uncontrollable coughing fits. When thrown, the pack of choking powder creates a brief cloud which disorients all creatures who breathe it in.
+SAY NAME1 ~投掷弹~
+SAY NAME2 ~窒息粉 II~
+SAY DESC ~窒息粉由多种药草制成，会引起无法抑制的剧烈咳嗽。投掷出去后，这一包粉末会形成短暂的烟云，让吸入者神志昏乱。
 
-STATISTICS:
+属性：
 
-Special: All creatures in a 10-ft. radius must make a Save vs. Breath or be dazed for two rounds, unable to take any actions.
+特殊：10 尺半径内所有生物须通过对抗吐息豁免，否则晕眩两轮，无法采取任何行动。
 
-Weight: 0~
+重量：0~
 
 COPY_EXISTING ~c0agre3c.itm~ ~override~
   LPF ALTER_ITEM_HEADER INT_VAR projectile = c0agren3 END
-SAY NAME1 ~Grenade~
-SAY NAME2 ~Choking Powder III~
-SAY DESC ~Choking powder is made from various herbs and causes uncontrollable coughing fits. When thrown, the pack of choking powder creates a brief cloud which disorients all creatures who breathe it in.
+SAY NAME1 ~投掷弹~
+SAY NAME2 ~窒息粉 III~
+SAY DESC ~窒息粉由多种药草制成，会引起无法抑制的剧烈咳嗽。投掷出去后，这一包粉末会形成短暂的烟云，让吸入者神志昏乱。
 
-STATISTICS:
+属性：
 
-Special: All creatures in a 10-ft. radius must make a Save vs. Breath at -1 or be dazed for two rounds, unable to take any actions.
+特殊：10 尺半径内所有生物须通过对抗吐息豁免（-1），否则晕眩两轮，无法采取任何行动。
 
-Weight: 0~
+重量：0~
 
 COPY_EXISTING ~c0agre3d.itm~ ~override~
   LPF ALTER_ITEM_HEADER INT_VAR projectile = c0agren3 END
-SAY NAME1 ~Grenade~
-SAY NAME2 ~Choking Powder IV~
-SAY DESC ~Choking powder is made from various herbs and causes uncontrollable coughing fits. When thrown, the pack of choking powder creates a brief cloud which disorients all creatures who breathe it in.
+SAY NAME1 ~投掷弹~
+SAY NAME2 ~窒息粉 IV~
+SAY DESC ~窒息粉由多种药草制成，会引起无法抑制的剧烈咳嗽。投掷出去后，这一包粉末会形成短暂的烟云，让吸入者神志昏乱。
 
-STATISTICS:
+属性：
 
-Special: All creatures in a 10-ft. radius must make a Save vs. Breath at -2 or be dazed for two rounds, unable to take any actions.
+特殊：10 尺半径内所有生物须通过对抗吐息豁免（-2），否则晕眩两轮，无法采取任何行动。
 
-Weight: 0~
+重量：0~
 
 COPY_EXISTING ~c0agre3e.itm~ ~override~
   LPF ALTER_ITEM_HEADER INT_VAR projectile = c0agren3 END
-SAY NAME1 ~Grenade~
-SAY NAME2 ~Choking Powder V~
-SAY DESC ~Choking powder is made from various herbs and causes uncontrollable coughing fits. When thrown, the pack of choking powder creates a brief cloud which disorients all creatures who breathe it in.
+SAY NAME1 ~投掷弹~
+SAY NAME2 ~窒息粉 V~
+SAY DESC ~窒息粉由多种药草制成，会引起无法抑制的剧烈咳嗽。投掷出去后，这一包粉末会形成短暂的烟云，让吸入者神志昏乱。
 
-STATISTICS:
+属性：
 
-Special: All creatures in a 10-ft. radius must make a Save vs. Breath at -2 or be dazed for three rounds, unable to take any actions.
+特殊：10 尺半径内所有生物须通过对抗吐息豁免（-2），否则晕眩三轮，无法采取任何行动。
 
-Weight: 0~
+重量：0~
 
 COPY_EXISTING ~c0agre4a.itm~ ~override~
   LPF ALTER_ITEM_HEADER INT_VAR projectile = c0agren4 END
-SAY NAME1 ~Grenade~
-SAY NAME2 ~Sleeping Gas I~
-SAY DESC ~This heavy canister contains a thick gas filled various alchemical components which induces a narcoleptic effect. When thrown, the impact creates a small opening on the canister releasing the gas, which knocks out those who breathe it in.
+SAY NAME1 ~投掷弹~
+SAY NAME2 ~昏睡瓦斯 I~
+SAY DESC ~这只沉重的罐子里装着混有多种炼金成分的浓稠气体，具有催人入睡的效果。投掷出去后，撞击会在罐身开一个小口放出气体，使吸入者昏睡过去。
 
-STATISTICS:
+属性：
 
-Special: All creatures in a 10-ft. radius of 4 HD or lower must make a Save vs. Breath or fall asleep for one turn.
+特殊：10 尺半径内 4 生命骰及以下的生物须通过对抗吐息豁免，否则睡眠一回合。
 
-Weight: 0~
+重量：0~
 
 COPY_EXISTING ~c0agre4b.itm~ ~override~
   LPF ALTER_ITEM_HEADER INT_VAR projectile = c0agren4 END
-SAY NAME1 ~Grenade~
-SAY NAME2 ~Sleeping Gas II~
-SAY DESC ~This heavy canister contains a thick gas filled various alchemical components which induces a narcoleptic effect. When thrown, the impact creates a small opening on the canister releasing the gas, which knocks out those who breathe it in.
+SAY NAME1 ~投掷弹~
+SAY NAME2 ~昏睡瓦斯 II~
+SAY DESC ~这只沉重的罐子里装着混有多种炼金成分的浓稠气体，具有催人入睡的效果。投掷出去后，撞击会在罐身开一个小口放出气体，使吸入者昏睡过去。
 
-STATISTICS:
+属性：
 
-Special: All creatures in a 10-ft. radius of 7 HD or lower must make a Save vs. Breath or fall asleep for one turn.
+特殊：10 尺半径内 7 生命骰及以下的生物须通过对抗吐息豁免，否则睡眠一回合。
 
-Weight: 0~
+重量：0~
 
 COPY_EXISTING ~c0agre4c.itm~ ~override~
   LPF ALTER_ITEM_HEADER INT_VAR projectile = c0agren4 END
-SAY NAME1 ~Grenade~
-SAY NAME2 ~Sleeping Gas III~
-SAY DESC ~This heavy canister contains a thick gas filled various alchemical components which induces a narcoleptic effect. When thrown, the impact creates a small opening on the canister releasing the gas, which knocks out those who breathe it in.
+SAY NAME1 ~投掷弹~
+SAY NAME2 ~昏睡瓦斯 III~
+SAY DESC ~这只沉重的罐子里装着混有多种炼金成分的浓稠气体，具有催人入睡的效果。投掷出去后，撞击会在罐身开一个小口放出气体，使吸入者昏睡过去。
 
-STATISTICS:
+属性：
 
-Special: All creatures in a 10-ft. radius of 10 HD or lower must make a Save vs. Breath at -1 or fall asleep for one turn.
+特殊：10 尺半径内 10 生命骰及以下的生物须通过对抗吐息豁免（-1），否则睡眠一回合。
 
-Weight: 0~
+重量：0~
 
 COPY_EXISTING ~c0agre4d.itm~ ~override~
   LPF ALTER_ITEM_HEADER INT_VAR projectile = c0agren4 END
-SAY NAME1 ~Grenade~
-SAY NAME2 ~Sleeping Gas IV~
-SAY DESC ~This heavy canister contains a thick gas filled various alchemical components which induces a narcoleptic effect. When thrown, the impact creates a small opening on the canister releasing the gas, which knocks out those who breathe it in.
+SAY NAME1 ~投掷弹~
+SAY NAME2 ~昏睡瓦斯 IV~
+SAY DESC ~这只沉重的罐子里装着混有多种炼金成分的浓稠气体，具有催人入睡的效果。投掷出去后，撞击会在罐身开一个小口放出气体，使吸入者昏睡过去。
 
-STATISTICS:
+属性：
 
-Special: All creatures in a 10-ft. radius of 13 HD or lower must make a Save vs. Breath at -2 or fall asleep for one turn.
+特殊：10 尺半径内 13 生命骰及以下的生物须通过对抗吐息豁免（-2），否则睡眠一回合。
 
-Weight: 0~
+重量：0~
 
 COPY_EXISTING ~c0agre4e.itm~ ~override~
   LPF ALTER_ITEM_HEADER INT_VAR projectile = c0agren4 END
-SAY NAME1 ~Grenade~
-SAY NAME2 ~Sleeping Gas V~
-SAY DESC ~This heavy canister contains a thick gas filled various alchemical components which induces a narcoleptic effect. When thrown, the impact creates a small opening on the canister releasing the gas, which knocks out those who breathe it in.
+SAY NAME1 ~投掷弹~
+SAY NAME2 ~昏睡瓦斯 V~
+SAY DESC ~这只沉重的罐子里装着混有多种炼金成分的浓稠气体，具有催人入睡的效果。投掷出去后，撞击会在罐身开一个小口放出气体，使吸入者昏睡过去。
 
-STATISTICS:
+属性：
 
-Special: All creatures in a 10-ft. radius of 16 HD or lower must make a Save vs. Breath at -3 or fall asleep for one turn.
+特殊：10 尺半径内 16 生命骰及以下的生物须通过对抗吐息豁免（-3），否则睡眠一回合。
 
-Weight: 0~
+重量：0~
 
 COPY_EXISTING ~c0agre5a.itm~ ~override~
   LPF ALTER_ITEM_HEADER INT_VAR projectile = c0agren5 END
-SAY NAME1 ~Grenade~
-SAY NAME2 ~Tanglefoot Bag I~
-SAY DESC ~Tanglefoot bags are small pouches filled with tar, resin and various other sticky substances. When thrown, the bag bursts open violently causing the contents to spread across the area in thick strands which harden in exposure to air like a glue.
+SAY NAME1 ~投掷弹~
+SAY NAME2 ~绊足包 I~
+SAY DESC ~绊足包是装满沥青、树脂和多种黏性物的小袋。投掷出去后会猛烈爆开，内容物以浓稠的条丝铺散开来，遇空气便像胶水一样硬化。
 
-STATISTICS:
+属性：
 
-Special: All creatures in a 10-ft. radius must make a Save vs. Breath or be entangled in sticky threads for two rounds.
+特殊：10 尺半径内所有生物须通过对抗吐息豁免，否则被黏丝纠缠两轮。
 
-Weight: 0~
+重量：0~
 
 COPY_EXISTING ~c0agre5b.itm~ ~override~
   LPF ALTER_ITEM_HEADER INT_VAR projectile = c0agren5 END
-SAY NAME1 ~Grenade~
-SAY NAME2 ~Tanglefoot Bag II~
-SAY DESC ~Tanglefoot bags are small pouches filled with tar, resin and various other sticky substances. When thrown, the bag bursts open violently causing the contents to spread across the area in thick strands which harden in exposure to air like a glue.
+SAY NAME1 ~投掷弹~
+SAY NAME2 ~绊足包 II~
+SAY DESC ~绊足包是装满沥青、树脂和多种黏性物的小袋。投掷出去后会猛烈爆开，内容物以浓稠的条丝铺散开来，遇空气便像胶水一样硬化。
 
-STATISTICS:
+属性：
 
-Special: All creatures in a 10-ft. radius must make a Save vs. Breath at -1 or be entangled in sticky threads for two rounds.
+特殊：10 尺半径内所有生物须通过对抗吐息豁免（-1），否则被黏丝纠缠两轮。
 
-Weight: 0~
+重量：0~
 
 COPY_EXISTING ~c0agre5c.itm~ ~override~
   LPF ALTER_ITEM_HEADER INT_VAR projectile = c0agren5 END
-SAY NAME1 ~Grenade~
-SAY NAME2 ~Tanglefoot Bag III~
-SAY DESC ~Tanglefoot bags are small pouches filled with tar, resin and various other sticky substances. When thrown, the bag bursts open violently causing the contents to spread across the area in thick strands which harden in exposure to air like a glue.
+SAY NAME1 ~投掷弹~
+SAY NAME2 ~绊足包 III~
+SAY DESC ~绊足包是装满沥青、树脂和多种黏性物的小袋。投掷出去后会猛烈爆开，内容物以浓稠的条丝铺散开来，遇空气便像胶水一样硬化。
 
-STATISTICS:
+属性：
 
-Special: All creatures in a 10-ft. radius must make a Save vs. Breath at -1 or be entangled in sticky threads for four rounds.
+特殊：10 尺半径内所有生物须通过对抗吐息豁免（-1），否则被黏丝纠缠四轮。
 
-Weight: 0~
+重量：0~
 
 COPY_EXISTING ~c0agre5d.itm~ ~override~
   LPF ALTER_ITEM_HEADER INT_VAR projectile = c0agren5 END
-SAY NAME1 ~Grenade~
-SAY NAME2 ~Tanglefoot Bag IV~
-SAY DESC ~Tanglefoot bags are small pouches filled with tar, resin and various other sticky substances. When thrown, the bag bursts open violently causing the contents to spread across the area in thick strands which harden in exposure to air like a glue.
+SAY NAME1 ~投掷弹~
+SAY NAME2 ~绊足包 IV~
+SAY DESC ~绊足包是装满沥青、树脂和多种黏性物的小袋。投掷出去后会猛烈爆开，内容物以浓稠的条丝铺散开来，遇空气便像胶水一样硬化。
 
-STATISTICS:
+属性：
 
-Special: All creatures in a 10-ft. radius must make a Save vs. Breath at -2 or be entangled in sticky threads for four rounds.
+特殊：10 尺半径内所有生物须通过对抗吐息豁免（-2），否则被黏丝纠缠四轮。
 
-Weight: 0~
+重量：0~
 
 COPY_EXISTING ~c0agre5e.itm~ ~override~
   LPF ALTER_ITEM_HEADER INT_VAR projectile = c0agren5 END
-SAY NAME1 ~Grenade~
-SAY NAME2 ~Tanglefoot Bag V~
-SAY DESC ~Tanglefoot bags are small pouches filled with tar, resin and various other sticky substances. When thrown, the bag bursts open violently causing the contents to spread across the area in thick strands which harden in exposure to air like a glue.
+SAY NAME1 ~投掷弹~
+SAY NAME2 ~绊足包 V~
+SAY DESC ~绊足包是装满沥青、树脂和多种黏性物的小袋。投掷出去后会猛烈爆开，内容物以浓稠的条丝铺散开来，遇空气便像胶水一样硬化。
 
-STATISTICS:
+属性：
 
-Special: All creatures in a 10-ft. radius must make a Save vs. Breath at -3 or be entangled in sticky threads for six rounds.
+特殊：10 尺半径内所有生物须通过对抗吐息豁免（-3），否则被黏丝纠缠六轮。
 
-Weight: 0~
+重量：0~
 
 COPY_EXISTING ~c0agre6a.itm~ ~override~
   LPF ALTER_ITEM_HEADER INT_VAR projectile = c0agren6 END
-SAY NAME1 ~Grenade~
-SAY NAME2 ~Thunderstone I~
-SAY DESC ~When striking a hard surface, a thunderstone creates a deafening bang, which temporarily impedes the hearing of those too close to the blast radius.
+SAY NAME1 ~投掷弹~
+SAY NAME2 ~雷石 I~
+SAY DESC ~雷石击中坚硬表面时会产生震耳欲聋的巨响，暂时损伤离爆炸范围过近者的听力。
 
-STATISTICS:
+属性：
 
-Special: All creatures in a 10-ft. radius must make a Save vs. Breath or be deafened for 5 rounds, suffering a 50% penalty to spell failure.
+特殊：10 尺半径内所有生物须通过对抗吐息豁免，否则耳聋 5 轮，并承受 50% 的施法失败惩罚。
 
-Weight: 0~
+重量：0~
 
 COPY_EXISTING ~c0agre6b.itm~ ~override~
   LPF ALTER_ITEM_HEADER INT_VAR projectile = c0agren6 END
-SAY NAME1 ~Grenade~
-SAY NAME2 ~Thunderstone II~
-SAY DESC ~When striking a hard surface, a thunderstone creates a deafening bang, which temporarily impedes the hearing of those too close to the blast radius.
+SAY NAME1 ~投掷弹~
+SAY NAME2 ~雷石 II~
+SAY DESC ~雷石击中坚硬表面时会产生震耳欲聋的巨响，暂时损伤离爆炸范围过近者的听力。
 
-STATISTICS:
+属性：
 
-Special: All creatures in a 10-ft. radius must make a Save vs. Breath at -1 or be deafened for 5 rounds, suffering a 50% penalty to spell failure.
+特殊：10 尺半径内所有生物须通过对抗吐息豁免（-1），否则耳聋 5 轮，并承受 50% 的施法失败惩罚。
 
-Weight: 0~
+重量：0~
 
 COPY_EXISTING ~c0agre6c.itm~ ~override~
   LPF ALTER_ITEM_HEADER INT_VAR projectile = c0agren6 END
-SAY NAME1 ~Grenade~
-SAY NAME2 ~Thunderstone III~
-SAY DESC ~When striking a hard surface, a thunderstone creates a deafening bang, which temporarily impedes the hearing of those too close to the blast radius.
+SAY NAME1 ~投掷弹~
+SAY NAME2 ~雷石 III~
+SAY DESC ~雷石击中坚硬表面时会产生震耳欲聋的巨响，暂时损伤离爆炸范围过近者的听力。
 
-STATISTICS:
+属性：
 
-Special: All creatures in a 10-ft. radius must make a Save vs. Breath at -2 or be deafened for 5 rounds, suffering a 50% penalty to spell failure.
+特殊：10 尺半径内所有生物须通过对抗吐息豁免（-2），否则耳聋 5 轮，并承受 50% 的施法失败惩罚。
 
-Weight: 0~
+重量：0~
 
 COPY_EXISTING ~c0agre6d.itm~ ~override~
   LPF ALTER_ITEM_HEADER INT_VAR projectile = c0agren6 END
-SAY NAME1 ~Grenade~
-SAY NAME2 ~Thunderstone IV~
-SAY DESC ~When striking a hard surface, a thunderstone creates a deafening bang, which temporarily impedes the hearing of those too close to the blast radius.
+SAY NAME1 ~投掷弹~
+SAY NAME2 ~雷石 IV~
+SAY DESC ~雷石击中坚硬表面时会产生震耳欲聋的巨响，暂时损伤离爆炸范围过近者的听力。
 
-STATISTICS:
+属性：
 
-Special: All creatures in a 10-ft. radius must make a Save vs. Breath at -3 or be deafened for 5 rounds, suffering a 50% penalty to spell failure.
+特殊：10 尺半径内所有生物须通过对抗吐息豁免（-3），否则耳聋 5 轮，并承受 50% 的施法失败惩罚。
 
-Weight: 0~
+重量：0~
 
 COPY_EXISTING ~c0agre6e.itm~ ~override~
   LPF ALTER_ITEM_HEADER INT_VAR projectile = c0agren6 END
-SAY NAME1 ~Grenade~
-SAY NAME2 ~Thunderstone V~
-SAY DESC ~When striking a hard surface, a thunderstone creates a deafening bang, which temporarily impedes the hearing of those too close to the blast radius.
+SAY NAME1 ~投掷弹~
+SAY NAME2 ~雷石 V~
+SAY DESC ~雷石击中坚硬表面时会产生震耳欲聋的巨响，暂时损伤离爆炸范围过近者的听力。
 
-STATISTICS:
+属性：
 
-Special: All creatures in a 10-ft. radius must make a Save vs. Breath at -4 or be deafened for 5 rounds, suffering a 50% penalty to spell failure.
+特殊：10 尺半径内所有生物须通过对抗吐息豁免（-4），否则耳聋 5 轮，并承受 50% 的施法失败惩罚。
 
-Weight: 0~
+重量：0~
 
 // Writes a new item type into the itemtype.2da and returns the reference value.
 LAF ADD_ITEMTYPE_IN_2DA
@@ -3575,22 +3575,22 @@ COPY_EXISTING ~c0abomb1.itm~ ~override~
 	  parameter1 = (IDS_OF_SYMBOL (~kit~ ~C0AURA~))
 	  parameter2 = 9
 	  power = 1
-	  special = RESOLVE_STR_REF (~Artificer~)
+	  special = RESOLVE_STR_REF (~奇械师~)
 END
-SAY NAME1 ~Firebomb~
-SAY NAME2 ~Green Flaming Oil~
-SAY DESC ~Inside of this glass pot is an expensive mixture of oil and other chemicals. When this mixture is set ablaze, it burns for several seconds at a very hot temperature.  Flaming oil is sometimes difficult to use because it takes a long time for the user to properly throw it. Adventurers often carry oil with them to deal with trolls in the unfortunate event that they are encountered.
+SAY NAME1 ~燃烧弹~
+SAY NAME2 ~绿色燃烧油~
+SAY DESC ~这只玻璃罐里装着油与多种化学品的昂贵混合物。点燃后，它会以极高的温度燃烧数秒。燃烧油有时不太好用，因为使用者得花不少时间才能把它妥善掷出。冒险者常随身带着油，以备不幸遇上巨魔时派上用场。
 
-Aura's flasks use a specially-made type of oil which releases a highly flammable gas. The flames are emerald green, just like the oil itself.
+奥拉所用的瓶装油是特制的，会释放极易燃的气体。火焰呈翡翠绿，与油本身一样。
 
-STATISTICS:
+属性：
 
-When thrown, releases a cloud which deals damage per round to all creatures within it (Save vs. Breath Weapons for half damage). Afflicted targets who leave the area of effect suffer damage for two additional rounds. The cloud lasts for five rounds.
-  1st level: 2d3 Fire Damage (Save vs. Breath)
-  10th level: 4d3 Fire Damage (Save vs. Breath at -1)
-  20th level: 4d6 Unmitigated Fire Damage (Save vs. Breath at -2)
+投掷出去后释放一团烟云，每轮对云内所有生物造成伤害（对抗吐息武器豁免成功则减半）。离开效果范围的受创目标仍会在之后两轮内继续受伤。烟云持续五轮。
+  1 级：2d3 火焰伤害（对抗吐息豁免）
+  10 级：4d3 火焰伤害（对抗吐息豁免 -1）
+  20 级：4d6 无法减免的火焰伤害（对抗吐息豁免 -2）
 
-Weight: 0~
+重量：0~
 WRITE_SHORT 0x9C ~%c0aproj0%~
 WRITE_LONG 0x34 375
 
@@ -3611,20 +3611,20 @@ COPY_EXISTING ~c0abomb2.itm~ ~override~
 	  parameter1 = (IDS_OF_SYMBOL (~kit~ ~C0AURA~))
 	  parameter2 = 9
 	  power = 1
-	  special = RESOLVE_STR_REF (~Artificer~)
+	  special = RESOLVE_STR_REF (~奇械师~)
 END
-SAY NAME1 ~Firebomb~
-SAY NAME2 ~White Flashbomb~
-SAY DESC ~This flask contains an alchemical compound which, when detonated, explodes with a flash of light that stuns and blinds all within the vicinity.
+SAY NAME1 ~燃烧弹~
+SAY NAME2 ~白色闪光弹~
+SAY DESC ~这只瓶里装着一种炼金化合物，引爆时会炸出一片闪光，震慑并致盲附近所有人。
 
-STATISTICS
+属性
 
-When thrown, deals damage and Blinds all creatures within a 10' radius. Additionally, targets who fail Save vs. Breath Weapons are Stunned instead.
-  1st level: 2d4 Non-Lethal Damage, Blind (2 rounds), Stun (Save vs. Breath at +2)
-  10th level: 3d4 Non-Lethal Damage, Blind (3 rounds), Stun (Save vs. Breath at -1)
-  20th level: 4d4 Non-Lethal Damage, Blind (4 rounds), Stun (Save vs. Breath at -4)
+投掷出去后造成伤害，并使 10 尺半径内所有生物目盲。此外，未通过对抗吐息武器豁免的目标会被震慑。
+  1 级：2d4 非致命伤害、目盲（2 轮）、震慑（对抗吐息豁免 +2）
+  10 级：3d4 非致命伤害、目盲（3 轮）、震慑（对抗吐息豁免 -1）
+  20 级：4d4 非致命伤害、目盲（4 轮）、震慑（对抗吐息豁免 -4）
 
-Weight: 0~
+重量：0~
 WRITE_SHORT 0x9C ~%c0aproj0%~
 WRITE_LONG 0x34 750
 
@@ -3645,20 +3645,20 @@ COPY_EXISTING ~c0abomb3.itm~ ~override~
 	  parameter1 = (IDS_OF_SYMBOL (~kit~ ~C0AURA~))
 	  parameter2 = 9
 	  power = 1
-	  special = RESOLVE_STR_REF (~Artificer~)
+	  special = RESOLVE_STR_REF (~奇械师~)
 END
-SAY NAME1 ~Firebomb~
-SAY NAME2 ~Spiked Firebomb~
-SAY DESC ~This spiked metal object is an explosive which unleashes a fiery blast while launching sharp metal shrapnel at anyone within a certain range of it.
+SAY NAME1 ~燃烧弹~
+SAY NAME2 ~尖刺燃烧弹~
+SAY DESC ~这件带刺的金属物是个爆炸物，炸开时喷出烈焰，同时向一定范围内的所有人射出尖锐的金属破片。
 
-STATISTICS
+属性
 
-When thrown, deals Fire and Piercing Damage within a 10' radius and causes targets to Bleed for 5% Maximum Hit Points every round on a failed Save vs. Breath Weapons.
-  1st level: 4d6+5 Fire, 1d6+2 Piercing Damage, Bleed (3 rounds)
-  10th level: 6d6+8 Fire, 2d6+4 Piercing Damage, Bleed (6 rounds)
-  20th level: 8d6+10 Fire, 3d6+6 Piercing Damage, Bleed (9 rounds)
+投掷出去后在 10 尺半径内造成火焰与穿刺伤害，并在目标未通过对抗吐息武器豁免时，使其每轮流失 5% 最大生命值的「流血」状态。
+  1 级：4d6+5 火焰、1d6+2 穿刺伤害，流血（3 轮）
+  10 级：6d6+8 火焰、2d6+4 穿刺伤害，流血（6 轮）
+  20 级：8d6+10 火焰、3d6+6 穿刺伤害，流血（9 轮）
 
-Weight: 0~
+重量：0~
 WRITE_SHORT 0x9C ~%c0aproj0%~
 WRITE_LONG 0x34 750
 
@@ -3689,20 +3689,20 @@ COPY_EXISTING ~c0abomb4.itm~ ~override~
 	  parameter1 = (IDS_OF_SYMBOL (~kit~ ~C0AURA~))
 	  parameter2 = 9
 	  power = 1
-	  special = RESOLVE_STR_REF (~Artificer~)
+	  special = RESOLVE_STR_REF (~奇械师~)
 END
-SAY NAME1 ~Firebomb~
-SAY NAME2 ~Sulfide Bomb~
-SAY DESC ~This explosive contains a huge amount of sulfur, which when released creates a cloud of foul-smelling and toxic fumes that can knock out a man within seconds.
+SAY NAME1 ~燃烧弹~
+SAY NAME2 ~硫化物炸弹~
+SAY DESC ~这枚爆炸物含有大量硫磺，释放时会形成一团气味恶心、有毒的浓烟，能在几秒内让人昏倒。
 
-STATISTICS
+属性
 
-When thrown, releases a cloud for three rounds which deals Poison Damage each round and knocks all targets unconscious for two rounds on a failed Save vs. Breath Weapons.
-  12th level: 2d6 Poison Damage, Unconsciousness (Save vs. Breath at -2)
-  18th level: 4d6 Poison Damage, Unconsciousness (Save vs. Breath at -4)
-  24th level: 8d6 Poison Damage, Unconsciousness (Save vs. Breath at -6)
+投掷出去后释放一团持续三轮的烟云，每轮造成毒素伤害，并使所有未通过对抗吐息武器豁免的目标昏迷两轮。
+  12 级：2d6 毒素伤害、昏迷（对抗吐息豁免 -2）
+  18 级：4d6 毒素伤害、昏迷（对抗吐息豁免 -4）
+  24 级：8d6 毒素伤害、昏迷（对抗吐息豁免 -6）
 
-Weight: 0~
+重量：0~
 WRITE_SHORT 0x9C ~%c0aproj0%~
 WRITE_LONG 0x34 900
 
@@ -3728,7 +3728,7 @@ END
       check_globals = 1
       check_headers = 1
       match_opcode = 139 // display string
- parameter1 = RESOLVE_STR_REF (~Weakened~)
+ parameter1 = RESOLVE_STR_REF (~虚弱~)
 END
 COPY_EXISTING ~c0abomb5.itm~ ~override~
 	WRITE_SHORT 0x001c	~%grenade%~
@@ -3740,20 +3740,20 @@ COPY_EXISTING ~c0abomb5.itm~ ~override~
 	  parameter1 = (IDS_OF_SYMBOL (~kit~ ~C0AURA~))
 	  parameter2 = 9
 	  power = 1
-	  special = RESOLVE_STR_REF (~Artificer~)
+	  special = RESOLVE_STR_REF (~奇械师~)
 END
-SAY NAME1 ~Firebomb~
-SAY NAME2 ~Crimson Smoke Canister~
-SAY DESC ~This round tube, when thrown, releases a thick cloud of crimson-colored toxic smoke which impairs vision and physically weakens all creatures that breathe it.
+SAY NAME1 ~燃烧弹~
+SAY NAME2 ~深红烟罐~
+SAY DESC ~这只圆筒投掷出去后释放一团绯红色的浓稠毒烟，妨碍视线，并让所有吸入者身体变得虚弱。
 
-STATISTICS
+属性
 
-When thrown, releases a cloud for one turn which deals Poison Damage each round. Creatures standing in the cloud have their field of vision greatly reduced and suffer a -4 penalty to THAC0. Creatures must additionally make a Save vs. Breath Weapons each round or suffer a penalty to Armor Class and Saving Throws for three rounds.
-  15th level: 4 Poison Damage, -2 to Armor Class and Saving Throws (Save vs. Breath at +2)
-  20th level: 7 Poison Damage, -3 to Armor Class and Saving Throws (Save vs. Breath)
-  25th level: 10 Poison Damage, -4 to Armor Class and Saving Throws (Save vs. Breath at -2)  
+投掷出去后释放一团持续一回合的烟云，每轮造成毒素伤害。站在云中的生物视野大幅缩小，THAC0 -4。此外，生物每轮须通过对抗吐息武器豁免，否则防御等级与豁免检定在之后三轮内受罚。
+  15 级：4 点毒素伤害，防御等级与豁免检定 -2（对抗吐息豁免 +2）
+  20 级：7 点毒素伤害，防御等级与豁免检定 -3（对抗吐息豁免）
+  25 级：10 点毒素伤害，防御等级与豁免检定 -4（对抗吐息豁免 -2）
 
-Weight: 0~
+重量：0~
 WRITE_SHORT 0x9C ~%c0aproj0%~
 WRITE_LONG 0x34 1250
 
@@ -3781,20 +3781,20 @@ COPY_EXISTING ~c0abomb6.itm~ ~override~
 	  parameter1 = (IDS_OF_SYMBOL (~kit~ ~C0AURA~))
 	  parameter2 = 9
 	  power = 1
-	  special = RESOLVE_STR_REF (~Artificer~)
+	  special = RESOLVE_STR_REF (~奇械师~)
 END
-SAY NAME1 ~Firebomb~
-SAY NAME2 ~Adhesive Bomb~
-SAY DESC ~This canister contains a substance which rapidly congeals when exposed to air, becoming a burning hot and sticky glue which impairs the movements of those within its vicinity.
+SAY NAME1 ~燃烧弹~
+SAY NAME2 ~黏胶炸弹~
+SAY DESC ~这只罐里装着一种遇空气便迅速凝固的物质，会变成滚烫的黏胶，妨碍附近生物的移动。
 
-STATISTICS
+属性
 
-When thrown, deals Fire Damage and Slows for five rounds on a failed Save vs. Breath Weapons. The glue remains on the ground afterwards for three rounds, greatly reducing the movement rate of anyone standing in the area of effect.
-  18th level: 3d6 Fire Damage, Slow (Save vs. Breath at -4), -50% Movement Rate
-  24th level: 6d6 Fire Damage, Slow (Save vs. Breath at -6), -75% Movement Rate
-  30th level: 9d6 Fire Damage, Slow (Save vs. Breath at -8), -99% Movement Rate
+投掷出去后造成火焰伤害，并在目标未通过对抗吐息武器豁免时使其缓慢五轮。之后胶会被遗留在地上三轮，大幅降低站在效果范围内者的移动速度。
+  18 级：3d6 火焰伤害、缓慢（对抗吐息豁免 -4）、移动速度 -50%
+  24 级：6d6 火焰伤害、缓慢（对抗吐息豁免 -6）、移动速度 -75%
+  30 级：9d6 火焰伤害、缓慢（对抗吐息豁免 -8）、移动速度 -99%
 
-Weight: 0~
+重量：0~
 WRITE_SHORT 0x9C ~%c0aproj0%~
 WRITE_LONG 0x34 3000
 
@@ -3825,20 +3825,20 @@ COPY_EXISTING ~c0abomb7.itm~ ~override~
 	  parameter1 = (IDS_OF_SYMBOL (~kit~ ~C0AURA~))
 	  parameter2 = 9
 	  power = 1
-	  special = RESOLVE_STR_REF (~Artificer~)
+	  special = RESOLVE_STR_REF (~奇械师~)
 END
-SAY NAME1 ~Firebomb~
-SAY NAME2 ~Corrosive Bomb~
-SAY DESC ~This canister contains a heavily acidic substance which bursts into a cloud of corrosive acid when detonated, dealing severe injury to anyone unfortunate enough to stand within the vicinity.
+SAY NAME1 ~燃烧弹~
+SAY NAME2 ~腐蚀炸弹~
+SAY DESC ~这只罐里装着强酸物质，引爆时会炸成一团腐蚀性酸雾，给附近所有不幸的人造成严重伤害。
 
-STATISTICS
+属性
 
-When thrown, releases an acidic cloud which deals Acid Damage each round. Enemies standing within the cloud suffer a cumulative penalty to Acid Resistance for one turn. The cloud remains for five rounds.
-  21st level: 4d4 Acid Damage, -10% Acid Resistance
-  26th level: 6d4 Acid Damage, -15% Acid Resistance
-  31st level: 8d4 Acid Damage, -20% Acid Resistance
+投掷出去后释放一团酸雾，每轮造成酸液伤害。站在雾中的敌人会在一回合内不断累积酸液抗性惩罚。酸雾持续五轮。
+  21 级：4d4 酸液伤害、酸液抗性 -10%
+  26 级：6d4 酸液伤害、酸液抗性 -15%
+  31 级：8d4 酸液伤害、酸液抗性 -20%
 
-Weight: 0~
+重量：0~
 WRITE_SHORT 0x9C ~%c0aproj0%~
 WRITE_LONG 0x34 3500
 
@@ -3865,7 +3865,7 @@ COPY_EXISTING ~c0aburn.spl~ ~override~
       check_globals = 1
       check_headers = 1
       match_opcode = 139 // display string
-	  parameter1 = RESOLVE_STR_REF (~Burning~)
+	  parameter1 = RESOLVE_STR_REF (~燃烧~)
   END
 COPY_EXISTING ~c0abomb8.spl~ ~override~
 READ_LONG 0x64 "abil_off"
@@ -3883,20 +3883,20 @@ COPY_EXISTING ~c0abomb8.itm~ ~override~
 	  parameter1 = (IDS_OF_SYMBOL (~kit~ ~C0AURA~))
 	  parameter2 = 9
 	  power = 1
-	  special = RESOLVE_STR_REF (~Artificer~)
+	  special = RESOLVE_STR_REF (~奇械师~)
 END
-SAY NAME1 ~Firebomb~
-SAY NAME2 ~Dread Flame Bomb~
-SAY DESC ~This canister contains a powder made from a hybrid of glow powder and Shou explosive powder. The purple flames that burst from the explosive deal horrifying damage and inflict terror in any survivors.
+SAY NAME1 ~燃烧弹~
+SAY NAME2 ~恐惧炎爆弹~
+SAY DESC ~这只罐里装着由发光粉与寿（Shou）炸药粉混合制成的粉末。爆炸喷出的紫色火焰会造成可怖的伤害，并让幸存者陷入恐惧。
 
-STATISTICS
+属性
 
-When thrown, unleashes a purple fireball that deals massive Fire Damage. Additionally, afflicted victims must make a Save vs. Breath Weapons or become Ignited, suffering 10% of their Maximum Hit Points each round and fleeing in terror for the duration.
-  24th level: 10d10 Fire Damage, Ignited (4 rounds, Save vs. Breath at -4)
-  30th level: 10d12 Fire Damage, Ignited (5 rounds, Save vs. Breath at -5)
-  36th level: 12d12 Fire Damage, Ignited (6 rounds, Save vs. Breath at -6)
+投掷出去后炸出一颗紫色火球，造成大量火焰伤害。此外，受创者须通过对抗吐息武器豁免，否则陷入「燃烧」，每轮流失 10% 最大生命值，并在持续期间惊恐逃窜。
+  24 级：10d10 火焰伤害、燃烧（4 轮，对抗吐息豁免 -4）
+  30 级：10d12 火焰伤害、燃烧（5 轮，对抗吐息豁免 -5）
+  36 级：12d12 火焰伤害、燃烧（6 轮，对抗吐息豁免 -6）
 
-Weight: 0~
+重量：0~
 	WRITE_SHORT 0x001c	~%grenade%~
 WRITE_SHORT 0x9C ~%c0aproj0%~
 WRITE_LONG 0x34 7500
@@ -3906,13 +3906,13 @@ COPY_EXISTING ~c0abomb9.spl~ ~override~
       INT_VAR
         match_opcode      = 139   // Display portrait icon
 		match_savingthrow = 0
-        parameter1 = RESOLVE_STR_REF (~Deafened~)
+        parameter1 = RESOLVE_STR_REF (~耳聋~)
       END
       LPF ALTER_EFFECT
       INT_VAR
         match_opcode      = 139   // Display portrait icon
 		match_savingthrow = 4
-        parameter1 = RESOLVE_STR_REF (~Stunned~)
+        parameter1 = RESOLVE_STR_REF (~震慑~)
       END
 READ_LONG 0x64 "abil_off"
 READ_SHORT 0x68 "abil_num"
@@ -3929,20 +3929,20 @@ COPY_EXISTING ~c0abomb9.itm~ ~override~
 	  parameter1 = (IDS_OF_SYMBOL (~kit~ ~C0AURA~))
 	  parameter2 = 9
 	  power = 1
-	  special = RESOLVE_STR_REF (~Artificer~)
+	  special = RESOLVE_STR_REF (~奇械师~)
 END
-SAY NAME1 ~Firebomb~
-SAY NAME2 ~Divine Thunderclap Bomb~
-SAY DESC ~This devastating explosive contains a special compound crafted from Lantanese smokepowder and Shou explosive powder. The compound powder is so dangerous that only a small amount must be used, which must be contained within a vibration-resistant canister which is afterwards placed within a larger canister with considerable space inbetween both. When it detonates, the destructive force of the powder obliterates everything within its range.
+SAY NAME1 ~燃烧弹~
+SAY NAME2 ~神威雷霆弹~
+SAY DESC ~这枚毁灭性的爆炸物含有一种以兰坦火药与寿炸药粉制成的特殊化合物。这种混合粉末极其危险，只用极少量，且必须装在抗振罐中，再放入一只留有很大空隙的大罐里。引爆时，粉末的破坏力会把范围内的一切抹平。
 
-STATISTICS:
+属性
 
-When thrown, unleashes a devastating explosion which deals massive Fire and Electrical Damage, Deafens all targets and Stuns for five rounds on a failed Save vs. Death. Targets take damage as though their Fire and Electrical Resistances are halved (e.g. 100% Resistance takes 50% Damage)
-  27th level: 12d10 Fire/Electrical Damage, Deafness (3 rounds), Stun (Save vs. Death at -4)
-  33rd level: 16d10 Fire/Electrical Damage, Deafness (4 rounds), Stun (Save vs. Death at -5)
-  39th level: 20d10 Fire/Electrical Damage, Deafness (5 rounds), Stun (Save vs. Death at -6)
+投掷出去后引发一场毁灭性爆炸，造成大量火焰与电击伤害，使所有目标耳聋，并在未通过对抗死亡豁免时震慑五轮。目标的火焰与电击抗性按减半计算伤害（例如抗性 100% 者受 50% 伤害）。
+  27 级：12d10 火焰/电击伤害、耳聋（3 轮）、震慑（对抗死亡豁免 -4）
+  33 级：16d10 火焰/电击伤害、耳聋（4 轮）、震慑（对抗死亡豁免 -5）
+  39 级：20d10 火焰/电击伤害、耳聋（5 轮）、震慑（对抗死亡豁免 -6）
 
-Weight: 0~
+重量：0~
 	WRITE_SHORT 0x001c	~%grenade%~
 WRITE_SHORT 0x9C ~%c0aproj0%~
 WRITE_LONG 0x34 9000

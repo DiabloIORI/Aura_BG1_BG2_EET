@@ -4,17 +4,17 @@ Range("C0Aura",15)
 !StateCheck("L#FOU",CD_STATE_NOTVALID)
 !StateCheck("C0Aura",CD_STATE_NOTVALID)
 Global("C0AuraL#Foundling1","GLOBAL",0)~ THEN L#FOUB C0AuraFoundling1
-~Those clothes you wear, gnome... that colour... what is it called again?~ [C0BLANK]
+~侏儒，你穿的那身衣裳……那颜色……叫什么来着？~ [C0BLANK]
 DO ~SetGlobal("C0AuraL#Foundling1","GLOBAL",1)~
-== BC0AURA2 ~It's pink, Foundling.~
-== L#FOUB ~Yes, that's it. That colour does not exist in the Plane of Shadow.~
-== BC0AURA2 ~It doesn't...?! No, I guess it wouldn't. What do you think? Doesn't it suit me?~
-== L#FOUB ~It's painfully vivid. Are you trying to be noticed?~
-== BC0AURA2 ~No, not really. I'm actually shy by nature. I just think pink's a pretty colour.~
-== L#FOUB ~That seems imprudent. It seems more likely to make you noticed by dangerous predators.~
-== BC0AURA2 ~That's, um... actually, I can't argue with that. But I can protect myself, Foundling. Besides, I have others here to keep me safe, right? That includes you.~
-== L#FOUB ~I do not believe it is wise to put your life so securely in the hands of others.~
-== BC0AURA2 ~But that's how trust works, Foundling. We can't be friends unless we can depend on each other. That goes for you, too! I'll do my best to keep you safe.~
+== BC0AURA2 ~这是粉色，弃儿。~
+== L#FOUB ~对，就是那个。阴影位面里没有这种颜色。~
+== BC0AURA2 ~它不……？！不，我猜也不会。你觉得呢？不适合我吗？~
+== L#FOUB ~艳得刺眼。你是想引人注意？~
+== BC0AURA2 ~不，并不。我其实生性害羞。我只是觉得粉色好看。~
+== L#FOUB ~这似乎不高明。倒更像是会让你被危险的掠食者注意到。~
+== BC0AURA2 ~那，呃……说实话，这话我驳不了。可我能保护自己，弃儿。再说，这里还有别人护着我，对吧？其中也包括你。~
+== L#FOUB ~我不认为把自己的性命这样牢靠地交在别人手里是明智的。~
+== BC0AURA2 ~可信任就是这样运作的，弃儿。我们若不彼此可靠，就做不成朋友。你这边也一样！我会尽力护你周全。~
 EXIT
 
 CHAIN
@@ -23,14 +23,14 @@ Range("C0Aura",15)
 !StateCheck("L#FOU",CD_STATE_NOTVALID)
 !StateCheck("C0Aura",CD_STATE_NOTVALID)
 Global("C0AuraL#Foundling2","GLOBAL",0)~ THEN L#FOUB C0AuraFoundling2
-~Why do you create these... things, Aura?~ [C0BLANK]
+~奥拉，你为什么要造这些……东西？~ [C0BLANK]
 DO ~SetGlobal("C0AuraL#Foundling2","GLOBAL",1)~
-== BC0AURA2 ~What things? I'm sorry, Foundling, you'll have to be more specific. I make a lot of things, you know!~
-== L#FOUB ~That is my point. Making objects of power to help yourself survive, that I understand. But many of your... inventions seem to exist only for their own sake.~
-== BC0AURA2 ~For their own sake...? Foundling, that doesn't exist. Everything exists for a reason, even if it's just to make people happy.~
-== L#FOUB ~Just that's enough? All that work, that planning, just for a laugh and a brief moment of joy?~
-== BC0AURA2 ~I've always aspired to make the happiness that comes from my work lasting. But even if it's just a moment, that's already enough.~
-== L#FOUB ~I find it strange that one with such a gifted mind can be satisfied with so little.~
+== BC0AURA2 ~什么东西？抱歉，弃儿，你得说具体些。你知道，我做的东西可多了！~
+== L#FOUB ~我就是这个意思。造出有力量的东西来帮自己活命，这我懂。可你许多……发明，似乎只是为了它们自己而存在。~
+== BC0AURA2 ~只为了它们自己……？弃儿，没有这种事。万物存在都有缘由，哪怕只是为了让人开心。~
+== L#FOUB ~这就够了？那么多工夫、那么多盘算，只为了一声笑、一瞬的欢喜？~
+== BC0AURA2 ~我一直希望能让自己作品中生出的快乐长长久久。可就算只有一瞬，那也足够了。~
+== L#FOUB ~我觉着奇怪：一个有这等天赋心智的人，竟能因为这么一点事就满足。~
 EXIT
 
 CHAIN
@@ -39,17 +39,17 @@ Range("C0Aura",15)
 !StateCheck("L#FOU",CD_STATE_NOTVALID)
 !StateCheck("C0Aura",CD_STATE_NOTVALID)
 Global("C0AuraL#FoundlingToB","GLOBAL",0)~ THEN L#FOU25B C0AuraFoundlingToB
-~You've taken a lot of notes on what I've said about shadow magic, Aura. There isn't much left that I can tell you.~ [C0BLANK]
+~奥拉，我讲的阴影魔法你记了好多笔记。我能告诉你的已经不多了。~ [C0BLANK]
 DO ~SetGlobal("C0AuraL#FoundlingToB","GLOBAL",1)~
-== BC0AUR25 ~Thank you, Foundling. I'll be sure to bring what I've recorded back to Lantan, so that we can understand more about your magic and the Plane of Shadow.~
-== L#FOU25B ~Do you expect this to be useful? You can't use this magic regardless of how much you've written down, and I doubt any of your peers will do much better. It requires more than that.~
-== BC0AUR25 ~Even so, there's still much a scholar can do with knowledge they can't... or won't use. What the knower can't use for themself can still be used to help others.~
-== L#FOU25B ~You're going to spend the rest of your life trying to help others?~
-== BC0AUR25 ~If I can, yes. Helping others makes me even happier than learning new things.~
-== L#FOU25B ~There are more people who need help than you can manage in a lifetime. Many of whom may not deserve it. When do you stop?~
-== BC0AUR25 ~Well, I'd like to say there's no stopping... but my mind and hands will only work for so long. When I've passed the torch, I guess. I'll feel I've earned my rest then.~
-== L#FOU25B ~Hmm.~
-== BC0AUR25 ~Why don't you consider trying the same thing one day?~
-== L#FOU25B ~Me? Teaching others? I... don't think that's likely. How many like myself could possibly be in this plane? And who among those few might listen to me?~
-== BC0AUR25 ~I can't say, but I've seen that not everyone who uses your type of magic is malicious, Foundling. There's still hope to find others like you. Just think about it.~
+== BC0AUR25 ~谢谢你，弃儿。我一定把记录下来的东西带回兰坦，好让我们更了解你的魔法和阴影位面。~
+== L#FOU25B ~你觉得这会有用吗？不管你写下多少，你自己都用不了这魔法，我怀疑你的同道们也强不到哪儿去。这需要更多东西。~
+== BC0AUR25 ~即便如此，一位学者凭着自己不能……或不愿用的知识，仍能做成许多事。知者自己用不上的东西，仍能用来帮别人。~
+== L#FOU25B ~你打算把余生都用来帮助别人？~
+== BC0AUR25 ~只要做得到，就是。帮别人比学到新东西更让我高兴。~
+== L#FOU25B ~需要帮助的人多到你一辈子也管不过来，其中许多或许还不配。你什么时候才会停下？~
+== BC0AUR25 ~唉，我倒是想说没什么能让我停下……可我的心智和双手只能再干这么久。等我交下火炬的那天吧。到那时我才觉得自己挣到了歇息。~
+== L#FOU25B ~嗯。~
+== BC0AUR25 ~你何不也考虑哪天试试同样的事？~
+== L#FOU25B ~我？教别人？我……觉得不太可能。这个位面里能有多少像我这样的人？而在那少数几个里，又有谁会听我的？~
+== BC0AUR25 ~我说不准，可“弃儿”，我见过并非所有用你这类魔法的人都心怀恶意。还有希望找到像你一样的其他人。你想想吧。~
 EXIT

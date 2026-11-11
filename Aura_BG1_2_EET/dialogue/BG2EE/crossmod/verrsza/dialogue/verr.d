@@ -6,15 +6,15 @@ Range("L#2VERR",15)
 !StateCheck("L#2VERR",CD_STATE_NOTVALID)
 !StateCheck("C0Aura",CD_STATE_NOTVALID)
 Global("C0AuraL#2Verr1","GLOBAL",0)~ THEN BC0AURA2 C0AuraVerr1
-~Care for a biscuit, Verr'Sza?~ [C0BLANK]
+~维尔莎，来块饼干吗？~ [C0BLANK]
 DO ~SetGlobal("C0AuraL#2Verr1","GLOBAL",1)~
-== L#2VERRB ~I do not care for your crumbly, nauseatingly-sweet pastries, no.~
-== BC0AURA2 ~Your loss. Though you probably don't have the molars for them anyway, right?~
-== L#2VERRB ~You're never going to grow any muscles when all you crave are sweets, girl. All they'll do is rot your teeth.~
-== BC0AURA2 ~Hey, rude! My mother drilled the practice of dental care right in the middle of my head, I'll have you know. Otherwise she'd never let me eat sugary foods at all.~
-== L#2VERRB ~It's a wonder you haven't gotten as fat as the rest of your kind yet. If you cared to get stronger, add some meat to your diet.~
-== BC0AURA2 ~I'm a vegetarian, Verr.~
-== L#2VERRB ~That would explain the pathetic meals whenever you're on cooking duty. And I had thought you simply lacked the talent to hunt.~
+== L#2VERRB ~我对你那些掉渣、甜得发腻的点心没兴趣，不。~
+== BC0AURA2 ~那是你的损失。不过你那口牙大概也咬不动，对吧？~
+== L#2VERRB ~你老想着甜食，就永远长不出肌肉，丫头。甜食只会烂你的牙。~
+== BC0AURA2 ~喂，无礼！我母亲可是把护牙的习惯敲进我脑子正中央的，告诉你。不然她压根不会让我吃甜食。~
+== L#2VERRB ~真奇怪你还没像你那些同类一样胖起来。要是你想变强，伙食里多加点肉。~
+== BC0AURA2 ~我吃素的，维尔。~
+== L#2VERRB ~这就解释了每次轮到你做饭，那饭菜为什么那么可怜。我还以为你只是没打猎的本事。~
 EXIT
 
 CHAIN
@@ -23,14 +23,14 @@ Range("C0Aura",15)
 !StateCheck("L#2VERR",CD_STATE_NOTVALID)
 !StateCheck("C0Aura",CD_STATE_NOTVALID)
 Global("C0AuraL#2Verr1","GLOBAL",0)~ THEN L#2VERRB C0AuraVerr2
-~You are far too kind, little gnome.~ [C0BLANK]
+~你太客气了，小侏儒。~ [C0BLANK]
 DO ~SetGlobal("C0AuraL#2Verr1","GLOBAL",1)~
-== BC0AURA2 ~What do you mean, "too kind"? Would you rather I be cruel and heartless?~
-== L#2VERRB ~There's a place for cruelty when it comes to our enemies. When you hesitate to kill those with the intent to kill you, it is nothing more than stupidity.~
-== BC0AURA2 ~I don't believe it's stupid to not want a world where the only way to be safe is to kill anyone who's dangerous.~
-== L#2VERRB ~You'll regret your words when you or someone else in this group suffers from your inaction.~
-== BC0AURA2 ~No. That will never happen. I'll protect my friends with all that I have. I just won't kill others if I can avoid it.~
-== L#2VERRB ~Bah. We are living in reality, not some idealistic fantasy land. But I think only a taste of what life is really like will wake you up.~
+== BC0AURA2 ~你说“太心软”是什么意思？你宁愿我残忍无情？~
+== L#2VERRB ~对付敌人时，残忍自有它的用处。面对一心要杀你的人还犹豫不杀，那就只是愚笨。~
+== BC0AURA2 ~我不觉得不想活在一个“唯有杀掉所有危险之人才能安全”的世界里，是愚蠢的。~
+== L#2VERRB ~等你或队里哪个人因你的不作为而受害，你会后悔这番话的。~
+== BC0AURA2 ~不。那永远不会发生。我会尽全力护住朋友。只是能避免的话，我不会杀人。~
+== L#2VERRB ~呸。我们活在现实里，不是什么理想主义的幻境。不过我想，只要让你尝一点生活的真味，就能把你敲醒。~
 EXIT
 
 CHAIN
@@ -39,21 +39,21 @@ Range("C0Aura",15)
 !StateCheck("L#2VERR",CD_STATE_NOTVALID)
 !StateCheck("C0Aura",CD_STATE_NOTVALID)
 Global("C0AuraL#2VerrToB","GLOBAL",0)~ THEN L#2VE25B C0AuraVerrToB
-~No.~ [C0BLANK]
+~不。~ [C0BLANK]
 DO ~SetGlobal("C0AuraL#2VerrToB","GLOBAL",1)~
-== BC0AUR25 ~But it's—~
-== L#2VE25B ~I said no!~
-== BC0AUR25 ~Oh, come on! It'll make your fur nice and silky! You've needed grooming for ages.~
-== L#2VE25B ~I am not a housecat, you ridiculous creature! I do not need my fur brushed!~
-== BC0AUR25 ~You'll like it! Don't tell me you enjoy having loose hairs and dust on that mangy coat?~
-== L#2VE25B ~My coat is not mangy!~
-== BC0AUR25 ~It's not that bad, I promise! At most, it'll tickle you.~
-== BC0AUR25 IF ~IsValidForPartyDialog("L#2PHAL")~ THEN ~Phalh liked being brushed so much, he was basically purring!~
-== L#2VE25B IF ~IsValidForPartyDialog("L#2PHAL")~ THEN ~I was doing nothing of the sort!~
-== L#2VE25B ~I don't know if you're delusional or just suicidal, but do not treat me like your pet. My patience for you is thin enough as it is. Now go away!~
-== BC0AUR25 ~Fine. Then I'll do it when you're asleep.~
-== L#2VE25B ~Don't you dare. I've practiced sleeping with one eye open. You come anywhere close to me with that, you'll breathe just long enough to regret it.~
-== BC0AUR25 ~*pout* Bluuuueeh. You mean cat.~
+== BC0AUR25 ~可它是——~
+== L#2VE25B ~我说了不要！~
+== BC0AUR25 ~哦，别这样！这会让你的毛又顺又滑！你早就该梳理梳理了。~
+== L#2VE25B ~我不是家猫，你这荒唐的东西！我不需要人给我刷毛！~
+== BC0AUR25 ~你会喜欢的！别跟我说你就乐意那身脏毛上挂着乱发和灰？~
+== L#2VE25B ~我的毛不脏不烂！~
+== BC0AUR25 ~没那么糟，我保证！顶多有点痒。~
+== BC0AUR25 IF ~IsValidForPartyDialog("L#2PHAL")~ THEN ~法尔被梳得那么舒服，简直在打呼噜了！~
+== L#2VE25B IF ~IsValidForPartyDialog("L#2PHAL")~ THEN ~我才没有干那种事！~
+== L#2VE25B ~我不知道你是臆想还是单纯想死，但别把我当你的宠物。我对你的耐性本来就薄。滚开！~
+== BC0AUR25 ~好吧。那我等你睡着了再做。~
+== L#2VE25B ~你敢。我可是练过睁着一只眼睡觉的。你敢拿着那东西靠近我，你喘的气只够你后悔。~
+== BC0AUR25 ~*撅嘴* 布噜噜噜。你是说“猫”。~
 EXIT
 
 // Phalh
@@ -64,15 +64,15 @@ Range("L#2PHAL",15)
 !StateCheck("L#2PHAL",CD_STATE_NOTVALID)
 !StateCheck("C0Aura",CD_STATE_NOTVALID)
 Global("C0AuraL#2Phalh1","GLOBAL",0)~ THEN BC0AURA2 C0AuraPhalh1
-~Hey there, Phalh... are you really Phalh?~ [C0BLANK]
+~嘿，法尔……你真是法尔吗？~ [C0BLANK]
 DO ~SetGlobal("C0AuraL#2Phalh1","GLOBAL",1)~
-== L#2PHALB ~I... am, yes. Is this some kind of trick question?~
-== BC0AURA2 ~Oh, no. It's just... goodness, you grew up fast! I can't believe you're taller than me now.~
-== L#2PHALB ~Maybe, but I'm still below average as far as my people go. It's a little disappointing.~
-== BC0AURA2 ~I know what you mean. I've always been one of the smallest in my family. Even my brother's got an inch over me, and he's fifteen years younger than I am!~
-== L#2PHALB ~Uncle Verr says my growth's slowed down, but it hasn't stopped yet. I might even be bigger than him one day, if I'm lucky and eat well enough.~
-== BC0AURA2 ~Oh, come on, do you really have to rub it in? At this rate everyone I know is going to outgrow me soon!~
-== L#2PHALB ~Ahaha... sorry.~
+== L#2PHALB ~我……是，是的。这是什么拐弯抹角的问题吗？~
+== BC0AURA2 ~哦，不是。只是……天哪，你长得真快！我都不能相信你现在比我还高了。~
+== L#2PHALB ~也许吧，可在我族人里我还是偏矮的。有点叫人失望。~
+== BC0AURA2 ~我明白你的意思。我在家里一向是最矮的那个。连我弟弟都比我高出一寸，他还比我小十五岁呢！~
+== L#2PHALB ~维尔叔叔说我长得慢下来了，不过还没停。要是我运气好、吃得够，说不定有一天比他还高。~
+== BC0AURA2 ~哦，行了，你非得这么戳人痛处吗？照这样下去，我认识的人都要长得比我高了！~
+== L#2PHALB ~啊哈哈……抱歉。~
 EXIT
 
 CHAIN
@@ -81,14 +81,14 @@ Range("C0Aura",15)
 !StateCheck("L#2PHAL",CD_STATE_NOTVALID)
 !StateCheck("C0Aura",CD_STATE_NOTVALID)
 Global("C0AuraL#2Phalh1","GLOBAL",1)~ THEN L#2PHALB C0AuraPhalh2
-~Do you think you could teach me how to craft things like you can, Aura?~ [C0BLANK]
+~奥拉，你觉得你能教我像你那样做东西吗？~ [C0BLANK]
 DO ~SetGlobal("C0AuraL#2Phalh1","GLOBAL",2)~
-== BC0AURA2 ~I'm not very good at teaching, Phalh. If you want to learn, why not study at the Sambaran academy for a year or two?~
-== L#2PHALB ~Meh... going to school sounds boring. Not to mention, I don't think I'd be very welcome.~
-== BC0AURA2 ~Well... I don't think I can help you any more than I did when you were still young. Remember when I tried to teach you the principle theories of alchemical equilibrium and you ended up falling asleep?~
-== L#2PHALB ~Oh. Um... yes. I also drooled a little on your book too. You weren't too happy about that.~
-== BC0AURA2 ~Really, Phalh, I don't think it'd be that difficult for you to learn artifice if you tried. You just need to find something you're interested in. How about you borrow my Manual of Wondrous Crafts for a few days and see what you can do with that?~
-== L#2PHALB ~Sure, I'll give it a read when I have time. And I'll take good care of it this time.~
+== BC0AURA2 ~我不太会教人，法尔。你想学的话，何不去桑巴尔学院读个一两年？~
+== L#2PHALB ~唉……上学听着就无聊。再说，我觉得我也不太会受欢迎。~
+== BC0AURA2 ~嗯……我想我没法比你还小的时候教你更多了。还记得我试着给你讲炼金平衡的基本原理，你结果睡着了吗？~
+== L#2PHALB ~哦。呃……是。我还流了点口水在你书上。你当时可不太高兴。~
+== BC0AURA2 ~说真的，法尔，我觉得你要是肯试，学奇械术没那么难。你只是得找到自己感兴趣的东西。不如把我那本《奇妙工艺手册》借去几天，看看你能做出什么？~
+== L#2PHALB ~当然，有空我就读一读。这回我会好好爱护它。~
 EXIT
 
 CHAIN
@@ -97,20 +97,20 @@ Range("C0Aura",15)
 !StateCheck("L#2PHAL",CD_STATE_NOTVALID)
 !StateCheck("C0Aura",CD_STATE_NOTVALID)
 Global("C0AuraL#2Phalh1","GLOBAL",2)~ THEN L#2PHALB C0AuraPhalh3
-~*yaaaawn* ..."imbue the... elemental essence on the chosen item for enchantment... then..." oh, I can't remember.~ [C0BLANK]
+~*哈欠* ……“将……元素精华注入选定之物以附魔……然后……”哦，我记不住了。~ [C0BLANK]
 DO ~SetGlobal("C0AuraL#2Phalh1","GLOBAL",3)~
-== BC0AURA2 ~Phalh, you okay? You look like you're about to fall asleep on your feet! Don't tell me you've been reading all night!~
-== L#2PHALB ~Zzz... *snort* I couldn't help it, I really... wanted to know how to make something powerful. But it's hard.~
-== BC0AURA2 ~*sigh* I told you, don't try to memorize everything at once! Take it easy, otherwise you'll remember it wrong. Then if you actually try to make something, you could end up seriously hurting yourself!~
-== L#2PHALB ~This crafting magical artifacts stuff is hard.~
-== BC0AURA2 ~Well, yes. Of course. It's magic, after all. Didn't you also work hard to learn how to use spells yourself?~
-== L#2PHALB ~With Uncle Verr, who barely knows any magic, being of no help on that end? Yep, it was hard work alright.~
-== L#2VERRB IF ~IsValidForPartyDialog("L#2VERR")~ THEN ~I heard that!~
-== L#2PHALB IF ~IsValidForPartyDialog("L#2VERR")~ THEN ~I know, uncle. That's the point.~
-== L#2VERRB IF ~IsValidForPartyDialog("L#2VERR")~ THEN ~*grin* You cheeky brat.~
-== BC0AURA2 ~I think you're just a practical learner, Phalh. Maybe the best way for you to learn is to actually make something.~
-== L#2PHALB ~Really? I agree I'd learn more quickly like that, but I thought you just said I could hurt myself.~
-== BC0AURA2 ~Don't worry, I'll keep an eye on you while you're working. It'll be fun!~
+== BC0AURA2 ~法尔，你没事吧？你看着像是站着都能睡着！别跟我说你读了一整夜！~
+== L#2PHALB ~呼……*哼气* 我忍不住，我真的很……想知道怎么做出厉害的东西。可这很难。~
+== BC0AURA2 ~*叹气* 我说过，别想一口气把所有东西都记下来！慢慢来，不然你会记错的。然后真要动手做东西，搞不好会把自己伤得很重！~
+== L#2PHALB ~做这种魔法器物真难。~
+== BC0AURA2 ~嗯，当然。毕竟那是魔法。你自己不也下苦功学过怎么用咒语吗？~
+== L#2PHALB ~还有几乎不懂魔法的维尔叔叔，在这头一点忙也帮不上？对，确实下了一番苦功。~
+== L#2VERRB IF ~IsValidForPartyDialog("L#2VERR")~ THEN ~我听见了！~
+== L#2PHALB IF ~IsValidForPartyDialog("L#2VERR")~ THEN ~我知道，叔叔。这正是要点。~
+== L#2VERRB IF ~IsValidForPartyDialog("L#2VERR")~ THEN ~*咧嘴笑* 你这没大没小的丫头。~
+== BC0AURA2 ~我看你只是习惯于动手学，法尔。也许对你最好的学法是真正做出一件东西来。~
+== L#2PHALB ~真的？我也同意那样学得快些，可你刚才不是才说我会伤到自己吗？~
+== BC0AURA2 ~别担心，你干活的时候我盯着你。会很有意思的！~
 EXIT
 
 CHAIN
@@ -119,23 +119,23 @@ Range("C0Aura",15)
 !StateCheck("L#2PHAL",CD_STATE_NOTVALID)
 !StateCheck("C0Aura",CD_STATE_NOTVALID)
 Global("C0AuraL#2Phalh1","GLOBAL",3)~ THEN L#2PHALB C0AuraPhalh4
-~And now, I'm supposed to cast the spell I want, right? I've been wanting to do this step for ages!~ [C0BLANK]
+~那现在，我该施我想施的法术了，对吧？这一步我等了好久了！~ [C0BLANK]
 DO ~SetGlobal("C0AuraL#2Phalh1","GLOBAL",4)~
-== BC0AURA2 ~Patience, Phalh. But yep, it's time to apply the enchantment.~
-== L#2PHALB ~Aha, I've done it! I can feel the magic imbuing itself into the gauntlets. It worked!~
-== BC0AURA2 ~Nice work, Phalh! Now you've learned the basics of magical crafting, so you'll pick up the rest in no time.~
-== L#2PHALB ~This was easy, thanks to your help. But I thought you said you'd make sure I didn't get hurt. I burned my hand earlier...~
-== BC0AURA2 ~Well, you were the one who decided it'd be faster to draw the glyphs directly on the metal instead of using the parchment like I told you to. You're still too impatient.~
-== L#2VERRB IF ~IsValidForPartyDialog("L#2VERR")~ THEN ~I've told you the same before, kid. I can't believe I'm agreeing with the gnome.~
-== L#2PHALB ~Mmph... okay, I'll admit that was my own fault. But I was excited!~
-== BC0AURA2 ~It's okay, I get it. But I wouldn't try making anything without supervision from now on.~
-== L#2PHALB ~So... we're done now, right? I'm pretty tired.~
-== BC0AURA2 ~No, there's one step left!~
-== L#2PHALB ~Ugh, still another step? I thought enchanting this thing would be the end!~
-== BC0AURA2 ~You'll like this, silly. You still have to try the enchantment out, remember?~
-== L#2PHALB ~Oh! That's what you meant. Yes, I'd absolutely like to do that. Let me just make sure they fit first.~
-== BC0AURA2 ~You, uh, didn't make sure the gauntlets were your size before you chose them?~
-== L#2PHALB ~...I got too excited.~
+== BC0AURA2 ~耐心点，法尔。不过没错，现在该施加附魔了。~
+== L#2PHALB ~啊哈，做成了！我能感觉到魔法正灌注进护手。成功了！~
+== BC0AURA2 ~干得好，法尔！你已经学会了魔法工艺的基础，剩下的很快就能上手。~
+== L#2PHALB ~有你的帮忙，这倒不难。可我以为你说过会保证我不受伤。我刚才把手烧了……~
+== BC0AURA2 ~嗯，是你自己说直接在金属上画符文比照我说的用羊皮纸更快。你还是太没耐性。~
+== L#2VERRB IF ~IsValidForPartyDialog("L#2VERR")~ THEN ~小子，这话我以前就跟你说过。真不敢信我竟会同意这侏儒的说法。~
+== L#2PHALB ~唔……好吧，我承认那是我自己的错。可我那是兴奋啊！~
+== BC0AURA2 ~没事，我明白。不过从今往后我不会再没人看着就乱做东西了。~
+== L#2PHALB ~那……我们现在完事了，对吧？我挺累了。~
+== BC0AURA2 ~不，还剩一步！~
+== L#2PHALB ~唉，还有一步？我以为给这东西附完魔就完了！~
+== BC0AURA2 ~你会喜欢这步的，傻瓜。你还没试过这附魔呢，记得吗？~
+== L#2PHALB ~哦！原来你是这个意思。好，我非常乐意。先让我确认它们合手。~
+== BC0AURA2 ~你，呃，挑护手的时候没先确认它们合你的手吗？~
+== L#2PHALB ~……我太兴奋了。~
 DO ~GiveItemCreate("c0abracz","l#2phal",1,0,0)~ EXIT
 
 CHAIN
@@ -144,20 +144,20 @@ Range("C0Aura",15)
 !StateCheck("L#2PHAL",CD_STATE_NOTVALID)
 !StateCheck("C0Aura",CD_STATE_NOTVALID)
 Global("C0AuraL#2Phalh1","GLOBAL",4)~ THEN L#2PHALB C0AuraPhalh5
-~*hissss* Ow, it burns! Hot, hot, hot!~ [C0BLANK]
+~*嘶——* 哎，好烫！烫烫烫！~ [C0BLANK]
 DO ~SetGlobal("C0AuraL#2Phalh1","GLOBAL",5)~
-== L#2VERRB IF ~IsValidForPartyDialog("L#2VERR")~ THEN ~What happened, boy?!~
-== L#2PHALB IF ~IsValidForPartyDialog("L#2VERR")~ THEN ~Nothing, uncle. I just... ow, burned myself by accident.~
-== BC0AURA2 ~Phalh? Hey, what are you doing? I told you not to try any crazy experiments on your own!~
-== L#2PHALB ~You would never have agreed if I asked you what I wanted to try...~
-== BC0AURA2 ~Is that... charcoal? And powder? You're trying to make an explosive, Phalh! I said you can't do that!~
-== L#2PHALB ~See? This is why I didn't ask you. I just wanted to try making the smoke bombs mentioned in the alchemy book. I didn't think it'd be this dangerous.~
-== BC0AURA2 ~I told you, Phalh, explosives aren't to be messed with. They're tools of destruction—that's all they're good for. Even the person who makes them isn't certain to be safe. I wouldn't ever make them if I didn't think they were needed.~
-== L#2PHALB ~But I thought when our lives are so dangerous, maybe we needed some power like this. Even you can't argue with that... still, I'm sorry I tried making them behind your back.~
-== BC0AURA2 ~*sigh* It's okay. Just... let me see where you went wrong, so I can teach you how to do it properly. I don't want you burning yourself even worse. And use this ointment for your hands.~
-== L#2PHALB ~Okay. Thanks... and, sorry.~
-== BC0AURA2 ~I said it's okay. You're just like my little brother, always hurting himself trying to do things before he's ready. I just have to take care of you the same way.~
-== L#2PHALB ~Ugh... you're scratching behind my ears again? I thought you'd stop doing that now that I've grown up.~
-== BC0AURA2 ~Heehee. Only because you've gotten so tall. Now that you're sitting down, I have to take the chance!~
-== L#2PHALB ~Fine...~
+== L#2VERRB IF ~IsValidForPartyDialog("L#2VERR")~ THEN ~出什么事了，小子？！~
+== L#2PHALB IF ~IsValidForPartyDialog("L#2VERR")~ THEN ~没什么，叔叔。我只是……哎，不小心把自己烧了。~
+== BC0AURA2 ~法尔？喂，你在干什么？我跟你说过别自己乱试那些疯实验！~
+== L#2PHALB ~要是我先问你想不想让我试，你压根不会答应……~
+== BC0AURA2 ~那是……木炭？还有粉末？法尔，你想做炸药！我说过你不能弄这个！~
+== L#2PHALB ~看吧？这就是我没问你的原因。我只是想试试炼金书上说的烟粉炸弹。我没想到这么危险。~
+== BC0AURA2 ~我跟你说过，法尔，炸药不是能乱碰的。它们是毁灭的工具，用处仅此而已。连做它们的人也未必安全。要不是觉得需要，我根本不会造。~
+== L#2PHALB ~可我想，我们的日子这么凶险，也许需要这样的力量。连你也驳不了这一点……不过，背着你去试着做它们，是我不对。~
+== BC0AURA2 ~*叹气* 没事。只是……让我看看你哪儿弄错了，好教你怎么做才对。我不想你把自己烧得更厉害。这药膏拿去抹手。~
+== L#2PHALB ~好。谢谢……还有，对不起。~
+== BC0AURA2 ~我说了没事。你跟我弟弟一个样，总在还没准备好时就动手，把自己弄伤。我只好一样照顾你。~
+== L#2PHALB ~唉……你又在挠我耳根后头？我以为我长大了你就不这么干了。~
+== BC0AURA2 ~嘿嘿。只因为你长这么高了。既然你坐下来了，我可不能错过这机会！~
+== L#2PHALB ~好吧……~
 DO ~AddSpecialAbility("c0aphalb")~ EXIT

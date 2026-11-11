@@ -6,16 +6,16 @@ Range("C0Aura",15)
 !StateCheck("lk#yeslk",CD_STATE_NOTVALID)
 !StateCheck("C0Aura",CD_STATE_NOTVALID)
 Global("C0AuraLK#Yeslick","GLOBAL",0)~ THEN BLK#YES banter1
-~Ye ever think o' takin' on smithin', Aura? I think it be not far apart from the art o' artifice, only with a touch o' heavier liftin'.~ [C0BLANK]
+~奥拉，你可想过改行打铁？俺觉得那跟奇械的手艺差不远，只是多费些力气。~ [C0BLANK]
 DO ~SetGlobal("C0AuraLK#Yeslick","GLOBAL",1)~
-== BC0AURA2 ~I've thought about it, actually. The gold dwarves of the Great Rift once came to Lantan to exchange knowledge, and I watched their works. It was inspiring.~
-== BLK#YES ~So what changed yer mind then, lass? Ye seem the sort to commit to any way o' life that draws yer interest.~
-== BC0AURA2 ~Well, I thought I should leave that craft to the masters. Besides, look at these arms, Yeslick. I'd never be able to swing a hammer for the hours it'd take. I'd fall flat on the ground within minutes.~
-== BLK#YES ~Heh, that may be true. Though I could show ye a few classic dwaven trainin' exercises to bolster yer stamina an' train yer muscles, if ye're willin'.~
-== BC0AURA2 ~Er... are these exercises the 'bringing your body to its limits' sort that makes the trainee wish they were dead halfway through?~
-== BLK#YES ~Nay! Well, perhaps a couple o' the young'uns might've felt that way... mayhaps as many as half?~
-== BC0AURA2 ~No, no thank you! I achieved top marks in every class at the academy except physical training! I'll do anything not to have to go back to those days!~
-== BLK#YES ~Ah, just jokin' with ye, lass.~
+== BC0AURA2 ~其实我想过。大裂谷的金矮人曾来兰坦交流学问，我看过他们的作品。很受启发。~
+== BLK#YES ~那是什么让你改变了主意，姑娘？你看着是那种一旦起兴就会一头扎进某种活法的人。~
+== BC0AURA2 ~嗯，我想那门手艺该留给大师们。再说，看看这双臂膀，耶斯利克。要挥上那么多个时辰的锤子，我根本办不到。几分钟我就得趴地上。~
+== BLK#YES ~嘿，那或许是真的。不过你要愿意，俺可以教你几套矮人的经典练习，练练耐力、壮壮筋骨。~
+== BC0AURA2 ~呃……这些练习是不是那种“把身体逼到极限”、练到一半就想死的那种？~
+== BLK#YES ~哪有！嗯，也许有那么几个年轻人会那样觉得……大概能有一半？~
+== BC0AURA2 ~不，不用了，谢谢！我在学院每门课都拿满分，唯独体能训练不行！只要能不回到那些日子，我什么都肯做！~
+== BLK#YES ~啊，姑娘，俺就是逗你玩。~
 EXIT
 
 CHAIN
@@ -26,18 +26,18 @@ Range("C0Aura",15)
 !StateCheck("lk#yeslk",CD_STATE_NOTVALID)
 !StateCheck("C0Aura",CD_STATE_NOTVALID)
 Global("C0AuraLK#Yeslick","GLOBAL",1)~ THEN BLK#YES banter2
-~Does ye count yerself among the clergy o' Gond, Aura? I don't think I've e'er seen ye pray, nor carry any symbols o' the faith.~
+~奥拉，你算不算贡德的教士？俺好像没见过你祈祷，也没见你带什么信仰的标记。~
 DO ~SetGlobal("C0AuraLK#Yeslick","GLOBAL",2)~
-== BC0AURA2 ~That's... complicated to explain, Yeslick. I'm not a devotee, if that's the easiest way to explain it.~
-== BLK#YES ~Nay? I believed all Lantanna believed the teachings o' the Wonderbringer. Yer ancestors believed they owed all their knowledge to His teachings.~
-== BC0AURA2 ~It's true, but... I've had trouble committing to the faith, ever since the Time of Troubles.~
-== BLK#YES ~'Tis because o' the secret o' smokepowder he granted to yer people, is it not? I've handled one such tool that was made to wield its power... those 'firearms', as I recall. A truly terrifying weapon o' destruction, indeed.~
-== BC0AURA2 ~Yes... I was still very young during that time, and I never met the Wonderbringer's avatar, nor did I really understand the meaning of what Him being among my people meant. But I still remember how Lantan changed from His presence.~
-== BLK#YES ~And, well... I can guess at yer point o' view, lass. The presence of a god among mortals can bring awe, but also dread.~
-== BC0AURA2 ~I was inspired. But I eventually became afraid. We were given knowledge of a great power... but things went wrong more than once. People were hurt. And I wondered if what we were given was truly a good thing.~
-== BLK#YES ~I understand, lass. But think o' in another way. Gond gave yer people the knowledge believin' ye be worthy of it. Knowledge o' the new can ne'er come without faults. But the Lantanna have wielded it with greater restraint an' wisdom than most, that I also believe. More than any society o' humans, an'—may me kin forgive me for sayin' this—even dwarves.~
-== BLK#YES ~The good gods do not demand yer fealty, but I hope ye might consider that yer people's patron god have yer best interests in mind, regardless o' the mistakes.~
-== BC0AURA2 ~I... I think you have a good point, Yeslick. Thank you, I'll... think about it.~
+== BC0AURA2 ~那……解释起来很复杂，耶斯利克。要说最省事的说法：我不是虔信者。~
+== BLK#YES ~不是吗？俺以为所有兰坦人都信奉奇迹缔造者的教诲。你们祖先相信，他们的一切知识都归功于祂的教导。~
+== BC0AURA2 ~这倒是真的，可……自从动荡之年之后，我就一直难以真正归信。~
+== BLK#YES ~是因为祂赐给你们族人的烟粉之秘吧？俺摆弄过一件用来发挥它威力的家伙……那些“火器”，俺记得。真真是可怕的毁灭武器。~
+== BC0AURA2 ~是……那会儿俺还很年轻，从没见过奇迹缔造者的化身，也不真的明白祂在俺族人中间意味着什么。可俺还记得兰坦因祂的到来变了多少。~
+== BLK#YES ~而且……嗯，姑娘，你的看法俺猜得到。神在凡人中间显现，会带来敬畏，也会带来恐惧。~
+== BC0AURA2 ~我曾深受鼓舞。可后来我渐渐害怕了。我们得到了一种强大力量的知识……可事情不止一次出了岔子。有人受了伤。我开始怀疑，给我们的东西是否真是好事。~
+== BLK#YES ~俺明白，姑娘。不过换个法子想。贡德把知识给了你们族人，是因为信你们配得上。关于新东西的知识，从来不可能没有过失。可兰坦人运用它时，比大多数人都更克制、更有智慧，这一点俺也信。比任何人类社会都强，而且——愿俺族人原谅俺这么说——连矮人也比不上。~
+== BLK#YES ~善神并不要求你效忠，不过俺希望你能想一想：你们族人的守护神，是把你们的最好放在心上的，不管犯过什么错。~
+== BC0AURA2 ~我……我觉得你说得有理，耶斯利克。谢谢你，我会……想一想。~
 EXIT
 
 CHAIN
@@ -48,17 +48,17 @@ Range("C0Aura",15)
 !StateCheck("lk#yeslk",CD_STATE_NOTVALID)
 !StateCheck("C0Aura",CD_STATE_NOTVALID)
 Global("C0AuraLK#YeslickToB","GLOBAL",0)~ THEN BC0AURA2 bantertob
-~Yeslick?~
+~耶斯利克？~
 DO ~SetGlobal("C0AuraLK#YeslickToB","GLOBAL",1)~
-== BLK#YE25 ~Aye, lass. Somethin' ye need? Ye're not hurt anywhere, are ye? I've said it before, ye mustn't hold back if ye need to call for help.~
-== BC0AURA2 ~Oh, no. I'm fine, really. I was going to ask about you... after we're through with our quest to help <CHARNAME>, you're going to part ways, aren't you?~
-== BLK#YE25 ~If Clangeddin's blessings be with me, an' this old dwarf lives to see this to the end... aye, 'twould be time for me to see to me own duties next.~
-== BC0AURA2 ~Do you plan to start and rebuild your clanhold?~
-== BLK#YE25 ~That be the start of it, aye. An' with what power an' wealth I have now, I'll be takin' steps to ensure no tragedy like the last befalls us again.~
-== BC0AURA2 ~I wish the best for you, Yeslick. And if there's anything I... or any builder of Lantan could do to help, we'll be ready to respond to your call. I'm sure I have enough influence at home to offer you whatever is needed.~
-== BLK#YE25 ~That be kind, Aura, but a dwarf's honor demands he make up for his own mistakes by his own hand. I failed me clan once, an' so I must be the one to restore 'em.~
-== BC0AURA2 ~Didn't you just say one should ask for help when needed?~
-== BLK#YE25 ~I... did say that, aye. Turnin' me own lectures against me, eh? Heh.~
-== BC0AURA2 ~Well, I've grown a lot from your wisdom. It'd make me happy if I can help you if I can. Think of it as an act of friendship rather than charity.~
-== BLK#YE25 ~Hnh, ye have a point. So be it... odds are that I'll be countin' on ye in the future, Aura. A fine lady this journey's made of ye.~
+== BLK#YE25 ~是，姑娘。有什么需要？没伤着哪儿吧？俺说过，要帮忙就得开口，别憋着。~
+== BC0AURA2 ~哦，不。俺没事，真的。俺刚才还想问你……等帮完<CHARNAME>这趟，你们就要各走各的了吧？~
+== BLK#YE25 ~若克兰格丁的祝福与俺同在、俺这老矮人能活到把这事办完……嗯，那接下来就该俺去料理自己的职责了。~
+== BC0AURA2 ~你打算重新建起你的氏族堡吗？~
+== BLK#YE25 ~那是头一步，嗯。凭俺如今的力量和财力，俺会一步步确保再不会发生上回那样的惨剧。~
+== BC0AURA2 ~愿一切都好，耶斯利克。要是我……或者兰坦任何一位匠人能帮上什么，我们随时听你召唤。我在家乡的影响力，应该够给你需要的一切。~
+== BLK#YE25 ~那番心意厚道，奥拉，可矮人的荣誉要求他亲手弥补自己的过失。俺曾让俺的氏族失败过一次，所以必须由俺来复兴他们。~
+== BC0AURA2 ~你不是刚说过，需要时就该开口求助吗？~
+== BLK#YE25 ~我……俺确实这么说过，嗯。拿俺自己的说教来堵俺的嘴，是吧？嘿。~
+== BC0AURA2 ~嗯，俺从你的见识里长进不少。要是能帮上你，那才叫俺高兴。就把这当朋友之义，不是施舍。~
+== BLK#YE25 ~嗯，你说得有理。那就这样吧……往后俺说不定还得靠你，奥拉。这趟旅程把你炼成了一位好姑娘。~
 EXIT

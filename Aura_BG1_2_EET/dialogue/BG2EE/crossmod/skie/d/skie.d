@@ -6,13 +6,13 @@ Range("C0Aura",15)
 !StateCheck("l#2sdskie",CD_STATE_NOTVALID)
 !StateCheck("C0Aura",CD_STATE_NOTVALID)
 Global("C0AuraL#2SDSkie","GLOBAL",0)~ THEN L#2SDSKB banter1
-~How do you manage to keep your hair and clothes so pristine throughout this whole journey, Aura? I have to fight to keep grime off me, but it's like you repel it naturally somehow!~ [C0BLANK]
+~奥拉，这一路走下来，你是怎么让头发和衣裳一直这么干净的？我得费好大劲才不沾灰，可你像是天生就能把脏东西弹开似的！~ [C0BLANK]
 DO ~SetGlobal("C0AuraL#2SDSkie","GLOBAL",1)~
-== BC0AURA2 ~It's mostly the Lantanese care products I've got, but I still have to clean myself up from time to time. Are you not used to taking care of yourself, Skie?~
-== L#2SDSKB ~Well... I've been trying, but you know the kind of life I came from. I used to have people who took care of these things for me.~
-== BC0AURA2 ~*sigh* Yep, I figured it was something like that. Why don't I teach you how to do it efficiently?~
-== L#2SDSKB ~I guess I can't put in a halfhearted effort forever. But I want some of your special products too!~
-== BC0AURA2 ~Alright. But let's start with the basics first. There's no easy trick to it, Skie! Besides, hard work can be cathartic once you start getting results yourself.~
+== BC0AURA2 ~主要是我带的兰坦护肤品，不过我自己也还是时不时得收拾一下。斯基，你是不习惯自己照顾自己吗？~
+== L#2SDSKB ~嗯……我一直在学，可你知道我是从什么样的日子过来的。以前这些事都有人替我做。~
+== BC0AURA2 ~*叹气* 对，我猜就是这类事。不如我教你怎么做才省力？~
+== L#2SDSKB ~我想我也不能老是半心半意地对付。可我也要些你的特制东西！~
+== BC0AURA2 ~好。不过先从最基本的开始。这里头没什么取巧的法子，斯基！再说，等你自己开始有了成果，苦功也能让人痛快。~
 EXIT
 
 CHAIN
@@ -23,13 +23,13 @@ Range("C0Aura",15)
 !StateCheck("L#2sdskie",CD_STATE_NOTVALID)
 !StateCheck("C0Aura",CD_STATE_NOTVALID)
 Global("C0AuraL#2SDSkie","GLOBAL",1)~ THEN L#2SDSKB banter2
-~Thanks for helping me with getting used to so many things, Aura. You're right–it does feel good to be able to solve simple problems by myself.~ [C0BLANK]
+~谢谢你帮我适应这么多事，奥拉。你说得对——能自己解决些小问题，感觉真好。~ [C0BLANK]
 DO ~SetGlobal("C0AuraL#2SDSkie","GLOBAL",2)~
-== BC0AURA2 ~Hehe, you're welcome, Skie. I'm not being splashed with water as often anymore, so that's an improvement.~
-== L#2SDSKB ~Can I ask you one thing, though? Just what kind of status did you have back in Lantan? You seem pretty well off, so... would you count as a noble? Come to think of it, do your people even have traditional nobility?~
-== BC0AURA2 ~We... sort of do and don't. If you're asking if we have particularly distinguished families that hold prestige and wealth, then... yes. But we prefer to consider our society a meritocracy, so that every Lantanna can be driven to try and make their own names part of recorded history.~
-== L#2SDSKB ~If you ask me, you've already reached that point and probably more. I can't imagine any of your people being that much brighter than you.~
-== BC0AURA2 ~You'd think so, but you haven't seen the sorts of things some of the greatest Lantanna are remembered for. Besides... being put on a pedestal isn't really my thing anyways. I'm happy just to try and make other people's lives better.~
+== BC0AURA2 ~嘿嘿，不客气，斯基。我现在被泼水的次数少了，这算是进步。~
+== L#2SDSKB ~不过我能问你一件事吗？你在兰坦到底是什么身份？你看着挺宽裕的，那……你算贵族吗？说起来，你们族人到底有没有传统意义上的贵族？~
+== BC0AURA2 ~我们……算是，也算不是。你要是问我们有没有那种享有威望与财富的显赫家族，那……有。只是我们更愿意把自己社会看作一个任人唯才的地方，好让每个兰坦人都愿意去拼，把自己的名字写进有记载的历史。~
+== L#2SDSKB ~要我说，你已经到了那一步，恐怕还过了。我想不出你的族人里有谁比你更聪明。~
+== BC0AURA2 ~你会这么想，可你没见过有些最了不起的兰坦人是以什么被记住的。再说……被人供起来，本来就不合我的性子。只要能让别人的日子好过些，我就高兴了。~
 EXIT
 
 CHAIN
@@ -40,16 +40,16 @@ Range("C0Aura",15)
 !StateCheck("L#2SDSkie",CD_STATE_NOTVALID)
 !StateCheck("C0Aura",CD_STATE_NOTVALID)
 Global("C0AuraL#2SDSkieToB","GLOBAL",0)~ THEN BC0AUR25 bantertob
-~So, it'll be back to Baldur's Gate after we're done, right, Skie? Are you looking forward to going home?~ [C0BLANK]
+~那等我们办完事，就要回博德之门了，对吧，斯基？你期待回家吗？~ [C0BLANK]
 DO ~SetGlobal("C0AuraL#2SDSkieToB","GLOBAL",1)~
-== L#2SD25B ~Ugh, I suppose I'll have to, yes. If I don't, my father'll probably send the entire Flaming Fist to track me down and tie me to a cart to be taken home, against my will.~
-== L#2SD25B ~I just wish he'd understand I can become more than the spoiled little girl who needs taking care of. I've already proven that, and more! Still... as overbearing as he is... I can't just let him get more gray hairs worrying about me all day.~
-== BC0AUR25 ~That's... fatherly love at its purest, I guess.~
-== L#2SD25B ~And the most smothering! Am I ever going to grow up in his eyes? I'm not just 'Lady Silvershield' anymore. With all I've done, I think I've long earned the right to be seen as a hero.~
-== BC0AUR25 ~Well, maybe if... hang on, I had something here for you... ah, there we go! If you can, I'd be happy if, assuming you met with the Grand Dukes, you'd give this to them.~
-== L#2SD25B ~What is this? Should I read it now, or is it one of those 'super secret messages' that isn't meant for normal eyes?~
-== BC0AUR25 ~Do I look like a spymaster, Skie? It's just some diagrams for upgrading the aqueducts that run through and out of the city. I remember how dated the engineering was the last time I was there... if they'd put these schematics to work, there'd be a chance for cleaner water for everyone.~
-== L#2SD25B ~Not to mention this would mean more chances for people to find safer and well-paid work. Are you sure you should just be offering something so valuable to the city, though? I thought Lantan wasn't supposed to give away their knowledge so easily.~
-== BC0AUR25 ~If it'll make peoples' lives better... I'll take the risk. Besides, I'm giving it to you, so you can decide if it's really a good idea in our current time or not.~
-== L#2SD25B ~Wow, don't go easy on me, or anything... don't worry, I'll make sure this makes it in the hands of people I can trust. And I'll be sure the dukes know you're the one who wrote it.~
+== L#2SD25B ~唉，我看也只能这样了，是啊。不然我父亲大概会派整个焰拳来找我，把我绑上车押回家去，根本不管我愿意不愿意。~
+== L#2SD25B ~我只是希望他能明白，我不再只是个需要人照顾的娇小姐，我能做到更多。我已经证明过了，而且不止这些！可话又说回来……他再怎么专横……我也不能整天让他为我操心到又多长白发。~
+== BC0AUR25 ~那……大概就是最纯粹的父爱吧。~
+== L#2SD25B ~也是最让人透不过气的！我在他眼里还有长大的那一天吗？我不再只是“银盾小姐”了。凭我做的事，我早就挣得被看作英雄的资格了。~
+== BC0AUR25 ~嗯，也许要是……等等，我这儿有样东西给你……啊，找到了！要是可以的话，假如你见到大公爵们，我希望你能把这个交给他们。~
+== L#2SD25B ~这是什么？我该现在看吗，还是那种“绝密传信”，不是给寻常眼睛看的？~
+== BC0AUR25 ~斯基，我看起来像间谍头子吗？这只是一些改造穿过城内外那条引水渠的图样。我记得上次去的时候，那套工程有多老旧……要是他们把这些图样用上，大家就有望喝到更干净的水。~
+== L#2SD25B ~更别说这还会让更多人有机会找到更安全、报酬更好的活计。不过你确定就这样把这么有价值的东西送给城里？我以为兰坦是不该这么轻易把知识送人的。~
+== BC0AUR25 ~要是能让人们的日子好过些……我就担这个险。再说我把它交给你了，你觉得眼下这时机不合适，就由你来定。~
+== L#2SD25B ~哇，你可真是一点也不留情……放心，我一定让这东西落到我能信得过的人手里。我也会让公爵们知道这是你写的。~
 EXIT

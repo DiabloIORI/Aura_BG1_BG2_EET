@@ -6,24 +6,24 @@ Range("C0Aura",15)
 !StateCheck("L#DVA",CD_STATE_NOTVALID)
 !StateCheck("C0Aura",CD_STATE_NOTVALID)
 Global("C0AuraL#Dvaradime","GLOBAL",0)~ THEN L#DVAB banter1
-~That be a curious bow ye carry, Aura. Built it yerself, did ye?~
+~奥拉，你带的那把弓可真稀奇。是你自己做的？~
 DO ~SetGlobal("C0AuraL#Dvaradime","GLOBAL",1)~
-== BC0AURA2 ~Not by myself, no. I got a lot of guidance from my uncle Dedalus. But the original schematic was mine.~
-== L#DVAB ~May I try handlin' it fer a spell?~
-== BC0AURA2 ~Well...~
-== L#DVAB ~If it be too precious to ye, I understand.~
-== BC0AURA2 ~No, no... I'm not against it. It's just that it's not like a standard bow. It might be tricky to use.~
-== L#DVAB ~Ye never know. An' even if so, I can mayhap still learn a thing or two.~
-== BC0AURA2 ~Alright, then.~
-== L#DVAB ~Ah. Mithral, eh? My speciality is more leather than metals, but I can still tell a good alloy easily enough. That would make up fer the problem o' weight o'er a typical bow. But the important question be how it shoots, eh?~
-== L#DVAB ~...Hmm.~ [SWI_02]
-== L#DVAB ~That be harder than I expected. The wheels be makin' up fer the rigidity of the limbs, aye? I see it needs a certain technique to it.~
-== BC0AURA2 ~Still, that was really impessive! Most people couldn't shoot an arrow that well off a first try.~
-== L#DVAB ~Thank ye, lass, but I see the tool be made fer the hand of its creator an' none other, an' so I'll hand it back to ye. I be curious, though. Does ye think one day, such a design might become widespread throughout the Realms?~
-== BC0AURA2 ~That's... I don't think that's up to me.~
-== L#DVAB ~Nay, I disagree. The knowledge be in yer mind, an' its example in yer hands. I think that choice be yers to make, an' none other.~
-== BC0AURA2 ~Maybe. I don't have the answer right now, though. There's always knowledge that will harm more than it helps. I can't bring myself to be the one responsible for making that kind of mistake.~
-== L#DVAB ~Fair enough, Aura. For what it be worth, I trust ye to make the right decision when the time comes.~
+== BC0AURA2 ~不是靠自己，不。戴达罗斯叔叔给了我不少指点。不过原始图纸是我画的。~
+== L#DVAB ~咱能拿它试一会儿吗？~
+== BC0AURA2 ~嗯……~
+== L#DVAB ~要是它对你太要紧，咱明白。~
+== BC0AURA2 ~不，不……我不是不愿意。只是它跟寻常的弓不一样，用起来可能有点讲究。~
+== L#DVAB ~谁说得准呢。就算真是那样，咱说不定还能学上一两样。~
+== BC0AURA2 ~好，那就。~
+== L#DVAB ~啊，秘银，是吧？咱更擅长皮活，不太摸金属，不过好合金还是能一眼看出来。这倒能补上寻常弓太重的问题。可要紧的是——它射起来怎么样，嗯？~
+== L#DVAB ~……嗯。~ [SWI_02]
+== L#DVAB ~这比我料想的难。轮子能补上肢体僵硬的短板，是吧？我看这里头得有点门道。~
+== BC0AURA2 ~不过，那真叫人佩服！换别人头一回射箭，可射不了这么好。~
+== L#DVAB ~谢谢你，丫头，可我看这工具是照着创造者的手做的，别人的手都不合适，所以我把它还给你。不过我倒是好奇——你觉得有一天，这样的设计会在诸国度里传开吗？~
+== BC0AURA2 ~那……我觉得那不该由我决定。~
+== L#DVAB ~不，我不同意。知识在你脑子里，它的样子在你手里。我看这个选择该由你来做，别人替不了。~
+== BC0AURA2 ~也许吧。不过眼下我也没有答案。总有些知识带来的害处大过益处。我实在没法让自己成为犯下那种错的人。~
+== L#DVAB ~说得在理，奥拉。不管怎么说，到时候该做决定时，我信你能做出对的选择。~
 EXIT
 
 CHAIN
@@ -35,17 +35,17 @@ Range("C0Aura",15)
 !StateCheck("C0Aura",CD_STATE_NOTVALID)
 GlobalGT("L#DvaradimeQuest","GLOBAL",34)
 Global("C0AuraL#Dvaradime","GLOBAL",1)~ THEN L#DVAB banter2
-~Ye be a strong lass with a gentle heart, Aura. It be a good match for yer wealth of knowledge. I reckon yer parents must be right proud o' ye.~
+~你是个心肠软、骨子里却硬气的丫头，奥拉。这跟你那一肚子学问倒是相配。我猜你父母一定很以你为荣。~
 DO ~SetGlobal("C0AuraL#Dvaradime","GLOBAL",2)~
-== BC0AURA2 ~That's kind of you to say, Dvaradime, but you haven't met my sisters yet. They're the strong ones. I just followed from their examples.~
-== L#DVAB ~Well, that be how we mortals be, lass. No one e'er truly gets strong on their own, an' those that believe it simply don't appreciate enough those who helped make 'em who they are.~
-== BC0AURA2 ~Haha. I think my papa said the same thing when I shared the same doubts with him. Er, sorry. I didn't mean to imply you were old.~
-== L#DVAB ~Nae, no offense taken.~
-== BC0AURA2 ~What about you, Dvaradime? You're one of the strongest and cleverest dwarves I've ever met.~
-== L#DVAB ~I've plenty of people I owe who I am to like anyone else. I have me clan, me friends, an'... I had Borcx.~
-== BC0AURA2 ~Your... I'm sorry, Dvaradime, I didn't mean for this talk to lead to this. We can stop if...~
-== L#DVAB ~Nae, no need for that. Borcx be an irreplacable part of me, and though he may be gone, nothing'll change that. It be more of a dishonor to his memory to not talk about the good things he's done. I'll tell you all about him when we have the time, if ye care for it.~
-== BC0AURA2 ~I would, absolutely.~
+== BC0AURA2 ~你这话说得客气，德瓦拉迪梅，可你还没见过我姐姐们呢。真正强的是她们。我不过是照着她们的样子学罢了。~
+== L#DVAB ~唉，咱凡人就是这样，丫头。没有谁是真正靠自己变强的；那些以为自己是的，不过是不够感念那些帮着成就他们的人罢了。~
+== BC0AURA2 ~哈哈。我把同样的疑虑跟我爹说的时候，他好像也这么讲。呃，抱歉，我不是想说你老。~
+== L#DVAB ~没有，咱不介意。~
+== BC0AURA2 ~那你呢，德瓦拉迪梅？你是我见过最强、也最聪明的矮人之一。~
+== L#DVAB ~跟谁一样，咱这一身本事欠着好些人的情。咱有氏族、有朋友，还有……咱有过博尔克斯。~
+== BC0AURA2 ~你……抱歉，德瓦拉迪梅，我没料到这番话会说到这儿。要是你想，我们就停下——~
+== L#DVAB ~不用，不必说这些。博尔克斯是我身上不可替代的一部分，他虽已不在，这一点也不会改变。若是不谈他做过的好事，反倒更辱没他的名声。有空的时候，我把他的事都讲给你听，你若愿意听的话。~
+== BC0AURA2 ~我会的，一定。~
 EXIT
 
 CHAIN
@@ -56,12 +56,12 @@ Range("C0Aura",15)
 !StateCheck("L#DVA",CD_STATE_NOTVALID)
 !StateCheck("C0Aura",CD_STATE_NOTVALID)
 Global("C0AuraL#DvaradimeToB","GLOBAL",0)~ THEN L#DVA25B bantertob
-~Ye've only gotten more imaginative with yer crafts over time, Aura. It be hard to imagine it not all be the work o' magic.~
+~奥拉，你做东西的手艺这些年来只是越来越有想法。真难想象这一切竟然不全靠魔法的功劳。~
 DO ~SetGlobal("C0AuraL#DvaradimeToB","GLOBAL",1)~
-== BC0AUR25 ~Hehe, it's strange, but I feel like the pressure's been pushing me into working harder and thinking more. I'd never have managed to achieve this much otherwise.~
-== L#DVA25B ~Is that so? Aye... perhaps ye have a point. We've accomplished much, an' we're stronger for it. That be a good thing.~
-== BC0AUR25 ~I don't suppose you have some regrets, do you, Dvaradime?~
-== L#DVA25B ~Me? Nay... losin' Borcx be the worst, an' that card be played by fate long afore <CHARNAME> an' ye met me. I feel in my heart that he'd be pleased to see me as I am now.~
-== BC0AUR25 ~I'm sure that if you believe it, that's exactly how he would feel. I doubt anyone knows his character more closely than you.~
-== L#DVA25B ~Mmm, I hope. I've been tryin' to live a life he'd be proud of. That's the least I can do.~
+== BC0AUR25 ~嘿嘿，说来也怪，我倒觉得这股压力一直在推着我更用功、想得更多。不然我哪能走到这一步。~
+== L#DVA25B ~是这样吗？嗯……也许你说得有理。咱做成了不少事，也因此在其中变强了。那是件好事。~
+== BC0AUR25 ~德瓦拉迪梅，你心里该也有些遗憾吧？~
+== L#DVA25B ~我？不……失去博尔克斯是最糟的一桩，而那张牌早在<CHARNAME>和你遇见我之前就被命运打出去了。我心里觉得，他要是看见我如今的样子，会高兴的。~
+== BC0AUR25 ~我信，只要你这么相信，他心里就一定正是这么想的。要说谁最懂他的性情，除了你没别人。~
+== L#DVA25B ~嗯，但愿吧。咱一直想活出个能让他骄傲的样子。咱至少能做到这一件事。~
 EXIT

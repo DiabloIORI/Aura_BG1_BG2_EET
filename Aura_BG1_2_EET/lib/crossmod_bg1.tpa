@@ -2,83 +2,83 @@
 // Aura-Glam
 ACTION_IF MOD_IS_INSTALLED ~SETUP-GLAMNPCPACK.TP2~ ~0~
 THEN BEGIN
-  PRINT ~Adding crossmod banters between Aura and Glam's NPC Pack~
+  PRINT ~添加奥拉与《格拉姆NPC合集》的交叉对话~
 COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/dialogue/BGEE/crossmod/glamvrock.d~
 END
 
 // Aura-Sirene
 ACTION_IF FILE_EXISTS_IN_GAME ~bc0siren.dlg~
 THEN BEGIN
-  PRINT ~Adding crossmod banters between Aura and Sirene~
+  PRINT ~添加奥拉与塞琳的交叉对话~
 COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/dialogue/BGEE/crossmod/sirene.d~
 END
   
 // Aura-Drake
 ACTION_IF FILE_EXISTS_IN_GAME ~bc0drake.dlg~
 THEN BEGIN
-  PRINT ~Adding crossmod banters between Aura and Drake~
+  PRINT ~添加奥拉与德雷克的交叉对话~
 COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/dialogue/BGEE/crossmod/drake.d~
 END
 
 // Aura-Verr
 ACTION_IF FILE_EXISTS_IN_GAME ~l#1verrb.dlg~
 THEN BEGIN
-  PRINT ~Adding crossmod banters between Aura and Verr'Sza~
+  PRINT ~添加奥拉与维尔莎的交叉对话~
 COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/dialogue/BGEE/crossmod/verrsza.d~
 END
 
 // Aura-White
 ACTION_IF FILE_EXISTS_IN_GAME ~V#1WHIB.dlg~
 THEN BEGIN
-  PRINT ~Adding crossmod banters between Aura and White~
+  PRINT ~添加奥拉与怀特的交叉对话~
 COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/dialogue/BGEE/crossmod/white.d~
 END
 
 // Aura-Isra
 ACTION_IF FILE_EXISTS_IN_GAME ~brh#isra.dlg~
 THEN BEGIN
-  PRINT ~Adding crossmod banters between Aura and Isra~
+  PRINT ~添加奥拉与伊斯拉的交叉对话~
 COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/dialogue/BGEE/crossmod/isra.d~
 END
 
 // Aura-Emily
 ACTION_IF FILE_EXISTS_IN_GAME ~X3milyB.dlg~
 THEN BEGIN
-  PRINT ~Adding crossmod banters between Aura and Emily~
+  PRINT ~添加奥拉与艾米莉的交叉对话~
 COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/dialogue/BGEE/crossmod/emily.d~
 END
 
 // Aura-Helga
 ACTION_IF FILE_EXISTS_IN_GAME ~X3HelgaB.dlg~
 THEN BEGIN
-  PRINT ~Adding crossmod banters between Aura and Helga~
+  PRINT ~添加奥拉与海尔嘉的交叉对话~
 COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/dialogue/BGEE/crossmod/helga.d~
 END
 
 // Aura-Kale
 ACTION_IF FILE_EXISTS_IN_GAME ~X3KaleB.dlg~
 THEN BEGIN
-  PRINT ~Adding crossmod banters between Aura and Kale~
+  PRINT ~添加奥拉与卡莱的交叉对话~
 COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/dialogue/BGEE/crossmod/kale.d~
 END
 
 // Aura-Recorder
 ACTION_IF FILE_EXISTS_IN_GAME ~X3RecB.dlg~
 THEN BEGIN
-  PRINT ~Adding crossmod banters between Aura and Recorder~
+  PRINT ~添加奥拉与记录者的交叉对话~
 COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/dialogue/BGEE/crossmod/recorder.d~
 END
 
 // Aura-Vienxay
 ACTION_IF FILE_EXISTS_IN_GAME ~X3VienB.dlg~
 THEN BEGIN
-  PRINT ~Adding crossmod banters between Aura and Vienxay~
+  PRINT ~添加奥拉与维恩赛的交叉对话~
 COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/dialogue/BGEE/crossmod/vienxay.d~
 END
 
 // Aura-SotSC
 ACTION_IF MOD_IS_INSTALLED ~Setup-SotSC.tp2~ ~0~
 THEN BEGIN
-  PRINT ~Adding crossmod content between Aura and Shades of the Sword Coast~
+  PRINT ~添加奥拉与《剑湾之影》的交叉内容~
 COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/dialogue/BGEE/crossmod/sotsc.d~
 END

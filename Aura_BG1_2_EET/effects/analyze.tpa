@@ -226,8 +226,7 @@ END
 
 COPY_EXISTING ~C0A_A01.SPL~ OVERRIDE
 SAY NAME1 ~Analyze~
-SAY UNIDENTIFIED_DESC ~Analyze
-With this ability, the user carefully observes the target and identifies their strengths and weaknesses, revealing their attributes, Hit Die, Saving Throws, Magic Resistance, Damage Resistance and vulnerability to Poison and Backstabs. This ability may be used an unlimited number of times, but only one target may be analyzed at once.~
+SAY UNIDENTIFIED_DESC ~分析↵↵凭借此能力，使用者仔细观察目标，辨明其长处与弱点，显示其属性、生命骰、豁免、魔法抗性、伤害抗性，以及对毒素与背刺的脆弱程度。此能力可使用无限次，但同一时间只能分析一个目标。~
 
 COPY_EXISTING ~C0A_A000.SPL~ OVERRIDE
 LPF ALTER_EFFECT INT_VAR match_opcode = 326 parameter2 = ANALYZE_LEVEL END

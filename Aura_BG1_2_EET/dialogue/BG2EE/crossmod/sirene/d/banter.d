@@ -17,16 +17,16 @@ AreaCheck("AR0800")
 AreaCheck("AR0900")
 AreaCheck("AR1000")
 Global("C0AuraSireneBanter","GLOBAL",0)~ THEN BC0AURA2 banter1
-~It can't be comfortable to for you to stay in this city, Sirene. Are you alright?~
+~塞琳，待在这座城里，你心里一定不好受吧。你还好吗？~
 DO ~SetGlobal("C0AuraSireneBanter","GLOBAL",1)~
-== BC0SIRE2 ~I am no stranger to the scrutiny of others, and with the company of friends, 'tis more than bearable, Aura... thank you for your concern.~
-== BC0AURA2 ~No, that's not what I mean. I'm thinking about... the city's spirit.~
-== BC0SIRE2 ~Spirit?~
-== BC0AURA2 ~When we pass by the poor, and the sick... those that need help, but are ignored by the people who should care... I've noticed how you react, every time.~
-== BC0SIRE2 ~That, too, is something I have seen much of... and it is a much more difficult pain to overcome. I have seen inequality in every society, yet few worse than here... and it oft reminds me of how powerless I feel.~
-== BC0AURA2 ~I feel just as awful as you do. We try our best, but it always feels like too little, too slowly... sometimes, it feels unfair to see how much it takes to accomplish real change.~
-== BC0SIRE2 ~The only respite is in seeing the relief in each innocent whose life is brighened by our actions. I am no true knight, and have no ambitions of great deeds... only simple acts of kindness. But often, I wonder if there is more I...~
-== BC0AURA2 ~Please don't think of overburdening yourself, Sirene. I want to help others, but I want to see your happiness just as much.~
+== BC0SIRE2 ~旁人的审视我并不陌生，有朋友相伴，便远不至于难忍，奥拉……谢谢你的关心。~
+== BC0AURA2 ~不，我不是那个意思。我在想……这座城的精神。~
+== BC0SIRE2 ~精神？~
+== BC0AURA2 ~我们路过那些穷人、病人……那些需要帮助，却被本该关心他们的人忽视的人……每一次，我都注意到你的反应。~
+== BC0SIRE2 ~那种事我也见得太多了……而那种痛更难跨过。我在每个社会里都见过不公，可比这里更糟的却少见……这常让我想起自己有多无力。~
+== BC0AURA2 ~我跟你一样难受。我们尽力而为，可总觉得太少、太慢……有时候，看到要成就真正的改变得付出多少，真觉得不公。~
+== BC0SIRE2 ~唯一的慰藉，就是看见那些因我们的所作所为而日子好过些的无辜者脸上一松。我不是真正的骑士，也没有立大功的野心……只求做些小小的善事。可我常常会想，是不是还有更多我能……~
+== BC0AURA2 ~塞琳，请别把自己压得太重。我想帮别人，可我也一样想看到你快乐。~
 EXIT
 
 CHAIN
@@ -37,18 +37,18 @@ Range("C0Aura",15)
 !StateCheck("C0Sirene",CD_STATE_NOTVALID)
 !StateCheck("C0Aura",CD_STATE_NOTVALID)
 Global("C0AuraSireneBanter","GLOBAL",1)~ THEN BC0SIRE2 banter2
-~You look utterly exhausted, Aura. There are concerningly dark shadows under your eyes.~
+~奥拉，你看起来疲惫不堪。你眼下的阴影深得让人担心。~
 DO ~SetGlobal("C0AuraSireneBanter","GLOBAL",2)~
-== BC0AURA2 ~Oh... are they that obvious? I thought maybe a slightly different eye shadow might conceal them...~
-== BC0SIRE2 ~Tell me you have not been neglecting sleep again. If you continue to work throughout the night without rest, I may have to directly intervene soon.~
-== BC0AURA2 ~I, um... I've just been... working on new experiments...~
-== BC0SIRE2 ~And sneaking away with your weapons afterwards, to practice alone while you believe nobody notices.~
-== BC0AURA2 ~No, I—~
-== BC0SIRE2 ~What are you hoping for, Aura? This is a recent development for you, and it is a most unhealthy one. I half-feared you might have been possessed.~
-== BC0AURA2 ~That might not be off the mark... I might just be crazy. I wanted to try and become stronger, and less of a liability in battle...~
-== BC0SIRE2 ~You are anything but a liability. Why think so now, of all times?~
-== BC0AURA2 ~Because... because I don't want to see you taking blows for my sake anymore. I want to be as brave as you... or even half as much, at least.~
-== BC0SIRE2 ~Aura... no. Please do not think that way. My path was chosen for others, and to ensure that they would never need to suffer such pains. The less who are forced to follow it, the better.~
-== BC0AURA2 ~But—~
-== BC0SIRE2 ~Please, enough.~
+== BC0AURA2 ~哦……这么明显吗？我还以为换个稍微不同的眼影就能遮住……~
+== BC0SIRE2 ~跟我说你没又亏待睡眠。你要是再整夜不歇地干活，我恐怕很快就得直接插手了。~
+== BC0AURA2 ~我，呃……我只是……在做些新的实验……~
+== BC0SIRE2 ~还有事后带着你的武器偷偷溜走，趁你以为没人看见时独自练习。~
+== BC0AURA2 ~不，我——~
+== BC0SIRE2 ~奥拉，你在盼着什么？这对你是近来才有的变化，而且极不健康。我一度担心你是被什么东西附了身。~
+== BC0AURA2 ~这话或许不算太离谱……我可能真是有点疯了。我想试着变强，好让我在战斗里不那么拖累人……~
+== BC0SIRE2 ~你绝不是拖累。偏偏这个时候，怎么会这么想？~
+== BC0AURA2 ~因为……因为我不想再看你为我挨打了。我想像你一样勇敢……哪怕只有你一半也好。~
+== BC0SIRE2 ~奥拉……不。请别那样想。我的路是为别人选的，为的是让他们永远不必受那样的苦。被迫走上这条路的人越少越好。~
+== BC0AURA2 ~可是——~
+== BC0SIRE2 ~好了，别说了。~
 EXIT

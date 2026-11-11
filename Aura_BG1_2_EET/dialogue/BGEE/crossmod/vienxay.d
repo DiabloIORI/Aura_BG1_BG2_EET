@@ -6,14 +6,14 @@ See("C0Aura")
 !StateCheck("X3Vien",CD_STATE_NOTVALID)
 !StateCheck("C0Aura",CD_STATE_NOTVALID)
 Global("CrossAuraVien","LOCALS",0)~ THEN X3VienB VienAura1
-@0 // ~Don't know that I don't see what you are trying to do.~
+@0 // ~不知道，可我看不出你想干什么。~
 DO ~SetGlobal("CrossAuraVien","LOCALS",1)~
-== BC0Aura @1 // ~Um, are you talking to me?~
-== X3VienB @2 // ~You are trying to be special. I suppose it is...interesting, but compared to my great talents, well, <CHARNAME> already has a clear favorite.~
-== BC0Aura @3 // ~What are you talking about?~
-== X3VienB @4 // ~Playing dumb now? All these impressive creations you are working on. You're smart, but I'm afraid you have a long way to go to catch up to my beauty and intelligence.~
-== BC0Aura @5 // ~Erm...did I do something to offend you?~
-== X3VienB @6 // ~Of course you offended me. You act so weak and feeble, it sickens me.~
-== BC0Aura @7 // ~I think I am just going to walk at the back of the group.~
-== X3VienB @8 // ~Gods, you are so boring. You won't push back on anything. I'll have to find my fun elsewhere.~
+== BC0Aura @1 // ~呃，你是在跟我说话吗？~
+== X3VienB @2 // ~你想显得特别。我想那……是有意思，可跟我非凡的才华比，嗯，<CHARNAME>早就有明确的偏爱了。~
+== BC0Aura @3 // ~你在说什么？~
+== X3VienB @4 // ~装傻？你鼓捣的那些了不起的作品。你是聪明，可要追上我的美貌与才智，恐怕还差得远。~
+== BC0Aura @5 // ~呃……我做了什么冒犯你的事吗？~
+== X3VienB @6 // ~你当然冒犯我了。你表现得那样软弱无能，看得我恶心。~
+== BC0Aura @7 // ~我想我就走在队伍最后一排好了。~
+== X3VienB @8 // ~天哪，你真无聊。什么都不反驳。我只好去别处找乐子了。~
 EXIT 

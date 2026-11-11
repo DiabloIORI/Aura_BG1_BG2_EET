@@ -7,17 +7,17 @@ Range("C0Aura",15)
 !StateCheck("Aerie",CD_STATE_NOTVALID)
 !StateCheck("C0Aura",CD_STATE_NOTVALID)
 Global("C0AuraAerieFriendship","GLOBAL",0)~ THEN BAERIE C0AuraAerie1
-~Oh. Oh my... whatever is that delicious scent?~ [C0BLANK]
+~哦。哦天哪……这是什么这么好闻的香味？~ [C0BLANK]
 DO ~IncrementGlobal("C0AuraAerieFriendship","GLOBAL",1)~
-== BC0AURA2 ~Wha—oh, Aerie! You startled me. I was just having a quick snack.~
-== BAERIE ~It's... it's quite alright. I just caught a whiff of something lovely and sweet. Is that apples?~
-== BC0AURA2 ~Yep, it's a candied apple. They're sliced, then coated with caramel, nuts and cinnamon. It's a simple treat, but I really enjoy it.~
-== BAERIE ~I thought it smelled familiar! I used to help Uncle Quayle make something similar, back when I was still with the circus. Haha... it's very popular with children, as I recall.~
-== BAERIE ~Er, I didn't mean to suggest you're like a... I mean, even I would, um, a few times... ooh, never mind.~
-== BC0AURA2 ~No, no, it's okay! I'm... well, it's not like it's a secret that I like sweets. I don't think it's a childish thing at all.~
-== BAERIE ~Really? Well, um... then...~
-== BC0AURA2 ~...um, would you like to have some?~
-== BAERIE ~Oh, I'd love to!~
+== BC0AURA2 ~什——哦，艾黎！你吓着我了。我只是在吃点东西。~
+== BAERIE ~那……那没什么。我只是闻到一股又香又甜的味道。是苹果吗？~
+== BC0AURA2 ~嗯，是糖苹果。切片，然后裹上焦糖、坚果和肉桂。很简单的小吃，可我很喜欢。~
+== BAERIE ~我就说那味道很熟！我以前在马戏团的时候，帮奎尔叔叔做过类似的东西。哈哈……我记得小孩子很爱吃。~
+== BAERIE ~呃，我不是说你像……我是说，连我自己都会，呃，有几次……哦，算了。~
+== BC0AURA2 ~不，不，没关系！我……嗯，也不是什么秘密，我喜欢甜的。我一点都不觉得这幼稚。~
+== BAERIE ~真的？那，呃……那……~
+== BC0AURA2 ~……呃，你要来一点吗？~
+== BAERIE ~哦，我很乐意！~
 EXIT
 
 CHAIN
@@ -26,23 +26,23 @@ Range("C0Aura",15)
 !StateCheck("Aerie",CD_STATE_NOTVALID)
 !StateCheck("C0Aura",CD_STATE_NOTVALID)
 Global("C0AuraAerieFriendship","GLOBAL",1)~ THEN BC0AURA2 C0AuraAerie2
-~Aerie, your people's home... it's called Faenya-Dail, right?~
+~艾黎，你族人的家……叫菲尼亚-戴尔，对吧？~
 DO ~IncrementGlobal("C0AuraAerieFriendship","GLOBAL",1)~
-== BAERIE ~M–my people? I mean... yes, that's its name.~
-== BC0AURA2 ~Ah... I'm really sorry. I mean to say your homeland. I know you've...~
-== BAERIE ~No... no, it's alright. Maybe someone else might've meant differently, but... I know you're just curious.~
-== BC0AURA2 ~I am. There's so little knowledge of the avariel, even in all the libraries I've been in... I've had so many questions to ask, but I didn't want to bother you.~
-== BAERIE ~I understand.~
-== BC0AURA2 ~Then I immediately make a verbal faux pas on the first try. Stupid me.~
-== BAERIE ~It's okay. I'm actually happy that you'd be curious to know more about the avariel. So few down here even know that we exist...~
-== BC0AURA2 ~Not just your people. You, as well! But, um, maybe another time. You can ask me questions too, if you want.~
-== BAERIE ~Well, then... what about your home, Aura? Do you miss it?~
-== BC0AURA2 ~Of course I do! I miss Lantan very much. I miss my family most of all, though.~
-== BAERIE ~Quayle told me a story or two about Lantan once. It all seemed so mythical to me, with all the talk of colleges and airships and machinery. But in reality it's not so far away from here, is it?~
-== BC0AURA2 ~No, not at all. Only a little bit past the Trackless Sea.~
-== BAERIE ~If that is so, then you could always go home whenever you wanted to, couldn't you?~
-== BC0AURA2 ~I– I guess I could, yes. What about you, Aerie? Don't you miss your home too?~
-== BAERIE ~Oh... I, I can't... I don't think I'll be seeing Faenya-Dail again. But I think about it... always.~
+== BAERIE ~我——我的族人？我是说……对，那是它的名字。~
+== BC0AURA2 ~啊……我真的很抱歉。我是说你的故乡。我知道你……~
+== BAERIE ~不……不，没关系。别人也许会别有用心，可……我知道你只是好奇。~
+== BC0AURA2 ~我是。即便在我去过的那么多藏书里，关于翼精灵的知识也那么少……我有很多问题想问，可不想烦扰你。~
+== BAERIE ~我明白。~
+== BC0AURA2 ~然后我第一次开口就说了失礼的话。我真笨。~
+== BAERIE ~没关系。其实我很高兴你好奇、想多了解翼精灵。这下面很少有人知道我们存在……~
+== BC0AURA2 ~不只是你的族人。还有你！可是，呃，也许改天吧。你若愿意，也可以问我问题。~
+== BAERIE ~那好……你的家呢，奥拉？你想它吗？~
+== BC0AURA2 ~当然想！我很想兰坦。不过最想的还是家人。~
+== BAERIE ~奎尔跟我说过一两个兰坦的故事。那时对我来说一切都很神话，什么学院、飞船、机械。可其实它离这儿并不远，对吧？~
+== BC0AURA2 ~不，一点都不远。只隔着无痕海一小段。~
+== BAERIE ~若如此，那你随时想回家就能回去，不是吗？~
+== BC0AURA2 ~我——我想是可以，是的。你呢，艾黎？你不想家吗？~
+== BAERIE ~哦……我，我不能……我想我不会再见到菲尼亚-戴尔了。可我一直……想着它。~
 EXIT
 
 CHAIN
@@ -51,47 +51,47 @@ Range("C0Aura",15)
 !StateCheck("Aerie",CD_STATE_NOTVALID)
 !StateCheck("C0Aura",CD_STATE_NOTVALID)
 Global("C0AuraAerieFriendship","GLOBAL",2)~ THEN BAERIE C0AuraAerie3
-~What god to you worship, Aura? I thought all Lantanese inventors followed Gond the Wonderbringer, but I don't hear you mentioning His name much.~ [C0BLANK]
+~你信什么神，奥拉？我以为所有兰坦发明家都追随贡德奇迹缔造者，可我少听你提祂的名字。~ [C0BLANK]
 DO ~IncrementGlobal("C0AuraAerieFriendship","GLOBAL",1)
 RealSetGlobalTimer("C0AuraAerieRestTalkTimer","GLOBAL",3600)~
-== BC0AURA2 ~I follow the ideals of the Gondar clergy. Artifice, invention, craft. But I... don't pray to Gond.~
-== BAERIE ~Is there a difference between the two? If you follow the things that Gond stands for, isn't that the same thing as worshipping the god?~
-== BC0AURA2 ~I'm not sure. I used to hang tapestries in my room with the gods who embodied what I respected. Besides Gond, there was Mystra for Magic, Oghma for Wisdom, Deneir for Knowledge... it's hard for me to put one god above the rest.~
-== BAERIE ~Oh. I–I see... then we aren't so different after all. I worship Baervan, but I still remember the teachings of Aerdrie Faenya, even if she won't have me anymore, and I like to think on them sometimes... it's strange, but I believe in them both. I'm glad to know that's not wrong.~
-== BC0AURA2 ~I don't think it's wrong. The good gods... they should understand what you want to believe, I think.~
+== BC0AURA2 ~我追随贡德教团的理念。工艺、发明、巧作。可我……不向贡德祈祷。~
+== BAERIE ~这两者有区别吗？你若追随贡德所代表的东西，那不就等于敬拜这位神？~
+== BC0AURA2 ~我不确定。我以前在房里挂代表我所敬重之物的神祇织毯。除了贡德，还有掌魔法的密斯特拉、掌智慧的欧格玛、掌知识的迪尼尔……我很难把一位神放在其他之上。~
+== BAERIE ~哦。我——我明白了……那我们其实没那么不同。我敬拜贝尔凡，可我仍记得艾尔德里·菲尼亚的教诲，哪怕她不再要我，我也喜欢有时想想它们……说来怪，可我相信他们两个。很高兴知道这不算错。~
+== BC0AURA2 ~我不觉得这是错的。那些善神……我想他们该理解你想信什么。~
 EXIT
 
 CHAIN IF WEIGHT #-1
 ~Global("C0AuraAerieRestTalk1","GLOBAL",1)~ THEN BC0AURA2 C0AURA-AERIE-RESTTALK
-~Zzzz... mmm, zzz....~ [C0BLANK]
+~呼……嗯，呼……~ [C0BLANK]
 DO ~SetGlobal("C0AuraAerieRestTalk1","GLOBAL",2)
 SetGabber(Player1)~
-== AERIEJ ~Shh, <CHARNAME>. Don't disturb her. She's very tired after the day we've been through.~
-== BC0AURA2 ~Zzz... m... mother? Mother, can I watch Juno practice in the field again? Mmph... okay, back before supper... Zzz...~
-== AERIEJ ~She mumbles a lot in her sleep. *giggle* It's rather adorable.~
+== AERIEJ ~嘘，<CHARNAME>。别吵她。过了我们这一天，她太累了。~
+== BC0AURA2 ~呼……妈……妈妈？妈妈，我能再去看朱诺在场上练剑吗？唔……好，晚饭前回来……呼……~
+== AERIEJ ~她睡梦里嘟囔好多。*轻笑* 挺可爱的。~
 END
-++ ~She seems to favor your company.~ EXTERN AERIEJ C0AURA-AERIE-RESTTALK.1
-++ ~You can't stay here with her head on your lap, Aerie. You need to rest too.~ EXTERN AERIEJ C0AURA-AERIE-RESTTALK.2
-++ ~I'll leave you two alone.~ EXTERN BC0AURA2 C0AURA-AERIE-RESTTALK.4
+++ ~她似乎偏爱你的陪伴。~ EXTERN AERIEJ C0AURA-AERIE-RESTTALK.1
+++ ~你不能让她头枕在你腿上就这么待着，艾黎。你也得休息。~ EXTERN AERIEJ C0AURA-AERIE-RESTTALK.2
+++ ~我把你们两个单独留下。~ EXTERN BC0AURA2 C0AURA-AERIE-RESTTALK.4
 
 CHAIN AERIEJ C0AURA-AERIE-RESTTALK.1
-~Do you really think so, <CHARNAME>? Although, I suppose she does come to talk with me a lot.~
+~你真这么觉得吗，<CHARNAME>？不过，我想她确实常来找我说话。~
 EXTERN AERIEJ C0AURA-AERIE-RESTTALK.3
 
 CHAIN AERIEJ C0AURA-AERIE-RESTTALK.2
-~I know... it just doesn't feel right to wake her up, though. She really likes being around me.~
+~我知道……可叫醒她又觉得不对。她真的很喜欢待在我身边。~
 EXTERN AERIEJ C0AURA-AERIE-RESTTALK.3
 
 CHAIN AERIEJ C0AURA-AERIE-RESTTALK.3
-~I don't mind, though. She's a very sweet person.~
+~不过我不介意。她是个很甜的人。~
 END
-++ ~That she is.~ EXTERN BC0AURA2 C0AURA-AERIE-RESTTALK.4
-++ ~I enjoy having her around, too.~ EXTERN BC0AURA2 C0AURA-AERIE-RESTTALK.4
-++ ~She stays as long as she's useful.~ EXTERN BC0AURA2 C0AURA-AERIE-RESTTALK.4
+++ ~她是。~ EXTERN BC0AURA2 C0AURA-AERIE-RESTTALK.4
+++ ~我也喜欢有她在。~ EXTERN BC0AURA2 C0AURA-AERIE-RESTTALK.4
+++ ~她有用就留下。~ EXTERN BC0AURA2 C0AURA-AERIE-RESTTALK.4
 
 CHAIN BC0AURA2 C0AURA-AERIE-RESTTALK.4
-~Zzz... mmph... cherry blossoms in the spring... wish I could see 'em again... Zzz...~
-== AERIEJ ~Don't worry about me, <CHARNAME>. I'll stay here for a while. You should get some rest.~
+~呼……唔……春天的樱花……真想再看一次……呼……~
+== AERIEJ ~别担心我，<CHARNAME>。我在这儿待一会儿。你该去休息。~
 DO ~ClearAllActions()
 StartCutSceneMode()
 FadeToColor([0.0],0)
@@ -104,7 +104,7 @@ Wait(2)
 EndCutSceneMode()~ EXIT
 
 INTERJECT BAERIE 448 C0AuraAerieKorganConflict
-== BC0AURA2 IF ~IsValidForPartyDialog("C0Aura") GlobalGT("C0AuraAerieFriendship","GLOBAL",0)~ THEN ~Aerie! Oh, for goodness sake... I'll go after her, <CHARNAME>, just wait a moment.~
+== BC0AURA2 IF ~IsValidForPartyDialog("C0Aura") GlobalGT("C0AuraAerieFriendship","GLOBAL",0)~ THEN ~艾黎！哦，天哪……我去追她，<CHARNAME>，等一会儿。~
 DO ~SetGlobal("C0AuraAerieKorganConflict","GLOBAL",1)
 ClearAllActions()
 StartCutSceneMode()
@@ -112,34 +112,34 @@ StartCutSceneEx("C0ACUT5",FALSE)~ EXIT
 
 CHAIN IF WEIGHT #-1
 ~Global("C0AuraAerieKorganConflict","GLOBAL",1)~ THEN BC0AURA2 C0AuraAerieKorganConflict1
-~*sigh* Okay, she's calmed down a bit.~ [C0BLANK]
+~*叹气* 好，她平静些了。~ [C0BLANK]
 DO ~SetGlobal("C0AuraAerieKorganConflict","GLOBAL",2)~
-== BC0AURA2 ~Really, though. I don't even know what to say to you, Korgan. Couldn't you have been just a little nicer?~
-== BKORGAN ~Don't ye put th' blame on me fer that pitiful display now, girl! It be her own blighted fault fer lackin' the backbone to stand up for herself. And havin' the gall to put demands on <CHARNAME>? Pah!~
-== BC0AURA2 ~This only happened because you can't stop hassling her! Is it too much to ask for you to just leave her alone?~
+== BC0AURA2 ~说真的。我都不知道该跟你怎么说，库尔甘。你就不能稍微和气一点？~
+== BKORGAN ~别把这场可怜相的账算在我头上，丫头！她自己没骨头为自己站出来，那是她活该。还敢对<CHARNAME>提要求？呸！~
+== BC0AURA2 ~这事发生全是因为你停不下来折腾她！要你别去惹她，就这么难吗？~
 END
-++ ~I agree with Aura. You don't have to like Aerie, Korgan, just drop the harassment.~ EXTERN BC0AURA2 C0AuraAerieKorganConflict2
-++ ~Korgan's got a point. We've no room for the weak and faint-hearted in this group.~ EXTERN BKORGAN C0AuraAerieKorganConflict3
-++ ~I'm staying out of this.~ EXTERN BC0AURA2 C0AuraAerieKorganConflict4
+++ ~我同意奥拉。你不必喜欢艾黎，库尔甘，只是别再骚扰她。~ EXTERN BC0AURA2 C0AuraAerieKorganConflict2
+++ ~库尔甘有道理。这队里没位置留给软弱怯懦的人。~ EXTERN BKORGAN C0AuraAerieKorganConflict3
+++ ~我不掺和这个。~ EXTERN BC0AURA2 C0AuraAerieKorganConflict4
 
 CHAIN BC0AURA2 C0AuraAerieKorganConflict2
-~There you go. <CHARNAME>'s on my side here. Aren't you going to listen to <PRO_HIMHER>, at least?~
-== BKORGAN ~Bah! That lily-livered wench'll be smothered to death with the way y'all be coddlin' her.~
+~你看。<CHARNAME>站我这边。你至少听<PRO_HIMHER>的吧？~
+== BKORGAN ~呸！你们这么惯着她，那软骨头丫头早晚被捂死。~
 EXTERN BC0AURA2 C0AuraAerieKorganConflict5
 
 CHAIN BKORGAN C0AuraAerieKorganConflict3
-~Har! Well spoken, <CHARNAME>. She'd be best goin' back an' playin' ball with 'em circus brats, an' we'll be better off fer it.~
+~哈！说得好，<CHARNAME>。她最好回去跟那些马戏团小鬼玩球，我们还能清净些。~
 EXTERN BC0AURA2 C0AuraAerieKorganConflict5
 
 CHAIN BC0AURA2 C0AuraAerieKorganConflict4
-~Okay, fine, if you want to be that way. But the next time something like this happens, I don't think I'll be able to stop Aerie from walking out for good.~
-== BKORGAN ~An' good riddance if she does.~
+~好，行，你要这样就这样。可下次再出这种事，我想我拦不住艾黎永远走掉。~
+== BKORGAN ~她走了倒干净。~
 EXTERN BC0AURA2 C0AuraAerieKorganConflict5
 
 CHAIN BC0AURA2 C0AuraAerieKorganConflict5
-~*glares*~
-== BKORGAN ~Hmph! Ye've a mean stare when ye're serious. Ah, so be it, lass. Ye wish to keep yer skinny playmate, ol' Korgan'll nae say another word on it. But ye'd best tell 'er to toughen up 'em bones or she'll not be on this journey fer long, mark me words.~
-== BC0AURA2 ~Okay, fine. I hope we won't have to argue about this again.~
+~*瞪眼*~
+== BKORGAN ~哼！你认真起来眼神真凶。啊，随你吧，丫头。你想留着你那瘦巴巴的玩伴，老库尔甘就不再提了。可你最好叫她骨头硬一点，不然她在这趟旅途上待不久，记着我的话。~
+== BC0AURA2 ~好，行。我希望我们不必再为这个吵。~
 EXIT
 
 CHAIN
@@ -148,21 +148,21 @@ Range("C0Aura",15)
 !StateCheck("Aerie",CD_STATE_NOTVALID)
 !StateCheck("C0Aura",CD_STATE_NOTVALID)
 Global("C0AuraAerieFriendship","GLOBAL",3)~ THEN BAERIE C0AuraAerie4
-~Aura, do you have a moment? I could use some help!~ [C0BLANK]
+~奥拉，你有空吗？我需要人帮忙！~ [C0BLANK]
 DO ~RealSetGlobalTimer("C0AuraAerieRestTalkTimer","GLOBAL",1800)
 IncrementGlobal("C0AuraAerieFriendship","GLOBAL",1)~
-== BC0AURA2 ~Hold on, just let me... aha! Okay, what do you need? I'll help however I can.~
-== BAERIE ~I've been trying to figure out some of these spells... I've been practicing and studying, but it feels like I've hit a dead end. I thought maybe you could help.~
-== BC0AURA2 ~Sure, I'll do what I can, but... I'm not a true mage, you know. Wouldn't you understand more than I do?~
-== BAERIE ~I just thought... sorry, I'm not sure what I thought. I just felt like it was natural to ask you. You're good at learning, and you're easy to talk to.~
-== BC0AURA2 ~Well, now you're making me blush... hehe.~
-== BAERIE ~Sometimes it feels like I've got Quayle close by with me... um, not to say that you're old, or... I just meant... well, you're both gnomes... and you're as patient with me as he's always been.~
-== BAERIE IF ~Global("C0AuraKnowsBG1","GLOBAL",1)~ THEN ~You knew him for a while, didn't you? I don't think Quayle ever brought it up, but I've heard a little bit since I joined.You must have at least a few stories to tell.~
-== BC0AURA2 IF ~Global("C0AuraKnowsBG1","GLOBAL",1)~ THEN ~Well, I do, but... Quayle's a lot different now from what I remember. He was quite the funny fellow, you know.~
-== BAERIE IF ~Global("C0AuraKnowsBG1","GLOBAL",1)~ THEN ~Was he? I have a hard time imagining that... actually, I can see it a little. He does still mention his brilliant brain once in a while. *giggle*~
-== BAERIE ~Thank you for spending time with me, Aura. Having someone to talk to... it makes the difficult things a bit more passable.~
-== BC0AURA2 ~I like talking with you too, Aerie... aaah! We completely forgot the main topic. You needed help studying some spells, didn't you?~
-== BAERIE ~Oh, that's right. It's these ones here... yes, that one in particular...~
+== BC0AURA2 ~等等，让我……啊哈！好，你需要什么？我尽力帮。~
+== BAERIE ~我一直在琢磨这些法术……我练习、研读，可感觉撞到死路上了。我想也许你能帮上忙。~
+== BC0AURA2 ~当然，我尽力，可是……你知道，我不是真正的法师。你该比我懂得多吧？~
+== BAERIE ~我只是想……抱歉，我也不确定我想什么。只是觉得问你很自然。你善于学习，又好说话。~
+== BC0AURA2 ~哎，你现在让我脸红了……嘿嘿。~
+== BAERIE ~有时候感觉像奎尔就在我身边……呃，不是说你老，或者……我只是说……嗯，你们都是侏儒……而且你对我跟他一样耐心。~
+== BAERIE IF ~Global("C0AuraKnowsBG1","GLOBAL",1)~ THEN ~你认识他有一阵子了，对吧？我想奎尔从没提过，可我加入后听过一点。你总该有几个故事可讲。~
+== BC0AURA2 IF ~Global("C0AuraKnowsBG1","GLOBAL",1)~ THEN ~嗯，我确实有，可是……奎尔现在跟我记忆里很不一样了。他以前是个挺有意思的家伙，你知道。~
+== BAERIE IF ~Global("C0AuraKnowsBG1","GLOBAL",1)~ THEN ~是吗？我很难想象……其实，我能看出一点。他到现在还会偶尔提他那颗杰出的脑子。*轻笑*~
+== BAERIE ~谢谢你陪我，奥拉。有人能说话……让难事稍微好过一点。~
+== BC0AURA2 ~我也喜欢跟你说话，艾黎……啊！我们完全忘了正题。你需要人帮你研习法术，对吧？~
+== BAERIE ~哦，对了。是这几道……对，特别是那道……~
 EXIT
 
 CHAIN
@@ -171,21 +171,21 @@ Range("C0Aura",15)
 !StateCheck("Aerie",CD_STATE_NOTVALID)
 !StateCheck("C0Aura",CD_STATE_NOTVALID)
 Global("C0AuraAerieFriendship","GLOBAL",4)~ THEN BC0AURA2 C0AuraAerie5
-~*Hmm-hm-hmm-hm-hm-hmmm*...~ [C0BLANK]
+~*哼—哼—哼—哼—哼—哼*……~ [C0BLANK]
 DO ~IncrementGlobal("C0AuraAerieFriendship","GLOBAL",1)~
-== BAERIE ~You're humming again...~
-== BC0AURA2 ~Oh! I'm sorry, was I bothering you?~
-== BAERIE ~No, I wasn't bothered at all! Actually, it was quite soothing. I just don't think I've heard anything like it before... was it a Lantanese tune, perhaps?~
-== BC0AURA2 ~That? No, it wasn't... actually, I didn't even realize I was doing it until you spoke up... usually, the words just come up in my head.~
-== BAERIE ~That tune... it has words, too?~
-== BC0AURA2 ~Oh, yes! I thought them up. Though, I don't think it's all that lyrical. I'm good with machines, but no so much with poetry.~
-== BAERIE ~You mean to say that you thought it up? I didn't take you for a musician too... not that I'd imagine that's beyond you either...~
-== BC0AURA2 ~Hehe, no, I definitely wouldn't call myself a musician. It's just a way to help me focus and memorize things I've learned.~
-== BAERIE ~By turning the knowledge into a song?~
-== BC0AURA2 ~Exactly. You wouldn't think it, but I used to struggle with paying attention to words on a page. Then one of my teachers told me to bring the words to life. Songs and rhythms can help with that. When you associate something with an emotion, like a song that make you happy, or makes you laugh... you won't have any issues remembering it.~
-== BAERIE ~That's a funny way to think about things. Well, to learn about them, more precisely. Now that I think of it, maybe I've got my own way too...~
-== BC0AURA2 ~Ooh, sounds like a story, I can tell. Why don't you tell me about it?~
-== BAERIE ~Maybe next time. <CHARNAME>'s going to be annoyed if we keep standing around chatting for any longer.~
+== BAERIE ~你又在哼了……~
+== BC0AURA2 ~哦！抱歉，我吵到你了吗？~
+== BAERIE ~不，一点都没吵！其实还挺安神的。我只是觉得从没听过这样的……也许是兰坦的调子？~
+== BC0AURA2 ~那个？不，不是……其实你不开口我都没察觉自己在哼……通常词就自己冒出来了。~
+== BAERIE ~那调子……还有词？~
+== BC0AURA2 ~哦，有！是我编的。不过我不觉得它多合韵律。我擅长机械，可不太擅长诗。~
+== BAERIE ~你是说那是你自己编的？我没把你当乐师……倒也不是说那超出你的能力……~
+== BC0AURA2 ~嘿嘿，不，我绝对不敢自称乐师。这只是帮我集中注意、记住学过的东西的办法。~
+== BAERIE ~把知识变成一首歌？~
+== BC0AURA2 ~正是。你不会想到，我以前很难专心看纸上的字。后来一位老师叫我把字句活起来。歌和节奏能帮上忙。当你把某样东西跟一种情绪联系起来，比如一首让你开心、让你发笑的歌……你就不会有记不住的问题。~
+== BAERIE ~这想法真有趣。嗯，更准确说是学习的方法。现在想想，也许我也有自己的法子……~
+== BC0AURA2 ~哦，听起来有故事。你何不讲给我听？~
+== BAERIE ~也许下次吧。我们再站这儿聊下去，<CHARNAME>要恼了。~
 EXIT
 
 CHAIN
@@ -194,18 +194,18 @@ Range("C0Aura",15)
 !StateCheck("Aerie",CD_STATE_NOTVALID)
 !StateCheck("C0Aura",CD_STATE_NOTVALID)
 Global("C0AuraAerieFriendship","GLOBAL",5)~ THEN BAERIE C0AuraAerie5
-~Still want to hear about my silly little story, Aura?~ [C0BLANK]
+~还想听我那傻乎乎的小故事吗，奥拉？~ [C0BLANK]
 DO ~IncrementGlobal("C0AuraAerieFriendship","GLOBAL",1)~
-== BC0AURA2 ~Ooh, absolutely. I'm sure it's not that silly.~
-== BAERIE ~Maybe you won't think so... it's really not that exciting, though. It was when I was first practicing as an acolyte of Baervan Wildwanderer... I know, to a gnome, that might sound ridiculous. Me, studying the ways of the the gnomish gods.~ 
-== BC0AURA2 ~No, not at all. Besides, I'm also not exactly... never mind. Go on.~
-== BAERIE ~I was learning to call upon Baervan for power, I struggled with it at first. I just couldn't bring myself to let go of the past, of what I lost... I know it's wrong, but I felt like I was disrespecting the doctrines taught to me by my parents, of Aerdrie Faenya. But, then...~
-== BC0AURA2 ~...~
-== BAERIE ~One day, while I was taking a walk outside the city, I found a young bird under a tree. One of its wings was broken, and I couldn't just leave it alone. And then... all of a sudden, without knowing how, it just... made sense. I stopped thinking about myself, because all I wanted to do was heal the poor thing... and I did.~
-== BAERIE ~I thought Uncle Quayle would laugh at me when I told him the story, but he was so incredibly happy... he told me that the next time I wanted to call upon Baervan for aid, I just needed to remember how I felt at that moment... and I would get an answer. And that's never failed.~
-== BAERIE ~It's nothing as creative as music, but I never realized how I came to master my magic so easily until you got me thinking. Maybe there's ways that I can keep improving myself if I learn from others' example.~
-== BC0AURA2 ~Maybe you should try making up a tune of your own? Especially with how pretty your voice is... erm, I'd definitely like to hear one.~
-== BAERIE ~Oh, I don't think I've got that sort of talent. If I do, though... I'll definitely have to show you... heehee.~
+== BC0AURA2 ~哦，当然。我肯定没那么傻。~
+== BAERIE ~也许你不会这么觉得……不过真没那么精彩。那是我刚开始当贝尔凡·野径行者侍僧的时候……我知道，对侏儒来说这听着可笑。我，去学侏儒神祇的道。~ 
+== BC0AURA2 ~不，一点都不可笑。再说我也不是真的……算了。你继续。~
+== BAERIE ~我在学向贝尔凡祈求力量，起初很挣扎。我就是没法放下过去、放下我失去的……我知道这不对，可我觉得自己在不敬父母教我的艾尔德里·菲尼亚的教义。可是，后来……~
+== BC0AURA2 ~……~
+== BAERIE ~有一天，我在城外散步，在树下发现一只幼鸟。它一只翅膀断了，我没法就这么丢下它。然后……突然间，不知怎的，一切就……说得通了。我不再想着自己，因为我只想治好这可怜的小东西……而我做到了。~
+== BAERIE ~我以为告诉奎尔叔叔这故事时他会笑我，可他高兴得不得了……他说下次我想向贝尔凡求助时，只要记得那一刻的感受……我就会得到回应。而这从没失灵过。~
+== BAERIE ~这没有音乐那么有创意，可直到你让我去想，我才明白自己怎么就那么容易掌握了魔法。也许我若学别人的样子，还有办法继续长进。~
+== BC0AURA2 ~也许你该试着自己编个调子？尤其你的嗓音那么好听……呃，我绝对想听一首。~
+== BAERIE ~哦，我不觉得我有那种天分。可若有的话……我一定得让你听听……嘿嘿。~
 EXIT
 
 CHAIN
@@ -214,23 +214,23 @@ Range("C0Aura",15)
 !StateCheck("Aerie",CD_STATE_NOTVALID)
 !StateCheck("C0Aura",CD_STATE_NOTVALID)
 Global("C0AuraAerieFriendship","GLOBAL",6)~ THEN BAERIE C0AuraAerie6
-~If you don't mind, Aura... could I ask you a question? It's a bit personal. Maybe rather silly, even.~ [C0BLANK]
+~你不介意的话，奥拉……我能问你个问题吗？有点私密。甚至可以说挺傻的。~ [C0BLANK]
 DO ~IncrementGlobal("C0AuraAerieFriendship","GLOBAL",1)~
-== BC0AURA2 ~From you, Aerie? Sure. I promise I won't laugh, either, if you don't want me to.~
-== BAERIE ~You just might, but I don't really mind. I was just wondering... what exactly do you dream of when you sleep? During those times we read together, and you start to fall asleep on my shoulder, and I start hearing some things you say while dreaming... it's made me curious.~
-== BC0AURA2 ~What I dream about? Well... it's never anything important. Not to what's going on right now, anyway. Usually it's about some idea I have, or about the past... happy things, most of the time.~
-== BAERIE ~Oh. That sounds nice... you always seem to be at peace.~
-== BC0AURA2 ~It wasn't always that way. I've had some dark times too... but I've been able to put those days behind me.~
-== BAERIE ~That's... a good thing. I'm happy for you.~
-== BC0AURA2 ~Do you have peaceful dreams too, Aerie? Or, are they...~
-== BAERIE ~Sometimes... usually, I dream that I'm flying again. But I've started to become afraid of those thoughts. I'm worried they'll make me desperate for what I've lost all over again.~
-== BC0AURA2 ~...~
-== BAERIE ~I'm sorry. I didn't mean to make things uncomfortable.~
-== BC0AURA2 ~Hey, Aerie...~
-== BAERIE ~Yes?~
-== BC0AURA2 ~The next time we rest... would you show me your scars? And... if there's anything you want to tell me about. I can listen. Just me.~
-== BAERIE ~I...~
-== BAERIE ~I'd like that.~
+== BC0AURA2 ~你问？艾黎。当然。我也保证不笑，只要你不想我笑。~
+== BAERIE ~你也许真会笑，不过我不太介意。我只是想知道……你睡着时究竟梦什么？那些我们一起读书的时候，你靠在我肩上开始犯困，我开始听见你说梦话……这让我好奇。~
+== BC0AURA2 ~我梦什么？嗯……从来都不是什么要紧的。跟眼前的事无关。通常是某个念头，或者过去……多数时候是快乐的事。~
+== BAERIE ~哦。那听着很好……你看起来总是很安宁。~
+== BC0AURA2 ~也不总这样。我也经历过黑暗的日子……可我已经把那些日子甩在身后了。~
+== BAERIE ~那……那很好。我为你高兴。~
+== BC0AURA2 ~你也做安宁的梦吗，艾黎？还是，它们……~
+== BAERIE ~有时候……我常梦见自己又在飞。可我开始害怕这些念头。我怕它们会让我再一次拼命渴求我失去的东西。~
+== BC0AURA2 ~……~
+== BAERIE ~对不起。我不是想让气氛难受。~
+== BC0AURA2 ~嘿，艾黎……~
+== BAERIE ~嗯？~
+== BC0AURA2 ~下次我们休息时……你愿意给我看你那些伤疤吗？还有……若有什么想告诉我的，我可以听。就我一个人。~
+== BAERIE ~我……~
+== BAERIE ~我愿意。~
 EXIT
 
 CHAIN
@@ -239,20 +239,20 @@ Range("C0Aura",15)
 !StateCheck("Aerie",CD_STATE_NOTVALID)
 !StateCheck("C0Aura",CD_STATE_NOTVALID)
 Global("C0AuraAerieFriendship","GLOBAL",7)~ THEN BAERIE C0AuraAerie7
-~Aura? Is something the matter?~ [C0BLANK]
+~奥拉？有什么事吗？~ [C0BLANK]
 DO ~SetGlobalTimer("C0AuraAerieFriendshipRestTimer","GLOBAL",THREE_DAYS)
 IncrementGlobal("C0AuraAerieFriendship","GLOBAL",1)~
-== BC0AURA2 ~Hmm? Oh, no! Not at all. Why would you ever think so? Haha...~
-== BAERIE ~It's just that... you haven't really seemed yourself lately. Not around me, at least. Usually you're always happy to spend time with me and talk about what you've been doing.~
-== BC0AURA2 ~Well...~
-== BAERIE ~You're not avoiding me, are you? If I've done something to upset you, I'm sorry.~
-== BC0AURA2 ~N–no! Absolutely not, it's my fault for not saying anything. Actually, the truth is I've been working on something... for you.~
-== BAERIE ~F–for me?~
-== BC0AURA2 ~I was trying to keep it a surprise... and it's been taking up all my attention, so I haven't really had anything else to talk about.~
-== BAERIE ~Oh. I'm really touched that you've been making something for me this entire time... well, if it's a surprise, I probably shouldn't ask what it is until it's ready, right?~
-== BC0AURA2 ~I really shouldn't give it away right now. I know you'll really love it when it's done, though! I just hope it'll work. I don't want to have disappointed you after making you wait.~
-== BAERIE ~You're really making me curious now... I just hope you won't tire yourself out over it. You're looking a little sleepy right now.~
-== BC0AURA2 ~*yaaawn* Hehe, I don't know what you're talking about...~
+== BC0AURA2 ~嗯？哦，不！没有。你怎么会这么想？哈哈……~
+== BAERIE ~只是……你近来不太像你自己。至少在我身边不是。平常你总是很乐意陪我、说说你在做什么。~
+== BC0AURA2 ~嗯……~
+== BAERIE ~你不是在躲我吧？若我做了什么让你不快，我道歉。~
+== BC0AURA2 ~不——不！绝对不是，是我不好，什么都没说。其实，真相是我一直在做一样东西……为你做的。~
+== BAERIE ~为——为我？~
+== BC0AURA2 ~我想保住这个惊喜……它占了我全部心思，所以我真没别的话可聊。~
+== BAERIE ~哦。你一直在为我做东西，我真的很感动……嗯，既然是惊喜，我大概该等它做好再问是什么，对吧？~
+== BC0AURA2 ~我现在真不该说漏。不过我知道你完成后一定会很喜欢！我只希望它能成。让你等了，我不想让你失望。~
+== BAERIE ~你现在真让我好奇了……我只希望你别为此累坏。你看着有点困。~
+== BC0AURA2 ~*哈欠* 嘿嘿，我不知道你在说什么……~
 EXIT
 
 CHAIN
@@ -261,34 +261,34 @@ Range("C0Aura",15)
 !StateCheck("Aerie",CD_STATE_NOTVALID)
 !StateCheck("C0Aura",CD_STATE_NOTVALID)
 Global("C0AuraAerieFriendship","GLOBAL",9)~ THEN BAERIE C0AuraAerie8
-~D-does anything still hurt?~ [C0BLANK]
+~还——还有哪儿疼吗？~ [C0BLANK]
 DO ~IncrementGlobal("C0AuraAerieFriendship","GLOBAL",1)
 SetGabber(Player1)~
-== BC0AURA2 ~N... no—*oww*!~
-== BAERIE ~*sigh*~
+== BC0AURA2 ~不……不——*哎哟*！~
+== BAERIE ~*叹气*~
 END
-  ++ ~What happened?~ EXTERN BC0AURA2 C0AuraAerie8-1
-  ++ ~(Say nothing)~ EXTERN BAERIE C0AuraAerie8-2
+  ++ ~怎么了？~ EXTERN BC0AURA2 C0AuraAerie8-1
+  ++ ~（什么也不说）~ EXTERN BAERIE C0AuraAerie8-2
 
 CHAIN BC0AURA2 C0AuraAerie8-1
-~I... umm...~
-= ~I tried to make a surprise present for Aerie. It... didn't work.~
+~我……唔……~
+= ~我想给艾黎做个惊喜礼物。它……没成。~
 EXTERN BAERIE C0AuraAerie8-2
 
 CHAIN BAERIE C0AuraAerie8-2
-~I don't even know what to say... when you told me what it is you made, those metal wings... I think you called them a 'prototype'? I thought I was dreaming at first. Then I saw what happened and my heart nearly stopped.~
-== BC0AURA2 ~I'm... I'm sorry. I overestimated how stable the structure would be, and then... I thought I'd surprise you when it was finally working. Instead all I had to show for my work was some broken bones and a pile of scrap metal.~
-== BAERIE ~You nearly had me scared to death. I'm touched that you wanted to do something like this for me, but do you know how awful I would've felt if you hurt yourself even more badly, or worse?~
-== BC0AURA2 ~*sigh* I didn't have it on my mind at all. My thoughts were entirely on how I could do something to make you happy...~
-== BAERIE ~Oh...~
-== BC0AURA2 ~Oof! Aerie, I'm still recovering, it hurts when you're hugging so tightly...~
-== BAERIE ~S-sorry. But this is my fault... this is because I've been making you listen to my feelings. If I didn't make you think I was still suffering because of my wings, then you...~
-== BC0AURA2 ~No. No! I didn't do this out of pity. I just... wanted to do something for you as a friend. That's all.~
-== BAERIE ~I know. But, Aura... even though you didn't manage to build me a new pair of wings today... knowing that you'd try already makes me happy.~
-== BC0AURA2 ~Really? Then I guess this awful fall I took was worth it after all... hehe.~
-== BAERIE ~Don't laugh. You're still owed a scolding for half scaring me to death, you know that?~
-== BC0AURA2 ~Alright... but, um, just save it for when I'm not aching all over anymore. I'll take all the scolding I deserve then.~
-== BAERIE ~Oh, you silly creature! I wasn't being serious. Just do me a favor and have some rest. I'll check up on you again in the morning.~
+~我都不知道该说什么……你告诉我你造了什么时，那对金属翅膀……我想你管它叫“原型”？起初我以为自己在做梦。然后我看到出了什么事，心几乎停了。~
+== BC0AURA2 ~我……对不起。我高估了结构的稳定性，然后……我本想等它终于能用了再给你惊喜。结果我拿得出手的，只有几根断骨和一堆废铁。~
+== BAERIE ~你差点把我吓死。你想为我做这种事，我很感动，可你知道你若伤得更重、甚至更糟，我会多难受吗？~
+== BC0AURA2 ~*叹气* 我完全没往那想。我满脑子都是怎么才能让你开心……~
+== BAERIE ~哦……~
+== BC0AURA2 ~哎哟！艾黎，我还在恢复，你抱这么紧会疼……~
+== BAERIE ~对——对不起。可这是我的错……是因为我一直让你听我的感受。若我没让你以为我还在为翅膀受苦，那你……~
+== BC0AURA2 ~不。不！我做这个不是出于怜悯。我只是……想作为一个朋友为你做点什么。就这样。~
+== BAERIE ~我知道。可是，奥拉……尽管你今天没能给我造出一对新翅膀……光是知道你会去试，就已经让我高兴了。~
+== BC0AURA2 ~真的？那我这一跤摔得也值了……嘿嘿。~
+== BAERIE ~别笑。你吓掉我半条命，还欠我一顿骂，你知道吗？~
+== BC0AURA2 ~好吧……不过，呃，等我全身上下不疼了再骂。到时候我该挨的骂全接着。~
+== BAERIE ~哦，你这傻东西！我不是认真的。就帮个忙，好好休息。早上我再来看你。~
 DO ~ClearAllActions()
 StartCutSceneMode()
 FadeToColor([0.0],0)
@@ -306,29 +306,29 @@ Range("C0Aura",15)
 !StateCheck("Aerie",CD_STATE_NOTVALID)
 !StateCheck("C0Aura",CD_STATE_NOTVALID)
 Global("C0AuraAerieFriendship","GLOBAL",10)~ THEN BC0AURA2 C0AuraAerie9
-~Aerie?~ [C0BLANK]
+~艾黎？~ [C0BLANK]
 DO ~IncrementGlobal("C0AuraAerieFriendship","GLOBAL",1)~
-== BAERIE ~I'm here. How's your body feeling, Aura?~
-== BC0AURA2 ~All better now, thanks to all the care you've given me. Actually, I wanted to give you a gift. A proper one, this time.~
-== BAERIE ~That's... a bracelet? It's beautiful.~
-== BC0AURA2 ~I made it out of the metal from the wings. I'm... not too good at delicate metalwork, so it's a bit plain. But I thought you might still like it.~
-== BAERIE ~I—I do. It's a lovely gift...~
-== BC0AURA2 ~Hehe...~
-== BC0AURA2 ~You know, Aerie... about my little failed project... even though I haven't made such a huge miscalculation in a long time, it reminded me that I still haven't truly mastered everything there is to know yet. I still have to go back to the basics.~
-== BAERIE ~I think you're being too hard on yourself. The wings might not have worked... but you've done so much that no one else could. Even now, I still can't see you making a mistake.~
-== BC0AURA2 ~Really? I'm happy you think so, Aerie, but... here, I want you to look at this.~
-== BAERIE ~T-there's a burn mark on your underarm? Did that happen recently, I can—~
-== BC0AURA2 ~No, don't worry. It's been there forever. I'd like to say it was from something ambitious but... it's something a lot sillier. I got burned while making candy when I was younger.~
-== BAERIE ~Th-that's it?~
-== BC0AURA2 ~It sounds rather childish, doesn't it? There's really nothing dramatic about this mark. Back in Anchoril, where I grew up, there was a confectionary shop, one that I'd call the best in Faerûn. I loved their sweets so much that I decided to spend a month there as an apprentice, learning the trade myself.~
-== BC0AURA2 ~Everything seemed so simple, especially compared to everything else I'd already learned. But the masters still insisted that I did things slowly and patiently. I was a lot more impulsive then, and got so eager to improve myself that I started getting careless, thinking it was all so easy... then I accidentally spilled boiling hot sugar onto my skin.~
-== BAERIE ~Oh, no... that must have hurt.~
-== BC0AURA2 ~It hurt so much I couldn't stop crying. Even more since I knew it wouldn't have happened if I'd just listened to what I was told. I've kept the burn scar to remind me to never take things for granted... even the easy things. So when I started making that bracelet... I took every step as seriously as I could. Even though it was a simple thing.~
-== BAERIE ~I'll be sure to treasure it. And, one more thing...~
-== BC0AURA2 ~Yes?~
-== BAERIE ~I'm starting to realize... as I am now, I've gotten a chance to find things I might never have before. Thank you for helping me realize that.~
-== BC0AURA2 ~Like a friend who cares for your happiness no matter what?~
-== BAERIE ~Exactly.~
+== BAERIE ~我在。你身体感觉怎么样，奥拉？~
+== BC0AURA2 ~全好了，多亏你这么照顾我。其实，我想给你一样礼物。这次是件像样的。~
+== BAERIE ~那是……一只手镯？真美。~
+== BC0AURA2 ~我用那对翅膀的金属做的。我……不太擅长精细的金属活，所以它有点朴素。可我想你也许还是会喜欢。~
+== BAERIE ~我——我喜欢。这是件可爱的礼物……~
+== BC0AURA2 ~嘿嘿……~
+== BC0AURA2 ~你知道吗，艾黎……关于我那个失败的小工程……尽管我很久没犯这么大的计算错误，它也提醒了我，我还没真正掌握所有该懂的东西。我还得回到基础上去。~
+== BAERIE ~我觉得你对自己太苛刻了。翅膀也许没成……可你做到了那么多别人做不到的事。就算现在，我也没法想象你会犯错。~
+== BC0AURA2 ~真的？你这么想我很高兴，艾黎，可是……来，我要你看这个。~
+== BAERIE ~你腋下有一道烫伤？是最近弄的吗，我可以——~
+== BC0AURA2 ~不，别担心。一直都在。我想说它是某次了不起的尝试留下的，可……其实是更傻的事。我小时候做糖时烫的。~
+== BAERIE ~就——就这样？~
+== BC0AURA2 ~听着挺幼稚，对吧？这疤真没什么戏剧性。我长大的安科里尔有家糖果店，我会说那是全费伦最好的。我太爱他们的糖了，决定在那儿当一个月学徒，自己学这行。~
+== BC0AURA2 ~一切看起来都那么简单，尤其跟我已经学过的东西比。可师傅们仍坚持要我慢慢、耐心地做。那时我更冲动，太急着长进，就开始马虎，觉得一切都那么容易……然后我不小心把滚烫的糖浆泼到了皮肤上。~
+== BAERIE ~哦，不……那一定很疼。~
+== BC0AURA2 ~疼得我哭个不停。更因为我知道，只要听人劝就不会发生。我留着这烫伤疤，提醒自己永远别把任何事当作理所当然……连容易的事也是。所以我开始做那只手镯时……每一步都尽可能认真。哪怕只是件简单的东西。~
+== BAERIE ~我一定好好珍藏。还有，一件事……~
+== BC0AURA2 ~嗯？~
+== BAERIE ~我开始明白了……以我现在的样子，我得到了找到从前也许永远找不到的东西的机会。谢谢你帮我明白这一点。~
+== BC0AURA2 ~就像一个不管你怎样都在意你快乐的朋友？~
+== BAERIE ~正是。~
 DO ~GiveItemCreate("c0aaeri","AERIE",0,0,0)~ EXIT
 
 // Anomen
@@ -341,14 +341,14 @@ Range("C0Aura",15)
 Global("AnomenIsKnight","GLOBAL",0)
 Global("AnomenIsNotKnight","GLOBAL",0)
 Global("C0AuraAnomen1","GLOBAL",0)~ THEN BANOMEN C0AuraAnomen1
-~If you are to follow at our heels, gnome, I expect you to provide some worthwhile skills. I have little patience for the typical antics of your ilk.~ [C0BLANK]
+~你若跟在我们后面，侏儒，我指望你能拿出点有用的本事。我对你们这类人惯常的把戏没多少耐心。~ [C0BLANK]
 DO ~SetGlobal("C0AuraAnomen1","GLOBAL",1)~
-== BC0AURA2 ~Well, how rude! I haven't done anything to offend you yet, have I?~
-== BANOMEN ~I have seen plenty of your kind among the peasantry, and have yet to see a single one worth the land you occupy. I'll not have you taking advantage of our goodwill while giving nothing in return.~ 
-== BANOMEN ~If you think yourself an exception, then prove yourself.~
-== BC0AURA2 ~Prove my– <CHARNAME>'s the leader here, so I'll prove myself to <PRO_HIMHER>, thank you very much! Why don't YOU prove yourself, huh?~
-== BANOMEN ~That is hardly necessary. I am an esteemed member of an Order of the highest prestige, and a scion of noble birth, unlike yourself. What have I to prove?~
-== BC0AURA2 ~Blech. You're a great big jerk, you know that?~
+== BC0AURA2 ~哎，真没礼貌！我还没做什么冒犯你的事吧？~
+== BANOMEN ~我在农民里见过太多你这类人，至今没见一个配得上他占的那块地。我不会让你白占我们的善意、什么都不给。~ 
+== BANOMEN ~你若自认是个例外，就证明自己。~
+== BC0AURA2 ~证明我——<CHARNAME>才是这儿的队长，所以我要向<PRO_HIMHER>证明自己，多谢了！你怎么不证明你自己，嗯？~
+== BANOMEN ~那大可不必。我是极负声望的骑士团的尊贵成员，出身贵族，与你不同。我有什么要证明的？~
+== BC0AURA2 ~呸。你是个大混蛋，你知道吗？~
 EXIT
 
 CHAIN
@@ -359,17 +359,17 @@ Range("Anomen",15)
 Global("AnomenIsKnight","GLOBAL",1)
 Global("AnomenIsNotKnight","GLOBAL",0)
 Global("C0AuraAnomen1","GLOBAL",1)~ THEN BC0AURA2 C0AuraAnomen2
-~Anomen? Can I say something to you?~ [C0BLANK]
+~阿诺门？我能跟你说句话吗？~ [C0BLANK]
 DO ~SetGlobal("C0AuraAnomen1","GLOBAL",2)~
-== BANOMEN ~Of course. What is it?~
-== BC0AURA2 ~Just wanted to say, um... how should I say it? Congratulations on becoming a knight. I don't know what it means exactly, but it's clearly important to you. Everyone's very happy for you.~
-== BANOMEN ~That... is very kind. I thank you, Aura. It is, indeed, a moment I have yearned for all my life.~
-== BC0AURA2 ~I know it's not the same thing, but graduation was an unforgettable moment for me, too. I hope it's everything you wanted it to be.~
-== BANOMEN ~Your blessings are appreciated. And... forgive me for my earlier words. I know, what I said was terrible. They were uncouth, and I should have been better.~
-== BC0AURA2 ~Oh, that? I've practically forgotten all about it. But you reminded me. I'm sorry too. I shouldn't have called you 'a great big jerk'. Or stuck my tongue out at you.~
-== BANOMEN ~Hah. Well, mayhap I deserved to be called 'a great big jerk'. I shall hang that title in the recesses of my mind, to remind myself what not to be.~
-== BC0AURA2 ~...Ha ha.~
-== BANOMEN ~I jest, of course. But in earnestness, it is a good lesson, no?~
+== BANOMEN ~当然。什么事？~
+== BC0AURA2 ~只是想说，呃……该怎么说呢？恭喜你成了骑士。我不太懂那究竟意味着什么，可对你显然很重要。大家都为你高兴。~
+== BANOMEN ~那……真是好意。我谢谢你，奥拉。这确实是我一生渴望的时刻。~
+== BC0AURA2 ~我知道这不一样，可毕业对我也是个难忘的时刻。我希望这一切都如你所愿。~
+== BANOMEN ~你的祝福我很感激。还有……请原谅我先前的话。我知道我说得很糟。那些话粗鲁，我本该更好。~
+== BC0AURA2 ~哦，那个？我几乎都忘了。可你提醒了我。我也抱歉。我不该叫你“大混蛋”。也不该冲你吐舌头。~
+== BANOMEN ~哈。嗯，也许我确实该被叫作“大混蛋”。我要把这称号挂在脑子深处，提醒自己别成为那样。~
+== BC0AURA2 ~……哈哈。~
+== BANOMEN ~我当然是在说笑。可认真说，这是个好教训，不是吗？~
 EXIT
 
 CHAIN
@@ -380,22 +380,22 @@ Range("Anomen",15)
 Global("AnomenIsKnight","GLOBAL",1)
 Global("AnomenIsNotKnight","GLOBAL",0)
 Global("C0AuraAnomen2","GLOBAL",0)~ THEN BANOMEN C0AuraAnomen3
-~If I may, Aura... I wish to apologize.~ [C0BLANK]
+~若可以，奥拉……我想道歉。~ [C0BLANK]
 DO ~SetGlobal("C0AuraAnomen2","GLOBAL",1)~
-== BC0AURA2 ~Anomen, you already have. It's all water under the bridge now, okay?~
-== BANOMEN ~I feel I have not been sincere enough. And if it is not an apology you desire, then allow me to express my admiration instead.~
-== BC0AURA2 ~Me? I'm really not that impressive. You're the one who's achieved your life's goal, Anomen. I think that's what's admirable.~
-== BANOMEN ~Yes, I... have fulfilled my dream indeed. Yet somehow, I still do not feel fully whole. Perhaps it is because I have realized how little I truly knew. As a student of knowledge, perhaps you may hear me out, and offer any advice if you may...~
-== BC0AURA2 ~Sure.~
-== BANOMEN ~I am grateful. Then I shall burden with you with my thoughts. 'Tis undeniable that before my knighthood, I clung onto what sense of superiority I could justify to myself. And like a selfish child, I cared little for the motivations of anyone but myself.~
-== BANOMEN ~But... whether it is because of the sense of accomplishment I now feel, or because I have set some of my past burdens aside, I have become more aware. And I have seen the dedication of others I once saw as beneath me.~
-== BANOMEN ~I have witnessed the long hours in which you have worked your craft, so that our battles may end in decisive victory, I am well aware that it is not what brings you joy, for you are averse to all this bloodshed that I consider natural. Yet you dedicate yourself regardless. There is something from that which I could learn.~
-== BC0AURA2 ~I understand you, Anomen. And, well... I may not know anything about being a knight, but would you like to hear what my advice is?~
-== BANOMEN ~Certainly.~
-== BC0AURA2 ~We're all going to stumble once in a while. The more we push ourselves, no matter what it is we're aiming for, the more likely it'll happen. Sometimes it's what it takes to start paying attention to the ground again. But there's nothing wrong with that. All it takes is to pick yourself up and keep trying.~
-== BC0AURA2 ~And if you can't do it yourself, then... there's always someone who can help you. As long as you let them. That's why you have to keep your friends close, you know?~
-== BANOMEN ~I see. Yes, that is... quite logical. But... you would consider me a friend already? Despite all my obvious faults?~
-== BC0AURA2 ~Learning takes time. I might not look it, but I am quite a bit older than you, you know. I've had to do my own share of growing up already. So cheer up, won't you? I know you'll figure it all out. You're already on the right path.~
+== BC0AURA2 ~阿诺门，你已经道过了。如今都过去了，好吗？~
+== BANOMEN ~我觉得自己还不够真诚。若你想要的不是道歉，那就让我表达我的敬佩。~
+== BC0AURA2 ~我？我真没那么了不起。你才是实现了人生目标的人，阿诺门。我觉得那才值得敬佩。~
+== BANOMEN ~是的，我……确实实现了梦想。可不知怎的，我仍不觉得完整。也许是因为我意识到自己真正懂的太少。身为求知识的人，也许你愿意听我说，若有可能给点建议……~
+== BC0AURA2 ~当然。~
+== BANOMEN ~我很感激。那我就把想法倒给你。不可否认，在受封骑士之前，我紧抓着能为自己辩解的那点优越感。像个自私的孩子，我除了自己，很少在意别人的动机。~
+== BANOMEN ~可是……也许是因为我现在感到的成就感，也许是因为我放下了些过去的包袱，我变得更能察觉。我也看见了我曾视为低人一等者的尽心。~
+== BANOMEN ~我见过你长时间埋头做你的手艺，好让我们的战斗以决定性的胜利结束。我很清楚那不会给你快乐，因为你厌恶这一切在我看来自然的流血。可你仍尽心去做。这里面有我能学的东西。~
+== BC0AURA2 ~我懂你，阿诺门。还有，嗯……我可能对当骑士一窍不通，可你想听我的建议吗？~
+== BANOMEN ~当然。~
+== BC0AURA2 ~我们都会时不时摔一跤。我们越逼自己，不管目标是什么，就越容易发生。有时候正是这样才让人重新留意脚下。可这没什么错。只需要自己爬起来，继续试。~
+== BC0AURA2 ~若你自己做不到，那……总有人能帮你。只要你让他们帮。所以你得把朋友留在身边，你知道吗？~
+== BANOMEN ~我明白了。是的，那……很有道理。可是……你已经把我当朋友了？尽管我有那么多明显的缺点？~
+== BC0AURA2 ~学习需要时间。我看起来也许不像，可我比你大不少，你知道。我自己也经历过该长大的那段。所以打起精神，好吗？我知道你会想通的。你已经在正确的路上了。~
 EXIT
 
 // Cernd
@@ -407,15 +407,15 @@ Range("C0Aura",15)
 !StateCheck("C0Aura",CD_STATE_NOTVALID)
 AreaType(FOREST)
 Global("C0AuraCernd2","GLOBAL",0)~ THEN BCERND C0AuraCernd2
-~You are unusually alert here, Aura, like a rabbit keeping its ears high to hear the coming of predators. Whatever has gotten into you?~ [C0BLANK]
+~你在这儿异常警觉，奥拉，像只竖着耳朵听掠食者逼近的兔子。你到底怎么了？~ [C0BLANK]
 DO ~SetGlobal("C0AuraCernd2","GLOBAL",1)~
-== BC0AURA2 ~I do feel like a rabbit at times here, Cernd. Truth is... I'm afraid a bear could be waiting behind the trees, waiting to leap at me!~
-== BCERND ~A reasonable fear, perhaps, but... such an aversion only held against bears goes beyond natural instinct. You do not have have this response towards wolves, leopards, nor spiders?~
-== BC0AURA2 ~Sometimes those scare me too, but I'm not afraid of them if they're not chasing me. But my heart starts pounding just from hearing a hint of a bear's growling.~
-== BCERND ~This indicates a traumatic trigger of some capacity... I may be able to assist in coping, if you are not opposed to facing aspects of your fear.~
-== BC0AURA2 ~A-are you going to make me stare down a bear? No, no, a thousand times no!~
-== BCERND ~Nothing like that. There will be no actual bears involved, that I can assure you.~
-== BC0AURA2 ~No bears? You promise? Well... okay then. I'd like to be able to take a stroll through a forest without keeping my ears perked for grunts...~
+== BC0AURA2 ~在这儿我有时真觉得自己像只兔子，瑟恩德。事实是……我怕树后可能藏着只熊，等着扑向我！~
+== BCERND ~这恐惧也许合理，可是……只对熊这样，已经超出自然本能了。你对狼、豹、蜘蛛没有这种反应？~
+== BC0AURA2 ~有时那些也吓我，可它们不追我我就不怕。可我只听到一点熊的低吼，心就开始猛跳。~
+== BCERND ~这表明某种创伤触发……你若不怕面对恐惧的某些方面，我也许能帮你应对。~
+== BC0AURA2 ~你——你要逼我瞪着熊看？不，不，一千个不！~
+== BCERND ~不是那样。不会有真的熊牵涉其中，我向你保证。~
+== BC0AURA2 ~没有熊？你保证？那……好吧。我倒希望能漫步森林，不用一直竖着耳朵听呼噜声……~
 EXIT
 
 CHAIN
@@ -424,16 +424,16 @@ Range("C0Aura",15)
 !StateCheck("Cernd",CD_STATE_NOTVALID)
 !StateCheck("C0Aura",CD_STATE_NOTVALID)
 Global("C0AuraCernd2","GLOBAL",1)~ THEN BCERND C0AuraCernd3
-~Remember, do not open your eyes. Just keep calm and breathe. And listen.~ [C0BLANK]
+~记住，别睁眼。保持平静，呼吸。然后听。~ [C0BLANK]
 DO ~SetGlobal("C0AuraCernd2","GLOBAL",2)~
-== BC0AURA2 ~Keep calm and breathe... keep calm and breathe... ugh! Nope, can't do it.~
-== BCERND ~Your focus is disrupted too easily. Does the mere sound of a bear's breathing cause you such distress?~
-== BC0AURA2 ~Sorry, Cernd. As soon as I hear the growling and snorting, all I feel is a chill and the hairs on my body standing up.~
-== BCERND ~This trauma has clearly sunk its way into the roots of your psyche. What incident caused this, Aura?~
-== BC0AURA2 ~I... I really don't remember all that well, Cernd. It all happened really fast... one moment I heard the roar, and then I saw it behind me and was paralyzed from shock. I think I fainted not long afterwards.~
-== BCERND ~I see. And have you had such an extreme reaction to seeing bears since then?~
-== BC0AURA2 ~N–not anymore. I'm usually coherent enough to run in the opposite direction nowadays.~
-== BCERND ~Well... an improvement in some ways, I suppose, though you will make no progress in confronting your fears like this. I shall have to approach this in another manner.~
+== BC0AURA2 ~保持平静，呼吸……保持平静，呼吸……呃！不，做不到。~
+== BCERND ~你的注意力太容易被打断。光是熊的呼吸声就让你这么难受？~
+== BC0AURA2 ~抱歉，瑟恩德。我一听到那低吼和鼻息，就只觉得一阵寒意，浑身汗毛都竖起来。~
+== BCERND ~这创伤显然已扎进你心灵的根里。是什么事造成的，奥拉？~
+== BC0AURA2 ~我……我真记不太清了，瑟恩德。一切发生得太快……一瞬间我听到吼声，然后看见它在我身后，吓得动不了。我想不久后我就昏过去了。~
+== BCERND ~我明白了。那之后你见到熊还有这样极端的反应吗？~
+== BC0AURA2 ~不——不再了。如今我一般还能清醒到往反方向跑。~
+== BCERND ~嗯……某些方面算是进步，我想，可这样你面对恐惧不会有进展。我得换个方式处理。~
 EXIT
 
 // Dorn
@@ -444,10 +444,10 @@ Range("Dorn",15)
 !StateCheck("Dorn",CD_STATE_NOTVALID)
 !StateCheck("C0Aura",CD_STATE_NOTVALID)
 Global("C0AuraDorn1","GLOBAL",0)~ THEN BC0AURA2 C0AuraDorn1
-~Dorn, have you ever considered, um... being a little bit, I don't know... nicer?~ [C0BLANK]
+~多恩，你有没有想过，呃……稍微，我不知道……和气一点？~ [C0BLANK]
 DO ~SetGlobal("C0AuraDorn1","GLOBAL",1)~
-== BDORN ~Should I waste time on extending our foes the courtesy of pleasantries before spitting them upon my blade?~
-== BC0AURA2 ~No, I meant towards... oh, forget it. I'm not sure you understand the difference.~
+== BDORN ~我该把时间浪费在把敌人串上刀尖之前、先跟他们讲客套话上吗？~
+== BC0AURA2 ~不，我是说对……哦，算了。我不确定你懂这其中的区别。~
 EXIT
 
 CHAIN
@@ -456,11 +456,11 @@ Range("C0Aura",15)
 !StateCheck("Dorn",CD_STATE_NOTVALID)
 !StateCheck("C0Aura",CD_STATE_NOTVALID)
 Global("C0AuraDorn2","GLOBAL",0)~ THEN BDORN C0AuraDorn3
-~You are pitifully weak, little girl, with barely a grasp on your own fate. But I am certain you already know that. I am more disgusted with <CHARNAME>'s indulgent virtues for allowing you to remain.~ [C0BLANK]
+~你软弱得可怜，小丫头，连自己的命运都几乎握不住。不过我肯定你早知道了。我更厌恶<CHARNAME>那纵容的善心，容你留下。~ [C0BLANK]
 DO ~SetGlobal("C0AuraDorn2","GLOBAL",1)~
-== BC0AURA2 ~Don't insult <CHARNAME>, Dorn. I don't mind whatever you have to say about me, but it's not <PRO_HISHER> fault.~
-== BDORN ~Oh? So you do have the capacity to stand up for something after all. But not yourself.~
-== BC0AURA2 ~It's called caring about others. You could try it out sometime.~
+== BC0AURA2 ~别骂<CHARNAME>，多恩。你说我什么我都不介意，可这不是<PRO_HISHER>的错。~
+== BDORN ~哦？看来你毕竟还有为某样东西站出来的能力。只是不为你自己。~
+== BC0AURA2 ~这叫在乎别人。你哪天也可以试试。~
 EXIT
 
 CHAIN
@@ -471,16 +471,16 @@ Range("C0Aura",15)
 Global("OHD_urgothoz_patron","GLOBAL",0)
 Global("OHD_azothet_patron","GLOBAL",0)
 Global("C0AuraDorn3","GLOBAL",0)~ THEN BDORN C0AuraDorn4
-~Why do you continue to stare at me, you meek little runt?~ [C0BLANK]
+~你为什么一直盯着我看，你这温顺的小矮子？~ [C0BLANK]
 DO ~SetGlobal("C0AuraDorn3","GLOBAL",1)~
-== BC0AURA2 ~I– I didn't mean to. I just don't know how to put this. You... well, you're free.~
-== BDORN ~And?~
-== BC0AURA2 ~And, well... now that you're free of the obligations of evil, shouldn't you... change?~
-== BDORN ~I *have* changed, foolish girl.~
-== BC0AURA2 ~I didn't mean your loyalties. I meant... changing for the better.~
-== BDORN ~What reason do I have to make such a change? By slaying my former 'patrons', I have reclaimed my own self. Now, I may fufill *my* desires, and no other's.~
-== BC0AURA2 ~Then you haven't changed after all... it was never the demons that controlled you. It was always you.~
-== BDORN ~You were naive to have ever thought otherwise.~
+== BC0AURA2 ~我——我不是故意的。我只是不知道怎么说。你……嗯，你自由了。~
+== BDORN ~然后？~
+== BC0AURA2 ~然后，嗯……既然你摆脱了邪恶的束缚，你不该……改变吗？~
+== BDORN ~我*已经*变了，愚蠢的丫头。~
+== BC0AURA2 ~我不是说你的效忠。我是说……变得更好。~
+== BDORN ~我有什么理由做这样的改变？杀掉我以前的“主人”，我已夺回我自己。如今我可以满足*我*的欲望，而不是别人的。~
+== BC0AURA2 ~那你就根本没变……从来不是恶魔在控制你。一直是你自己。~
+== BDORN ~你若曾以为不是，那就太天真了。~
 EXIT
 
 // Edwin
@@ -492,14 +492,14 @@ Range("C0Aura",15)
 !StateCheck("C0Aura",CD_STATE_NOTVALID)
 Global("C0AuraEdwinBG1Banter","GLOBAL",0)
 Global("C0AuraKnowsBG1","GLOBAL",1)~ THEN BEDWIN C0AuraEdwinBG1
-~I expect that your studies of the arcana have improved tremendously since the last time we met, girl? (After all, with my tutelage, that is only the least I expect.)~ [C0BLANK]
+~我指望你对奥术的研习自我们上次见面后大有长进，丫头？（毕竟有我的教导，那只是我最低的期待。）~ [C0BLANK]
 DO ~SetGlobal("C0AuraEdwinBG1Banter","GLOBAL",1)~
-== BC0AURA2 ~Ooh, yes. I've been mapping out the various connections between the schools of magic, cataloguing the various forms of rune magic I've studies, even wrote an analysis on the differences in the Weave from before and after the Time of Troubles.~
-== BEDWIN ~Hmm, yes, very good. I expect that, should you one day produce an article on magery worth note, you shall provide your most esteemed tutor with the appropriate credit. (And I would not be adverse to receiving a portion of said publication's royalties, either...)~
-== BC0AURA2 IF ~!Class(Myself,MAGE_ALL) !Class(Myself,BARD_ALL)~ THEN ~I think I might even be able to start casting spells myself soon! And then I'll surpass you, just you wait!~
-== BC0AURA2 IF ~OR(2) Class(Myself,MAGE_ALL) Class(Myself,BARD_ALL)~ THEN ~I think I might even become a better mage than you one day!~
-== BEDWIN ~Don't be conceited, girl. If your head grew too large, it would topple your tiny body.~
-== BC0AURA2 ~Heehee... just kidding.~
+== BC0AURA2 ~哦，有。我一直在梳理各魔法学派之间的种种联系，编目我研究过的各种符文魔法形式，甚至写了一篇分析，论动荡之年前后魔网的差异。~
+== BEDWIN ~嗯，好，很好。我指望你哪天写出一篇值得一提的魔法论文时，会给你最尊贵的导师适当的署名。（我也不会反对分得那份出版版税……）~
+== BC0AURA2 IF ~!Class(Myself,MAGE_ALL) !Class(Myself,BARD_ALL)~ THEN ~我想我很快甚至能自己施法了！然后我就会超过你，你等着！~
+== BC0AURA2 IF ~OR(2) Class(Myself,MAGE_ALL) Class(Myself,BARD_ALL)~ THEN ~我想我有一天甚至能成为比你更好的法师！~
+== BEDWIN ~别自负，丫头。你脑袋若长得太大，会把你这小身子压翻。~
+== BC0AURA2 ~嘿嘿……开玩笑的。~
 EXIT
 
 CHAIN
@@ -508,16 +508,16 @@ Range("Edwin",15)
 !StateCheck("Edwin",CD_STATE_NOTVALID)
 !StateCheck("C0Aura",CD_STATE_NOTVALID)
 Global("C0AuraEdwin1","GLOBAL",0)~ THEN BC0AURA2 C0AuraEdwin1
-~Edwin, do you have a moment?~ [C0BLANK]
+~埃德温，你有空吗？~ [C0BLANK]
 DO ~SetGlobal("C0AuraEdwin1","GLOBAL",1)~
-== BEDWIN ~I have precious few to spare. If you seek my attention, it had best be worth my time.~
-== BC0AURA2 ~Well, I was hoping you could help me with some of the details of this spell I've been researching... I don't think it's one I've ever seen before, and it could be very rare... possibly dangerous.~
-== BEDWIN ~(Is it, now...?) Hmm... I can do this, girl, but my valuable knowledge comes with a price. I expect a share of the knowledge this tome holds, of course... as well as some of those foreign pastries I know you are hoarding.~
-== BC0AURA2 ~Sure. It's not like I was planning on keeping the knowledge to myself to begin with. About the cakes, though... er, you might be a little too late. I'll make you something nice as a thank-you gift later though, if you want.~
-== BEDWIN ~Deal. Now, hand that tome over. Yes, this appears simple enough... nothing beyond a mage of my skill. But... wait—~
-== BEDWIN ~This is... this is no spell of great power! It... well, ancient perhaps, and certainly rare, but, but... 'tis a mere enchantment for self-laundering clothing!~
-== BC0AURA2 ~Oh! I was right. I thought it seemed too plain at first, but I kept a note in the side just in case. Thanks, Edwin! I'll have it scribed for you by the end of the day.~
-== BEDWIN ~Bah! I have no use for such a paltry spell. (Actually, on second thought, it would be very convenient...) However, as I expect you to hold to your end of the bargain, girl, I shall... take this as a temporary compensation. Yes, it'll do.~
+== BEDWIN ~我能匀出来的极少。你若想吸引我注意，最好值得我花时间。~
+== BC0AURA2 ~嗯，我希望你能帮我看看我一直在研究的这道法术的一些细节……我想我从没见过它，它可能非常稀有……也许还很危险。~
+== BEDWIN ~（是吗……？）嗯……我能做，丫头，可我这宝贵的知识有价钱。我要分享这书里记载的知识，当然……还要你藏着的那些外国点心。~
+== BC0AURA2 ~当然。我本来也没打算把知识据为己有。不过那些蛋糕……呃，你也许来晚了一点。可你若想要，我以后做点好东西当谢礼。~
+== BEDWIN ~成交。现在把书递过来。对，这看着够简单……没什么超出我这等法师的。可是……等等——~
+== BEDWIN ~这是……这根本不是强大的法术！它……嗯，也许古老，也确实稀有，可是，可是……这不过是让衣服自洁的附魔！~
+== BC0AURA2 ~哦！我说对了。起初我觉得它太朴素，可我在旁边记了个备注以防万一。谢谢，埃德温！我今天之内就让人替你抄好。~
+== BEDWIN ~呸！这种微不足道的法术对我没用。（其实，再想想，它倒很方便……）不过，既然我指望你守约，丫头，我就……把这当作临时的补偿。行，可以。~
 EXIT
 
 CHAIN
@@ -526,14 +526,14 @@ Range("C0Aura",15)
 !StateCheck("Edwin",CD_STATE_NOTVALID)
 !StateCheck("C0Aura",CD_STATE_NOTVALID)
 Global("C0AuraEdwin1","GLOBAL",1)~ THEN BEDWIN C0AuraEdwin1
-~Your thoughts leave your mouth too easily, girl. An aspiring mage must never allow their thoughts to be so easily given, lest they be used against them.~ [C0BLANK]
+~你的心思太容易从嘴里漏出来，丫头。有志的法师绝不能让心思这么轻易给人，免得被人拿来对付自己。~ [C0BLANK]
 DO ~SetGlobal("C0AuraEdwin1","GLOBAL",2)~
-== BC0AURA2 ~Hmm? But the exchange of knowledge is exactly how we advance our understanding, Edwin. How can we hope to improve if we keep all our ideas bottled up?~
-== BEDWIN ~Not all who value knowledge seek to advance any but themselves, girl. Someone of devious intent may see fit to silence you for good, once they have wrought all worth they deem of you.~
-== BC0AURA2 ~That's rather cruel, Edwin, but I can't deny there's terrible people in the world who only think that way. Not you, though, right?~
-== BEDWIN ~Me? Well... hmm... (Blast it. What am I doing, helping this naive child? Am I getting sentimental...?)~
-== BC0AURA2 ~Edwin?~
-== BEDWIN ~Eh... no, certainly not. I can most certainly be trusted, of that I promise. (So long as you are useful...)~
+== BC0AURA2 ~嗯？可交流知识正是我们推进理解的方式，埃德温。若把所有想法都闷着，我们怎能指望长进？~
+== BEDWIN ~重视知识的人，并不都想推进除自己以外的人，丫头。心怀歹意的人，一旦从你身上榨尽他们认为的价值，也许就会让你永远闭嘴。~
+== BC0AURA2 ~这挺残忍，埃德温，可我无法否认世上有可怕的人只那么想。不过不是你，对吧？~
+== BEDWIN ~我？嗯……嗯……（该死。我在干什么，帮这个天真的孩子？我是不是变得多愁善感了……？）~
+== BC0AURA2 ~埃德温？~
+== BEDWIN ~呃……不，当然不是。我绝对可以信任，这一点我保证。（只要你有用……）~
 EXIT
 
 CHAIN
@@ -543,31 +543,31 @@ Range("Edwin",15)
 !StateCheck("C0Aura",CD_STATE_NOTVALID)
 Gender("Edwin",FEMALE)
 Global("C0AuraEdwina1","GLOBAL",0)~ THEN BC0AURA2 C0AuraEdwina1
-~Um, how are you holding up, Edwin...a?~ [C0BLANK]
+~呃，你还好吗，埃德温……娜？~ [C0BLANK]
 DO ~SetGlobal("C0AuraEdwina1","GLOBAL",1)~
-== BEDWIN ~What? Why did you place emphasis on my name, girl?! Are you trying to rub in the humiliation?~
-== BC0AURA2 ~No! I just wanted to ask you if you... er, are you feeling alright?~
-== BEDWIN ~Alright?! I am most certainly not! I have been exploited, ensorcelled, and wholly... humiliatingly emasculated! You would not understand the agony in several lifetimes!~
-== BC0AURA2 ~I'm sure it's not... well, maybe it is that bad. If there's anything I could do to help...~
-== BEDWIN ~Help?! This blighted Netherese magic has eluded my every attempt to even discern its nature, much less undo its effects. Your meager knowledge of the arcane would be as though trying to dispel the night with a candle!~
-== BC0AURA2 ~I know, I know. It's not exactly an easy curse to break. That's why I've been looking into anything related to Netherese enchantments to see if there's anything relevant. Just in case something like this has happened to someone else before.~
-== BEDWIN ~...H–have you really, now?~
-== BC0AURA2 ~So far, no luck, but I'll keep searching. And if nothing else, if there's anything I can do to help you feel more comfortable until this gets fixed, let me know. I'm not bad with a needle and thread either, if your robes need refitting!~
-== BEDWIN ~That's... erm, I suppose I should say... *ahem* You have my deepest appreciation. (Blast! I am growing soft... is this cursed affliction affecting my psyche? I must regain my original form this instant!)~
-== BC0AURA2 ~Chin up, Edwin! You'll make it through this. At least, I hope you will.~
+== BEDWIN ~什么？你为什么在我名字上加重音，丫头？！你是想往我的羞辱上撒盐吗？~
+== BC0AURA2 ~不！我只是想问你是否……呃，你感觉还好吗？~
+== BEDWIN ~还好？！我当然不好！我被利用、被施法，还被彻底……羞辱性地阉割了！你几辈子都不会懂这份痛苦！~
+== BC0AURA2 ~我肯定没那么……嗯，也许真有那么糟。若有什么我能帮忙的……~
+== BEDWIN ~帮忙？！这该死的耐色瑞尔魔法躲过了我每一次试图辨明其本性的努力，更别说解除它的效果了。你那点可怜的奥术知识，就像想用一根蜡烛驱散黑夜！~
+== BC0AURA2 ~我知道，我知道。这不是道容易破的诅咒。所以我才一直在查一切跟耐色瑞尔附魔有关的东西，看有没有相关的。以防以前有人也碰上过这种事。~
+== BEDWIN ~……你——你真查了？~
+== BC0AURA2 ~至今没进展，可我会继续查。至少，若能有什么让你在这事修好之前舒服一点的办法，告诉我。我针线活也不差，你的袍子若需要改，我可以帮忙！~
+== BEDWIN ~那……呃，我想我该说……*咳* 我深表感激。（该死！我在变软……这诅咒的折磨影响到我的心智了吗？我必须立即恢复本来的样子！）~
+== BC0AURA2 ~抬起头，埃德温！你会熬过去的。至少，我希望你会。~
 EXIT
 
 INTERJECT BEDWIN 41 C0AuraMinscEdwinConflict
-== BC0AURA2 IF ~IsValidForPartyDialog("C0Aura")~ THEN ~Edwin! You mustn't say such terrible things. Shame on you!~
-== BEDWIN ~I speak only what I percieve as the unclouded, veritable truth, no less.~
-== BC0AURA2 ~Oh, just stop it!~
-== BMINSC ~Aura, this wizard treads the dangerous line between insults and... unforgivable, even worse insults! Dynaheir's honor demands I teach him the meaning of respect with the weight of my boot!~
-== BC0AURA2 ~Minsc, calm down, Edwin didn't mean what he said... probably... you don't have to—~
-== BEDWIN ~Oh, I beg to differ.~
-== BC0AURA2 ~Please just stop talking...~
-== BMINSC ~Rgh... Minsc has taken some time to calm down, and breathe, and think... the red wizard's evil tongue deserves the hot, wrathful pliers of justice, but there should be a time and place... that is what Dynaheir would say... Minsc thinks...~
-== BC0AURA2 ~That's right, Minsc... and Edwin... I guess it's too much to ask for you to say sorry?~
-== BEDWIN ~Bah! Not a chance. But this debate has lost its appeal with your unsolicited interference, girl. I'll spare the witless one from further embarrassment... this time.~
+== BC0AURA2 IF ~IsValidForPartyDialog("C0Aura")~ THEN ~埃德温！你不能说这么可怕的话。真羞耻！~
+== BEDWIN ~我说的只是我所见无云遮掩的确切真相，不多不少。~
+== BC0AURA2 ~哦，住口！~
+== BMINSC ~奥拉，这巫师走在侮辱与……不可原谅、甚至更糟的侮辱之间！狄娜希尔的荣誉要求我用靴子的分量教他尊重的含义！~
+== BC0AURA2 ~明斯克，冷静，埃德温不是那个意思……大概……你不用——~
+== BEDWIN ~哦，我不敢苟同。~
+== BC0AURA2 ~请你就别说话了……~
+== BMINSC ~嗄……明斯克花了些时间冷静、呼吸、思考……红巫师的毒舌该受正义炽热、愤怒的钳子，可该有时有地……狄娜希尔会这么说……明斯克觉得……~
+== BC0AURA2 ~对，明斯克……还有埃德温……我想请你道歉，这要求过分了吗？~
+== BEDWIN ~呸！没门。可你这不请自来的插嘴让这场辩论没了趣味，丫头。我就饶了这没脑子的家伙，免他继续丢脸……这次。~
 EXIT
 
 // Haer'Dalis
@@ -578,21 +578,21 @@ Range("C0Aura",15)
 !StateCheck("HaerDalis",CD_STATE_NOTVALID)
 !StateCheck("C0Aura",CD_STATE_NOTVALID)
 Global("C0AuraHaerDalis1","GLOBAL",0)~ THEN BHAERDA C0AuraHaerDalis1
-~A recollection just crossed my mind... I saw you once, my little rosefinch, not too far from the Bridge District, yes?~ [C0BLANK]
+~有个回忆刚闪过我脑海……我见过你一次，我的小朱雀，就在桥区不远，对吗？~ [C0BLANK]
 DO ~SetGlobal("C0AuraHaerDalis1","GLOBAL",1)~
-== BC0AURA2 ~Hmm, actually... maybe. Might you remember what I was doing at the time?~
-== BHAERDA ~I certainly do... as I remember it, you were among the market stalls, sitting opposite a young dame, writing a correspondance for her beloved.~
-== BC0AURA2 ~Oh, yes. I rent a stall there to sell a few spare parts from my workshop... but most of the time, I find more work in writing letters for people instead.~
-== BHAERDA ~Aye, a valuable service indeed in a city of unlettered berks, and one that attracts those with messages both chaste and... otherwise.~
-== BHAERDA ~Do you recall this one, Aura? "My dearest Elvira, how I long for the fiery touch of your—"~
-== BC0AURA2 ~Ugh, stop, stop! Don't remind me of that one. I think I was beet red the whole time while writing it...~
-== BC0AURA2 ~Wait, how do you know about that?~
-== BHAERDA ~*laugh* A most risque piece of work, that. One does not forget it easily. In fact, I still hold onto it to this day... as you can see. Your penmanship is most exquisite.~
-== BC0AURA2 ~What? Then... you were the one who asked me to write that letter? But... but... you looked and sounded completely different!~
-== BHAERDA ~An actor must have complete agency over his appearance and voice, Aura. That goes for beyond the acting stage as well.~
-== BC0AURA2 ~Ooh, I can't believe you. I would've asked for your autograph if I had known who you were too!~
-== BHAERDA ~I would be most pleased to write one now, as thanks for your entertaining gift to me. Would that satisfy you?~
-== BC0AURA2 ~Y–yes! Just please don't ask me to write you another one of those letters in the future... *blush*~
+== BC0AURA2 ~嗯，其实……也许吧。你记得我那时在做什么吗？~
+== BHAERDA ~当然记得……照我记的，你在集市摊子中间，坐在一位年轻小姐对面，替她给心上人写情书。~
+== BC0AURA2 ~哦，对。我在那儿租了个摊子，卖工坊里的一些多余零件……可多数时候，我替人写信的活儿更多。~
+== BHAERDA ~嗯，在这座满是文盲蠢货的城里，这确实是值钱的服务，也吸引那些消息正经与……不那么正经的人。~
+== BHAERDA ~你还记得这封吗，奥拉？“我最亲爱的艾尔薇拉，我多么渴望你那炽热的触碰——”~
+== BC0AURA2 ~呃，停下，停下！别再提那封。我想我写的时候整张脸红透……~
+== BC0AURA2 ~等等，你怎么知道那封？~
+== BHAERDA ~*笑* 那真是篇最香艳的作品。人很难忘掉。其实我到今天还留着……你看。你的字迹极其精美。~
+== BC0AURA2 ~什么？那……你就是那个叫我写那封信的人？可是……可是……你样子和声音完全不同！~
+== BHAERDA ~演员必须对自己的容貌与嗓音有完全的掌控，奥拉。这在舞台之外也一样。~
+== BC0AURA2 ~哦，我真不敢信你。要早知道你是谁，我还会要你的签名！~
+== BHAERDA ~现在我很乐意写一个，答谢你给我的这番有趣的礼物。这样能让你满意吗？~
+== BC0AURA2 ~是——是的！只求你以后别再叫我给你写那种信了……*脸红*~
 EXIT
 
 CHAIN
@@ -601,20 +601,20 @@ Range("HaerDalis",15)
 !StateCheck("HaerDalis",CD_STATE_NOTVALID)
 !StateCheck("C0Aura",CD_STATE_NOTVALID)
 Global("C0AuraHaerDalis2","GLOBAL",0)~ THEN BC0AURA2 C0AuraHaerDalis2
-~I, um... did I mention I watched a few of the Sigil Troupe's plays, Haer'Dalis? I'm a huge fan.~ [C0BLANK]
+~我，呃……我提过我看过几次印记剧团的戏吗，海尔达利？我是个大戏迷。~ [C0BLANK]
 DO ~SetGlobal("C0AuraHaerDalis2","GLOBAL",1)~
-== BHAERDA ~Aye, so I've heard. Have you a favorite among them, little rosefinch?~
-== BC0AURA2 ~Hmm, that's a hard question... I loved "The Swan's Song"... "The Magic Puzzle" had a wonderful story too... but "In Death's Halls" brought me to tears... ...argh, I can't answer that! They're all great.~
-== BHAERDA ~I have a strange fondness for the last one... it was based off a tale within reality, or so I've heard.~
-== BC0AURA2 ~Did Ms. Raelis write all of your plays?~
-== BHAERDA ~The troupe does study works by other artists, but our own stories were penned by Raelis, none other. Ah, save for one... "The Twin Bells of Mourning". That script was written by yours truly.~
-== BC0AURA2 ~You wrote that one? It was beautiful... but I could barely watch the ending. It was so sad... how could you make Leon and Rosa suffer like that, and then just... have them die?~
-== BHAERDA ~I specialize in the theme of tragedy, Aura. Although... perhaps this may seem strange to you, but I believe the ending was a satisfactory one for the lovers, ultimately.~
-== BC0AURA2 ~How? Their families abandoned them, their companions were slain, Leon's brother betrayed him... and in the end, they were completely alone, left with nothing...~
-== BHAERDA ~Indeed. But such is the price paid for avoiding the inevitability of oblivion. And in their final moments, finally free of all their fear, pain and sorrow that chained them to their existences, a moment in which they finally saw fit to surrender... "Leon and Rosa, embracing each other closely, finally... if only for a moment... knew true, untainted joy."~
-== BHAERDA ~They could have lived on, continuing their fight to claim some chance of lasting happiness... and perhaps they may have succeeded. But along the way, they would have known nothing but more pain and despair, and ultimately, oblivion will claim them nonetheless. I believed that finality was the greatest mercy I could grant them.~
-== BC0AURA2 ~It... it makes sense, I suppose. But thinking about it still hurts...~
-== BHAERDA ~And so it should. But fear not, my little rosefinch. Pain is as fleeting as joy, and so it will fade in time, as well.~
+== BHAERDA ~嗯，我听说了。其中有你偏爱的吗，小朱雀？~
+== BC0AURA2 ~嗯，这问题好难……我喜欢《天鹅之歌》……《魔法拼图》的故事也很妙……可《在死亡的厅堂》让我哭了……唉，我答不上来！都太好了。~
+== BHAERDA ~我对最后那一出有种奇怪的偏爱……听说它是根据现实中的某个故事改编的。~
+== BC0AURA2 ~你们所有的戏都是雷利斯女士写的吗？~
+== BHAERDA ~剧团也研习别的艺人的作品，可我们自己的故事都是雷利斯一人写的。啊，除了一出……《哀悼的双钟》。那剧本是在下写的。~
+== BC0AURA2 ~那出是你写的？它很美……可我几乎看不下去结局。太悲伤了……你怎么能让里昂和罗莎受那样的苦，然后就直接……让他们死？~
+== BHAERDA ~我专攻悲剧题材，奥拉。不过……这对你也许奇怪，可我相信对这对恋人来说，那结局最终是令人满意的。~
+== BC0AURA2 ~怎么会？他们的家人抛弃了他们，同伴被杀，里昂的兄弟背叛了他……最后他们一无所有，彻底孤单……~
+== BHAERDA ~正是。可这就是逃避湮灭之必然所要付出的代价。而在他们最后的时刻，终于摆脱了一切把他们锁在存在中的恐惧、痛苦与悲伤，终于在那一刻甘心放手……“里昂与罗莎紧紧相拥，终于……哪怕只有一瞬……懂得了真正、未受玷污的喜悦。”~
+== BHAERDA ~他们本可以活下去，继续战斗、争取某种持久幸福的机会……也许他们本会成功。可一路走来，他们只会知道更多的痛苦与绝望，而湮灭终究还是会收走他们。我相信，终结是我能赐予他们最大的慈悲。~
+== BC0AURA2 ~这……我想说得通。可想想还是难受……~
+== BHAERDA ~也该如此。可别怕，我的小朱雀。痛苦跟喜悦一样短暂，所以它也会随时间淡去。~
 EXIT
 
 CHAIN
@@ -623,19 +623,19 @@ Range("HaerDalis",15)
 !StateCheck("HaerDalis",CD_STATE_NOTVALID)
 !StateCheck("C0Aura",CD_STATE_NOTVALID)
 Global("C0AuraHaerDalis3","GLOBAL",0)~ THEN BC0AURA2 C0AuraHaerDalis3
-~Hm-hm-hm-hmmm...~ [C0BLANK]
+~哼—哼—哼—哼……~ [C0BLANK]
 DO ~SetGlobal("C0AuraHaerDalis3","GLOBAL",1)~
-== BC0AURA2 ~"Oh, how I long for snacks and treats
-and plates stacked with cakes and sweets,
-Ca-ra-mels and cho-co-lates and jams and creams
-That fill my mind and heart with sweetest dreams..."~
-== BHAERDA ~Why, our little rosefinch's sweet tooth appears to have driven her to song! Mayhaps she is peckish, my raven. Shall we stop for tea?~
-== BC0AURA2 ~H–h–HAER'DALIS! You're not supposed to be eavesdropping! Ooh, this is just embarrassing!~
-== BHAERDA ~Oh, I held no intention of rudely intruding upon your charming little tune, but 'twas my unexpected blessing that I had. Who would have thought you could sing with such confidence when motivated by the thought of sweet delicacies?~
-== BC0AURA2 ~N–no! No, no, no, that's not... well, maybe...~
-== BHAERDA ~Perhaps, were I to treat you to a plate of desserts and confectionaries, I might draw forth more melodies? Apple tarts, candied figs, blueberry pie? Or would you prefer butterscotch bonbons, éclairs, petits gâteaux?~
-== BC0AURA2 ~Mm—mmmmmgh... so hungry... but, so embarassed...~
-== BHAERDA ~Ah, the rosefinch's mouth is watering with anticipation. I shall cease with the teasing for now, I think, and save it for our future soiree. Ha ha ha...~
+== BC0AURA2 ~“哦，我多么渴望点心与甜食
+渴望那一盘盘点心糖果，
+焦糖、巧克、果酱与奶油
+把我的心思都填满最甜美的梦……”~
+== BHAERDA ~哎，我们小朱雀的甜牙似乎把她逼得唱起来了！也许她饿了，我的渡鸦。我们要停下来喝茶吗？~
+== BC0AURA2 ~海——海——海尔达利！你不该偷听的！哦，这太难堪了！~
+== BHAERDA ~哦，我并无意粗鲁地闯进你那可爱的小调，可偏偏我有这意外的福气。谁会想到，一想到甜食，你就能这么有自信地唱？~
+== BC0AURA2 ~不——不！不，不，不，不是……嗯，也许……~
+== BHAERDA ~也许，若我请你吃一盘甜点糖果，能引出更多旋律？苹果挞、蜜饯无花果、蓝莓派？还是你更喜欢奶油糖果、闪电泡芙、小蛋糕？~
+== BC0AURA2 ~嗯——嗯嗯嗯……好饿……可又好难堪……~
+== BHAERDA ~啊，朱雀的嘴都因期待而流口水了。我想我暂且不再逗你，留到我们将来的晚宴。哈哈哈……~
 EXIT
 
 // Hexxat
@@ -646,17 +646,17 @@ Range("C0Aura",15)
 !StateCheck("Hexxat",CD_STATE_NOTVALID)
 !StateCheck("C0Aura",CD_STATE_NOTVALID)
 Global("C0AuraHexxat1","GLOBAL",0)~ THEN BHEXXAT C0AuraHexxat1
-~Aura.~ [C0BLANK]
+~奥拉。~ [C0BLANK]
 DO ~SetGlobal("C0AuraHexxat1","GLOBAL",1)~
-== BC0AURA2 ~Y–yes?~
-== BHEXXAT ~You don't have to flinch every time I speak. I'm not going to hurt you.~
-== BC0AURA2 ~I, I know, I'm just...~
-== BHEXXAT ~Afraid of me?~
-== BC0AURA2 ~N–no. I... um, I'm sorry.~
-== BHEXXAT ~You don't have to apologize.~
-== BC0AURA2 ~S-sorry...~
-== BHEXXAT ~Stop.~
-== BC0AURA2 ~Oh, um... right.~
+== BC0AURA2 ~是——是？~
+== BHEXXAT ~你不必每次我开口就缩一下。我不会伤你。~
+== BC0AURA2 ~我，我知道，我只是……~
+== BHEXXAT ~怕我？~
+== BC0AURA2 ~不——不。我……呃，对不起。~
+== BHEXXAT ~你不用道歉。~
+== BC0AURA2 ~对——对不起……~
+== BHEXXAT ~停下。~
+== BC0AURA2 ~哦，呃……对。~
 EXIT
 
 CHAIN
@@ -665,15 +665,15 @@ Range("C0Aura",15)
 !StateCheck("Hexxat",CD_STATE_NOTVALID)
 !StateCheck("C0Aura",CD_STATE_NOTVALID)
 Global("C0AuraHexxat1","GLOBAL",1)~ THEN BHEXXAT C0AuraHexxat2
-~May I ask you something, Aura?~ [C0BLANK]
+~我能问你件事吗，奥拉？~ [C0BLANK]
 DO ~SetGlobal("C0AuraHexxat1","GLOBAL",2)~
-== BC0AURA2 ~N–n... alright. What is it?~
-== BHEXXAT ~Do you believe that if you ignore me for long enough, I will go away?~
-== BC0AURA2 ~Wh– no! No, of course not!~
-== BHEXXAT ~You can think of me what you will, Aura.~
-== BHEXXAT ~But this word of advice comes for free... you are not a good liar.~
-== BC0AURA2 ~I—I know that. I'm not trying.~
-== BHEXXAT ~You've just proven my point.~
+== BC0AURA2 ~不——不……好吧。什么事？~
+== BHEXXAT ~你相信只要你躲我够久，我就会走开吗？~
+== BC0AURA2 ~什——不！不，当然不是！~
+== BHEXXAT ~你爱怎么想我就怎么想，奥拉。~
+== BHEXXAT ~可这句忠告免费送你……你不擅长说谎。~
+== BC0AURA2 ~我——我知道。我没在试。~
+== BHEXXAT ~你刚证明了我说得对。~
 EXIT
 
 // Imoen
@@ -685,22 +685,22 @@ Range("Imoen2",15)
 !StateCheck("C0Aura",CD_STATE_NOTVALID)
 Global("C0AuraImoen1","GLOBAL",0)
 Global("C0AuraKnowsBG1","GLOBAL",1)~ THEN BC0AURA2 C0AuraImoenBG1
-~Heya, Imoen.~ [C0BLANK]
+~嘿，爱蒙。~ [C0BLANK]
 DO ~SetGlobal("C0AuraImoen1","GLOBAL",1)~
-== BIMOEN2 ~It's been a while, hasn't it?~
-== BC0AURA2 ~Heehee... yeah...~
-== BC0AURA2 ~How have you... no, I shouldn't ask. I know it was terrible. I'm just so glad you're back. Even if...~
-== BIMOEN2 ~...~
-== BC0AURA2 ~...~
-== BC0AURA2 ~I, um... like what you've done with your hair.~
-== BIMOEN2 ~Aww, thanks. Looks good on me, doesn't it?~
-== BC0AURA2 ~Heehee, yep. It's very... 'you'.~
-== BIMOEN2 ~Told you it'd look good.~
-== BC0AURA2 ~...I missed you, you know?~
-== BIMOEN2 ~I missed you too. Especially doing this. C'mere... *squeeze*~
-== BC0AURA2 ~Oof! Ow-ow-ow, can't breathe... let go, let go!~
-== BIMOEN2 ~Nope. You're too much fun to tease. And you've gotta make up for all the time you missed.~
-== BC0AURA2 ~*sigh* Okay, okay... just don't squeeze too hard, okay? We're not gonna be able to spend much time together if I end up dying by suffocation.~
+== BIMOEN2 ~有阵子没见了，对吧？~
+== BC0AURA2 ~嘿嘿……是啊……~
+== BC0AURA2 ~你过得……不，我不该问。我知道那很可怕。我只是太高兴你回来了。就算……~
+== BIMOEN2 ~……~
+== BC0AURA2 ~……~
+== BC0AURA2 ~我，呃……喜欢你头发的样子。~
+== BIMOEN2 ~唉，谢谢。很适合我，对吧？~
+== BC0AURA2 ~嘿嘿，嗯。很……“你”。~
+== BIMOEN2 ~跟你说过会好看。~
+== BC0AURA2 ~……我想你了，你知道？~
+== BIMOEN2 ~我也想你了。特别是这个。过来……*抱紧*~
+== BC0AURA2 ~哎哟！疼疼疼，喘不过气……放开，放开！~
+== BIMOEN2 ~不。逗你太好玩了。而且你得补偿你缺席的所有时间。~
+== BC0AURA2 ~*叹气* 好，好……只是别抱太紧，好吗？我要是窒息死了，我们就没多少时间在一起了。~
 EXIT
 
 CHAIN
@@ -710,15 +710,15 @@ Range("C0Aura",15)
 !StateCheck("C0Aura",CD_STATE_NOTVALID)
 Global("C0AuraRomanceActive","GLOBAL",2)
 Global("C0AuraImoenPCRom","GLOBAL",0)~ THEN BIMOEN2 C0AuraImoenPCRom
-~Sooo... you *like* my little sis, huh?~ [C0BLANK]
+~那么……你*喜欢*我小妹，嗯？~ [C0BLANK]
 DO ~SetGlobal("C0AuraImoenPCRom","GLOBAL",1)~
-== BC0AURA2 ~H-huh? 'Little sis'?~
-== BIMOEN2 ~You know. <CHARNAME>.~
-== BC0AURA2 ~(...isn't she the big sister...?) *ahem*... Well, why are you bringing that up now, anyway?~
-== BIMOEN2 ~Oh, no reason. Just wanted to mention how adorable it is watching you two.~
-== BC0AURA2 ~Oh. I guess that means you approve.~
-== BIMOEN2 ~Sure. As long as it keeps <CHARNAME> happy. If it were someone else I might have a few words, but... well, you're lucky I like you. Heh.~
-== BC0AURA2 ~Tsk, there you go teasing me again...~
+== BC0AURA2 ~什——什么？“小妹”？~
+== BIMOEN2 ~你知道的。<CHARNAME>。~
+== BC0AURA2 ~（……她不是姐姐吗？）*咳*……嗯，你为什么现在提这个？~
+== BIMOEN2 ~哦，没什么理由。只是想提一句，看你们两个真可爱。~
+== BC0AURA2 ~哦。那我想这算是你认可了。~
+== BIMOEN2 ~当然。只要能让<CHARNAME>开心。要是换了别人，我也许会说两句，可……嗯，你运气好，我喜欢你。嘿。~
+== BC0AURA2 ~啧，你又逗我了……~
 EXIT
 
 CHAIN
@@ -727,17 +727,17 @@ Range("C0Aura",15)
 !StateCheck("Imoen2",CD_STATE_NOTVALID)
 !StateCheck("C0Aura",CD_STATE_NOTVALID)
 Global("C0AuraImoenBombMaker","GLOBAL",0)~ THEN BIMOEN2 C0AuraImoenBombMaker
-~Hey, Aura? Could I ask you a favor?~ [C0BLANK]
+~嘿，奥拉？我能请你帮个忙吗？~ [C0BLANK]
 DO ~SetGlobal("C0AuraImoenBombMaker","GLOBAL",1)~
-== BC0AURA2 ~Yep, shoot.~
-== BIMOEN2 ~Thanks... I was just thinking about Irenicus and the Cowled Wizards, and how easily I was captured even with <CHARNAME> at my side, and I couldn't do anything...~
-== BC0AURA2 ~Oh... would you like to get it off your mind?~
-== BIMOEN2 ~Nah. It wouldn't be right to shove my issues on you outta nowhere. I'm just... I dunno, frustrated. I'm supposed to be a trained mage, y'know? But the mages we've come across have all been so powerful, I feel helpless in comparison.~
-== BC0AURA2 ~You don't have to feel like that. You're invaluable to us, Imoen. I'm sure <CHARNAME> will agree.~
-== BIMOEN2 ~Yeah, maybe. I wish I could do something to stick it to those stupid wannabe-archmages, though. So I was thinking... is there anything you could make to give me an edge over them?~
-== BC0AURA2 ~Something to level the playing field, huh? I'm not sure... actually, there was something I was working on before, but I'd need your help to get it finished. It might be just what you're looking for.~
-== BIMOEN2 ~Really? What do you need me to do?~
-== BC0AURA2 ~Hmm... how good are you at alchemy?~
+== BC0AURA2 ~嗯，说吧。~
+== BIMOEN2 ~谢谢……我刚才在想爱瑞尼库斯和兜帽法师，想我怎么那么容易被抓，明明<CHARNAME>就在我身边，我却什么都做不了……~
+== BC0AURA2 ~哦……你想把这事说出来散散心吗？~
+== BIMOEN2 ~不。突然把我的事塞给你不对。我只是……我也不知道，憋屈。我本该是个受过训练的法师，你知道？可我们碰到的法师都那么强，相比之下我觉得自己好无力。~
+== BC0AURA2 ~你不用那样想。你对我们无比宝贵，爱蒙。我相信<CHARNAME>也会同意。~
+== BIMOEN2 ~嗯，也许吧。不过我希望能做点什么，给那些自以为是的大法师一点颜色。所以我在想……你能造点什么让我占他们上风吗？~
+== BC0AURA2 ~让局势拉平的东西，嗯？我不确定……其实，我之前在做一样东西，可我需要你帮忙才能完成。它也许正是你要找的。~
+== BIMOEN2 ~真的？你要我做什么？~
+== BC0AURA2 ~嗯……你炼金手艺怎么样？~
 DO ~ClearAllActions()
 StartCutSceneMode()
 StartCutSceneEx("C0ACUT6",FALSE)~ EXIT
@@ -748,19 +748,19 @@ Range("Imoen2",15)
 !StateCheck("Imoen2",CD_STATE_NOTVALID)
 !StateCheck("C0Aura",CD_STATE_NOTVALID)
 Global("C0AuraImoenBombMaker","GLOBAL",1)~ THEN BC0AURA2 C0AuraImoenBombMaker2
-~See? It's quite simple. In fact, you could probably make it yourself. It's no different from gathering components for a spell. I'd say with the resources we have, you could make three in a day.~ [C0BLANK]
+~看？很简单。其实你大概能自己做。跟为法术收集材料没两样。照我们手上的资源，我说你一天能做三个。~ [C0BLANK]
 DO ~SetGlobal("C0AuraImoenBombMaker","GLOBAL",2)~
-== BIMOEN2 ~So... I mix all that into the canister, chuck it at a mage, and their spells all go poof?~
-== BC0AURA2 ~Yep. At least, that's the best case scenario. But even if it's not at max potency, it'll still be hard to gather the magical energy needed with all the residue caused by the grenade.~
-== BIMOEN2 ~That. Is. Brilliant. You are a genius. But it feels a little bit like cheating...~
-== BC0AURA2 ~It does. I wouldn't use it myself. But you're also a sneaky thief, right? When have you ever cared about playing fair?~
-== BIMOEN2 ~That's true.~
-== BIMOEN2 ~...~
-== BC0AURA2 ~Imoen? What's wrong?~
-== BIMOEN2 ~Heh. Hehehehe...~
-== BC0AURA2 ~...?~
-== BIMOEN2 ~Watch out, would-be-rivals to the great magi Imoen! With this magnificent weapon in hand I shall smite down your feeble magicks! Never will I be defeated again! Mwahahaha!~
-== BC0AURA2 ~Wow. Erm, I hope I haven't made a serious mistake giving you the formula... at least you're not feeling so gloomy anymore. Mission accomplished, I guess.~
+== BIMOEN2 ~那……我把这些都混进罐子，往法师身上一扔，他们的法术就全噗地没了？~
+== BC0AURA2 ~嗯。至少那是最好的情况。可就算不是最高效力，炸弹留下的残渣也会让他们很难聚起所需的魔法能量。~
+== BIMOEN2 ~这。太。妙了。你是天才。可感觉有点像作弊……~
+== BC0AURA2 ~确实。我自己不会用。可你不也是个鬼祟的贼吗？你什么时候在乎过公平？~
+== BIMOEN2 ~说得对。~
+== BIMOEN2 ~……~
+== BC0AURA2 ~爱蒙？怎么了？~
+== BIMOEN2 ~嘿。嘿嘿嘿嘿……~
+== BC0AURA2 ~……？~
+== BIMOEN2 ~小心了，想挑战伟大法师爱蒙的对手们！手持这了不起的武器，我要击碎你们无力的魔法！我再也不会被打败！哇哈哈哈！~
+== BC0AURA2 ~哇。呃，希望我把配方给你没铸成大错……至少你不再那么阴沉了。任务完成，我想。~
 DO ~ActionOverride("IMOEN2",AddSpecialAbility("C0AUIMB"))~ EXIT
 
 // Jaheira
@@ -771,16 +771,16 @@ Range("C0Aura",15)
 !StateCheck("Jaheira",CD_STATE_NOTVALID)
 !StateCheck("C0Aura",CD_STATE_NOTVALID)
 Global("C0AuraJaheiraBG1Talk1","GLOBAL",0)~ THEN BJAHEIR C0AuraJaheiraBG1Talk1
-~It is good to see you well, little one. With the trouble you draw to yourself, I was wondering what had become of you since we parted.~ [C0BLANK]
+~见你安好真好，小丫头。你给自己招来的那些麻烦，让我想分手之后你怎么样了。~ [C0BLANK]
 DO ~SetGlobal("C0AuraJaheiraBG1Talk1","GLOBAL",1)~
-== BC0AURA2 ~Jaheira! You're teasing me, and so soon after we meet again? Ha ha... still, it's good to know you care. Not that you ever really hid the fact.~
-== BJAHEIR ~Of course I do. Do you find fault in my means?~
-== BC0AURA2 ~No, of course not! I'm happy, really. Happy to meet you again. But... I wish I could've met Khalid again.~
-== BJAHEIR ~Aura...~
-== BC0AURA2 ~Khalid was a wonderful friend. It hurts to know he's gone... I'm sorry. It must be even worse for you. I miss him.~
-== BJAHEIR ~Stop, please. I know you mean well. But I do not wish to hear it, not at this time.~
-== BC0AURA2 ~Ah... of course. I'm sorry.~
-== BJAHEIR ~Do not apologize. You are not at fault. Those who are to blame will pay in due time.~
+== BC0AURA2 ~贾希拉！你逗我，刚重逢就这么逗我？哈哈……不过，知道你在意真好。倒也不是你曾掩饰过。~
+== BJAHEIR ~我当然在意。你觉得我的方式有错吗？~
+== BC0AURA2 ~不，当然没有！我很高兴，真的。高兴再见到你。可是……我希望能再见到卡立德。~
+== BJAHEIR ~奥拉……~
+== BC0AURA2 ~卡立德是个极好的朋友。知道他不在了让人难受……对不起。对你一定更难。我想他。~
+== BJAHEIR ~别说了，求你。我知道你是好意。可我不想听，不是现在。~
+== BC0AURA2 ~啊……当然。对不起。~
+== BJAHEIR ~别道歉。不是你的错。该负责的人到时候会付代价。~
 EXIT
 
 CHAIN
@@ -789,14 +789,14 @@ Range("Jaheira",15)
 !StateCheck("Jaheira",CD_STATE_NOTVALID)
 !StateCheck("C0Aura",CD_STATE_NOTVALID)
 Global("C0AuraJaheiraBG1Talk2","GLOBAL",0)~ THEN BC0AURA2 C0AuraJaheiraBG1Talk2
-~Jaheira? Do you have a moment?~ [C0BLANK]
+~贾希拉？你有空吗？~ [C0BLANK]
 DO ~SetGlobal("C0AuraJaheiraBG1Talk2","GLOBAL",1)~
-== BJAHEIR ~Yes, Aura. What is it?~
-== BC0AURA2 ~About Khalid...~
-== BJAHEIR ~Do not concern yourself over my needs, girl. It is unnecessary.~
-== BC0AURA2 ~I know you're mourning him, in your own way. I don't want you to think I'm pitying you. But I'm speaking as a friend... if you need anything, anything at all... just ask.~
-== BJAHEIR ~I understand, and I accept. Should I need to take that offer, I will let you know. But not now.~
-== BJAHEIR ~Still... thank you.~
+== BJAHEIR ~有，奥拉。什么事？~
+== BC0AURA2 ~关于卡立德……~
+== BJAHEIR ~别为我操心，丫头。没必要。~
+== BC0AURA2 ~我知道你在以自己的方式哀悼他。我不想让你以为我在可怜你。可我是以朋友的身份说……你若需要什么，任何事……就说。~
+== BJAHEIR ~我明白，我接受。若我真需要接受这份提议，我会告诉你。可不是现在。~
+== BJAHEIR ~不过……谢谢你。~
 EXIT
 
 CHAIN
@@ -805,15 +805,15 @@ Range("C0Aura",15)
 !StateCheck("Jaheira",CD_STATE_NOTVALID)
 !StateCheck("C0Aura",CD_STATE_NOTVALID)
 Global("C0AuraJaheira1","GLOBAL",0)~ THEN BJAHEIR C0AuraJaheira1
-~*sigh* Eyes up, head straight, and pay a little more attention to your surroundings, Aura. If you were daydreaming any harder, you'd only notice our next threat by crashing into it.~ [C0BLANK]
+~*叹气* 抬眼，头摆正，多留意周围，奥拉。你若再走神一点，只会一头撞上下一个威胁才发觉。~ [C0BLANK]
 DO ~SetGlobal("C0AuraJaheira1","GLOBAL",1)~
-== BC0AURA2 ~Eep! Y—yes, ma'am!~
-== BJAHEIR ~And enough of that 'ma'am' nonsense. I am not your mother, nor am I so old.~
-== BC0AURA2 ~Oops... stuck my foot in it again, didn't I? Um, I should make a mental note to avoid that.~
-== BJAHEIR ~Aura...~
-== BC0AURA2 ~Oh, maybe I'll just write it down instead. Where's my notebook... aha, there we go! Let's see... "Watch words before they come out of mouth"... end note?~
-== BJAHEIR ~Eyes on the road. *Please*.~
-== BC0AURA2 ~S—sorry!~
+== BC0AURA2 ~呀！是——是的，夫人！~
+== BJAHEIR ~还有，别再来那套“夫人”。我不是你母亲，也没那么老。~
+== BC0AURA2 ~糟了……又说错话了，对吧？嗯，我该在心里记一笔别再这么干。~
+== BJAHEIR ~奥拉……~
+== BC0AURA2 ~哦，也许我干脆写下来。我的本子在哪儿……啊哈，找到了！让我看看……“话出口前先想好”……写完？~
+== BJAHEIR ~眼睛看着路。*拜托*。~
+== BC0AURA2 ~对——对不起！~
 EXIT
 
 // Jan
@@ -824,22 +824,22 @@ Range("C0Aura",15)
 !StateCheck("Jan",CD_STATE_NOTVALID)
 !StateCheck("C0Aura",CD_STATE_NOTVALID)
 Global("C0AuraJanVegetables","GLOBAL",1)~ THEN BJAN C0AuraJanVegetables
-~Hang on. What's this now? No! No, no no nonono!~ [C0BLANK]
+~等等。这又是什么？不！不，不不不不！~ [C0BLANK]
 DO ~SetGlobal("C0AuraJanVegetables","GLOBAL",2)~
-== BC0AURA2 ~Jan? What is it?~
-== BJAN ~What is it? Look at this atrocity before us, Aura! What has happened to my crops since I was gone? My perfect field of turnips, being aggressively invaded by hostile growths! Are you responsible for this?~
-== BC0AURA2 ~Yes... but Mrs. Jansen allowed me, I swear! I was craving some of the vegetables from the East, and I had brought some seeds with me, so...~
-== BJAN ~But—but what is this? This is no turnip! This elongated, pointy shape is all wrong, and its skin is white as a corpse!~
-== BC0AURA2 ~No, that's daikon. I brought and preserved the seeds all the way from Kozakura.~
-== BJAN ~*munch* *ptoo!* Radishes! Accursed, crunchy radishes! Where is the sweet, earthy taste? The creamy, soft texture? This is no more a turnip than an orc is an elf!~
-== BC0AURA2 ~Well... it's not a turnip, for sure. But they're healthy and refreshing, really!~
-== BJAN ~And look at all these... these leafy monsters! Ack! They've completely overtaken the leftmost corner!~
-== BC0AURA2 ~Shou white cabbages! They're delicious when boiled. Try some for yourself if you don't believe me.~
-== BJAN ~Oh no. Oh, dear. I feel rather faint... somebody, please slap me, or pinch me. I must be in a terrible nightmare.~
-== BC0AURA2 ~Jan, come on, you're overreacting. Crop rotation is good for the soil. It makes the turnips healthier too!~
-== BJAN ~You... you...~
-== BJAN ~I think I need to sit down. Ooh... my poor head.~
-== BJAN ~I am simply speechless. I trusted you, Aura. I thought I had found a lost cousin. But it seems we are truly as different as night and day.~
+== BC0AURA2 ~扬？怎么了？~
+== BJAN ~怎么了？看看我们面前这桩暴行，奥拉！我不在的时候我的菜地怎么了？我那完美的芜菁田，正被敌意的作物凶猛入侵！这是你干的？~
+== BC0AURA2 ~是……可詹森太太允许我了，我发誓！我当时很想吃些东方的蔬菜，又带了些种子来，所以……~
+== BJAN ~可——可这是什么？这根本不是芜菁！这细长的尖形状全不对，皮白得像尸体！~
+== BC0AURA2 ~不，那是萝卜。我把种子从科祖库拉一路带来保存着。~
+== BJAN ~*嚼* *呸！* 萝卜！该死的脆萝卜！那甜润的泥土味呢？绵软的质地呢？这跟芜菁的差别，就像兽人跟精灵！~
+== BC0AURA2 ~嗯……它确实不是芜菁。可它们健康又清爽，真的！~
+== BJAN ~再看看这些……这些长叶的怪物！啊！它们把最左边的角完全占了！~
+== BC0AURA2 ~守龙白白菜！煮了很好吃。不信你自己尝尝。~
+== BJAN ~哦不。天哪。我觉得有点晕……谁来扇我一巴掌，或者掐我一下。我一定是在可怕的噩梦里。~
+== BC0AURA2 ~扬，得了吧，你反应过度了。轮作对土壤好，芜菁也会更健康！~
+== BJAN ~你……你……~
+== BJAN ~我想我得坐下。哦……我可怜的脑袋。~
+== BJAN ~我简直无语。我信过你，奥拉。我以为找到了失散的堂妹。可看来我们真如昼夜般不同。~
 EXIT
 
 CHAIN
@@ -848,18 +848,18 @@ Range("C0Aura",15)
 !StateCheck("Jan",CD_STATE_NOTVALID)
 !StateCheck("C0Aura",CD_STATE_NOTVALID)
 Global("C0AuraJan1","GLOBAL",0)~ THEN BJAN C0AuraJan1
-~So, a lass of the Lantanna, eh? Good folk, with clever hands and minds.~ [C0BLANK]
+~那么，是个兰坦姑娘，嗯？好人，手巧心也巧。~ [C0BLANK]
 DO ~SetGlobal("C0AuraJan1","GLOBAL",1)~
-== BC0AURA2 ~Heehee. We're really just a bunch of shut-ins who spend all day thinking. Have you been to my homeland before, Jan?~
-== BJAN ~I haven't had the pleasure, no. I can tell you about my mother's uncle Balroo though. He spent five years studying at the Sambaran academy, and came back with a wealth of knowledge and plenty of goodies to share with the family... well, at least the things he could carry with his remaining arm, that is.~
-== BC0AURA2 ~Oh no... what happened to his arm?~
-== BJAN ~That's a sad story, my dear. Silly old Balroo was studying the crafting of black powder and believed he had managed to improve upon the design. From what I was told, he built his own arquebus and loaded it with some experimental powder he had alchemised, then tested it on a training dummy he set up.~
-== BJAN ~Of course, the truth was that he was just terribly, terribly drunk off homebrewed turnip ale and completely lost his sense of judgment. The first shot took his arm from the recoil. The second—only the gods know how it went off—destroyed the entire west wing of the dormitory and put at least a dozen people in the infirmary. He was dismissed from the academy for reckless endangerment and damages to academy grounds not long after. *sigh* A terrible, terrible affair it was.~
-== BC0AURA2 ~That's awful, Jan. I'm so sorry your family's experience with Lantan was... like that. Is there anything I can do?~
-== BJAN ~Very kind of you to ask, lass, but you needn't worry your clever head over it. Balroo's stayed positive about the whole experience, and still has plenty of good stories to tell about his studies. Not to mention the prosthetic the Lantanna crafted for him has served him well these years. He still wants to go back to your lovely nation, but mother won't hear a word of it. Said she'd nail his remaining hand to the table if she ever saw him packing his bags.~
-== BC0AURA2 ~Oh... haha. It's reassuring that he can at least try to keep his spirits up despite his loss. The Lantanna... we try to learn from failure, but some of us don't always take it well, especially when it costs us.~
-== BJAN ~Well, you can't ever make a good turnip omelette without breaking some eggs and picking out the rotten ones first. I'll make my own pilgrimage to the Isle of Wonders one day, and hopefully stay there with all four limbs intact. Perhaps you could be my guide when the time comes, eh?~
-== BC0AURA2 ~If I'm available, I'd be happy to, Jan. Just stay away from the black powder when we're there, okay?~
+== BC0AURA2 ~嘿嘿，我们其实就一群整天闷在家里想事情的人。你去过我的故乡吗，扬？~
+== BJAN ~还没这荣幸，没有。不过我可以跟你讲讲我母亲的叔叔巴鲁。他在桑巴尔学院读了五年，回来时带着满腹学问和一堆好东西分给家人……嗯，至少是他剩下那只手能搬得动的那些。~
+== BC0AURA2 ~哦不……他胳膊怎么了？~
+== BJAN ~那是个伤心的故事，亲爱的。傻乎乎的老巴鲁在学制黑火药，自信改进过设计。照别人跟我说的，他自己造了把火绳枪，装上他炼制的实验火药，然后对着他摆好的训练假人试射。~
+== BJAN ~当然，真相是他喝自酿芜菁麦酒醉得厉害、彻底没了判断力。第一枪的后坐力打掉了他一条胳膊。第二枪——只有神知道它怎么就走火了——炸毁了宿舍整片西翼，至少十几个人进了医务室。不久后他因鲁莽危及他人、损毁学院场地被开除。*叹气* 真是件糟糕透顶的事。~
+== BC0AURA2 ~太惨了，扬。你家人跟兰坦的经历那样……我很抱歉。我能做什么吗？~
+== BJAN ~你问这话真好心，丫头，可你不用为你那聪明的脑袋操心。巴鲁对这段经历一直挺乐观，还有不少求学的趣事可讲。更别说兰坦人给他做的假肢这些年很好用。他还想回你们那可爱的国度，可母亲一个字都不许提。她说要是看见他收拾行李，就把他还剩的那只手钉在桌上。~
+== BC0AURA2 ~哦……哈哈。他至少还能振作，让人安心。我们兰坦人……我们努力从失败中学，可有些人不太能承受，尤其当它让我们付出代价。~
+== BJAN ~嗯，不打破几个蛋、先挑出坏的，就做不出好芜菁煎蛋。总有一天我要亲自去奇迹之岛朝圣，但愿四肢齐全地待在那儿。到时候你也许可以给我当向导，嗯？~
+== BC0AURA2 ~若我有空，我很乐意，扬。只是在那儿时离黑火药远点，好吗？~
 EXIT
 
 CHAIN IF WEIGHT #-1
@@ -869,13 +869,13 @@ Range("C0Aura",15)
 !StateCheck("C0Aura",CD_STATE_NOTVALID)
 See("Flying Machine 1")
 Global("C0AuraJanAirship","GLOBAL",0)~ THEN BJAN C0AuraJanAirshipTalk
-~See that flying machine, Aura? My cousin Eduardo designed and crafted it right here in Athkatla.~ [C0BLANK]
+~看见那台飞行机器了吗，奥拉？我堂兄爱德华多就在阿斯卡特拉设计、造出了它。~ [C0BLANK]
 DO ~SetGlobal("C0AuraJanAirship","GLOBAL",1)~
-== BC0AURA2 ~I wish people would stop calling it a 'flying machine'. What's wrong with calling it an airship? It looks plenty like a ship, doesn't it?~
-== BJAN ~Eduardo first saw one of its like somewhere in the north. Belonged to some lass named Fiddlebender, as I recall. Then after he returned home, he spent endless days and nights trying to replicate the design. Worked himself half to death, he did.~
-== BC0AURA2 ~He made it all by himself, without any guidance? That's impressive...~
-== BC0AURA2 ~...does it work?~
-== BJAN ~Of course it does! Erm, don't mind the cracks and dents on the hull. It makes the veeery occasional malfunction.~
+== BC0AURA2 ~我希望人们别再叫它“飞行机器”。叫飞艇有什么不对？它看着就像条船，不是吗？~
+== BJAN ~爱德华多最初在北方某处见过同样的一台。我记得属于一个叫菲德尔本德的姑娘。回家后，他花了无数日夜想复制那设计。差点把自己累死。~
+== BC0AURA2 ~他全凭自己做的，没有任何指导？真了不起……~
+== BC0AURA2 ~……它能用吗？~
+== BJAN ~当然能用！呃，别介意船壳上的裂缝和凹痕。它只是偶尔、非常偶尔地出点故障。~
 EXIT
 
 CHAIN
@@ -884,15 +884,15 @@ Range("Jan",15)
 !StateCheck("Jan",CD_STATE_NOTVALID)
 !StateCheck("C0Aura",CD_STATE_NOTVALID)
 Global("C0AuraJan1","GLOBAL",1)~ THEN BJAN C0AuraJan2
-~That's quite the exquisite bow you've built for yourself, Aura. And shiny too, for that matter. I take it that is a recent design?~ [C0BLANK]
+~你给自己造的那张弓真是精致，奥拉。还闪闪发亮。我猜那是近年的设计？~ [C0BLANK]
 DO ~SetGlobal("C0AuraJan1","GLOBAL",2)~
-== BC0AURA2 ~Well, I've kept it with me since the start of my journey a few years ago, but relatively speaking, yes, Jan. Are you curious about it?~
-== BJAN ~How could I not be? I've been thinking of ways to upgrade my beloved Flasher for some time now. Its combat performance is more than satisfactory as is, of course, but I always have to imagine the possibilities. Consider this: the first viable launcher–blender–hybrid in all the realms, as capable in the kitchen as in the battlefield!~
-== BC0AURA2 ~That'll... definitely be the groundbreaking invention, Jan. If it's possible, that is!~
-== BJAN ~Now, you know what they say—everything is impossible, until someone's done it. I'll start work on the sketches, and then we can put our heads together and see how my concept holds up to reality after a live test or two, eh?~
-== BC0AURA2 ~Hang on, I don't think I've agreed to—~
-== BJAN ~Ah, this is going to be brilliant. I can smell the success already—like freshly-peeled turnips going into a boiling pot of stew. Ho ho, time to get to work! No time to waste!~
-== BC0AURA2 ~Oh, never mind. I guess I might as well, if it makes him happy... *sigh*~
+== BC0AURA2 ~嗯，我几年前开始旅行时就带着它，可相对而言，是的，扬。你对它好奇吗？~
+== BJAN ~我怎能不好奇？我一直在想怎么升级我心爱的闪光者。当然，它现在的战斗性能已经很令人满意，可我总得想象各种可能。想想看：全诸国度第一台可用的发射器—搅拌器混合体，厨房和战场一样能干！~
+== BC0AURA2 ~那绝对会是……开创性的发明，扬。前提是它真能做出来！~
+== BJAN ~你看，人们都说——在有人做成之前，一切都是不可能的。我先画草图，然后我们一起动脑，实战试一两次，看我的构想经不经得起现实，嗯？~
+== BC0AURA2 ~等等，我不记得我答应过——~
+== BJAN ~啊，这会非常精彩。我已经闻到成功了——像刚削好的芜菁下进滚开的炖锅里。呵呵，该干活了！没时间浪费！~
+== BC0AURA2 ~哦，算了。我想既然能让他高兴，那就随他吧……*叹气*~
 EXIT
 
 CHAIN
@@ -901,14 +901,14 @@ Range("Jan",15)
 !StateCheck("Jan",CD_STATE_NOTVALID)
 !StateCheck("C0Aura",CD_STATE_NOTVALID)
 Global("C0AuraJan1","GLOBAL",2)~ THEN BC0AURA2 C0AuraJanFlasher
-~Well, uh... here's your Flasher Launcher, Jan. Along with some of the notes I've written. Honestly, I can't believe that thing even fires. How do the pieces stay together?~ [C0BLANK]
+~那么，呃……这是你的闪光者发射器，扬。还有我写的一些笔记。老实说，我不敢信那东西居然能开火。那些零件怎么还连在一起？~ [C0BLANK]
 DO ~SetGlobal("C0AuraJan1","GLOBAL",3)~
-== BJAN ~Ah, that is the question, isn't it? I suppose a fellow inventor has a right to be privy to my secret methods, though. It's all thanks to a little family brand. See that little bit of green betwixt the joints? That's the Jansen Hugtight Adhesive, a favorite of inventors and housewives with adventurous husbands alike – "Guaranteed to Never Let It Go!"~
-== BC0AURA2 ~Oh, wow. You know, that could've really come in handy while I was trying to repair my last pair of goggles... never mind. So why did you want me to take a look at it, anyway? As far as I can tell it works... well, the way it's supposed to.~
-== BJAN ~Well, as they say, there is always room for improvement. And as you've so helpfully added so many new venues for some creative work in my old workshop, I've taken the liberty to draw myself some potential enhancements to really spice up the Flasher Launcher. Er, don't mind the stains. A bit of turnip extract mixed with ground coffee, that. It was necessary for an all-nighter.~
-== BC0AURA2 ~Let me see that... a turnip juice extractor? An extendable back-scratcher? A compartment for... foot hair removal lotion? Do we really need those for adventuring...?~
-== BJAN ~You never know. A good swig of turnip juice could bring you back from the brink of death. Although, I suppose those add-ons would make the launcher a bit unwieldy... hmm... I think the focal bulb and enhanced spring are a must-have, though. It'd add a nice punch to the Flasher.~
-== BC0AURA2 ~*sigh* Okay, okay. I'll see what we can put together at the workshop. Just... give a little bit of room for compromise, okay?~
+== BJAN ~啊，这正是问题所在，对吧？不过我想同为发明家，你有权了解我的秘密手法。全靠一点家传牌子。看见关节之间那点绿色了吗？那是詹森紧抱胶，发明家和有爱冒险丈夫的主妇都爱用——“保证永不松脱！”~
+== BC0AURA2 ~哦，哇。你知道吗，我上次修那副护目镜时，这东西本该很管用……算了。那你为什么想让我看看它？据我所知它挺能用……嗯，按它该有的方式。~
+== BJAN ~嗯，俗话说，总有改进的余地。既然你这么好心在我旧工坊里添了那么多可发挥创意的新门路，我就自作主张画了些可能的增强，好给闪光者发射器加点料。呃，别介意那些污渍。那是芜菁汁混咖啡粉。熬夜必需。~
+== BC0AURA2 ~让我看看……芜菁榨汁器？可伸缩挠背爪？一个装……足部脱毛乳的隔层？我们冒险真需要这些吗……？~
+== BJAN ~谁知道呢。好好灌一口芜菁汁，也许能把你从死亡边缘拉回来。不过，我想那些附加件会让发射器有点笨重……嗯……可我觉得聚焦球和强化弹簧是必须的。那能给闪光者加一记漂亮的拳。~
+== BC0AURA2 ~*叹气* 好，好。我去看看工坊里能凑出什么。只是……留点妥协的余地，好吗？~
 DO ~GiveItemCreate("c0anotea","C0Aura",0,0,0)~ EXIT
 
 // Keldorn
@@ -919,15 +919,15 @@ Range("C0Aura",15)
 !StateCheck("Keldorn",CD_STATE_NOTVALID)
 !StateCheck("C0Aura",CD_STATE_NOTVALID)
 Global("C0AuraKeldorn1","GLOBAL",0)~ THEN BKELDOR C0AuraKeldorn1
-~Hold a moment, Aura. I believe this doll is yours, is it not?~ [C0BLANK]
+~等一下，奥拉。我想这娃娃是你的，不是吗？~ [C0BLANK]
 DO ~SetGlobal("C0AuraKeldorn1","GLOBAL",1)~
-== BC0AURA2 ~Oh! Thank you, Keldorn. I can't believe I dropped it. This was a precious gift from my sister.~
-== BKELDOR ~It is no trouble, my girl. But... alas.~
-== BC0AURA2 ~I'm so sorry! I didn't mean for you to pick up after me.~
-== BKELDOR ~Nay, not that. It simply preturbs me to see one such as you in such a dangerous life. There are those who would welcome a mind such as yours in much safer and more fulfilling places.~
-== BC0AURA2 ~Thank you for your concern, Keldorn. But there's some things I can only learn by being here. I know I'm out of place, but... it's a choice I made knowing the risks.~
-== BC0AURA2 IF ~Global("C0AuraKnowsBG1","GLOBAL",1)~ THEN ~Besides... I owe <CHARNAME> for more than a few reasons. If <PRO_HESHE> needs me, that's more important than anything.~
-== BKELDOR ~I understand. I do not doubt your conviction, and be it within my power, I shall strive to ensure you are safe and well. *sigh* Still, some doubts are hard to lay to rest.~
+== BC0AURA2 ~哦！谢谢你，凯尔东。真不敢信我掉了它。这是我姐妹送我的珍贵礼物。~
+== BKELDOR ~不麻烦，我的姑娘。可是……唉。~
+== BC0AURA2 ~太对不起了！我不是要你替我捡东西。~
+== BKELDOR ~不，不是那个。只是看到你这样的人过着这么危险的日子，让我不安。有些地方更安全、更能施展，会欢迎你这样的头脑。~
+== BC0AURA2 ~谢谢你的关心，凯尔东。可有些东西我只能在这儿学到。我知道我不合此地，可是……这是我在知道风险后做的选择。~
+== BC0AURA2 IF ~Global("C0AuraKnowsBG1","GLOBAL",1)~ THEN ~再说……我欠<CHARNAME>不止一两个理由。若<PRO_HESHE>需要我，那比什么都重要。~
+== BKELDOR ~我明白。我不怀疑你的信念，若在我能力之内，我会努力确保你平安无恙。*叹气* 只是有些疑虑难以放下。~
 EXIT
 
 CHAIN
@@ -937,16 +937,16 @@ Range("C0Aura",15)
 !StateCheck("C0Aura",CD_STATE_NOTVALID)
 !GlobalGT("LadyMaria","GLOBAL",0)
 Global("C0AuraKeldorn2","GLOBAL",0)~ THEN BKELDOR C0AuraKeldorn2
-~I have heard you speak of sisters, Aura. Several of them, if I am not mistaken?~ [C0BLANK]
+~我听你提过姐妹，奥拉。若我没记错，是几个？~ [C0BLANK]
 DO ~SetGlobal("C0AuraKeldorn2","GLOBAL",1)~
-== BC0AURA2 ~Yes, sir. I'm the third daughter of my family.~
-== BKELDOR ~Though I know little of Lantan, if you are of any example, it appears your people's familial bonds are strong. I can see you treasure the memory of your sisters greatly.~
-== BC0AURA2 ~They've raised me to become who I am now. If not for everything I've learned from them, I probably wouldn't even be here.~
-== BKELDOR ~One's upbringing may tell much of those whom had a hand in it. From your example, I can say your family are of indisputably noble character.~
-== BC0AURA2 ~What brought this up, sir?~
-== BKELDOR ~I was merely regretting that I am not more involved in my own daughters' upbringings. Like any father, I often worry for their futures.~
-== BC0AURA2 ~I'm certain you have nothing to worry about. With your strong sense of duty and principles, I'm sure your family will learn from your example. I know I'm trying to.~
-== BKELDOR ~You honor me, dear girl, but the duty of a father is rarely so simple. Though if you truly see virtues in myself worth emulating, then I will do my best to continue to serve as an example.~
+== BC0AURA2 ~是的，先生。我是家里第三个女儿。~
+== BKELDOR ~我对兰坦知之甚少，可若你算个例子，看来你族人的家族纽带很强。我看得出你极珍视姐妹们的记忆。~
+== BC0AURA2 ~是她们把我养成如今的样子。若不是从她们身上学到的一切，我大概都不会站在这儿。~
+== BKELDOR ~一个人的教养能说明许多曾出过力的人。从你的例子看，我可以说你家人品格无可置疑地高贵。~
+== BC0AURA2 ~先生，怎么忽然说起这个？~
+== BKELDOR ~我只是遗憾自己没更多参与亲生女儿的教养。像任何父亲，我常为她们的未来担忧。~
+== BC0AURA2 ~我肯定你没什么可担心的。凭你强烈的责任感与原则，我相信你家人会以你为榜样。我知道我在努力学。~
+== BKELDOR ~你太抬举我了，亲爱的姑娘，可父亲的职责很少这么简单。不过你若真在我身上看到值得效法的德行，我会尽力继续做个榜样。~
 EXIT
 
 // Korgan
@@ -957,14 +957,14 @@ Range("C0Aura",15)
 !StateCheck("Korgan",CD_STATE_NOTVALID)
 !StateCheck("C0Aura",CD_STATE_NOTVALID)
 Global("C0AuraKorgan1","GLOBAL",0)~ THEN BKORGAN C0AuraKorgan1
-~I'll admit, I've found meself a mite impressed by ye, lass.~ [C0BLANK]
+~我承认，我对你有点刮目相看，丫头。~ [C0BLANK]
 DO ~SetGlobal("C0AuraKorgan1","GLOBAL",1)~
-== BC0AURA2 ~Really? How so?~
-== BKORGAN ~From yer looks, I believed ye'd bit a bit o' a dainty flower, an' I'd have ter suffer through me share of babysittin', but ye've shown not a trace of fear in me presence, and ye hold yer own well.~
-== BKORGAN ~Yer bladework could use some practice, but ye be a crackshot with that fine bow o' yers. Pure mithril, eh?~
-== BC0AURA2 ~Oh, yes. It was traded to my family by the dwarves of the Western Heartlands. We have a good relation with the dwarves of West Faerûn.~
-== BKORGAN ~Hmph. I be nae a trained smith like me kind who barely stray from their holes, but I know a dwarf-make weapon when I see one. As long as ye wield it well from the back, Korgan'll take care o' the fools in the front for ye.~
-== BC0AURA2 ~Thanks, Korgan. That's surprisingly reassuring, coming from you.~
+== BC0AURA2 ~真的？怎么？~
+== BKORGAN ~照你的样子，我以为你是个娇弱的小花，我得受不少看孩子的罪，可你在我面前一点不怕，也撑得住自己。~
+== BKORGAN ~你的刀法还得练，可你那张好弓使得百发百中。纯秘银，嗯？~
+== BC0AURA2 ~哦，是的。是西腹地的矮人换给我家的。我们跟西费伦的矮人关系不错。~
+== BKORGAN ~哼。我不像那些几乎不离洞穴的同族那样受过铁匠训练，可我一眼就认得出矮人的手艺。只要你从后排使好它，前排那些蠢货老库尔甘替你料理。~
+== BC0AURA2 ~谢谢，库尔甘。出自你口，这话出奇地让人安心。~
 EXIT
 
 CHAIN
@@ -973,14 +973,14 @@ Range("C0Aura",15)
 !StateCheck("Korgan",CD_STATE_NOTVALID)
 !StateCheck("C0Aura",CD_STATE_NOTVALID)
 Global("C0AuraKorgan2","GLOBAL",0)~ THEN BKORGAN C0AuraKorgan2
-~I reckon I 'ad a niece who looked like ye, once, back when I were with a band o' crusty ol' dwarves I called a clan.~ [C0BLANK]
+~我想起我有个侄女，长得像你，那是我还跟一帮叫我作家族的粗老矮人在一起的时候。~ [C0BLANK]
 DO ~SetGlobal("C0AuraKorgan2","GLOBAL",1)~
-== BC0AURA2 ~Oh, is that so? What, um, did you think of her, Korgan?~
-== BKORGAN ~Pretty little thing ter look at. I din't care much fer me clansmen, but I had a soft spot fer that one, I'll admit it. Cut off a few hands from louts whose hands went wanderin'.~
-== BC0AURA2 ~That's, um... I guess you care, in your own way.~
-== BKORGAN ~Seein' ye made me think of 'er, just a little bit. Imagine she's married off ter some other clan by now, an' I doubt I'll see her again. Ye need someone's hands chopped off fer ye, lass, just say the word.~
-== BC0AURA2 ~No, nobody needs their hands chopped off, Korgan! *shudder* If you want to help, then... uh... can we just not talk about this?~
-== BKORGAN ~Hnh. I ain't much fer words, lass. But ye can be assured, I'll be standin' here with me eyes lookin' fer fools I mislike.~
+== BC0AURA2 ~哦，是吗？你，呃，觉得她怎么样，库尔甘？~
+== BKORGAN ~看着是个漂亮小东西。我不太在乎族里的人，可对那丫头有点软心，我承认。有哪个混混的手乱伸，我砍过几只手。~
+== BC0AURA2 ~那，呃……我想你是以自己的方式在意。~
+== BKORGAN ~看见你让我想起她，就一点点。想象她如今嫁给别的族了吧，我多半见不到她了。你要谁的手被砍，丫头，就说一声。~
+== BC0AURA2 ~不，没人需要被砍手，库尔甘！*打颤* 你若想帮忙，那就……呃……我们能不能不谈这个？~
+== BKORGAN ~哼。我不擅长说话，丫头。可你放心，我会站在这儿，眼睛盯着我不喜欢的蠢货。~
 EXIT
 
 // Mazzy
@@ -994,34 +994,34 @@ AreaType(OUTDOOR)
 !StateCheck("Mazzy",CD_STATE_NOTVALID)
 !StateCheck("C0Aura",CD_STATE_NOTVALID)
 Global("C0AuraMazzy1","GLOBAL",0)~ THEN BC0AURA2 C0AuraMazzy1
-~*singing* 'We've been travelling so far, so long
-From the grassy plains to the mountain strong
-Our homes are tucked away, unseen
-We'll soon be back where we've been...'~ [C0BLANK]
+~*唱* “我们走了这么远，这么久
+从草原到山中的堡垒
+我们的家园藏而不见
+我们很快就会回到去过的地方……”~ [C0BLANK]
 DO ~SetGlobal("C0AuraMazzy1","GLOBAL",1)~
-== BMAZZY ~That is an old halfling song, is it not?~
-== BC0AURA2 ~Yes, that's right. I hear it's a very popular song with your folk, Mazzy. I learned it some time ago, during my travels.~
-== BMAZZY ~Well, I was not raised within a settlement of my kin, but my father was fond of that song. I can still remember his favorite verse:~
-== BMAZZY ~"We'll take the winding trail, the old one still
-Where the trees are tall and the birds do trill
-Through the forest, through the night
-We'll keep on walking 'til first light."~
-== BC0AURA2 ~Ooh, I haven't heard that verse before. Was it his own rendition?~
-== BMAZZY ~Perhaps. My father was much like myself, in many ways. Adventurous and free-spirited, but at the end of the day his wish was always to see the warmth of hearth and home after a long day's journey. That may be why this version of the song was his favorite.~
-== BC0AURA2 ~That's... very uplifting, actually. Go on, Mazzy. Finish the song! I'd like to hear you keep singing.~
-== BMAZZY ~Oh, very well... but why don't you sing the next verse?~
-== BC0AURA2 ~"Oh, we're heading home, home, home
-To our peaceful little village, we'll never roam
-We'll clap and sing, and smile so wide
-As we return to our home side..."~
-== BMAZZY ~"So let's keep on walking, not one of us cease
-We'll soon be home, where we can find peace
-The land of our halflings, we'll all be together
-Where our hearts will be joyous and ever-lighter."~
-== BC0AURA2 ~*clap clap* That was wonderful! I think I've got a new appreciation for the song after listening.~
-== BMAZZY ~Ha ha. Thank you, Aura. I may not have a talent as a singer, but that was certainly enjoyable. And comforting.~
-== BC0AURA2 ~Yep! Maybe we can share more songs in the future?~
-== BMAZZY ~We certainly may. But come... we still have a long road ahead of us.~
+== BMAZZY ~那是一首古老的半身人歌，不是吗？~
+== BC0AURA2 ~对，没错。我听说这在你们族里很流行，玛兹。我旅行时学过一阵。~
+== BMAZZY ~嗯，我不是在族人聚居地长大的，可我父亲很爱那首歌。我还记得他最爱的那段：~
+== BMAZZY ~“我们会走那条蜿蜒小路，那条旧的
+那里树高鸟鸣
+穿过森林，穿过夜色
+我们会一直走，直到天光初现。”~
+== BC0AURA2 ~哦，我没听过那段。是他自己改的吗？~
+== BMAZZY ~也许吧。我父亲在许多方面很像我自己。爱冒险、自由不羁，可到头来，他总盼着长途跋涉一天后能见到炉火与家的温暖。也许这就是他最爱这个版本的原因。~
+== BC0AURA2 ~这……真让人振奋。继续，玛兹。把那首歌唱完！我想继续听你唱。~
+== BMAZZY ~哦，好吧……可你何不唱下一段？~
+== BC0AURA2 ~“哦，我们回家，回家，回家
+回到我们安宁的小村子，我们再不远游
+我们会拍手唱歌，笑得那么开
+当我们回到家乡的这一边……”~
+== BMAZZY ~“所以继续走吧，我们一个都别停
+我们很快到家，能在那里找到安宁
+我们半身人的土地，我们都会在一起
+在那里我们的心会欢欣，越来越轻。”~
+== BC0AURA2 ~*拍手* 太棒了！听完我觉得对这首歌有了新的欣赏。~
+== BMAZZY ~哈哈。谢谢你，奥拉。我也许没唱歌的天分，可这确实愉快。也让人安心。~
+== BC0AURA2 ~嗯！也许以后我们能分享更多歌？~
+== BMAZZY ~当然可以。可是来吧……前面还有很长的路。~
 EXIT
 
 CHAIN
@@ -1031,18 +1031,18 @@ Range("C0Aura",15)
 !StateCheck("C0Aura",CD_STATE_NOTVALID)
 AreaType(FOREST)
 Global("C0AuraMazzy2","GLOBAL",0)~ THEN BMAZZY C0AuraMazzy2
-~Raise your arm a little more above your shoulder. You want to put some of the weight on your upper body so you don't tire yourself out.~ [C0BLANK]
+~把手臂抬到肩膀上方多一点。你要把一部分重量分到上身，才不会累垮。~ [C0BLANK]
 DO ~SetGlobal("C0AuraMazzy2","GLOBAL",1)~
-== BC0AURA2 ~I'm trying, but... it starts to get sore after I pull the string just a few times.~
-== BMAZZY ~I know. It was the same for me as well, before I grew used to it. Once your body grows accustomed to the motions, it will feel natural.~
-== BC0AURA2 ~*sigh* Alright, let me try again later. I feel like my arms are going to fall off.~
-== BMAZZY ~Truth be told, you did not need that much guidance from me at all. Your bow's fascinating design already requires mastery of several different techniques, and the training you have already received seems to be from teachers with skill rivaling my own. I feel as though all I'm contributing are a revision of the basics.~
-== BC0AURA2 ~Juno used to tell me that you've never trained enough until you land twenty shots dead center in less than twenty seconds. Bonus points if you do it with your eyes closed.~
-== BMAZZY ~A rather... extreme requirement, though I cannot say I've not heard similar ones before. But your sister is a dedicated fighter, and you an artisan, yes? Is there a need for you to push yourself to this extreme, considering that?~
-== BC0AURA2 ~I wish I didn't, but I've learned that some things can't be changed... and other things can't be protected... without fighting. I don't like to fight, but if I must... I want to win. Because I don't ever want to feel powerless. Not... not again.~
-== BMAZZY ~There will always be fights we cannot win, Aura. Whether we hold all the power a mortal can afford, we must all face loss. Though... I know what it is like, to be helpless when what you hold dear is taken from you. Even death is preferable to such a fate.~
-== BC0AURA2 ~But still, we can't give up, right? I don't think I'll ever stop being afraid, but as long as there's something important, I want to carry my bow and protect it.~
-== BMAZZY ~Well said. We all must pursue strength in order to enforce our desires, whether it be to improve the world or protect what's important... come, Aura. Let's start again. You've done well so far, and could stand to improve much more. We can train for as long as you'd like.~
+== BC0AURA2 ~我在试，可是……我把弦拉几次，它就开始酸。~
+== BMAZZY ~我知道。我没习惯之前也一样。等身体习惯这些动作，就会自然。~
+== BC0AURA2 ~*叹气* 好吧，让我待会儿再试。我觉得胳膊要掉了。~
+== BMAZZY ~说实话，你根本不需要我这么多指导。你这张弓的设计本身就需要掌握好几种不同的技巧，而你受过的训练看来出自水平不亚于我的老师。我觉得我能贡献的，只是把基础再修一遍。~
+== BC0AURA2 ~朱诺以前总说，你不到二十秒内正中靶心二十箭，就永远练得不够。闭着眼做到还能加分。~
+== BMAZZY ~这要求相当……极端，虽说我不能说没听过类似的。可你姐妹是专心的战士，你是工匠，对吧？既然如此，你有必要把自己逼到这种极端吗？~
+== BC0AURA2 ~我希望没这必要，可我明白，有些事不改……有些东西不护……就不必打仗。我不喜欢打斗，可若必须……我想赢。因为我再也不想感到无力。不……不想再那样。~
+== BMAZZY ~总有些仗我们赢不了，奥拉。不管我们握着凡人能有的全部力量，我们都得面对失去。不过……我知道那是什么滋味，所珍视之物被人夺走时的无助。那种命运，连死都更好。~
+== BC0AURA2 ~可我们还是不能放弃，对吧？我想我永远都会害怕，可只要还有重要的东西，我就想带着弓去保护它。~
+== BMAZZY ~说得好。我们都得追求力量来贯彻自己的愿望，不管是改善世界还是保护重要的东西……来吧，奥拉。我们重新开始。你到目前为止做得很好，还有很大余地可进。你想练多久我们都练。~
 DO ~ApplySpellRES("C0AUPROF","C0Aura")~ EXIT
 
 // Minsc
@@ -1053,27 +1053,27 @@ Range("C0Aura",15)
 !StateCheck("Minsc",CD_STATE_NOTVALID)
 !StateCheck("C0Aura",CD_STATE_NOTVALID)
 Global("C0AuraMinscRestTalk1","GLOBAL",1)~ THEN BMINSC C0AuraMinsc4
-~Rest, Boo! The night has come, and you must have your rest. Heroes must have their sleep to gather the strength to give the mightiest kicks to the backsides of evil once the sun rises!~
+~休息吧，布布！夜晚来了，你该歇息。英雄必须睡觉，好攒起力气，等太阳升起给邪恶的屁股最有力的一脚！~
 DO ~SetGlobal("C0AuraMinscRestTalk1","GLOBAL",2)~
-== BC0AURA2 ~What is it, Minsc? Is Boo feeling restless?~
-== BMINSC ~Oh, friend Aura. Boo is usually sleeping as soundly as a baby in this hour, but tonight... Minsc thinks the strain of the evil we have fought is getting to poor Boo. Or maybe it is getting to Minsc, and Boo is feeling concern. I am unsure. But he needs his rest! Minsc cannot sleep without knowing Boo is resting first.~
-== BC0AURA2 ~Hmm, have you tried singing to him? I've always found a soothing lullaby helps put me to sleep.~
-== BMINSC ~Boo likes to listen to singing, but Minsc... Dynaheir has always said Minsc's voice sounds like thunder blowing through horns. And Minsc only knows one Rashemi song for children...~
-== BMINSC ~'O, little babe, rest in your cradle,
-When the night devours the sun, who comes to knock at this hour?
-May it be the wind, or a young wolf,
-Be not afraid, of the howls at the door...'~
-== BMINSC ~'Hmm-mm-hmm...' ehh... Minsc only remembers a little bit. The words are very different in our tongue, and it has been a very long time. Minsc would not like to get it wrong.~
-== BMINSC ~Dynaheir would have known the song, if she were still with us. She was the wisest woman Minsc knew, and she knew everything. Ah, Dynaheir... Minsc is so often lost without her.~
-== BC0AURA2 ~Minsc... would you like me to sing instead? I'm not that skilled, but I know a few songs.~
-== BMINSC ~*sniff* Minsc... would like to hear a song.~
-== BC0AURA2 ~Okay, let me think...~
-== BC0AURA2 ~'Hush-a-bye, hush-a-bye, little one, sleep, sleep...
-Good little one, rest in your cradle, listen to this lullaby,
-For what do I pray? Where do my prayers go?
-For my child, towards the eastward wind, fly...'~
-== BMINSC ~Boo, are you listening? Boo? Ah, you are sleeping at last... that's good... *yawn*~
-== BMINSC ~Zzz...~
+== BC0AURA2 ~怎么了，明斯克？布布不安分吗？~
+== BMINSC ~哦，奥拉朋友。这个时辰布布通常睡得像个婴儿，可今晚……明斯克觉得我们打过的邪恶的压力压到了可怜的布布。也许是压到了明斯克，而布布在担心。我不确定。可它需要休息！不知道布布先歇下，明斯克睡不着。~
+== BC0AURA2 ~嗯，你试过给它唱歌吗？我一直觉得舒缓的摇篮曲能让我睡着。~
+== BMINSC ~布布爱听唱歌，可明斯克……狄娜希尔总说明斯克的嗓音像号角里刮过的雷。而且明斯克只记得一首拉斯梅的童谣……~
+== BMINSC ~“哦，小宝贝，安睡在摇篮里，
+当夜色吞掉太阳，这时辰是谁来敲门？
+也许是风，也许是小狼，
+别怕门外的嚎叫……”~
+== BMINSC ~“哼—嗯—哼……”呃……明斯克只记得一点。词在我们的语言里差别很大，而且过了太久了。明斯克不想唱错。~
+== BMINSC ~若狄娜希尔还在，她会知道这首歌。她是明斯克认识的最有智慧的女人，什么都知道。唉，狄娜希尔……明斯克常常没她就不知所措。~
+== BC0AURA2 ~明斯克……你要不要我来唱？我不太会，可我知道几首歌。~
+== BMINSC ~*抽鼻子* 明斯克……想听一首歌。~
+== BC0AURA2 ~好，让我想想……~
+== BC0AURA2 ~“睡吧，睡吧，小东西，睡吧，睡吧……
+乖孩子，安睡在摇篮里，听这首摇篮曲，
+我祈求什么？我的祈祷又去了哪里？
+为我的孩子，向着东风，飞吧……”~
+== BMINSC ~布布，你在听吗？布布？啊，你终于睡着了……那很好……*哈欠*~
+== BMINSC ~呼……呼……~
 DO ~ClearAllActions()
 StartCutSceneMode()
 FadeToColor([0.0],0)
@@ -1091,17 +1091,17 @@ Range("C0Aura",15)
 !StateCheck("Minsc",CD_STATE_NOTVALID)
 !StateCheck("C0Aura",CD_STATE_NOTVALID)
 Global("C0AuraMinsc1","GLOBAL",0)~ THEN BMINSC C0AuraMinsc1
-~Ah, that's not right! These mighty arms of justice can strike down evil like mowing grass, but too short to reach this sly and wicked itch? I need bigger arms!~ [MINSC37]
+~啊，不行！我这双正义的强壮手臂能把邪恶像割草一样打倒，却短得够不到这狡猾可恶的痒处？我需要更大的胳膊！~ [MINSC37]
 DO ~SetGlobal("C0AuraMinsc1","GLOBAL",1)~
-== BC0AURA2 ~Minsc, why are you, um, scratching yourself? Boo hasn't got mites again, has he?~
-== BMINSC ~No, no, Aura, Boo has been keeping himself clean as a whistle. He is just restless! We walk day in and day out, yet all Boo is allowed to do is curl up in Minsc's smelly backpack!~
-== BC0AURA2 ~Why don't you let him out once in a while? It's not good for animals to be cooped up for too long.~
-== BMINSC ~Minsc lets Boo run free during our meal breaks and before bedtime, but he says it is not enough. He wishes to race across fields and climb tall hills as we do!~
-== BC0AURA2 ~But he can't do that. What if he gets stepped on? Or if he runs into a bear? *shudder*~
-== BMINSC ~Minsc agrees, but he cannot bear—~
-== BC0AURA2 ~*violent shudder*~
-== BMINSC ~Erm... cannot *stand* having his toes nibbled during bedtime by a frustrated Boo for much longer. You are a clever artisan, Aura! Help us think of an idea!~
-== BC0AURA2 ~Well, Muffy gets antsy too if he doesn't get his playtime... you know, I might be able to do something, Minsc. Just leave it to me!~
+== BC0AURA2 ~明斯克，你，呃，为什么在挠自己？布布又长螨虫了？~
+== BMINSC ~不，不，奥拉，布布一直把自己保持得干干净净。它只是不安分！我们日复一日地走，可布布只能蜷在明斯克臭烘烘的背包里！~
+== BC0AURA2 ~你何不偶尔放它出来？动物一直被关着不好。~
+== BMINSC ~明斯克在吃饭休息和睡前会让布布自由跑，可它说不够。它想跟我们一样奔过田野、爬上高丘！~
+== BC0AURA2 ~可它不能那样。万一被踩到呢？万一撞上熊呢？*打颤*~
+== BMINSC ~明斯克同意，可他受不了——~
+== BC0AURA2 ~*剧烈打颤*~
+== BMINSC ~呃……受不了睡前被一只憋坏的布布一直啃脚趾。你是个聪明的工匠，奥拉！帮我们想个主意！~
+== BC0AURA2 ~嗯，穆菲没玩够也会烦躁……你知道吗，明斯克，我也许能做点什么。交给我吧！~
 EXIT
 
 CHAIN
@@ -1110,18 +1110,18 @@ Range("Minsc",15)
 !StateCheck("Minsc",CD_STATE_NOTVALID)
 !StateCheck("C0Aura",CD_STATE_NOTVALID)
 Global("C0AuraMinsc1","GLOBAL",1)~ THEN BC0AURA2 C0AuraMinsc2
-~Hey, Minsc. Think fast!~ [C0BLANK]
+~嘿，明斯克。接好了！~ [C0BLANK]
 DO ~SetGlobal("C0AuraMinsc1","GLOBAL",2)~
-== BMINSC ~What is this, Boo? A ball! Oh, do you intend to play catch with us, Aura? But Minsc thinks this ball is a few sizes too large for Boo. Why, he could easily fit inside it!~
-== BC0AURA2 ~*giggle* Yep, he can. And he's supposed to. See those two latches on the sides? Press them in and it'll open.~
-== BMINSC ~*click* Look, Boo! There is so much room in there. Wouldn't this be a nice little bed for you to sleep in while we travel?~
-== BC0AURA2 ~No, no, let me show you... erm, could you lend me Boo for a second as well?~
-== BMINSC ~Is this alright, Boo? ...Yes, Boo says it's alright.~
-== BC0AURA2 ~You go in there, Boo... now I'm going to close it... don't worry, there's holes for you to breathe through... now I just remove the pin so the inside moves around freely... there!~
-== BMINSC ~Oh! Look at you, Boo, running about freely in there. Now you can release all that energy that you have stored up inside of this... this... eh, what is this thing, Aura?~
-== BC0AURA2 ~It's a glassteel hamster ball. Usually you'd place them on the ground and watch the ball roll around with the hamster inside, but we can't really do that while adventuring. So I made it a double layer so the inside can turn without moving the ball itself.~
-== BMINSC ~Ah, that is very clever! Boo likes the little wheel, but he likes running in any direction he pleases. Now Boo can remain safely in Minsc's pack and still get the exercise he needs. You have our thanks, my clever friend!~
-== BC0AURA2 ~Heehee. There's nothing better than seeing my creations make people happy. You're welcome, Minsc.~
+== BMINSC ~这是什么，布布？一个球！哦，你是想跟我们玩接球吗，奥拉？可明斯克觉得这球对布布来说大了几号。它都能整个钻进去！~
+== BC0AURA2 ~*轻笑* 嗯，它能。而且本来就该这样。看见两边那两个卡扣了吗？按进去就会打开。~
+== BMINSC ~*咔哒* 看，布布！里面空间好大。这不正好当你的小床，旅行时睡在里面？~
+== BC0AURA2 ~不，不，让我示范……呃，也能把布布借我一下吗？~
+== BMINSC ~这样可以吗，布布？……好，布布说可以。~
+== BC0AURA2 ~你进去，布布……现在我要合上了……别担心，上面有孔给你透气……现在我只要拔掉插销，里面就能自由转动……好了！~
+== BMINSC ~哦！看你，布布，在里面自由地跑。现在你能把攒在这……这……呃，这是什么，奥拉？~
+== BC0AURA2 ~这是玻璃钢仓鼠球。通常放在地上，看仓鼠在里面滚着球走，可冒险时没法那样。所以我做了双层，里面能转而不带动外壳。~
+== BMINSC ~啊，真聪明！布布喜欢那小轮子，可它更喜欢随心所欲地往任何方向跑。现在布布能安全待在明斯克的背包里，又能得到需要的运动。我们谢谢你，我聪明的朋友！~
+== BC0AURA2 ~嘿嘿。看到我的造物让人开心，没有比这更好的了。不客气，明斯克。~
 EXIT
 
 CHAIN
@@ -1130,17 +1130,17 @@ Range("C0Aura",15)
 !StateCheck("Minsc",CD_STATE_NOTVALID)
 !StateCheck("C0Aura",CD_STATE_NOTVALID)
 Global("C0AuraMinsc2","GLOBAL",0)~ THEN BMINSC C0AuraMinsc3
-~Ah–hay! Aura!~ [MINSC36]
+~啊——嘿！奥拉！~ [MINSC36]
 DO ~SetGlobal("C0AuraMinsc2","GLOBAL",1)~
-== BC0AURA2 ~Gyaaah! M–minsc! My goodness, where did you come from?~
-== BMINSC ~Minsc was standing behind you the entire time.~
-== BC0AURA2 ~Oh, is that the case... ahaha... I can't believe I didn't notice you. But oof, did you just give me a scare...~
-== BMINSC ~If I gave you a fright, I am very sorry. Minsc and Boo are supposed to instill terror in the faces of evil, not friends.~
-== BC0AURA2 ~No, it's okay. I had no idea you could hide your presence so well, though! I could never do something like that.~
-== BMINSC ~Ah, it is very easy, my friend! Minsc holds his breath and then just stands very, very still. It is as a very old ranger in Rashemen taught us. "Tread softly, carry big sword". Evil is doubly frightened when Minsc attacks when they are not suspecting!~
-== BC0AURA2 ~Well, that... uh, makes sense, now that I think about it. Although I couldn't possibly hold my breath for that long... I'd pass out first. Anyway, what did you call on me for?~
-== BMINSC ~Boo wanted to ask if Aura wanted any strawberries.~
-== BC0AURA2 ~Strawberries! Yes, please and thank you!~
+== BC0AURA2 ~哇啊！明——明斯克！天哪，你从哪儿冒出来的？~
+== BMINSC ~明斯克一直站在你身后。~
+== BC0AURA2 ~哦，是这样吗……啊哈哈……真不敢信我没注意到你。可哎哟，你刚真把我吓着了……~
+== BMINSC ~如果我吓着你了，我很抱歉。明斯克和布布该让邪恶满脸恐惧，不该吓朋友。~
+== BC0AURA2 ~不，没关系。可我真不知道你能把气息藏得这么好！我绝对做不到。~
+== BMINSC ~啊，很容易，我的朋友！明斯克屏住气，然后站得一动不动。这是拉斯梅一位很老的游侠教我们的。“脚步轻，剑要大”。明斯克趁他们没防备时出手，邪恶会加倍害怕！~
+== BC0AURA2 ~嗯，那……呃，想想也说得通。不过我大概屏不了那么久的气……我会先昏过去。总之，你叫我有事？~
+== BMINSC ~布布想问奥拉要不要草莓。~
+== BC0AURA2 ~草莓！好，要，谢谢你！~
 DO ~RealSetGlobalTimer("C0AuraMinscRestTalkTimer","GLOBAL",3600)~ EXIT
 
 // Nalia
@@ -1151,19 +1151,19 @@ Range("C0Aura",15)
 !StateCheck("Nalia",CD_STATE_NOTVALID)
 !StateCheck("C0Aura",CD_STATE_NOTVALID)
 Global("C0AuraNalia1","GLOBAL",0)~ THEN BNALIA C0AuraNalia1
-~Is that a copy of the 'Imaskarcana Memoirs', Aura? That's written in the Imaskari tongue. I'm amazed you can read it.~ [C0BLANK]
+~那是《伊玛斯卡秘录》的抄本吗，奥拉？那是用伊玛斯卡语写的。你能读它，我真惊讶。~ [C0BLANK]
 DO ~SetGlobal("C0AuraNalia1","GLOBAL",1)~
-== BC0AURA2 ~Well, the ancient language of Lantan was based off the Imaskari, so I can apply some of what I already know... it's better than trying to translate Loross. I have to break out the old lexicons for that.~
-== BNALIA ~What you already know... out of curiosity, how many languages do you know anyways, Aura?~
-== BC0AURA2 ~Hmm... let's see. There's Common and Lantanna, of course, those are standard in my homeland. I learned the Seinai dialect of Kozakuran during my stay there... studied a bit of Shou as well, but don't ask me to speak it...~
-== BC0AURA2 ~Oh, and my family often traded with the dwarven followers of Vergadain, so I picked up some Dwarvish... my Elvish is a little rusty, but I can manage basic conversations... and I can write the Draconic alphabet, at least.~
-== BNALIA ~Oh... oh, wow... that's even more than I thought. How do you keep it all memorized?~
-== BC0AURA2 ~Lots of practice? I'm not sure... the same way you memorize the spells in your tome, I suppose.~
-== BC0AURA2 IF ~!Class("C0Aura",MAGE_ALL) !Class("C0Aura",BARD_ALL)~ THEN ~To be honest, I find magic a whole lot more interesting. If I knew a bit more magic than I did, maybe books like these would be more useful to me.~
-== BNALIA ~Still... it's amazing how much knowledge you've committed to memory. Sometimes my spells alone keep my mind occupied, and when I lose focus, it makes my head spin.~
-== BNALIA IF ~!Class("C0Aura",MAGE_ALL) !Class("C0Aura",BARD_ALL)~ THEN ~I think you would've made a great mage, if you'd chosen that path.~
-== BC0AURA2 ~Well, I know magic itself takes a lot of concentration, and you do a great job already. I'm definitely relieved every time your fireballs don't go astray, after all.~
-== BNALIA ~Ha ha. I suppose you have a point there.~
+== BC0AURA2 ~嗯，兰坦的古老语言源自伊玛斯卡语，所以我能用上一些已经会的……总比试着翻洛罗斯语强。那得翻出老辞典。~
+== BNALIA ~你已经会的……好奇问一句，你到底会多少种语言，奥拉？~
+== BC0AURA2 ~嗯……让我想想。当然有通用语和兰坦语，那在我家乡是标准的。我在科祖库拉逗留时学了塞奈方言……也学过一点守龙语，可别叫我讲……~
+== BC0AURA2 ~哦，还有，我家常跟维尔加丹的矮人信徒做生意，所以学了些矮人语……我的精灵语有点生疏，可基本对话还能应付……至少我能写龙语字母。~
+== BNALIA ~哦……哦，哇……比我想的多多了。你怎么全记住的？~
+== BC0AURA2 ~多练？我不确定……大概就像你记住书上那些法术一样吧。~
+== BC0AURA2 IF ~!Class("C0Aura",MAGE_ALL) !Class("C0Aura",BARD_ALL)~ THEN ~老实说，我觉得魔法有意思得多。要是我懂多一点魔法，这类书对我大概更有用。~
+== BNALIA ~不过……你能记住那么多知识真了不起。有时候光是我的法术就占满脑子，一失神就头晕。~
+== BNALIA IF ~!Class("C0Aura",MAGE_ALL) !Class("C0Aura",BARD_ALL)~ THEN ~我觉得你若选那条路，会是个了不起的法师。~
+== BC0AURA2 ~嗯，我知道魔法本身需要很多专注，你已经做得很好了。毕竟每次你的火球没飞偏，我都松一口气。~
+== BNALIA ~哈哈。这点我想你说得对。~
 EXIT
 
 CHAIN
@@ -1172,20 +1172,20 @@ Range("C0Aura",15)
 !StateCheck("Nalia",CD_STATE_NOTVALID)
 !StateCheck("C0Aura",CD_STATE_NOTVALID)
 Global("C0AuraNalia1","GLOBAL",0)~ THEN BNALIA C0AuraNalia2
-~What drove you to come out and explore the world, Aura?~ [C0BLANK]
+~是什么驱使你出来看世界的，奥拉？~ [C0BLANK]
 DO ~SetGlobal("C0AuraNalia1","GLOBAL",1)~
-== BC0AURA2 ~Me? I just... wanted to know what the lands outside of home looked like, I suppose. Why do you ask?~
-== BNALIA ~It's just that I've never heard of a Lantanese adventurer before. From what I've read, your people are either scholars or inventors. Few ever leave their island, and those that do are as traders and other roles on behalf of your people.~
-== BC0AURA2 ~That's basically true. We don't have many adventurers. Our people are... well, we get so caught up in our work that we often forget to eat.~
-== BNALIA ~How is it that we don't see more of your works in the rest of the Realms? I've seen you work. You can create things even the cleverest of people in Amn could never even dream of. You'd think even the most isolated nation would have spread some kind of influence.~
-== BC0AURA2 ~I... can't speak for my entire nation. But we're not a people that work for gaining power, not... at large, anyway. A lot of Lantanna know as little about your world as you do ours. Not many even think about stepping outside of their houses.~
-== BNALIA ~But you did.~
-== BC0AURA2 ~I... okay. Yes, I did.~
-== BNALIA ~How difficult was it? If your people are as solitary as you claim...~
-== BC0AURA2 ~I, well... I don't know. It wasn't a hard decision I had to make at all, really. My family supported me. They helped make my bow and prepare me for the journey, and there was never any pressure for me to change my mind.~
-== BC0AURA2 ~That's how our people are. We take care of our own, and while we don't push for each other to know about the outside world, we don't oppose it either. As long as we abide by the laws, and never let our work be abused by others.~
-== BNALIA ~I understand. I've seen how meticulous you are. Always looking carefully, making sure to never leave traces of anything behind that could be taken and abused. It must be incredibly difficult.~
-== BNALIA ~In a better world, perhaps knowledge could be used for good and good alone. But we both know that's not the reality we live in. Though one day, perhaps, if we try to make a change.~
+== BC0AURA2 ~我？我只是……想知道家以外的土地什么样子，我想。你为什么问？~
+== BNALIA ~只是我从没听说过兰坦的冒险者。照我读的，你族人不是学者就是发明家。很少人离开那座岛，离开的也多是以商人等身份为族人办事。~
+== BC0AURA2 ~大体是这样。我们没多少冒险者。我们的人……嗯，我们太埋头工作，常常忘了吃饭。~
+== BNALIA ~为什么我们在诸国度其他地方见不到更多你们的作品？我见过你干活。你能造出连安姆最聪明的人都梦想不到的东西。你该想，连最封闭的国度也会散出某种影响。~
+== BC0AURA2 ~我……不能代表整个国度。可我们不是为夺权而干活的民族，至少……大体上不是。很多兰坦人对你们的世界了解，就跟你们对我们的一样少。不少人连想都没想过走出自家门。~
+== BNALIA ~可你走了。~
+== BC0AURA2 ~我……好吧。是，我走了。~
+== BNALIA ~那有多难？若你族人真像你说的那么孤僻……~
+== BC0AURA2 ~我，嗯……我不知道。那根本算不上艰难的决定，真的。我家人支持我。他们帮我造弓、为我上路做准备，也从没有压力要我改主意。~
+== BC0AURA2 ~我们的人就是这样。我们照顾自己人，虽然不逼着彼此去了解外面的世界，可也不反对。只要我们守法，从不让我们的作品被人滥用。~
+== BNALIA ~我明白。我看得出你多细致。总是仔细查看，确保不留下任何会被人拿走滥用的痕迹。那一定极难。~
+== BNALIA ~在更好的世界里，也许知识能只用于善。可我们都知道我们不住在那样的现实里。不过也许有一天，若我们试着改变。~
 EXIT
 
 // Neera
@@ -1196,14 +1196,14 @@ Range("C0Aura",15)
 !StateCheck("Neera",CD_STATE_NOTVALID)
 !StateCheck("C0Aura",CD_STATE_NOTVALID)
 Global("C0AuraNeera1","GLOBAL",0)~ THEN BNEERA C0AuraNeera1
-~Hey, Aura... does your squirrel bite?~ [C0BLANK]
+~嘿，奥拉……你的松鼠咬人吗？~ [C0BLANK]
 DO ~SetGlobal("C0AuraNeera1","GLOBAL",1)~
-== BC0AURA2 ~Well, he can... but he wouldn't bite you. I think.~
-== BNEERA ~I wanna pet him! Can I pet him?~
-== BC0AURA2 ~Um, go ahead. Just be careful not to drop him...~
-== BNEERA ~Wow, he's pretty adorable for a critter made of metal. And so lifelike! How did you do it? Once, I turned a broom alive by accident and it tried to kill me. That thing wasn't nearly as cute.~
-== BC0AURA2 ~Heehee... sorry, trade secret.~
-== BNEERA ~Aw, come on! I promise I won't tell anyone. I just want my own immortal metal pet, darn it!~
+== BC0AURA2 ~嗯，它会……可它不会咬你。我想。~
+== BNEERA ~我想摸摸它！我能摸吗？~
+== BC0AURA2 ~呃，去吧。只是小心别把它摔了……~
+== BNEERA ~哇，作为一只金属造的小东西，它真可爱。还那么像活的！你怎么做的？有次我不小心把扫帚弄活了，它想杀我。那东西可没这么可爱。~
+== BC0AURA2 ~嘿嘿……抱歉，商业机密。~
+== BNEERA ~唉，得了吧！我保证不告诉别人。我就是想要一只自己的不死金属宠物，真是的！~
 EXIT
 
 CHAIN
@@ -1212,24 +1212,24 @@ Range("C0Aura",15)
 !StateCheck("Neera",CD_STATE_NOTVALID)
 !StateCheck("C0Aura",CD_STATE_NOTVALID)
 Global("C0AuraNeera2","GLOBAL",0)~ THEN BNEERA C0AuraNeera2
-~Here. You can have your book back, Aura... ugh.~ [C0BLANK]
+~给。你的书还你，奥拉……呃。~ [C0BLANK]
 DO ~SetGlobal("C0AuraNeera2","GLOBAL",1)~
-== BC0AURA2 ~What? Didn't you borrow that from me just last night? You can't have finished it already!~
-== BNEERA ~Nope, I couldn't even get through half of it. I feel like my head's about to implode. I can barely read this—how in the name of Mystra's soggy stockings can you actually memorize any of it?~
-== BC0AURA2 ~*mumble* (Being able to sit still for more than three seconds might help...)~
-== BNEERA ~What was that?~
-== BC0AURA2 ~Nothing! Umm... maybe this just isn't for you. Why are you suddenly so interested in practical applications of clockwork mechanisms, anyway?~
-== BNEERA ~I dunno, it just caught my eye while I was looking through the stuff you had. I thought if I studied hard enough I'd be able to build a clockwork dragon!~
-== BC0AURA2 ~Uh, really?~
-== BNEERA ~Okay, okay. So I just wanted to try and learn some new skills so I wouldn't have to rely on my magic all the time. You try depending on something that just does whatever it wants!~
-== BC0AURA2 ~Oh... so that's why. Well, maybe...~
-== BNEERA ~No, forget it. Stupid idea anyway. I don't have the smarts to learn something different at this point.~
-== BC0AURA2 ~I'm not so sure... I don't think you're stupid, Neera, you're just bored. You need something that will really get your attention. I know just the thing!~
-== BNEERA ~"The Catalogue of Ordinary to Extraordinary Enchanting"? Hey, that actually sounds like fun. Thanks, Aura! I'll sneak in some light reading toni—*aaahhh*!~
-== BC0AURA2 ~Woah! Watch it with the sparks, Neera!~
-== BNEERA ~...Oh. The ink turned invisible. Guess I won't be reading it tonight.~
-== BC0AURA2 ~I, um, don't have any more copies, in case you're wondering.~
-== BNEERA ~Figures. Uh, it'll fix itself eventually... it usually does.~
+== BC0AURA2 ~什么？你昨晚才借的？不可能已经看完了！~
+== BNEERA ~不，我连一半都没看完。我觉得脑袋要炸了。我几乎读不下去——密斯特拉的湿袜子在上，你怎么可能记住里面任何东西？~
+== BC0AURA2 ~*低声* （能安静坐三秒以上也许有帮助……）~
+== BNEERA ~你说什么？~
+== BC0AURA2 ~没什么！呃……也许这个不适合你。话说你怎么突然对钟表机构的实际应用这么感兴趣？~
+== BNEERA ~我也不知道，翻你那些东西时它就吸引了我。我想我若学得够用功，就能造一条钟表龙！~
+== BC0AURA2 ~呃，真的？~
+== BNEERA ~好吧，好吧。我只是想试着学点新本事，好不必总靠我的魔法。你试试依赖一个想干什么就干什么的东西！~
+== BC0AURA2 ~哦……原来如此。那，也许……~
+== BNEERA ~不，算了。反正是个蠢主意。我这脑子现在学不了别的东西。~
+== BC0AURA2 ~我不确定……我不觉得你蠢，妮拉，你只是无聊。你需要真正能抓住你注意的东西。我正好知道一样！~
+== BNEERA ~《从平凡到了不起的附魔目录》？嘿，这听着真有趣。谢谢，奥拉！我今晚偷偷读点轻松的——*啊——*！~
+== BC0AURA2 ~哇！小心火花，妮拉！~
+== BNEERA ~……哦。墨水变隐形了。看来我今晚读不成了。~
+== BC0AURA2 ~我，呃，没有更多副本了，如果你在想这个。~
+== BNEERA ~果然。呃，它总会自己恢复的……通常都会。~
 EXIT
 
 CHAIN
@@ -1238,19 +1238,19 @@ Range("C0Aura",15)
 !StateCheck("Neera",CD_STATE_NOTVALID)
 !StateCheck("C0Aura",CD_STATE_NOTVALID)
 Global("C0AuraNeera3","GLOBAL",0)~ THEN BNEERA C0AuraNeera1
-~Hey, Aura! You got any more of those tasty little rainbow bean thingys left? I've got a hankering.~ [C0BLANK]
+~嘿，奥拉！你还有那种好吃的小彩虹豆吗？我馋了。~ [C0BLANK]
 DO ~SetGlobal("C0AuraNeera3","GLOBAL",1)~
-== BC0AURA2 ~You've got rid of the entire bag of them I shared with you before? How?~
-== BNEERA ~Wild magic.~
-== BC0AURA2 ~Oh, right. *sigh* I'm sorry, but I've eaten my share. They're really nice, aren't they?~
-== BNEERA ~You think I could conjure up some more if I tried really, really hard?~
-== BC0AURA2 ~I don't th—~
-== BNEERA ~Facioooo... vocooo... ferre!~ [CAS_PM3F]
-== BNEERA ~Ta-da-da-daaa!~ [CAS_P03]
-== BNEERA ~...drat. Somebody's old socks again. Pee-ew! That somebody really hates washing their feet, too.~
-== BC0AURA2 ~H-h-hey! Don't point them at me! I don't want them either!~
-== BNEERA ~Forget it, Aura. I've lost my appetite. Summoning spells are stupid.~
-== BC0AURA2 ~It could be worse. At least you didn't call forth a sleuth of bears. *shudder*~
+== BC0AURA2 ~上次我分给你的那一整袋你都吃光了？怎么吃的？~
+== BNEERA ~狂野魔法。~
+== BC0AURA2 ~哦，对。*叹气* 抱歉，我自己那份也吃了。它们真好吃，对吧？~
+== BNEERA ~你觉得我若非常非常努力，能变出更多吗？~
+== BC0AURA2 ~我不觉——~
+== BNEERA ~法奇奥……沃科……费雷！~ [CAS_PM3F]
+== BNEERA ~嗒——嗒——嗒——哒！~ [CAS_P03]
+== BNEERA ~……该死。又是谁的旧袜子。呸！那人还真讨厌洗脚。~
+== BC0AURA2 ~嘿——嘿——嘿！别朝我指！我也不要！~
+== BNEERA ~算了，奥拉。我没胃口了。召唤法术真蠢。~
+== BC0AURA2 ~还能更糟。至少你没召出一群熊。*打颤*~
 EXIT
 
 // Rasaad
@@ -1261,15 +1261,15 @@ Range("C0Aura",15)
 !StateCheck("Rasaad",CD_STATE_NOTVALID)
 !StateCheck("C0Aura",CD_STATE_NOTVALID)
 Global("C0AuraRasaad1","GLOBAL",0)~ THEN BRASAAD C0AuraRasaad1
-~You have been watching my training sessions often, Aura. Do the techniques of the Sun Soul order fascinate you?~ [C0BLANK]
+~你常来看我训练，奥拉。太阳魂宗门的技法让你着迷吗？~ [C0BLANK]
 DO ~SetGlobal("C0AuraRasaad1","GLOBAL",1)~
-== BC0AURA2 ~Oh, well... yes. But if you find it rude, Rasaad, I won't bother you from now on.~
-== BRASAAD ~Not at all. I was merely wondering if you had interest in practicing martial arts yourself.~
-== BC0AURA2 ~Me? Ha ha. I'm not sure I'm fit for that... I'm thin as a stick and barely reach your waist. I just find your style so interesting compared to Kozakuran monks.~
-== BRASAAD ~Do they differ greatly from those of the eastern lands?~
-== BC0AURA2 ~It's... different, in many ways. But many of the disciplines look the same. But I'm not an expert.~
-== BRASAAD ~Perhaps one day I shall meet one such ascetic, and we may exchange our skills. Then, I may be able to enlighten you in how our styles differ.~
-== BC0AURA2 ~Aw, that'd be really kind of you, and I'd like that. But right now, I'm just watching because I like to. Even if it's indirect, it reminds me of Kozakura.~
+== BC0AURA2 ~哦，嗯……是的。可你若觉得失礼，拉沙德，我以后不来烦你。~
+== BRASAAD ~一点也不。我只是想知道你自己有没有兴趣练武。~
+== BC0AURA2 ~我？哈哈。我不确定我适合……我瘦得像根棍子，才到你腰高。我只是觉得你的路数跟科祖库拉的武僧比很有意思。~
+== BRASAAD ~他们跟东方的差别很大吗？~
+== BC0AURA2 ~很多方面……不一样。可许多修行看起来相似。不过我不是行家。~
+== BRASAAD ~也许有一天我会遇见这样一位苦修者，我们可以交换技艺。那时我也许能让你明白我们的路数有何不同。~
+== BC0AURA2 ~唉，那真是好心，我会喜欢的。可现在我只是爱看。哪怕是间接的，也让我想起科祖库拉。~
 EXIT
 
 CHAIN
@@ -1278,17 +1278,17 @@ Range("C0Aura",15)
 !StateCheck("Rasaad",CD_STATE_NOTVALID)
 !StateCheck("C0Aura",CD_STATE_NOTVALID)
 Global("C0AuraRasaad1","GLOBAL",1)~ THEN BC0AURA2 C0AuraRasaad2
-~Rasaad, I respect you a lot. You're a great man, with a strong sense of honor.~ [C0BLANK]
+~拉沙德，我很敬重你。你是个了不起的人，荣誉感很强。~ [C0BLANK]
 DO ~SetGlobal("C0AuraRasaad1","GLOBAL",2)~
-== BRASAAD ~Thank you, but from whence does this compliment come from?~
-== BC0AURA2 ~I just... felt like saying it. You seem to have needed some positive reinforcement for some time now.~
-== BRASAAD ~Perhaps I do, though I question whether it is deserved. An honorable man... would an honorable man forsake everything for revenge?~
-== BC0AURA2 ~Do you really think you've forsaken everything? I don't believe that. A self-centered person wouldn't have stood in front to protect me in our battles.~
-== BRASAAD ~I... only did what I believed was right.~
-== BC0AURA2 ~That's why I said I respect you. No matter what anyone says, you haven't sacrificed the goodness in you.~
-== BRASAAD ~But—~
-== BC0AURA2 ~I don't enjoy revenge. I've had my own taste of it too, you know. But I know how hard it is to let go, so even if I can't change your path, I can at least help you a little. Just as you've helped me.~
-== BRASAAD ~That is all I dare to ask for. Thank you, Aura. You, too, are worthy of respect, and you have mine.~
+== BRASAAD ~谢谢，可这赞美从何而来？~
+== BC0AURA2 ~我只是……想说。你似乎有段时间需要些正面的鼓励了。~
+== BRASAAD ~也许我需要，可我怀疑这值不值得。一个有荣誉的人……会为复仇舍弃一切吗？~
+== BC0AURA2 ~你真觉得你舍弃了一切？我不信。一个只顾自己的人不会在战斗里站到前面护着我。~
+== BRASAAD ~我……只做了我相信是对的事。~
+== BC0AURA2 ~所以我说我敬重你。不管别人怎么说，你没舍弃你身上的善。~
+== BRASAAD ~可是——~
+== BC0AURA2 ~我不喜欢复仇。我自己也尝过那滋味，你知道。可我知道放下有多难，所以就算我改不了你的路，至少能帮你一点。就像你帮过我。~
+== BRASAAD ~我敢求的就这些了。谢谢你，奥拉。你也值得敬重，而我的敬重你已得到。~
 EXIT
 
 // Valygar
@@ -1299,15 +1299,15 @@ Range("C0Aura",15)
 !StateCheck("Valygar",CD_STATE_NOTVALID)
 !StateCheck("C0Aura",CD_STATE_NOTVALID)
 Global("C0AuraValygar1","GLOBAL",0)~ THEN BVALYGA C0AuraValygar1
-~Why do you hold such a fascination with magic, Aura? Have your people not already achieved many things others claim only magic is capable of?~ [C0BLANK]
+~你为什么对魔法这么着迷，奥拉？你族人不是已经做出许多别人说只有魔法才能做到的事了吗？~ [C0BLANK]
 DO ~SetGlobal("C0AuraValygar1","GLOBAL",1)~
-== BC0AURA2 ~I think you're exaggerating, Valygar. Magic can still accomplish many things that science can't.~
-== BVALYGA ~From what I have seen, the things magic is capable of are anything but benign.~
-== BC0AURA2 ~But– well, maybe. But power of any kind's capable of doing some terrible things. Isn't it a little unfair to hold magic to a higher standard?~
-== BVALYGA ~It is my belief that any sort of power restricted to individuals has the potential to corrupt, by giving them the ability to do what others cannot.~
-== BC0AURA2 ~True, but they can also make the world better in ways other's can't... right?~
-== BVALYGA ~Perhaps they can. Yet most fall to temptation in the end. I hope you will not fall to the same depths.~
-== BC0AURA2 ~Don't worry. I won't.~
+== BC0AURA2 ~我想你夸张了，瓦里格。魔法仍能做到许多科学做不到的事。~
+== BVALYGA ~照我所见，魔法能做的事一点也不良善。~
+== BC0AURA2 ~可——嗯，也许吧。可任何力量都能做出可怕的事。拿更高的标准要求魔法，是不是有点不公？~
+== BVALYGA ~我坚信任何只掌握在个人手里的力量，都可能因赋予其他人所不能的能力而使人腐化。~
+== BC0AURA2 ~确实，可他们也能以别人做不到的方式让世界更好……对吧？~
+== BVALYGA ~也许能。可多数人最终败给诱惑。我希望你不会堕到同样的深处。~
+== BC0AURA2 ~别担心。我不会。~
 EXIT
 
 CHAIN
@@ -1317,16 +1317,16 @@ Range("C0Aura",15)
 !StateCheck("C0Aura",CD_STATE_NOTVALID)
 PartyHasItem("NPSW04")
 Global("C0AuraValygar2","GLOBAL",0)~ THEN BC0AURA2 C0AuraValygar2
-~Valygar, is your blade a family heirloom?~ [C0BLANK]
+~瓦里格，你的刀是家传的吗？~ [C0BLANK]
 DO ~SetGlobal("C0AuraValygar2","GLOBAL",1)~
-== BVALYGA ~Close enough. I know little of its history, but it has been with my family for many generations.~
-== BC0AURA2 ~Don't you know that much about your ancestors?~
-== BVALYGA ~What little I already know is more than I wish to. There are dark tales attached to the Corthala name, Aura, ones which you would not wish to know.~
-== BC0AURA2 IF ~PartyHasItem("NPCHAN")~ THEN ~I'm sorry, I was just curious... the katana, and your armor as well... they've been altered over time, but their design seems based on those from the east.~
-== BC0AURA2 IF ~!PartyHasItem("NPCHAN")~ THEN ~I'm sorry, I was just curious... the katana, its design is unusual, but it seems based on those from the east.~
-== BVALYGA ~You may be right for all I can tell. But none may ever know anymore. The atrocities committed by those of my bloodline in the past have washed away with blood any legacy worthy of pride.~
-== BC0AURA2 ~I don't believe that's true. And even if it was... you could still create new stories, Valygar. You're not evil, even if others with your name were.~
-== BVALYGA ~What people think of me, or my last name, matter little anymore. Good deeds are worth enough alone, they do not need the burden of fame to accompany them.~
+== BVALYGA ~差不多。我对它的来历知道很少，可它跟着我家好几代了。~
+== BC0AURA2 ~你对自己祖先了解不多吗？~
+== BVALYGA ~我已经知道的这点，比我想要的多。科萨拉这个姓背着黑暗的故事，奥拉，你不会想知道的。~
+== BC0AURA2 IF ~PartyHasItem("NPCHAN")~ THEN ~抱歉，我只是好奇……那把武士刀，还有你的盔甲……它们随时间被改过，可设计似乎源自东方。~
+== BC0AURA2 IF ~!PartyHasItem("NPCHAN")~ THEN ~抱歉，我只是好奇……那把武士刀的设计不寻常，可似乎源自东方。~
+== BVALYGA ~照我所知你也许说得对。可如今没人能知道了。我血脉里的人过去犯下的暴行，已把任何值得骄傲的传承都用血洗掉了。~
+== BC0AURA2 ~我不信那是真的。就算是……你仍能写新的故事，瓦里格。你不是恶人，哪怕跟你同姓的人曾是。~
+== BVALYGA ~别人怎么看我现在、或我的姓，已不太重要。善行本身就有价值，不需要名声的重担伴随。~
 EXIT
 
 CHAIN
@@ -1337,19 +1337,19 @@ Range("C0Aura",15)
 PartyHasItem("c0abook1")
 Dead("Lavok02")
 Global("C0AuraValygar3","GLOBAL",0)~ THEN BVALYGA C0AuraValygar1
-~You've been reading Lavok's book.~ [C0BLANK]
+~你一直在读拉沃克的书。~ [C0BLANK]
 DO ~SetGlobal("C0AuraValygar3","GLOBAL",1)~
-== BC0AURA2 ~The Imaskari tome he was researching? Yes, it's... fascinating. Some of the knowledge in there could help with my own work.~
-== BVALYGA ~I see.~
-== BC0AURA2 ~Valygar, I can tell you're uncomfortable. If you're worried about me using your ancestor's knowledge, I can—~
-== BVALYGA ~No, don't mind me. As I am now, I'm... in no position to be telling anyone what they do or don't deserve to know. I don't even understand things fully myself.~
-== BC0AURA2 ~Valygar...~
-== BC0AURA2 ~I actually understand how you feel. Knowledge isn't inherently evil, but it does lead to obsession... I've seen it sometimes back in Lantan, too. Friends and family who are so devoted to their work, they don't notice how they're hurting themselves and others in the process.~
-== BVALYGA ~That is what I have seen as well, aye.~
-== BC0AURA2 ~But... I think that's why we need to look out for each other. If we think someone's losing themselves, we need to be there to take their hand and pull them back. And I think to Lavok... finding out about you meant something to him.~
-== BVALYGA ~And you truly believe that? I had not thought such optimism existed.~
-== BC0AURA2 ~I don't know for sure. But I feel like it's the right thing to believe. And... Valygar, if you think I'll fall into obsession, I'd like you to let me know, as a friend.~
-== BVALYGA ~I see. For your sake, I'll do my best.~
+== BC0AURA2 ~他研究的那本伊玛斯卡典籍？是，它……很迷人。里面有些知识能帮到我自己的工作。~
+== BVALYGA ~我明白了。~
+== BC0AURA2 ~瓦里格，我看得出你不自在。你若担心我用你祖先的知识，我可以——~
+== BVALYGA ~不，别在意我。以我现在这样，我……没资格告诉任何人他们配不配知道什么。我自己都没完全弄懂。~
+== BC0AURA2 ~瓦里格……~
+== BC0AURA2 ~其实我懂你的感受。知识本身不邪恶，可它确实会引人执迷……我在兰坦也见过几次。朋友和家人太投入自己的工作，没察觉自己正在伤害自己和别人。~
+== BVALYGA ~我也见过那样的，嗯。~
+== BC0AURA2 ~可是……我想这正是我们该彼此照看的原因。若觉得有人迷失了，我们就该在那儿握住他们的手拉回来。而我觉得对拉沃克来说……发现你，对他有意义。~
+== BVALYGA ~你真这么相信？我没想到世上还有这样的乐观。~
+== BC0AURA2 ~我不确定。可我觉得信这个是对的。还有……瓦里格，你若觉得我会陷入执迷，我希望你作为朋友告诉我。~
+== BVALYGA ~我明白。为了你，我会尽力。~
 EXIT
 
 // Viconia
@@ -1360,14 +1360,14 @@ Range("C0Aura",15)
 !StateCheck("Viconia",CD_STATE_NOTVALID)
 !StateCheck("C0Aura",CD_STATE_NOTVALID)
 Global("C0AuraViconia1","GLOBAL",0)~ THEN BVICONI C0AuraViconia1
-~Gah! Xza'iblith shu'jor!~ [C0BLANK]
+~哏！Xza'iblith shu'jor！~ [C0BLANK]
 DO ~SetGlobal("C0AuraViconia1","GLOBAL",1)~
-== BC0AURA2 ~Whoa! What's the matter, Viconia?~
-== BVICONI ~None of your concern, yingil. Suffice to say that one of those flying surface pests dared to lay its filthy appendages upon my body... ugh.~
-== BC0AURA2 ~Ohh... actually, I have a concoction that's good for warding away those pesky flies. Where did I leave it... ah, here!~
-== BVICONI ~I see you can be of some use after all.~
-== BC0AURA2 ~Incidentally... what did that phrase you said earlier mean? I've picked up a few Drowish words, but I've never...~
-== BVICONI ~Tlu suust! For your own sake, I suggest you forget those uncouth words ever came from my mouth.~
+== BC0AURA2 ~哇！怎么了，维康妮亚？~
+== BVICONI ~不关你的事，英吉尔。总之，那些会飞的地面害虫里有一只竟敢把脏爪子放到我身上……呃。~
+== BC0AURA2 ~哦……其实我有一副药剂，正好驱走那些讨厌的苍蝇。我放哪儿了……啊，这儿！~
+== BVICONI ~看来你毕竟还有点用处。~
+== BC0AURA2 ~顺便问一句……你刚才说的那句话是什么意思？我学过几个卓尔词，可从没……~
+== BVICONI ~Tlu suust！为你自己好，我建议你忘掉那些粗话是从我嘴里出来的。~
 EXIT
 
 CHAIN
@@ -1376,14 +1376,14 @@ Range("Viconia",15)
 !StateCheck("Viconia",CD_STATE_NOTVALID)
 !StateCheck("C0Aura",CD_STATE_NOTVALID)
 Global("C0AuraViconia2","GLOBAL",0)~ THEN BC0AURA2 C0AuraViconia2
-~Viconia, have you ever thought about wearing a hat?~ [C0BLANK]
+~维康妮亚，你有没有想过戴顶帽子？~ [C0BLANK]
 DO ~SetGlobal("C0AuraViconia2","GLOBAL",1)~
-== BVICONI ~What nonsense are you spouting now, little one?~
-== BC0AURA2 ~I just thought... you know, since you like your cowl so much... wouldn't it be easier to protect your eyes from the glare of the sun if you had a hat?~
-== BVICONI ~Those gaudy, conical items worn by surface–dwelling jalil? I would sooner die than subject myself to such humiliation.~
-== BC0AURA2 ~No, no! I was thinking a bit more elegant. Something wide–brimmed, but still letting your lovely white hair flow loose. Maybe a feather. Ooh, blue would look good on you.~
-== BVICONI ~Hmm. Those headpieces with dark jewels are not so unappealing to the—no. Such a ridiculous thought. Do not talk to me about this again.~
-== BC0AURA2 ~Aww. Spoilsport.~
+== BVICONI ~你现在又在胡说什么，小东西？~
+== BC0AURA2 ~我只是想……你知道，既然你那么喜欢你的头巾……若有顶帽子，护住眼睛不受阳光刺眼不是更容易？~
+== BVICONI ~那些地面住的贾利尔戴的花哨锥形玩意儿？我宁愿死，也不受那种羞辱。~
+== BC0AURA2 ~不，不！我想的是更雅致些的。宽檐的，可仍让你可爱的白发松松垂着。也许加根羽毛。哦，蓝色会很衬你。~
+== BVICONI ~嗯。那种嵌暗色宝石的头饰倒不是那么不讨——不。这念头太荒唐。别再跟我说这个。~
+== BC0AURA2 ~唉。扫兴。~
 EXIT
 
 // Wilson
@@ -1394,17 +1394,17 @@ Range("Wilson",15)
 !StateCheck("Wilson",CD_STATE_NOTVALID)
 !StateCheck("C0Aura",CD_STATE_NOTVALID)
 Global("C0AuraWilson1","GLOBAL",1)~ THEN BWILSON C0AuraWilson1
-~Growl. Yaaawn... groooowl....~ [C0BLANK]
+~低吼。哈欠……低——吼……~ [C0BLANK]
 DO ~SetGlobal("C0AuraWilson1","GLOBAL",2)~
-== BC0AURA2 ~...~
-== BWILSON ~Snore... Snuffle.~
-== BC0AURA2 ~No. Nope! Can't stand it anymore! Hey, get up! UP! *whistle* *FFFFWWWW*!~
-== BWILSON ~Growwwwl? Mumble, mumble...~
-== BC0AURA2 ~No, not "growl". I–I've told you already, this is my spot, yours is over there. Waaay over there! Where I can't hear you snoring! Or... or doing anything!~
-== BWILSON ~Rff. Mumble... *CHOMP*~
-== BC0AURA2 ~A—aaah! Stop, stop it! Let go of my gown! Ohh... why? Why do you have to be here?~
-== BWILSON ~Snuff. Snort! Yawn... zzz...~
-== BC0AURA2 ~Ugh... this is never going to work...~
+== BC0AURA2 ~……~
+== BWILSON ~打呼……嗅嗅。~
+== BC0AURA2 ~不。不行！再也受不了了！嘿，起来！起来！*吹哨* *呜——！*~
+== BWILSON ~低——吼？嘟囔，嘟囔……~
+== BC0AURA2 ~不，不是“低吼”。我——我早跟你说过，这是我的地盘，你的在那边。很——远——的——那边！那边我听不见你打呼！或者……或者干任何事！~
+== BWILSON ~呜。嘟囔……*咬*~
+== BC0AURA2 ~啊——啊！停下，停下！放开我的长袍！哦……为什么？你为什么非得在这儿？~
+== BWILSON ~嗅。哼！哈欠……呼……~
+== BC0AURA2 ~呃……这永远行不通……~
 DO ~ClearAllActions()
 StartCutSceneMode()
 FadeToColor([0.0],0)
@@ -1422,17 +1422,17 @@ Range("Wilson",15)
 !StateCheck("Wilson",CD_STATE_NOTVALID)
 !StateCheck("C0Aura",CD_STATE_NOTVALID)
 Global("C0AuraWilson1","GLOBAL",2)~ THEN BC0AURA2 C0AuraWilson2
-~*yaaawn*~ [C0BLANK]
+~*哈欠*~ [C0BLANK]
 DO ~SetGlobal("C0AuraWilson1","GLOBAL",3)~
-== BWILSON ~Yaaaaaawnn...~
-== BC0AURA2 ~Ah... *achoo*!~
-== BWILSON ~Growl... grrr... *A-A-ACHOO*!~
-== BC0AURA2 ~Ohh, that does it! Are you copying me on purpose?~
-== BWILSON ~Snort.~
-== BC0AURA2 ~I have no idea if that means yes or no, but either way, stop it! You're creeping me out!~
-== BWILSON ~Snuffle, grunt.~
-== BC0AURA2 ~*sigh*~
-== BWILSON ~Siiiigghh.~
+== BWILSON ~哈——欠……~
+== BC0AURA2 ~啊……*阿嚏*！~
+== BWILSON ~低吼……嗷……*阿——阿——阿嚏*！~
+== BC0AURA2 ~哦，够了！你是不是故意学我？~
+== BWILSON ~哼。~
+== BC0AURA2 ~我完全不知道那是是还是不是，可不管怎样，停下！你让我发毛！~
+== BWILSON ~嗅嗅，哼。~
+== BC0AURA2 ~*叹气*~
+== BWILSON ~叹——气。~
 EXIT
 
 CHAIN
@@ -1441,20 +1441,20 @@ Range("Wilson",15)
 !StateCheck("Wilson",CD_STATE_NOTVALID)
 !StateCheck("C0Aura",CD_STATE_NOTVALID)
 Global("C0AuraWilson1","GLOBAL",3)~ THEN BC0AURA2 C0AuraWilson3
-~Hey. Um... Mr. Bear? Wilson?~ [C0BLANK]
+~嘿。呃……熊先生？威尔森？~ [C0BLANK]
 DO ~SetGlobal("C0AuraWilson1","GLOBAL",4)~
-== BWILSON ~Grunt?~
-== BC0AURA2 ~I just, um... er... wanted to say thanks. That monster... might've gotten me if you hadn't smacked it away.~
-== BWILSON ~Growl. Snuffle.~
-== BC0AURA2 ~What's that? Are you asking... if I still find you scary?~
-== BWILSON ~Grunt.~
-== BC0AURA2 ~Well... of course I do! I'm not going to just get over my fear in a day or two, you know.~
-== BWILSON ~Rrr...~
-== BC0AURA2 ~Still, if you scare our enemies as much as me... maybe this won't be so bad to deal with either.~
-== BWILSON ~Grumble.~
-== BC0AURA2 ~Wait... was that your stomach growling just now? Are you... hungry?~
-== BWILSON ~GRUMBLE.~
-== BC0AURA2 ~Aah! No, no no no! You can't eat me! I'm not tasty in the slightest!~
+== BWILSON ~哼？~
+== BC0AURA2 ~我只是，呃……呃……想道谢。那只怪物……要不是你把它拍开，也许就抓住我了。~
+== BWILSON ~低吼。嗅嗅。~
+== BC0AURA2 ~什么？你是在问……我还觉不觉得你吓人？~
+== BWILSON ~哼。~
+== BC0AURA2 ~嗯……当然觉得！你知道，我不可能一两天就克服我的恐惧。~
+== BWILSON ~呜……~
+== BC0AURA2 ~不过，你若能像吓我这样吓我们的敌人……也许跟你相处也没那么难。~
+== BWILSON ~咕噜。~
+== BC0AURA2 ~等等……刚才那声音是你的肚子在叫吗？你……饿了？~
+== BWILSON ~咕——噜。~
+== BC0AURA2 ~啊！不，不不不！你不能吃我！我一点都不好吃！~
 EXIT
 
 CHAIN
@@ -1463,17 +1463,17 @@ Range("Wilson",15)
 !StateCheck("Wilson",CD_STATE_NOTVALID)
 !StateCheck("C0Aura",CD_STATE_NOTVALID)
 Global("C0AuraWilson1","GLOBAL",4)~ THEN BWILSON C0AuraWilson4
-~Growl?~ [C0BLANK]
+~低吼？~ [C0BLANK]
 DO ~SetGlobal("C0AuraWilson1","GLOBAL",5)~
-== BC0AURA2 ~Hmm? You're asking... if I have fish?~
-== BWILSON ~Grunt...!~
-== BC0AURA2 ~Oh, I'm so glad to hear you'd rather eat fish than me. Er, no, I don't. But... I do know how to fish. I grew up by the sea, after all!~
-== BWILSON ~Hnrh.~
-== BC0AURA2 ~You... want to take me fishing? No, no way! This is a trick to catch me all by myself, I know it! And then you'll—you'll use me as fish bait!~
-== BWILSON ~Snort snort snort.~
-== BC0AURA2 ~Now—now you're laughing at me? You... think I can't outfish you?~
-== BWILSON ~ROAR!~
-== BC0AURA2 ~Ooh, that's it. Next time we pass by a body of water, I'm bringing out my newest rod. I'll show you, you stupid bear!~
+== BC0AURA2 ~嗯？你是在问……我有没有鱼？~
+== BWILSON ~哼……！~
+== BC0AURA2 ~哦，听你说宁愿吃鱼也不吃我，我真高兴。呃，不，我没有。可……我确实会钓鱼。毕竟我在海边长大的！~
+== BWILSON ~哼。~
+== BC0AURA2 ~你……想带我去钓鱼？不，没门！这是个把我单独骗出去的诡计，我知道！然后你就——你就拿我当鱼饵！~
+== BWILSON ~哼，哼，哼。~
+== BC0AURA2 ~现——现在你在笑我？你……觉得我钓鱼比不过你？~
+== BWILSON ~吼——！~
+== BC0AURA2 ~哦，好。下次我们经过水域，我就拿出我最新那根竿。我让你看看，你这头蠢熊！~
 EXIT
 
 // Yoshimo
@@ -1484,17 +1484,17 @@ Range("C0Aura",15)
 !StateCheck("Yoshimo",CD_STATE_NOTVALID)
 !StateCheck("C0Aura",CD_STATE_NOTVALID)
 Global("C0AuraYoshimo1","GLOBAL",0)~ THEN BYOSHIM C0AuraYoshimo1
-~I hear you are rather well-travelled, little Aura. Tell me, is it true you spent many years in my dear homeland of Kozakura?~ [C0BLANK]
+~听说你走过不少地方，小奥拉。告诉我，你真在我亲爱的故乡科祖库拉待过许多年吗？~ [C0BLANK]
 DO ~IncrementGlobal("C0AuraYoshimo1","GLOBAL",1)~
-== BC0AURA2 ~Oh... yes, it's true, Yoshimo-san. But I wouldn't call it many years... it was only five, really.~
-== BYOSHIM ~Ah, no honorifics are necessary, my dear. After spending so many journeys in these lands, I have grown accustomed to not using them. And five years are not so few, I think—short-lived as we humans are.~
-== BC0AURA2 ~You must miss Kozakura dearly. It hasn't even been that long since I left... and I still miss the islands, and the cherry trees in bloom.~
-== BYOSHIM ~A beautiful sight, aye. It gladdens me to see you are so fully charmed by my dear hongoku. I even see all the treasures you carry, the magatama, the cherry blossoms embossed on your armor, and—what's this? Why, it's a charm hanging from your bow, in your own sweet image!~
-== BC0AURA2 ~H–hey! Aw, Yoshimo... come on, give that back already!~
-== BYOSHIM ~Ha ha. Teasing aside... truly, seeing the impression Kozakura has left on you pleases my heart. I have always thought, 'tis a pity the East lies so far from these lands, that more could not have the chance to see that place, to embrace it, fully within their hearts.~
-== BYOSHIM ~For me... well, long as the journey may be, one day, I hope to return.~
-== BC0AURA2 ~I truly do hope you see your kakyou again, Yoshimo. Where is it, if I might ask?~
-== BYOSHIM ~Hmm... another time, little Aura. I fear if I begin to speak of home, it will be some time before I stop. And I doubt <CHARNAME> would appreciate that. Heh.~
+== BC0AURA2 ~哦……是的，是真的，吉野先生。可我不会说许多年……其实只有五年。~
+== BYOSHIM ~啊，不必用敬称，亲爱的。在这些土地上走过这么多旅程后，我已习惯不用。而五年也不算少，我想——毕竟我们人类命短。~
+== BC0AURA2 ~你一定很想念科祖库拉。我离开还没多久……可我仍想念那些岛屿，和盛开的樱树。~
+== BYOSHIM ~美景，嗯。看到你如此为我亲爱的本国着迷，我很欢喜。我甚至看见你带着的那些宝物，勾玉、盔甲上压印的樱花，还有——这是什么？哟，是你弓上挂着的一个护符，样子正是你可爱的自己！~
+== BC0AURA2 ~嘿——嘿！唉，吉野……得了吧，还给我！~
+== BYOSHIM ~哈哈。玩笑之外……说真的，看到科祖库拉在你身上留下的印记，让我心里欢喜。我一直觉得，可惜东方离这些土地太远，不能让更多人有机会看看那个地方、把它完整地拥入心中。~
+== BYOSHIM ~对我来说……嗯，不管旅途多长，总有一天，我希望能回去。~
+== BC0AURA2 ~我真希望你再见你的家乡，吉野。若可以问，它在哪儿？~
+== BYOSHIM ~嗯……改天吧，小奥拉。我怕一开口讲家，就会说很久停不下来。而<CHARNAME>大概不会喜欢。嘿。~
 EXIT
 
 CHAIN
@@ -1503,14 +1503,14 @@ Range("C0Aura",15)
 !StateCheck("Yoshimo",CD_STATE_NOTVALID)
 !StateCheck("C0Aura",CD_STATE_NOTVALID)
 Global("C0AuraYoshimo2","GLOBAL",0)~ THEN BYOSHIM C0AuraYoshimo2
-~Your pleasant spirit is quite contagious, little Aura. It is truly fortunate, to have your cheerful and considerate person to lighten the party's atmosphere.~ [C0BLANK]
+~你愉快的心性很有感染力，小奥拉。能有你这样开朗体贴的人让队伍气氛轻松，真是幸事。~ [C0BLANK]
 DO ~IncrementGlobal("C0AuraYoshimo2","GLOBAL",1)~
-== BC0AURA2 ~'Little Aura'? Are you going to call me that from now on, Yoshimo?~
-== BYOSHIM ~I thought it quite delightful, would you not agree?~
-== BC0AURA2 ~But it's... it's rather childish, isn't it?~
-== BYOSHIM ~If you do not enjoy it, I shall cease. I simply thought it a term of endearment between friends.~
-== BC0AURA2 ~Well, it's... not so bad. I mean, I guess it's okay to call me that. If we're friends.~
-== BYOSHIM ~Of course, heh... little Aura.~
+== BC0AURA2 ~“小奥拉”？你以后都要这么叫我吗，吉野？~
+== BYOSHIM ~我觉得挺可爱，你不觉得吗？~
+== BC0AURA2 ~可这……这挺幼稚的，不是吗？~
+== BYOSHIM ~你若不喜欢，我就不叫了。我只是觉得这是朋友间的昵称。~
+== BC0AURA2 ~嗯，也……不算太糟。我是说，我想这么叫我也行。如果我们是朋友。~
+== BYOSHIM ~当然，嘿……小奥拉。~
 EXIT
 
 CHAIN
@@ -1519,17 +1519,17 @@ Range("Yoshimo",15)
 !StateCheck("Yoshimo",CD_STATE_NOTVALID)
 !StateCheck("C0Aura",CD_STATE_NOTVALID)
 Global("C0AuraYoshimo2","GLOBAL",1)~ THEN BC0AURA2 C0AuraYoshimo2
-~Do you have a moment, Yoshimo? There's something I was curious about.~ [C0BLANK]
+~你有空吗，吉野？有件事我好奇。~ [C0BLANK]
 DO ~IncrementGlobal("C0AuraYoshimo2","GLOBAL",2)~
-== BYOSHIM ~But of course, little Aura. It is always a delight to hear your voice, so listen eagerly I will.~
-== BC0AURA2 ~Hehe, you're flattering me too much. I just wanted to know, though... you've been away from home for a long time, haven't you? You've mastered the Common tongue, you understand these lands better than even I do... Faerûn must feel like a second home to you at this point.~
-== BYOSHIM ~Aye, close enough, my dear. It has been a long time since I left Kozakura in search of adventure, and in all that time, I have grown accustomed to the danger and thrill, as well as the profit, to be found here. Perhaps that is why, despite my homesickness, I have not succumbed to the desperate urge to return home.~
-== BC0AURA2 ~You're a free spirit. The type who quickly finds themselves at home anywhere, no matter how unfamiliar it is.~
-== BYOSHIM ~Still, only the truly heartless, or those with dark memories, would not hold some affection for the land they were born and raised in. Meeting you, little Aura, who has discovered a love for my home, is as good as meeting a kinsman.~
-== BC0AURA2 ~And... do you miss Kozakura even more now, after talking about it with me?~
-== BYOSHIM ~I do. Though I fear it is not the time for a homecoming for me... not yet.~
-== BC0AURA2 ~"Not yet"?~
-== BYOSHIM ~Well, I must see the end of this journey with <CHARNAME>—and you, my new friend—no? Come now, little one, there is still a tale to be told yet.~
+== BYOSHIM ~当然，小奥拉。听你说话总是件乐事，我会仔细听。~
+== BC0AURA2 ~嘿嘿，你太抬举我了。我只是想知道……你离家很久了，对吧？你精通通用语，对这些土地的理解连我都比不上……到如今费伦对你一定像第二个家。~
+== BYOSHIM ~嗯，差不多，亲爱的。我离开科祖库拉寻求冒险已很久，这些年来我已习惯这里的危险与刺激，还有利益。也许正因为这样，尽管思乡，我还没屈服于那急切的归乡冲动。~
+== BC0AURA2 ~你是个自由的灵魂。那种不管多陌生，都能很快在任何地方安顿下来的人。~
+== BYOSHIM ~不过，只有真正无心的人，或者心怀黑暗记忆的人，才会对自己生长之地毫无感情。遇见你，小奥拉，一个爱上了我故乡的人，就跟遇见同乡一样好。~
+== BC0AURA2 ~还有……跟我聊过之后，你现在更想念科祖库拉了吗？~
+== BYOSHIM ~是的。不过我怕是还没到归乡的时候……还不到。~
+== BC0AURA2 ~“还不到”？~
+== BYOSHIM ~嗯，我得跟<CHARNAME>——还有你，我的新朋友——把这趟旅途走到尽头，不是吗？来吧，小东西，还有故事要讲呢。~
 EXIT
 
 CHAIN
@@ -1538,12 +1538,12 @@ Range("C0Aura",15)
 !StateCheck("Yoshimo",CD_STATE_NOTVALID)
 !StateCheck("C0Aura",CD_STATE_NOTVALID)
 Global("C0AuraYoshimo2","GLOBAL",2)~ THEN BYOSHIM C0AuraYoshimo3
-~Little Aura, you are quite the paradox. You have keen eyes and deft hands of a rogue, yet also the discipline and responsibility of a samurai. Are all within Lantan much like yourself?~ [C0BLANK]
+~小奥拉，你真是个矛盾体。你有盗贼般锐利的眼和灵巧的手，却又有武士般的自律与责任。兰坦人都像你这样吗？~ [C0BLANK]
 DO ~IncrementGlobal("C0AuraYoshimo2","GLOBAL",3)~
-== BC0AURA2 ~Well... I would like to hope so, yes. It's not only important to learn different skills, but to use them responsibly.~
-== BYOSHIM ~Heh, small wonder then, that even though our profession have some similarity, I rarely feel challenged as to my role in this party. Though your strong sense of morals does shame me on occasion, when I am tempted to fall back into my thieving habits.~
-== BC0AURA2 ~Oh, Yoshimo. You don't have anything to be ashamed of. <CHARNAME> trusts you, and so do I. I know you hope the best for us.~
-== BYOSHIM ~Yes, I... indeed, I do. May our friendship be a long and fruitful one, my dear.~
+== BC0AURA2 ~嗯……我希望如此，是的。学会不同的技艺不只重要，负责任地使用它们也重要。~
+== BYOSHIM ~嘿，难怪，虽说我们的行当有些相似，我却很少觉得自己在这队里的角色受到挑战。不过你那强烈的道德感有时真让我羞愧，尤其当我想重拾偷窃旧习的时候。~
+== BC0AURA2 ~哦，吉野。你没什么可羞愧的。<CHARNAME>信你，我也信。我知道你盼我们最好。~
+== BYOSHIM ~是，我……确实如此。愿我们的友谊长久而丰硕，亲爱的。~
 EXIT
 
 CHAIN
@@ -1552,28 +1552,28 @@ Range("C0Aura",15)
 !StateCheck("Yoshimo",CD_STATE_NOTVALID)
 !StateCheck("C0Aura",CD_STATE_NOTVALID)
 Global("C0AuraYoshimo2","GLOBAL",3)~ THEN BYOSHIM C0AuraYoshimo4
-~I see you often handle that jade pendant you wear when deep in thought, little Aura. It must hold great importance to you, as I have never seen it leave your possession.~ [C0BLANK]
+~我常看见你沉思时摩挲你戴的那块玉坠，小奥拉。它对你一定极重要，因为我从没见它离开过你身上。~ [C0BLANK]
 DO ~IncrementGlobal("C0AuraYoshimo2","GLOBAL",4)~
-== BC0AURA2 ~Yes, it... was a gift. From my mentor, a Kozakuran shrine priestess.~
-== BYOSHIM ~A miko? I see... I have noticed that your attire under your armor resembles a priestess's kosode. It is no coincidence, it seems.~
-== BC0AURA2 ~I spent a few years at a shrine, trying to regain my memory after nearly drowning at sea. It was... more like a long study than a way of life, but I kept a few things to remember that time.~
-== BYOSHIM ~If I may ask... what shrine did you tend to, while you were in my homeland?~
-== BC0AURA2 ~It was... the Amatsugami shrine. Do you know about it?~
-== BYOSHIM ~...~
-== BYOSHIM ~Yes... the name is familiar. That magatama... if it is not too much, may I see it?~
-== BC0AURA2 ~...Alright.~
-== BYOSHIM ~A precious gift, this is. And to me, rather... nostalgic.~
-== BC0AURA2 ~What?~
-== BYOSHIM ~The truth is, my dearest aunt was also a miko. A strong, compassionate woman... when I was an unruly child who my parents feared would bring shame to our name, she was the only one who could instill any lessons within the young Yoshimo, an reckless hellion that you would likely not even recognize, should you have met him. And... she wore a magatama much like this one.~
-== BC0AURA2 ~Oh, I see... how is she now?~
-== BYOSHIM ~I... do not know. As I have said, it has been many years since I have returned home. The last I heard from her was through a letter... written to me over a year ago, regarding some family matters involving my sister. What of your mentor, Aura?~
-== BC0AURA2 ~She—she died. A ronin, a former friend, murdered her, when she had protected me. I travelled to the Sword Coast in order to find him... and I stopped him. I'm... not proud of it, even though I know he committed many evils.~
-== BYOSHIM ~Ah. So that is what happened... do not feel guilt, Aura. A disgraced samurai who would turn his blade against his friend... deserves the shame of dying by that same blade.~
-== BC0AURA2 ~Yoshimo, you... you sound angry. This isn't like you.~
-== BYOSHIM ~Heh. If you sense fury, then consider it to be a righteous sort. In any case... these dark memories are behind you now, no?~
-== BC0AURA2 ~Right.~
-== BC0AURA2 ~Yoshimo?~
-== BYOSHIM ~Yes?~
-== BC0AURA2 ~You should... go home soon. It sounds like there are people who are waiting for you. You might be happier if you saw them again.~
-== BYOSHIM ~Ah... yes. That is sound advice indeed. Soon, I hope I will be returning... in one way or another.~
+== BC0AURA2 ~是的，它……是件礼物。来自我的导师，一位科祖库拉的神社巫女。~
+== BYOSHIM ~巫女？我明白了……我注意到你盔甲下的衣着像巫女的小袖。看来这不是巧合。~
+== BC0AURA2 ~我在一座神社待了几年，想在海上几乎溺死后恢复记忆。那……更像是长期的学习而非生活方式，可我留了几样东西纪念那段时光。~
+== BYOSHIM ~若可以问……你在我故乡时，侍奉的是哪座神社？~
+== BC0AURA2 ~是……天津神神社。你知道它吗？~
+== BYOSHIM ~……~
+== BYOSHIM ~知道……这名字很熟。那块勾玉……若不太过分，能让我看看吗？~
+== BC0AURA2 ~……好吧。~
+== BYOSHIM ~这是件珍贵的礼物。而对我来说，相当……怀旧。~
+== BC0AURA2 ~什么？~
+== BYOSHIM ~其实，我最亲爱的姑母也是巫女。一个坚强、慈悲的女人……我小时候顽劣，父母怕我会给家族丢脸，只有她能给年幼的吉野灌输些道理——一个鲁莽的混世魔王，你若见过，大概都认不出。还有……她戴的勾玉，就跟这块很像。~
+== BC0AURA2 ~哦，我明白了……她现在怎么样？~
+== BYOSHIM ~我……不知道。我说过，我回家已是很多年前。我最后一次听到她的消息是一封信……一年多前写给我，说些涉及我姐妹的家事。你的导师呢，奥拉？~
+== BC0AURA2 ~她——她死了。一个浪人，她以前的朋友，在她护住我时杀了她。我一路到剑湾就是为了找他……我阻止了他。我……并不为此自豪，尽管我知道他作过许多恶。~
+== BYOSHIM ~啊。原来是这样……别愧疚，奥拉。一个堕落的武士竟把刀转向自己的朋友……就该羞愧于死在同一把刀下。~
+== BC0AURA2 ~吉野，你……你听着像在生气。这不像你。~
+== BYOSHIM ~嘿。你若觉出怒意，就当它是正义的那种。总之……这些黑暗的记忆都已在你身后了，对吧？~
+== BC0AURA2 ~对。~
+== BC0AURA2 ~吉野？~
+== BYOSHIM ~嗯？~
+== BC0AURA2 ~你该……早些回家。听起来有人在等你。再见他们，你也许会更快乐。~
+== BYOSHIM ~啊……是。这建议确实中肯。我希望不久就能回去……以一种方式或另一种。~
 EXIT

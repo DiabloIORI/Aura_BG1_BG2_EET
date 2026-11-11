@@ -1,10 +1,10 @@
 BEGIN C0AUALCH
 
 IF ~True()~ THEN BEGIN alchemy
-SAY ~What do you wish to create?~
+SAY ~你想造什么？~
 + ~!Global("C0AUIN5","GLOBAL",1)~ + ~Potions~ DO ~SetGlobal("C0ArtificerAlchemy","LOCALS",1) StartStore("c0aupot1",Player1)~ EXIT
-+ ~Global("C0AUIN5","GLOBAL",1)~ + ~Standard Potions~ DO ~SetGlobal("C0ArtificerAlchemy","LOCALS",1) StartStore("c0aupot1",Player1)~ EXIT
-+ ~Global("C0AUIN5","GLOBAL",1) Global("C0AdvancedAlchemy","LOCALS",0)~ + ~Advanced Potions~ DO ~SetGlobal("C0ArtificerAlchemy","LOCALS",1) StartStore("c0aupoth",Player1)~ EXIT
++ ~Global("C0AUIN5","GLOBAL",1)~ + ~标准药水~ DO ~SetGlobal("C0ArtificerAlchemy","LOCALS",1) StartStore("c0aupot1",Player1)~ EXIT
++ ~Global("C0AUIN5","GLOBAL",1) Global("C0AdvancedAlchemy","LOCALS",0)~ + ~高级药水~ DO ~SetGlobal("C0ArtificerAlchemy","LOCALS",1) StartStore("c0aupoth",Player1)~ EXIT
 + ~OR(3)
 GlobalGT("Chapter","GLOBAL",7)
 GlobalGT("C0AuraQuest","GLOBAL",8)

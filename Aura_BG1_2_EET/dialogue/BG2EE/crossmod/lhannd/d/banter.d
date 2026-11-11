@@ -6,17 +6,17 @@ Range("C0Aura",15)
 !StateCheck("L#LHA",CD_STATE_NOTVALID)
 !StateCheck("C0Aura",CD_STATE_NOTVALID)
 Global("C0AuraL#Lhannd","GLOBAL",0)~ THEN L#LHAB banter1
-~You're not a noble, are you, Aura?~
+~奥拉，你不是贵族，对吧？~
 DO ~SetGlobal("C0AuraL#Lhannd","GLOBAL",1)~
-== BC0AURA2 ~No, I'm not. We Lantanna don't really have 'nobility' in the traditional sense... it's hard to explain what the equivalent would be in these lands.~
-== L#LHAB ~I guess that's why I couldn't figure you out. You look well-off, but you don't have the typical noble gait or attitude... come to think of it, I don't think I've ever met a gnome noble before.~
-== BC0AURA2 ~Ah, you'll find a few upper-class families in some of the cities farther north... I've met a few, but I could never get along much with them. They're a bit snooty for my taste.~
-== L#LHAB ~Isn't that just the way your bog-standard noble is, though?~
-== BC0AURA2 ~You'd be surprised. When you're too much for even other nobles to stand... well, there's a reason you don't see gnomish nobility at your typical party all too often.~
-== L#LHAB ~Huh. Even more annoying than other nobles... I didn't think that was possible. Makes me appreciate the turnip peddlers we get around here a bit more.~
-== BJAN IF ~InParty("JAN")~ THEN ~Hey! Are you implying that we turnip peddlers weren't worthy of appreciation before?~
-== L#LHAB ~Sorry. I don't mean to generalize. After getting to know you, Aura, I'm starting to think I don't understand some groups as much as I thought.~
-== BC0AURA2 ~Hehe, it's alright. You're self-aware enough to recognize it, Lhannd, and that's what matters.~
+== BC0AURA2 ~不，我不是。我们兰坦人其实没有传统意义上的“贵族”……要说在这片土地上相当于什么，倒有点难解释。~
+== L#LHAB ~我猜这就是我一直看不透你的缘故。你看着像是家境优渥，却没有贵族那种惯常的步态和作派……说起来，我好像还真没遇见过侏儒贵族。~
+== BC0AURA2 ~啊，再往北去的几座城里，你能找到几个上等人家……我见过几位，可总跟他们处不来。按我的口味，他们有点太势利了。~
+== L#LHAB ~这不就是你们那些普普通通的贵族的老样子吗？~
+== BC0AURA2 ~你会吃惊的。等你连别的贵族都受不了你的时候……嗯，寻常宴会上不常看见侏儒贵族，是有原因的。~
+== L#LHAB ~哼。比别的贵族还招人烦……我倒没想到这还有可能。这让我对咱们这儿卖芜菁的小贩多了几分好感。~
+== BJAN IF ~InParty("JAN")~ THEN ~喂！你这是在说我们卖芜菁的以前不值得高看一眼？~
+== L#LHAB ~抱歉。我不是想一概而论。认识你之后，奥拉，我开始觉得有些群体我并没有自己想的那样了解。~
+== BC0AURA2 ~嘿嘿，没事。兰恩德，你能自己察觉到这一点，就够了。~
 EXIT
 
 CHAIN
@@ -27,14 +27,14 @@ Range("C0Aura",15)
 !StateCheck("L#LHA",CD_STATE_NOTVALID)
 !StateCheck("C0Aura",CD_STATE_NOTVALID)
 Global("C0AuraL#Lhannd","GLOBAL",1)~ THEN L#LHAB banter2
-~I don't think I've mentioned it before, Aura, but that is a *very* shiny bow. I have to look away when it catches the sunlight.~
+~奥拉，我好像没提过，可那把弓真是*非常*亮。阳光一照上去我就得把眼睛挪开。~
 DO ~SetGlobal("C0AuraL#Lhannd","GLOBAL",2)~
-== BC0AURA2 ~The Sunshooter? It's my pride and joy. I don't normally like making weapons, but this one's an exception.~
-== L#LHAB ~I'm just a little worried that it might reflect the light back into your eyes and throw off your aim. Does that never become a problem?~
-== BC0AURA2 ~Well, I have light-blocking lenses in my goggles that are designed to protect from glares. So I've considered the issue at least.~
-== L#LHAB ~I guess it helps to have a creative mind to work around these kinds of problems. The shine is certainly appealing, though I wonder if a matte finish wouldn't be just as stylish... and more practical.~
-== BC0AURA2 ~Now you're starting to think more like a Lantanna than I do. We usually consider practicality above everything else, but life gets less pleasant if that's all we think about, right?~
-== L#LHAB ~I think there's just the right balance of practicality and elegance somewhere in there. Why don't we draw up some designs together when we have the time?~
+== BC0AURA2 ~太阳射手？那是我的骄傲和心头好。我平常不喜欢造武器，这一件算是例外。~
+== L#LHAB ~我只是有点担心它会把光反照进你眼睛里，扰乱你的瞄准。这从来不成为麻烦吗？~
+== BC0AURA2 ~嗯，我的护目镜里有挡光镜片，专门防眩光。所以这个问题我至少是想过的。~
+== L#LHAB ~我猜遇上这类难题，有个会转脑筋的头脑确实管用。这光泽当然好看，不过我倒是想，哑光的表面是不是也一样时髦……而且更实用。~
+== BC0AURA2 ~你现在的想法倒比我还像个兰坦人了。我们通常把实用放在一切之上，可要是只想着这个，日子就没那么好过了，对吧？~
+== L#LHAB ~我觉得中庸的实用和雅致，该在里头找个恰到好处的平衡。等有空的时候，我们何不一起画些图样？~
 EXIT
 
 CHAIN
@@ -45,14 +45,14 @@ Range("C0Aura",15)
 !StateCheck("L#DVA",CD_STATE_NOTVALID)
 !StateCheck("C0Aura",CD_STATE_NOTVALID)
 Global("C0AuraL#LhanndToB","GLOBAL",0)~ THEN L#LHA25B bantertob
-~Sometimes I wonder, Aura...~
+~有时候我会想，奥拉……~
 DO ~SetGlobal("C0AuraL#LhanndToB","GLOBAL",1)~
-== BC0AUR25 ~Go ahead.~
-== L#LHA25B ~If I had met you sooner, and brought you to my father... could you have saved his life? If the power of faith and divine assistance couldn't cure him, maybe knowledge and science, could've perhaps... could've created some sort of remedy...~
-== BC0AUR25 ~Lhannd... it's not that simple. Some things can't be changed, even if it's a terrible thing. I've had to learn that myself.~
-== L#LHA25B ~I know that. But I have to wonder sometimes if the gods are simply playing cruel tricks, tricks that decent mortals like you never would.~
-== BC0AUR25 ~I can't presume to know what the gods think. I've never committed myself to a deity... but I'd like to think sometimes there are lessons we have to accept. It may not seem right, but...~
-== L#LHA25B ~*sigh* I know. I just miss him so much.~
-== BC0AUR25 ~That said... even if this doesn't make you feel better, Lhannd... I don't think you should blame yourself. Nobody who has ever cared about you would want that.~
-== L#LHA25B ~It doesn't, but still... thank you for trying. I know you would never have given up on my father, if you had been there from the start. You're too kind, Aura.~
+== BC0AUR25 ~去吧。~
+== L#LHA25B ~要是我早些遇到你，把你带去见我父亲……你能救他的命吗？若信仰之力与神助都治不好他，也许知识与科学说不定……说不定能造出什么解药来……~
+== BC0AUR25 ~兰恩德……没那么简单。有些事改不了，哪怕它是件可怕的事。我自己也是吃过这个教训才懂的。~
+== L#LHA25B ~这我知道。可有时候我忍不住要想，神明是不是就在耍些残忍的把戏——像你这样正派的凡人绝不会耍的把戏。~
+== BC0AUR25 ~我不敢妄称知道神明在想什么。我从没把自己交托给哪位神……不过我情愿相信，有些教训是我们必须接受的。它看着或许不公道，可是……~
+== L#LHA25B ~*叹气* 我知道。我只是太想他了。~
+== BC0AUR25 ~话虽如此……就算这话不能让你好受些，兰恩德……我觉得你不该自责。凡是真心在意过你的人，都不会希望你这样。~
+== L#LHA25B ~确实不能，可还是……谢谢你愿意试。我知道，要是你从头就在，你绝不会放弃我父亲。你太善良了，奥拉。~
 EXIT

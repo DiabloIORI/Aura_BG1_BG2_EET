@@ -1,73 +1,73 @@
 CHAIN IF WEIGHT #-1 ~Global("C0AU01Telescope","C0AU01",1)~ THEN C0AU01TK telescope
-~You wouldn't *believe* how much you can see with a telescope this big. Getting the materials needed to build it was expensive, but it's more than worth it for the improved clarity.~
+~你*不会相信*，用这么大的望远镜能看多远。造它所需的材料很贵，可为了更清晰的视野，完全值得。~
 DO ~SetGlobal("C0AU01Telescope","C0AU01",2)~
 END
-+ ~Global("C0AuraKnowsBG1","GLOBAL",1)~ + ~It's a lot more impressive than the one from the Hall of Wonders.~ + telescope.1
-++ ~Can I have a look?~ + telescope.2
-++ ~I'll leave it alone. Wouldn't want to, uh, ruin the polish or something.~ EXIT
++ ~Global("C0AuraKnowsBG1","GLOBAL",1)~ + ~比奇迹之殿那台强多了。~ + telescope.1
+++ ~我能看看吗？~ + telescope.2
+++ ~我不动它。免得，呃，把上面的抛光弄坏。~ EXIT
 
 CHAIN C0AU01TK telescope.1
-~I know, right? Well, that one was a little more for accessory than practical use, but *this*, this is the real thing.~
+~是吧？嗯，那台更像是摆设，不太实用，可*这*台，这才是真家伙。~
 END
-++ ~Can I have a look?~ + telescope.2
-++ ~Let's go.~ EXIT
+++ ~我能看看吗？~ + telescope.2
+++ ~走吧。~ EXIT
 
 CHAIN C0AU01TK telescope.2
-~You can try, but I don't think you'll see much. It's not the right time of the season.~
+~你可以试试，不过我猜你看不到什么。现在不是这个季节的合适时候。~
 EXIT
 
 CHAIN IF WEIGHT #-1 ~Global("C0AU01Painting","C0AU01",1)~ THEN C0AU01TK painting
-~I painted those myself. I've been improving my skills ever since I had a chance to sit down and practice for a few hours. Pretty, aren't they?~
+~那些是我自己画的。自从有机会坐下来练上几个小时，我一直在长进。好看吧？~
 DO ~SetGlobal("C0AU01Painting","C0AU01",2)~
 END
-++ ~Have you ever thought of becoming a career artist?~ + painting.1
-++ ~They're very well done.~ + painting.2
-++ ~I've looked at them long enough.~ EXIT
+++ ~你有没有想过当职业画家？~ + painting.1
+++ ~画得很好。~ + painting.2
+++ ~我看够了。~ EXIT
 
 CHAIN C0AU01TK painting.1
-~Nah. It's not as much fun if it becomes work. I like to take my time and relax when I'm painting.~
+~不了。变成工作就没那么有趣了。我画画的时候喜欢慢慢来，放松着画。~
 EXIT
 
 CHAIN C0AU01TK painting.2
-~Aww, thank you. I still consider myself an amateur, but with enough practice, I'll master the art of ink painting one day.~
+~哎哟，谢谢。我还只当自己是个业余的，可练得够多，总有一天会掌握水墨画的。~
 EXIT
 
 CHAIN IF WEIGHT #-1 ~Global("C0AU01Desk","C0AU01",1)~ THEN C0AU01TK desk
-~Eep! How embarrassing. I usually take care of my notes and tools better than this, I swear. I just haven't been around long enough, and Pico doesn't know how to properly organize them. I'll clean up eventually.~
+~呀！真丢人。我平时收纳笔记和工具比这整齐，我发誓。只是我在这儿待得还不够久，皮可又不知道怎么好好整理。我早晚会收拾的。~
 DO ~SetGlobal("C0AU01Desk","C0AU01",2)~
 EXIT
 
 CHAIN IF WEIGHT #-1 ~Global("C0AU01Shelf","C0AU01",1)~ THEN C0AU01TK shelf
-~Do you like that smell, <CHARNAME>? That's from the incense that's burning right there. I bought it from a Shou trader at Waukeen's Promenade some time ago. I find that it calms the nerves.~
+~你喜欢那味道吗，<CHARNAME>？那是那边烧着的香。前些时候我在沃金长廊从一个寿人商人那儿买的。我觉得它能安神。~
 DO ~SetGlobal("C0AU01Shelf","C0AU01",2)~
 EXIT
 
 CHAIN IF WEIGHT #-1 ~Global("C0AU01Contraption","C0AU01",1)~ THEN C0AU01TK resonator
-~It's a Jansen-Brand Thaumaturgical Resonator. I didn't make up the name... as you can probably guess.~
+~这是詹森牌通灵共振器。这名字不是我编的……你大概也猜得到。~
 DO ~SetGlobal("C0AU01Contraption","C0AU01",2)~
 END
-++ ~What does it do?~ + resonator.1
+++ ~它有什么用？~ + resonator.1
 
 CHAIN C0AU01TK resonator.1
-~I don't know. It's not one of mine, it was here before I moved in. It was really dusty too, like no one's touched it in years.~
-= ~Supposedly, it has some kind of reaction to powerful magic. Not that it ever does, with magic as tightly controlled in this city as it is. I tidied up all the gears and receptors, but I've never seen it become active.~
+~不知道。它不是我的东西，我搬来之前就在这儿了。还积满了灰，像是好些年没人碰过。~
+= ~据说它对强大的魔法会有某种反应。可这城里魔法管得那么严，它从来没反应过。我把齿轮和感应器都清理过了，可从没见它动起来。~
 EXIT
 
 CHAIN IF WEIGHT #-1 ~Global("C0AU01Clock","C0AU01",1)~ THEN C0AU01TK clock
-~Ha-ha! I'm glad you noticed that. It's one of the inventions I'm more proud of. It uses different colored salts in specific hours of the day to tell the time. Sure, it's a bit impractical, but it's neat, isn't it?~
+~哈哈！你注意到了，我很高兴。这是我最自豪的发明之一。它在一天中特定的时段用不同颜色的盐来报时。当然，有点不实用，可挺精巧，是吧？~
 DO ~SetGlobal("C0AU01Clock","C0AU01",2)~
 EXIT
 
 CHAIN IF WEIGHT #-1 ~Global("C0AU01Portal","C0AU01",1)~ THEN C0AU01TK portal
-~I really need to clean up when I get a chance. It's like everything I need disappears whenever I'm looking for something...~
+~有机会我真得收拾一下。就像我要找什么东西的时候，它总会不见……~
 DO ~SetGlobal("C0AU01Portal","C0AU01",2)~
 END
-++ ~Did you build this portal?~ + portal.1
+++ ~这传送门是你造的吗？~ + portal.1
 
 CHAIN C0AU01TK portal.1
-~Oh, no... that was made by Jan, I think... he's the one who does most of the inventing in the family. I just did a bit of maintenance on it.~
-== C0AU01TK IF ~IsValidForPartyDialog("JAN")~ THEN ~Whatever did you build this for in the first place anyways, Jan? It looked like you gave up halfway through.~
-== JANJ IF ~IsValidForPartyDialog("JAN")~ THEN ~Ah, now that's a long and unfortunate story. You see, with how much our family's turnip business has been flourishing, the little space we have within our own property for harvesting simply isn't big enough anymore. Naturally, I decided the simplest solution would be to build an inter-dimensional portal that would lead to the fabled Plane of Vegetable Harvests as a venue for expanding our business. Alas, the Cowled Wizards caught wind of my plan when I tried to power up the portal, and confiscated the translocation crystal that I, er... acquired through not-so-legal venues. Not only that, but they slapped on a hefty fine just for good measure. It was very rude of them.~
-== C0AU01TK IF ~IsValidForPartyDialog("JAN")~ THEN ~So, you were trying to open a pocket dimension to create a turnip farm. *sigh* I should've probably saw that coming.~
-== C0AU01TK ~Anyways, it's not exactly very useful as it is. I'm not especially knowledgeable when it comes to building magical portals, and even if I was, it's missing a power source. It's a shame, I really wanted to see if I could tune it to send me home to Lantan for a visit.~
+~哦，不……那是詹造的，我想……家里大部分发明都是他做的。我只给它做了点维护。~
+== C0AU01TK IF ~IsValidForPartyDialog("JAN")~ THEN ~詹，你当初到底为什么造这个？看样子你造到一半就放弃了。~
+== JANJ IF ~IsValidForPartyDialog("JAN")~ THEN ~啊，这可是个又长又不幸的故事。你看，我们家萝卜生意兴旺得很，自家那点收成的地方根本不够用了。自然，我断定最简单的解决办法就是造一道跨次元传送门，通往传说中那个蔬菜丰收之界，好扩大我们的生意。可惜，我试着给传送门供能时，蒙面法师会听说了我的计划，把我那块……呃，通过不太合法的手续弄来的传送水晶没收了。不止如此，他们还顺手加了一笔重罚。他们真是太无礼了。~
+== C0AU01TK IF ~IsValidForPartyDialog("JAN")~ THEN ~所以，你是想开一个位面口袋，建个萝卜农场。*叹气* 我大概该料到。~
+== C0AU01TK ~总之，它现在实在不太有用。说到造魔法传送门，我并不特别在行，就算在行，它也缺个能源。可惜，我本来真想把它调好，送我回兰坦探一次亲。~
 EXIT

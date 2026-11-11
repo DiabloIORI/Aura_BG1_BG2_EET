@@ -2,13 +2,7 @@ ACTION_IF NOT FILE_EXISTS_IN_GAME ~C0AS#P1.SPL~ THEN BEGIN
 COPY ~%MOD_FOLDER%/effects/poison_weapon~ ~override~
 
 COPY_EXISTING ~c0as#p1.spl~ ~override~
-SAY NAME1 ~Poison Weapon~
-SAY UNIDENTIFIED_DESC ~Poison Weapon
-The user is capable of coating <PRO_HISHER> weapon for the next eight hours with a slow-acting but extremely potent poison. This poison deals damage every round and reduces the target's Constitution by one point every round for at least five rounds. After five rounds have passed, the target must make a Saving Throw vs. Death or become poisoned for another five rounds. Therefore, the poison has the potential to last indefinitely as long as the target does not make a successful Saving Throw. The target may not die of Constitution loss caused by the poison.
-1st level: Target suffers two poison damage and loses one point of Constitution every round. No save modifier.
-6th level: Target suffers four poison damage and loses one point of Constitution every round. Save modifier of -1.
-11th level: Target suffers six poison damage and loses two points of Constitution every round. Save modifier of -2.
-16th level: Target suffers eight poison damage and loses two points of Constitution every round. Save modifier of -3.
-21st level: Target suffers ten poison damage and loses three points of Constitution every round. Save modifier of -4.~
+SAY NAME1 ~淬毒武器~
+SAY UNIDENTIFIED_DESC ~淬毒武器↵↵使用者能在接下来的八小时里，为<PRO_HISHER>武器涂上一种起效缓慢却极厉害的毒。此毒每回合造成伤害，并每回合降低目标 1 点体质，至少持续五回合。五回合过后，目标须通过对抗死亡的豁免，否则再中毒五回合。因此，只要目标一直无法成功豁免，毒就可能无限延续。目标不会因该毒造成的体质流失而死亡。↵一级：目标每回合受到两点毒素伤害并失去 1 点体质。无豁免调整。↵六级：每回合四点毒素伤害，失去 1 点体质。豁免调整 -1。↵十一级：每回合六点毒素伤害，失去 2 点体质。豁免调整 -2。↵十六级：每回合八点毒素伤害，失去 2 点体质。豁免调整 -3。↵二十一级：每回合十点毒素伤害，失去 3 点体质。豁免调整 -4。~
 COPY_EXISTING ~c0as#p01.spl~ ~override/spcl423.spl~
 END

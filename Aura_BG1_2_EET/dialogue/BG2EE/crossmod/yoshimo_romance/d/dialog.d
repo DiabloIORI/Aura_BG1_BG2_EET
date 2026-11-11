@@ -1,52 +1,52 @@
 I_C_T YRXVAM 7 C0AuraYoshimoRomance
-== C0AURA2J IF ~IsValidForPartyDialog("C0Aura")~ THEN ~NO! Why... WHY?! Damn... damn you... MONSTER!~
+== C0AURA2J IF ~IsValidForPartyDialog("C0Aura")~ THEN ~不！为什么……为什么？！该死……你这该死的……怪物！~
 END
 
 CHAIN IF WEIGHT #-1 ~Global("C0AuraBG2YRRomanceTalk","GLOBAL",2)~ THEN BC0AURA2 YROM-1
-~Yoshimo... he really cares about you, doesn't he?~ [C0BLANK]
+~义桑……他真的很在乎你，不是吗？~ [C0BLANK]
 END
-  ++ ~Are you jealous?~ + YROM-1-1
-  ++ ~I care about him, too.~ + YROM-1-2
-  ++ ~Almost as much as you do, I think.~ + YROM-1-3
+  ++ ~你吃醋了？~ + YROM-1-1
+  ++ ~我也在乎他。~ + YROM-1-2
+  ++ ~我想跟你差不多吧。~ + YROM-1-3
 
 CHAIN BC0AURA2 YROM-1-1
-~...~
-= ~Yes. Of course I am. How could I not be?~
+~……~
+= ~是。当然愿意。我怎么会不愿意？~
 EXTERN BC0AURA2 YROM-1-4
 
 CHAIN BC0AURA2 YROM-1-2
-~I know.~
+~我知道。~
 EXTERN BC0AURA2 YROM-1-4
 
 CHAIN BC0AURA2 YROM-1-3
-~No... more. I care about you as someone who admires you. So does he... but also, he's able to be more like himself around you. I can tell.~
+~不……不止。我在意你，是以仰慕你的方式。他也是……而且他在你身边时，更能做回自己。我看得出来。~
 EXTERN BC0AURA2 YROM-1-4
 
 CHAIN BC0AURA2 YROM-1-4
-~I'm envious, but... I'm not upset. You deserve to be loved, and you should be loved. You're an incredible person, <CHARNAME>... it's only right that others care about you.~
-= ~And... I hope you have those you care about just as much.~
+~我羡慕，可……我并不难过。你值得被爱，也该被爱。你是个了不起的人，<CHARNAME>……别人在乎你，才是应当的。~
+= ~而且……希望你也拥有同样在乎的人。~
 END
-  ++ ~Of course I do. You... and him. You're both precious to me.~ + YROM-1-5
-  ++ ~Please don't think too much of it. I don't want you to see Yoshimo as an obstacle between us.~ + YROM-1-5
-  ++ ~If you want me to make a decision, just come out and say it.~ + YROM-1-6
+  ++ ~当然。你……还有他。你们对我都弥足珍贵。~ + YROM-1-5
+  ++ ~请别太把这事放在心上。我不想让你把义桑看作我们之间的障碍。~ + YROM-1-5
+  ++ ~你要是想让我做决定，就直说。~ + YROM-1-6
 
 CHAIN BC0AURA2 YROM-1-5
-~*shakes head* You don't have to explain, <CHARNAME>. I understand... and I'm happy as things are. Truly.~
+~*摇头* 你不必解释，<CHARNAME>。我明白……我对现在这样很满意。真的。~
 EXTERN BC0AURA2 YROM-1-6
 
 CHAIN BC0AURA2 YROM-1-6
-~You don't have to decide, <CHARNAME>... and as strange as it is, I don't want you to, either. Yoshimo's my friend. One way or another, making a decision will hurt... so even though it's cowardly, I'd rather be patient, and wait, and enjoy what we have while it stays the same way.~
-= ~Still... if I asked you to take my hand for a while as we're walk... would you say yes?~
+~<CHARNAME>，你不必做决定……说来也怪，我也不想让你做。义桑是我的朋友。不管怎么走，做了决定就会伤人……所以哪怕这是懦弱，我也宁愿耐心等着，享受我们还能维持原样的这段日子。~
+= ~不过……散步的时候，要是我请你牵一会儿我的手……你会答应吗？~
 END
-  ++ ~Of course.~ + YROM-1-7
-  ++ ~I'm sorry. I can't do that. Not now.~ + YROM-1-8
+  ++ ~当然。~ + YROM-1-7
+  ++ ~对不起。我做不到。现在不行。~ + YROM-1-8
 
 CHAIN BC0AURA2 YROM-1-7
-~Thank you.~
+~谢谢。~
 EXIT
 
 CHAIN BC0AURA2 YROM-1-8
-~I understand. It's alright... like I said, I'm happy with the way things are... even if I know it won't last.~
+~我明白。没关系的……就像我说的，我对现在这样很满意……哪怕我知道它不会长久。~
 EXIT
 
 CHAIN
@@ -55,330 +55,330 @@ Range("C0Aura",15)
 !StateCheck("Yoshimo",CD_STATE_NOTVALID)
 !StateCheck("C0Aura",CD_STATE_NOTVALID)
 Global("C0AuraBG2YRRomanceTalk","GLOBAL",4)~ THEN BC0AURA2 YROM-2
-~Yoshimo?~ [C0BLANK]
-== BYOSHIM ~Yes, my friend?~
-== BC0AURA2 ~Thank you for being here for <CHARNAME>.~
-== BYOSHIM ~Why... that is hardly deserving of gratitude. I am as blessed by her presence as you.~
-== BC0AURA2 ~Would you be happy to stay with her forever?~
-== BYOSHIM ~I... forever is a difficult thing to aspire for any, my dear. I am content to enjoy the moments while they remain.~
-== BC0AURA2 ~That makes the two of us.~
-== BYOSHIM ~You... are not resentful, I hope? She deserves someone who may always remain by her side, to bring her happiness... for as long as she needs it. Someone like yourself.~
-== BC0AURA2 ~I'd never resent you. How we spend each moment is more important than how long it lasts. That's why... I hope we'll both be here, so long as we're alive, to give <CHARNAME> the love she deserves.~
-== BYOSHIM ~Yes... I—I truly wish that as well.~
+~吉野？~ [C0BLANK]
+== BYOSHIM ~什么事，我的朋友？~
+== BC0AURA2 ~谢谢你陪在<CHARNAME>身边。~
+== BYOSHIM ~为什么……那可当不起你的感谢。她在这里，我得的好处不比你少。~
+== BC0AURA2 ~你愿意永远跟她在一起吗？~
+== BYOSHIM ~我……对任何人来说，“永远”都是个难以企求的东西，亲爱的。能享受当下的每一刻，我就知足了。~
+== BC0AURA2 ~我也一样。~
+== BYOSHIM ~你……我希望你不至于怨恨？她值得有一个能永远守在她身边的人，给她快乐……需要多久就给多久。像你这样的人。~
+== BC0AURA2 ~我决不会怨恨你。我们如何度过每一刻，比它能持续多久更重要。所以……我希望我们俩都能活着，趁还在世，把<CHARNAME>应得的爱给她。~
+== BYOSHIM ~是……我——我也真的这样希望。~
 EXIT
 
 CHAIN IF WEIGHT #-1 ~Global("C0AuraBG2YRRomanceTalk","GLOBAL",6)~ THEN YOSHJ YROM-3
-~Our gentle friend, little Aura... she is quite fond of you, <CHARNAME>. I can tell.~ [C0BLANK]
+~我们那位温和的朋友，小奥拉……她挺喜欢你的，<CHARNAME>。我看得出来。~ [C0BLANK]
 END
-  ++ ~I know. Are you worried it'll become a problem for us?~ + YROM-3-1
-  ++ ~You sound a little jealous, Yoshimo.~ + YROM-3-2
+  ++ ~我知道。你担心这会成为我们的问题吗？~ + YROM-3-1
+  ++ ~你听着有点吃醋，义桑。~ + YROM-3-2
 
 CHAIN YOSHJ YROM-3-1
-~I... have my fears, <CHARNAME>, but none involve her. We are all entitled to our feelings, after all... each of us, no matter what logic dictates.~
+~我……有我的担忧，<CHARNAME>，可都不关她。毕竟，我们都有权拥有自己的感情……每一个人，无论理当如何。~
 EXTERN YOSHJ YROM-3-3
 
 CHAIN YOSHJ YROM-3-2
-~Nay, it—~
+~不，它——~
 EXTERN YOSHJ YROM-3-3
 
 CHAIN YOSHJ YROM-3-3
-~It is a good thing. Contrary to what you may believe, I... am happy to see you together. You deserve someone who may bring you joy, my friend. In this life, and the next.~
-= ~Perhaps... it is something I cannot give you. I may be the unworthy one.~
+~这是好事。与你所想的相反，我……很高兴看到你们在一起。你值得有一个能给你欢乐的人，我的朋友。今生，来世。~
+= ~也许……有样东西是我给不了你的。也许不配的人是我。~
 END
-  ++ ~What are you talking about, Yoshimo?~ + YROM-3-4
-  ++ ~I care about you greatly, Yoshimo. There's no reason to feel unworthy.~ + YROM-3-4
+  ++ ~你在说什么，义桑？~ + YROM-3-4
+  ++ ~我很在乎你，义桑。没有理由觉得自己不配。~ + YROM-3-4
 
 CHAIN YOSHJ YROM-3-4
-~We... both live unusual lives, <CHARNAME>. Fate has its way of playing with we mortals, and you and I could be considered among its most favored playthings indeed.~
-= ~I cannot deny, the fortune that brought you into my life has given me much happiness, yet... it may have been better had it not happened. One day, I may no longer be here, and I will have committed the sin of cursing you with pain for my loss.~
-= ~You deserve better. Someone who seeks peace, and will ensure your life is long, fruitful, and free of loss... someone like her.~
+~我们……都过着不寻常的日子，<CHARNAME>。命运自有它的法子捉弄我们这些凡人，而你和我，真可以说是它最宠爱的玩物了。~
+= ~我不能否认，把我带进你生命的那份运气给了我许多快乐，可……它要是没发生，也许更好。有一天我或许就不在了，那时我便背上了罪：我的离去给你带来了痛。~
+= ~你值得更好的。一个求安宁的人，一个能保证你活得长久、丰盛、不再失去的人……像她那样的人。~
 END
-  ++ ~But I want to give you the same thing, Yoshimo.~ + YROM-3-5
-  ++ ~You're acting strange, Yoshimo. Where's the cheerful rogue without a care in the world?~ + YROM-3-6
-  ++ ~Maybe you're right. But you're still here, and still important to me.~ + YROM-3-7
+  ++ ~可我也想给你同样的东西，义桑。~ + YROM-3-5
+  ++ ~你举止怪怪的，义桑。那个无忧无虑、快活的盗贼哪儿去了？~ + YROM-3-6
+  ++ ~也许你说得对。可你还在这儿，对我依然重要。~ + YROM-3-7
 
 CHAIN YOSHJ YROM-3-5
-~I... wish that could be the case, <CHARNAME>. Truly, I wish it.~
+~我……希望事情能是那样，<CHARNAME>。真的，我希望。~
 EXTERN YOSHJ YROM-3-7
 
 CHAIN YOSHJ YROM-3-6
-~I am merely being practical, my friend. Perhaps... the most practical I have ever been.~
+~我只是在讲实际，朋友。也许……是我这一生最讲实际的一回。~
 EXTERN YOSHJ YROM-3-7
 
 CHAIN YOSHJ YROM-3-7
-~...Ahh, I am a fool in far too many ways. You may be the wiser one, <CHARNAME>, to not be held captive by your fears. It... is another thing I admire of you.~
-= ~Let us forget I ever spoke of this, then. What will come will come... yes, and what we cannot avoid, we shall have to face no matter what.~
+~……唉，我在太多方面都是个傻瓜。也许你才是更明智的那个，<CHARNAME>，不被自己的恐惧囚住。这……也是我佩服你的一点。~
+= ~那就当我们没说过这话吧。该来的总会来……是啊，躲不掉的事，无论如何都得面对。~
 EXIT
 
 CHAIN IF WEIGHT #-1 ~Global("C0AuraBG2YRRomancePostTalk","GLOBAL",2)~ THEN BC0AURA2 YROM-4
-~<CHARNAME>, you... you've been crying, haven't you? I can see it in your eyes... is it nightmares again?~ [C0BLANK]
+~<CHARNAME>，你……你哭过了，是不是？我看得出你的眼睛……又是噩梦吗？~ [C0BLANK]
 END
-  ++ ~Yes... but not the same ones. This time... it was of Yoshimo.~ + YROM-4-1
-  ++ ~I dreamt of killing Yoshimo again. And again... and no matter how much I wanted to, I couldn't stop myself.~ + YROM-4-2
-  ++ ~Leave me alone.~ + YROM-4-0
+  ++ ~是……可不是同一场梦。这一次……是关于义桑的。~ + YROM-4-1
+  ++ ~我又梦到杀了义桑。一次又一次……不管我多想停手，我都停不下来。~ + YROM-4-2
+  ++ ~别理我。~ + YROM-4-0
 
 CHAIN BC0AURA2 YROM-4-0
-~Alright. But if you ever need someone to talk to... you know I'm here.~
+~好。不过你要是哪天需要人说话……你知道我在这儿。~
 EXIT
 
 CHAIN BC0AURA2 YROM-4-1
-~...~
-= ~I can see it. You want to see him again, but not... not like this. Would you like to talk about it?~
+~……~
+= ~我看得出来。你想再见到他，可不是……不是这样。要不要说说？~
 END
-  ++ ~I cut him down. Then it happened again. And I couldn't control my body... I couldn't even scream or cry.~ + YROM-4-2
-  ++ ~Don't ask me to talk about Yoshimo right now, Aura. I'm still not ready yet.~ + YROM-4-0
-  ++ ~No.~ + YROM-4-0
+  ++ ~我把他砍倒了。然后又一次。我控制不了自己的身体……我连叫喊或哭泣都做不到。~ + YROM-4-2
+  ++ ~现在别让我谈义桑，奥拉。我还没准备好。~ + YROM-4-0
+  ++ ~不。~ + YROM-4-0
 
 CHAIN BC0AURA2 YROM-4-2
-~This all never should have happened...~
-= ~I wish I could tell you it'll all be alright, <CHARNAME>, but I can't. Because I—I miss him too, despite everything.~
-= ~What about you, <CHARNAME>? Or... do you hate him for what he did?~
+~这一切本就不该发生……~
+= ~我希望我能告诉你一切都会好的，<CHARNAME>，可我不能。因为我——不管怎样，我也想念他。~
+= ~那你呢，<CHARNAME>？还是……你恨他做过的事？~
 END
-  ++ ~I don't hate him. I hate this cruel fate, that made him fall in love with someone he was forced to betray.~ + YROM-4-3
-  ++ ~Yes. I miss him, and I also hate him.~ + YROM-4-3
-  ++ ~Of course I do. How could I not? I... I did love him. I still do, even now.~ + YROM-4-4
-  ++ ~No. After what he did... I don't want to think about him anymore.~ + YROM-4-5
-  ++ ~Don't make me say it, Aura. Please, just don't.~ + YROM-4-0
+  ++ ~我不恨他。我恨这残忍的命运，让他爱上了一个他被迫背叛的人。~ + YROM-4-3
+  ++ ~是。我想他，我也恨他。~ + YROM-4-3
+  ++ ~当然。我怎能不爱？我……我真的爱过他。到现在也还爱。~ + YROM-4-4
+  ++ ~不。在他做了那些之后……我不想再想他了。~ + YROM-4-5
+  ++ ~别逼我说出口，奥拉。求你，别说。~ + YROM-4-0
 
 CHAIN BC0AURA2 YROM-4-3
-~I understand, <CHARNAME>. You must be angry. You have the right to be angry with Yoshimo, with Irenicus, with fate, with the blood that brought you into all of this suffering. I... I'm angry too, seeing what it has all done to you.~
+~我明白，<CHARNAME>。你一定很愤怒。你有权对义桑愤怒，对艾瑞尼卡斯愤怒，对命运愤怒，对把你拖进这一切苦难的血脉愤怒。我……我也愤怒，看着这一切把你变成了什么样。~
 EXTERN BC0AURA2 YROM-4-6
 
 CHAIN BC0AURA2 YROM-4-4
-~It must be so difficult... it's inevitable that we have to say goodbye to the ones we love one day, but to lose them like you did... it's evil, <CHARNAME>. It makes me hate every bit of fate's cruel tricks that have been played on you.~
+~那一定很难受……有一天我们总得跟所爱的人告别，这是躲不掉的，可像你那样失去他们……那是恶，<CHARNAME>。这让我痛恨命运对你耍的每一桩残忍把戏。~
 EXTERN BC0AURA2 YROM-4-6
 
 CHAIN BC0AURA2 YROM-4-5
-~It would be easier, wouldn't it? But... can you? Is it really so easy? Can you even live with yourself to truly do that, <CHARNAME>? I can't say for you... but if it's possible, then you're brave... and cruel. To him, and to yourself.~
+~那样会容易些，不是吗？可是……你做得到吗？真有那么容易吗？你真能那样做，还能跟自己过得下去吗，<CHARNAME>？我没法替你回答……可要是真能，那你既勇敢……又残忍。对他，也对你自己。~
 EXTERN BC0AURA2 YROM-4-6
 
 CHAIN BC0AURA2 YROM-4-6
-~No matter how easy it might be to forget, I... I still want to remember. No matter how much it hurts. Knowing Yoshimo brought memories into my life that I still want to hold to my heart... and I know it must be even more for you.~
-= ~You don't have to forget, <CHARNAME>. But you don't have to hold on to all this pain, either. Bit by bit, it'll change. You'll understand that not every bit of joy was a lie. I'm sure of it.~
+~不管忘记有多容易，我……我还是想记得。不管那有多痛。认识义桑，给我的生命带来了我至今仍想抱在心里的回忆……而我知道，对你来说那一定更深。~
+= ~你不必忘记，<CHARNAME>。可你也不必把这一切痛都扛住。一点一点地，它会变。你会明白，并非每一分欢乐都是谎言。我确信。~
 END
-  ++ ~It's not that easy, Aura. Not when I know he's still suffering.~ + YROM-4-7
-  ++ ~You're right. I still want to remember the best parts of him. ~ + YROM-4-8
-  ++ ~Please, just leave me along. You can't hope to understand.~ + YROM-4-9
+  ++ ~没那么容易，奥拉。尤其在我知道他还在受苦的时候。~ + YROM-4-7
+  ++ ~你说得对。我还是想记住他最好的那些部分。~ + YROM-4-8
+  ++ ~求你，让我一个人待着。你没法指望理解。~ + YROM-4-9
 
 CHAIN BC0AURA2 YROM-4-7
-~There will be hope one day. For you, and for him. You have to be strong. And if it's too much, remember that I'm here as well.~
+~有一天会有希望的。为你也好，为他也罢。你得撑住。要是撑不住，记得我也在这儿。~
 EXTERN BC0AURA2 YROM-4-10
 
 CHAIN BC0AURA2 YROM-4-8
-~That's right. And if you need some help... remember that I'm here for you too. The precious memories of the Yoshimo we cared about... they'll live with us both.~
+~没错。你要是需要帮手……记得我也在这儿。我们所珍视的那个义桑的宝贵回忆……会在我们两人心里活着。~
 EXTERN BC0AURA2 YROM-4-10
 
 CHAIN BC0AURA2 YROM-4-9
-~No, but I'll still try... because I can't stand seeing you hurting. I know, if Yoshimo could see you now, he wouldn't either.~
+~不，可我还是会试……因为我受不了看你这样痛。我知道，要是义桑能看见你现在的样子，他也会受不了。~
 EXTERN BC0AURA2 YROM-4-10
 
 CHAIN BC0AURA2 YROM-4-10
-~Because... your happiness is the most important thing. For Yoshimo... and for me.~
+~因为……你的幸福最要紧。为了义桑……也为了我。~
 EXIT
 
 CHAIN IF WEIGHT #-1 ~Global("C0AuraBG2YRRomancePostTalk","GLOBAL",4)~ THEN BC0AURA2 YROM-5
-~I know it seems like the worst time to say it, but our journey seem to just get more thrilling, doesn't it? If it weren't marred by the cruelty and tragedy we've faced, we might've had a chance to enjoy it, like we deserve to.~ [C0BLANK]
-= ~I... I think Yoshimo would have enjoyed this adventure.~
+~我知道这看起来是最不该说这话的时候，可我们的旅程好像越来越惊险，不是吗？要不是被我们遭遇的残忍与悲剧所玷污，我们本来有机会像应得的那样享受它。~ [C0BLANK]
+= ~我……我想义桑会喜欢这场冒险。~
 END
-  ++ ~I'm sure. The danger and thrill is the sort of thing he lived for.~ + YROM-5-1
-  ++ ~Not just this one. If Irenicus hadn't had him in his clutches all this time... he would've had a chance to enjoy everything we went through together.~ + YROM-5-2
-  ++ ~He did always tell me stories of his past journeys, almost as wild as this one.~ + YROM-5-1
-  ++ ~Don't, Aura. Just don't.~ + YROM-5-0
+  ++ ~我确信。那种危险和刺激正是他活着所求的。~ + YROM-5-1
+  ++ ~不只是这一次。要不是艾瑞尼卡斯一直把他攥在手心……他本来有机会享受我们一起经历的一切。~ + YROM-5-2
+  ++ ~他总跟我讲他从前旅行的故事，几乎跟这一趟一样离奇。~ + YROM-5-1
+  ++ ~别说了，奥拉。别说了。~ + YROM-5-0
 
 CHAIN BC0AURA2 YROM-5-0
-~I'm sorry. I shouldn't have brought it up. It's heartless of me...~
+~对不起。我不该提起。我真是没心没肺……~
 EXIT
 
 CHAIN BC0AURA2 YROM-5-1
-~That is the type of person he was, wasn't he...? The person we both knew.~
+~他就是那样的人，不是吗……？我们两人都认识的那个他。~
 EXTERN BC0AURA2 YROM-5-2
 
 CHAIN BC0AURA2 YROM-5-2
-~It struck me, after thinking it over, just how much it must have torn him up. To be part of something he truly loved... knowing he could never love it as much as he wanted to.~
-= ~I'm sorry, <CHARNAME>. I shouldn't be talking about him, not until I know you're ready. I just... miss him so much.~
+~我琢磨之后才意识到，那一定把他撕得多厉害。成为某件他真心所爱之事的一部分……却知道自己永远没法像想的那样去爱它。~
+= ~对不起，<CHARNAME>。我不该提起他，在你准备好之前不该。我只是……太想他了。~
 END
-  ++ ~As do I.~ + YROM-5-3
-  ++ ~You don't have to be sorry. We should try to remember all the good things we shared.~ + YROM-5-4
-  ++ ~How do you think I feel?~ + YROM-5-4
-  ++ ~Please stop. I don't want to talk about this.~ + YROM-5-0
+  ++ ~我也一样。~ + YROM-5-3
+  ++ ~你不必抱歉。我们该试着记住我们共有的一切美好。~ + YROM-5-4
+  ++ ~你觉得我心里是什么滋味？~ + YROM-5-4
+  ++ ~请停下。我不想谈这个。~ + YROM-5-0
 
 CHAIN BC0AURA2 YROM-5-3
-~Do you think he was happy, <CHARNAME>? Even if he knew how torturous it would have been, for his body and soul, to be happy at your side?~
-= ~I... want to believe he must have been. If only because it means all the time you spent together wasn't completely meaningless.~
+~你觉得他快乐过吗，<CHARNAME>？哪怕他知道，在你身边快乐，对他的身心是多大的折磨？~
+= ~我……想相信他一定是快乐的。哪怕只为那意味着你与他共度的时光并非毫无意义。~
 END
-  ++ ~I hope he was happy too. Even if it made what he had to do more difficult.~ + YROM-5-5
-  ++ ~He must have been. People can't stop themselves from having emotions, no matter how much they try.~ + YROM-5-5
-  ++ ~You're more forgiving than I am. I don't think he has a right to feel happiness.~ + YROM-5-6
+  ++ ~我希望他也快乐过。哪怕那让他不得不做的事更难。~ + YROM-5-5
+  ++ ~他一定是快乐的。人没法阻止自己有感情，无论怎么努力。~ + YROM-5-5
+  ++ ~你比我宽容。我觉得他没资格感到快乐。~ + YROM-5-6
 
 CHAIN BC0AURA2 YROM-5-4
-~I—I want to, as well. I just don't know how to handle it... when even the happy memories hurt.~
+~我——我也想。我只是不知该怎么应付……当连快乐的回忆都伤人时。~
 EXTERN BC0AURA2 YROM-5-3
 
 CHAIN BC0AURA2 YROM-5-5
-~It's strange, isn't it? There should never have been anything wrong with what you two shared. Yoshimo truly cared about you, <CHARNAME>. I believe that.~
+~真怪，不是吗？你们两人之间本该没有任何不对的地方。义桑真的在乎你，<CHARNAME>。我信。~
 EXTERN BC0AURA2 YROM-5-7
 
 CHAIN BC0AURA2 YROM-5-6
-~No... maybe he doesn't. But it's never so easy, is it?~
+~不……也许他并不。可那从来就没那么容易，不是吗？~
 EXTERN BC0AURA2 YROM-5-7
 
 CHAIN BC0AURA2 YROM-5-7
-~I just hope... wherever he is now, he has something to cling onto... and maybe one day, if fate decides to be kind for once... he'll find peace.~
+~我只希望……无论他现在在哪儿，都有点什么可以攀住……也许有一天，若命运肯仁慈一回……他能找到安宁。~
 EXIT
 
 CHAIN IF WEIGHT #-1 ~Global("C0AuraBG2YRRomancePostTalk","GLOBAL",6)~ THEN BC0AURA2 YROM-6
-~Do you have a moment, <CHARNAME>?~ [C0BLANK]
+~<CHARNAME>，你有空吗？~ [C0BLANK]
 END
-  ++ ~For you, Aura? Always.~ + YROM-6-1
-  ++ ~What is it?~ + YROM-6-1
-  ++ ~Not now. I don't have time for you.~ + YROM-6-0
+  ++ ~为了你，奥拉？永远有空。~ + YROM-6-1
+  ++ ~是什么？~ + YROM-6-1
+  ++ ~现在不行。我没工夫理你。~ + YROM-6-0
 
 CHAIN BC0AURA2 YROM-6-0
-~Oh. I... I see. I'm sorry... I didn't know I was such a bother for you, <CHARNAME. Maybe... I should leave you alone for a while.~
+~哦。我……我明白了。抱歉……我不知道自己这么招你烦，<CHARNAME. 也许……我该让你清静一阵。~
 DO ~SetGlobal("C0AuraRomanceActive","GLOBAL",3)~ EXIT
 
 CHAIN BC0AURA2 YROM-6-1
-~I—I've been wanting to say this for a long time now. And I thought I'd have more time to wait... to wait until it was fair for me to say it. But I... I don't know if that time will ever come.~
-= ~...I'm sorry. I have to tell you. Maybe this is wrong, and you'll hate me for telling you this right now... after everything.~
-= ~I love you, <CHARNAME>.~
+~我——我早就想说这件事了。我以为我还能再等等……等一个我可以说出口的公道时机。可我……我不知道那时机是否会有。~
+= ~……对不起。我必须说。也许这是错的，你也许会因为我此刻跟你说这个而恨我……在经历了这一切之后。~
+= ~我爱你，<CHARNAME>。~
 END
-  ++ ~You... you do? You've felt that way, all this time?~ + YROM-6-2
-  ++ ~I know.~ + YROM-6-2
-  ++ ~You shouldn't be saying this, Aura. Not when you know what I've lost.~ + YROM-6-2
+  ++ ~你……你真的？你一直是这样的感觉？~ + YROM-6-2
+  ++ ~我知道。~ + YROM-6-2
+  ++ ~奥拉，你不该说这话。尤其在你明知我失去了什么的时候。~ + YROM-6-2
 
 CHAIN BC0AURA2 YROM-6-2
-~I know it's not fair to you, when you're still mourning Yoshimo. But I—I have to be selfish.~
-= ~If the worst happens as we come to the end of this journey, I don't want to suffer like he did... taking my true feelings to the grave, leaving you with nothing but a broken heart.~
-= ~Since what happened at Spellhold, I've watched you carry this pain on the inside, and if I didn't know you well enough, I might not even know just how much you're suffering. I don't want to stay this way, <CHARNAME>.~
-= ~No matter how you feel about me... I know I can't ever replace Yoshimo in your heart. But I want to stay and give you someone to lean on, and let you express how you really feeel. Because I care about you too much to let things keep going on as they are.~
-= ~If... if you want to scream at me, or tell me how self-centered I am... I'm ready to hear it. I won't blame you. After all... you know what I feel now.~
+~我知道这对你不公平，你还在为义桑哀悼。可我——我必须自私一回。~
+= ~要是这趟旅程到最后出了最坏的事，我不想像他那样苦……把真心带进坟墓，只留给你一颗碎掉的心。~
+= ~自禁魔监狱那件事之后，我看着你把这痛藏在心里，要不是我够了解你，我甚至不会知道你有多苦。我不想就这样下去，<CHARNAME>。~
+= ~不管你对我是什么感觉……我知道我永远代替不了义桑在你心里的位置。可我想留下来，让你有个可以依靠的人，让你把真正的感受说出来。因为我太在意你，不能眼看着事情就这样拖下去。~
+= ~要是……要是你想冲我吼，或者骂我多自私……我准备好听了。我不会怪你。毕竟……你现在知道我心里怎么想了。~
 END
-  ++ ~You don't have to be ashamed of your feelings, Aura. I love you, just as much as I love Yoshimo.~ + YROM-6-3
-  ++ ~I can't do that to you, Aura. You mean just as much to me.~ + YROM-6-3
-  ++ ~I'm sorry, Aura. I appreciate that you can be honest to me like this... but Yoshimo will always be first in my heart. Even now.~ + YROM-6-4
-  ++ ~How dare you? You say this to me now, knowing full well it'll just hurt me more? I don't want to hear another word from you.~ + YROM-6-5
+  ++ ~你不必为自己的感情羞愧，奥拉。我爱你，就像我爱义桑一样深。~ + YROM-6-3
+  ++ ~奥拉，我不能那样对你。你对我一样重要。~ + YROM-6-3
+  ++ ~对不起，奥拉。我很感激你能这样坦率地对我……可爱桑在我心里永远是第一位。直到现在也是。~ + YROM-6-4
+  ++ ~你好大的胆子？你现在跟我说这个，明明知道这只会更伤我？我一个字也不想再听了。~ + YROM-6-5
 
 CHAIN BC0AURA2 YROM-6-3
-~To hear you say that... I'm—I'm happy, <CHARNAME>. And I feel like such a wretch for it.~
+~听你这么说……我——我很高兴，<CHARNAME>。而我又因此觉得自己像个卑鄙的人。~
 EXTERN BC0AURA2 YROM-6-6
 
 CHAIN BC0AURA2 YROM-6-4
-~I understand, <CHARNAME>. It took a long time for me to build up the courage to say this... and even more to accept what answer you have to give.~
-= ~My feelings won't change. But yours are what's important to me. So... I'll continue supporting you in whatever form you want. Only as a friend... if that's what you want.~
+~我明白，<CHARNAME>。我花了很久才攒够勇气说这话……而接受你要给的答案，花了更久。~
+= ~我的感情不会变。可要紧的是你的。所以……无论你想以什么形式，我都会继续支持你。只做朋友……如果你想那样的话。~
 DO ~SetGlobal("C0AuraRomanceActive","GLOBAL",3)~ EXIT
 
 CHAIN BC0AURA2 YROM-6-5
-~I'm—~
-= ~I'm so sorry, <CHARNAME>...~
+~我——~
+= ~我真抱歉，<CHARNAME>……~
 DO ~SetGlobal("C0AuraRomanceActive","GLOBAL",3)~ EXIT
 
 CHAIN BC0AURA2 YROM-6-6
-~It's so cruel, isn't it? When Yoshimo was still with us... I felt happy, envious, and apprehensive all at the same time. I believed we'd have all the time we needed, each and every one of us, to sort our feelings out and have proper closure. Then... we lost that chance.~
-= ~Yoshimo and I never said it plainly, but it was like we had agreed without saying the words... that we'd do everything in our power to make you happy, and we'd never argue or hate each other for it. I... didn't want it to end, so I was content with it.~
-= ~I thought things would... turn out the way they did.~
+~真残忍，是不是？义桑还在我们身边的时候……我同时感到快乐、嫉妒和不安。我以为我们每个人都会有足够的时间，把心事理清、好好做个了结。然后……我们失去了那个机会。~
+= ~义桑和我从没明说，可那就像我们不用言语就达成了默契……我们会尽全力让你快乐，绝不会为此争吵或彼此憎恨。我……不想它结束，所以我也就知足了。~
+= ~我以为事情会……变成后来的样子。~
 END
-  ++ ~Neither did I. But we have to move forwards... I think Yoshimo would want that for the both of us.~ + YROM-6-7
-  ++ ~He's truly a selfish person, isn't he? Just dying the way he did without thought for how he'd hurt me... or you.~ + YROM-6-7
-  ++ ~You don't have to keep letting the memory of Yoshimo get in the way of how you feel towards me, Aura. He would never want that.~ + YROM-6-7
+  ++ ~我也没有。可我们得往前走……我想义桑会希望我们俩都这样。~ + YROM-6-7
+  ++ ~他真是个自私的人，不是吗？就这样死了，全不想想那会怎样伤我……伤你。~ + YROM-6-7
+  ++ ~奥拉，你不必让义桑的记忆妨碍你对我的心意。他绝不会希望那样。~ + YROM-6-7
 
 CHAIN BC0AURA2 YROM-6-7
-~Yes... he's truly a strange, gentle, and selfish person... all at once, isn't he? But who am I to judge, when I could say the same for myself? Hehe...~
-= ~If you're able to accept me, <CHARNAME>... I'll be here with you always. To give you whatever you need, whether it's to heal, or cry, or try to find a sparkle of joy in all of this darkness.~
-= ~I promise.~
+~是啊……他真是个古怪、温柔又自私的人……全都凑在一块儿，不是吗？可我有什么资格评判，我自己也说得上一样。嘿嘿……~
+= ~要是你能接纳我，<CHARNAME>……我会永远陪着你。你需要什么我都给，无论是疗伤、痛哭，还是在这片黑暗里试着寻一点欢愉的光。~
+= ~我答应。~
 DO ~SetGlobal("C0AuraRomanceActive","GLOBAL",2)~ EXIT
 
 CHAIN IF WEIGHT #-1 ~Global("C0AuraBG2YRRomancePostTalkAmulet","GLOBAL",1)~ THEN BC0AURA2 YROM-7
-~It's a beautiful amulet.~ [C0BLANK]
+~这护身符真美。~ [C0BLANK]
 END
-  ++ ~Yes. It is.~ + YROM-7-1
-  ++ ~Just like yours.~ + YROM-7-2
-  ++ ~I still wish its owner was with us.~ + YROM-7-3
-  ++ ~Never mind the amulet. Let's move on.~ + YROM-7-0
+  ++ ~是。是这样。~ + YROM-7-1
+  ++ ~跟你的一个样。~ + YROM-7-2
+  ++ ~我还是希望它的主人跟我们在一起。~ + YROM-7-3
+  ++ ~别管那护身符了。我们继续走。~ + YROM-7-0
 
 CHAIN BC0AURA2 YROM-7-0
-~Yes... you're right.~
+~是……你说得对。~
 EXTERN BC0AURA2 YROM-7-4
 
 CHAIN BC0AURA2 YROM-7-1
-~It's all so familiar. Before I left Kozakura, Reika-san left me with this magatama. And now... Yoshimo's gone, and left you with this. It seems like we're bound for the same sorrows, <CHARNAME>...~
+~这一切都太熟悉了。我离开科祖库拉之前，丽花小姐把这枚勾玉留给了我。而现在……义桑走了，也给你留下了这个。看来我们注定要承受同样的悲伤，<CHARNAME>……~
 EXTERN BC0AURA2 YROM-7-4
 
 CHAIN BC0AURA2 YROM-7-2
-~Yes... just like mine.~
+~是……跟我的一个样。~
 EXTERN BC0AURA2 YROM-7-1
 
 CHAIN BC0AURA2 YROM-7-3
-~At least... a part of him still found you in the end. I know it's not much, but...~
+~至少……他的一部分最后还是找到了你。我知道那不多，可……~
 EXTERN BC0AURA2 YROM-7-1
 
 CHAIN BC0AURA2 YROM-7-4
-~I—I won't look at the letter, <CHARNAME>. That's your own right, not mine. I hope it gives you a little bit of closure.~
+~我——我不会看那封信，<CHARNAME>。那是你自己的权利，不是我的。希望它能让你稍稍放下。~
 EXIT
 
 I_C_T YRXYUN 1 C0AuraYoshimoRomanceHell
-== C0AURA2J IF ~IsValidForPartyDialog("C0Aura")~ THEN ~Yoshimo... how could you be...?~
-== YRXYUN ~Little Aura... so you followed <CHARNAME> all the way to this hell, my dear friend. I expected no less... and I am grateful to you for it.~
-== YRXYUN IF ~Global("C0AuraRomanceActive","GLOBAL",2)~ THEN ~And I sense you have given her what I could not... someone who could truly be at their side, when needed most. Thank you.~
-== C0AURA2J IF ~Global("C0AuraRomanceActive","GLOBAL",2)~ THEN ~I'm so sorry, Yoshimo. You should have been with us... with her. I—~
-== YRXYUN IF ~Global("C0AuraRomanceActive","GLOBAL",2)~ ~No. You need not explain, little Aura. I have little time left, and must give my final words to <CHARNAME>, if she will listen.~
-== YRXYUN IF ~Global("C0AuraRomanceActive","GLOBAL",2)~ ~But I have one last request.~
-== C0AURA2J IF ~Global("C0AuraRomanceActive","GLOBAL",2)~ THEN ~Anything.~
-== YRXYUN IF ~Global("C0AuraRomanceActive","GLOBAL",2)~ ~Stay with her. Until the very end.~
-== C0AURA2J IF ~Global("C0AuraRomanceActive","GLOBAL",2)~ THEN ~I will. I promise.~
+== C0AURA2J IF ~IsValidForPartyDialog("C0Aura")~ THEN ~义桑……你怎么会……？~
+== YRXYUN ~小奥拉……我亲爱的朋友，你竟一路跟着<CHARNAME>到了这地狱。我没料到别的……为此我感激你。~
+== YRXYUN IF ~Global("C0AuraRomanceActive","GLOBAL",2)~ THEN ~我也感觉到，你给了她我给不了的东西……一个能在最需要时真正站在她身边的人。谢谢你。~
+== C0AURA2J IF ~Global("C0AuraRomanceActive","GLOBAL",2)~ THEN ~我真抱歉，义桑。你本该跟我们在一起……跟她在一起。我——~
+== YRXYUN IF ~Global("C0AuraRomanceActive","GLOBAL",2)~ ~不必了。小奥拉，你不必解释。我余时无多，得把最后的话留给<CHARNAME>，若她肯听。~
+== YRXYUN IF ~Global("C0AuraRomanceActive","GLOBAL",2)~ ~可我还有最后一个请求。~
+== C0AURA2J IF ~Global("C0AuraRomanceActive","GLOBAL",2)~ THEN ~什么都行。~
+== YRXYUN IF ~Global("C0AuraRomanceActive","GLOBAL",2)~ ~守着她。直到最后一刻。~
+== C0AURA2J IF ~Global("C0AuraRomanceActive","GLOBAL",2)~ THEN ~我会的。我答应。~
 END
 
 CHAIN IF WEIGHT #-1 ~Global("C0AuraBG2YRRomancePostTalkHell","GLOBAL",1)~ THEN BC0AURA2 YROM-8
-~...~ [C0BLANK]
+~……~ [C0BLANK]
 END
-  ++ ~It's alright. We did what we had to.~ + YROM-8-1
-  ++ ~Damn Irenicus. He'll pay for that, even beyond death.~ + YROM-8-2
+  ++ ~没事。我们做了不得不做的事。~ + YROM-8-1
+  ++ ~该死的艾瑞尼卡斯。他得为此付出代价，死了也得付。~ + YROM-8-2
 
 CHAIN BC0AURA2 YROM-8-1
-~I wanted to see him again, <CHARNAME>... but when I did, I realized how afraid it would make me. Seeing him in torment, turned against you again... with a sword that should have protected you.~
-= ~This must end, <CHARNAME>. It *will* end. I've made a promise. I will make sure I see this through with you, <CHARNAME>... for those who couldn't.~
-= ~"Yasuraka-ni-nemurinasai"... Yoshimo.~
+~我想再见到他，<CHARNAME>……可真的见到了，我才明白那会让我多害怕。看着他受苦，又一次与你为敌……手里拿着那把本该护住你的剑。~
+= ~这必须结束，<CHARNAME>。它*会*结束。我许过诺。我一定会陪你走到底，<CHARNAME>……为那些没能走到的人。~
+= ~“愿你安息”……义桑。~
 EXIT
 
 CHAIN BC0AURA2 YROM-8-2
-~Yes, this cruelty... it must be punished. Nothing could be so unforgivable.~
+~对，这种残忍……必须受到惩罚。没有什么比这更不可饶恕。~
 EXTERN BC0AURA2 YROM-8-1
 
 CHAIN IF WEIGHT #-1 ~Global("C0AuraToBYRDreamTalk","GLOBAL",1)~ THEN BC0AUR25 YROM-TOB-1
-~You look wistful, <CHARNAME>... like you're longing for something. Did you... dream of Yoshimo again?~ [C0BLANK]
+~你看着怅然若失，<CHARNAME>……像是在渴望着什么。你……又梦到义桑了？~ [C0BLANK]
 DO ~SetGlobal("C0AuraToBYRDreamTalk","GLOBAL",2)~
 END
-  ++ ~I did, yes.~ + YROM-TOB-1-1
-  ++ ~More than just Yoshimo. Gorion was there too. And Khalid, even Skie... and Tamoko.~ + YROM-TOB-1-2
-  ++ ~Leave me alone. I'm in no mood to talk about it.~ + YROM-TOB-1-0
+  ++ ~我梦到了，是的。~ + YROM-TOB-1-1
+  ++ ~不止义桑。葛立安也在。还有卡利德，连斯基……和塔莫科。~ + YROM-TOB-1-2
+  ++ ~让我静一静。我没心情谈这个。~ + YROM-TOB-1-0
 
 CHAIN BC0AUR25 YROM-TOB-1-0
-~...alright.~
+~……好吧。~
 EXIT
 
 CHAIN BC0AUR25 YROM-TOB-1-1
-~I thought so.~
-= ~...Was it only him? I... heard you say a few things while you were sleeping.~
+~我就知道。~
+= ~……只有他吗？我……听到你睡着时说了几句话。~
 END
-  ++ ~There was also many old faces. Khalid, Skie... and Tamoko as well.~ + YROM-TOB-1-2
-  ++ ~Mind your own business.~ + YROM-TOB-1-0
+  ++ ~还有许多旧面孔。卡利德、斯基……还有塔莫科。~ + YROM-TOB-1-2
+  ++ ~少管闲事。~ + YROM-TOB-1-0
 
 CHAIN BC0AUR25 YROM-TOB-1-2
-~Ah... I see.~
-= ~I'm glad you were able to see them. Even if it was only a dream, it sounds like... you were all at peace for once.~
+~啊……我明白了。~
+= ~我很高兴你能见到他们。哪怕只是一场梦，听起来……你们总算有一刻是安宁的。~
 END
-  ++ ~We were. I think... I was happy.~ + YROM-TOB-1-3
-  ++ ~It doesn't matter. It was all a dream, and my memories of it are cloudy anyway.~ + YROM-TOB-1-4
-  ++ ~Perhaps, but it was just a fantasy. Reality is not so kind, so let's get on with it.~ + YROM-TOB-1-0
+  ++ ~我们是安宁的。我想……我是快乐的。~ + YROM-TOB-1-3
+  ++ ~不要紧。那全是一场梦，我对它的记忆本来也模糊。~ + YROM-TOB-1-4
+  ++ ~也许吧，可那只是幻想。现实没那么仁慈，我们还是继续往前吧。~ + YROM-TOB-1-0
 
 CHAIN BC0AUR25 YROM-TOB-1-3
-~That's all that matters, <CHARNAME>. No matter how, it's a good thing... you don't have to doubt that.~
+~那就够了，<CHARNAME>。不管怎样，那是件好事……你不必怀疑。~
 EXTERN BC0AUR25 YROM-TOB-1-5
 
 CHAIN BC0AUR25 YROM-TOB-1-4
-~Maybe... but if it brought you some comfort, then it's still a precious gift, isn't it?~
+~也许……可要是它给了你些安慰，那也算一份珍贵的礼物，不是吗？~
 EXTERN BC0AUR25 YROM-TOB-1-5
 
 CHAIN BC0AUR25 YROM-TOB-1-5
-~I know we can't make it a reality, not to the letter... but we still have to try out best. We'll make what we can with what we have.~
-== BC0AUR25 ~You can do it, <CHARNAME>. I believe in you. And I'll... be right there with you.~
+~我知道我们没法把它变成现实，不能一字不差……可我们还是得尽力。我们用手上有的，做出能做的。~
+== BC0AUR25 ~你做得到，<CHARNAME>。我相信你。而且我……会一直在你身边。~
 EXIT

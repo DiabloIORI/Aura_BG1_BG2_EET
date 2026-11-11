@@ -8,14 +8,14 @@ Range("C0Aura",15)
 !StateCheck("Aerie",CD_STATE_NOTVALID)
 !StateCheck("C0Aura",CD_STATE_NOTVALID)
 Global("C0AuraAerieToB1","GLOBAL",0)~ THEN BAERIE25 C0AuraAerieToB1
-~Aura, do you have anything on your mind? I'm here to listen, if you need somebody to.~ [C0BLANK]
+~奥拉，你心里有什么事吗？你要是想找人听，我在这儿。~ [C0BLANK]
 DO ~SetGlobal("C0AuraAerieToB1","GLOBAL",1)~
-== BC0AUR25 ~I'm always happy to spend time with you, Aerie, but... why does this sound like you're trying to coax me into letting off some steam?~
-== BAERIE25 ~No! Well... maybe. Our conflicts have only be growing more daunting and purposeful... and yet, you don't seem frightened at all. I was just worried you might've been keeping it all bottled up.~
-== BC0AUR25 ~Really, I haven't... though I guess at some point, I might have been. But I have to be strong enough to not let everyone down. Don't you feel the same way?~
-== BAERIE25 ~I do, yes. Having gained so much power, it made me aware of how comfortable it was to be weak... now, I need to consider my responsibilities. How to help everyone... and not lose myself while doing so.~
-== BC0AUR25 ~Just don't let those burdens get too heavy, alright? Friends need to share the load. Now that I think about it, maybe it's *you* who needs a sympathetic ear?~
-== BAERIE25 ~Haha! So now we really are thinking along the same lines. I'm fine, really. It's a pleasure just having a friend like you to keep me company.~
+== BC0AUR25 ~跟你待在一起我总是高兴，艾黎，可是……这怎么听着像你在想办法让我发泄一下？~
+== BAERIE25 ~不！嗯……也许吧。我们的冲突越来越可怕、越来越有目的性……可你看着一点也不怕。我只是担心你把一切都憋在心里。~
+== BC0AUR25 ~真的，我没有……不过我想，某个时候也许我确实憋过。可我得强到不让大家失望。你不也有同感吗？~
+== BAERIE25 ~是的，我有。得到这么大的力量后，反倒让我明白软弱时有多安逸……现在我得考虑自己的责任。怎么帮到所有人……又不在此过程中迷失自己。~
+== BC0AUR25 ~只是别让那些担子太重，好吗？朋友该分担重量。现在想想，也许反而是*你*需要一个愿意倾听的耳朵？~
+== BAERIE25 ~哈哈！那我们现在真想到一块去了。我没事，真的。有个像你这样的朋友陪着，就已经很愉快了。~
 EXIT
 
 // Anomen
@@ -28,16 +28,16 @@ Range("C0Aura",15)
 !StateCheck("Anomen",CD_STATE_NOTVALID)
 !StateCheck("C0Aura",CD_STATE_NOTVALID)
 Global("C0AuraAnomenToB1","GLOBAL",0)~ THEN BANOME25 C0AuraAnomenToB1
-~Please do not take this the wrong way, Aura, but there is something I have been meaning to address to you, and perhaps now is as good a time than any.~ [C0BLANK]
+~请别误会，奥拉，可有件事我一直想跟你说，也许现在正是时候。~ [C0BLANK]
 DO ~SetGlobal("C0AuraAnomenToB1","GLOBAL",1)~
-== BC0AUR25 ~I don't look that easily offended, do I? Hehe, I'm just teasing. Go ahead.~
-== BANOME25 ~All this... indirect manner of facing our foes. Hidden traps, devious creations, lifeless machines... have you never considered such methods... dishonorable?~
-== BC0AUR25 ~That's... do you think I'm dishonorable, Anomen? I just want to do my best to help, and... this is the best I can do.~
-== BANOME25 ~I would never doubt that. Your purehearted intent and determination to see us succeed cannot be argued. But... I understand little of such skills, and thus I cannot help but question them. Especially when I have seen the devastation they are capable of.~
-== BC0AUR25 ~You know I wouldn't use any of my most dangerous skills if they weren't necessary, Anomen. I hate hurting others as much as... well, as anyone should. But I also never thought our battles would become so beyond the realm of reason, you know?~
-== BANOME25 ~Hah! Perhaps that is also true. There is much that is above my understanding nowadays, even beyond your miraculous talents... I beg your pardon. Perhaps I should seek to be more studious, like yourself. With understanding might come trust.~
-== BC0AUR25 ~I can help, if you like! I can teach you all about alchemy, magical theory, you name it!~
-== BANOME25 ~Er... that may be too large of a step. One must learn to crawl before they can walk. Besides... I do not enjoy the image of being caught in an explosion of my own making.~
+== BC0AUR25 ~我看起来那么容易动气吗？嘿嘿，我逗你的。你说吧。~
+== BANOME25 ~这一套……用迂回的方式对付敌人。暗藏的陷阱、狡猾的造物、没有生命的机械……你从没觉得这些手段……不光彩吗？~
+== BC0AUR25 ~那……你觉得我不光彩吗，阿诺门？我只想尽我所能帮忙，而……这是我能做到的最好。~
+== BANOME25 ~我绝不会怀疑这点。你纯洁的心意与一定要我们成功的决心，无可争辩。可是……我对这类技艺了解甚少，因此难免质疑。尤其当我见过它们能造成的破坏。~
+== BC0AUR25 ~你知道的，若不是必要，我不会动用我最危险的那些本事，阿诺门。我讨厌伤别人，跟……跟任何人该讨厌的程度一样。可我也从没想到我们的战斗会变得这么超出常理，你知道吗？~
+== BANOME25 ~哈！这恐怕也是真的。如今有太多事超出我的理解，甚至超出你那些奇迹般的才能……请恕我失言。也许我该像你一样更用功些。有了理解，或许就有了信任。~
+== BC0AUR25 ~你要是愿意，我可以帮你！炼金、魔法理论，随你点，我都能教！~
+== BANOME25 ~呃……那步子也许太大了。人得先会爬才会走。再说……我可不喜欢被自己弄出的爆炸卷进去的画面。~
 EXIT
 
 // Cernd
@@ -50,19 +50,19 @@ Range("C0Aura",15)
 !StateCheck("Cernd",CD_STATE_NOTVALID)
 !StateCheck("C0Aura",CD_STATE_NOTVALID)
 Global("C0AuraCerndToB1","GLOBAL",0)~ THEN BCERND25 C0AuraCerndToB1
-~I admire your growth, Aura. For all that you doubted your affinity for conflict, you've adapted to it well nonetheless.~ [C0BLANK]
+~我钦佩你的成长，奥拉。尽管你曾怀疑自己对冲突的禀赋，你却适应得很好。~ [C0BLANK]
 DO ~SetGlobal("C0AuraCerndToB1","GLOBAL",1)~
-== BC0AUR25 ~Really? Well, thinking about it, maybe you're right. The things that frightened me before could barely even make me blink now.~
-== BCERND ~Indeed. Many of nature's most tenacious flora only grow taller under duress. Perhaps you are the same... figuratively, at least.~
-== BC0AUR25 ~Ouch. Did you really have to rub my height in, Cernd?~
-== BCERND ~My apologies. But I stand by the principle of my words.~
-== BC0AUR25 ~If I weren't taught not to say it, I'd claim I've seen it all at this point. "Demons, dragons, demigods? Sure, why not. We'll get through it."~
-== BCERND ~That does seem to have become the standard nowadays. I suppose I could say this has been a learning experience for all of us.~
-== BCERND ~Though...~
-== BC0AUR25 ~Hmm?~
-== BCERND ~ROAR.~
-== BC0AUR25 ~Eep! D–don't do that.~
-== BCERND ~Ha ha! I suppose some instincts cannot be abandoned. Beneath the surface, your nature has not changed, Aura. But I see no fault in that.~
+== BC0AUR25 ~真的？嗯，想想也是，也许你说得对。以前让我害怕的东西，如今几乎都让我眼皮都不眨一下。~
+== BCERND ~正是。自然中许多最顽强的植物，只在压力下长得更高。也许你也一样……至少比喻上。~
+== BC0AUR25 ~哎哟。你非得拿我的身量说事吗，瑟恩德？~
+== BCERND ~我道歉。可我仍坚持这话的道理。~
+== BC0AUR25 ~要不是有人教过我不能这么说，我现在就要说：我什么都见过了。“恶魔、巨龙、半神？行啊，怎么不行。我们会熬过去的。”~
+== BCERND ~如今这似乎成了常态。我想我可以说，这对我们所有人都是一段学习经历。~
+== BCERND ~不过……~
+== BC0AUR25 ~嗯？~
+== BCERND ~吼。~
+== BC0AUR25 ~呀！别——别这样。~
+== BCERND ~哈哈！看来有些本能是丢不掉的。在表皮之下，你的本性没变，奥拉。可我并不觉得这有什么错。~
 EXIT
 
 // Dorn
@@ -75,13 +75,13 @@ Range("C0Aura",15)
 !StateCheck("Dorn",CD_STATE_NOTVALID)
 !StateCheck("C0Aura",CD_STATE_NOTVALID)
 Global("C0AuraDornToB1","GLOBAL",0)~ THEN BDORN25 C0AuraDornToB1
-~There is power within you, girl, regardless of the pathetic efforts you make in feigning the opposite.~ [C0BLANK]
+~你体内有力量，丫头，不管你怎么费劲装出相反的样子。~ [C0BLANK]
 DO ~SetGlobal("C0AuraDornToB1","GLOBAL",1)~
-== BC0AUR25 ~I'm not feigning anything, Dorn. You might be right that I have power, but I take more pride in that I know the right way to use it.~
-== BDORN25 ~So I have seen. You are at odds with yourself... though your mind is a deadly weapon, your weak heart holds it back.~
-== BC0AUR25 ~I trust my heart more than my mind. I'm more proud of the good things that come from my knowledge than having it for its own sake. Being a good person is more important than being all-knowing.~
-== BDORN25 ~Foolishness.~
-== BC0AUR25 ~You might never understand, Dorn. I'd like to think it's never too late to change, but with you, I don't even know.~
+== BC0AUR25 ~我没装什么，多恩。你说我有力量，也许对，可我更自豪的是我知道该怎么正确使用它。~
+== BDORN25 ~我看出来了。你跟自己过不去……你的头脑是致命的武器，可你软弱的心拖住了它。~
+== BC0AUR25 ~我更信我的心，而不是我的脑子。比起单纯拥有知识，我更自豪于知识带来的好事。做个好人也比无所不知更重要。~
+== BDORN25 ~愚蠢。~
+== BC0AUR25 ~你也许永远不会懂，多恩。我愿意相信改变永远不晚，可对你，我连这都不知道。~
 EXIT
 
 // Edwin
@@ -94,17 +94,17 @@ Range("C0Aura",15)
 !StateCheck("Edwin",CD_STATE_NOTVALID)
 !StateCheck("C0Aura",CD_STATE_NOTVALID)
 Global("C0AuraEdwinToB1","GLOBAL",0)~ THEN BC0AUR25 C0AuraEdwinToB1
-~Can I ask a favor of you, Edwin?~ [C0BLANK]
+~能请你帮个忙吗，埃德温？~ [C0BLANK]
 DO ~SetGlobal("C0AuraEdwinToB1","GLOBAL",1)~
-== BEDWIN25 ~My favors come with a steep price, girl, as you should well know. Be quick, and I may consider it, as long as it does not involve parting ways with any of my collection of artifacts.~
-== BC0AUR25 ~It'll be quick and easy. You don't have to give me anything, Edwin, but could you write something in my journal? Even something short is fine, as long as it's genuine.~
-== BEDWIN25 ~What?! You'll squirrel no more magical secrets from me, not after all the ones you already have. (Too dangerous to give so much so quickly! She cannot be truly as guileless as she appears...)~
-== BC0AUR25 ~Edwin, I just want some words to remember you by! After everything we've been through, I'll miss everyone once we part ways, even you. Won't you miss me?~
-== BEDWIN25 ~I—I... bah. I suppose I could be so magnanimous as to grant you a few words of favor from my esteemed self. Fine! Hand me your pen and book so that I might do this quickly, before anyone notices my gesture.~
-== BC0AUR25 ~You don't have to get too complicated, Edwin. Even a simple "good luck" will do, you know? Sometimes it really is just that simple.~
-== BEDWIN25 ~No. That will not do. My words much be of as much purpose and worth as might be expected of my greatness. I will come to you once I have thought of the appropriate parting words, gnome. Be grateful that I am willing to distract myself on such trivial matters.~
-== BC0AUR25 ~Thank you, Edwin!~
-== BEDWIN25 ~(Truly as without guile or ambition as she seems... but, perhaps that is not so disagreeable sometimes.)~
+== BEDWIN25 ~我的帮忙价钱很高，丫头，你该很清楚。快点说，我可以考虑，只要不涉及跟我收藏的任何器物分手。~
+== BC0AUR25 ~很快也很简单。你不用给我任何东西，埃德温，可你能在我日志里写点什么吗？哪怕短短几句也行，只要是真心话。~
+== BEDWIN25 ~什么？！你别想再从我这儿套走任何魔法秘密，已经给你的够多了。（这么快给这么多太危险！她不可能真像表面这么单纯……）~
+== BC0AUR25 ~埃德温，我只想要几句能记住你的话！经历了这么多，分开后我会想念每个人，连你也会。你就不会想我吗？~
+== BEDWIN25 ~我——我……啐。我想我可以宽宏大量地从我这尊贵之身赐你几句嘉言。行！把笔和本子给我，让我趁没人注意时快点办完。~
+== BC0AUR25 ~你不用写得太复杂，埃德温。哪怕一句简单的“好运”也行，你知道吗？有时候真就这么简单。~
+== BEDWIN25 ~不。那不行。我的字句必须像人们对我之伟大所期待的那样有分量、有价值。等我想好合适的临别之言，我会去找你，侏儒。庆幸我愿意为这种琐事分神吧。~
+== BC0AUR25 ~谢谢你，埃德温！~
+== BEDWIN25 ~（真的像她表面那样毫无心机与野心……不过，也许有时候那样并不算太讨厌。）~
 EXIT
 
 // Haer'Dalis
@@ -117,13 +117,13 @@ Range("C0Aura",15)
 !StateCheck("Haerdalis",CD_STATE_NOTVALID)
 !StateCheck("C0Aura",CD_STATE_NOTVALID)
 Global("C0AuraHaerdalisToB1","GLOBAL",0)~ THEN BHAERD25 C0AuraHaerdalisToB1
-~Another record, lovely rosefinch? I recognize that glint in your eyes—you have made headway towards another groundbreaking invention or discovery, no doubt.~ [C0BLANK]
+~又一份记录，可爱的小朱雀？我认得你眼里的那道光——你无疑在另一项开创性的发明或发现上有了进展。~ [C0BLANK]
 DO ~SetGlobal("C0AuraHaerdalisToB1","GLOBAL",1)~
-== BC0AUR25 ~Oh, haha... am I getting that predictable?~
-== BHAERD25 ~It is inspiring, yet tragic. Given time, even your incredible knowledge and creations will become a memory, destined to fade.~
-== BC0AUR25 ~Maybe mine will, but there'll always be someone ready to take over my findings. I'm just a pioneer. The truly incredible discoveries are going to be far beyond my time.~
-== BHAERD25 ~Ah, rosefinch. Perhaps your profession is not so different from mine. To set the standards to which future aspiring artists follow is the dream of every dramatist. Perhaps fate robbed the multiverse of a master playwright, and shaped her in the form of a sweet little gnome.~
-== BC0AUR25 ~Haha! In another life, I wouldn't have minded being one, Haer'Dalis. But you know, I still have a long life ahead of me. There's always time to try something new before we face entropy.~
+== BC0AUR25 ~哦，哈哈……我变得这么好猜了吗？~
+== BHAERD25 ~这令人振奋，却又悲凉。假以时日，连你了不起的知识与造物也会成为记忆，注定消逝。~
+== BC0AUR25 ~也许我的会，可总有人准备接手我的成果。我只是个先行者。真正了不起的发现会远远超出我的时代。~
+== BHAERD25 ~啊，朱雀。也许你的行当跟我的没那么不同。为后来有志的艺人立下标准，是每个剧作家的梦想。也许命运从多元宇宙中夺走了一位剧作大师，把她塑成了一个甜美的小侏儒。~
+== BC0AUR25 ~哈哈！在另一种人生里，我倒不介意当个剧作家，海尔达利。可你知道，我前面还有很长的命。在熵来临之前，总有时间试试新东西。~
 EXIT
 
 // Hexxat
@@ -136,15 +136,15 @@ Range("C0Aura",15)
 !StateCheck("Hexxat",CD_STATE_NOTVALID)
 !StateCheck("C0Aura",CD_STATE_NOTVALID)
 Global("C0AuraHexxatToB1","GLOBAL",0)~ THEN BC0AUR25 C0AuraHexxatToB1
-~Don't you ever grow tired, Hexxat?~ [C0BLANK]
+~你从不觉得累吗，赫克萨特？~ [C0BLANK]
 DO ~SetGlobal("C0AuraHexxatToB1","GLOBAL",1)~
-== BHEXXA25 ~Never.~
-== BC0AUR25 ~I don't mean your body. But how long can living like this... never changing, every feeling having become stagnant, be worth it?~
-== BHEXXA25 ~And should I simply stake myself? I imagine many be pleased to see that, including you.~
-== BC0AUR25 ~No, I—~
-== BHEXXA25 ~Perhaps that is going too far. I know you mean well—you're incapable of doing any less. But I'd expect you to know better than to talk about what you can't understand.~
-== BC0AUR25 ~But—fair enough. I definitely can't. I'd choose death over what's happened to you. I'm sorry, Hexxat.~
-== BHEXXA25 ~You've got nothing to be sorry about. Just don't bring it up again.~
+== BHEXXA25 ~从不。~
+== BC0AUR25 ~我不是说你的身体。可这样活着……一成不变，每种感觉都变得死寂，能值得多久？~
+== BHEXXA25 ~那我是不是该给自己钉根木桩？我想很多人会乐意看到，包括你。~
+== BC0AUR25 ~不，我——~
+== BHEXXA25 ~也许这话过分了。我知道你是好意——你做不到不是好意。可我以为你该懂得，别去谈你无法理解的事。~
+== BC0AUR25 ~可是——好吧。我确实不懂。我宁愿死，也不要落到你这样的境地。对不起，赫克萨特。~
+== BHEXXA25 ~你没什么可道歉的。只是别再提了。~
 EXIT
 
 // Imoen
@@ -157,22 +157,22 @@ Range("C0Aura",15)
 !StateCheck("Imoen2",CD_STATE_NOTVALID)
 !StateCheck("C0Aura",CD_STATE_NOTVALID)
 Global("C0AuraImoenToB1","GLOBAL",0)~ THEN BC0AUR25 C0AuraImoenToB1
-~Are you alright, Imoen?~ [C0BLANK]
+~你没事吧，爱蒙？~ [C0BLANK]
 DO ~SetGlobal("C0AuraImoenToB1","GLOBAL",1)~
-== BIMOEN25 ~Why? Did I look down in the dumps for a moment? Sorry, I was just thinking.~
-== BC0AUR25 ~That's just it. You're not usually lost in thought like this, not for as long as I've known you. It's hard not to be worried.~
-== BIMOEN25 ~I'm fine. If you want to worry about someone, not that I don't like seeing your cute face watching me all concerned, <CHARNAME> has it worse than I do.~
-== BIMOEN25 IF ~Global("C0AuraRomanceActive","GLOBAL",2)~ THEN ~Besides, I'm sure she really needs you right now more than ever. You can help me by taking care of her however you can.~
-== BC0AUR25 IF ~Global("C0AuraRomanceActive","GLOBAL",2)~ THEN ~I care about <CHARNAME>, but I know she'd be happier if you're alright too.~
-== BC0AUR25 ~Maybe I'm being too pushy... but I can't forget that you're part of this whole mess. Everyone out to get <CHARNAME> is after you too. Anyone would be anxious, if not terrified. I'd hardly even be able to sleep if it were me.~
-== BIMOEN25 ~I...~
-== BIMOEN25 ~I'm not going to lie, it's not easy. I've changed more recently than I can keep up with, and not all of it is willingly. But I'm different now. I'm playing a part in things instead of just being a victim, and what calms me the most is being able to make a difference.~
-== BC0AUR25 ~You sure? Because if I feel like you're pushing yourself, I'm going to... to...~
-== BIMOEN25 ~Aw, come on. We both know you're too nice to try and be forceful.~
-== BC0AUR25 ~*sigh* Yes, I am. But I can still sedate you during the evenings where you're spending too much time peering over your spellbook, you know? For your own good.~
-== BIMOEN25 ~You—! You know, Aura, if you weren't such a blinding ray of sunshine, you'd seriously be one of the scariest people I've ever met.~
-== BIMOEN25 IF ~!Global("ImoenRomanceActive","GLOBAL",2) !Global("C0AuraRomanceActive","GLOBAL",2)~ THEN ~Instead, though? You're just plain endearing.~
-== BC0AUR25 IF ~!Global("ImoenRomanceActive","GLOBAL",2) !Global("C0AuraRomanceActive","GLOBAL",2)~ THEN ~Oh, come on... saying stuff like that isn't going to stop me from doing what I have to, you know... probably.~
+== BIMOEN25 ~怎么？我刚才看着很低落吗？抱歉，我只是在想事情。~
+== BC0AUR25 ~就是这样。你平时不会这样出神，至少从我认识你以来没有。很难不担心。~
+== BIMOEN25 ~我没事。你要担心谁的话——倒不是我不喜欢看你那张可爱的脸一脸担忧地看着我——<CHARNAME>比我更糟。~
+== BIMOEN25 IF ~Global("C0AuraRomanceActive","GLOBAL",2)~ THEN ~再说，我肯定她现在比任何时候都更需要你。你能帮我的，就是尽可能照顾好她。~
+== BC0AUR25 IF ~Global("C0AuraRomanceActive","GLOBAL",2)~ THEN ~我在意<CHARNAME>，可我知道，你若也好好的，她会更高兴。~
+== BC0AUR25 ~也许我逼得太紧了……可我没法忘记你也是这整摊浑水里的一份子。所有冲着<CHARNAME>来的人，也冲着你来。谁都会焦虑，甚至恐惧。要是我，我几乎都睡不着。~
+== BIMOEN25 ~我……~
+== BIMOEN25 ~我不撒谎，这不容易。我近来变得太多，连自己都跟不上，而且不全是自愿的。可我现在不一样了。我在事情里扮演一角，而不只是受害者，最让我安心的是我能带来改变。~
+== BC0AUR25 ~你确定？因为要是我觉得你在硬撑，我就要……就要……~
+== BIMOEN25 ~唉，算了。我们都知道你心太软，狠不起来。~
+== BC0AUR25 ~*叹气* 是，我心软。可你晚上盯着法术书看太久的时候，我照样能把你弄睡着，你知道吗？为你好。~
+== BIMOEN25 ~你——！你知道吗，奥拉，要不是你亮得像一束阳光，你绝对会是我见过最吓人的人之一。~
+== BIMOEN25 IF ~!Global("ImoenRomanceActive","GLOBAL",2) !Global("C0AuraRomanceActive","GLOBAL",2)~ THEN ~可实际上呢？你就是单纯地讨人喜欢。~
+== BC0AUR25 IF ~!Global("ImoenRomanceActive","GLOBAL",2) !Global("C0AuraRomanceActive","GLOBAL",2)~ THEN ~哦，拜托……说这种话可拦不住我去做该做的事，你知道吗……大概吧。~
 EXIT
 
 CHAIN
@@ -189,23 +189,23 @@ OR(2)
 !Global("C0AuraMatch","GLOBAL",1)
 Global("C0AuraRomanceActive","GLOBAL",3)
 Global("C0AuraImoenToB","GLOBAL",1)~ THEN BC0AUR25 C0AuraImoenToB2
-~Hey, um... Imoen...~ [C0BLANK]
+~嘿，呃……爱蒙……~ [C0BLANK]
 DO ~SetGlobal("C0AuraImoenToB1","GLOBAL",2)~
-== BIMOEN25 ~What's up?~
-== BC0AUR25 ~We're coming awfully close to the end, aren't we? It'll all be over soon.~
-== BIMOEN25 ~That sounds a little grim, doesn't it? I prefer to think we're taking the fight to whoever's on top, showing them what we're made of, then making it back in time for tea.~
-== BC0AUR25 ~Alright, that does sound better. Anyway... um...~
-== BIMOEN25 ~"Anyway"... and?~
-== BC0AUR25 ~If there's a happy ending to this, and we're there to see it... it'll be time for the next adventure, right?~
-== BIMOEN25 ~Sure. It'll be fun. Not as worldbreaking as this one, but we'll keep looking until we find one that'll be fit for a good song. Maybe a nice beachside vacation in the middle. I'm open for ideas.~
-== BC0AUR25 ~Huh? You mean... we're going to stay together?~
-== BIMOEN25 ~Of course we are, silly. What, do you think we're just going to hug and say goodbye after we're done? Come on. Wouldn't you miss me?~
-== BC0AUR25 ~I—yes, I absolutely would! But still... you just... believed I'd want to stay?~
-== BIMOEN25 ~Isn't that what you were going to suggest just now?~
-== BC0AUR25 ~...~
-== BC0AUR25 ~This is not at all how I expected this talk to end up.~
-== BIMOEN25 ~You're smiling... and covering up. That's just adorable. I was hoping I'd be able to get a reaction like that.~
-== BC0AUR25 ~Ugh... I almost regret asking you anything... but I can't... I'm just going to find a hole to hide in forever instead.~
+== BIMOEN25 ~怎么了？~
+== BC0AUR25 ~我们离终点已经很近了，对吧？很快就都结束了。~
+== BIMOEN25 ~这听着有点阴沉，对吧？我宁愿想成是我们主动打上门去，让上面那位看看我们是什么成色，然后再赶回来喝茶。~
+== BC0AUR25 ~好吧，那听着好些。总之……呃……~
+== BIMOEN25 ~“总之”……然后呢？~
+== BC0AUR25 ~如果这一切有个圆满结局，我们也在场看到……那就该是下一次冒险的时候了，对吧？~
+== BIMOEN25 ~当然。会很好玩。没这次这么惊天动地，可我们会一直找，直到找到一段配得上好歌的。中间也许还能来个不错的海滨休假。我接受提议。~
+== BC0AUR25 ~嗯？你是说……我们会一直在一起？~
+== BIMOEN25 ~当然会，傻瓜。怎么，你以为我们完事之后就抱一抱、说声再见？得了吧。你就不会想我？~
+== BC0AUR25 ~我——会，我绝对会！可是……你就……这么相信我会想留下？~
+== BIMOEN25 ~这不正是你刚才想说的吗？~
+== BC0AUR25 ~……~
+== BC0AUR25 ~这场谈话完全不是我预想的结局。~
+== BIMOEN25 ~你在笑……还在遮掩。真可爱。我就希望能逼出你这么个反应。~
+== BC0AUR25 ~呃……我几乎后悔问你任何事了……可我做不到……我还是找个洞永远躲起来算了。~
 EXIT
 
 CHAIN
@@ -216,31 +216,31 @@ Range("C0Aura",15)
 !StateCheck("Imoen2",CD_STATE_NOTVALID)
 !StateCheck("C0Aura",CD_STATE_NOTVALID)
 Global("C0AuraImoenToB1","GLOBAL",2)~ THEN BIMOEN25 C0AuraImoenToB3
-~So... where're you thinking, hmm?~ [C0BLANK]
+~那……你想着去哪儿，嗯？~ [C0BLANK]
 DO ~SetGlobal("C0AuraImoenToB1","GLOBAL",3)~
-== BC0AUR25 ~Wh—where am I thinking about what?~
-== BIMOEN25 ~About where we're going after this, duh. Don't tell me you've actually been trying to forget we talked about this?~
-== BC0AUR25 ~N—no... I don't think I could, with how you've been teasing me about it.~
-== BIMOEN25 ~I was thinking of going north. Maybe we could dig up some ancient relics in the Anauroch. Ooh, or we can go and see the snow in the Frozenfar! That'd be neat.~
-== BC0AUR25 ~Huh... maybe I could even find some history of my grandmother's travels... *ahem*! Now you've got me daydreaming too.~
-== BIMOEN25 ~Oh, come on. You know you like to think about it. Just the two of us, taking a nice, long vacation across Faerûn... beyond that, even.~
-== BC0AUR25 ~Don't you think we should be thinking about how to make sure *this* adventure isn't our last?~
-== BIMOEN25 ~Bo–ring. You know we'll be fine.~
-== BC0AUR25 ~Actually, I don't know. I'm happy just to be with you, Imoen, but ever since we started talking about this, I've only gotten more worried that we'll never get a chance to see it... don't forget, you're involved too. You're as much a Bhaalspawn as <CHARNAME> is.~
-== BIMOEN25 ~That... doesn't scare you, does it?~
-== BC0AUR25 ~No! I'm sorry, Imoen, that's not what I—~
-== BIMOEN25 ~I get it, really, I do. But I'm not just going to up and disappear on you, I promise. I'll fight as hard as I can to make sure I can have a future. And you being around gives me more reason to.~
-== BC0AUR25 ~Imoen...~
-== BIMOEN25 ~Though now that you've reminded me, maybe now's the best time to set some things straight... hey, come here a moment, will you?~
-== BC0AUR25 ~Okay... what's—~
-== BIMOEN25 ~...Mwah.~
-== BC0AUR25 ~H–hey... we're still—~
-== BIMOEN25 ~Who knows what'll happen if I saved this for later? Besides, I get to capture the perfect expression from it. Haha!~
-== BC0AUR25 ~Hmph... I guess this is my life now, right?~
-== BIMOEN25 ~You betcha.~
-== BC0AUR25 ~Fine. I pretty much asked for it, didn't I...~
-== BIMOEN25 ~Absolutely. Heh...~
-== BC0AUR25 ~...Heehee.~
+== BC0AUR25 ~什——我想什么去哪儿？~
+== BIMOEN25 ~想我们之后去哪儿啊，废话。别告诉我你一直在假装忘了我们谈过这个？~
+== BC0AUR25 ~没——没有……你这么拿它逗我，我想我也忘不了。~
+== BIMOEN25 ~我想往北走。也许我们能在安纳罗克挖出些古代遗物。哦，或者去看冰原极北的雪！那会很妙。~
+== BC0AUR25 ~嗯……也许我还能找到些我祖母旅行的史料……*咳*！现在你也让我做起白日梦了。~
+== BIMOEN25 ~哦，得了吧。你知道你喜欢想这些。就我们两个，在费伦来一趟美好漫长的假期……甚至更远。~
+== BC0AUR25 ~你不觉得我们该想想怎么保证*这次*冒险不是我们最后一次吗？~
+== BIMOEN25 ~无——聊。你知道我们会没事的。~
+== BC0AUR25 ~其实我不知道。能跟你在一起，我很快乐，爱蒙，可自从我们谈起这个，我只越来越担心我们永远没机会看到那些……别忘了，你也掺在里面。你跟<CHARNAME>一样是巴尔之子。~
+== BIMOEN25 ~那……不吓你吧？~
+== BC0AUR25 ~不！对不起，爱蒙，我不是那个意思——~
+== BIMOEN25 ~我懂，真的懂。可我不会就这么突然消失在你眼前，我保证。我会拼命打，确保自己能有未来。而你在，让我更有理由这么做。~
+== BC0AUR25 ~爱蒙……~
+== BIMOEN25 ~不过既然你提醒了我，也许现在正是把一些事说清的最好时候……嘿，过来一下，好吗？~
+== BC0AUR25 ~好……怎么——~
+== BIMOEN25 ~……啵。~
+== BC0AUR25 ~嘿——嘿……我们还——~
+== BIMOEN25 ~谁知道留到以后会发生什么？再说，我能趁机抓到你那完美的表情。哈哈！~
+== BC0AUR25 ~哼……我想这就是我今后的日子了，对吧？~
+== BIMOEN25 ~没错。~
+== BC0AUR25 ~好吧。反正这基本是我自找的，对吧……~
+== BIMOEN25 ~绝对。嘿……~
+== BC0AUR25 ~……嘿嘿。~
 DO ~SetGlobal("C0AuraImoenToBFlirt","GLOBAL",1)~ EXIT
 
 CHAIN
@@ -251,13 +251,13 @@ Range("C0Aura",15)
 !StateCheck("Imoen2",CD_STATE_NOTVALID)
 !StateCheck("C0Aura",CD_STATE_NOTVALID)
 Global("C0AuraImoenToB1","GLOBAL",4)~ THEN BC0AUR25 C0AuraImoenToB4
-~Well, here we go.~ [C0BLANK]
+~好，走吧。~ [C0BLANK]
 DO ~SetGlobal("C0AuraImoenToB1","GLOBAL",5)~
-== BIMOEN25 ~Yep. All or nothing, atop the throne of my dear, dreadful, dead dad. I'm sure it'll be great.~
-== BC0AUR25 ~Yeah...~
-== BIMOEN25 ~Hey, remember, just stay back and cover me. You don't need to be scared as long as I've got any spells left in my head.~
-== BC0AUR25 ~Who said I was scared? I'm more worried about having to look over to make sure you're okay, you know that? Don't do anything stupid and make me worry about you when we're fighting for all of our lives!~
-== BIMOEN25 ~Love you too.~
+== BIMOEN25 ~嗯。全有或全无，就在我那位亲爱的、可怕的、死去的父亲宝座上。我相信会很精彩。~
+== BC0AUR25 ~是啊……~
+== BIMOEN25 ~嘿，记住，待在后头掩护我。只要我脑子里还有法术，你就不用怕。~
+== BC0AUR25 ~谁说我怕了？我更担心得扭头确认你没事，你知道吗？我们拼命的时候，别干蠢事让我担心你！~
+== BIMOEN25 ~我也爱你。~
 EXIT
 
 // Jaheira
@@ -270,18 +270,18 @@ Range("C0Aura",15)
 !StateCheck("Jaheira",CD_STATE_NOTVALID)
 !StateCheck("C0Aura",CD_STATE_NOTVALID)
 Global("C0AuraJaheiraToB1","GLOBAL",0)~ THEN BJAHEI25 C0AuraJaheiraToB1
-~May I have a moment, Aura?~ [C0BLANK]
+~能给我一点时间吗，奥拉？~ [C0BLANK]
 DO ~SetGlobal("C0AuraJaheiraToB1","GLOBAL",1)~
-== BC0AUR25 ~Sure, Jaheira. Don't be a stranger.~
-== BJAHEI25 ~I have debated to myself as to whether I should say this. But for your own sake, and that of our friendship, I feel there is one thing I must warn you of.~
-== BC0AUR25 ~Okay... that's a grim way to start a conversation, but I guess you've never been one to mince your words.~
-== BJAHEI25 ~We have faced enemies in this journey that were perhaps never meant for mortals. And in becoming victorious, we have become powerful, and with power comes the attention of other forces.~
-== BJAHEI25 ~All eyes are focused on <CHARNAME>, as of now, but in the future, each of us may be viewed as a potential danger. For you, I fear this more than anyone.~
-== BC0AUR25 ~*I'm* going to be seen as a potentially dangerous person? You're not... pulling my leg, are you, Jaheira?~
-== BJAHEI25 ~I would never jest regarding something of this magnitude. In terms of those with the potential to affect the realms... you may not be far below <CHARNAME> <PRO_HIMHER>self.~
-== BJAHEI25 ~To many, you may be considered a prime threat. For those of evil intent, certainly... but even the Harpers may see fit to keep you under observation, once your full potential is realized.~
-== BC0AUR25 ~But... if that's the case, why would you tell me?~
-== BJAHEI25 ~As I said, we are friends. I place that responsibility above all else. If nothing else, I can promise that I will do what I can to ensure you are viewed as a force of good. Those who know you would argue no less.~
+== BC0AUR25 ~当然，贾希拉。别把我当外人。~
+== BJAHEI25 ~我自己反复想过该不该说这句话。可为了你，也为了我们的友谊，我觉得有件事必须提醒你。~
+== BC0AUR25 ~好吧……用这种沉重的话开头，不过我想你从来不是个拐弯抹角的人。~
+== BJAHEI25 ~这段旅途中，我们面对过的敌人，也许本不是凡人该面对的。而在胜利中，我们变得强大，而有力量就会引来其他势力的注意。~
+== BJAHEI25 ~如今所有目光都盯着<CHARNAME>，可将来，我们每个人都可能被视为潜在的威胁。对你，我比谁都担心这一点。~
+== BC0AUR25 ~*我*会被当成危险人物？你不是……在拿我开玩笑吧，贾希拉？~
+== BJAHEI25 ~这种事我从不开玩笑。就影响诸国度的人而言……你也许并不比<CHARNAME><PRO_HIMHER>本人低多少。~
+== BJAHEI25 ~在许多人眼里，你可能被视为头等威胁。对心怀恶意的人，肯定是……可等你的潜力完全展现，连竖琴手也可能觉得该把你置于监视之下。~
+== BC0AUR25 ~可是……若真是这样，你为什么要告诉我？~
+== BJAHEI25 ~我说过，我们是朋友。我把这份责任放在一切之上。至少我可以保证，我会尽力让人看到你是良善之力。认识你的人都会这么辩。~
 EXIT
 
 // Jan
@@ -294,16 +294,16 @@ Range("C0Aura",15)
 !StateCheck("Jan",CD_STATE_NOTVALID)
 !StateCheck("C0Aura",CD_STATE_NOTVALID)
 Global("C0AuraJanToB1","GLOBAL",0)~ THEN BC0AUR25 C0AuraJanToB1
-~*sniff* Oh, I think I could recognize that scent of blended turnips from anywhere. What are you putting together this time, Jan?~ [C0BLANK]
+~*抽鼻子* 哦，混杂芜菁的那股味儿，我在哪儿都认得出。这次你又在调什么，扬？~ [C0BLANK]
 DO ~SetGlobal("C0AuraJanToB1","GLOBAL",1)~
-== BJAN25 ~You caught me, did you? Heh, and perfect timing as well, Aura. Actually, I was just about to add the finishing touches to this before coming to you.~
-== BC0AUR25 ~This is meant for me? I, um, want to ask what it is, but I should thank you first, Jan.~
-== BJAN25 ~No need for that. With our history of spelunking and your keeping my family company, we may as well be kin by blood these days. I've noticed that your skin hasn't had its usual luster for some time, you know. The stress and poor climate are the horrible offenders, I'm sure.~
-== BC0AUR25 ~I'm just... really tired, Jan. It's not that surprising. I'll have time to take care of ourselves when we're not fighting for our lives.~
-== BJAN25 ~No, no, we can't have that. I can't simply stand by while a girl like you suffers under the conditions of war and horrible environments. Well, I don't claim to be the expect in healthcare that my lovely cousin Baena, who's sold to dukes and counts all over the land, but I know a few things that might work for a fellow gnome, at least. Give it a light rub the next time you're washing your face, and I'm sure it'll solve the problem within the week. If not, you can come back and claim my head if you want.~
-== BC0AUR25 ~That's a nice thought, but I don't know... the last time I saw someone else try something like this, their skin broke out in hives... this wouldn't be another funny prank, would it?~
-== BJAN25 ~Now, you'll really make me sad with words like that, Aura. I wasn't joking when I said you were as good as family. Is it so wrong to try and return some shine to a young gnome lass's lovely smile?~
-== BC0AUR25 ~Jan, I had no idea... thank you. I'll give it a try for sure. I can't possibly say no after hearing something like that.~
+== BJAN25 ~被你发现了？嘿，而且时机也正好，奥拉。其实我正要给这个做最后的润色，就去找你呢。~
+== BC0AUR25 ~这是给我的？我，呃，想问这是什么，可我该先谢谢你，扬。~
+== BJAN25 ~不用谢。凭我们一块钻地洞的交情、加上你陪着我家人，如今我们简直算血亲了。我注意到你的皮肤有段日子没以往的亮泽了，你知道。我敢说压力和糟糕的气候是罪魁祸首。~
+== BC0AUR25 ~我只是……真的很累，扬。这不算奇怪。等我们不为命拼命了，我有时间照顾自己。~
+== BJAN25 ~不不，这可不行。我不能眼看着你这样的姑娘在战乱和糟糕环境里受苦。嗯，我不敢自称是医疗专家——我那位可爱的表亲贝娜才是，她把药卖遍了各地的公爵伯爵——可至少我知道几样对侏儒同族有用的。下次洗脸时轻轻抹上，我保证一周内解决问题。若不然，你回来砍我的头都行。~
+== BC0AUR25 ~这想法很好，可我不知道……上次我见别人试类似的东西，皮肤起了一片疹子……这不会又是个恶作剧吧？~
+== BJAN25 ~哎，你这么说真让我伤心，奥拉。我说你如同家人，可不是开玩笑。想让一个年轻侏儒姑娘可爱的笑容恢复光泽，有什么错吗？~
+== BC0AUR25 ~扬，我不知道……谢谢你。我一定试试。听你这么说，我根本没法拒绝。~
 EXIT
 
 // Keldorn
@@ -316,17 +316,17 @@ Range("C0Aura",15)
 !StateCheck("Keldorn",CD_STATE_NOTVALID)
 !StateCheck("C0Aura",CD_STATE_NOTVALID)
 Global("C0AuraKeldornToB1","GLOBAL",0)~ THEN BC0AUR25 C0AuraKeldornToB1
-~Keldorn, are you quite all right? Nothing hurts or feels off?~ [C0BLANK]
+~凯尔东，你还好吧？没有哪儿疼或不对劲？~ [C0BLANK]
 DO ~SetGlobal("C0AuraKeldornToB1","GLOBAL",1)~
-== BKELDO25 ~No worse than I have ever been, Aura. Have you seen something in my condition to suggest the contrary?~
-== BC0AUR25 ~It's not that. I was just thinking, this has been a long journey, and with how long you've been fighting, your body... ugh, there's no way for this to sound good.~
-== BKELDO25 ~Ha! I was wondering when the debate of my age would rise. That is what concerns you, is it?~
-== BC0AUR25 ~Yes, sir.~
-== BKELDO25 ~Between my years of training, the kindness of the gods and, of course, your regular examinations and carefully-prepared meals, I feel as hearty as I have ever been, my dear. Torm willing, I may even live to see one more decade than I deserve.~
-== BC0AUR25 ~That's... that's good. I trust in your strength, of course, but since growing up in Lantan, I've seen how quickly humans can change... and it always feels like they're gone before I know it.~
-== BKELDO25 ~It is always difficult to distinguish with the long-lived ones, but as I recall, you are but over fifty summers, are you not? If that is so, then I am still your elder, if only by a few years.~
-== BC0AUR25 ~Hehe. It's hard to accept that we've almost lived as long as each other, sir... somehow, it feels like my experiences of the world are so meager compared to yours. I couldn't dare to call myself your equal.~
-== BKELDO25 ~But you are, and I view you as such. We have both come so far on this journey together. It would be unjust to consider you any less.~
+== BKELDO25 ~不比以往更糟，奥拉。你在我身上看出什么相反的状况了吗？~
+== BC0AUR25 ~不是那个。我只是想，这一路很长，你打了这么久，你的身体……唉，怎么说都不好听。~
+== BKELDO25 ~哈！我还在想，什么时候会有人拿我的年纪说事。你担心的是这个，对吧？~
+== BC0AUR25 ~是的，先生。~
+== BKELDO25 ~凭我多年的训练、众神的恩慈，当然还有你定期的检查和细心准备的饭菜，我觉得自己跟以往一样硬朗，亲爱的。若托姆愿意，我也许还能多活十年，超过我应得的。~
+== BC0AUR25 ~那……那很好。我当然信你的力气，可自从在兰坦长大，我见过人类变化得多快……总觉得他们在我还没反应过来时就没了。~
+== BKELDO25 ~跟长寿的族类总是难以分辨，可我记得，你不过五十多个夏天，不是吗？若如此，那我仍是你的长辈，哪怕只长几岁。~
+== BC0AUR25 ~嘿嘿。很难接受我们活得差不多长了，先生……不知怎的，总觉得我对这世界的经历跟你比太单薄。我不敢自称与你比肩。~
+== BKELDO25 ~可你就是，我就是这样看你的。这一路上我们走得一样远。把你当作低一等，那才不公。~
 EXIT
 
 // Korgan
@@ -339,14 +339,14 @@ Range("C0Aura",15)
 !StateCheck("Korgan",CD_STATE_NOTVALID)
 !StateCheck("C0Aura",CD_STATE_NOTVALID)
 Global("C0AuraKorganToB1","GLOBAL",0)~ THEN BKORGA25 C0AuraKorganToB1
-~Ye be stronger, lass. Even I be feelin' less the need to protect ye in our battles. But ye need to cull yer contempt fer bloodshed, if ye wishes to survive.~ [C0BLANK]
+~你变强了，丫头。连我在战斗里都觉得没那么需要护着你了。可你要想活下去，就得压住你对流血的厌恶。~ [C0BLANK]
 DO ~SetGlobal("C0AuraKorganToB1","GLOBAL",1)~
-== BC0AUR25 ~I... I can't do that, Korgan. I appreciate what you do for me, but I can't fight like you do. It'll be a betrayal of everything I stand for.~
-== BKORGA25 ~Better a stain on yer morals than losin' yer clever head to a wretch's blade, no?~
-== BC0AUR25 ~I don't want to die, but...~
-== BKORGA25 ~This be a cruel world. Yer kind nature be unsuited fer it, an' I cannae be around to make up for yer shortcomin' forever. Best ye learn the hard ways, afore it be too late.~
-== BC0AUR25 ~Korgan, if I might ask... if you disapprove of my ways so greatly... why do you care what happens to me?~
-== BKORGA25 ~Hnh. Perhaps I be growin' old an' sentimental. I've ne'er had a care fer cuttin' down any fool, but... still, it'd be a shame to see ye die.~
+== BC0AUR25 ~我……我做不到，库尔甘。我感激你为我做的，可我没法像你那样打。那会背弃我信守的一切。~
+== BKORGA25 ~在道德上留个污点，总比让恶棍的刀削掉你聪明的脑袋强，不是吗？~
+== BC0AUR25 ~我不想死，可是……~
+== BKORGA25 ~这世界残酷。你这种好心肠不适合它，而我不可能永远在旁边弥补你的短处。趁还来得及，最好学会硬的那一套。~
+== BC0AUR25 ~库尔甘，我能问一句……你既然这么不赞成我的做法……为什么还在意我会怎样？~
+== BKORGA25 ~哼。也许我老了、变得多愁善感了。我从来不在乎砍倒哪个蠢货，可是……看到你死，总还是可惜。~
 EXIT
 
 // Mazzy
@@ -359,19 +359,19 @@ Range("C0Aura",15)
 !StateCheck("Mazzy",CD_STATE_NOTVALID)
 !StateCheck("C0Aura",CD_STATE_NOTVALID)
 Global("C0AuraMazzyToB1","GLOBAL",0)~ THEN BC0AUR25 C0AuraMazzyToB1
-~*sigh*~ [C0BLANK]
+~*叹气*~ [C0BLANK]
 DO ~SetGlobal("C0AuraMazzyToB1","GLOBAL",1)~
-== BMAZZY25 ~What is it, Aura? Is your arm still aching?~
-== BC0AUR25 ~No... well, yes. It is, but that wasn't what I was thinking about.~
-== BMAZZY25 ~Perhaps I pushed you a little too hard during our training sessions. If there is anything on your mind, I am happy to listen as always.~
-== BC0AUR25 ~I just... well, I'm thankful that I have you to help me toughen up, Mazzy. First it was the bow, now the sword. I just... can't imagine myself catching up, with the kinds of threats that we face nowadays.~
-== BMAZZY25 ~There are more ways to assist the group than force of arms, Aura. You should know that more than anyone. Everyone benefits from your support greatly, and I personally would not exchange you for any other.~
-== BC0AUR25 ~Heh... you know I just want to keep everyone safe. One day, I hope fighting won't be an expectation anymore... but I'll always have to be ready for it.~
-== BC0AUR25 IF ~PartyHasItem("c0auss01")~ THEN ~Ever since I started carrying my uncle's sword, I think I've started to understand why, despite never choosing to fight, he's always kept it by his side. I don't want to use it... but there will be times when I must. I can't avoid that.~
-== BMAZZY25 ~Indeed, even the most peaceful among us will have to face battle for the sake of what we value. Conflict is a bitter affair, but if it grants peace to those who hold dear, then it is just.~
-== BC0AUR25 ~Hehe... you really do remind me of Juno. She's the type to step up and do the difficult things so that I... all of us, her younger siblings, wouldn't have to. No matter how much it wears on her, she'll never give up on her duty.~
-== BMAZZY25 ~I am a servant of Arvoreen, and if fate smiles upon me, then perhaps eventually a knight as well. I will continue the fight against evil... but even I cannot deny I yearn for a life of peace one day, surrounded by my loved ones.~
-== BC0AUR25 ~You'll have it, Mazzy. I will, too. We'll set all the things right that we can, and then we'll be able to finally rest.~
+== BMAZZY25 ~怎么了，奥拉？你胳膊还疼吗？~
+== BC0AUR25 ~不……嗯，是的。还疼，可我想的不是这个。~
+== BMAZZY25 ~也许我在训练时逼你逼得太紧了。你心里有什么事，我随时乐意听。~
+== BC0AUR25 ~我只是……嗯，我很感激有你帮我变硬气，玛兹。先是弓，现在是剑。我只是……想到如今面对的那些威胁，我实在想象不出自己能赶上。~
+== BMAZZY25 ~帮助队伍的方式不止靠武力，奥拉。这一点你比谁都该清楚。所有人都大受你的支援之益，我个人绝不愿拿你换任何人。~
+== BC0AUR25 ~嘿……你知道我只想保住大家平安。有一天，我希望战斗不再是必须……可我得永远准备好。~
+== BC0AUR25 IF ~PartyHasItem("c0auss01")~ THEN ~自从我开始带着叔叔的剑，我想我开始明白，尽管他从不选择战斗，为什么总把它带在身边。我不想用它……可有些时候我不得不用。这躲不开。~
+== BMAZZY25 ~正是，连我们中最平和的人，也会为了所珍视之物面对战斗。冲突是苦事，可若它能为亲爱之人带来安宁，那就是正当的。~
+== BC0AUR25 ~嘿嘿……你真让我想起朱诺。她就是那种会站出来扛下难事的人，好让我……让我们所有人，她的弟弟妹妹们，不必去做。不管多磨人，她从不放弃职责。~
+== BMAZZY25 ~我是阿尔沃林的仆从，若命运眷顾，也许终有一天也是骑士。我会继续与邪恶作战……可连我也不能否认，我渴望有一天能在亲人围绕中过上安宁的日子。~
+== BC0AUR25 ~你会有的，玛兹。我也会。我们把能纠正的事都纠正过来，然后终于能安歇。~
 EXIT
 
 // Minsc
@@ -384,14 +384,14 @@ Range("C0Aura",15)
 !StateCheck("Minsc",CD_STATE_NOTVALID)
 !StateCheck("C0Aura",CD_STATE_NOTVALID)
 Global("C0AuraMinscToB1","GLOBAL",0)~ THEN BC0AUR25 C0AuraMinscToB1
-~Minsc, look! It's an origami sculpture of Boo!~ [C0BLANK]
+~明斯克，看！这是布布的折纸雕像！~ [C0BLANK]
 DO ~SetGlobal("C0AuraMinscToB1","GLOBAL",1)~
-== BMINSC25 ~What now? Ori... ga... is that a sort of food Minsc has not heard of?~
-== BC0AUR25 ~No, it's a paper folding! They practice it in the East to create all sorts of art. This one's for you!~
-== BMINSC25 ~Heh heh, this little doll of paper does resemble Boo in all his might. Even its size is a perfect match. Minsc approves!~
-== BC0AUR25 ~I'm glad you like it. Let me know if Boo does, too!~
-== BMINSC25 ~Eh, but... Aura, you know... Boo is fond of paper, but not in the gentle way. He likes to tear it up into a nest. Or for wearing out his teeth. Sometimes... he leaves his—~
-== BC0AUR25 ~Eep, too much information, Minsc! I should've thought about that. I'll take it back for now, until I can figure out a hamster-proof protective enchantment first!~
+== BMINSC25 ~什么？奥里……嘎……米？那是明斯克没听过的一种食物吗？~
+== BC0AUR25 ~不，是折纸！东方人练这个来做各种艺术。这个是给你的！~
+== BMINSC25 ~嘿嘿，这纸做的小玩意儿真有布布威风的样子。连大小都正好。明斯克认可！~
+== BC0AUR25 ~你喜欢就好。布布要是也喜欢，告诉我！~
+== BMINSC25 ~呃，可是……奥拉，你知道……布布喜欢纸，可不是温柔地喜欢。它喜欢撕成窝。或者磨牙。有时候……它留下它的——~
+== BC0AUR25 ~呀，信息太多了，明斯克！我该想到的。我先收回来，等我想出防仓鼠的保护法术再说！~
 EXIT
 
 CHAIN
@@ -402,15 +402,15 @@ Range("C0Aura",15)
 !StateCheck("Minsc",CD_STATE_NOTVALID)
 !StateCheck("C0Aura",CD_STATE_NOTVALID)
 Global("C0AuraMinscToB2","GLOBAL",0)~ THEN BMINSC25 C0AuraMinscToB2
-~Aura, Minsc and Boo are always awed by your endless knowledge. Sometimes we forget you are not a wise witch of Rashemen.~ [C0BLANK]
+~奥拉，明斯克和布布总是惊叹于你无穷的学识。有时我们都忘了你不是拉斯梅的智慧女巫。~ [C0BLANK]
 DO ~SetGlobal("C0AuraMinscToB2","GLOBAL",1)~
-== BC0AUR25 ~Hehe, I can't think of a higher praise than to be compared to a wychlaran of your homeland, Minsc. Do you think they'd like me if we met?~
-== BMINSC25 ~Minsc thinks they would very much like you. Our witches respect nothing more than knowledge and kindness, and you are full of both!~
-== BC0AUR25 ~I've been thinking of finishing my exploration of the world before I go home. Maybe I'll go to Rashemen... I'd like to meet the witches, the telthors... maybe I might even be able to see some of the ancient gods.~
-== BMINSC25 ~Ah, if you intend to come, Minsc would usually advise travel by ship. But Boo reminded me that Aura does not enjoy sea travel... Minsc suggests going through the Great Dale. It is longer, but safer. And Minsc likes the scenery.~
-== BC0AUR25 ~Alright.~
-== BMINSC25 ~And do not forget to see us at the Ice Dragon Berserker Lodge! We will greet you with a great feast, and show you our trials of strength and hardiness that toughened each of us into men! You will have the body to match your mind within a week of training!~
-== BC0AUR25 ~Er... somehow, Minsc, I don't think that's possible. But I'll be sure to visit, just to say hello to a friend.~
+== BC0AUR25 ~嘿嘿，被比作你家乡的维赫兰，我想不出更高的赞美了，明斯克。你觉得我们若见面，她们会喜欢我吗？~
+== BMINSC25 ~明斯克觉得她们会非常喜欢你。我们的女巫最敬重的就是知识与善心，而你两者都满！~
+== BC0AUR25 ~我一直在想，回家前先把这世界探完。也许我会去拉斯梅……我想见见女巫、特尔索……也许还能见到些古老的神。~
+== BMINSC25 ~啊，你若打算来，明斯克通常建议坐船。可布布提醒我，奥拉不喜欢海上旅行……明斯克建议走大谷道。路更长，可更安全。而且明斯克喜欢那儿的风景。~
+== BC0AUR25 ~好。~
+== BMINSC25 ~别忘了到冰龙狂战士会馆来看我们！我们会用盛大的宴席迎你，给你看我们磨炼每个人成汉子的力量与耐力的试炼！训练一周，你的身体就能配上你的头脑！~
+== BC0AUR25 ~呃……不知怎的，明斯克，我觉得那不可能。可我一定去拜访，就为了跟朋友打个招呼。~
 EXIT
 
 // Nalia
@@ -423,18 +423,18 @@ Range("C0Aura",15)
 !StateCheck("Nalia",CD_STATE_NOTVALID)
 !StateCheck("C0Aura",CD_STATE_NOTVALID)
 Global("C0AuraNaliaToB1","GLOBAL",0)~ THEN BNALIA25 C0AuraNaliaToB1
-~Aura, I've been thinking. Would you be willing to build a mutually beneficial connection between Lantan and my family, once all this has settled?~ [C0BLANK]
+~奥拉，我一直在想。等这一切安定下来，你愿不愿意在兰坦和我家族之间建立互利的往来？~ [C0BLANK]
 DO ~SetGlobal("C0AuraNaliaToB1","GLOBAL",1)~
-== BC0AUR25 ~I'm not on the Ayrorch, Nalia... I'd love to see it happen, but it's not my privilege to decide things on my own.~
-== BNALIA25 ~Surely even your people have heard of our exploits by now. I have little doubt that once you return home, you will be buried under the masses of Lantanna celebrating your name.~
-== BC0AUR25 ~They wouldn't be the sort to do that! ...Would they really? I don't know...~
-== BNALIA25 ~Regardless, I believe there's potential for Amn, or even other parts of the realms, to be made a better place with our talents. You have the knowledge to make great things, and I have the authority to make sure they are used responsibly.~
-== BC0AUR25 ~Well... you might have a point...~
-== BNALIA25 ~I know you have the same interest in helping people as I do. That's never changed, but we can always aim for higher. And the risks that come with such ambitions can be mitigated as long as we work together.~
-== BC0AUR25 ~But, Nalia, I don't believe in deciding for others what's right.~
-== BNALIA25 ~When did I imply—~
-== BC0AUR25 ~No, I'm sure you didn't. Not on purpose. I just... need time to consider it. I believe you'd only wish the best for others, Nalia. But like I said, I'm not an authority, and I don't want to be. I can't do more than say it's possible.~
-== BNALIA25 ~That's more than enough. I'm not demanding anything from you, Aura. I just want you to consider that such a path forwards is possible, if you trust me.~
+== BC0AUR25 ~我不在艾罗奇议会里，娜莉亚……我很想看到这事成真，可我没有自行决定的特权。~
+== BNALIA25 ~到如今，连你的人都该听过我们的事迹了吧。我毫不怀疑，你一回家，就会被成群的兰坦人围着庆祝你的名字。~
+== BC0AUR25 ~他们不会是那种人！……他们真会吗？我不知道……~
+== BNALIA25 ~无论如何，我相信凭我们的才能，能让安姆、甚至诸国度其他地方变得更好。你有造出了不起之物的知识，我有确保它们被负责任使用的权柄。~
+== BC0AUR25 ~嗯……你也许说得有道理……~
+== BNALIA25 ~我知道你跟我一样想帮人。这一点从未变过，可我们总能往更高处走。而只要我们一起做，这种野心带来的风险就能减轻。~
+== BC0AUR25 ~可是，娜莉亚，我不信该替别人决定什么是对的。~
+== BNALIA25 ~我什么时候暗示过——~
+== BC0AUR25 ~不，我肯定你没有。不是故意的。我只是……需要时间考虑。我相信你只愿别人最好，娜莉亚。可我说过，我不是权威，也不想当。我只能说这有可能。~
+== BNALIA25 ~那已经足够了。我不是在要求你什么，奥拉。我只想让你考虑，若你信我，这样的前路是可能的。~
 EXIT
 
 // Neera
@@ -447,17 +447,17 @@ Range("C0Aura",15)
 !StateCheck("Neera",CD_STATE_NOTVALID)
 !StateCheck("C0Aura",CD_STATE_NOTVALID)
 Global("C0AuraNeeraToB1","GLOBAL",0)~ THEN BNEERA25 C0AuraNeeraToB1
-~Hey, Aura. Watch, a light spell completely under control, no surge! Not even a ripple!~ [C0BLANK]
+~嘿，奥拉。看，一个完全受控的光亮术，没有涌动！连一丝波纹都没有！~ [C0BLANK]
 DO ~SetGlobal("C0AuraNeeraToB1","GLOBAL",1)~
-== BC0AUR25 ~So I see! I remember when even something so small made me afraid of it turning red and then exploding into a fireball.~
-== BNEERA25 ~Isn't it funny how much my magic's changed in such a short time? Even the surges that happen aren't so bad anymore.~
-== BC0AUR25 ~You're not suddenly going to say you miss the bad ones, are you?~
-== BNEERA25 ~No. Hells no. I could do with more flowers, less terrible disasters. Though I can't rule out that they'll still happen now and again...~
-== BC0AUR25 ~I'm... going to take a few steps back just in case.~
-== BNEERA25 ~I was kidding! K–I–D–D–I–N–G! Sheesh, don't you trust me by now?~
-== BC0AUR25 ~Of course I trust you personally, Neera. But sometimes the worst situation happens when you try to help, don't you already know that?~
-== BNEERA25 ~Oh, you brat! I thought you were nice! I mean, you're not wrong, but still, ouch!~
-== BC0AUR25 ~Hehe.~
+== BC0AUR25 ~我看到了！我记得以前连这么小的东西都让我怕它会变红、然后炸成火球。~
+== BNEERA25 ~我的魔法在这么短时间内变得这么多，不觉得有趣吗？连发生的涌动都没那么糟了。~
+== BC0AUR25 ~你不会突然说你怀念那些坏的吧？~
+== BNEERA25 ~不。绝对不。我宁愿多些花，少些可怕灾难。虽然我不能排除它们还会时不时发生……~
+== BC0AUR25 ~我……还是退后几步以防万一。~
+== BNEERA25 ~我开玩笑的！开——玩——笑——的！真是的，你到现在还不信我吗？~
+== BC0AUR25 ~我当然信你这个人，妮拉。可有时候最糟的情况，恰恰发生在你想帮忙的时候，你还不明白吗？~
+== BNEERA25 ~哦，你这坏蛋！我还以为你人很好！我是说，你没说错，可还是，好疼！~
+== BC0AUR25 ~嘿嘿。~
 EXIT
 
 // Rasaad
@@ -470,16 +470,16 @@ Range("C0Aura",15)
 !StateCheck("Rasaad",CD_STATE_NOTVALID)
 !StateCheck("C0Aura",CD_STATE_NOTVALID)
 Global("C0AuraRasaadToB1","GLOBAL",0)~ THEN BC0AUR25 C0AuraRasaadToB1
-~Rasaad, how is my posture looking nowadays?~ [C0BLANK]
+~拉沙德，我现在的姿势怎么样？~ [C0BLANK]
 DO ~SetGlobal("C0AuraRasaadToB1","GLOBAL",1)~
-== BRASAA25 ~Much improved as of late, without a doubt. You are lighter on your feet, Aura. And even more sprightly than usual.~
-== BC0AUR25 ~Hehe, I guess I have you to thank to teach me a thing or two about pushing myself. I think I was just making excuses in the past.~
-== BRASAA25 ~The path to self-perfection has many entrances. It is never too late to improve, and you have in many ways.~
-== BC0AUR25 ~I'll probably never reach your level of discipline. But I think I can relate to your strength a little now. I've gotten more confidence than I could've ever imagined.~
-== BRASAA25 ~That, I cannot commend only my own advice for. The influence of those around us affects who we are... and our own efforts, of course, matter more than anything.~
-== BC0AUR25 ~Mhm.~
-== BRASAA25 ~Perhaps you may be willing to exchange a few strikes? I will go easy on you.~
-== BC0AUR25 ~Ahaha... that might be a little too much as I am right now, Rasaad. I'll think about taking you up on that offer if I grow a couple surprise inches.~
+== BRASAA25 ~近来大有进步，毫无疑问。你脚步更轻了，奥拉。也比平时更轻捷。~
+== BC0AUR25 ~嘿嘿，我想这得谢你教我一点怎么逼自己。我想我过去只是在找借口。~
+== BRASAA25 ~通往自我完善的路有许多入口。改进永远不晚，而你在许多方面都做到了。~
+== BC0AUR25 ~我大概永远到不了你那样的自律。可我想我现在能稍微体会你的力量了。我得到的自信超乎想象。~
+== BRASAA25 ~这我可不能只归功于我的建议。身边人的影响塑造了我们是谁……当然，我们自己的努力比什么都重要。~
+== BC0AUR25 ~嗯。~
+== BRASAA25 ~也许你愿意交换几招？我会对你手下留情。~
+== BC0AUR25 ~啊哈哈……以我现在的样子，那也许太过了，拉沙德。要是我突然长高几寸，我会考虑接受。~
 EXIT
 
 // Sarevok
@@ -493,21 +493,21 @@ Range("C0Aura",15)
 !StateCheck("C0Aura",CD_STATE_NOTVALID)
 Alignment("Sarevok",MASK_EVIL)
 Global("C0AuraSarevok1","GLOBAL",0)~ THEN BSAREV25 C0AuraSarevok1
-~What compels you to glare upon me with such contempt, gnome? I had thought such fire above your nerve, small and meager as you are. Speak, if you dare.~ [C0BLANK]
+~是什么让你用这般轻蔑的眼神瞪我，侏儒？我本以为你小小的身量里没这份胆气。敢说就说。~ [C0BLANK]
 DO ~SetGlobal("C0AuraSarevok1","GLOBAL",1)~
-== BC0AUR25 ~I'm not afraid to speak, Sarevok, but there's nothing that we need to say to each other.~
-== BSAREV25 ~Oh, I beg to differ. One does not simply ignore such a piercing gaze, as though intending to kill. Have you words for your contempt towards me? Get them over with, while I still care to listen.~
-== BC0AUR25 ~Fine, though I doubt you'll like what I have to say. I'm merely trying to contemplate what Tamoko-san saw that led her to follow you.~
-== BSAREV25 ~You are either very foolish or suicidal to mention that name in my presence, girl. What would you presume to know of her?~
-== BC0AUR25 IF ~Global("C0AuraKnowsBG1","GLOBAL",1)~ THEN ~<CHARNAME> and I met her. On the day that we killed you. I'll never forget it... her standing before us, alone, eyes already dead, resigned to the end.~
-== BC0AUR25 IF ~!Global("C0AuraKnowsBG1","GLOBAL",1)~ THEN ~I wasn't a part of what happened beneath Baldur's Gate. But, whether by fate or fortune, I met her... even then, I already knew she was resigned to death.~
-== BC0AUR25 ~Regardless of the monster that you made yourself, Sarevok, I want to accept a possibility that there was something human that she saw. How could you have done that to her? What was she to you?~
-== BSAREV25 ~Did you ask her what her desire was? Of whether she had any regrets for the path she walked? Do you know anything of her, save for her name and what blood ties she once held?~
-== BC0AUR25 ~I...~
-== BSAREV25 ~You do not, fool. Your understanding of that woman is clouded by preconceptions born of ignorance. Whatever explanation you believe you are owed, you shall receive no such satisfaction from me.~
-== BC0AUR25 ~That's all the consideration you have? Nothing on what she would have wanted?~
-== BSAREV25 ~The thoughts of the dead mean as much to us as the dust flying in the wind. She is gone. Nothing else matters.~
-== BC0AUR25 ~No. I refuse to accept that. No matter what sins she was bound by, I still believe she retained her soul. Not like the one you've stolen.~
+== BC0AUR25 ~我不怕开口，萨雷沃克，可我们之间没什么好说的。~
+== BSAREV25 ~哦，我不敢苟同。没人会无视这样刺人的、仿佛要取人性命的目光。你对我的轻蔑有话说吗？趁我还愿意听，说完它。~
+== BC0AUR25 ~好，不过我怀疑你不会喜欢我要说的。我只是在想，塔摩科小姐到底看见了什么，才跟着你。~
+== BSAREV25 ~你若不是极蠢，就是想死，才在我面前提那个名字，丫头。你凭什么自以为了解她？~
+== BC0AUR25 IF ~Global("C0AuraKnowsBG1","GLOBAL",1)~ THEN ~我和<CHARNAME>见过她。就在我们杀你的那天。我永远忘不了……她独自站在我们面前，眼神已经死了，认命于终结。~
+== BC0AUR25 IF ~!Global("C0AuraKnowsBG1","GLOBAL",1)~ THEN ~博德之门地底发生的事，我没参与。可不管是出于命运还是运气，我遇见了她……即便那时，我就知道她已经认命于死。~
+== BC0AUR25 ~不管你把自己弄成了什么怪物，萨雷沃克，我愿意接受一种可能：她看见了某种人性的东西。你怎么能那样对她？她对你是什么？~
+== BSAREV25 ~你问过她想要什么吗？问过她对自己走的路有没有悔意吗？除了她的名字和她曾有的血缘，你还知道她什么？~
+== BC0AUR25 ~我……~
+== BSAREV25 ~你不知道，蠢货。你对那女人的理解，被无知所生的成见蒙住了。不管你自以为该得到什么解释，都别想从我这儿得到满足。~
+== BC0AUR25 ~你就只有这点体谅？对她想要什么，一个字都没有？~
+== BSAREV25 ~死者的念头对我们来说，跟风中飞扬的尘土一样。她已不在。别的都不重要。~
+== BC0AUR25 ~不。我拒绝接受。不管她被什么罪绑住，我仍相信她保有自己的灵魂。不像你偷来的这个。~
 EXIT
 
 CHAIN
@@ -519,22 +519,22 @@ Range("C0Aura",15)
 !StateCheck("C0Aura",CD_STATE_NOTVALID)
 Alignment("Sarevok",MASK_EVIL)
 Global("C0AuraSarevok1","GLOBAL",1)~ THEN BC0AUR25 C0AuraSarevok2
-~I don't believe you, Sarevok.~ [C0BLANK]
+~我不信你，萨雷沃克。~ [C0BLANK]
 DO ~SetGlobal("C0AuraSarevok1","GLOBAL",2)~
-== BSAREV25 ~You, and likely every other pawn within <CHARNAME>'s company. Save your breath until you think of something that might truly surprise me.~
-== BC0AUR25 ~No, I don't mean that. I won't believe that you've never cared about her. I cannot believe that her life was all for nothing, thrown away for an absolute lie.~
-== BSAREV25 ~Has it not occurred to you that her sins throughout her life were no fewer than mine?~
-== BC0AUR25 ~Don't you dare—~
-== BSAREV25 ~I do. Know this, gnome. That woman followed me, knowing the costs, the inevitable corruption that would taint her soul... and in the end, despite everything, she willingly offered her life to my cause.~
-== BSAREV25 ~If there was doubt within her heart during her final moments, it was because she deluded herself to alleviate her own guilt.~
-== BC0AUR25 ~She... she could have returned to the right path. No matter how darkly her soul was stained in blood, still, that is what her kin... what she would have wanted. I owed a debt, but I failed... because of you, Sarevok.~
-== BSAREV25 ~Do you expect remorse? The atrocities of my past life are many, girl. One more shall hardly serve as any greater of a burden. Blame all the evils of the world upon me, if that provides any measure of comfort. I care not a whit.~
-== BC0AUR25 ~...Akuji mi ni tomaru.~
-== BSAREV25 ~All my sins will cling to my body, will they?~
-== BC0AUR25 ~You—~
-== BSAREV25 ~A hollow warning for one such as I. My body became dust with my first defeat, and this stolen life is my proof that there will be no karma to damn me. Do not expect me to be threatened so easily, foolish whelp.~
-== BC0AUR25 ~...~
-== BSAREV25 ~Now begone, and pester one who might care with your admonishments.~
+== BSAREV25 ~你，以及<CHARNAME>一伙里大概每一个棋子。省省你的气力，等你想出真能让我意外的东西再说。~
+== BC0AUR25 ~不，我不是那个意思。我不信你从没在意过她。我无法相信她的一生全无意义，为一个彻头彻尾的谎言白白扔掉。~
+== BSAREV25 ~你就没想过，她一生的罪不比我少吗？~
+== BC0AUR25 ~你敢——~
+== BSAREV25 ~我敢。记住这点，侏儒。那女人跟着我，明知代价，明知那必将玷污她灵魂的堕落……而到最后，尽管一切，她仍自愿为我的事业献出性命。~
+== BSAREV25 ~若她临终时心中有疑虑，那是因为她自欺以减轻自己的罪咎。~
+== BC0AUR25 ~她……她本可以回到正途。不管她的灵魂被血染得多黑，那仍是她的族人……仍是她想要的。我欠着一笔债，可我失败了……因为你，萨雷沃克。~
+== BSAREV25 ~你指望我悔恨？我前生的暴行多得是，丫头。再多一桩也难成更大的负担。若那能给你几分安慰，就把世间一切恶都算在我头上。我一点不在乎。~
+== BC0AUR25 ~……恶业缠身。~
+== BSAREV25 ~我所有的罪都会缠着我的身体，是吗？~
+== BC0AUR25 ~你——~
+== BSAREV25 ~对像我这样的人，这警告空洞得很。我第一次败亡时身体已成尘土，而这偷来的生命正是没有业报来罚我的明证。别以为这么容易就能吓住我，愚蠢的崽子。~
+== BC0AUR25 ~……~
+== BSAREV25 ~滚吧，去拿你的训诫烦那些也许会在意的人。~
 EXIT
 
 CHAIN
@@ -548,25 +548,25 @@ OR(2)
 !Alignment("Sarevok",MASK_EVIL)
 Global("LS#SarevokRomancePath","GLOBAL",1)
 Global("C0AuraSarevokGood1","GLOBAL",0)~ THEN BC0AUR25 C0AuraSarevokFinal1
-~...~ [C0BLANK]
+~……~ [C0BLANK]
 DO ~SetGlobal("C0AuraSarevokGood1","GLOBAL",1)~
-== BSAREV25 ~Praying, girl? I did not think you the sort, given I have never heard any god's name from your lips.~
-== BC0AUR25 ~I don't pray to any single god, and certainly not for myself. This is for those I've lost on my journey... you may not care about the memory of the fallen, but I do.~
-== BSAREV25 ~It will serve as little consolation for the untimely fallen, if they can even hear you.~
-== BC0AUR25 ~They might not, but a little faith is better than nothing. Even the knowledge of not being forgotten can bring some peace.~
-== BSAREV25 ~Hmph. A token effort to alleviate oneself of guilt, no more. You are more like her than you think, in that respect.~
-== BC0AUR25 ~R—really...?~
-== BSAREV25 ~Bah... if nothing else, the quiet company is preferable to the alternative choices. I will join you awhile.~
-== BC0AUR25 ~You'll—?~
-== BSAREV25 ~Though if you believe my presence taints your little ceremony, I will leave.~
-== BC0AUR25 ~No, no... I didn't expect it, but maybe this isn't a bad thing. I know she'd be happy to hear it.~
-== BSAREV25 ~...~
-== BC0AUR25 ~I don't think I've ever seen you like this before, Sarevok.~
-== BSAREV25 ~And what do you believe you see in me?~
-== BC0AUR25 ~Eyes closed, sitting, with your face unclouded by ambition... you almost seem at peace for the first time.~
-== BSAREV25 ~Is that so?~
-= ~...~
-= ~Aye. Perhaps.~
+== BSAREV25 ~在祈祷，丫头？我没想到你是这种人，因为我从没在你嘴里听到过任何神的名号。~
+== BC0AUR25 ~我不向任何单一的神祈祷，也肯定不为我自己。这是为我旅途中失去的人……你也许不在乎逝者的记忆，可我在乎。~
+== BSAREV25 ~对过早死去的人，这安慰有限，若他们听得见的话。~
+== BC0AUR25 ~他们也许听不见，可一点信念总比没有强。哪怕只是知道没被遗忘，也能带来些安宁。~
+== BSAREV25 ~哼。不过是做做样子减轻自己的罪咎，没别的。这一点上，你比她你自己以为的更像她。~
+== BC0AUR25 ~真——真的……？~
+== BSAREV25 ~啐……至少，安静的陪伴比别的选择好。我陪你一会儿。~
+== BC0AUR25 ~你会——？~
+== BSAREV25 ~可你若觉得我的存在玷污了你这小小的仪式，我就走。~
+== BC0AUR25 ~不，不……我没料到，可也许这不是坏事。我知道她听到会高兴的。~
+== BSAREV25 ~……~
+== BC0AUR25 ~我想我从没见过你这副样子，萨雷沃克。~
+== BSAREV25 ~那你觉得在我身上看见了什么？~
+== BC0AUR25 ~闭着眼，坐着，脸上不带野心……你几乎是第一次显出了安宁。~
+== BSAREV25 ~是吗？~
+= ~……~
+= ~嗯。也许是。~
 EXIT
 
 CHAIN
@@ -580,15 +580,15 @@ OR(2)
 !Alignment("Sarevok",MASK_EVIL)
 Global("LS#SarevokRomancePath","GLOBAL",1)
 Global("C0AuraSarevokGood1","GLOBAL",1)~ THEN BC0AUR25 C0AuraSarevokFinal2
-~Sarevok...~ [C0BLANK]
+~萨雷沃克……~ [C0BLANK]
 DO ~SetGlobal("C0AuraSarevokGood1","GLOBAL",2)~
-== BSAREV25 ~What do you want now, gnome?~
-== BC0AUR25 ~We may never truly become friends, and what you've done can't be forgotten... but I believe in forgiveness, if you truly seek to earn it.~
-== BSAREV25 ~...It is far, far too late for that, even if your forgiveness was of any worth.~
-== BC0AUR25 ~Maybe. But if we gave up simply because we think it's "too late"... we'll only be tortured by regrets for what time we have remaining.~
-== BSAREV25 ~And you believe that I, Sarevok, the madman and scourge of the Sword Coast, might feel something resembling 'regret'?~
-== BC0AUR25 ~Before, I would have never considered it. Now... I want to at least have a bit of faith. I know there are those would want that... even if they're no longer with us.~
-== BSAREV25 ~You speak as though you hardly believe your own words. However... such an offer may be more than I deserve. I will consider what you have said... no more or less.~
+== BSAREV25 ~你又想要什么，侏儒？~
+== BC0AUR25 ~我们也许永远不会真成为朋友，你做的事也忘不掉……可我相信宽恕，只要你真想去赢取它。~
+== BSAREV25 ~……那早就太迟了，就算你的宽恕值什么也一样。~
+== BC0AUR25 ~也许吧。可若我们只因为觉得“太迟”就放弃……那剩下这点时间，也只会被悔恨折磨。~
+== BSAREV25 ~你相信就凭我，萨雷沃克，这个疯子、剑湾的祸害，也会觉出点像“悔恨”的东西？~
+== BC0AUR25 ~以前我绝不会想这个。现在……我至少想留一点信念。我知道有人会希望如此……哪怕他们已经不在了。~
+== BSAREV25 ~你说这话，好像连你自己都不太信。不过……这样的提议也许超过了我应得的。我会想想你说的话……不多不少。~
 EXIT
 
 // Valygar
@@ -601,16 +601,16 @@ Range("C0Aura",15)
 !StateCheck("Valygar",CD_STATE_NOTVALID)
 !StateCheck("C0Aura",CD_STATE_NOTVALID)
 Global("C0AuraValygarToB1","GLOBAL",0)~ THEN BVALYG25 C0AuraValygarToB1
-~Aura?~ [C0BLANK]
+~奥拉？~ [C0BLANK]
 DO ~SetGlobal("C0AuraValygarToB1","GLOBAL",1)~
-== BC0AUR25 ~Yep?~
-== BVALYG25 ~If I may take a moment... I hope you have the chance to see your dreams become reality one day.~
-== BC0AUR25 ~Valygar... hehe, you know, I never thought that I'd hear that you say you believed in me.~
-== BVALYG25 ~This journey has taught me many things. I have understood good and evil in many forms, and seen things I once believed impossible. If there is anyone I would trust to make nothing but good from magic, or any other talent... that person would have to be you.~
-== BC0AUR25 ~That's... coming from you, that might be the biggest vote of confidence yet. I swear to you, I'll do my best not to let you down. Can you ask something of you, too?~
-== BVALYG25 ~Go ahead.~
-== BC0AUR25 ~I'm not asking for much. Just have a bit more faith. If my actions can convince someone who feared magic to see the good in it... that'll give me more incentive than anything.~
-== BVALYG25 ~*sigh* That is quite the demand. But I'll do my best.~
+== BC0AUR25 ~嗯？~
+== BVALYG25 ~若可以给我一点时间……我希望你有一天能看到梦想成真。~
+== BC0AUR25 ~瓦里格……嘿嘿，你知道吗，我从没想到会听到你说你信我。~
+== BVALYG25 ~这段旅途教了我许多。我理解了善与恶的许多形态，也见过我曾以为不可能的事。若有人我愿信任、只把善从魔法或别的才能中做出来……那人一定是你。~
+== BC0AUR25 ~这话……出自你口，也许是我得到过最大的信任票。我向你发誓，我会尽力不让你失望。也能对你提个要求吗？~
+== BVALYG25 ~去吧。~
+== BC0AUR25 ~我要求不多。只多一点信念。若我的所作所为能让一个怕魔法的人看到其中的善……那给我的动力超越一切。~
+== BVALYG25 ~*叹气* 这要求不小。可我会尽力。~
 EXIT
 
 // Viconia
@@ -623,14 +623,14 @@ Range("C0Aura",15)
 !StateCheck("Viconia",CD_STATE_NOTVALID)
 !StateCheck("C0Aura",CD_STATE_NOTVALID)
 Global("C0AuraViconiaToB1","GLOBAL",0)~ THEN BVICON25 C0AuraViconiaToB1
-~I must confess, Aura... beneath your naïveté and excessively saccharine demeanor, you are brimming with potential.~ [C0BLANK]
+~我得承认，奥拉……在你那副天真和过分甜腻的样子底下，你满溢着潜力。~ [C0BLANK]
 DO ~SetGlobal("C0AuraViconiaToB1","GLOBAL",1)~
-== BC0AUR25 ~Thank you, Viconia. There... isn't any underlying criticism, is there?~
-== BVICON25 ~Only a word of advice, which you would be wise to ponder. Your passivity will only lead you to sorrow. You hold knowledge that many would fear, much as you try to pretend otherwise. Use it to your own advantage.~
-== BC0AUR25 ~I want to make the world a better place with my knowledge. Being feared wouldn't make me happier.~
-== BVICON25 ~Such are the words repeated by many overeager whelps. How many have succeeded? Death and conflict spreads throughout the realms as a blight would regardless. We are standing in the midst of one such example.~
-== BC0AUR25 ~Only the more reason someone has to try.~
-== BVICON25 ~You may achieve something, or you will simply end up in an early grave. I see this as a foolish risk. So be it—whether you live long enough to see the sense of my words is in your fate alone.~
+== BC0AUR25 ~谢谢你，维康妮亚。那……底下没什么批评吧？~
+== BVICON25 ~只是一句忠告，你该好好想想。你的消极只会带你走向悲伤。你握有许多人会害怕的知识，不管你怎么装作不是。把它用在你自己身上。~
+== BC0AUR25 ~我想用我的知识让世界更好。被害怕不会让我更快乐。~
+== BVICON25 ~这种话，多少过分热切的小崽子都说过。有几个成了？死亡与冲突仍像疫病一样蔓延诸国度。我们就正站在一个例子中间。~
+== BC0AUR25 ~那只是说明更需要有人去试。~
+== BVICON25 ~你也许会有所成就，也许只是早早进坟墓。我认为这是愚蠢的冒险。随你——你能不能活得够久、看到我这话的道理，全看你自己的命。~
 EXIT
 
 // Wilson
@@ -641,21 +641,21 @@ Range("Wilson",15)
 !StateCheck("Wilson",CD_STATE_NOTVALID)
 !StateCheck("C0Aura",CD_STATE_NOTVALID)
 Global("C0AuraWilsonToB1","GLOBAL",0)~ THEN BC0AUR25 C0AuraWilsonToB1
-~Mmmmrgh...~ [C0BLANK]
+~嗯……哼……~ [C0BLANK]
 DO ~SetGlobal("C0AuraWilsonToB1","GLOBAL",1)
 SetGlobalTimer("C0AuraWilsonToBRestTalkTimer","GLOBAL",THREE_DAYS)~
-== BWILSO25 ~Snort?~
-== BC0AUR25 ~What? No, I am not sulking! Why would I possibly be sulking, huh? HUH?~
-== BWILSO25 ~Snuffle snort.~
-== BC0AUR25 ~Okay! So I lost best-of-three against you at fishing. It was an off day for me! I'm getting ready to regain my honor, just you wait!~
-== BWILSO25 ~Growl.~
-== BC0AUR25 ~*sigh* Somehow I just happened to learn to understand you before I even knew it. Better late than never, I suppose... I still don't know when and how everyone else figured it out.~
-== BWILSO25 ~Sniff sniff. Rff?~
-== BC0AUR25 ~Huh? No, we're not—okay, fine. Maaaaybe there's a chance we can be friends. Eventually. When I stop getting the shakes.~
-== BWILSO25 ~Growl!~
-== BC0AUR25 ~Okay, okay! Happy now?~
-== BWILSO25 ~ROAR!~
-== BC0AUR25 ~Eek! J—just as a side note, the challenge is still on, got it?~
+== BWILSO25 ~哼？~
+== BC0AUR25 ~什么？不，我没在闹脾气！我凭什么闹脾气，嗯？嗯？~
+== BWILSO25 ~（嗅嗅）哼。~
+== BC0AUR25 ~好吧！我是在钓鱼三局两胜里输给你了。那天我状态不好！我正打算赢回荣誉，你等着！~
+== BWILSO25 ~低吼。~
+== BC0AUR25 ~*叹气* 不知怎的，我在自己都没察觉的时候就学会了听懂你。我想晚学总比不学好……我还是不知道别人是什么时候、怎么弄明白的。~
+== BWILSO25 ~（嗅嗅）呜？~
+== BC0AUR25 ~嗯？不，我们不是——好吧，算了。也——许有机会我们能做朋友。最终吧。等我手不抖了以后。~
+== BWILSO25 ~吼！~
+== BC0AUR25 ~好，好！满意了吧？~
+== BWILSO25 ~吼——！~
+== BC0AUR25 ~呀！顺——顺便说一句，挑战还算数，明白吗？~
 EXIT
 
 CHAIN
@@ -664,14 +664,14 @@ Range("Wilson",15)
 !StateCheck("Wilson",CD_STATE_NOTVALID)
 !StateCheck("C0Aura",CD_STATE_NOTVALID)
 Global("C0AuraWilsonToB1","GLOBAL",2)~ THEN BC0AUR25 C0AuraWilsonToB2
-~Mmph... where, where's my blanket? It's getting cold...~ [C0BLANK]
+~唔……我的毯子，毯子在哪儿？越来越冷了……~ [C0BLANK]
 DO ~SetGlobal("C0AuraWilsonToB1","GLOBAL",3)~
-== BC0AUR25 ~Oh, that's nice... it's not my blanket, but it's warm... is it you, <CHARNAME>? Thanks... *yaawwn*~
-== BC0AUR25 ~It's a little heavy, though... if I could just get it to move a little to the right... there we go...~
-== BC0AUR25 ~Whatever it is, it's nice and fluffy, like a stuffed animal... wait, fluffy? Huh...? Are those... ears? What's—~
-== BC0AUR25 ~—!!!~
-== BWILSO25 ~Snore...~
-== BC0AUR25 ~AaaaiiieeeeeeeEEEEEEEEK!!!~
+== BC0AUR25 ~哦，这不错……不是我的毯子，可很暖……是你吗，<CHARNAME>？谢谢……*哈欠*~
+== BC0AUR25 ~不过这有点重……要是能往右挪一点……好了……~
+== BC0AUR25 ~不管这是什么，又舒服又毛茸茸，像玩偶……等等，毛茸茸？嗯……？那些是……耳朵？什么——~
+== BC0AUR25 ~——！！！~
+== BWILSO25 ~打呼……~
+== BC0AUR25 ~啊啊啊啊啊啊啊啊啊啊——！！！~
 DO ~ClearAllActions()
 StartCutSceneMode()
 FadeToColor([0.0],0)
@@ -690,24 +690,24 @@ Range("Wilson",15)
 !StateCheck("Wilson",CD_STATE_NOTVALID)
 !StateCheck("C0Aura",CD_STATE_NOTVALID)
 Global("C0AuraWilsonToB1","GLOBAL",3)~ THEN BC0AUR25 C0AuraWilsonToB3
-~WILSOOOON!~ [C0BLANK]
+~威尔森——！~ [C0BLANK]
 DO ~SetGlobal("C0AuraWilsonToB1","GLOBAL",4)~
-== BWILSO25 ~Growl?~
-== BC0AUR25 ~Oh, don't you start with that! Why? WHY?~
-== BWILSO25 ~Snort. Snuffle snuff.~
-== BC0AUR25 ~Okay, so I couldn't find my blanket. Probably got burned up during a battle somewhere, I can't remember. But still! That doesn't mean you can just decide to share body warmth with me without my permission!~
-== BWILSO25 ~Growl...~
-== BC0AUR25 ~You—you're really sorry? You're not trying to fool me?~
-== BWILSO25 ~Roar.~
-== BC0AUR25 ~*sigh* O—okaaay! Alright! Apology accepted. And I'm sorry for pulling so hard on your ears too. That must've hurt.~
-== BWILSO25 ~Rff. Sniff, snuffle snuff.~
-== BC0AUR25 ~I can really pet them? Well... alright, I, I can do this! One step, two steps...~
-== BWILSO25 ~Snuffle...~
-== BC0AUR25 ~Hehe, they're kind of nice and round... this isn't so bad...~
-== BWILSO25 ~Roar.~
-== BC0AUR25 ~Yes, my eyes are tightly closed! You didn't think it'd be so easy for me, did you?~
-== BWILSO25 ~Groah. Grr.~
-== BC0AUR25 ~Sure, it's a start. Thanks, Wilson. I—somehow—understand that you care. I think. I'm still not ruling out being eaten one day.~
-== BWILSO25 ~ROAR!~
-== BC0AUR25 ~Eek! I was just joking!~
+== BWILSO25 ~低吼？~
+== BC0AUR25 ~哦，你别又给我来这套！为什么？为什么？~
+== BWILSO25 ~哼。嗅嗅。~
+== BC0AUR25 ~好吧，是我找不到毯子。大概在某场战斗里烧了，我记不清。可还是！这不代表你可以不经我同意就决定跟我分享体温！~
+== BWILSO25 ~低吼……~
+== BC0AUR25 ~你——你真的抱歉？你不是想骗我？~
+== BWILSO25 ~吼。~
+== BC0AUR25 ~*叹气* 好——好吧！行！道歉接受了。我也为那么用力拽你耳朵道歉。那一定很疼。~
+== BWILSO25 ~呜。嗅嗅，嗅嗅。~
+== BC0AUR25 ~我真能摸它们？嗯……好吧，我，我能做到！一步，两步……~
+== BWILSO25 ~（嗅）……~
+== BC0AUR25 ~嘿嘿，它们还挺圆乎乎的……这也没那么糟……~
+== BWILSO25 ~吼。~
+== BC0AUR25 ~是，我眼睛闭得紧紧的！你不会以为这对我就那么容易吧？~
+== BWILSO25 ~吼。嗷。~
+== BC0AUR25 ~当然，算个开始。谢谢你，威尔森。我——不知怎的——明白你在意。大概吧。我仍不排除哪天被吃掉。~
+== BWILSO25 ~吼——！~
+== BC0AUR25 ~呀！我只是在开玩笑！~
 EXIT

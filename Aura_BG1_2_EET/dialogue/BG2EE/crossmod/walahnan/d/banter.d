@@ -6,18 +6,18 @@ Range("C0Aura",15)
 !StateCheck("L#2Walah",CD_STATE_NOTVALID)
 !StateCheck("C0Aura",CD_STATE_NOTVALID)
 Global("C0AuraL#2Walahnan","GLOBAL",0)~ THEN L#2WHB banter1
-~Aura, I have a question... no, a request would be more accurate... erm...~ [C0BLANK]
+~奥拉，我有个问题……不，说请求更准确……呃……~ [C0BLANK]
 DO ~SetGlobal("C0AuraL#2Walahnan","GLOBAL",1)~
-== BC0AURA2 ~Yep? I'm listening.~
-== L#2WHB ~It's your hair. How is it you manage to keep it so... shiny and pristine at all times, even in this sweaty and unclean adventuring lifestyle? Is there a secret? Some kind of special Lantanese soap?~
-== BC0AURA2 ~Well, I do use my own personal type of soap... but there's no secret, Walahnan. Just lather, rinse, and brush well. But make sure your hair is dry when you brush! I use a little bit of magic to speed up the process.~
-== L#2WHB ~So do I, in fact. But I can't seem to get the same results, and I've tried. My hair and beard just catch... every nasty bit of grime no matter how much I try to avoid it. Can't you give me just a little bit of help?~
-== BC0AURA2 ~Hmm... mmm...~
-== L#2WHB ~What? Excuse me, I don't particularly enjoy being stared at out of nowhere. It's very awkward.~
-== BC0AURA2 ~Sorry, I just needed to take a closer look... have you tried a dry spray?~
-== L#2WHB ~Dry? There's such a thing?~
-== BC0AURA2 ~Oh, yes. It's a nice, long-lasting solution for hair. It's worth a try. Or maybe some pomade... hmm, I'll have to think about what's most suitable...~
-== L#2WHB ~I'll be waiting eagerly. The day may finally come when I'll stop feeling the constant urge to scratch my beard.~
+== BC0AURA2 ~嗯？我听着呢。~
+== L#2WHB ~那是你的头发。你怎么能一直让它这么……有光泽、这么干净，哪怕过的是这种出汗又不干净的冒险日子？有什么秘诀吗？什么兰坦特制皂？~
+== BC0AURA2 ~嗯，我确实用自己特制的皂……不过没什么秘诀，瓦拉南。就是打沫、冲洗、好好梳。可梳的时候头发得干！我用了一点点魔法加快这个过程。~
+== L#2WHB ~其实我也一样。可我怎么也弄不出同样的效果，我试过了。我的头发和胡子就是会沾上……每一粒该死的脏东西，怎么躲都躲不掉。你就不能帮我一点点吗？~
+== BC0AURA2 ~嗯……唔……~
+== L#2WHB ~什么？抱歉，我可不太喜欢莫名其妙被人盯着。怪尴尬的。~
+== BC0AURA2 ~抱歉，我只是得凑近看看……你试过干喷护发吗？~
+== L#2WHB ~干喷？还有这种东西？~
+== BC0AURA2 ~哦，对。那是个好用又长效的护发法子，值得一试。或者来点发油……嗯，我得想想哪个最合适……~
+== L#2WHB ~我等着呢，盼得很。也许终于有那么一天，我不用老想去挠胡子。~
 EXIT
 
 CHAIN
@@ -28,14 +28,14 @@ Range("C0Aura",15)
 !StateCheck("L#2Walah",CD_STATE_NOTVALID)
 !StateCheck("C0Aura",CD_STATE_NOTVALID)
 Global("C0AuraL#2Walahnan","GLOBAL",0)~ THEN L#2WHB banter2
-~I've noticed your Muffy tries to get close to Ploompus, Aura. Though I don't think Ploompus likes him much.~ [C0BLANK]
+~我注意到你的穆菲老想靠近普卢姆普斯，奥拉。不过我觉得普卢姆普斯不太喜欢他。~ [C0BLANK]
 DO ~SetGlobal("C0AuraL#2Walahnan","GLOBAL",1)~
-== BC0AURA2 ~Oh, I'm sorry, Walahnan. I need to keep a closer eye on him. Maybe it's because of the slime.~
-== L#2WHB ~The... slime? What does that have to do with it?~
-== BC0AURA2 ~Muffy is obsessed with wiping up grimy and dirty things. I'm certain he used to be an akaname in a previous life. They're yōkai who clean dirty things with their tongues.~
-== L#2WHB ~Eugh. I can understand keeping things clean, but I would never touch anything dirty with my mouth.~
-== BC0AURA2 ~Maybe Muffy's trying to give Ploompus a wiping down? He probably thinks he's helping.~
-== L#2WHB ~I'm sure he means well. But, er, I should probably try to keep the two separated from now on. Ploompus looks irritated, and it makes him... unpredictable, to put it nicely. Whatever happens when he gets mad can't be good.~
+== BC0AURA2 ~哦，抱歉，瓦拉南。我得看紧他些。也许是因为那团黏泥。~
+== L#2WHB ~那……黏泥？那跟这事有什么关系？~
+== BC0AURA2 ~穆菲特别着迷于把脏东西擦干净。我敢肯定他前世是只阿卡纳米。那是用舌头清理脏东西的妖怪。~
+== L#2WHB ~呃。我能理解要保持干净，可我不会用嘴碰任何脏东西。~
+== BC0AURA2 ~也许穆菲是想替普卢姆普斯擦一擦？他大概以为自己是在帮忙。~
+== L#2WHB ~我信他是好意。不过，呃，我还是该从今往后尽量把这两位分开。普卢姆普斯看着恼了，这让他……说得客气些，变得难以预料。他一生气会出什么事，准没好事。~
 EXIT
 
 CHAIN
@@ -46,15 +46,15 @@ Range("C0Aura",15)
 !StateCheck("L#2Walah",CD_STATE_NOTVALID)
 !StateCheck("C0Aura",CD_STATE_NOTVALID)
 Global("C0AuraL#2Walahnan","GLOBAL",0)~ THEN BC0AUR25 bantertob
-~Walahnan, could I ask you a few academic questions about chronomancy?~ [C0BLANK]
+~瓦拉南，我能问你几个关于时序魔法的学术问题吗？~ [C0BLANK]
 DO ~SetGlobal("C0AuraL#2Walahnan","GLOBAL",1)~
-== L#2WH25B ~*You* need to learn something from *me*? Huh, I feel like I should be honored, or something. Ask away.~
-== BC0AUR25 ~I was just wondering, just how far can magic affect the passage of time, and the events that push it forward?~
-== L#2WH25B ~I... don't think I can answer that, Aura. There's still a lot about time that I, or any chronomancer for that matter, has yet to learn. Changing the past to affect the present isn't possible yet, as far as I know, but who knows in the... er, future?~
-== BC0AUR25 ~It's just... I've been told many times that this sort of theory is ridiculous. "You can't change the past, or you already would've". You know? We call it a paradox. Just trying to think about it logically makes one's head spin.~
-== L#2WH25B ~The whole "killing your own grandfather" thing, yes, I know. I can't explain it in a way that follows logic completely, but think of it this way. Everything you do changes the future, even if it's only a little. The present we live in is the only one to us, but there could be countless others out there.~
-== L#2WH25B ~One where you didn't eat dinner last night and fought the next battle hungry, changing the course of the fight, for example. Or one where we didn't have this conversation now. Our past isn't the only one there is. So if you changed something in your past, it wouldn't be "yours" anymore, in a manner of speaking.~
-== BC0AUR25 ~That does make a little bit of sense, I suppose... so what chronomancy is doing is reaching out to those other 'possibilities' out there, so to speak?~
-== L#2WH25B ~You can consider that the simplest way to think about it, yes. It's quite complicated. But as long as it helps me take care of stains in my robes and grow delicious fruit without having to wait, I'm satisfied with what I know.~
-== BC0AUR25 ~Hehe, fair enough. I suppose unlocking the secrets to the multiverse isn't always what brings the most happiness. Thank you for enlightening me.~
+== L#2WH25B ~*你*要从*我*这儿学东西？唔，我倒觉得该感到荣幸似的。问吧。~
+== BC0AUR25 ~我只是好奇，魔法究竟能影响到什么程度，影响时间的流逝和推动它的事件？~
+== L#2WH25B ~我……觉得这我没法回答，奥拉。关于时间，我——或者说任何一位时序法师——都还有很多没弄懂。据我所知，改变过去以影响现在还做不到，可谁知道在……呃，在未来呢？~
+== BC0AUR25 ~只是……我被告知过很多次，这类理论荒唐透顶。“你改变不了过去，否则你早就改了。”你知道吧？我们称之为悖论。光是试着合乎逻辑地想它，就能让人头昏。~
+== L#2WH25B ~“杀死自己的祖父”那桩，是，我知道。我没法用完全合乎逻辑的方式解释，不过这么想吧：你做的每件事都在改变未来，哪怕只是很小的一点。我们所处的当下对我们而言只有一个，可外头或许还有无数个。~
+== L#2WH25B ~比如某一世里，你昨晚没吃晚饭，又饿着肚子打了下一仗，改变了战局；或者某一世里，我们现在没进行这场谈话。我们的过去并非只有一条。这么说吧，你要是改了自己过去里的某事，那就不再是“你的”过去了。~
+== BC0AUR25 ~这么想倒有点道理……那么时序魔法所做的，可以说就是伸手去够那些别的“可能”？~
+== L#2WH25B ~你可以把那个当成最简单的想头，是的。它相当复杂。不过只要它能帮我去掉袍子上的污渍、不用等就能长出好吃的果子，我对自己懂的这些就满意了。~
+== BC0AUR25 ~嘿嘿，说得有理。我想解开多元宇宙的奥秘，未必总能带来最大的快乐。谢谢你给我长见识。~
 EXIT

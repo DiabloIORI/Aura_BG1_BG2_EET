@@ -19,21 +19,12 @@ COPY_EXISTING ~c0abracz.itm~ ~override~
 	  resource = l#2phal
 END
 SAY NAME1 ~Gauntlets~
-SAY NAME2 ~Gauntlets of Spellweaving~
-SAY DESC ~Gauntlets of Spellweaving
-The Gauntlets of Spellweaving, also christened "Phalh's Roaring Success" at the moment of its creation, is an impressive artifact for a first attempt by its creator. Tailored specifically to cater to Phalh's own talents, its magical enchantments make it a valuable asset for any dabbler of both martial and magical arts, though its magic only responds to that of its creator, whether intentionally or otherwise.
-
-STATISTICS:
-
-Equipped abilities:
-– Off-Hand THAC0: +4
-– Spellweaving: Every melee attack increases the wearer's Casting Speed by 1 for 6 seconds.
-
-Weight: 1~
+SAY NAME2 ~织法护手~
+SAY DESC ~织法护手，在铸成的那一刻又被命名为“法尔的雷鸣大成功”，对它的创造者而言，作为初次尝试已是一件了不起的奇物。它专为契合法尔自己的天赋而制，其魔法附魔使它成为任何兼修武艺与法术者的宝贵助力，只是它的魔法只回应其创造者——无论这是有意还是无意。↵↵属性数据：↵↵装备能力：↵– 副手零级命中值：+4↵– 织法：每次近战攻击使穿戴者的施法速度提升 1，持续 6 秒。↵↵重量：1~
 
 COPY_EXISTING ~c0aphalb.spl~ ~override~
-SAY NAME1 ~Create Charcoal Smoke Grenade~
-SAY UNIDENTIFIED_DESC ~With Aura's instruction, Phalh has learned how to create one Charcoal Smoke Grenade per day. The grenades are useful for 24 hours before losing their potency.~
+SAY NAME1 ~制造木炭烟幕弹~
+SAY UNIDENTIFIED_DESC ~在奥拉的指导下，法尔学会了每天制造一枚木炭烟幕弹。这些弹在 24 小时内有效，之后便会失去效力。~
 COPY_EXISTING ~c0abombz.spl~ ~override~
   LPF ALTER_EFFECT
 	INT_VAR
@@ -53,13 +44,6 @@ COPY_EXISTING ~c0abombz.itm~ ~override~
 	  resource = l#2phal
 END
 SAY NAME1 ~Firebomb~
-SAY NAME2 ~Charcoal Smoke Grenade~
-SAY DESC ~This seemingly innocuous metal object is in fact a cunning weapon created by Phalh. When the fuse is lit and the grenade thrown, the resulting explosion leaves a burning-hot cloud of black smoke that causes the throat to dry and the eyes to water, making it a deadly tool for incapacitation.
-
-STATISTICS:
-
-Special: When thrown, a cloud of burning smoke erupts in the targeted location, dealing 1d3 fire damage per round and blinding all targets and inflcting 75% spell failure. A Saving Throw vs. Breath Weapons at -2 may be made to avoid the effect. If the user enters the smoke, they gain the benefits of Improved Invisibility for 1 round instead. The effects persist for up to 3 rounds after leaving the cloud.
-Duration: 3 rounds
-
-Weight: 1~
+SAY NAME2 ~木炭烟幕弹~
+SAY DESC ~这看似无害的金属物件，其实是法尔造的一件狡猾武器。点燃引信掷出后，爆炸会留下一团灼热的黑烟，令人喉干眼涩，是使人失去战力的致命工具。↵↵属性数据：↵↵特殊：掷出时，目标处腾起一团灼烟，每回合造成 1d3 火焰伤害，并使所有目标目盲、承受 75% 法术失败率。通过对吐息武器豁免（-2）可避免此效果。若使用者进入烟中，反而获得 1 回合的强化隐形术效果。效果在离开烟云后最多再持续 3 回合。↵持续时间：3 回合↵↵重量：1~
 WRITE_SHORT 0x9C ~%c0abombz%~

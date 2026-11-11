@@ -6,42 +6,42 @@
 // Banters
 
 I_C_T BMINSC 86 C0AuraBMINSC96
-== C0AURA2J IF ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~Squirrels, where? Oh, oh, I think I saw them too! Muffy, look! ...aah, they're gone.~
-== BJAHEIR ~*sigh*~
+== C0AURA2J IF ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~松鼠，在哪儿？哦，哦，我想我也看见了！穆菲，看！……啊，它们跑了。~
+== BJAHEIR ~*叹气*~
 END
 
 I_C_T2 BJAN 38 C0AuraBJAN38
-== C0AURA2J IF ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~Oh, nuts and bolts, here we go again...~
+== C0AURA2J IF ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~哦，螺母和螺栓，又来了……~
 END
 
 I_C_T2 BJAN 87 C0AuraBJAN87
-== C0AURA2J IF ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~...Eww.~
+== C0AURA2J IF ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~……呃。~
 END
 
 I_C_T2 BMINSC 3 C0AuraBMINSC3
-== C0AURA2J IF ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~Oh. Erm, actually, some of that might've been... you know, on second thought, I did not say anything. Nope. Not me! *whistle*~
+== C0AURA2J IF ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~哦。呃，其实，那里面有些也许是……你知道，想想还是算了，我什么都没说。不。不是我！*吹哨*~
 END
 
 I_C_T2 BNEERA 120 C0AuraBJAN87
-== C0AURA2J IF ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~Ooh, ooh, strawberry jam! I miss the freshly-baked strawberry tarts my mother used to make. Anomen, pleeeease?~
+== C0AURA2J IF ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~哦，哦，草莓酱！我想念我母亲以前烤的新鲜草莓挞。阿诺门，求——求你了？~
 END
 
 // Autocannon
 
 CHAIN IF WEIGHT #-1 ~Global("C0AuraAutocannon","GLOBAL",1)~ THEN C0AURA2J autocannon
-~Oh, I almost forgot! I should probably show you what I had in the package that was so important, right? It just might be something you're interested in.~
+~哦，我差点忘了！我该给你看看我包裹里那件那么重要的东西，对吧？也许正是你感兴趣的。~
 DO ~SetGlobal("C0AuraAutocannon","GLOBAL",2)~
 END
-++ ~That's right, I was curious.~ + autocannon.1
-++ ~So what is it?~ + autocannon.1
-++ ~Why don't you show me some other time?~ + autocannon.0
+++ ~对，我好奇。~ + autocannon.1
+++ ~那是什么？~ + autocannon.1
+++ ~你何不另找个时间给我看？~ + autocannon.0
 
 CHAIN C0AURA2J autocannon.0
-~Hmm, well... okay, I guess it is a bit of an effort to set up. If you don't care for the explanation, then I'll just show you what it does when the time is right. It's a brilliant piece of work!~
+~嗯，好吧……好，我想布置起来是有点费劲。你若不想要解释，那等时机合适，我直接给你看它做什么。那是件了不起的作品！~
 DO ~AddSpecialAbility("c0au#sp1")~ EXIT
 
 CHAIN C0AURA2J autocannon.1
-~Hee hee. I think explaining would take longer than just putting it together, so just watch!~
+~嘿嘿。我想解释比装起来还费时间，那就看好了！~
 DO ~StartCutSceneMode()
 MoveToPoint([432.296])
 Wait(1)
@@ -52,115 +52,115 @@ Wait(2)
 StartDialogueNoSet(Player1)~ EXIT
 
 CHAIN IF WEIGHT #-1 ~Global("C0AuraAutocannon","GLOBAL",2)~ THEN C0AURA2J autocannon1
-~Ha ha! And I present: the Lantanese Autocannon! It's a self-triggered automaton which fires, er, fire at its target at rapid speed. I've been waiting on the materials to build one forever!~
+~哈哈！我呈上：兰坦自动炮！那是一台自触发的构造体，能以极快速度向目标开，呃，开火。我等材料等了好久才造出一台！~
 DO ~SetGlobal("C0AuraAutocannon","GLOBAL",3)~
-= ~It's a bit different from the automaton I usually keep at my side. I use the same triggering mechanism as for snares, so it's great for setting up an ambush and raining fire on enemies. The only problem is it only works until it runs out of power. After that, I'll need to fix it and make it battle-ready again while we rest.~
-= ~My father told me he learned how to build them from my grandmother, Minerva. It's a very old design, but still effective. Whenever you want, I can set it up again in real conditions and show you.~
+= ~它跟我平常带在身边的构造体有点不同。我用的是跟陷阱一样的触发机构，所以极适合设伏、向敌人倾泻火力。唯一的问题是它一耗尽动力就停。之后我得修它，趁我们休息时让它再能上战场。~
+= ~我父亲说他从祖母密涅瓦那里学会怎么造它们。那是很老的设计，可仍有效。你随时想，我都能在真实环境里再布置一次给你看。~
 DO ~ActionOverride("C0au#at1",DestroySelf())
 AddSpecialAbility("c0au#sp1")~ EXIT
 
 // Bridge District
 
 CHAIN IF WEIGHT #-1 ~Global("C0AuraBridgeDistrict","GLOBAL",1)~ THEN C0AURA2J bridge
-~Here we are at the marketplace... I really like the Bridge District. The sounds, the smell of the sea... it's not quite like my hometown of Anchoril, but it's close.~
+~我们到集市了……我真喜欢桥区。这些声音、海的气味……不完全像我故乡安科里尔，可很接近。~
 DO ~SetGlobal("C0AuraBridgeDistrict","GLOBAL",2)~
-= ~See that stall over there? Before I joined up with you, I used to go by there about twice a week, set up some space, and write letters for people to get some coins.~
+= ~看见那边那个摊子了吗？我跟你一起之前，一周会去那儿两次，占点地方，替人写信挣些硬币。~
 END
-  ++ ~You made a living by writing letters? I'd have thought you'd use your skills for something more profitable.~ EXTERN C0AURA2J bridge-1
-  ++ ~That doesn't sound half bad. I'd imagine there's a decent amount of people who'd pay to have things written for them.~ EXTERN C0AURA2J bridge-2
-  ++ ~Let's not get caught up in reminiscing. We've got work to do.~ EXTERN C0AURA2J bridge-0
+  ++ ~你靠写信谋生？我还以为你会用手艺做更赚钱的事。~ EXTERN C0AURA2J bridge-1
+  ++ ~听着不算坏。我想会有不少人愿意花钱请人代笔。~ EXTERN C0AURA2J bridge-2
+  ++ ~别沉在回忆里。我们有活要干。~ EXTERN C0AURA2J bridge-0
 
 CHAIN C0AURA2J bridge-0
-~Alright, got it.~
+~好，知道了。~
 EXIT
 
 CHAIN C0AURA2J bridge-1
-~Well... I can't just freely share the secrets of my trade, you know. I was just hoping to offer a helpful service rather than just earning gold.~
+~嗯……我不能随便把行当的秘密讲出去，你知道。我只是想提供有用的服务，而不只是挣金币。~
 EXTERN C0AURA2J bridge-2
 
 CHAIN C0AURA2J bridge-2
-~There's plenty of people here who've never learned to write, or haven't learned enough words to write a letter they're satisfied with, but still want to contact people important to them from far away... it was mostly just a side hustle at first, but I started to enjoy it after a while.~
-= ~Some customers had some interesting stories to tell. Not that I was trying to be nosy or pry into their personal matters, mind you! But it made things a lot more fun.~
-= ~Not to mention, the Five Flagons is right there. The proprietor, Samuel, is fond of me and offers me drinks on the house after I close the stall. Non-alcoholic, of course... I really can't hold my drink.~
-= ~If we're not busy, why don't we go inside and have a look? They have a wonderful playhouse too... you should see one of their performances when you have a chance.~
+~这儿有不少人从没学过写字，或者学的词不够写出一封自己满意的信，可他们仍想联系远方重要的人……起初多半只是副业，可过了一阵我开始喜欢它。~
+= ~有些客人有挺有意思的故事。我不是想多管闲事、探人私事，你别误会！可那让事情有趣多了。~
+= ~更别说五弦琴就在那儿。老板塞缪尔喜欢我，我收摊后请我喝酒。当然是不含酒精的……我真喝不了酒。~
+= ~我们若不忙，何不进去看看？他们还有个很棒的戏台……你有时该看看他们的演出。~
 EXIT
 
 CHAIN IF WEIGHT #-1 ~Global("C0AuraTanner","GLOBAL",1)~ THEN C0AURA2J tanner
-~This is...~ [C0BLANK]
-= ~That... that *beast* of a man... he did all of this?~
-= ~<CHARNAME>, we can't let him get away. No one... *no one* should be allowed to get away with this!~
+~这是……~ [C0BLANK]
+= ~那个……那个*禽兽*般的男人……这都是他干的？~
+= ~<CHARNAME>，我们不能让他逃掉。没人……*没人*该被允许干了这种事还逍遥！~
 DO ~SetGlobal("C0AuraTanner","GLOBAL",2)~
 EXIT
 
 CHAIN IF WEIGHT #-1 ~Global("InteractAura","LOCALS",0)
 InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)
 RandomNum(2,1)~ THEN BERTRAND bertrand
-~Hmm, what do you say, sweet little cherub? Fancy a roll in the hay?~
+~嗯，你说呢，甜美的小天使？想不想在草堆里滚一滚？~
 DO ~SetGlobal("InteractAura","LOCALS",2)~
-== C0AURA2J ~Eww. Thanks, but no thanks...~
+== C0AURA2J ~呃。谢了，不用……~
 EXIT
 
 CHAIN IF WEIGHT #-1 ~Global("C0AuraThalia","LOCALS",0)
 InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)
 RandomNum(2,1)~ THEN FFWENCH thalia
-~Aura! You're a real sight for sore eyes. I hope things are going well.~
+~奥拉！见到你真是让眼睛都舒服了。希望一切都好。~
 DO ~SetGlobal("C0AuraThalia","LOCALS",2)~
-== C0AURA2J ~Oh, yes! Everything's just fine, Thalia. Thanks for asking.~
-== FFWENCH ~Well, don't be a stranger. You're much better company than any of these louts.~
+== C0AURA2J ~哦，是的！一切都好，塔莉亚。谢谢你问。~
+== FFWENCH ~嗯，别当陌生人。你比这些粗人好相处多了。~
 EXIT
 
 CHAIN IF WEIGHT #-1 ~Global("C0AuraSamuel","GLOBAL",0)
 Range("C0Aura",15)
 InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN FFBART C0AuraSamuel
-~Well, if it isn't the sweetest gnome from here to the Dalelands! How fares thee, Aura? I haven't had the pleasure of your patronage in a while!~
+~哟，这不是从这儿到谷区最甜美的侏儒吗！你好吗，奥拉？我好久没荣幸招待你了！~
 DO ~SetGlobal("C0AuraSamuel","GLOBAL",1)~
-== C0AURA2J ~Hello, Samuel! I'm sorry I haven't come by recently.~
-== FFBART ~Well, since you're here now, lemme thank you once again for all your efforts in helpin' the theatre below in the last month.~
-== C0AURA2J ~No, not at all! Being able to help the Sigil Troupe out is my pleasure, and I didn't do that much, really...~
-== FFBART ~Surely you jest, my dear! I could count the number of folks in Athkatla capable of repairin' machinery and providin' pyrotechnics in one hand, and none of 'em have close to your talent. I'm sure the troupe would agree with me!~
-== C0AURA2J ~Oh... *giggle* You're too kind, Samuel. It was just once, you know? I didn't even get a chance to speak with any of the actors themselves...~
-== FFBART ~Ah... I should apologize on their behalf that none of 'em have ever had the chance to come to the market stalls an' thank you personally. Miss Raelis especially wanted to meet you, but with the recent troubles with the troupe...~
-== C0AURA2J ~I understand. It means everything just to be acknowledged at all by such an esteemed troupe of actors. I'm a huge fan of their performance.~
-== FFBART ~Miss Raelis left this for you as a token of gratitude in case you ever decided to stop by. She said she wouldn't take no for an answer, so don't even think of refusin' now, else I'd have find her to beg her pardon meself. *laugh*~
-== C0AURA2J ~A... gift from Raelis Shai...? Goodness, I can't believe it! Thank you, Samuel! I'll treasure it forever!~
+== C0AURA2J ~你好，塞缪尔！抱歉我近来没来。~
+== FFBART ~嗯，既然你来了，让我再谢你一次，上月你帮下面戏台出的那些力。~
+== C0AURA2J ~不，一点不！能帮印记剧团是我的荣幸，而且我真没做多少……~
+== FFBART ~你肯定在开玩笑，亲爱的！阿斯卡特拉能修机械、还能弄烟火的人，我一只手数得过来，没一个比得上你的本事。剧团肯定也同意我！~
+== C0AURA2J ~哦……*轻笑* 你太客气了，塞缪尔。就一次，你知道？我甚至没机会跟任何演员本人说话……~
+== FFBART ~啊……我该代他们道歉，他们一直没机会来集市摊子亲自谢你。尤其雷利斯女士想见你，可剧团近来出了些麻烦……~
+== C0AURA2J ~我明白。能被这么有名望的剧团认可，就已经是一切了。我是他们演出的忠实戏迷。~
+== FFBART ~雷利斯女士把这个留给你，作谢礼，万一你哪天来。她说她不接受拒绝，所以你现在连想都别想推辞，否则我得亲自去找她求她原谅。*笑*~
+== C0AURA2J ~雷利斯·沙伊送的……礼物……？天哪，我不敢信！谢谢你，塞缪尔！我会永远珍藏！~
 DO ~GiveItemCreate("clck07","C0Aura",1,0,0)~
-== FFBART ~You sure I can't tempt you with some of my finest spiced wine while you're here? Freshly imported from Arabel!~
-== C0AURA2J ~Oh no, I couldn't. I'd love to, but I get all sleepy whenever I touch liquor. Something a bit lighter for me, thanks.~
-== FFBART ~As you please. A cool glass of ice and cherry tea with honey as per usual, then. This one's on the house!~
+== FFBART ~你确定不要我拿最好的香料葡萄酒引诱你一下？刚从阿拉贝尔运来的！~
+== C0AURA2J ~哦不，我不能。我很想，可我一碰酒就犯困。给我来点清淡的吧，谢谢。~
+== FFBART ~随你。那就照常，一杯冰镇樱桃茶加蜂蜜。这杯算店里请！~
 EXIT
 
 CHAIN IF WEIGHT #-1 ~Global("C0AuraElephantSkin","GLOBAL",1)~ THEN C0AURA2J AURA-ELEPHANT-HIDE
-~You know, I think I've seen this stuff before. Unless... wait, let me take a closer look. No, I've *definitely* seen this stuff before.~ [C0BLANK]
+~你知道，我觉得我以前见过这东西。除非……等等，让我仔细看看。不，我*绝对*见过这东西。~ [C0BLANK]
 DO ~SetGlobal("C0AuraElephantSkin","GLOBAL",2)~
 END
-++ ~What is it?~ + AURA-ELEPHANT-HIDE-1
+++ ~是什么？~ + AURA-ELEPHANT-HIDE-1
 
 CHAIN C0AURA2J AURA-ELEPHANT-HIDE-1
-~Elephant hide. Have you seen an elephant before, <CHARNAME>? They're massive, and they've got a long trunk, big horns, big ears... and they make this sound, like: "baraaaaahh!"~
-= ~No, wait, that's not it. It's more like...~
-= ~Oh, forget it, that's not the point. Anyways, elephants aren't the sort of beast you see just anywhere. I know we had *one* elephant in Lantan some time ago, and that was when one of the guilds imported it from Zakhara for an absurd price.~
-= ~And... *sniff* this piece of hide's been treated, so it must have come from a coat or something.~
-= ~I'd say we talk to the local skinners and tanners. Anyone who's worked with something this exotic has to remember it.~
+~象皮。你见过大象吗，<CHARNAME>？它们巨大，有长鼻子、大角、大耳朵……还会发出这种声音，像：“叭——啦——！”~
+= ~不，等等，不是那样。更像……~
+= ~哦，算了，这不是重点。总之，大象不是随处能见的野兽。我知道兰坦曾有过*一头*大象，那是某个行会用荒唐的价钱从扎卡拉进口的。~
+= ~而……*嗅* 这块皮处理过，所以肯定是来自某件外套之类。~
+= ~我看我们该去问问本地的剥皮匠和制革匠。谁处理过这么稀罕的东西，肯定记得。~
 DO ~SetGlobal("MerchantHide","GLOBAL",1)
 AddJournalEntry(%Aura_Quest_Skinner_Entry%,QUEST)~  EXIT
 
 INTERJECT MERCHANT 15 C0AuraBridgeMerchant
-== MERCHANT IF ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~Solik berries are used for—~
-== C0AURA2J ~*gasp* Mumbleberry pie!~
-== MERCHANT ~Yes, indeed. A local bakery uses them for, as the young lady says, their signature mumbleberry pie. Very tasty, but they are closed now. It is the berry's off-season.~
+== MERCHANT IF ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~索利克莓用来——~
+== C0AURA2J ~*倒吸一口气* 咕哝莓派！~
+== MERCHANT ~是，正是。本地一家面包房用它们做，正如这位小姐说的，他们的招牌咕哝莓派。很好吃，可他们现在关门了。这是这莓子的淡季。~
 EXTERN MERCHANT 12
 
 I_C_T2 REEDLE 0 C0AuraReedle
-== C0AURA2J IF ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~*sniff* Pfaugh! Now that fishy smell reminds me of the coasts of my homeland. Hmm, I wonder if Koko-chan would like any of the seafood here?~
+== C0AURA2J IF ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~*嗅* 呸！这鱼腥味让我想起我故乡的海岸。嗯，我在想可可酱会不会喜欢这儿的海鲜？~
 END
 
 INTERJECT NEB 5 C0AuraNebEncounter
-== C0AURA2J IF ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID) Global("C0AuraKnowsBG1","GLOBAL",1)~ THEN ~The childr— you... YOU! I remember you, disgusting murderer!~
-== NEB ~Teehee... we meet again, pretty. Are you here to join the children? Hee... hee...~
+== C0AURA2J IF ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID) Global("C0AuraKnowsBG1","GLOBAL",1)~ THEN ~孩——你……你！我记得你，恶心的杀人犯！~
+== NEB ~嘻嘻……我们又见面了，漂亮。你是来加入孩子们的吗？嘻……嘻……~
 DO ~Enemy()~
-== C0AURA2J ~I've been looking forward to this. You disgusting filth... have a taste of THIS!~
-== NEB ~Eh—?~
-== C0AURA2J ~Caelum, Iustitia, Invocare!~
+== C0AURA2J ~我盼这刻盼了好久。你这恶心的渣滓……尝尝这个！~
+== NEB ~呃——？~
+== C0AURA2J ~Caelum, Iustitia, Invocare！~
 DO ~SetInterrupt(FALSE)
 StartCutSceneMode()
 CutSceneId("C0Aura")
@@ -178,268 +178,268 @@ EndCutSceneMode()
 SetInterrupt(TRUE)~ EXIT
 
 CHAIN IF WEIGHT #-1 ~Global("C0AuraNebEncounter","GLOBAL",1)~ THEN C0AURA2J C0AURA-POST-NEB
-~Hah... hah... oh, I... did I really just do that?~
+~哈……哈……哦，我……我真这么做了？~
 DO ~SetGlobal("C0AuraNebEncounter","GLOBAL",2)~
 END
-++ ~That was quite a reaction. I didn't think you had it in you.~ + C0AURA-POST-NEB-1
-++ ~Wow. Just... wow.~ + C0AURA-POST-NEB-1
-++ ~If only you could do that more often.~ + C0AURA-POST-NEB-1
-++ ~Nice work. That scum had it coming.~ + C0AURA-POST-NEB-2
+++ ~反应真够大的。我没想到你有这一手。~ + C0AURA-POST-NEB-1
+++ ~哇。真是……哇。~ + C0AURA-POST-NEB-1
+++ ~你要能多来几次就好了。~ + C0AURA-POST-NEB-1
+++ ~干得好。那渣滓活该。~ + C0AURA-POST-NEB-2
 
 CHAIN C0AURA2J C0AURA-POST-NEB-1
-~I, um... that was awkward. I didn't mean to go so far, I was just so angry and I, well....~
+~我，呃……那挺尴尬的。我不是故意做到那地步，我只是太生气，我，嗯……~
 EXTERN C0AURA2J C0AURA-POST-NEB-3
 
 CHAIN C0AURA2J C0AURA-POST-NEB-2
-~Yes... he did. But I didn't mean to go so far, I was just so angry and I, well...~
+~是……他活该。可我不是故意做到那地步，我只是太生气，我，嗯……~
 EXTERN C0AURA2J C0AURA-POST-NEB-3
 
 CHAIN C0AURA2J C0AURA-POST-NEB-3
-~I couldn't control myself. As soon as I realized who he was, something in me just snapped and then I unleashed a full-power Aerial Judgment on him, and... oh, I never imagined I could be this violent!~
-= ~Just... pretend you didn't see this side of me, okay, <CHARNAME>?~
+~我控制不住自己。一认出他是谁，我体内有什么就断了，然后我对他放了全力的一记天降裁决，还有……哦，我从没想过我能这么暴力！~
+= ~就……假装你没看见我这一面，好吗，<CHARNAME>？~
 EXIT
 
 I_C_T RAELIS 33 C0AuraRAELIS33
-== C0AURA2J IF ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~Er... that was, um... the plays are usually much better than this, I promise!~
+== C0AURA2J IF ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~呃……这，呃……戏通常比这好多了，我保证！~
 END
 
 I_C_T RAELIS 37 C0AuraRAELIS37
-== C0AURA2J IF ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~Rae—raelis Shai?~
-== RAELIS ~Yes, I am she... but wait, are you not the young girl who so kindly assisted the troupe with your crafts not so long ago?~
-== C0AURA2J ~Th–that's right, Ms. Raelis! I–i–i'm Aura Glimmershine. I've a big fan—I, I mean, I am a big fan of your plays! *blush*~
-== RAELIS ~Thank you, child. If only I had the means to thank you properly, but alas, with our troupe in this state, I can only apologize that my words are all I can offer...~
+== C0AURA2J IF ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~雷——雷利斯·沙伊？~
+== RAELIS ~是，我就是……可等等，你不就是不久前来用你的手艺好心帮剧团的那个小姑娘？~
+== C0AURA2J ~对——对，是我，雷利斯女士！我——我——我是奥拉·格利默夏恩。我是你的大戏迷——我，我是说，我是你戏的大戏迷！*脸红*~
+== RAELIS ~谢谢你，孩子。我要有办法好好谢你就好了，可唉，剧团如今这样，我只能说抱歉，我能给的只有这些话……~
 END
 
 I_C_T YUSUF 2 C0AuraYUSUF2
-== C0AURA2J IF ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~Wh— what are you doing?! She wasn't a part of this!~
+== C0AURA2J IF ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~你——你在做什么？！她跟这事无关！~
 END
 
 I_C_T FFRECEP 0 C0AuraFFRECEP0
-== C0AURA2J IF ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~Go on, <CHARNAME>, the Sigil Troupe's performances are worth every coin!~
+== C0AURA2J IF ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~去吧，<CHARNAME>，印记剧团的演出值每一枚硬币！~
 END
 
 I_C_T HAERDA 109 C0AuraHAERDA109
-== C0AURA2J IF ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~Eep, this is some seriously nasty mind-controlling magic. Whoever did this is undoubtedly a master of Enchantment, <CHARNAME>, watch out.~
+== C0AURA2J IF ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~呀，这是相当恶毒的精神控制魔法。做这事的人无疑是附魔大师，<CHARNAME>，小心。~
 END
 
 // Brynnlaw/Spellhold
 
 I_C_T PPSAEM 14 C0AuraArrivedBrynnlaw
-== C0AURA2J IF ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~Ugh, that was... about as awful as I expected. And from the looks of this island, things aren't about to get any more pleasant...~
+== C0AURA2J IF ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~呃，那……跟我预想的一样糟。看这岛的样子，事情也不像要变好……~
 END
 
 I_C_T PPSAEM 53 C0AuraArrivedBrynnlaw
-== C0AURA2J IF ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~Ugh, that was... about as awful as I expected. And from the looks of this island, things aren't about to get any more pleasant...~
+== C0AURA2J IF ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~呃，那……跟我预想的一样糟。看这岛的样子，事情也不像要变好……~
 END
 
 I_C_T PPSAEM2 19 C0AuraPPSAEM219
-== C0AURA2J IF ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~Either another journey across the sea, or the Underdark of all places... I hate the idea of both, <CHARNAME>, but whichever one you decide, I'll do my best for you.~
+== C0AURA2J IF ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~要么再渡一次海，要么去幽暗地域这种地方……我两个都讨厌，<CHARNAME>，可不管你选哪个，我都会尽力。~
 END
 
 I_C_T2 PPSAILOR 0 C0AuraPPSAILOR0
-== C0AURA2J IF ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~N-no... NO! We have to get off... we have to get off this ship, before... before...!~
+== C0AURA2J IF ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~不——不……不！我们得下船……我们得下这船，在……在……之前！~
 END
 
 I_C_T PIRKID01 0 C0AuraPIRKID010
-== C0AURA2J IF ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~Watch your pockets, <CHARNAME>! He's—~
+== C0AURA2J IF ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~看好你的口袋，<CHARNAME>！他——~
 END
 
 I_C_T PPAPHRIL 0 C0AuraPPAPHRIL0
-== C0AURA2J IF ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~Oh, my... to see the endless planes in the multiverse, but to be in so much pain in the process... I don't know whether I should envy or pity her.~
+== C0AURA2J IF ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~哦，天哪……能看到多元宇宙无尽的位面，可过程中却受这么多苦……我不知道该羡慕她还是可怜她。~
 END
 
 I_C_T JANJ 152 C0AuraJANJ152
-== C0AURA2J IF ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~Uh, are you sure it was the Blackstaff that gave your uncle the disorder, Jan? Sounds like he had a few screws loose to begin with.~
+== C0AURA2J IF ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~呃，你确定是黑杖大人让你叔叔失常的吗，扬？听着他一开始就有点螺丝松了。~
 END
 
 I_C_T PPCOWLED 1 C0AuraPPCOWLED1
-== C0AURA2J IF ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~Something's wrong with him. The monotone speech and the lifeless eyes... this reeks of enchantment magic.~
+== C0AURA2J IF ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~他不对劲。单调的语调、没有生气的眼睛……这满是附魔魔法的味道。~
 END
 
 I_C_T PPDILI 0 C0AuraPPDILI0
-== C0AURA2J IF ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~I—I–I don't...~
-== PPDILI ~*giggle* You're so funny, lady! Why are your eyes and mouth so wide open? And you're not much taller than I am. Will you play with me?~
-== C0AURA2J ~<CHARNAME>, this is going too far. I don't care how dangerous magic is, no one should be allowed to lock a child away like this!~
+== C0AURA2J IF ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~我——我——我不……~
+== PPDILI ~*轻笑* 你真逗，女士！你的眼睛和嘴为什么张那么大？你也不比我高多少。你跟我玩吗？~
+== C0AURA2J ~<CHARNAME>，这太过分了。我不管魔法多危险，没人该被这样把孩子关起来！~
 END
 
 I_C_T PPIRENI1 4 C0AuraPPIRENI14
-== C0AURA2J IF ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID) Global("C0AuraKnowsBG1","GLOBAL",1)~ THEN ~This place is all sorts of sick and wrong, <CHARNAME>. People shouldn't be treated like test subjects in a place like this.~
+== C0AURA2J IF ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID) Global("C0AuraKnowsBG1","GLOBAL",1)~ THEN ~这地方处处病态又错误，<CHARNAME>。人不该在这种地方被当作试验品。~
 END
 
 I_C_T PPTIAX 6 C0AuraPPTIAX6
-== C0AURA2J IF ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID) Global("C0AuraKnowsBG1","GLOBAL",1)~ THEN ~Tiax? But, why are you here? Huh, on second thought... I guess it doesn't seem so strange after all...~
+== C0AURA2J IF ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID) Global("C0AuraKnowsBG1","GLOBAL",1)~ THEN ~提亚克斯？可你为什么在这儿？嗯，再想想……我想这也不那么奇怪……~
 END	
 
 I_C_T PPSTAT01 5 C0AuraPPSTAT015
-== C0AURA2J IF ~!IsGabber("C0Aura") InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~Ooh, well done. I don't think I could've gotten all twelve right so easily.~
+== C0AURA2J IF ~!IsGabber("C0Aura") InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~哦，干得好。我觉得我没法这么轻松把十二个全答对。~
 END
 
 I_C_T2 PPWANEV 5 C0AuraPPWANEV5
-== C0AURA2J IF ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~Uhh... clear everything up? I think I can feel my brain slowly withering away with each line I read of this gibberish... wait, either I'm also starting to go insane, or there's a cipher in here somewhere...~
-== C0AURA2J ~...Nope. I'm definitely going crazy. And seeing monkeys.~
+== C0AURA2J IF ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~呃……全弄清楚？我每读一行这鬼话，就觉得脑子在慢慢枯萎……等等，要么我也开始疯了，要么这里面有某种密码……~
+== C0AURA2J ~……不。我绝对是疯了。还看见猴子。~
 END
 
 I_C_T YOSHJ 113 C0AuraYOSHJ113
-== C0AURA2J IF ~!GlobalGT("C0AuraYoshimo2","GLOBAL",4) InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~Wh–what? Yoshimo, how could you?~
+== C0AURA2J IF ~!GlobalGT("C0AuraYoshimo2","GLOBAL",4) InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~什——什么？吉野，你怎么能？~
 END
 
 I_C_T YOSHJ 113 C0AuraYOSHJ113
-== C0AURA2J IF ~GlobalGT("C0AuraYoshimo2","GLOBAL",4) InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~Y–Yoshimo...? No... no, it can't be...~
+== C0AURA2J IF ~GlobalGT("C0AuraYoshimo2","GLOBAL",4) InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~吉——吉野……？不……不，不可能……~
 END
 
 I_C_T YOSHIMOX 0 C0AuraYOSHIMOX0
-== C0AURA2J IF ~Global("C0AuraYoshimo2","GLOBAL",4) InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~Why do you have to do this, Yoshimo?~
+== C0AURA2J IF ~Global("C0AuraYoshimo2","GLOBAL",4) InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~你为什么要这么做，吉野？~
 DO ~SetGlobal("C0AuraYoshimoBetrayal","GLOBAL",1)~
-== YOSHIMOX ~Little Aura... please don't. I cannot afford to stay my hand. I have waited too long already.~
-== C0AURA2J ~I knew... long before all of this, I knew you were keeping secrets, despite our friendship... even then, I wanted to believe you would tell me, when you felt the time was right.~
-== YOSHIMOX ~...~
-== YOSHIMOX ~You are far too naive, Aura. Do you believe Irenicus would have chosen any fool to gain <CHARNAME>'s trust? Every action I made to said, every action I made while in your company was to lead to this ending. Befriending you, naturally, was just another means to an end.~
-== C0AURA2J ~I—I don't believe you. You never wanted it to end up like this. You still don't.~
-== YOSHIMOX ~What would you presume to know of—~
-== C0AURA2J ~I just... don't understand. We trusted you. Why... why couldn't you trust us? <CHARNAME> would have helped you... *we* would have helped you.~
-== YOSHIMOX ~Enough! Please... that's enough.~
+== YOSHIMOX ~小奥拉……求你别。我不能停手。我已等得太久了。~
+== C0AURA2J ~我知道……在这一切之前很久，我就知道你在藏秘密，尽管我们是朋友……就算那时，我也想相信你会在觉得时机对时告诉我。~
+== YOSHIMOX ~……~
+== YOSHIMOX ~你太天真了，奥拉。你以为爱瑞尼库斯会随便挑个蠢货去取得<CHARNAME>的信任？我说的每一句话、在你们身边做的每一件事，都为了导向这个结局。跟你交朋友，自然也只是达成目的的另一手段。~
+== C0AURA2J ~我——我不信你。你从不想事情变成这样。你现在也不想。~
+== YOSHIMOX ~你凭什么以为自己知道——~
+== C0AURA2J ~我只是……不明白。我们信过你。为什么……为什么你不能信我们？<CHARNAME>本会帮你……*我们*本会帮你。~
+== YOSHIMOX ~够了！求你……够了。~
 END
 
 CHAIN IF WEIGHT #-1 ~Global("C0AuraYoshimoBetrayalTalk","GLOBAL",1)~ THEN C0AURA2J C0AURA-YOSHIMOB
-~...~ [C0BLANK]
+~……~ [C0BLANK]
 DO ~SetGlobal("C0AuraYoshimoBetrayalTalk","GLOBAL",2)~
-= ~...When? When does our suffering end, <CHARNAME>?~
+= ~……什么时候？我们的苦难什么时候结束，<CHARNAME>？~
 END
-  ++ ~I'm sorry, Aura. I wish it could have been different.~ + C0AURA-YOSHIMOB-1
-  ++ ~You seem to be handling Yoshimo's death better than I expected.~ + C0AURA-YOSHIMOB-2
-  ++ ~I don't know. But there must be an end to it all.~ + C0AURA-YOSHIMOB-3
-  ++ ~What's done is done. All we can do is get revenge on Irenicus.~ + C0AURA-YOSHIMOB-4
+  ++ ~对不起，奥拉。我希望事情能有不同结局。~ + C0AURA-YOSHIMOB-1
+  ++ ~你对吉野之死的处理比我预想的要好。~ + C0AURA-YOSHIMOB-2
+  ++ ~我不知道。可这一切总该有个尽头。~ + C0AURA-YOSHIMOB-3
+  ++ ~事已至此。我们能做的只有向爱瑞尼库斯复仇。~ + C0AURA-YOSHIMOB-4
 
 CHAIN C0AURA2J C0AURA-YOSHIMOB-1
-~So do I. But there wasn't anything we could do, <CHARNAME>. I've accepted that.~
+~我也一样。可我们无能为力，<CHARNAME>。我已经接受了。~
 EXTERN C0AURA2J C0AURA-YOSHIMOB-2
 
 CHAIN C0AURA2J C0AURA-YOSHIMOB-2
-~I... I came to terms with the truth about Yoshimo already. And when I heard what he had to say... I know his betrayal must have destroyed him inside, just as it did to us.~
-== C0AURA2J ~If it's true that Irenicus had him under a geas since the beginning... then it's likely that Yoshimo has been living a life out of his control all this time. And maybe... dying to you might have been the first choice he's been able to make for a long time.~
-== C0AURA2J ~It's... the only way he could restore any semblance of honor. Maybe you can't see it that way, <CHARNAME>... and I wouldn't blame you. What he had a part in doing to you was... unforgivable. But he also knew that.~
-== C0AURA2J ~*sigh* I need some time to think about all this. I'm sorry, <CHARNAME>. Even though he betrayed us... I still care about him, even now.~
-== C0AURA2J IF ~!GlobalGT("YoshimoBodhiServant","GLOBAL",0) PartyHasItem("miscbu")~ THEN ~Let's bring his heart to a priest of Ilmater, <CHARNAME>. If you are able to forgive him... maybe there's still a chance he'll have peace.~
-== C0AURA2J IF ~!GlobalGT("YoshimoBodhiServant","GLOBAL",0) !PartyHasItem("miscbu")~ THEN ~Take his heart, <CHARNAME>. We should... bring it to a priest of Ilmater. If you are able to forgive him... maybe there's still a chance he'll have peace.~
-== C0AURA2J IF ~GlobalGT("YoshimoBodhiServant","GLOBAL",0) !PartyHasItem("miscbu")~ THEN ~And... his heart is destroyed. There may be no chance at salvation for him anymore... ever. And I know how much he meant to you, <CHARNAME>... I'm sorry. I'm so, so sorry...~
+~我……我已经接受了关于吉野的真相。听到他说的那些……我知道他的背叛一定从里面毁了他，就像毁了我们一样。~
+== C0AURA2J ~若爱瑞尼库斯真从一开始就慑令他……那吉野这些时候大概一直过着不由自己的生活。而也许……死在<CHARNAME>手里，是他很久以来能做的第一个选择。~
+== C0AURA2J ~这……是他能恢复一丝荣誉的唯一办法。也许你无法这样看，<CHARNAME>……我也不怪你。他参与对你做的事……不可原谅。可他自己也知道。~
+== C0AURA2J ~*叹气* 我需要些时间想这一切。对不起，<CHARNAME>。就算他背叛了我们……我到现在仍在意他。~
+== C0AURA2J IF ~!GlobalGT("YoshimoBodhiServant","GLOBAL",0) PartyHasItem("miscbu")~ THEN ~我们把他的心带给伊尔马特的祭司吧，<CHARNAME>。你若能原谅他……也许他还有机会得到安宁。~
+== C0AURA2J IF ~!GlobalGT("YoshimoBodhiServant","GLOBAL",0) !PartyHasItem("miscbu")~ THEN ~带走他的心，<CHARNAME>。我们该……把它带给伊尔马特的祭司。你若能原谅他……也许他还有机会得到安宁。~
+== C0AURA2J IF ~GlobalGT("YoshimoBodhiServant","GLOBAL",0) !PartyHasItem("miscbu")~ THEN ~而且……他的心毁了。他也许再没有救赎的机会了……永远。我知道他对你多重要，<CHARNAME>……对不起。我太、太对不起了……~
 EXIT
 
 CHAIN C0AURA2J C0AURA-YOSHIMOB-3
-~I want to believe... but how much more of this will we have to see? We just... lost another friend. And... there was nothing we could do.~
+~我想相信……可我们还要看多少这种事？我们刚……又失去一个朋友。而且……我们什么也做不了。~
 EXTERN C0AURA2J C0AURA-YOSHIMOB-2
 
 CHAIN C0AURA2J C0AURA-YOSHIMOB-4
-~Yes... revenge will end it all. But will revenge bring back the dead? Will it undo everything we've been tormented by?~
+~是……复仇会了结一切。可复仇能让死者复生吗？能抹去折磨我们的一切吗？~
 EXTERN C0AURA2J C0AURA-YOSHIMOB-2
 
 CHAIN IF WEIGHT #-1 ~Global("C0AuraBG2RomanceSlayerTalk","GLOBAL",1)~ THEN C0AURA2J C0AURA-ROM-SLAYER
-~You look... so pale, <CHARNAME>. Did you get any sleep at all?~ [C0BLANK]
+~你看着……脸色好白，<CHARNAME>。你睡过觉吗？~ [C0BLANK]
 DO ~SetGlobal("C0AuraBG2RomanceSlayerTalk","GLOBAL",2)~
 END
-  ++ ~No. Not really.~ + C0AURA-ROM-SLAYER-1
-  ++ ~I had another nightmare. Perhaps the worst one yet.~ + C0AURA-ROM-SLAYER-2
-  ++ ~Stay away from me. I can't... let you get close to me right now.~ + C0AURA-ROM-SLAYER-1
-  ++ ~It's nothing. Let's just get moving.~ + C0AURA-ROM-SLAYER-0
+  ++ ~没。没怎么睡。~ + C0AURA-ROM-SLAYER-1
+  ++ ~我又做了噩梦。也许是至今最糟的一次。~ + C0AURA-ROM-SLAYER-2
+  ++ ~离我远点。我现在……不能让你靠近我。~ + C0AURA-ROM-SLAYER-1
+  ++ ~没什么。我们走吧。~ + C0AURA-ROM-SLAYER-0
 
 CHAIN C0AURA2J C0AURA-ROM-SLAYER-0
-~It can't be nothing. It has to be something truly terrible if you feel you need to lie to me, <CHARNAME>.~
-= ~But... I don't want to push you right now. So I'll wait until you're ready to talk. Just promise me you will.~
+~不可能没什么。若你觉得需要对我撒谎，那一定是真正可怕的事，<CHARNAME>。~
+= ~可……我现在不想逼你。那我等你准备好再说。只答应我你会说。~
 EXIT
 
 CHAIN C0AURA2J C0AURA-ROM-SLAYER-1
-~You had nightmares again, didn't you?~
+~你又做噩梦了，对吧？~
 EXTERN C0AURA2J C0AURA-ROM-SLAYER-3
 
 CHAIN C0AURA2J C0AURA-ROM-SLAYER-2
-~I thought so. Will you... tell me about it?~
+~我就知道。你……能跟我说说吗？~
 END
-  ++ ~I dreamt of the evil inside of me. It took Imoen's form, telling me to give myself up to it.~ + C0AURA-ROM-SLAYER-3
-  ++ ~I... I turned again, and I killed everyone. Friends and foes alike. I even killed you...~ + C0AURA-ROM-SLAYER-3
-  ++ ~Please don't ask me to remember it. I just want to forget...~ + C0AURA-ROM-SLAYER-4
-  ++ ~The divine essence inside me offered me power. I'm tempted to take it.~ + C0AURA-ROM-SLAYER-5
-  ++ ~I don't want to talk about it. We have more important things to worry about.~ + C0AURA-ROM-SLAYER-6
+  ++ ~我梦到我里面的邪恶。它变成爱蒙的样子，叫我把自己交给它。~ + C0AURA-ROM-SLAYER-3
+  ++ ~我……我又变身了，杀光了所有人。朋友敌人都一样。我甚至杀了你……~ + C0AURA-ROM-SLAYER-3
+  ++ ~求你别叫我回想。我只想忘掉……~ + C0AURA-ROM-SLAYER-4
+  ++ ~我里面的神性本质给我力量。我受诱惑想接受。~ + C0AURA-ROM-SLAYER-5
+  ++ ~我不想谈。我们有更重要的事要担心。~ + C0AURA-ROM-SLAYER-6
 
 CHAIN C0AURA2J C0AURA-ROM-SLAYER-3
-~I... was afraid it'd be something like that. Ever since I saw the Slayer surfacing from you, I knew it wouldn't be the only time it haunted us.~
-= ~You don't want it, do you? As frightening as it was... what scared me more was seeing how much pain you were in when it happened.~
+~我……就怕会是这样。从我看见杀戮者从你身上浮现，我就知道它不会只困扰我们一次。~
+= ~你不想要它，对吧？虽然那么吓人……更让我害怕的是看见它发生时你多痛苦。~
 END
-  ++ ~You know me, Aura. You know I don't want any of this.~ + C0AURA-ROM-SLAYER-7
-  ++ ~I don't. I want to forget it ever happened...~ + C0AURA-ROM-SLAYER-4
-  ++ ~I'm not sure... considering everything, I can't deny I want more power.~ + C0AURA-ROM-SLAYER-5
-  ++ ~Just leave me alone. I'm fine.~ + C0AURA-ROM-SLAYER-6
+  ++ ~你了解我，奥拉。你知道我一点也不想这样。~ + C0AURA-ROM-SLAYER-7
+  ++ ~我不想。我想忘掉它发生过……~ + C0AURA-ROM-SLAYER-4
+  ++ ~我不确定……考虑这一切，我不能否认我想要更多力量。~ + C0AURA-ROM-SLAYER-5
+  ++ ~别管我。我没事。~ + C0AURA-ROM-SLAYER-6
 
 CHAIN C0AURA2J C0AURA-ROM-SLAYER-4
-~So do I... I wish we could have avoided all of this.~
+~我也希望……我希望我们能避开这一切。~
 EXTERN C0AURA2J C0AURA-ROM-SLAYER-7
 
 CHAIN C0AURA2J C0AURA-ROM-SLAYER-5
-~<CHARNAME>...~
-= ~There's nothing wrong with wanting power in itself. Especially... for someone like you. But what matters is the cost... you've made it so far on your own. You can't give up to it, not now. If you want the power to save yourself from all of this pain... we can seek it together. There will be another way.~
+~<CHARNAME>……~
+= ~想要力量本身没什么错。尤其……对你这样的人。可重要的是代价……你一个人走到现在这么远。你不能向它屈服，现在不能。你若想要力量把自己从这些痛苦中救出来……我们可以一起去寻找。会有别的路。~
 EXTERN C0AURA2J C0AURA-ROM-SLAYER-7
 
 CHAIN C0AURA2J C0AURA-ROM-SLAYER-6
-~I... I get it. I know you don't want to talk about it... neither do I. But let me stay close to you for a while... until you can feel warm again.~
+~我……我懂。我知道你不想谈……我也不想。可让我在你身边待一会儿……直到你能再感到温暖。~
 EXIT
 
 CHAIN C0AURA2J C0AURA-ROM-SLAYER-7
-~I wish every day that we could've all lived normal, happy lives... but instead, you've been put through nothing but pain. But I know you'll keep fighting regardless... you're just that type of person.~
-= ~Don't give up, <CHARNAME>. I don't ever want to see you give up.~
+~我每天都希望我们都能过上正常快乐的生活……可你却只被灌满了痛苦。可我知道你仍会继续战斗……你就是那种人。~
+= ~别放弃，<CHARNAME>。我永远不想看到你放弃。~
 END
-  ++ ~I won't, Aura. Not as long as you're with me.~ + C0AURA-ROM-SLAYER-8
-  ++ ~You're right. I needed some encouragement.~ + C0AURA-ROM-SLAYER-8
-  ++ ~Alright. Now can we get ready to go?~ + C0AURA-ROM-SLAYER-9
+  ++ ~我不会，奥拉。只要你还跟我在一起。~ + C0AURA-ROM-SLAYER-8
+  ++ ~你说得对。我需要些鼓励。~ + C0AURA-ROM-SLAYER-8
+  ++ ~好。那我们现在能准备走了吗？~ + C0AURA-ROM-SLAYER-9
 
 CHAIN C0AURA2J C0AURA-ROM-SLAYER-8
-~Hehe... that's what I'm here for, you know. Making sure you still have something positive in your life.~
+~嘿嘿……我在这儿就是为了这个，你知道。确保你生活里还有些正面的东西。~
 EXTERN C0AURA2J C0AURA-ROM-SLAYER-9
 
 CHAIN C0AURA2J C0AURA-ROM-SLAYER-9
-~I know we can't stay like this forever... but let's take our time. You can lean on me for a bit of comfort as long as you need.~
+~我知道我们不能永远这样……可我们慢慢来。你需要安慰时，尽可以靠着我。~
 EXIT
 
 EXTEND_BOTTOM PPIMOEN 0
-+ ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID) Global("C0AuraKnowsBG1","GLOBAL",1)~ + ~You can't recognize Aura? Come on, the two of you were the best of friends. Don't you see her?~ EXTERN C0AURA2J C0AuraPPIMOEN0
++ ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID) Global("C0AuraKnowsBG1","GLOBAL",1)~ + ~你认不出奥拉？得了吧，你们俩是最好的朋友。你看不见她吗？~ EXTERN C0AURA2J C0AuraPPIMOEN0
 END
 
 CHAIN C0AURA2J C0AuraPPIMOEN0
-~<CHARNAME>, something's terribly, terribly wrong... her eyes are so distant, hurt, and lifeless! I've never seen any sort of magic or potion that makes someone like this. I... I don't know what I can do!~
+~<CHARNAME>，出大事了，大事不好……她的眼神那么遥远、受伤、没有生气！我从没见过哪种魔法或药水能让人变成这样。我……我不知道我能做什么！~
 END
 IF ~~ EXTERN PPIMOEN 1
 
 I_C_T IMOEN2 22 C0AuraIMOEN222
-== C0AURA2J IF ~!IsGabber("C0Aura") InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~<CHARNAME>, you can't! She needs you. I— I've found myself out of worse situations before. Let me find my way out of here alone. I'll probably stand a better chance than her.~
+== C0AURA2J IF ~!IsGabber("C0Aura") InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~<CHARNAME>，你不能！她需要你。我——我以前也陷进过更糟的境地。让我自己找路出去。我大概比她的机会大些。~
 END
 
 I_C_T TOKCRE01 0 C0AuraTOKCRE010
-== C0AURA2J IF ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~Huh... this sort of machine's quite common back at the schools in my homeland. Usually we store them with toys and sweets. I wonder how this one ended up here...?~
+== C0AURA2J IF ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~嗯……这种机器在我家乡的学校里很常见。我们通常把它们跟玩具和糖果放在一起。我在想这一台怎么到了这儿……？~
 END
 
 INTERJECT Player1 3 C0AuraSpellholdDizzy
 == C0AURA2J IF ~InParty("C0Aura") Range("C0Aura",15) !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN
-~Whoa, whoa. Take it easy, <CHARNAME>, you're about to fall over. How's your head feeling? Do you need some medicine? Why don't you sit down and let me give you a check-up? Or what about–~
+~哇，哇。慢点，<CHARNAME>，你快倒了。你头怎么样？要药吗？你何不坐下让我给你检查一下？还是说——~
 END
-++ ~No, no, I'm fine. I was just feeling a little dizzy.~ EXTERN C0AURA2J C0AuraSpellholdDizzy.1
-++ ~I'm not sure what it was. It's like I wasn't myself for a second there.~ EXTERN C0AURA2J C0AuraSpellholdDizzy.2
-++ ~Don't coddle me. A little setback like this won't slow me down.~ EXTERN C0AURA2J C0AuraSpellholdDizzy.3
+++ ~不，不，我没事。我只是有点晕。~ EXTERN C0AURA2J C0AuraSpellholdDizzy.1
+++ ~我不确定那是什么。就好像有一瞬间我不是我自己。~ EXTERN C0AURA2J C0AuraSpellholdDizzy.2
+++ ~别娇惯我。这点小挫折拖不慢我。~ EXTERN C0AURA2J C0AuraSpellholdDizzy.3
 
 CHAIN C0AURA2J C0AuraSpellholdDizzy.1
-~You sure you're okay? I could always brew up a remedy for chronic headaches if it'll help. Or how about some soup?~
+~你确定没事？我可以给你熬点治慢性头疼的药，若有帮助。要不来点汤？~
 EXTERN C0AURA2J C0AuraSpellholdDizzy.4
 
 CHAIN C0AURA2J C0AuraSpellholdDizzy.2
-~That doesn't sound good. I've heard of all sorts of symptoms caused by mental and physical stress, but I've never seen anything like what happened back there...~
+~那听着不妙。我听说精神和身体压力能引起各种症状，可从没见过刚才那样……~
 EXTERN C0AURA2J C0AuraSpellholdDizzy.4
 
 CHAIN C0AURA2J C0AuraSpellholdDizzy.3
-~Well... alright. I guess I shouldn't hassle you when you're being this prickly.~
+~嗯……好吧。你这么刺人，我想我不该烦你。~
 EXTERN C0AURA2J C0AuraSpellholdDizzy.4
 
 CHAIN C0AURA2J C0AuraSpellholdDizzy.4
-~Here, have a drink of this. Maybe it'll make you feel a little better? If there's anything else I can do for you, just say the word.~
+~来，喝点这个。也许能让你舒服些？若还有别的我能做，就说一声。~
 DO ~GiveItemCreate("c0apot01",Player1,1,0,0)~ EXIT
 
 CHAIN IF WEIGHT #-1 ~Global("C0AuraSeesCrushTrap","GLOBAL",1)~ THEN C0AURA2J C0AURA-CRUSH-TRAP
-~STOP! Don't move... there's a deadly mechanism in front of us! Stay where you are, I'll take care of it immediately!~
+~停下！别动……我们前面有个致命机关！待着别动，我马上处理！~
 DO ~SetGlobal("C0AuraSeesCrushTrap","GLOBAL",2)
 ClearAllActions()
 StartCutSceneMode()
@@ -456,37 +456,37 @@ Wait(1)
 StartDialogNoSet(Player1)~ EXIT
 
 CHAIN IF WEIGHT #-1 ~Global("C0AuraSeesCrushTrap","GLOBAL",2)~ THEN C0AURA2J C0AURA-CRUSH-TRAP-2
-~Okay, all taken care of... that was so dangerous. One wrong step, and someone could've been crushed to paste!~
+~好，都处理好了……太危险了。错一步，就可能有人被压成肉泥！~
 DO ~SetGlobal("C0AuraSeesCrushTrap","GLOBAL",3)~
-== IMOEN2J IF ~InParty("IMOEN2") InMyArea("IMOEN2")~ THEN ~...You've got to teach me how to do that.~
-== C0AURA2J IF ~InParty("IMOEN2") InMyArea("IMOEN2")~ THEN ~Ah... ahaha... I'll be sure to, once we see daylight again. Anyway...~
-== C0AURA2J ~This place is a house of horrors, <CHARNAME>... clearly no one was expected to leave here alive. We need to be as alert as possible.~
+== IMOEN2J IF ~InParty("IMOEN2") InMyArea("IMOEN2")~ THEN ~……你得教我怎么弄。~
+== C0AURA2J IF ~InParty("IMOEN2") InMyArea("IMOEN2")~ THEN ~啊……啊哈哈……等我们再见天日，我一定教。总之……~
+== C0AURA2J ~这地方是恐怖之屋，<CHARNAME>……显然没人被指望活着离开。我们得尽可能警觉。~
 EXIT
 
 INTERJECT PLAYER1 5 C0AuraFirstSlayerChange1
-== C0AURA2J IF ~InParty("C0Aura") Range("C0Aura",15) !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~Th–that was the most terrifying thing I've ever seen in my life! I– I've seen that monster before, <CHARNAME>! It was the Slayer, the avatar of Bhaal!~
-== C0AURA2J ~There were all sorts of horrifying stories of its rampages during the Time of Troubles, but I never thought it'd be every bit as powerful or monstrous as they said! How... how could the small amount of Bhaal's taint in you affect you this much?~
-== C0AURA2J ~I–I don't know what to say, <CHARNAME>... this is all so, so wrong!~
+== C0AURA2J IF ~InParty("C0Aura") Range("C0Aura",15) !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~那——那是我这辈子见过最恐怖的东西！我——我以前见过那怪物，<CHARNAME>！那是杀戮者，巴尔的化身！~
+== C0AURA2J ~动荡之年有过各种关于它暴行的恐怖传说，可我从没想到它真像他们说的那么强、那么凶！你体内那点巴尔的污秽……怎么能这样影响你？~
+== C0AURA2J ~我——我不知道说什么，<CHARNAME>……这一切都太、太不对了！~
 EXIT
 
 // ROMANCE CONTENT: the second slayer change
 
 INTERJECT Player1 7 C0AuraSecondSlayerChange0
-== C0AURA2J IF ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID) OR(2) Global("C0AuraRomanceActive","GLOBAL",1) Global("C0AuraRomanceActive","GLOBAL",2)~ THEN ~Can't sleep, huh...? I don't blame you. I have a hard time keeping my eyes shut too... here, I've boiled some lavender tea to help us relax. It's not much, but... <CHARNAME>, what's wrong?~
+== C0AURA2J IF ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID) OR(2) Global("C0AuraRomanceActive","GLOBAL",1) Global("C0AuraRomanceActive","GLOBAL",2)~ THEN ~睡不着，嗯……我不怪你。我也很难合眼……来，我煮了些淡紫茶帮我们放松。不算什么，可……<CHARNAME>，怎么了？~
 END
-++ ~Aura, get away now. I can't stop this thing from hurting you!~ EXTERN C0AURA2J C0AuraSecondSlayerChange1
-++ ~Watch out, Aura! It's happening again!~ EXTERN C0AURA2J C0AuraSecondSlayerChange1
-++ ~Run away! Now!~ EXTERN C0AURA2J C0AuraSecondSlayerChange1
+++ ~奥拉，快走开。我没法阻止这东西伤你！~ EXTERN C0AURA2J C0AuraSecondSlayerChange1
+++ ~小心，奥拉！又来了！~ EXTERN C0AURA2J C0AuraSecondSlayerChange1
+++ ~跑！现在！~ EXTERN C0AURA2J C0AuraSecondSlayerChange1
 
 CHAIN C0AURA2J C0AuraSecondSlayerChange1
-~Yikes. Looks like your voice's gone too. Some honeyed lemon water would help with that, if I had any... what? No... no, no no no NO!~
+~呀。看来你嗓子也没了。若有蜂蜜柠檬水能缓解，可我没有……什么？不……不，不不不！~
 DO ~SetGlobal("C0AuraSecondSlayerChange","GLOBAL",1)
 ActionOverride(Player1,ReallyForceSpell(Myself,SLAYER_CHANGE))~
 EXIT
 
 INTERJECT Player1 10 C0AuraSlayerSurvived1
-== C0AURA2J IF ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID) OR(2) Global("C0AuraRomanceActive","GLOBAL",1) Global("C0AuraRomanceActive","GLOBAL",2) Global("C0AuraSecondSlayerChange","GLOBAL",1)~ THEN ~T–this is a nightmare, a nightmare... a horrible nightmare... *sob*~
-= ~Why... why do these things have to happen to you? Why do you have to suffer like this?~
+== C0AURA2J IF ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID) OR(2) Global("C0AuraRomanceActive","GLOBAL",1) Global("C0AuraRomanceActive","GLOBAL",2) Global("C0AuraSecondSlayerChange","GLOBAL",1)~ THEN ~这——这是噩梦，噩梦……可怕的噩梦……*抽泣*~
+= ~为什么……为什么这些事非得落到你头上？你为什么非得这样受苦？~
 DO ~SetGlobal("DrowTalk","GLOBAL",5)~ EXIT
 
 EXTEND_BOTTOM Player1 10
@@ -500,15 +500,15 @@ IF ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)
 END
 
 CHAIN BODHIAMB C0AuraKidnap 
-~You follow in the hopes of retrieving something dear to you. I say that the longer you keep this up, the more you will lose.~
-== BODHIAMB ~Such as this feeble little gnome. So weak, so pitiful... it is no wonder she has latched onto you like a parasite. How much will you suffer should I tear her from you, I wonder?~
-== C0AURA2J ~I'm not afraid of you. Not while <CHARNAME> needs me at her side.~
-== BODHIAMB ~I do not want your fear, little girl. What I want is far, far worse...~
-== C0AURA2J ~NO!~
-== C0AURA2J ~'Ama-tsu-kami, ku-ni-tsu-kami,
-ya-o-yo-ro-zo no ka-mi-ta-chi to-mo ni,
-ki-ko-shi me-se to,
-ka-shi-ko-mi ka-shi-ko-mi mo ma-o-su...'~
+~你跟着来，是希望取回对你珍贵的东西。我说，你越这样下去，失去的越多。~
+== BODHIAMB ~比如这个衰弱的小侏儒。那么弱，那么可怜……难怪她像寄生虫一样攀住你。我若把她从你身边撕走，你会受多少苦，我倒想知道？~
+== C0AURA2J ~我不怕你。只要<CHARNAME>还需要我在身边，我就不怕。~
+== BODHIAMB ~我不要你的恐惧，小姑娘。我要的远、远更糟……~
+== C0AURA2J ~不！~
+== C0AURA2J ~天津神，国津神，
+与八百万众神同在，
+请听吾祈，
+谨请谨请，奉祈……~
 END
 IF ~~ DO ~SetGlobal("C0AuraVampire","GLOBAL",1)
 ClearAllActions()
@@ -517,29 +517,29 @@ StartCutSceneEx("C0ABODHI",FALSE)~ EXIT
 
 CHAIN IF WEIGHT #-1
 ~Global("C0AuraVampire","GLOBAL",1)~ THEN BODHIAMB C0AuraBodhiKidnap
-~What is this?!~ [C0AUBO1]
+~这是什么？！~ [C0AUBO1]
 DO ~SetGlobal("C0AuraVampire","GLOBAL",2)~
-== C0AURA2J ~...~
+== C0AURA2J ~……~
 END
-  ++ ~Aura! What are you doing?~ EXTERN BODHIAMB C0AuraBodhiKidnap.1
-  ++ ~Don't you dare touch her, Bodhi!~ EXTERN BODHIAMB C0AuraBodhiKidnap.1
+  ++ ~奥拉！你在做什么？~ EXTERN BODHIAMB C0AuraBodhiKidnap.1
+  ++ ~你敢碰她，波蒂！~ EXTERN BODHIAMB C0AuraBodhiKidnap.1
 
 CHAIN BODHIAMB C0AuraBodhiKidnap.1
-~Accursed foreign magicks! I will ensure that you suffer eternally for this, gnome. But I will make sure you watch <CHARNAME>'s suffering first.~
+~可恶的异邦邪术！我保证你会为此永远受苦，侏儒。可我要先让你看着<CHARNAME>受苦。~
 COPY_TRANS BODHIAMB 5
 
 CHAIN IF WEIGHT #-1 ~Global("C0AuraVampire","GLOBAL",2)~ THEN C0AURA2J AURA-VAMPIRE
-~What... what happened, <CHARNAME>? Where did the vampires... where did Bodhi go?~ [C0BLANK]
+~什么……发生了什么，<CHARNAME>？那些吸血鬼……波蒂去哪儿了？~ [C0BLANK]
 DO ~SetGlobal("C0AuraVampire","GLOBAL",3)~
 END
-  ++ ~You don't remember how you started glowing and summoned a spirit out of nowhere to protect you?~ + AURA-VAMPIRE-1
-  ++ ~It doesn't matter. I'm just glad you're safe.~ + AURA-VAMPIRE-1
-  ++ ~That whole display wasn't what you intended, I take it.~ + AURA-VAMPIRE-1
+  ++ ~你不记得你怎么开始发光，还不知从哪儿召来一个灵体护住你？~ + AURA-VAMPIRE-1
+  ++ ~不重要。我只高兴你平安。~ + AURA-VAMPIRE-1
+  ++ ~那一整套，我想不是你本意吧。~ + AURA-VAMPIRE-1
 
 CHAIN C0AURA2J AURA-VAMPIRE-1
-~I... I remember praying... I spoke some chants meant to protect from some evil spirits, then... I don't know.~
-= ~I think I heard a voice... it told me that it was fulfilling its oath, and now its duty is over... and I felt some kind of warmth. And then the next thing I heard was you calling me.~
-= ~It was all so strange. I wasn't expecting anything like it to happen, and I still don't know why it did, but... huh?~
+~我……我记得我在祈祷……我念了些驱邪灵的咒，然后……我不知道。~
+= ~我想我听到一个声音……它说它在履行誓约，如今职责已尽……我感到某种温暖。然后我听到的就是你在叫我。~
+= ~这一切太奇怪了。我一点也没料到会发生，我仍不知道为什么会这样，可是……嗯？~
 DO ~ClearAllActions()
 StartCutSceneMode()
 CreateVisualEffectObject("C0AMAGF1",Myself)
@@ -549,100 +549,100 @@ Wait(2)
 StartDialogNoSet(Player1)~ EXIT
 
 CHAIN IF WEIGHT #-1 ~Global("C0AuraVampire","GLOBAL",3)~ THEN C0AURA2J AURA-VAMPIRE2
-~Reika-san's magatama... it's glowing. And there's something different about it. It's like it's awakened.~ [C0BLANK]
+~丽华小姐的勾玉……在发光。而且它有点不同了。就像它醒了。~ [C0BLANK]
 DO ~SetGlobal("C0AuraVampire","GLOBAL",4)~
 END
-  ++ ~Is it that power which protected you?~ + AURA-VAMPIRE2-1
-  ++ ~I'll be forever grateful, even though I've never met her.~ + AURA-VAMPIRE2-1
-  ++ ~You're lucky. Things could've gone much worse there.~ + AURA-VAMPIRE2-1
+  ++ ~是那股力量护住了你？~ + AURA-VAMPIRE2-1
+  ++ ~我会永远感激，尽管我从没见过她。~ + AURA-VAMPIRE2-1
+  ++ ~你走运。事情本可能糟得多。~ + AURA-VAMPIRE2-1
 
 CHAIN C0AURA2J AURA-VAMPIRE2-1
-~Maybe she always knew... she knew I would only face more dangers, and so she left me this last gift as a way to protect me, in my hour of need, even after she was gone...~
-= ~...Thank you.~
-= ~I'm ready, <CHARNAME>. This power... I'm not sure why, but I know I can use it to protect you too. Let's bring down this evil together.~
+~也许她一直知道……她知道我还会面对更多危险，所以留下这最后的礼物，在我需要的时候护住我，哪怕她已不在……~
+= ~……谢谢你。~
+= ~我准备好了，<CHARNAME>。这力量……我不确定为什么，可我知道我也能用它护住你。我们一起打倒这邪恶。~
 EXIT
 
 I_C_T C6BODHI 0 C0AuraC6BODHI0
-== C0AURA2J IF ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~You... this is all a game to you, isn't it? Well, whatever game you think we're playing, we'll be ending it now!~
+== C0AURA2J IF ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~你……这一切对你都是场游戏，对吧？好，不管你以为我们在玩什么，我们现在就把它结束！~
 END
 
 // City Gates
 
 INTERJECT JANJ 87 C0AuraJAN87
-== C0AURA2J IF ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~What's so wrong with milk baths? They're warm... and so nice for your skin... mmm...~
+== C0AURA2J IF ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~牛奶浴有什么不好？暖暖的……对皮肤又那么好……嗯……~
 EXTERN JANJ 88
 
 I_C_T GRVLCH01 0 C0AuraCRVLCH010
-== C0AURA2J IF ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~Whoa! What's a centuries-old lich doing in a place like this?~
-== GRVLCH01 ~Perish.~
+== C0AURA2J IF ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~哇！一个几百岁的巫妖在这种地方做什么？~
+== GRVLCH01 ~湮灭吧。~
 END
 
 // City-of-Caverns
 
 INTERJECT SAHPR1 1 C0AuraSAHPR11
-== C0AURA2J IF ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~S-sahuagin, the shark-headed sea fiends... I recognize them from the bestiaries I've read. I—I... I've never heard a language like this before though...~
+== C0AURA2J IF ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~沙——沙华鱼人，那些鲨鱼头的海魔……我在读过的怪兽志里认得它们。我——我……可我从没听过这样的语言……~
 EXTERN SAHPR1 2
 
 INTERJECT SAHKNG01 17 C0AuraSAHPR117
-== C0AURA2J IF ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~<CHARNAME>, I... I—~
+== C0AURA2J IF ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~<CHARNAME>，我……我——~
 END
   + ~OR(2)
      Global("C0AuraRomanceActive","GLOBAL",1)
-     Global("C0AuraRomanceActive","GLOBAL",2)~ + ~I'm here, Aura. You don't have to be scared. We're not in the water anymore. You're safe with me.~ EXTERN C0AURA2J C0AuraSahuagin
-  ++ ~Aura, you look so pale! What's wrong?~ EXTERN C0AURA2J C0AuraSahuagin
-  ++ ~Oh, gods, the fall into the sea must have affected you. What do I do?~ EXTERN C0AURA2J C0AuraSahuagin
-  ++ ~Don't embarrass me in front of the shark-men now of all times, Aura...~ EXTERN C0AURA2J C0AuraSahuagin
+     Global("C0AuraRomanceActive","GLOBAL",2)~ + ~我在这儿，奥拉。你不用怕。我们已不在水里。你跟我在一起很安全。~ EXTERN C0AURA2J C0AuraSahuagin
+  ++ ~奥拉，你脸色好白！怎么了？~ EXTERN C0AURA2J C0AuraSahuagin
+  ++ ~哦，神啊，掉进海里一定影响到你了。我该怎么做？~ EXTERN C0AURA2J C0AuraSahuagin
+  ++ ~别偏偏挑现在在鲨鱼人面前让我丢脸，奥拉……~ EXTERN C0AURA2J C0AuraSahuagin
 
 CHAIN C0AURA2J C0AuraSahuagin
-~I, I'm, I—!~
+~我，我，我——！~
 DO ~SetGlobal("C0AuraSahuaginFears","GLOBAL",1)~
-== SAHKNG01 ~What's this? That especially puny one seems to be shaking especially violently. Rather like a mealworm on a hook, I might say. (Hee hee!) If she's incapable of following your orders, perhaps you can leave her here as a light snack instead, eh?~
+== SAHKNG01 ~这是什么？那个格外瘦小的似乎抖得格外厉害。我可以说，就像钩上的面包虫。（嘻嘻！）她若没法听你的命令，也许你可以把她留在这儿当个小点心，嗯？~
 END
-  ++ ~Shut up! Don't you dare talk about her like that!~ EXTERN SAHKNG01 C0AuraSahuagin.1
-  ++ ~The challenge can wait! I need to take care of my companion first.~ EXTERN SAHKNG01 C0AuraSahuagin.1
-  ++ ~I need you to get it together, Aura. Now's not the time to break down on me!~ EXTERN SAHPR1 C0AuraSahuagin.2
+  ++ ~闭嘴！你敢那样说她！~ EXTERN SAHKNG01 C0AuraSahuagin.1
+  ++ ~挑战可以等等！我得先照顾我的同伴。~ EXTERN SAHKNG01 C0AuraSahuagin.1
+  ++ ~我需要你振作起来，奥拉。现在不是在我面前崩溃的时候！~ EXTERN SAHPR1 C0AuraSahuagin.2
 
 CHAIN SAHKNG01 C0AuraSahuagin.1
-~(Hee hee!) Quite the gall you have, strange <PRO_RACE>. You are quite lucky I'm in a tolerant mood right now. Otherwise...~
-== SAHPR1 ~My king... please. Allow me to handle this matter. This will not inconvenience you for long.~
+~（嘻嘻！）你胆子不小，奇怪的<PRO_RACE>。算你走运我现在心情宽容。否则……~
+== SAHPR1 ~我的王……求你。这事交给我。不会耽误您太久。~
 EXTERN SAHPR1 C0AuraSahuagin.2
 
 CHAIN SAHPR1 C0AuraSahuagin.2
-~Worry not, <PRO_RACE>. Take our king's challenge, while your companion will be under my personal protection. So long as you succeed, no harm will come to her—I swear in the Shark-Father's name. You are needed for our cause, and angering you by allowing those with you to be harmed shall benefit neither of us.~
+~别担心，<PRO_RACE>。接受我们王的挑战，你的同伴会在我亲自保护之下。只要你成功，她不会受任何伤害——我以鲨父之名起誓。我们的事业需要你，让你的人受伤而激怒你，对我们双方都没好处。~
 END
-  ++ ~Fine. It seems I have no choice but to trust in your word, priestess.~ DO ~ActionOverride("C0Aura",LeaveParty()) ActionOverride("C0Aura",ApplySpellRES("C0AQEF27",Myself))~ EXTERN SAHKNG01 C0AuraSahuagin.3
-  ++ ~Alright... please take care of her. She has a terrible fear of drowning.~ DO ~ActionOverride("C0Aura",LeaveParty()) ActionOverride("C0Aura",ApplySpellRES("C0AQEF27",Myself))~ EXTERN SAHKNG01 C0AuraSahuagin.3
-  ++ ~No. I don't trust any of you. We're leaving now, or else you all die!~ EXTERN SAHKNG01 22
+  ++ ~好。看来我别无选择，只能信你的话，女祭司。~ DO ~ActionOverride("C0Aura",LeaveParty()) ActionOverride("C0Aura",ApplySpellRES("C0AQEF27",Myself))~ EXTERN SAHKNG01 C0AuraSahuagin.3
+  ++ ~好……请照顾好她。她极怕溺水。~ DO ~ActionOverride("C0Aura",LeaveParty()) ActionOverride("C0Aura",ApplySpellRES("C0AQEF27",Myself))~ EXTERN SAHKNG01 C0AuraSahuagin.3
+  ++ ~不。我谁都不信。我们现在就走，否则你们全死！~ EXTERN SAHKNG01 22
 
 CHAIN SAHKNG01 C0AuraSahuagin.3
-~Finally! I was just about to decide that I'd prefer a meal over entertainment. Now then, to the ring with you, off you pop!~
+~总算！我刚要决定我宁愿要一顿饭而不是娱乐。那么，进圈里去吧，快滚！~
 COPY_TRANS SAHKNG01 17
 
 INTERJECT SAHKNG01 24 C0AuraSAHKNG0124
-== SAHKNG01 IF ~GlobalGT("C0AuraSahuaginFears","GLOBAL",0)~ THEN ~Oh, and of course, your companion is returned to you... unharmed, as our wiser priestess promised. A pity, she does look rather delectable.~
+== SAHKNG01 IF ~GlobalGT("C0AuraSahuaginFears","GLOBAL",0)~ THEN ~哦，当然，你的同伴还给你了……毫发无伤，正如我们更明智的女祭司承诺的。可惜，她看着真可口。~
 DO ~SetGlobal("C0AuraSahuaginFears","GLOBAL",3) ActionOverride("C0Aura",ApplySpellRES("C0AQEF28",Myself)) ActionOverride("C0Aura",JoinParty())~
-== SAHPR1 ~She remains shaken, but she should prove responsive to you now, surface <PRO_RACE>. Go, now.~
-== C0AURA2J ~I... I'm sorry for causing a problem for you, <CHARNAME>. I'm... fine now. Really.~
+== SAHPR1 ~她仍在发抖，可她如今应该能回应你了，地面的<PRO_RACE>。去吧。~
+== C0AURA2J ~我……抱歉给你惹了麻烦，<CHARNAME>。我……现在没事了。真的。~
 END
-  ++ ~Are you sure? You don't have to hide it, if you still haven't recovered.~ EXTERN C0AURA2J C0AuraSahuagin.4
-  ++ ~It's not your fault. What happened with the ship must have been traumatizing for you.~ EXTERN C0AURA2J C0AuraSahuagin.4
-  ++ ~Just get back in formation, already.~ EXTERN SAHKNG01 C0AuraSahuagin.5
+  ++ ~你确定？若你还没缓过来，不必掩饰。~ EXTERN C0AURA2J C0AuraSahuagin.4
+  ++ ~不是你的错。船上的事对你一定是创伤。~ EXTERN C0AURA2J C0AuraSahuagin.4
+  ++ ~归队就得了。~ EXTERN SAHKNG01 C0AuraSahuagin.5
 
 CHAIN C0AURA2J C0AuraSahuagin.4
-~We... we can talk about it later, <CHARNAME>. I... I did pay attention to what was happening just now, despite what it looked like. I know we have a task to do.~
+~我们……我们晚点再谈，<CHARNAME>。我……我刚才是注意着情况的，别看那样子。我知道我们有任务。~
 EXTERN SAHKNG01 C0AuraSahuagin.5
 
 CHAIN SAHKNG01 C0AuraSahuagin.5
-~Yes, yes, very heartwarming, and all that. Your hearts *would* be tasty with some minnows... but in any case, back to business. Now where were we? Oh, yes. (Hee hee!) Senityili wins.~
+~是，是，真感人，诸如此类。你们的心配上小鱼一定好吃……可总之，回到正事。我们刚才说到哪儿？哦，对。（嘻嘻！）塞尼提伊利赢了。~
 EXTERN SAHBAR03 2
 
 I_C_T SAHBEH01 2 C0AuraSAHBEH012
-== C0AURA2J IF ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~A spectator! I've seen them before... they're lawful creatures of Mechanus, not evil-natured. Some of them even work for the church of Gond in Lantan.~
-== SAHBEH01 ~Lantan, eh? That tiny isle full of gnomes and humans with their bizarre experiments? I hear my kin are hired by them as couriers for especially important and hazardous deliveries.~
-== SAHBEH01 ~Those are the lower-ranking class, but to tell you the truth I’d much rather have their jobs. At least *they* get to travel places and meet people while delivering some of the hottest gadgets that comes from the heads of you Lantanese brainiacs. Far more interesting than staring at a dead, expressionless box for several millennia. Is it true they even get paid?~
-== C0AURA2J ~Yes, although I've never figured out what they use their salary for, exactly.~
-== SAHBEH01 ~Oh, you'd be surprised. Even we aren't above enjoying the nightlife once in a while. Ahh...~
-== SAHBEH01 ~*ahem* I should stop daydreaming. I still have a job to do, mind-numbingly dull as it is. Where was I?~
+== C0AURA2J IF ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~一个观察者！我以前见过……它们是机械境的守序生物，不是恶性的。有些甚至在兰坦为贡德教团做事。~
+== SAHBEH01 ~兰坦，嗯？那个满是侏儒和人类、搞些古怪实验的小岛？我听说我的同族被他们雇去送特别重要又危险的货。~
+== SAHBEH01 ~那些是低阶的，可老实说，我宁愿干他们的活。至少*他们*能跑各处、见人，一边送你们兰坦聪明脑袋里出来的最抢手的小玩意儿。比盯着一个死气沉沉、毫无表情的箱子几千年有意思多了。他们真能拿到报酬？~
+== C0AURA2J ~是，不过我始终没弄清他们的薪水到底用来干什么。~
+== SAHBEH01 ~哦，你会吃惊的。就连我们也不是不享受夜生活。唉……~
+== SAHBEH01 ~*咳* 我该停止白日梦了。我还有活要干，尽管无聊得要命。我说到哪儿了？~
 END
 
 EXTEND_BOTTOM SAHBEH01 27
@@ -650,7 +650,7 @@ IF ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)
 END
 
 CHAIN C0AURA2J C0AuraSAHBEH27
-~Hey, wait a minute, I had a thought. He told you to guard 'the chest', not what's inside, right?~
+~嘿，等等，我有个想法。他叫你守“箱子”，没说守里面的东西，对吧？~
 DO ~SetGlobal("C0AuraBeholder","GLOBAL",1)~
 EXTERN SAHBEH01 33
 
@@ -659,93 +659,93 @@ IF ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)
 END
 
 CHAIN C0AURA2J C0AuraSAHBEH34
-~But, what if... let's go with some basic logic... *you* opened it, and I was just very veeery careful and didn't touch the chest at all to get what's inside... would you allow that? Um, in theory, of course.~
+~可要是……我们按基本逻辑来……*你*打开它，而我只是非常非常小心、完全没碰箱子就拿到了里面的东西……你会允许吗？呃，当然，理论上。~
 EXTERN SAHBEH01 35
 
 CHAIN IF WEIGHT #-1 ~Global("C0AuraSahuaginFears","GLOBAL",4)~ THEN C0AURA2J AURA-SAHUAGIN
-~...Nrgh...~ [C0BLANK]
+~……呃……~ [C0BLANK]
 DO ~SetGlobal("C0AuraSahuaginFears","GLOBAL",5)~
-== C0AURA2J ~...I'm sorry.~
+== C0AURA2J ~……对不起。~
 END
-  ++ ~You've already said that.~ + AURA-SAHUAGIN-1
-  ++ ~It's not your fault.~ + AURA-SAHUAGIN-2
-  ++ ~Are you going to be alright?~ + AURA-SAHUAGIN-3
-  ++ ~Yes, well, at least you're coherent now.~ + AURA-SAHUAGIN-4
-  ++ ~Good thing you recovered. Otherwise, you might be fish food already.~ + AURA-SAHUAGIN-4
-  ++ ~Whatever. Let's just work on getting out of here.~ + AURA-SAHUAGIN-0
+  ++ ~你已经说过了。~ + AURA-SAHUAGIN-1
+  ++ ~不是你的错。~ + AURA-SAHUAGIN-2
+  ++ ~你会没事吧？~ + AURA-SAHUAGIN-3
+  ++ ~嗯，至少你现在说话有条理了。~ + AURA-SAHUAGIN-4
+  ++ ~好在你恢复了。否则你也许已经成鱼食了。~ + AURA-SAHUAGIN-4
+  ++ ~随便。我们只管想办法出去。~ + AURA-SAHUAGIN-0
 
 CHAIN C0AURA2J AURA-SAHUAGIN-0
-~Right... we're still alive. That means I don't have time to stand around moping and dragging us down.~
-= ~I'll be right behind you. Just... give me a moment.~
+~对……我们还活着。那说明我没时间站在那儿自怨自艾、拖累大家。~
+= ~我就跟在你后面。只是……给我一点时间。~
 EXIT
 
 CHAIN C0AURA2J AURA-SAHUAGIN-1
-~I'm saying it again. I might have to keep saying it until this sinking feeling of disappointment goes away.~
+~我再说一遍。我也许得一直说，直到这种下沉的失望感消失。~
 EXTERN C0AURA2J AURA-SAHUAGIN-4
 
 CHAIN C0AURA2J AURA-SAHUAGIN-2
-~Yes, it is.~
+~是的。~
 EXTERN C0AURA2J AURA-SAHUAGIN-4
 
 CHAIN C0AURA2J AURA-SAHUAGIN-3
-~...I don't know.~
+~……我不知道。~
 EXTERN C0AURA2J AURA-SAHUAGIN-4
 
 CHAIN C0AURA2J AURA-SAHUAGIN-4
-~I tried, <CHARNAME>. Please believe me, I really did. I'm not naive enough to think that I'd beaten my trauma that quickly, but I thought with how much I believed I'd grown, I'd at least be able to keep myself under control.~
-= ~You've been through something much worse, and I've seen it all happen... I couldn't do anything about it, but I could at least not be another burden for you. I needed to not let such a little thing get in my way. And I couldn't even manage that.~
-= ~I'm so sorry.~
+~我试过了，<CHARNAME>。请信我，我真的试了。我没天真到以为自己那么快就战胜了创伤，可我以为凭我自以为的成长，至少能控制住自己。~
+= ~你经历过糟得多的事，我全看在眼里……我帮不上忙，可至少可以不成为你的又一个负担。我需要不让这么小的事挡我的路。可我连这个都做不到。~
+= ~太对不起了。~
 END
   + ~OR(2)
      Global("C0AuraRomanceActive","GLOBAL",1)
-     Global("C0AuraRomanceActive","GLOBAL",2)~ + ~I don't want you to apologize. I want you to be alright. Do you need a hug?~ + AURA-SAHUAGIN-8
-  ++ ~Little thing? We could've all died, Aura. Every one of us. You had good reason to be afraid.~ + AURA-SAHUAGIN-5
-  ++ ~It's alright. You're alive, breathing, and talking it out now. That still takes courage.~ + AURA-SAHUAGIN-6
-  ++ ~You're lucky you're even able to do this self-reflection right now.~ + AURA-SAHUAGIN-7
-  ++ ~That's enough. If you're really sorry, then do everything you can to make up for it. Talking solves nothing.~ + AURA-SAHUAGIN-0
+     Global("C0AuraRomanceActive","GLOBAL",2)~ + ~我不要你道歉。我要你好好的。要抱一下吗？~ + AURA-SAHUAGIN-8
+  ++ ~小事？我们本可能全死，奥拉。我们每一个人。你害怕有充分理由。~ + AURA-SAHUAGIN-5
+  ++ ~没事了。你活着，在呼吸，现在还能说出来。那仍需要勇气。~ + AURA-SAHUAGIN-6
+  ++ ~你现在还能这样自省，算你走运。~ + AURA-SAHUAGIN-7
+  ++ ~够了。你若真觉得对不起，就尽一切去弥补。光说解决不了什么。~ + AURA-SAHUAGIN-0
 
 CHAIN C0AURA2J AURA-SAHUAGIN-5
-~I know. It makes sense, I just... still can't forgive myself. Look at you, going on even with all you've lost. I still wish I could do that.~
+~我知道。这说得通，我只是……仍没法原谅自己。看看你，失去了那么多还在往前走。我还希望能做到那样。~
 EXTERN C0AURA2J AURA-SAHUAGIN-10
 
 CHAIN C0AURA2J AURA-SAHUAGIN-6
-~I'm going to keep trying, <CHARNAME>. I can't help but feel like I've failed you this time... but one day, I know I'll be able to move past this.~
+~我会继续试，<CHARNAME>。我忍不住觉得这次我辜负了你……可总有一天，我知道我能走过这一关。~
 EXTERN C0AURA2J AURA-SAHUAGIN-10
 
 CHAIN C0AURA2J AURA-SAHUAGIN-7
-~You're probably right. Besides, if I'm still able to breathe, I'll be able to keep doing my best. I'm responsible for not only myself right now, after all.~
+~你大概说得对。再说，只要我还能呼吸，我就能继续尽力。毕竟我现在不只对自己负责。~
 EXTERN C0AURA2J AURA-SAHUAGIN-10
 
 CHAIN C0AURA2J AURA-SAHUAGIN-8
-~No, I shouldn't be—~
-= ~...Yes. Please.~
+~不，我不该——~
+= ~……好。求你。~
 END
-  ++ ~Come here.~ + AURA-SAHUAGIN-9
+  ++ ~过来。~ + AURA-SAHUAGIN-9
 
 CHAIN C0AURA2J AURA-SAHUAGIN-9
-~Thanks, <CHARNAME>. I don't know what I'd do without you...~
+~谢谢，<CHARNAME>。我不知道没有你我该怎么办……~
 EXTERN C0AURA2J AURA-SAHUAGIN-10
 
 CHAIN C0AURA2J AURA-SAHUAGIN-10
-~I'm feeling better now, <CHARNAME>. Thank you for being patient with me. If you weren't here, I'd probably be curling up in a hole somewhere, if I wasn't already eaten... hehe. Bad joke, but I need to do something about the atmosphere.~
-= ~Now that I'm able to think more clearly again... this place is quite amazing, don't you think? Even as... brutal as the sahuagin are, they've managed to build something majestic together. How many people above the water could say they've seen a city like this?~
+~我现在好多了，<CHARNAME>。谢谢你耐心对我。你要不在这儿，我大概正缩在某个洞里，如果还没被吃掉的话……嘿嘿。烂笑话，可我总得做点什么缓和气氛。~
+= ~既然我又能想清楚了……这地方真了不起，你不觉得吗？就算沙华鱼人那么……残暴，他们也一起建出了宏伟的东西。水面上有多少人敢说见过这样的城市？~
 END
-  ++ ~Not many, I'd imagine.~ + AURA-SAHUAGIN-11
-  ++ ~I'm glad you're feeling well enough to talk about trivial things again.~ + AURA-SAHUAGIN-12
-  ++ ~Let's hope we live to tell the tale.~ + AURA-SAHUAGIN-11
+  ++ ~我想不多。~ + AURA-SAHUAGIN-11
+  ++ ~我很高兴你恢复得能再聊些琐事了。~ + AURA-SAHUAGIN-12
+  ++ ~但愿我们能活着把故事讲出去。~ + AURA-SAHUAGIN-11
 
 CHAIN C0AURA2J AURA-SAHUAGIN-11
-~I used to paint a lot more often when I was young... when I hadn't seen what the realms were really like yet, all I had was my imagination. Everything I created was abstract, and nothing like what the truth was... but by chance, I did paint a picture of a place somewhat like this in my head, once.~
-= ~At least one of my daydreams turned out closer to reality than I thought. Anyways... let's go and see the rest of it.~
+~我年轻时画画多得多……那时还没见过诸国度真正什么样，我只有想象。我画的一切都是抽象的，跟真相完全不同……可有一次，我竟在脑子里画过一个有点像这里的地方。~
+= ~至少我有个白日梦比我想的更接近现实。总之……我们走，去看看其余部分。~
 EXIT
 
 CHAIN C0AURA2J AURA-SAHUAGIN-12
-~Well, you should know by now... I can get a little down at times like anyone else, but keeping me down is the hard part.~
+~嗯，你该知道了……我跟别人一样有时会低落，可让我一直低落才是难事。~
 EXTERN C0AURA2J AURA-SAHUAGIN-11
 
 I_C_T SAHPR1 52 C0AuraSAHPR152
-== C0AURA2J IF ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID) GlobalGT("C0AuraSahuaginFears","GLOBAL",0)~ THEN ~I... um, need to thank you, priestess... for earlier. I probably would have been in serious danger if you hadn't taken care of me in <CHARNAME>'s absence.~
-== SAHPR1 ~Do not thank me, surface gnome. Thank the Shark-Father that you are among those chosen for his prophecy. Which you may assist us in fulfilling now if you seek to show gratitude.~
+== C0AURA2J IF ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID) GlobalGT("C0AuraSahuaginFears","GLOBAL",0)~ THEN ~我……呃，得谢谢你，女祭司……为刚才。要不是你在<CHARNAME>不在时照顾我，我大概会非常危险。~
+== SAHPR1 ~不必谢我，地面的侏儒。谢鲨父吧，你正属于被选入他预言的人。你若想表示感激，现在就可以协助我们完成它。~
 END
 
 // Copper Coronet
@@ -753,80 +753,80 @@ END
 CHAIN IF WEIGHT #-1 ~NumTimesTalkedTo(0)
 Name("C0Aura",LastTalkedToBy)
 !Global("MadamUpset","GLOBAL",1)~ THEN MADAM madamnin-aura
-~Greetings, my <LADYLORD>. I am Madame Nin, and I am here to ensure you are pleasantly accompanied. Are you interested in companionship, my <LADYLORD>?~
-== C0AURA2J ~No! I—I mean, no, thank you.~
+~问候您，我的<LADYLORD>。我是宁夫人，我在此确保您有人愉快相伴。您对陪伴有兴趣吗，我的<LADYLORD>？~
+== C0AURA2J ~不！我——我是说，不，谢谢。~
 EXIT
 
 CHAIN IF WEIGHT #-1 ~!NumTimesTalkedTo(0)
 Name("C0Aura",LastTalkedToBy)
 !Global("MadamUpset","GLOBAL",1)~ THEN MADAM madamnin-aura
-~So... do you wish a companion for the evening, then?~
-== C0AURA2J ~No! I—I mean, no, thank you.~
+~那么……您今晚想要个伴吗？~
+== C0AURA2J ~不！我——我是说，不，谢谢。~
 EXIT
 
 CHAIN IF WEIGHT #-1 ~InPartySlot(LastTalkedToBy,0) InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)
 OR(2)
 Global("C0AuraRomanceActive","GLOBAL",1)
 Global("C0AuraRomanceActive","GLOBAL",2)~ THEN MADAM madamnin
-~Greetings, my <LADYLORD>. I am Madame Nin, and I am here to ensure you are pleasantly accompanied. Are you interested in companionship, my <LADYLORD>?~
-== C0AURA2J ~No. Please leave her alone. I don't think I can muster the patience to ask politely a second time.~
+~问候您，我的<LADYLORD>。我是宁夫人，我在此确保您有人愉快相伴。您对陪伴有兴趣吗，我的<LADYLORD>？~
+== C0AURA2J ~不。请别烦她。我想我没耐心再礼貌地请求第二次。~
 EXTERN MADAM 17
 
 // Cowled Wizards
 
 I_C_T COWENF2 4 C0AuraCOWENF24
-== C0AURA2J IF ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~Be careful, <CHARNAME>... from what I've heard, the Cowled Wizards take advantage of their control over magic use for all they can get.~
+== C0AURA2J IF ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~小心，<CHARNAME>……据我所听，兜帽法师利用他们对魔法的管控能拿什么就拿什么。~
 END
 
 // de'Arnise Keep
 
 CHAIN IF WEIGHT #-1 ~AreaCheck("ar1302")
 Global("C0AuraDeArniseKeep","GLOBAL",0)~ THEN C0AURA2J DEARNISE-HOLD
-~*sniff* Yep, it's trolls alright. Nothing else could ever stink so bad.~
+~*嗅* 没错，是巨魔。没别的东西能臭成这样。~
 DO ~SetGlobal("C0AuraDeArniseKeep","GLOBAL",1)~
 END
-+ ~Global("C0AuraDruidGrove","GLOBAL",1)~ + ~Got any more of those trollbane arrows on hand?~ + DEARNISE-HOLD-1
-+ ~!Global("C0AuraDruidGrove","GLOBAL",1)~ + ~Got anything that might help us take care of them?~ + DEARNISE-HOLD-2
++ ~Global("C0AuraDruidGrove","GLOBAL",1)~ + ~你手上还有那种屠魔箭吗？~ + DEARNISE-HOLD-1
++ ~!Global("C0AuraDruidGrove","GLOBAL",1)~ + ~有什么能帮我们对付它们的东西吗？~ + DEARNISE-HOLD-2
 
 CHAIN C0AURA2J DEARNISE-HOLD-1
-~*giggle* You know it.~
+~*轻笑* 当然。~
 DO ~SetGlobal("C0AuraDeArniseKeep","GLOBAL",1) GiveItemCreate("c0auaro4",Myself,20,0,0)~ EXIT
 
 CHAIN C0AURA2J DEARNISE-HOLD-2
-~Luckily for us, I always keep a bit of trollbane fluid on hand just in case. Where is it... ah, there we go! Just add them to the arrowheads and... okay!~
-= ~When we run into those ugly things, we can stick them with one of these and they won't get back up. Too bad it doesn't take care of the smell.~
+~算我们走运，我总随身带一点屠魔液以防万一。在哪儿……啊，找到了！只要涂到箭头上……好！~
+= ~我们碰上那些丑东西时，就能用一支射它们，它们就再也起不来。可惜除不掉那股味。~
 DO ~GiveItemCreate("c0auaro4",Myself,20,0,0)~ EXIT
 
 I_C_T2 KPGLAI01 0 C0AuraKPGLAI01
-== C0AURA2J IF ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~<CHARNAME>! I'm picking up a strong hint of enchantment magic! This person must be under some sort of charm!~
+== C0AURA2J IF ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~<CHARNAME>！我探到一股强烈的附魔魔法！这人一定中了某种魅惑！~
 END
 
 // Docks District
 
 CHAIN IF WEIGHT #-1 ~Global("C0AuraDocksDistrict","GLOBAL",1)~ THEN C0AURA2J AURA-DOCKS
-~Eek, it's the Docks... not my favorite part of the city, to be sure.~
-= ~People call this the one of the most dangerous parts of the city... usually I wouldn't come here without packing a few invisibility potions to be safe. But with you, I don't think I have too much to worry about.~
+~呀，是码头区……肯定不是城里我最喜欢的地方。~
+= ~人们说这是城里最危险的地方之一……平常我不带几瓶隐形药水都不敢来。可跟你在一起，我想我不必太担心。~
 DO ~SetGlobal("C0AuraDocksDistrict","GLOBAL",2)~
 END
-++ ~Really? Where are the other dangerous parts?~ + AURA-DOCKS-1
-++ ~You sound rather familiar with this district, for someone who doesn't care for it.~ + AURA-DOCKS-2
-++ ~Whatever. Let's spend as little time here as possible. Come on.~ EXIT
+++ ~真的？别的危险地方在哪儿？~ + AURA-DOCKS-1
+++ ~你对这区这么熟，对一个不喜欢它的人来说。~ + AURA-DOCKS-2
+++ ~随便。我们尽量少待。走吧。~ EXIT
 
 CHAIN C0AURA2J AURA-DOCKS-1
-~They say the dead rises from the earth in the Graveyard during the dead of night... I hope it's just a story, though. It's bad enough that the tombs are infested.~
-= ~I've been in there once or twice. N–not to steal anything, if that's what you're thinking! I was just curious... we didn't have such extravagant mausoleums back in Lantan.~
+~他们说墓园区半夜会有死者从地里爬出来……我希望只是故事。光墓穴里满是虫就够糟了。~
+= ~我进去过一两次。不——不是去偷东西，你若在想这个！我只是好奇……兰坦可没有这么奢华的陵墓。~
 EXTERN C0AURA2J AURA-DOCKS-3
 
 CHAIN C0AURA2J AURA-DOCKS-2
-~I try not to come here during the night. There's a few places of interest for me though, like the Temple of Oghma... and sometimes I just like to walk near the ocean and take in the breeze.~
-= ~Not too close, though... I still get shivers thinking about being in large bodies of water. But my home, Anchoril, is a coastal town... so it reminds me of home, a little.~
+~我尽量夜里不来这儿。不过有几个我感兴趣的地方，比如欧格玛神殿……有时我只是喜欢在近海处走走、吹吹风。~
+= ~可别太近……一想到身处大片水域，我仍会发抖。可我家乡安科里尔是座海滨镇……所以它让我有点想起家。~
 EXTERN C0AURA2J AURA-DOCKS-3
 
 CHAIN C0AURA2J AURA-DOCKS-3
-~To the point... in case you don't already know, <CHARNAME>, I know someone who works in this district. His name's Cromwell, and he's an excellent smith. I haven't known him long, but everything I've seen him build is exquisite.~
-== C0AURA2J IF ~Global("C0AuraKnowsBG1","GLOBAL",1)~ THEN ~I actually left something of mine with him not long ago. The "Swift Wing"... Saitō-san's old sword. I couldn't bring myself to get rid of it, even with the dark memories... but I'm not an expert on traditional weapons, so I sought Cromwell out for some help with maintenance.~
-== C0AURA2J IF ~!Global("C0AuraKnowsBG1","GLOBAL",1)~ THEN ~I actually left something of mine with him not long ago. A blade from Kara-Tur. It belong to a... friend I once knew. I'm not an expert on traditional weapons, so I sought Cromwell out for some help with maintenance.~
-== C0AURA2J ~I've been meaning to check up on it for a while now, so if it's possible, maybe we could have a look. And who knows, there might be something else we have that he could put together for us.~
+~说正事……怕你还不知道，<CHARNAME>，我认识一个在这区干活的人。他叫克伦威尔，是个极好的铁匠。我认识他不久，可我看他造的一切都精美。~
+== C0AURA2J IF ~Global("C0AuraKnowsBG1","GLOBAL",1)~ THEN ~其实我不久前把一样东西留在他那儿。“迅翼”……斋藤先生的旧刀。就算有那些黑暗记忆，我也舍不得丢……可我不懂传统兵器，所以找克伦威尔帮忙保养。~
+== C0AURA2J IF ~!Global("C0AuraKnowsBG1","GLOBAL",1)~ THEN ~其实我不久前把一样东西留在他那儿。一把卡拉图的刀。它属于一个……我曾认识的友人。我不懂传统兵器，所以找克伦威尔帮忙保养。~
+== C0AURA2J ~我一直想去看看它，若可以，我们也许能去瞧瞧。谁知道呢，也许我们还有别的东西能让他替我们拼起来。~
 END
 IF ~~ EXTERN C0AURA2J AURA-DOCKS-4
 IF ~OR(3)
@@ -850,40 +850,40 @@ IF ~PartyHasItem("misc12")~ EXTERN C0AURA2J AURA-DOCKS-ANKHEG
 IF ~PartyHasItem("misc5k")~ EXTERN C0AURA2J AURA-DOCKS-ILLITHIUM
 
 CHAIN C0AURA2J AURA-DOCKS-EQUALIZER
-~I'm sure he'd know what to do with that piece of the Equalizer we've got if you showed it to him. If we had all the pieces, that is.~
+~我确定你若把那块均衡者给他看，他会知道怎么弄。前提是我们凑齐所有部分。~
 EXTERN C0AURA2J AURA-DOCKS-4
 
 CHAIN C0AURA2J AURA-DOCKS-GESEN
-~I'm sure he'd know what to do with that piece of the Gesen Bow we've got if you showed it to him. I'd love to see how it compared to my Sunshooter.~
+~我确定你若把那块盖森弓给他看，他会知道怎么弄。我很想看看它跟我的太阳射手比如何。~
 EXTERN C0AURA2J AURA-DOCKS-4
 
 CHAIN C0AURA2J AURA-DOCKS-SILVERSWORD
-~I'm sure he'd know what to do with that piece of the gith sword we've got if you showed it to him. If we had all the pieces, that is.~
+~我确定你若把那块吉斯剑给他看，他会知道怎么弄。前提是我们凑齐所有部分。~
 EXTERN C0AURA2J AURA-DOCKS-4
 
 CHAIN C0AURA2J AURA-DOCKS-WAVE
-~I'm sure he'd know what to do with that piece of the Wave halberd we've got if you showed it to him. If we had all the pieces, that is.~
+~我确定你若把那块波涛戟给他看，他会知道怎么弄。前提是我们凑齐所有部分。~
 EXTERN C0AURA2J AURA-DOCKS-4
 
 CHAIN C0AURA2J AURA-DOCKS-CROM
-~I'm sure he'd know what to do with that dwarven scroll we've got if you showed it to him. I can't read it at all, but I'm sure he could.~
+~我确定你若把那卷矮人卷轴给他看，他会知道怎么弄。我完全读不懂，可我确定他能。~
 EXTERN C0AURA2J AURA-DOCKS-4
 
 CHAIN C0AURA2J AURA-DOCKS-DRAGON
-~I'm sure he'd know what to do with those dragon scales we've got if you showed it to him. I know he's worked with such materials before.~
+~我确定你若把那些龙鳞给他看，他会知道怎么弄。我知道他以前处理过这类材料。~
 EXTERN C0AURA2J AURA-DOCKS-4
 
 CHAIN C0AURA2J AURA-DOCKS-ANKHEG
-~I'm sure he'd know what to do with that smelly old ankheg shell we've got if you showed it to him. His skills are probably even greater than master Taerom from Beregost.~
+~我确定你若把那块臭烘烘的旧安克赫壳给他看，他会知道怎么弄。他的本事大概比贝雷戈斯特的泰罗姆大师还强。~
 EXTERN C0AURA2J AURA-DOCKS-4
 
 CHAIN C0AURA2J AURA-DOCKS-ILLITHIUM
-~I've seen him work with all sorts of metal. Mithral, adamantite, illithium... hey, we've got some illithium with us right now. I'm sure he could make something incredible with that.~
+~我见他对各种金属都能下手。秘银、精金、伊里锡姆……嘿，我们身上现在就有些伊里锡姆。我确定他能用它造出了不起的东西。~
 EXTERN C0AURA2J AURA-DOCKS-4
 
 CHAIN C0AURA2J AURA-DOCKS-4
-~Even if we didn't have anything he could work with, though, it'd be nice to drop in and say hello. His house is to the far southeast.~
-= ~Just be careful... the Shadow Thieves run this part of the city... or so I've heard.~
+~不过就算我们没东西给他做，去打个招呼也好。他家在最东南边。~
+= ~只是小心……影贼管着这城这一片……至少我听说是。~
 EXIT
 
 CHAIN IF WEIGHT #-1 
@@ -892,33 +892,33 @@ Range("C0Aura",15)
 RandomNum(2,1)
 !StateCheck("C0Aura",CD_STATE_NOTVALID)
 Global("C0AuraCelvan","AR0300",0)~ THEN CELVAN AURA-CELVAN
-~There once was a prodigious gnome,
-Who wandered far away from home,
-In the East did she find peace,
-'Til mentor's death did it cease,
-And in search of the truth she did roam!~
+~从前有个了不起的侏儒，
+离家远去游四方，
+她在东方寻得安宁，
+直到导师之死令其中断，
+她便踏上寻求真相的旅程！~
 DO ~SetGlobal("C0AuraCelvan","AR0300",1)~
-== C0AURA2J ~How do you know so much? I don't suppose you know my future too? ...Hey, come back!~
+== C0AURA2J ~你怎么知道这么多？我猜你也知道我的未来？……嘿，回来！~
 END CELVAN 1
 
 CHAIN IF WEIGHT #-1 
 ~Global("C0AuraCromwell","GLOBAL",0)
 Range("C0Aura",15)
 InParty("C0Aura")~ THEN WSMITH01 AURA-CROMWELL
-~Eh? Ain't ye...~
-== C0AURA2J ~Hello, Cromwell! It's me again.~
+~呃？你不是……~
+== C0AURA2J ~你好，克伦威尔！又是我。~
 DO ~SetGlobal("C0AuraCromwell","GLOBAL",1)~
-== WSMITH01 ~Ah, if it ain't the clever lass with the magnificent construct. It's good to see ye again. I take it ye're here for that beautiful blade ye left me afore?~
-== C0AURA2J ~Well, it's not the only reason, but I did want to ask, yes. Is it...~
-== WSMITH01 ~Aye, I have it here, girl. Fine blade, didn't need much work done, though like all weapons there's no harm in doin' some refining.~
+== WSMITH01 ~啊，这不是带着了不起构造体的聪明丫头吗。又见你真好。我猜你是来取你留给我那把漂亮刀的吧？~
+== C0AURA2J ~嗯，这不是唯一的原因，可我确实想问问。它……~
+== WSMITH01 ~是，它在这儿，丫头。好刀，没多少活儿要做，不过跟所有兵器一样，精修一下没坏处。~
 DO ~GiveItemCreate("C0AUSW02","C0AURA",1,0,0)~
 == C0AURA2J IF ~NumTimesTalkedTo(0)
 !IsGabber(Player1)
-!IsGabber("C0Aura")~ ~Thank you, Cromwell. By the way, this is <GABBER>, one of my companions. We're here to make use of your masterful skills.~
+!IsGabber("C0Aura")~ ~谢谢你，克伦威尔。顺便，这是<GABBER>，我的一位同伴。我们来用上你的大师手艺。~
 == C0AURA2J IF ~NumTimesTalkedTo(0)
 OR(2)
 IsGabber("C0Aura")
-IsGabber(Player1)~ ~By the way, this is <CHARNAME>, my leader. We're here to make use of your masterful skills.~
+IsGabber(Player1)~ ~顺便，这是<CHARNAME>，我的领队。我们来用上你的大师手艺。~
 END
 IF ~!NumTimesTalkedTo(0)~ EXTERN WSMITH01 58
 IF ~NumTimesTalkedTo(0) !IsGabber("C0Aura")~ EXTERN WSMITH01 5
@@ -929,7 +929,7 @@ EXTEND_BOTTOM WSMITH01 13
 END
   
 CHAIN WSMITH01 CROMWELL0
-~Ah, I recognize this one... this be that young lass Aura's eastern blade, is it not?~
+~啊，我认得这一把……这是那位年轻姑娘奥拉的东方刀，不是吗？~
 END
     IF ~Global("C0AuraCromwellSwordForgeFirst","GLOBAL",0)~ EXTERN WSMITH01 CROMWELL1
     IF ~!Global("C0AuraCromwellSwordForgeFirst","GLOBAL",0)
@@ -942,9 +942,9 @@ END
         PartyHasItem("MISC6Z")~ EXTERN WSMITH01 CROMWELL3
 
 CHAIN WSMITH01 CROMWELL1
-~Actually, when I saw the engravin' on the guard, I realized I knew the maker's name, if ye'll believe it. I did my share of travelin' while learnin' the trade, meeting other smiths of renown, an' one that I remember well was of Kara-Turan descent.~
-== WSMITH01 ~Had some long an' difficult to pronounce name, what was it...? "Shingorou Takemichi Musou", I think. One of the most arrogant men I've ever met, but no doubt his skill in forgin' these eastern sword be unrivaled. Still, I have ne'er given up hope in findin' a chance to show him up. Ever since I laid eyes on this sword, I've been considerin' ideas, and I think there be one.~
-== C0AURA2J IF ~InParty("C0Aura") Range("C0Aura",15)~ THEN ~Really? What sort of material would you need for that, Cromwell?~
+~其实，我看见护手上的刻字时，才想起我认识铸它的人，你信吗。我学这门手艺时也走过不少地方，见过别的名匠，其中一个我记得很清楚，是卡拉图血统。~
+== WSMITH01 ~名字又长又难念，叫什么来着……“新五郎·武通·无双”，我想。他是我见过最傲慢的人之一，可他锻这些东方刀的本事无疑无人能比。不过，我从没放弃找机会压他一头。自从我看见这把刀，我就一直在琢磨，我想我有办法了。~
+== C0AURA2J IF ~InParty("C0Aura") Range("C0Aura",15)~ THEN ~真的？那你需要什么材料，克伦威尔？~
 END
     IF ~PartyHasItem("C0AUSW02")
         OR(2)
@@ -955,14 +955,14 @@ END
         PartyHasItem("MISC6Z")~ EXTERN WSMITH01 CROMWELL3
 
 CHAIN WSMITH01 CROMWELL2
-~If ye find a beljuril an' a demon heart, as difficult of a demand as that may be, I can infuse this blade with the power of the storms. That man makes sharper blades than any other mortal hand, but there be no blade sharper than the strike of lightning.~
+~你若找到一颗贝尔朱里尔宝石和一颗恶魔之心，虽然这要求难得很，我就能把风暴之力注入这把刀。那人锻的刃比任何凡人之手都锋利，可没有哪把刃比闪电的一击更利。~
 EXTERN WSMITH01 CROMWELLNO
 
 CHAIN WSMITH01 CROMWELL3  
-~I see ye've a beljuril, as well as a demon heart. With the natural energies of the gem an' the fury of a fiend, I can infuse this blade with the power of the storms. That man makes sharper blades than any other mortal hand, but there be no blade sharper than the strike of lightning. It'll take 8000 gold for the work.~
+~我看你有一颗贝尔朱里尔，还有一颗恶魔之心。借宝石的自然之能与恶魔的狂怒，我能把风暴之力注入这把刀。那人锻的刃比任何凡人之手都锋利，可没有哪把刃比闪电的一击更利。这活得八千枚金币。~
 END
-    + ~PartyGoldLT(8000)~ + ~I don't have enough gold.~ EXTERN WSMITH01 CROMWELLNO
-    + ~PartyGoldGT(7999)~ + ~That sounds good. Do it.~ DO ~SetGlobal("C0AuraCromwellSwordUpgrade","ar0334",1)
+    + ~PartyGoldLT(8000)~ + ~我没有足够的金币。~ EXTERN WSMITH01 CROMWELLNO
+    + ~PartyGoldGT(7999)~ + ~听着不错。动手吧。~ DO ~SetGlobal("C0AuraCromwellSwordUpgrade","ar0334",1)
                                                  SetGlobal("ForgeStuff","GLOBAL",1)
                                                  TakePartyGold(8000)
                                                  TakePartyItemNum("C0AUSW02",1)
@@ -972,18 +972,18 @@ END
                                                  TakePartyItemNum("MISC6Z",1)
                                                  DestroyItem("MISC6Z")
                                                  DestroyGold(8000)~ EXTERN WSMITH01 56
-    ++ ~Not at this time. What else?~ EXTERN WSMITH01 CROMWELLNO
+    ++ ~这次不了。还有什么？~ EXTERN WSMITH01 CROMWELLNO
 
 CHAIN IF WEIGHT #-1 ~GlobalGT("C0AuraCromwellSwordUpgrade","ar0334",0)~ THEN WSMITH01 CROMWELL4 
-~Well, there ye go, me friend. Use it well. And if ye comes across anything else of interest, ye knows where to bring it, aye?~
+~嗯，拿去吧，我的朋友。好好用。你若再碰上别的有意思的东西，知道该往哪儿送，是吧？~
 DO ~SetGlobal("C0AuraCromwellSwordUpgrade","ar0334",0)~ EXIT
 
 CHAIN WSMITH01 CROMWELLNO
-~Now then, let's have a look at what else ye got in here, eh?~
+~那么，我们来看看你还带了什么，嗯？~
 COPY_TRANS WSMITH01 13
 
 I_C_T ARAN 40 C0AuraARAN40
-== C0AURA2J IF ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~An asylum for "mages and talented people"? That sounds ominous... and terribly, terribly wrong.~
+== C0AURA2J IF ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~一座“法师与有才之人的”收容所？听着不祥……而且糟、糟透了。~
 END
 
 EXTEND_BOTTOM ARAN 42
@@ -991,116 +991,116 @@ IF ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)
 END
 
 CHAIN C0AURA2J SHIPFEAR
-~*shudder* The sea again...~
+~*打颤* 又是海……~
 END
-  + ~Global("C0AuraKnowsBG1","GLOBAL",1)~ + ~You have a bad history with sea travel. Will you be alright?~ + SHIPFEAR-1
-  + ~Global("C0AuraKnowsBG1","GLOBAL",1)~ + ~I know you don't enjoy it, but I need you to be strong for the journey.~ + SHIPFEAR-1
-  + ~Global("C0AuraKnowsBG1","GLOBAL",1)~ + ~If a ship frightens you that much, you're free to stay behind.~ + SHIPFEAR-1
-  + ~!Global("C0AuraKnowsBG1","GLOBAL",1)~ + ~Is everything alright, Aura?~ + SHIPFEAR-2
-  + ~!Global("C0AuraKnowsBG1","GLOBAL",1)~ + ~What is wrong with you?~ + SHIPFEAR-2
+  + ~Global("C0AuraKnowsBG1","GLOBAL",1)~ + ~你对海上旅行有不好的经历。你会没事吗？~ + SHIPFEAR-1
+  + ~Global("C0AuraKnowsBG1","GLOBAL",1)~ + ~我知道你不喜欢，可这趟旅程我需要你坚强。~ + SHIPFEAR-1
+  + ~Global("C0AuraKnowsBG1","GLOBAL",1)~ + ~若船这么让你害怕，你可以留下。~ + SHIPFEAR-1
+  + ~!Global("C0AuraKnowsBG1","GLOBAL",1)~ + ~一切还好吗，奥拉？~ + SHIPFEAR-2
+  + ~!Global("C0AuraKnowsBG1","GLOBAL",1)~ + ~你怎么了？~ + SHIPFEAR-2
 
 CHAIN C0AURA2J SHIPFEAR-1
-~I... I'll be fine, <CHARNAME>. I can't let my personal issues hold you back. And don't you even start talking about leaving me to go into danger on your own!~
+~我……我会没事的，<CHARNAME>。我不能让个人的问题拖住你。你也别开口说要我留下、自己一个人去冒险！~
 EXTERN ARAN SHIPFEAR-3
 
 CHAIN C0AURA2J SHIPFEAR-2
-~It's just that... I haven't had the best experiences on a ship. I almost lost my life on one, years ago... but I need to move past that.~
+~只是……我在船上没什么好经历。多年前我差点在一条船上送了命……可我得走过去。~
 EXTERN C0AURA2J SHIPFEAR-1
 
 CHAIN ARAN SHIPFEAR-3
-~I promise that I can do my utmost to provide the finest accommodations for those uneasy towards waterborne travel. But I fear this is the only way to reach your destination.~
+~我保证会尽力为怕水路的人提供最好的安置。可我怕这是抵达你们目的地的唯一办法。~
 EXTERN ARAN 43
 
 I_C_T2 WSMITH01 8 C0AuraWSMITH018
-== C0AURA2J IF ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~Cromwell's a true master of his craft. He was the one who drafted most of the enhancements for my automaton a while before we met. When it comes to working the forge, I've never seen anyone better.~
+== C0AURA2J IF ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~克伦威尔是真正的手艺大师。我们见面前不久，我这台构造体的大部分强化都是他画的图。说到打铁，我从没见过比他更好的。~
 END
 
 I_C_T BOOTER 3 C0AuraBOOTER3
-== C0AURA2J IF ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~Inhumane... he's revelling in the amount of suffering he's dealing to other living beings. <CHARNAME>, let's just go. I don't think I can stand this for much longer.~
+== C0AURA2J IF ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~不人道……他在享受自己给别的生灵造成的痛苦。<CHARNAME>，我们走吧。我想我再也受不了了。~
 END
 
 I_C_T2 RENFELD 6 C0AuraRENFELD6
-== C0AURA2J IF ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~I've never seen any poison as vile as this. If we don't get this poor fellow to safety, he'll be dead within hours!~
+== C0AURA2J IF ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~我从没见过这么恶毒的毒。我们若不能把这位可怜人送到安全处，他几小时内就会死！~
 END
 
 I_C_T HLSKULL 0 C0AuraHLSKULL0
-== C0AURA2J IF ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~W–wait, <CHARNAME>! Always be cautious before you touch potentially cursed– oh, too late...~
+== C0AURA2J IF ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~等——等等，<CHARNAME>！碰可能有诅咒的东西前总要小心——哦，太晚了……~
 END
 
 I_C_T MAEVAR 1 C0AuraMAEVAR1
-== C0AURA2J IF ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~What a cruel way to operate...~
+== C0AURA2J IF ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~多么残忍的手段……~
 END
 
 I_C_T DOGHMA 0 C0AuraDOGHMA0
-== C0AURA2J IF ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~*sniff* Oh, how I love breathing in the familiar scent of ink and parchment after a long day's travels!~
-== DOGHMA ~Quite. Please, do not hesitate to peruse our wealth of knowledge while you are here.~
+== C0AURA2J IF ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~*嗅* 哦，我多爱在长途跋涉一天后呼吸这熟悉的墨与羊皮纸味！~
+== DOGHMA ~的确。你在此逗留时，请不必犹豫，尽管浏览我们丰富的知识。~
 END
 
 // Drizzt
 
 I_C_T C6BRUEN1 9 C0AuraDrizzt2
-== C0AURA2J IF ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~...What's wrong with pink?~
+== C0AURA2J IF ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~……粉色有什么不好？~
 END
 
 I_C_T2 C6DRIZZ1 37 C0AuraDrizzt3
-== C0AURA2J IF ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~Ohh, we're really going to be fighting alongside the Companions of the Hall! I hope someone writes this one into their next epic.~
+== C0AURA2J IF ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~哦，我们真要跟厅堂同伴并肩作战了！希望有人把这一役写进下一部史诗。~
 END
 
 // Druid Grove
 
 CHAIN IF WEIGHT #-1 ~AreaCheck("ar1900")
 Global("C0AuraDruidGrove","GLOBAL",0)~ THEN C0AURA2J DRUID-GROVE
-~Oh dear. Do you smell that, <CHARNAME>? The stink in the air that's like rotten meat?~
+~哦天。你闻到那味了吗，<CHARNAME>？空气里那股像腐肉一样的臭味？~
 DO ~SetGlobal("C0AuraDruidGrove","GLOBAL",1)~
 END
 + ~OR(3)
 CheckStatGT(Player1,15,INT)
 Class(Player1,RANGER_ALL)
-Class(Player1,DRUID_ALL)~ + ~Trolls. The stench is unmistakable.~ + DRUID-GROVE-1
+Class(Player1,DRUID_ALL)~ + ~巨魔。这臭味不会错。~ + DRUID-GROVE-1
 + ~!CheckStatGT(Player1,15,INT)
 !Class(Player1,RANGER_ALL)
-!Class(Player1,DRUID_ALL)~ + ~What about it?~ + DRUID-GROVE-2
+!Class(Player1,DRUID_ALL)~ + ~那又怎样？~ + DRUID-GROVE-2
 
 CHAIN C0AURA2J DRUID-GROVE-1
-~Yeah. I really hate those things.~
+~是啊。我真恨那些东西。~
 END
-+ ~Global("C0AuraDeArniseKeep","GLOBAL",1)~ + ~Got any more of those trollbane arrows on hand?~ + DEARNISE-HOLD-1
++ ~Global("C0AuraDeArniseKeep","GLOBAL",1)~ + ~你手上还有那种屠魔箭吗？~ + DEARNISE-HOLD-1
 IF ~!Global("C0AuraDeArniseKeep","GLOBAL",1)~ EXTERN C0AURA2J DRUID-GROVE-3
 
 CHAIN C0AURA2J DRUID-GROVE-2
-~It means trolls. I really hate those things.~
+~那意味着巨魔。我真恨那些东西。~
 END
-+ ~Global("C0AuraDeArniseKeep","GLOBAL",1)~ + ~Got any more of those trollbane arrows on hand?~ + DEARNISE-HOLD-1
++ ~Global("C0AuraDeArniseKeep","GLOBAL",1)~ + ~你手上还有那种屠魔箭吗？~ + DEARNISE-HOLD-1
 IF ~!Global("C0AuraDeArniseKeep","GLOBAL",1)~ EXTERN C0AURA2J DRUID-GROVE-3
 
 CHAIN C0AURA2J DRUID-GROVE-3
-~Luckily for us, I always keep a bit of trollbane fluid on hand just in case. Where is it... ah, there we go! Just add them to the arrowheads and... okay!~
-= ~When we run into those ugly things, we can stick them with one of these and they won't get back up. Too bad it doesn't take care of the smell.~
+~算我们走运，我总随身带一点屠魔液以防万一。在哪儿……啊，找到了！只要涂到箭头上……好！~
+= ~我们碰上那些丑东西时，就能用一支射它们，它们就再也起不来。可惜除不掉那股味。~
 DO ~GiveItemCreate("c0auaro4",Myself,20,0,0)~ EXIT
 
 INTERJECT TRRAK01 0 C0AuraTRRAK010
-== C0AURA2J IF ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~Wait, waitwaitwait, <CHARNAME>! I'm sensing illusions around every corner of this cottage! And... it's strongest on this old lady here! Oh... I know! It's rakshasan magic! Be careful!~
+== C0AURA2J IF ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~等等，等等等等，<CHARNAME>！我感到这村舍每个角落都有幻象！而且……在这位老妇人身上最强！哦……我知道了！是罗刹魔法！小心！~
 EXTERN TRRAK01 3
 
 I_C_T2 DRUSH 9 C0AuraDRUSH9
-== C0AURA2J IF ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~Oh, ugh! Gross! Where, where's my odor eliminating spray? I used it all up? Right when we need it! Augh!~
+== C0AURA2J IF ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~哦，呃！恶心！我的除臭喷雾在哪儿？我用光了？偏偏在我们需要的时候！啊！~
 END
 
 I_C_T2 CEFALD04 3 C0AuraCEFALD04
-== C0AURA2J IF ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~No! Why would you do this? This is nothing but devastation of the natural order! I can't stay and watch this!~
+== C0AURA2J IF ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~不！你为什么要这样做？这不过是对自然秩序的摧毁！我不能留在这儿看！~
 DO ~LeaveParty()
 EscapeArea()~ END
 
 // Edwin
 
 I_C_T EDWINJ 10 C0AuraEDWINJ10
-== C0AURA2J IF ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~This is a terrible idea.~
+== C0AURA2J IF ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~这是个可怕的主意。~
 END
 
 // Elhan
 
 I_C_T C6ELHAN2 28 C0AuraC6ELHAN228
-== C0AURA2J IF ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~The ancient home of the elves... just destroyed like that... by one man?~
+== C0AURA2J IF ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~精灵的古老家园……就这样被毁了……被一个人？~
 END
 
 // Government District
@@ -1109,9 +1109,9 @@ CHAIN IF WEIGHT #-1 ~Range("C0Aura",15)
 InParty("C0Aura")
 RandomNum(2,2)
 Global("C0AuraOriona","LOCALS",0)~ THEN ORIONA AURA-ORIONA
-~Well now, aren't you a sweet little doll. If I had the time, I would take you back to my mansion and prop you up in a display with my other treasures.~
+~哎哟，你真是个可爱的小娃娃。我要是有时间，就把你带回我的宅子，跟我的其他珍藏一起摆在展示架上。~
 DO ~SetGlobal("C0AuraOriona","LOCALS",1)~
-== C0AURA2J ~Umm... I *think* that's a compliment?~
+== C0AURA2J ~呃……我*想*那是夸奖？~
 EXIT
 
 EXTEND_BOTTOM VALYGARJ 117
@@ -1119,11 +1119,11 @@ IF ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)
 END
 
 CHAIN C0AURA2J aura-notolger
-~Don't do this, <CHARNAME>... whatever the wizards want, it's not justice, I know it.~
+~别这么做，<CHARNAME>……不管法师们要什么，那都不是正义，我知道。~
 COPY_TRANS VALYGARJ 117
 
 INTERJECT TOLGER 84 C0AuraTOLGER84
-== C0AURA2J IF ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~This is horrible... I—I can't look at this. Or you, <CHARNAME>, not anymore. I'm done!~
+== C0AURA2J IF ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~这太可怕了……我——我没法看这个。也没法再看你，<CHARNAME>，再也。我受够了！~
 END
 IF ~OR(2)
 Global("C0AuraRomanceActive","GLOBAL",1)
@@ -1135,97 +1135,97 @@ IF ~!Global("C0AuraRomanceActive","GLOBAL",1)
 EscapeArea()~ EXTERN VALYGARJ 118
 
 I_C_T2 SCSARLES 11 C0AuraSCSARLES11
-== C0AURA2J IF ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~T–t–TWO HUNDRED POUNDS?! <CHARNAME>, do you have any idea how unlikely it is just getting enough illithium to fit in the palm of your hand? Ooh, this is going to be a nightmare...~
+== C0AURA2J IF ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~两——两——两百磅？！<CHARNAME>，你知道光弄到能放进手掌心的伊里锡姆有多难吗？哦，这会是场噩梦……~
 END
 
 I_C_T CORNEIL 9 C0AuraCORNEIL9
-== C0AURA2J IF ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~Five— FIVE THOUSAND?! For the right to use magic? That's plain robbery!~
-== CORNEIL ~That is the price required for the privilege of spellcasting. Take it or leave it.~
+== C0AURA2J IF ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~五——五千？！就为了使用魔法的权利？这简直是抢劫！~
+== CORNEIL ~这就是施展法术这项特权所需的价钱。要就要，不要就走。~
 END
 
 I_C_T MARIA 5 C0AuraMARIA5
-== C0AURA2J IF ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~Oh no, how awful... there's few things more important than a close family, and now this... poor Sir Keldorn.~
+== C0AURA2J IF ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~哦不，多可怕……没什么比亲近的家人更重要，现在这样……可怜的凯尔东爵士。~
 END
 
 I_C_T VICG1 2 C0AuraVICG12
-== C0AURA2J IF ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~*gasp!* They're about to burn someone alive, <CHARNAME>! How awful!~
+== C0AURA2J IF ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~*倒吸一口气* 他们要把人活活烧死，<CHARNAME>！多可怕！~
 END
 
 // Graveyard District
 
 I_C_T ANOMENJ 150 C0AuraANOMENJ150
-== C0AURA2J IF ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~This must be hard. If someone murdered my sisters... I don't know what I'd do if it were up to me. At the very least... I'd want to know the whole truth.~
+== C0AURA2J IF ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~这一定很难。若有人杀了我的姐妹……我不知道轮到我时会怎么做。至少……我想知道全部真相。~
 END
 
 I_C_T TIRDIR 2 C0AuraTIRDIR2
-== C0AURA2J IF ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~Terrible... I can't think of many worse ways to suffer. Why would anyone do something so pointlessly cruel?~
+== C0AURA2J IF ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~太可怕了……我想不出多少比这更痛苦的受苦方式。为什么有人要做这么毫无意义的残忍事？~
 END
 
 I_C_T2 WELLYN 10 C0AuraWELLYN10
-== C0AURA2J IF ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~That's the best we can do for him, I suppose. The poor child. Sleep well...~
+== C0AURA2J IF ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~我想这是我们能为他的最好结果了。可怜的孩子。安息吧……~
 END
 
 I_C_T2 LESTER 5 C0AuraLESTER5
-== C0AURA2J IF ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~Wow. And I thought my great-uncle Gable was crazy.~
+== C0AURA2J IF ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~哇。我还以为我曾叔祖盖博就够疯了。~
 END
 
 I_C_T2 BHCRYPT 0 C0AuraBHCRYPT0
-== C0AURA2J IF ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~I guess a 'Sorry!' wouldn't help?~
+== C0AURA2J IF ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~我猜一句“对不起！”也帮不上忙？~
 END
 
 // Hell
 
 I_C_T PLAYER1 25 C0AuraEnteringHell1
-== C0AURA2J IF ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~Ooh... I felt myself sinking into something so dark and terrible beyond words! The only thing I could hear was your voice, so I followed it and... well, here I am. I'm glad I was able to find you.~
+== C0AURA2J IF ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~哦……我感到自己沉进某种言语无法描述的黑暗可怕之物！我唯一能听见的是你的声音，就跟着它，然后……好吧，我在这儿。我很高兴找到了你。~
 END
 
 I_C_T HELLJON 7 C0AuraThirdBattleWithIrenicus1
-== C0AURA2J IF ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~I've never been thrilled to end a life... but the soul that'll face the karma wrought by its sins will be your own, Irenicus!~
-== C0AURA2J IF ~Global("C0AuraRomanceActive","GLOBAL",2) GlobalGT("C0AuraRomanceYRGlob","GLOBAL",0)~ THEN ~As for Yoshimo... I'll make sure his soul finds peace, even if I must put a thousand arrows into you for it!~
+== C0AURA2J IF ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~我从不为结束一条生命而兴奋……可那要面对自己罪业因果的灵魂，将是你的，爱瑞尼库斯！~
+== C0AURA2J IF ~Global("C0AuraRomanceActive","GLOBAL",2) GlobalGT("C0AuraRomanceYRGlob","GLOBAL",0)~ THEN ~至于吉野……我一定让他的灵魂得到安宁，哪怕为此得往你身上射进一千支箭！~
 END
 
 I_C_T HELLJON 8 C0AuraThirdBattleWithIrenicus1
-== C0AURA2J IF ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~I've never been thrilled to end a life... but the soul that'll face the karma wrought by its sins will be your own, Irenicus!~
-== C0AURA2J IF ~Global("C0AuraRomanceActive","GLOBAL",2) GlobalGT("C0AuraRomanceYRGlob","GLOBAL",0)~ THEN ~As for Yoshimo... I'll make sure his soul finds peace, even if I must put a thousand arrows into you for it!~
+== C0AURA2J IF ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~我从不为结束一条生命而兴奋……可那要面对自己罪业因果的灵魂，将是你的，爱瑞尼库斯！~
+== C0AURA2J IF ~Global("C0AuraRomanceActive","GLOBAL",2) GlobalGT("C0AuraRomanceYRGlob","GLOBAL",0)~ THEN ~至于吉野……我一定让他的灵魂得到安宁，哪怕为此得往你身上射进一千支箭！~
 END
 
 I_C_T HELLJON 9 C0AuraThirdBattleWithIrenicus1
-== C0AURA2J IF ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~I've never been thrilled to end a life... but the soul that'll face the karma wrought by its sins will be your own, Irenicus!~
-== C0AURA2J IF ~Global("C0AuraRomanceActive","GLOBAL",2) GlobalGT("C0AuraRomanceYRGlob","GLOBAL",0)~ THEN ~As for Yoshimo... I'll make sure his soul finds peace, even if I must put a thousand arrows into you for it!~
+== C0AURA2J IF ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~我从不为结束一条生命而兴奋……可那要面对自己罪业因果的灵魂，将是你的，爱瑞尼库斯！~
+== C0AURA2J IF ~Global("C0AuraRomanceActive","GLOBAL",2) GlobalGT("C0AuraRomanceYRGlob","GLOBAL",0)~ THEN ~至于吉野……我一定让他的灵魂得到安宁，哪怕为此得往你身上射进一千支箭！~
 END
 
 I_C_T HELLJON 10 C0AuraThirdBattleWithIrenicus1
-== C0AURA2J IF ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~I've never been thrilled to end a life... but the soul that'll face the karma wrought by its sins will be your own, Irenicus!~
-== C0AURA2J IF ~Global("C0AuraRomanceActive","GLOBAL",2) GlobalGT("C0AuraRomanceYRGlob","GLOBAL",0)~ THEN ~As for Yoshimo... I'll make sure his soul finds peace, even if I must put a thousand arrows into you for it!~
+== C0AURA2J IF ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~我从不为结束一条生命而兴奋……可那要面对自己罪业因果的灵魂，将是你的，爱瑞尼库斯！~
+== C0AURA2J IF ~Global("C0AuraRomanceActive","GLOBAL",2) GlobalGT("C0AuraRomanceYRGlob","GLOBAL",0)~ THEN ~至于吉野……我一定让他的灵魂得到安宁，哪怕为此得往你身上射进一千支箭！~
 END
 
 // Jansens
 
 CHAIN IF WEIGHT #-1 ~Global("C0AuraKylie","GLOBAL",0) InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN KYLIE1 kylie
-~Oh, Aura! Are you leaving?~
+~哦，奥拉！你要走了吗？~
 DO ~SetGlobal("C0AuraKylie","GLOBAL",1)~
-== C0AURA2J ~Yep. I'm going adventuring with my friend <CHARNAME> for a while.~
-== KYLIE1 ~Tsk, tsk. That's a real shame. There's too few good gnome girls in this city to hang around with. Especially one with such good taste in culinary delights.~
-== C0AURA2J ~Aww, thanks, Kylie. I've got to thank you for your hospitality too. I'd never have known how delectable Amnian turnip soup is if not for your cooking.~
-== KYLIE1 ~Well, come back alive and I'll cook you a full-course turnip meal all you like! Oh, and, I almost forgot— here, this is for you. I got a good deal at the market for those parts you gave me to sell. Thanks for helping the family out.~
+== C0AURA2J ~嗯。我要跟我朋友<CHARNAME>去冒险一阵。~
+== KYLIE1 ~啧，啧。真可惜。这城里能一起混的好侏儒姑娘太少了。尤其是一个在美食上品味这么好的。~
+== C0AURA2J ~唉，谢谢，凯莉。我也得谢你的招待。要不是你的手艺，我永远不知道安姆的芜菁汤这么好吃。~
+== KYLIE1 ~嗯，活着回来，我就给你做一顿全芜菁宴，随你吃！哦，我差点忘了——给，这是给你的。我把你交给我卖的那些零件在集市上卖了个好价钱。谢谢你帮我们家。~
 DO ~GiveGoldForce(50)~
-== C0AURA2J ~No problem, Kylie. I'm happy to have helped.~
-== KYLIE1 ~Come back soon! Oh, and don't forget to take this good luck turnip with you before you go!~
+== C0AURA2J ~没问题，凯莉。我很高兴帮上忙。~
+== KYLIE1 ~早点回来！哦，走前别忘了带上这颗好运芜菁！~
 DO ~Face(SW)~ EXIT
 
 CHAIN IF WEIGHT #-1 ~Global("C0AuraKylie","GLOBAL",1) IsGabber("C0Aura")~ THEN KYLIE1 kylie2
-~Heya, Aura! How about a turnip for the road, hmm?~
+~嘿，奥拉！上路前不来颗芜菁吗，嗯？~
 EXIT
 
 CHAIN IF WEIGHT #-1 ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID) !Global("C0AuraBG2Quest3","GLOBAL",5) Global("C0AuraMaJansen","LOCALS",0)~ THEN MAJAN majansen
-~Ah, if it isn't dear little Aura. It's good to see you out and about for a change. Are these friends of yours?~
+~啊，这不是亲爱的小奥拉吗。难得见你出门走动。这些是你的朋友？~
 DO ~SetGlobal("C0AuraMaJansen","LOCALS",1)~
-== C0AURA2J ~Yes, missus Jansen. I'm going to travel alongside them for the time being. Thank you for keeping me for as long as you have.~
-== MAJAN ~There's no need to thank me, dear. You've been a delightful guest to us with your tales and inventions. I hope my nephew hasn't been a bother.~
-== C0AURA2J ~No, not at all! Pico's been indispensible. He'll be able to take care of the workshop while I'm gone.~
-== MAJAN IF ~IsValidForPartyDialog("Jan")~ THEN ~And I see you've finally met my Jan as well! I hope you're playing nice, boy.~
-== JANJ IF ~IsValidForPartyDialog("Jan")~ THEN ~Yes, Ma. Why, our turnip cost to profit ratio's going to expand massively with the plans for a more efficient farming plan that we've made by collaborating our intellects together, it'll only be a matter of time, you'll see.~
-== MAJAN ~Good, good. Now, was there something else you came here for?~
+== C0AURA2J ~是，简森太太。我要跟他们一起旅行一阵。谢谢你这么久收留我。~
+== MAJAN ~不用谢我，亲爱的。你的故事和发明让我们有了个愉快的客人。希望我侄子没烦你。~
+== C0AURA2J ~不，一点不！皮可帮了大忙。我不在时他能照看工坊。~
+== MAJAN IF ~IsValidForPartyDialog("Jan")~ THEN ~我看你终于也见着我扬了！希望你好好相处，小子。~
+== JANJ IF ~IsValidForPartyDialog("Jan")~ THEN ~是，妈。哎呀，凭我们合力想出的更高效耕作方案，我们的芜菁成本利润比会大幅提升，只是时间问题，你看着吧。~
+== MAJAN ~好，好。那么，你来还有别的事吗？~
 END
 IF ~InParty("Jan")
 Detect("Jan")
@@ -1233,136 +1233,136 @@ Global("JanLissaPlot","GLOBAL",6)~ EXTERN C0AURA2J majansen.1
 IF ~True()~ EXTERN C0AURA2J majansen.2
 
 CHAIN IF WEIGHT #-1 ~Global("C0AuraMaJansen","LOCALS",1) IsGabber("C0Aura")~ THEN MAJAN majansen2
-~Good <DAYNIGHTALL>, my dear. You're always welcome in our home.~
+~<DAYNIGHTALL>好，亲爱的。我们家永远欢迎你。~
 EXIT
 
 CHAIN C0AURA2J majansen.1
-~Yes, missus Jansen, there was something else, but... well, I think it'd be better if you spoke with Jan instead.~
+~是，简森太太，还有件事，可……嗯，我想你最好跟扬说。~
 EXTERN MAJAN 0
 
 CHAIN C0AURA2J majansen.2
-~I don't think so, missus Jansen. We'll be going now.~
-== MAJAN ~Goodbye then, girl. Come back and visit, won't you? Our doors are always open to you.~
+~我想没有，简森太太。我们这就走。~
+== MAJAN ~那再见，丫头。记得回来看看，好吗？我们家门永远为你开。~
 EXIT
 
 CHAIN IF WEIGHT #-1 ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID) Global("C0AuraTat","LOCALS",0)~ THEN TAT tat
-~My kitty could beat up your kitty.~
+~我的小猫能打赢你的小猫。~
 DO ~SetGlobal("C0AuraTat","LOCALS",1)~
-== C0AURA2J ~I- uh, I'm not sure I want to test that with Koko-chan. See ya, Tat.~
-== TAT ~Pbbbt!~
+== C0AURA2J ~我——呃，我不确定想拿可可酱去试。回头见，塔特。~
+== TAT ~噗——！~
 EXIT
 
 CHAIN IF WEIGHT #-1 ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID) Global("C0AuraTot","LOCALS",0)~ THEN TOT tot
-~Hey, hey, it's Aura! Show me your squirrel doing tricks! How about a firework?~
+~嘿，嘿，是奥拉！让你的松鼠耍把戏给我看！来个烟火怎么样？~
 DO ~SetGlobal("C0AuraTot","LOCALS",1)~
-== C0AURA2J ~Hee hee. Sorry, Tot. No tricks to<DAYNIGHT>. I'm busy.~
-== TOT ~Aww. Fine, I'll go and pull Tat's nose instead then.~
+== C0AURA2J ~嘿嘿。抱歉，托特。今天没把戏。我忙。~
+== TOT ~唉。好吧，那我去揪塔特的鼻子。~
 EXIT
 
 I_C_T JAN 1 C0AuraJAN1
-== C0AURA2J IF ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~Purveyor of vegetables, huh... hang on, aren't you Pico's cousin?~
-== JAN ~Little Pickle-nose? He's back in the city, is he? I suppose that means his little stint as an assistant to that shoesmith turned out unprofitable for him, just like the twenty-or-so odd jobs before that. Never worked well with anyone bigger than him, that one. I suppose he's scrounging around for his next career path now? Poor lad.~
-== C0AURA2J ~Actually, Pico's been a great aide back at the house. Your mother's been asking after you, by the way.~
-== JAN ~Ah, yes, I've been meaning to visit home. Unfortunately, as I said, the markets have been falling faster than a turnip-filled wagon missing a wheel, and I've been oh-so-busy seeking out hapless adventurers needing a bit of the Jansen-brand specialty. Well, after turnips, that is, but alas, the noble path of a turnip salesman goes unappeciated these days.~
+== C0AURA2J IF ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~蔬菜贩子，嗯……等等，你不是皮可的堂亲吗？~
+== JAN ~小腌瓜鼻子？他回城了？我猜这说明他给那鞋匠当助手那段没赚到什么，跟之前那二十来份零工一样。那家伙跟任何比他大的人都干不长。我猜他现在又在四处找下一条出路？可怜的小子。~
+== C0AURA2J ~其实，皮可在家里帮了大忙。顺便，你母亲一直在打听你。~
+== JAN ~啊，是，我一直想回家看看。可惜，我说过，市场跌得比一辆缺了轮子的芜菁车还快，而我一直忙得不可开交，替那些需要一点简森家招牌特产的倒霉冒险者跑腿。嗯，那是芜菁之后的招牌，可唉，芜菁贩子这高贵行当如今不受赏识了。~
 END
 
 I_C_T2 GERHAR 20 C0AuraGERHAR20
-== C0AURA2J IF ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~Um... don't mind him, <CHARNAME>. Missus Jansen says Gerhardt's always been a little strange in the head. I try not to come down here if I can help it.~
+== C0AURA2J IF ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~呃……别管他，<CHARNAME>。简森太太说格哈特脑子一直有点怪。我尽量不下来这儿。~
 END
 
 I_C_T JAN 3 C0AuraJAN3
-== C0AURA2J IF ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~Flasher Blaster— er, I mean, Master? That's a bit on the nose, don't you think? I'd have gone with something a little more... poetic.~
+== C0AURA2J IF ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~闪光爆破者——呃，我是说，大师？这名字有点太直白，你不觉得？我会取个更……诗意的。~
 END
 
 I_C_T TRGUARD 1 C0AuraTRGUARD1
-== C0AURA2J IF ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~Heh— erm, nothing. Sorry.~
+== C0AURA2J IF ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~嘿——呃，没什么。抱歉。~
 END
 
 I_C_T TRAX 16 C0AuraTRAX16
-== C0AURA2J IF ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~Wh— what in the world are you doing, <CHARNAME>? Upholding a backwards law like that...~
+== C0AURA2J IF ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~什——你到底在干什么，<CHARNAME>？维护那种落后的法律……~
 END
 
 I_C_T BEELOO 0 C0AuraBEELOO0
-== C0AURA2J IF ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~*giggle* "Turnip boy"?~
+== C0AURA2J IF ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~*轻笑*“芜菁男孩”？~
 END
 
 I_C_T LISSA 4 C0AuraLISSA4
-== C0AURA2J IF ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~I... I can't believe any father would ever hurt their child like this. How cruel.~
+== C0AURA2J IF ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~我……我不敢信有父亲会这样伤害自己的孩子。多残忍。~
 END
 
 I_C_T LISSA 10 C0AuraLISSA10
-== C0AURA2J IF ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~That's... no, I'm sorry, I shouldn't interfere. But this all just seems wrong.~
+== C0AURA2J IF ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~这……不，抱歉，我不该插手。可这一切都显得不对。~
 END
 
 // Neera
 
 I_C_T OHNREGI 25 C0AuraOHNREGI25
-== C0AURA2J IF ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~A... a brick?~
-== OHNREGI ~Yes. A brick. I picked the biggest and heaviest that I could find. Nobody beats the Brick.~
+== C0AURA2J IF ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~一……一块砖？~
+== OHNREGI ~是。一块砖。我挑了能找到的最大最重的一块。没人打得过砖头。~
 END
 
 // Planar Sphere
 
 I_C_T MGAPPR01 2 C0AuraMGAPPR012
-== C0AURA2J IF ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~Hey! What sort of an attitude is that?~
+== C0AURA2J IF ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~嘿！这是什么态度？~
 END
 
 CHAIN IF WEIGHT #-1 ~!Dead("Lavok")
 Global("C0AuraLavok","GLOBAL",1)~ THEN C0AURA2J C0AuraLavok
-~I... Master Lavok? About this book...~
+~我……拉沃克大师？关于这本书……~
 DO ~SetGlobal("C0AuraLavok","GLOBAL",2)~
-== LAVOK ~That is...? Ah, the Imaskari Manual of Golemcraft? Hm–hmm... seeing it fills my mind with memories of all the precious time I dedicated to the search of knowledge from places long lost... the efforts spent in preserving the ancient society's wisdom... bringing it to life...~
-== LAVOK ~...take it, girl, by all means. If you can give it value beyond that of a dying old man, then it will have been worth it...~
-== C0AURA2J ~Th–thank you...~
-== LAVOK ~Seeing it once again, however, and in the hands of an artificer—that I can see you are—no less... I am reminded of an old correspondent, long before this time... she had a most curious mind, driven by a yearning for knowledge over the forces that command this world... one she applied to the science of metallurgy...~
-== LAVOK ~What was that gnome's name...? Bah, I cannot recall. It seems the slow death of my body has affected the most distant vestiges of my memory. I only remember reading her opus, several centuries ago. I doubt any replications still exist...~
-== LAVOK ~There is little time to waste on such matters regardless. Go now, and find our way home. Time is of the essence. Go!~
+== LAVOK ~那是……？啊，《伊玛斯卡魔像制造手册》？嗯——嗯……看见它，我脑子里满是那些我献给寻访失落之地知识的宝贵时光……为保存古老社会的智慧所费的心力……让它活过来……~
+== LAVOK ~……拿去吧，姑娘，尽管拿。你若能让它比一个垂死老人更有价值，那就值得……~
+== C0AURA2J ~谢——谢谢你……~
+== LAVOK ~不过，再次看见它，而且是在一位奇械师手里——我看得出你是——更不必说……我想起一位老通信人，很久以前……她有个极好奇的头脑，被对支配这世界之力量的知识渴求所驱使……她把这用在冶金学上……~
+== LAVOK ~那侏儒叫什么来着……？唉，我想不起来。看来我身体的缓慢死亡已影响我最遥远的记忆残迹。我只记得几个世纪前读过她的巨著。我怀疑还有副本存世……~
+== LAVOK ~无论如何，没多少时间浪费在这些事上。去吧，找到我们回家的路。时间要紧。去！~
 EXIT
 
 I_C_T VALYGARJ 107 C0AuraVALYGARJ107
-== C0AURA2J IF ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~*sigh* Omnia mors aequat... so ends a truly brilliant mind. I know he must have done some terrible things, but still... I'm glad he got some peace in the end.~
-== VALYGARJ ~Were it even a scant few days ago I would've called you naive for such a thought, Aura, but now... now I'm not so certain.~
+== C0AURA2J IF ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~*叹气* Omnia mors aequat……一个真正卓越的头脑就这样终结了。我知道他一定做过可怕的事，可还是……我很高兴他最后得到了些安宁。~
+== VALYGARJ ~若在几天前，我会说你这种想法天真，奥拉，可现在……现在我没那么确定了。~
 END
 
 I_C_T VALYGARP 2 C0AuraVALYGARJ107
-== C0AURA2J IF ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~*sigh* Omnia mors aequat... so ends a truly brilliant mind. I know he must have done some terrible things, but still... I'm glad he got some peace in the end.~
-== VALYGARJ ~Were it even a scant few days ago I would've called you naive for such a thought, Aura, but now... now I'm not so certain.~
+== C0AURA2J IF ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~*叹气* Omnia mors aequat……一个真正卓越的头脑就这样终结了。我知道他一定做过可怕的事，可还是……我很高兴他最后得到了些安宁。~
+== VALYGARJ ~若在几天前，我会说你这种想法天真，奥拉，可现在……现在我没那么确定了。~
 END
 
 // Planar Prison
 
 INTERJECT PBHUNT01 3 C0AuraPBHUNT013
-== C0AURA2J IF ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~This... this isn't the Prime Material Plane anymore, <CHARNAME>. We're in some kind of... extraplanar dimension!~
+== C0AURA2J IF ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~这……这已不是主物质界了，<CHARNAME>。我们在某种……异位面维度里！~
 EXTERN PBHUNT01 7
 
 I_C_T2 PTHRAL01 1 C0AuraPTHRAL011
-== C0AURA2J IF ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~How awful! Their collars are bending their minds to turn them into unwilling slaves! Is there anything we can do to save them...?~
+== C0AURA2J IF ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~多可怕！他们的项圈在扭他们的心智，把他们变成不情愿的奴隶！我们能做点什么救他们吗……？~
 END
 
 // Slums District
 
 I_C_T COHRVALE 0 C0AuraCOHRVALE0
-== C0AURA2J IF ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~Eep!~
+== C0AURA2J IF ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~呀！~
 END
 
 I_C_T2 GIRL1 1 C0AuraGIRL11
-== C0AURA2J IF ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~Poor girl... I hope she'll be safe now that she's free.~
+== C0AURA2J IF ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~可怜的姑娘……我希望她自由之后能平安。~
 END
 
 I_C_T2 SLILMAT 16 C0AuraSLILMAT16
-== C0AURA2J IF ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~Oh, ouch... that really looked like it hurt. You okay, <CHARNAME>? I have some salve if you don't want to leave a bruise...~
+== C0AURA2J IF ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~哦，哎哟……那看着真疼。你没事吧，<CHARNAME>？你若不想留淤青，我有些药膏……~
 END
 
 I_C_T GIRL2 0 C0AuraGIRL20
-== C0AURA2J IF ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~They... they kept a poor little girl in a cage with those beasts? That's utterly vile!~
+== C0AURA2J IF ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~他们……他们把一个小姑娘跟那些野兽关在一个笼子里？这太邪恶了！~
 END
 
 I_C_T SEWSW 4 C0AuraSEWSW
-== C0AURA2J IF ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~Fascinating! A puzzle, certainly, but by whom? Do you think we can find these four items and unlock the answer, <CHARNAME>? There's clearly a secret here waiting to be discovered.~
+== C0AURA2J IF ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~真迷人！一道谜题，当然，可谁出的？你觉得我们能找到这四样东西、解开答案吗，<CHARNAME>？这里显然有个秘密等着被发现。~
 END
 
 I_C_T SEWSW 5 C0AuraSEWSW
-== C0AURA2J IF ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~Fascinating! A puzzle, certainly, but by whom? Do you think we can find these four items and unlock the answer, <CHARNAME>? There's clearly a secret here waiting to be discovered.~
+== C0AURA2J IF ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~真迷人！一道谜题，当然，可谁出的？你觉得我们能找到这四样东西、解开答案吗，<CHARNAME>？这里显然有个秘密等着被发现。~
 END
 
 CHAIN IF WEIGHT #-1 ~Range("C0Aura",15)
@@ -1370,82 +1370,82 @@ InParty("C0Aura")
 IfValidForPartyDialogue("C0Aura")
 RandomNum(2,2)
 Global("C0AuraWaylane","LOCALS",0)~ THEN WAYLANE AURA-WAYLANE
-~You! Hey, you! The little gnome in the cute getup!~
+~你！嘿，你！那个穿可爱行头的小侏儒！~
 DO ~SetGlobal("C0AuraWaylane","LOCALS",1)~
-== C0AURA2J ~Huh? Oh, you're talking about me?~
-== WAYLANE ~Yes, you! See this mighty fine sphere here? You can have it for your very own for a mere 500 gold pieces! What do you say?~
-== C0AURA2J ~Oh, the magical sphere! I've been curious about it ever since it suddenly appeared here. Do you know how to get inside?~
-== WAYLANE ~Why... why, yes! There's... there's a password, which I will tell you in exchange for a paltry sum. You won't get a better deal anywhere!~
-== C0AURA2J ~Hmm, although... I get this ominous feeling that terrible things will happen if the thing did crack open. It's like all those tales of strange ships falling from the sky, then the doors open and creatures from the outer realms overrun us all and take over the world. But I'm sure those are just scary stories...~
-== WAYLANE ~Uh... that wouldn't really happen, would it? On second thought, maybe being this close to the thing isn't such a bright idea after all...~
-== C0AURA2J ~Sorry, just went off track there. What was the price again? I might just have enough in my personal stash.~
-== WAYLANE ~Er, the offer is... suspended for now... yeah. I need some time to figure out a better pitch. And probably a safer place to stand as well...~
+== C0AURA2J ~嗯？哦，你在说我？~
+== WAYLANE ~是，你！看见这颗顶好的球了吗？只要五百枚金币，它就归你！你说呢？~
+== C0AURA2J ~哦，那魔法球！它突然出现在这儿后，我一直好奇。你知道怎么进去吗？~
+== WAYLANE ~当……当然！有……有个口令，我只要一点点钱就告诉你。你哪儿都找不到更好的价！~
+== C0AURA2J ~嗯，不过……我有种不祥的感觉，那东西若真裂开，会有可怕的事发生。就像那些故事：怪船从天而降，门一开，外域的怪物涌出来占满世界。可我确定那只是吓人的故事……~
+== WAYLANE ~呃……那不会真发生吧？再想想，也许靠这东西这么近不是个好主意……~
+== C0AURA2J ~抱歉，跑题了。价钱是多少来着？我私房钱也许刚好够。~
+== WAYLANE ~呃，这提议……暂且搁置……对。我得花点时间想个更好的说辞。大概也得找个更安全的地方站着……~
 EXIT
 
 CHAIN IF WEIGHT #-1
 ~!InPartySlot(LastTalkedToBy,0)
 Name("C0Aura",LastTalkedToBy)
 Global("C0AuraSalvanas","GLOBAL",0)~ THEN SALVANAS AURA-SALVANAS
-~Well hello, my little pink blossom. I don't think I've seen a sweet thing like yourself around here before.~
+~哟，你好啊，我的小粉花。我想我以前在这儿没见过你这样的小甜心。~
 DO ~SetGlobal("C0AuraSalvanas","GLOBAL",1)~
-== C0AURA2J ~Excuse me?~
-== SALVANAS ~Ah, blessed I must be to discover such a paragon of gnomish loveliness within this wretched place. I would recite a serenade of my passion, were we together under a moonlit sky!~
-== C0AURA2J ~Wow... you really like to listen to yourself talk, don't you?~
-== SALVANAS ~Ah, but I would much rather a beauteous maiden listen to me talk. Would you do the honor of sparing me a moment of your attention?~
-== C0AURA2J ~Umm, thank you, but I don't think I'm...~
-== SALVANAS ~Now, now, no need to be bashful, my dear. Allow me to take your hand, and—*YOW*!~
-== C0AURA2J ~Hey! Muffy, what have I told you about biting people?~
-== SALVANAS ~Ouch...~
-== C0AURA2J ~I—I'm really sorry... he does that sometimes.~
-== SALVANAS ~It seems the fair lady has her chivalrous knight to defend her honor. *sigh* My heart bleeds... as does my poor finger.~
+== C0AURA2J ~你说什么？~
+== SALVANAS ~啊，能在这破地方发现侏儒可爱之美的典范，我真是有福。若我们在月光下共处，我会吟一曲热情的夜曲！~
+== C0AURA2J ~哇……你还真爱听自己说话，对吧？~
+== SALVANAS ~啊，可我更愿一位美丽少女听我说话。能否赏我片刻你的注意？~
+== C0AURA2J ~呃，谢谢，可我想我不……~
+== SALVANAS ~好了好了，不用害羞，亲爱的。让我握住你的手，然后——*嗷*！~
+== C0AURA2J ~嘿！穆菲，我跟你说了多少次不许咬人？~
+== SALVANAS ~哎哟……~
+== C0AURA2J ~我——我真的很抱歉……他有时会这样。~
+== SALVANAS ~看来这位美人有她的侠义骑士守护荣誉。*叹气* 我的心在滴血……我可怜的手指也是。~
 EXIT
 
 CHAIN IF WEIGHT #-1
 ~!InPartySlot(LastTalkedToBy,0)
 Name("C0Aura",LastTalkedToBy)
 Global("C0AuraSalvanas","GLOBAL",1)~ THEN SALVANAS AURA-SALVANAS
-~Oh, er, hello again, my sweet little lady. With her knight of bronze perched on her shoulder still... *sigh*~
-== C0AURA2J ~Ahaha... um, I hope you'll forgive Muffy for that. How is your finger?~
-== SALVANAS ~It aches still, rejecting all common remedies, my dear. I fear only the touch of a beauty—even a quick one—would serve as a cure.~
-== C0AURA2J ~I'm sure I have a cure that'll take care of it. Really!~
-== SALVANAS ~*sigh* Never mind.~
-== SALVANAS IF ~See(Player1) OR(2) Global("C0AuraRomanceActive","GLOBAL",1) Global("C0AuraRomanceActive","GLOBAL",2)~ THEN ~Though... I have been curious, given your visible closeness to your equally lovely leader... are the two of you, perhaps, an item?~
+~哦，呃，又见到你了，我甜美的小姐。她的铜骑士还栖在她肩上……*叹气*~
+== C0AURA2J ~啊哈哈……呃，希望你能原谅穆菲。你的手指怎么样？~
+== SALVANAS ~仍旧疼，所有寻常药方都被它拒绝，亲爱的。我怕只有美人一触——哪怕轻轻一下——才能治。~
+== C0AURA2J ~我确定我有能治好它的药。真的！~
+== SALVANAS ~*叹气* 算了。~
+== SALVANAS IF ~See(Player1) OR(2) Global("C0AuraRomanceActive","GLOBAL",1) Global("C0AuraRomanceActive","GLOBAL",2)~ THEN ~不过……我一直好奇，既然你跟你同样可爱的领队那么亲近……你们俩莫非是一对？~
 DO ~SetGlobal("C0AuraSalvanas","GLOBAL",2)~
-== C0AURA2J IF ~See(Player1) OR(2) Global("C0AuraRomanceActive","GLOBAL",1) Global("C0AuraRomanceActive","GLOBAL",2)~ THEN ~Hm? Oh, um... you can see it like that, I guess...~
-== SALVANAS IF ~See(Player1) OR(2) Global("C0AuraRomanceActive","GLOBAL",1) Global("C0AuraRomanceActive","GLOBAL",2)~ THEN ~No, not at all. I see how it is. Very well, this busy bee knows better than to approach a flower that prefers a butterfly! I humbly beg your pardon, little miss.~
+== C0AURA2J IF ~See(Player1) OR(2) Global("C0AuraRomanceActive","GLOBAL",1) Global("C0AuraRomanceActive","GLOBAL",2)~ THEN ~嗯？哦，呃……你要那样看也行，我想……~
+== SALVANAS IF ~See(Player1) OR(2) Global("C0AuraRomanceActive","GLOBAL",1) Global("C0AuraRomanceActive","GLOBAL",2)~ THEN ~不，一点不是。我明白怎么回事了。好，这只忙碌的蜜蜂知道别去招惹宁可要蝴蝶的花！小人儿，我谦卑地求你原谅。~
 EXIT
 
 // Suldanessellar
 
 I_C_T PLAYER1 16 C0AuraIrenicusIsDead1
-== C0AURA2J IF ~InParty("C0Aura") Range("C0Aura",15) !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~I–is that it?~
+== C0AURA2J IF ~InParty("C0Aura") Range("C0Aura",15) !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~就——就这样？~
 END
 
 I_C_T SUDEMIN 32 C0AuraSUDEMIN32
-== C0AURA2J IF ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~There's so much suffering out there... <CHARNAME>, for your own sake and there's... let's do what we can.~
+== C0AURA2J IF ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~外面有那么多苦难……<CHARNAME>，为了你自己，也为了……我们尽力而为吧。~
 END
 
 // Temple District
 
 I_C_T TCYRANDO 2 C0AuraTCYRANDO2
-== C0AURA2J IF ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~Hey, don't lose faith. Human-gnome relationships aren't so uncommon in Lantan, and you have the heart of a poet. I think you could stand a chance!~
-== TCYRANDO ~Hehe... I'll think about it. Thank you.~
+== C0AURA2J IF ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~嘿，别失去信心。人类与侏儒的恋情在兰坦不算罕见，而且你有一颗诗人的心。我想你有机会！~
+== TCYRANDO ~嘿嘿……我会想想。谢谢。~
 END
 
 I_C_T HLSION 0 C0AuraHLSION0
-== C0AURA2J IF ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~The wards? I— I thought something was off when we entered here. I don't think we should take these people lightly.~
+== C0AURA2J IF ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~那些守卫法阵？我——我进这儿时就觉得不对。我想我们不该轻视这些人。~
 END
 
 I_C_T CLTCUT01 4 C0AuraCLTCUT014
-== C0AURA2J IF ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~Ugh! How ghastly!~
+== C0AURA2J IF ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~呃！多可怕！~
 END
 
 I_C_T TIRLANA 15 C0AuraTIRLANA15
-== C0AURA2J IF ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~Aww, I wonder if one day I'll find someone who can sweep me off my feet with words and poetry. Teehee... that'll be the day.~
+== C0AURA2J IF ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~唉，我在想哪天会不会有人用言语和诗把我打动得神魂颠倒。嘻嘻……那一天啊。~
 END
 
 I_C_T2 JANJ 133 C0AuraJANJ133
-== C0AURA2J IF ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~*giggle* I wish some of the stories my professors in Lantan had to tell about Gond could be that interesting. Even if it's completely ridiculous.~
+== C0AURA2J IF ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~*轻笑* 我希望我在兰坦的教授们讲贡德的故事能那么有意思。哪怕完全荒唐也好。~
 END
 
 // Trademeet
@@ -1455,26 +1455,26 @@ IF ~!InPartySlot(LastTalkedToBy,0) Name("C0Aura",LastTalkedToBy)~ EXTERN TRGYP02
 END
 
 CHAIN TRGYP02 g1
-~You are one who cherishes the past, yet endlessly looks towards the future. Your talents shall be a blessing to this world, young artificer. There is little advice I can offer you but to keep true to your kind nature, and discard what doubts lay within your heart.~
-== C0Aura2J ~Oooh... a Shou fortune teller told me the same thing once. There's no way it's a coincidence, is it?~
+~你是珍视过去、却无限望向未来的人。你的才华将是对这世界的祝福，年轻的奇械师。我能给的忠告不多，只有忠于你善良的本性，丢掉心中的疑虑。~
+== C0Aura2J ~哦……一位守龙算命人也对我说过同样的话。这不可能是巧合吧？~
 EXIT
 
 CHAIN IF WEIGHT #-1
 ~Name("C0Aura",LastTalkedToBy)
 Global("c0rininaura","LOCALS",0)~ THEN TRGYP03 AURA-RININ
-~Is that a squirrel on your head, short lady? Is it yours? Mother won't let me keep pets. Why is it so shiny? Does he bite?~
+~你头上那是松鼠吗，矮个子女士？是你的吗？母亲不让我养宠物。它为什么那么亮？它咬人吗？~
 DO ~SetGlobal("c0rininaura","LOCALS",1)~
-== C0AURA2J ~Nah, Muffy's a nice boy. I'm sure he wouldn't. Hey, would you like to pet him?~
-== TRGYP03 ~Yeah!~
+== C0AURA2J ~不，穆菲是个好孩子。我确定他不会。嘿，你想摸摸他吗？~
+== TRGYP03 ~想！~
 EXIT
 
 I_C_T NEEBER 10 C0AuraNEEBER10
-== C0AURA2J IF ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~You know, I'd like to agree, but, um... never mind. It'd be impolite to say what I was thinking.~
+== C0AURA2J IF ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~你知道，我想同意，可，呃……算了。说出我在想什么不礼貌。~
 END
 
 I_C_T EDWINJ 40 C0AuraEDWINJ40
-== C0AURA2J IF ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~Well, if it's any consolation, Edwin, I don't think your face looks so mean when you're flustered. It just looks rather funny. Ooh, like how it is right now!~
-== EDWINJ ~I am having difficulty deciding which brat is more irksome, this child or the cheeky one we already have alongside us!~
+== C0AURA2J IF ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~嗯，若这能安慰你，埃德温，我不觉得你慌乱时脸看着有多凶。只是挺好笑。哦，就像现在这样！~
+== EDWINJ ~我很难决定哪个小鬼更烦人，这个还是我们身边已经有的那个厚脸皮的！~
 END
 
 // Tree of Life
@@ -1484,15 +1484,15 @@ IF ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)
 END
 
 CHAIN PLAYER1 TREEOFLIFE
-~Aura, the ever optimistic and good-natured gnome from a faraway land has devoted herself fully to your cause. You wonder if her courage will be enough for this final confrontation.~
+~奥拉，这个来自远方的、永远乐观善良的侏儒，已全心投入你的事业。你在想，她的勇气够不够应付这最后一战。~
 DO ~SetGlobal("C0AuraTreeOfLife","GLOBAL",1)~
 END
-++ ~Aura, you have a family and home that's waiting for you. Do you really want to throw your life away here?~ EXTERN C0AURA2J TREEOFLIFE.1
-++ ~You were never meant for all of this violence, Aura, and Irenicus will be our most difficult battle yet. You don't need to endanger yourself.~ EXTERN C0AURA2J TREEOFLIFE.1
-++ ~Are you ready to bring your best for what's ahead of us, Aura? This battle will decide everything.~ EXTERN C0AURA2J TREEOFLIFE.1
+++ ~奥拉，你还有家人和家在等你。你真想在这儿丢掉性命吗？~ EXTERN C0AURA2J TREEOFLIFE.1
+++ ~你从不是为这些暴力而生的，奥拉，而爱瑞尼库斯将是我们最难的一战。你不必让自己涉险。~ EXTERN C0AURA2J TREEOFLIFE.1
+++ ~你准备好拿出全力面对我们前面的东西了吗，奥拉？这一战决定一切。~ EXTERN C0AURA2J TREEOFLIFE.1
 
 CHAIN C0AURA2J TREEOFLIFE.1
-~You've been a better friend and teacher to me than I've ever known, <CHARNAME>. Even if I might not be as brave as you, seeing what Irenicus has done to you and everyone else... no, I can't leave you now. I'll stay with you no matter what might happen.~
+~你是我认识的最好的朋友和老师，<CHARNAME>。就算我没你那么勇敢，看见爱瑞尼库斯对你和所有人做的事……不，我现在不能离开你。不管会发生什么，我都留下来陪你。~
 END
 COPY_TRANS PLAYER1 33
 
@@ -1502,49 +1502,49 @@ EXTERN PLAYER1 TREEOFLIFEROM
 END
 
 CHAIN PLAYER1 TREEOFLIFEROM
-~Aura: She has given you her trust, her friendship, and more... after going through joy and sorrow together, the two of you are closer than you have ever been. She looks back at you without blinking, trying to look as confident as possible.~
+~奥拉：她给了你信任、友谊，还有更多……同经喜与悲之后，你们俩比以往任何时候都更亲近。她目不转睛地回望你，努力显得尽可能自信。~
 DO ~SetGlobal("C0AuraTreeOfLife","GLOBAL",1)~
 END
-++ ~Aura, I–~ EXTERN C0AURA2J TREEOFLIFEROM.1
+++ ~奥拉，我——~ EXTERN C0AURA2J TREEOFLIFEROM.1
 
 CHAIN C0AURA2J TREEOFLIFEROM.1
-~Heehee... you don't have to say anything, <CHARNAME>. It's okay... it's okay.~
-= ~I– um... well, I wasn't expecting us to have our big moment here of all places. These things I'm about to say to you right now... I was saving them for the right time, but I guess it's now or never, huh?~
-= ~Ever since we got to know each other, you just kept drawing me in with everything... everything about you. You're so brave, determined, and beautiful... even when times are hardest, you're still as strong as ever.~
-= ~I've admired that about you all along. And I guess it was kinda inevitable that in the end, I... I would fall for you completely. I just... couldn't admit it, because how could someone so tiny, and meek, and dependent on others... someone like me, ever hope to match up to you?~
-= ~But I don't care about that anymore. Where we're going next, I know you'll need me, so I'm going with you. Maybe I'll live to see my home again, or maybe I won't... but it doesn't matter, as long as I get to spend a little longer with you.~
-= ~So... you don't have to worry after me anymore, <CHARNAME>. I'm not afraid. I won't ever be afraid again as long as you're with me. Let's go and make you whole, and afterwards... we'll have all the time in the world for us.~
+~嘻嘻……你什么都不用说，<CHARNAME>。没事……没事的。~
+= ~我——呃……嗯，我没想到我们的大时刻偏偏会在这地方。我现在要对你说的话……我本留着等对的时候，可看来现在不说就永远没机会了，对吧？~
+= ~从我们相识起，你就一直用一切把我拉着……你的一切。你那么勇敢、坚定、美丽……哪怕最艰难的时候，你仍跟往常一样坚强。~
+= ~我一直钦佩你这一点。而最后我……完全爱上你，大概是不可避免的。我只是……不敢承认，因为像我这样又矮、又怯、又依赖别人的人……怎么配得上你？~
+= ~可我不再在乎那些了。我们接下来要去的地方，我知道你需要我，所以我跟你去。也许我能活着再见家乡，也许不能……可没关系，只要我能多陪你一会儿。~
+= ~所以……你不用再为我担心，<CHARNAME>。我不怕。只要你在，我再也不会害怕。我们去让你完整，之后……我们会有全世界的时间属于我们。~
 COPY_TRANS PLAYER1 33
 
 // Umar Hills
 
 CHAIN IF WEIGHT #-1 ~Global("C0AuraUmarHills","GLOBAL",1)~ THEN C0AURA2J C0AURA-UMARHILLS
-~It's great that we managed to bring some peace back to this village... now that it's the way it should be, I can really appreciate how simple and charming it is.~ [C0BLANK]
+~我们能让这村子恢复些安宁，真好……既然它回到了该有的样子，我才能真正欣赏它多朴素可爱。~ [C0BLANK]
 DO ~SetGlobal("C0AuraUmarHills","GLOBAL",2)~
-= ~The mountains, and the design of the houses are different, but it's the same sort of pastoral feeling I got during my time in Kozakura. The people, too... they're humble and hard-working, but also have stories of their own.~
-= ~*sigh* It makes me wish I was still there, taking walks by the coast, spending time with the fishermen... hey, <CHARNAME>. How do you feel about fishing? I've suddenly got the urge.~
+= ~山和房屋的样式不同，可我在科祖库拉时感到的同一种田园气息。人也是……谦卑、勤劳，可也各有自己的故事。~
+= ~*叹气* 这让我希望自己还在那儿，沿海走走，跟渔民待着……嘿，<CHARNAME>。你觉得钓鱼怎么样？我突然很想钓。~
 END
-  ++ ~You want to go fishing?~ + C0AURA-UMARHILLS-1
-  ++ ~Sure, I enjoy fishing.~ + C0AURA-UMARHILLS-2
-  ++ ~I don't mind, but I've never done it before.~ + C0AURA-UMARHILLS-3
-  ++ ~Not right now, Aura.~ + C0AURA-UMARHILLS-0
+  ++ ~你想去钓鱼？~ + C0AURA-UMARHILLS-1
+  ++ ~当然，我喜欢钓鱼。~ + C0AURA-UMARHILLS-2
+  ++ ~我不介意，可我从没钓过。~ + C0AURA-UMARHILLS-3
+  ++ ~现在不行，奥拉。~ + C0AURA-UMARHILLS-0
 
 CHAIN C0AURA2J C0AURA-UMARHILLS-0
-~Oh... alright. That's a shame.~
+~哦……好吧。真可惜。~
 DO ~SetGlobal("C0AuraUmarHills","GLOBAL",-1)~ EXIT
 
 CHAIN C0AURA2J C0AURA-UMARHILLS-1
-~Why not? Look at how calm and soothing that stream is. Don't you think it'd be a waste not to have a rest, and do something fun for a while?~
+~为什么不去？看那溪多平静安神。你不觉得不歇一歇、玩一会儿是浪费吗？~
 END
-  ++ ~When you put it that way, then sure. Let's catch some fish.~ + C0AURA-UMARHILLS-2
-  ++ ~There's just one small problem... I've never tried fishing before.~ + C0AURA-UMARHILLS-3
-  ++ ~It sounds like a waste of time. Let's just get moving.~ + C0AURA-UMARHILLS-0
+  ++ ~你这么说的话，那就去。我们抓些鱼。~ + C0AURA-UMARHILLS-2
+  ++ ~只有一个小问题……我从没试过钓鱼。~ + C0AURA-UMARHILLS-3
+  ++ ~听着像浪费时间。我们走吧。~ + C0AURA-UMARHILLS-0
 
 CHAIN C0AURA2J C0AURA-UMARHILLS-2
-~Alright! I think I see a nice spot ahead of us...~
-== WILSONJ IF ~InParty("WILSON")~ THEN ~Growl.~
-== C0AURA2J IF ~InParty("WILSON")~ THEN ~Oh, and you're not coming with us, Mr. Bear! Not a chance!~
-== C0AURA2J ~I have a pair of collapsible fishing rods in my pack, so we just need to catch some bait and we'll be all set!~
+~好！我想我看见前面有个好地方……~
+== WILSONJ IF ~InParty("WILSON")~ THEN ~低吼。~
+== C0AURA2J IF ~InParty("WILSON")~ THEN ~哦，而且你不能跟我们一起去，熊先生！休想！~
+== C0AURA2J ~我包里有对折叠钓竿，我们只要抓些鱼饵就齐了！~
 DO ~ClearAllActions()
 StartCutSceneMode()
 Wait(1)
@@ -1560,10 +1560,10 @@ Wait(2)
 StartDialogNoSet(Player1)~ EXIT
 
 CHAIN C0AURA2J C0AURA-UMARHILLS-3
-~Oh, don't worry about that. I've practiced fishing almost as early as when I learned to walk, so I can teach you!~
-== WILSONJ IF ~InParty("WILSON")~ THEN ~Growl.~
-== C0AURA2J IF ~InParty("WILSON")~ THEN ~Oh, and you're not coming with us, Mr. Bear! Not a chance!~
-== C0AURA2J ~I have a pair of fishing rods, we just need to find some bait...~
+~哦，别担心。我几乎刚学走路就开始练钓鱼了，所以我能教你！~
+== WILSONJ IF ~InParty("WILSON")~ THEN ~低吼。~
+== C0AURA2J IF ~InParty("WILSON")~ THEN ~哦，而且你不能跟我们一起去，熊先生！休想！~
+== C0AURA2J ~我有一对钓竿，只要找些鱼饵……~
 DO ~ClearAllActions()
 StartCutSceneMode()
 Wait(1)
@@ -1579,29 +1579,29 @@ Wait(2)
 StartDialogNoSet(Player1)~ EXIT
 
 CHAIN IF WEIGHT #-1 ~Global("C0AuraUmarHills","GLOBAL",2)~ THEN C0AURA2J C0AURA-UMARHILLS2
-~Do you see them, <CHARNAME>? Just swimming along with the current? I don't think we could find a better spot.~ [C0BLANK]
+~你看见它们了吗，<CHARNAME>？就顺着水流游？我想我们找不到更好的地方了。~ [C0BLANK]
 END
 IF ~See("MADULF") Global("OgreAlliance","GLOBAL",1)~ EXTERN UHOGRE01 C0AURA-UMARHILLS2-MADULF
 IF ~OR(2) !See("MADULF") !Global("OgreAlliance","GLOBAL",1)~ EXTERN C0AURA2J C0AURA-UMARHILLS2-1
 
 CHAIN C0AURA2J C0AURA-UMARHILLS2-1
-~Let's see how many we can catch together!~
+~看看我们一起能抓多少！~
 DO ~SetGlobal("C0AuraUmarHills","GLOBAL",3)~
 END
-  ++ ~I have a better idea. Let's see which of us can catch more!~ + C0AURA-UMARHILLS2-2
-  ++ ~Well, I'll follow your lead. You seem to be more experienced at this.~ + C0AURA-UMARHILLS2-3
-  ++ ~Whatever. We won't have trouble eating, at least. Let's just make it quick.~ + C0AURA-UMARHILLS2-4
+  ++ ~我有个更好的主意。看看我们谁抓得多！~ + C0AURA-UMARHILLS2-2
+  ++ ~嗯，我跟着你。你在这上头似乎更有经验。~ + C0AURA-UMARHILLS2-3
+  ++ ~随便。至少吃饭不愁。快点弄完吧。~ + C0AURA-UMARHILLS2-4
 
 CHAIN C0AURA2J C0AURA-UMARHILLS2-2
-~Oh, is that how we're going to do it? Hehe, you'd better not regret it. I grew up in a fishing town, so I'll bet I've fished for longer than you've been alive!~
+~哦，要这么来？嘿嘿，你最好别后悔。我在渔镇长大的，我赌我钓鱼的年头比你活的还长！~
 EXTERN C0AURA2J C0AURA-UMARHILLS2-4
 
 CHAIN C0AURA2J C0AURA-UMARHILLS2-3
-~Alright, I'll teach you the motions first... and then, it's just waiting for a fish to take the bait. It's mostly patience, after all. And a strong arm.~
+~好，我先教你动作……然后就是等鱼上钩。主要靠耐心。还有一条有力的胳膊。~
 EXTERN C0AURA2J C0AURA-UMARHILLS2-4
 
 CHAIN C0AURA2J C0AURA-UMARHILLS2-4
-~Just attach the bait to the hook, throw, and... here we go!~
+~把饵挂上钩，抛出去，然后……来了！~
 END
 IF ~Global("C0AuraUmarHillsMadulfFish","GLOBAL",1)~ DO ~ClearAllActions()
 StartCutSceneMode()
@@ -1623,21 +1623,21 @@ Wait(2)
 StartDialogNoSet(Player1)~ EXIT
 
 CHAIN UHOGRE01 C0AURA-UMARHILLS2-MADULF
-~Huh. Friend <PRO_RACE> is going to catch fish? Maybe... maybe Madulf can join you? Madulf was just deciding with fellows what we wanted for dinner.~
+~嗯。朋友<PRO_RACE>要抓鱼？也许……也许马杜夫能加入？马杜夫刚在跟同伴商量晚饭吃什么。~
 END
-  ++ ~Of course you can.~ DO ~SetGlobal("C0AuraUmarHillsMadulfFish","GLOBAL",1)~ EXTERN UHOGRE01 C0AURA-UMARHILLS2-MADULF-1
-  ++ ~Find your own place, Madulf.~ EXTERN UHOGRE01 C0AURA-UMARHILLS2-MADULF-2
+  ++ ~当然可以。~ DO ~SetGlobal("C0AuraUmarHillsMadulfFish","GLOBAL",1)~ EXTERN UHOGRE01 C0AURA-UMARHILLS2-MADULF-1
+  ++ ~自己找地方，马杜夫。~ EXTERN UHOGRE01 C0AURA-UMARHILLS2-MADULF-2
 
 CHAIN UHOGRE01 C0AURA-UMARHILLS2-MADULF-1
-~Thank you, <PRO_RACE>. Madulf will fish over on other side. Madulf will not cause problems for you or friend.~
+~谢谢你，<PRO_RACE>。马杜夫去另一边钓。马杜夫不会给<PRO_RACE>或朋友添麻烦。~
 EXTERN C0AURA2J C0AURA-UMARHILLS2-1
 
 CHAIN UHOGRE01 C0AURA-UMARHILLS2-MADULF-2
-~Oh. That too bad. Madulf understand. You and friend want to be alone.~
+~哦。那太可惜。马杜夫明白。你和朋友想单独待着。~
 EXTERN C0AURA2J C0AURA-UMARHILLS2-1
 
 CHAIN IF WEIGHT #-1 ~Global("C0AuraUmarHills","GLOBAL",3)~ THEN C0AURA2J C0AURA-UMARHILLS3
-~There's the first one! That didn't take long at all.~ [C0BLANK]
+~第一条！一点没花多久。~ [C0BLANK]
 DO ~SetGlobal("C0AuraUmarHills","GLOBAL",4)
 ClearAllActions()
 StartCutSceneMode()
@@ -1649,7 +1649,7 @@ Wait(1)
 StartDialogNoSet(Player1)~ EXIT
 
 CHAIN IF WEIGHT #-1 ~Global("C0AuraUmarHills","GLOBAL",4)~ THEN C0AURA2J C0AURA-UMARHILLS4
-~Ooh, that's a beauty. Nice one, <CHARNAME>!~ [C0BLANK]
+~哦，这条漂亮。干得好，<CHARNAME>！~ [C0BLANK]
 DO ~SetGlobal("C0AuraUmarHills","GLOBAL",5)
 ClearAllActions()
 StartCutSceneMode()
@@ -1661,18 +1661,18 @@ Wait(1)
 StartDialogNoSet(Player1)~ EXIT
 
 CHAIN IF WEIGHT #-1 ~Global("C0AuraUmarHills","GLOBAL",5)~ THEN C0AURA2J C0AURA-UMARHILLS5
-~Look at that! We caught even more than I expected. We're going to have to let some of them go at this rate. We can't carry this much. Not to mention, it'll smell.~ [C0BLANK]
-= ~Oh! Another one's biting. I'm going to get this one, just watch!~
-= ~Ooh, he's really struggling. I'll get you yet...~
-= ~Goodness, this one's really strong. I'll bet it's huge. I'm not sure I can... eep!~
+~看看！我们抓得比我想的还多。照这速度，我们得放掉一些。带不了这么多。再说，会臭。~ [C0BLANK]
+= ~哦！又有一条在咬。这条我来，看着！~
+= ~哦，它挣得真厉害。我还是要逮到你……~
+= ~天哪，这条真有力。我赌它很大。我不确定我能……呀！~
 END
-  ++ ~I'll help you out!~ + C0AURA-UMARHILLS5-1
-  ++ ~(Do nothing)~ + C0AURA-UMARHILLS5-2
+  ++ ~我来帮你！~ + C0AURA-UMARHILLS5-1
+  ++ ~（什么也不做）~ + C0AURA-UMARHILLS5-2
 
 CHAIN C0AURA2J C0AURA-UMARHILLS5-1
-~Wow... even with the two of us! This must be some kind of monster... keep pulling, <CHARNAME>! We'll tire it out!~
-== UHOGRE01 IF ~Global("C0AuraUmarHillsMadulfFish","GLOBAL",1)~ THEN ~Madulf help! Madulf hold on rod with <PRO_RACE>!~
-== C0AURA2J ~Just a little bit more... come on, come on... Yes! Reel it in, quickly!~
+~哇……就算我们两个人！这一定是什么怪物……继续拉，<CHARNAME>！我们把它拖累！~
+== UHOGRE01 IF ~Global("C0AuraUmarHillsMadulfFish","GLOBAL",1)~ THEN ~马杜夫帮忙！马杜夫跟<PRO_RACE>一起握竿！~
+== C0AURA2J ~再一点点……来，来……好！收线，快！~
 END
 IF ~Global("C0AuraUmarHillsMadulfFish","GLOBAL",1)~ DO ~SetGlobal("C0AuraUmarHills","GLOBAL",6)
 ClearAllActions()
@@ -1696,7 +1696,7 @@ Wait(1)
 StartDialogNoSet(Player1)~ EXIT
 
 CHAIN C0AURA2J C0AURA-UMARHILLS5-2
-~Oh no. Oh no no no no no! Eeeek!~
+~哦不。哦不不不不不！呀——！~
 DO ~SetGlobal("C0AuraUmarHills","GLOBAL",7)
 ClearAllActions()
 StartCutSceneMode()
@@ -1708,48 +1708,48 @@ Wait(1)
 StartDialogNoSet(Player1)~ EXIT
 
 CHAIN IF WEIGHT #-1 ~Global("C0AuraUmarHills","GLOBAL",6)~ THEN C0AURA2J C0AURA-UMARHILLS6
-~Look at that! It's huge! I didn't think we'd catch something of this size.~ [C0BLANK]
+~看那个！真巨大！我没想到能抓到这种个头的。~ [C0BLANK]
 DO ~GiveItemCreate("C0AFISH2",Player1,0,0,0) SetGlobal("C0AuraUmarHills","GLOBAL",8)~
-= ~Here, <CHARNAME>. You take it. We caught it together, after all, so you deserve just as much of the credit. Plus, it's heavy.~
+= ~给，<CHARNAME>。你拿着。毕竟是我们一起抓的，你该得同样的功劳。再说，它很重。~
 EXTERN C0AURA2J C0AURA-UMARHILLS8
 
 CHAIN IF WEIGHT #-1 ~Global("C0AuraUmarHills","GLOBAL",7)~ THEN C0AURA2J C0AURA-UMARHILLS7
-~Well... that was embarrassing.~ [C0BLANK]
+~嗯……那真尴尬。~ [C0BLANK]
 DO ~SetGlobal("C0AuraUmarHills","GLOBAL",8)~
-= ~It got away... along with my rod. And now I'm all soaked as well. *sigh*~
+= ~它跑了……连我的竿一起。现在我还全身湿透。*叹气*~
 END
-  ++ ~Looks like you need to train your muscles a bit.~ + C0AURA-UMARHILLS7-1
-  ++ ~Sorry. I thought you had it.~ + C0AURA-UMARHILLS7-2
-  ++ ~Hahahaha!~ + C0AURA-UMARHILLS7-3
+  ++ ~看来你得练练肌肉。~ + C0AURA-UMARHILLS7-1
+  ++ ~抱歉。我以为你抓住了。~ + C0AURA-UMARHILLS7-2
+  ++ ~哈哈哈哈哈！~ + C0AURA-UMARHILLS7-3
 
 CHAIN C0AURA2J C0AURA-UMARHILLS7-1
-~Looks like it. Time to pull out some weights, I guess...~
+~看来是。该拿些哑铃出来了，我想……~
 EXTERN C0AURA2J C0AURA-UMARHILLS8
 
 CHAIN C0AURA2J C0AURA-UMARHILLS7-2
-~I really thought I had it, too. That would've given me something to be smug about for at least a few days. Oh well...~
+~我也真以为我抓住了。那本够我得意好几天的。算了……~
 EXTERN C0AURA2J C0AURA-UMARHILLS8
 
 CHAIN C0AURA2J C0AURA-UMARHILLS7-3
-~Oh, don't laugh! As if I haven't been humiliated enough... *pout*~
+~哦，别笑！好像我还没被羞辱够似的……*撅嘴*~
 EXTERN C0AURA2J C0AURA-UMARHILLS8
 
 CHAIN C0AURA2J C0AURA-UMARHILLS8
-~...Hehe. That was fun. I can't remember the last time I had a chance to just relax and have a good time...~
-== UHOGRE01 IF ~Global("C0AuraUmarHillsMadulfFish","GLOBAL",1)~ THEN ~Madulf catch plenty of big ones too. Madulf's friends will be very happy, Madulf thinks.~
-== C0AURA2J ~What do you think, <CHARNAME>?~
+~……嘿嘿。真有意思。我想不起上次有机会只是放松、开心玩是什么时候了……~
+== UHOGRE01 IF ~Global("C0AuraUmarHillsMadulfFish","GLOBAL",1)~ THEN ~马杜夫也抓到不少大的。马杜夫想，马杜夫的朋友会很高兴。~
+== C0AURA2J ~你觉得怎么样，<CHARNAME>？~
 END
-  ++ ~That was great. We need to do it again some time.~ + C0AURA-UMARHILLS8-1
-  ++ ~It was fine, I guess.~ + C0AURA-UMARHILLS8-2
-  ++ ~I don't think I like fishing. But at least we won't go hungry.~ + C0AURA-UMARHILLS8-2
+  ++ ~太好了。我们以后得再来。~ + C0AURA-UMARHILLS8-1
+  ++ ~还行吧。~ + C0AURA-UMARHILLS8-2
+  ++ ~我想我不喜欢钓鱼。可至少我们不愁吃。~ + C0AURA-UMARHILLS8-2
 
 CHAIN C0AURA2J C0AURA-UMARHILLS8-1
-~Yes, for sure! Let's make this a routine, if we can.~
+~是，当然！若可以，我们把这当成常事吧。~
 EXTERN C0AURA2J C0AURA-UMARHILLS8-2
 
 CHAIN C0AURA2J C0AURA-UMARHILLS8-2
-~Thanks for taking the time to indulge in this with me, <CHARNAME>. It's almost like I'm with my family again.~
-= ~But we can't stay here forever, can we? Let's go. We'll have plenty more chances to repeat this in the future.~
+~谢谢你花时间陪我玩这个，<CHARNAME>。几乎就像我又跟家人在一起了。~
+= ~可我们不能永远待在这儿，对吧？走吧。以后我们还有很多机会再来。~
 END
 IF ~Global("C0AuraUmarHillsMadulfFish","GLOBAL",1)~ DO ~ClearAllActions()
 StartCutSceneMode()
@@ -1776,57 +1776,57 @@ EXTERN C0AURA2J C0AuraBookMerchant
 END
 
 CHAIN C0AURA2J C0AuraBookMerchant
-~Aww... I was really hoping I'd find something new to read too. That's too bad.~
-== IMNBOOK1 ~A fellow bibliophile, eh? Well, I do have a few things here or there I kept for personal reading, though they are mostly more of a casual genre.~
-== IMNBOOK1 ~This one, for instance. "Lucky Lilla and the Emerald Stream". Volume III of the "Lucky Lilla" series of children's books, originating from Lantan, I believe.~
-== C0AURA2J ~Oh... ah, "Lucky Lilla"? That, umm, brings back memories, ahaha...~
-== IMNBOOK1 ~The books are hardly older than the younglings they entertain, in fact. Only serialized less than 20 years ago, according to the footnotes. Written and illustrated by, erm, who was it again...?~
-== C0AURA2J ~..."Aurelia White"...~
-== IMNBOOK1 ~Ah, yes. Aurelia White, that's the name. Not much of a history to her, s'far I can tell. Only thing anyone knows is that she's a Lantanese author.~
-== C0AURA2J ~Mmm, that's, um, right. Even the Lantanese don't really talk much about, er, about her. What do you think of "Lucky Lilla", sir?~
-== IMNBOOK1 ~Well, some of my colleagues would consider these a touch too juvenile for reading, but truthfully I find them quite a delight in their simplicity and charm. The tales, the imagery! The artist truly did put her soul into her work.~
-== C0AURA2J ~Er, haha. Than—I mean, that's really interesting.~
-== IMNBOOK1 ~You know, little lady, you don't look so different from the heroine on the cover. If nothing else, the hair is almost an identical shade of pink. I don't suppose you grew up on these books?~
-== C0AURA2J ~That's, well, something like that, I guess? Ahaha... I know the stories well, in any case. I don't have any of them right now, though.~
-== IMNBOOK1 ~In that case, let me make a gift of this to you. They're in fairly high demand among the children, and the cost is negligible, it's of no loss to me, I assure ye.~
+~唉……我还真希望也能找到点新东西读。真可惜。~
+== IMNBOOK1 ~同好藏书人，嗯？我这儿倒也留了些私人的读物，不过大多是更随意的类型。~
+== IMNBOOK1 ~比如这本。《幸运的莉拉与翡翠溪》。“幸运的莉拉”童书系列第三卷，我猜源自兰坦。~
+== C0AURA2J ~哦……啊，“幸运的莉拉”？那，呃，勾起回忆了，啊哈哈……~
+== IMNBOOK1 ~其实这些书不比它们娱乐的小家伙们年长多少。据脚注，只连载不到二十年。著绘者是，呃，谁来着……？~
+== C0AURA2J ~……“奥瑞莉亚·怀特”……~
+== IMNBOOK1 ~啊，对。奥瑞莉亚·怀特，就是这名字。她的来历不多，据我所知。人们只知道她是兰坦作者。~
+== C0AURA2J ~嗯，这，呃，没错。就连兰坦人也不怎么谈，呃，谈她。先生，你觉得“幸运的莉拉”怎么样？~
+== IMNBOOK1 ~嗯，我有些同行会觉得这些读起来太幼稚，可老实说，我觉得它们朴素又迷人，很讨喜。那些故事、那些插图！那位画师真把灵魂放进了作品。~
+== C0AURA2J ~呃，哈哈。谢——我是说，这真有意思。~
+== IMNBOOK1 ~你知道，小人儿，你看着跟封面上的女主角没那么不同。至少头发几乎是同一种粉色。我猜你不是读着这些书长大的吧？~
+== C0AURA2J ~那，嗯，大概是那么回事，我想？啊哈哈……不管怎样，这些故事我很熟。不过我现在一本都没带着。~
+== IMNBOOK1 ~那么，就让我把这本书送给你作礼物。它们在孩子们中间很抢手，价钱不算什么，对我不算损失，我跟你保证。~
 DO ~GiveItemCreate("c0abook4","c0aura",1,0,0)~
-== C0AURA2J ~Oh... thank you! Wow, this is nostalgic...~
-== IMNBOOK1 ~Fare ye well, friends.~
+== C0AURA2J ~哦……谢谢你！哇，这真怀旧……~
+== IMNBOOK1 ~一路保重，朋友们。~
 EXIT
 
 CHAIN IF WEIGHT #-1 ~Global("C0AuraMimic","GLOBAL",1)~ THEN C0AURA2J AURA-MIMIC
-~*grumble* Should've known... stupid mimics, grr... last one tried to bite my head off... argh, glue in my hair... *mumbles*~
+~*嘟囔* 早该知道……蠢拟形怪，呃……上一只差点把我脑袋咬下来……啊，头发上全是胶……*咕哝*~
 DO ~SetGlobal("C0AuraMimic","GLOBAL",2)~
 EXIT
 
 I_C_T UHKID03 2 C0AuraUHKID032
-== C0AURA2J IF ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~*sigh* I remember how happy I was when my parents gave me my first toolkit. I was old enough to not cut myself then. Isn't swords and ale a bit much, though?~
+== C0AURA2J IF ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~*叹气* 我记得父母给我第一套工具时我多高兴。那时我大到不会割伤自己了。可刀剑和麦酒是不是太早了点？~
 END
 
 I_C_T JUGJER01 28 C0AuraJUGJER0128
-== C0AURA2J IF ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~Oh no! His wards are failing! Get back, please!~
+== C0AURA2J IF ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~哦不！他的护符在失效！请退后！~
 END
 
 I_C_T VALYGAR 4 C0AuraVALYGAR8
-== C0AURA2J IF ~Global("hiredbycowled","GLOBAL",1) InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~So that's why they hired us? I– I know we promised to do what the wizards asked, but this is just wrong!~
+== C0AURA2J IF ~Global("hiredbycowled","GLOBAL",1) InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~所以他们才雇我们？我——我知道我们答应做法师们要求的事，可这就是不对！~
 END
 
 I_C_T VALYGAR 8 C0AuraVALYGAR8
-== C0AURA2J IF ~Global("hiredbycowled","GLOBAL",1) InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~So that's why they hired us? I– I know we promised to do what the wizards asked, but this is just wrong!~
+== C0AURA2J IF ~Global("hiredbycowled","GLOBAL",1) InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~所以他们才雇我们？我——我知道我们答应做法师们要求的事，可这就是不对！~
 END
 
 I_C_T VALYGAR 12 C0AuraVALYGAR8
-== C0AURA2J IF ~Global("hiredbycowled","GLOBAL",1) InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~So that's why they hired us? I– I know we promised to do what the wizards asked, but this is just wrong!~
+== C0AURA2J IF ~Global("hiredbycowled","GLOBAL",1) InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~所以他们才雇我们？我——我知道我们答应做法师们要求的事，可这就是不对！~
 END
 
 I_C_T2 UHINN01 25 C0AuraUHINN0125
-== C0AURA2J IF ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~*sniff* That's weird, the ink smells fresh...~
+== C0AURA2J IF ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~*嗅* 怪了，这墨闻着是新的……~
 END
 
 // Underdark
 
 CHAIN IF WEIGHT #-1 ~Global("C0AuraImprisonmentDevice","GLOBAL",1)~ THEN C0AURA2J C0AURA-IMPRISONMENT
-~Huh... what is this thing? It's containing an incredible amount of arcane power. <CHARNAME>, wait here and let me have a closer look.~ [C0BLANK]
+~嗯……这东西是什么？它含着惊人数量的奥术之力。<CHARNAME>，你在这儿等等，让我仔细看看。~ [C0BLANK]
 DO ~SetGlobal("C0AuraImprisonmentDevice","GLOBAL",2)
 ClearAllActions()
 StartCutSceneMode()
@@ -1837,64 +1837,64 @@ Wait(1)
 StartDialogNoSet(Player1)~ EXIT
 
 CHAIN IF WEIGHT #-1 ~Global("C0AuraImprisonmentDevice","GLOBAL",2)~ THEN C0AURA2J C0AURA-IMPRISONMENT-2
-~Mmm... that's pretty scary. If I'm not mistaken, <CHARNAME>, this is some kind of imprisonment device. Veeery powerful and difficult magic. What's more, it seems to have some kind of latent magical energy, meaning there's probably somebody trapped inside... or multiple somebodies.~ [C0BLANK]
+~嗯……这挺吓人。我若没弄错，<CHARNAME>，这是某种囚禁装置。非常强大、非常难的法术。而且，它似乎有某种潜在的魔法能量，意味着里面大概关着一个人……或者好几个人。~ [C0BLANK]
 DO ~SetGlobal("C0AuraImprisonmentDevice","GLOBAL",3)~
 END
-  ++ ~Is there any way we could free whoever's trapped? Imprisonment is a terrible fate.~ + C0AURA-IMPRISONMENT-2-1
-  ++ ~By imprisonment, I assume you mean some kind of magical prison, and not literally having someone inside.~ + C0AURA-IMPRISONMENT-2-2
-  ++ ~Never mind this thing for now. We can't risk releasing something dangerous by playing around with random magical devices.~ + C0AURA-IMPRISONMENT-2-0
+  ++ ~有什么办法能放出被关着的人吗？囚禁是可怕的命运。~ + C0AURA-IMPRISONMENT-2-1
+  ++ ~说到囚禁，我猜你是指某种魔法牢笼，而不是字面意义上里面塞着人。~ + C0AURA-IMPRISONMENT-2-2
+  ++ ~这东西先别管。我们不能冒险乱碰魔法装置，放出危险的东西。~ + C0AURA-IMPRISONMENT-2-0
 
 CHAIN C0AURA2J C0AURA-IMPRISONMENT-2-0
-~Maybe you have a point... too bad there's no way we could take it with us. I'd like to spend more time researching it if I had a chance.~
+~也许你说得对……可惜我们没法带走它。若有机会，我想多研究它一阵。~
 EXIT
 
 CHAIN C0AURA2J C0AURA-IMPRISONMENT-2-1
-~I agree. I think freeing them would be easy enough. These facets seem designed to activate at a touch, and it'll probably release the imprisoned soul.~
+~我同意。我想放他们出来够容易。这些面似乎设计成一碰就启动，大概会放出被囚的灵魂。~
 EXTERN C0AURA2J C0AURA-IMPRISONMENT-2-3
 
 CHAIN C0AURA2J C0AURA-IMPRISONMENT-2-2
-~Oh, there's no way anyone would be able to survive inside without some kind of magical assistance. Imprisonment is a horrible, horrible bit of magic. Fortunately, this thing seems built to be able to release whoever's inside by just touching the facets.~
+~哦，没有某种魔法辅助，没人能在里面活下来。囚禁是可怕、可怕的魔法。好在，这东西似乎只要碰一下那些面，就能放出里面的人。~
 EXTERN C0AURA2J C0AURA-IMPRISONMENT-2-3
 
 CHAIN C0AURA2J C0AURA-IMPRISONMENT-2-3
-~That said, there's no knowing what kind of creature is inside. And if they've been trapped long enough, their cognitive functions might not be... too stable. I don't think anyone deserves to be trapped like this, but it might not be entirely safe to let them out despite that.~
-= ~I'll leave the decision on what to do up to you, <CHARNAME>. Though there's some interesting markings on this side of the device, now that I'm looking more carefully... I think they're some kind of glyph. Hmm... maybe I could understand more if I copied them on paper.~
+~话虽如此，里面是什么生物就说不准了。而且若他们被关得够久，认知功能也许不那么……稳定。我想没人该被这样关着，可就算如此，放他们出来也不完全安全。~
+= ~怎么做由你决定，<CHARNAME>。不过我细看之下，这装置这一侧有些有意思的刻痕……我想是某种符文。嗯……也许我抄到纸上能多懂一些。~
 DO ~GiveItemCreate("scrl9s",Myself,1,0,0)~
-= ~There! Now I can make more sense of them—it's incantations for a spell... written in Drow, I think. Good thing I've brushed up on languages, so I've translated the important parts. It might be useful, <CHARNAME>.~
-== VICONIJ IF ~InParty("VICONIA") InMyArea("VICONIA")~ THEN ~Best you handle that with care, <CHARNAME>. Even slight mistranslation, which I fully expect, could have catastrophic results.~
+= ~好了！现在我更能看懂了——是一段法术的咒文……我想是用卓尔语写的。好在我温习过语言，重要的部分我译出来了。也许有用，<CHARNAME>。~
+== VICONIJ IF ~InParty("VICONIA") InMyArea("VICONIA")~ THEN ~你最好小心处理，<CHARNAME>。哪怕轻微误译——我完全预料会有——也可能造成灾难性后果。~
 EXIT
 
 I_C_T AERIEJ 146 C0AuraAERIEJ146
-== C0AURA2J IF ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~Aerie... it's okay. You're not alone, your friends are here to face this with you. We're all terrified, but we'll get through it, okay?~
-== AERIEJ ~Y—you're right, Aura. I'm sure this is hard for everyone, so I need to... to keep it together. But having people with me helps... it really does.~
+== C0AURA2J IF ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~艾黎……没事的。你不是一个人，朋友们在这儿陪你面对。我们都害怕，可我们会挺过去，好吗？~
+== AERIEJ ~你——你说得对，奥拉。我确定这对每个人都不容易，所以我得……保持冷静。可有大家在身边真的有用……真的。~
 END
 
 EXTEND_TOP UDSVIR01 2
-+ ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ + ~Aura, do you have any idea what they're saying?~ EXTERN C0AURA2J C0AuraSvirfneblin
++ ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ + ~奥拉，你知道他们在说什么吗？~ EXTERN C0AURA2J C0AuraSvirfneblin
 END
 
 CHAIN C0AURA2J C0AuraSvirfneblin
-~I'm not familiar with the dialect... but they want to know our intent, I think. We should show them that we mean no harm.~
+~我不熟这种方言……可我想他们想知道我们的来意。我们该表明无害。~
 EXTERN UDSVIR01 0
 
 INTERJECT UDSILVER 9 C0AuraUDSILVER9
-== C0AURA2J IF ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~In all my life, I don't think I've ever seen anything more beautiful...~
+== C0AURA2J IF ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~我这一生，我想从没见过比这更美的东西……~
 EXTERN UDSILVER 58
 
 INTERJECT UDPHAE01 61 C0AuraUDPHAE0161
-== C0AURA2J IF ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~Y–you want us to slaughter my underground ki– I mean, gnomes? That's vile!~
+== C0AURA2J IF ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~你——你要我们屠杀我的地底亲——我是说，侏儒？这太邪恶了！~
 EXTERN UDPHAE01 62
 
 I_C_T UDTRAP06 1 C0AuraUDTRAP061
-== C0AURA2J IF ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~He look so young. I can't believe someone would be so cruel as to trap him in that... thing.~
+== C0AURA2J IF ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~他看着那么年轻。我不敢信有人能残忍到把他关进那……东西里。~
 END
 
 I_C_T UDSILVER 34 C0AuraUDSILVER34
-== C0AURA2J IF ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~Umm, wow... this is completely bizarre. Is this what it's like being tall?~
+== C0AURA2J IF ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~呃，哇……这完全诡异。长高就是这种感觉吗？~
 END
 
 I_C_T UDDUER03 0 C0AuraUDDUER030
-== C0AURA2J IF ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~Oh... that wasn't nice. I only understand a few snippets of Undercommon, but there were definitely a few rude words in there.~
+== C0AURA2J IF ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~哦……那可不友善。我只听得懂几句地底通用语，可里面肯定有几个粗鲁的词。~
 END
 
 EXTEND_BOTTOM UDDROW07 9
@@ -1902,50 +1902,50 @@ IF ~IsValidForPartyDialogue("C0Aura")~ EXTERN C0AURA2J C0AuraMerinid
 END
 
 CHAIN C0AURA2J C0AuraMerinid
-~"Do not throw"... wait, no. It's "don't stow thrones in grass houses"? I feel like I've heard this before...~
+~“别扔”……等等，不对。是“别在草屋里藏王座”？我觉得我听过这个……~
 EXTERN UDDROW07 11
 
 I_C_T UDSVIR03 7 C0AuraUDSVIR037
-== C0AURA2J IF ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~You're kin of mine, however distantly... I'd be willing to help just on that alone.~
+== C0AURA2J IF ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~你是我的同族，不管多疏远……光凭这一点我就愿意帮忙。~
 END
 
 I_C_T UDSVIR03 27 C0AuraUDSVIR0327
-== C0AURA2J IF ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~No. NO! This is atrocious! I'm not having any part of this!~
+== C0AURA2J IF ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~不。不！这太残暴了！我一点也不想参与！~
 DO ~LeaveParty()
 EscapeArea()~ END
 
 I_C_T UDSOLA01 101 C0AuraUDSOLA01101
-== C0AURA2J IF ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~Please don't make us do this, <CHARNAME>. Maybe if we send him away, we can talk to the svirfneblin and find a way to leave them in peace... it's worth a try...~
-== UDSOLA01 ~What are you muttering over there, female? I would be happier to get this tiresome mission over with as quickly as we can.~
+== C0AURA2J IF ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~求你别让我们干这个，<CHARNAME>。也许我们把他送走，就能跟斯维尔夫内布林谈谈，找办法让他们安宁……值得一试……~
+== UDSOLA01 ~你在那边嘀咕什么，雌性？我倒高兴赶紧把这烦人的任务了结，越快越好。~
 END
 
 INTERJECT UDSVIR08 0 C0AuraUDSVIR080
 == C0AURA2J IF ~Global("SolaufeinJob","GLOBAL",7)
-InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~Ood tera... daer'laa vas, k–kin— I mean, deep gnome. Are you familiar with our language? We come in peace.~
+InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~Ood tera……daer'laa vas，亲——亲——我是说，深侏儒。你懂我们的话吗？我们为和平而来。~
 EXTERN UDSVIR08 2
 
 I_C_T2 UDSVIR08 1 C0AuraUDSVIR081
 == C0AURA2J IF ~IsValidForPartyDialog("Jan")
-Global("SolaufeinJob","GLOBAL",7)~ THEN ~I– I can't believe we're doing this! These... these are my kin that we're killing!~
+Global("SolaufeinJob","GLOBAL",7)~ THEN ~我——我不敢信我们在干这个！这些……这些是我们正在杀的我的同族！~
 END
 
 CHAIN IF WEIGHT #-1 ~Global("C0AuraUnderdarkBloodStuff","GLOBAL",1)~ THEN C0AURA2J C0AURA-UNDERDARK-BLOOD
-~Oh, come to think of it, <CHARNAME>... we still have that blood from the Underdark monsters, don't we?~ [C0BLANK]
+~哦，想起来，<CHARNAME>……我们还有从幽暗地域怪物身上取的血，对吧？~ [C0BLANK]
 DO ~SetGlobal("C0AuraUnderdarkBloodStuff","GLOBAL",2)~
-= ~I guess it's not much use to us now that we're free from that place, but... maybe I can do something with it now that it's not important for anything else. This won't take too much time...~
+= ~我想我们既已离开那地方，它对我们没多大用了，可……既然别的用不上了，也许我能拿它做点什么。这不会花太多时间……~
 DO ~ClearAllActions()
 StartCutSceneMode()
 StartCutScene("C0ABLOOD")~ EXIT
 
 CHAIN IF WEIGHT #-1 ~Global("C0AuraUnderdarkBloodStuff","GLOBAL",2)~ THEN C0AURA2J C0AURA-UNDERDARK-BLOOD2
-~There we go. These potions aren't particularly nice to look at, and I doubt they'll taste better, but they're very powerful. You'll know what to do with them, I'm sure.~ [C0BLANK]
+~好了。这些药水看着不太好看，我怀疑味道也不会好，可它们非常强。你肯定知道怎么用。~ [C0BLANK]
 DO ~SetGlobal("C0AuraUnderdarkBloodStuff","GLOBAL",3)~
 EXIT
 
 // Unseeing Eye
 
 INTERJECT GAAL 4 C0AuraGAAL4
-== C0AURA2J IF ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~A– a beholder? That's a powerful and intelligent creature, for sure, but a god?~
+== C0AURA2J IF ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~一——一个眼魔？那当然是强大又有智慧的生灵，可神？~
 EXTERN GAAL 9
 
 // Waukeen's Promenade
@@ -1955,196 +1955,196 @@ InParty("C0Aura")
 !StateCheck("C0Aura",CD_STATE_NOTVALID)
 RandomNum(2,1)
 Global("C0AuraMurtlen","AR0700",0)~ THEN MURTLEN murtlen
-~You! Have you ever been cheated here? I bet ye have!~
+~你！你在这儿被坑过吗？我赌你有！~
 DO ~SetGlobal("C0AuraMurtlen","AR0700",1)~
-== C0AURA2J ~Me? Hehe, I've always prided myself on my eye for good quality... er, goods. If I wasn't so busy, I'd happily give you a few lessons on proper appraisal.~
+== C0AURA2J ~我？嘿嘿，我一直以自己的眼力为傲，看得出好货色……呃，好货。我要不是这么忙，倒乐意给你上几课，教你怎么正确估价。~
 EXIT
 
 ADD_TRANS_TRIGGER KGENIE1 3 ~OR(3) !InParty("C0Aura") !InMyArea("C0Aura") StateCheck("C0Aura",CD_STATE_NOTVALID)~ DO 0 1 2 3 4 5
 
 EXTEND_BOTTOM KGENIE1 3
-+ ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ + ~The prince is 20 and the princess is 30.~ EXTERN C0AURA2J AURA-KALAH-GENIE-1
-+ ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ + ~The prince is 40 and the princess is 30.~ EXTERN C0AURA2J AURA-KALAH-GENIE-1
-+ ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ + ~The prince is 30 and the princess is 40.~ DO ~AddexperienceParty(19500)~ EXTERN C0AURA2J AURA-KALAH-GENIE-2
-+ ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ + ~The prince is 30 and the princess is 20.~ EXTERN C0AURA2J AURA-KALAH-GENIE-1
-+ ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ + ~They are both the same age.~ EXTERN C0AURA2J AURA-KALAH-GENIE-1
-+ ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ + ~I surely don't know.~ EXTERN C0AURA2J AURA-KALAH-GENIE-3
++ ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ + ~王子二十岁，公主三十岁。~ EXTERN C0AURA2J AURA-KALAH-GENIE-1
++ ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ + ~王子四十岁，公主三十岁。~ EXTERN C0AURA2J AURA-KALAH-GENIE-1
++ ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ + ~王子三十岁，公主四十岁。~ DO ~AddexperienceParty(19500)~ EXTERN C0AURA2J AURA-KALAH-GENIE-2
++ ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ + ~王子三十岁，公主二十岁。~ EXTERN C0AURA2J AURA-KALAH-GENIE-1
++ ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ + ~他们俩同岁。~ EXTERN C0AURA2J AURA-KALAH-GENIE-1
++ ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ + ~我实在不知道。~ EXTERN C0AURA2J AURA-KALAH-GENIE-3
 END
 
 CHAIN C0AURA2J AURA-KALAH-GENIE-1
-~No, wait, <CHARNAME>. The prince should be 30 and the princess 40, isn't that right?~
+~不，等等，<CHARNAME>。王子该是三十岁，公主四十岁，对吧？~
 DO ~AddexperienceParty(19500)~ EXTERN KGENIE1 7
 
 CHAIN C0AURA2J AURA-KALAH-GENIE-2
-~Ooh, well done. That's not an easy one to figure out.~
+~哦，干得好。这题可不容易解。~
 EXTERN KGENIE1 7
 
 CHAIN C0AURA2J AURA-KALAH-GENIE-3
-~Hmm, let me think... if I'm not wrong, then the prince should be 30 and the princess 40, right?~
+~嗯，让我想想……我若没弄错，那王子该是三十，公主四十，对吧？~
 DO ~AddexperienceParty(19500)~ EXTERN KGENIE1 7
 
 I_C_T AERIE 27 C0AuraAERIE27
-== C0AURA2J IF ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~Huh... that would explain a lot. Everything here radiates with illusion magic. But undispellable illusions so powerful that your senses make them real isn't something anyone can conjure up.~
+== C0AURA2J IF ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~嗯……那就能解释很多了。这里一切都辐射着幻象魔法。可这种无法驱散、强大到让你的感官把幻象当真的幻象，不是谁能随便造出来的。~
 END
 
 I_C_T GERETH 2 C0AuraGERETH2
-== C0AURA2J IF ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~Um, there's no recipe calling for salamander dust that I know of... unless you're looking to give your children a really, REALLY bad case of heartburn.~
-== GERETH ~Hmph! It's a... secret recipe... yes, that's it. Passed down from generation to generation along my family line. So secret, nobody else has ever heard of it. It is no surprise you have no understanding of the culinary uses of salamander dust.~
+== C0AURA2J IF ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~呃，据我所知，没有哪个食谱要火蜥蜴粉……除非你想让你的孩子得一场非常、非常严重的烧心。~
+== GERETH ~哼！那是个……秘方……对，就是这样。在我家族血脉里代代相传。秘到没别人听过。你不懂火蜥蜴粉的烹饪用法，一点也不奇怪。~
 END
 
 I_C_T KALAH2 4 C0AuraKALAH24
-== C0AURA2J IF ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~Th–this monster was one of my kinsmen? I can't believe this...~
+== C0AURA2J IF ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~这——这怪物曾是我的同族？我不敢信……~
 END
 
 I_C_T SHOP08 0 C0AuraSHOP080
-== C0AURA2J IF ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~Ooh, this is nice. I don't suppose you have a copy of Volo's Guide to All Things Magical? My old volume's falling apart at the seams.~
-== SHOP08 ~That book ain't regarded highly by the gov'nors round 'ere, miss, but... eh, I think I might'a stored a copy or two somewhere. Would ye like t' see me other tomes while I go 'round t' the back?~
+== C0AURA2J IF ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~哦，这本不错。我猜你没有《伏罗魔法万物指南》吧？我那本旧书都快散架了。~
+== SHOP08 ~那本书在本地当权者眼里不怎么受待见，小姐，可……呃，我想我也许存了一两本。我去后面找时，你想看看我别的书吗？~
 END
 
 I_C_T SCJERLIA 12 C0AuraSCJERLIA12
-== C0AURA2J IF ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~Well... I can't say I like this idea, but... I don't see how we'll ever get enough of real illithium to satisfy that stuck-up artist otherwise.~
+== C0AURA2J IF ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~嗯……我不能说我喜欢这主意，可……我想不出别的办法弄到足够的真伊里锡姆，去满足那位自命不凡的画家。~
 END
 
 // WILSON!
 
 I_C_T WILSON 0 C0AuraWILSON0
-== C0AURA2J IF ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~*shivers*~
-== WILSON ~Growl.~
+== C0AURA2J IF ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~*发抖*~
+== WILSON ~低吼。~
 END
 
 CHAIN IF WEIGHT #-1 ~IsGabber("C0Aura")~ THEN WILSON AURA-WILSON-NOPARTY
-~Growl?~
-== C0AURA2J ~Eep! Stay away!~
-== WILSON ~Growl...~
+~低吼？~
+== C0AURA2J ~呀！别过来！~
+== WILSON ~低吼……~
 DO ~ActionOverride("C0Aura",RunAwayFrom("WILSON",20))~ EXIT
 
 CHAIN IF WEIGHT #-1 ~IsValidForPartyDialog("Wilson")
 Global("C0AuraWilsonConflict","GLOBAL",2)~ THEN C0AURA2J wilsonconflict
-~S-seriously?~
+~当——当真？~
 DO ~SetGlobal("C0AuraWilsonConflict","GLOBAL",3)
 SetGlobalTimer("C0AuraWilsonRestTalkTimer","GLOBAL",ONE_DAY)~
-= ~...No, <CHARNAME>. Just... no.~
+= ~……不，<CHARNAME>。就是……不。~
 END
-++ ~What?~ + wilsonconflict.1
-++ ~I have no idea what you're talking about.~ + wilsonconflict.1
+++ ~什么？~ + wilsonconflict.1
+++ ~我完全不知道你在说什么。~ + wilsonconflict.1
 + ~!Race(Player1,HALFLING)
 !Race(Player1,DWARF)
-!Race(Player1,GNOME)~ + ~*Why* are you hiding behind my legs?~ + wilsonconflict.1
+!Race(Player1,GNOME)~ + ~你*为什么*躲在我腿后面？~ + wilsonconflict.1
 + ~OR(3)
 Race(Player1,HALFLING)
 Race(Player1,DWARF)
-Race(Player1,GNOME)~ + ~*Why* are you hiding behind me?~ + wilsonconflict.1
-++ ~Yes. Too bad.~ + wilsonconflict.1
+Race(Player1,GNOME)~ + ~你*为什么*躲在我后面？~ + wilsonconflict.1
+++ ~是。真可惜。~ + wilsonconflict.1
 
 CHAIN C0AURA2J wilsonconflict.1
-~You can't seriously expect me to walk in the same direction as... HIM. LOOK AT HIM!~
-== WILSONJ ~Rrrf?~
-== C0AURA2J ~Ugh! D-don't 'rrrf' me, whatever that means! K-keep away from me!~
+~你不会真指望我跟他……跟*他*往同一个方向走！看看他！~
+== WILSONJ ~呜？~
+== C0AURA2J ~呃！别——别对我“呜”，不管那是什么意思！离——离我远点！~
 END
-+ ~Global("C0AuraKnowsBG1","GLOBAL",1)~ + ~Oh. I forgot you're deathly afraid of bears.~ + wilsonconflict.2
-+ ~Global("C0AuraKnowsBG1","GLOBAL",1)~ + ~I see you've still got that stupid phobia of yours.~ + wilsonconflict.2
-+ ~!Global("C0AuraKnowsBG1","GLOBAL",1)~ + ~I'm not exactly seeing the problem here...~ + wilsonconflict.3
-+ ~!Global("C0AuraKnowsBG1","GLOBAL",1)~ + ~Explain what's going on. Now.~ + wilsonconflict.3
++ ~Global("C0AuraKnowsBG1","GLOBAL",1)~ + ~哦。我忘了你怕熊怕得要命。~ + wilsonconflict.2
++ ~Global("C0AuraKnowsBG1","GLOBAL",1)~ + ~我看你那蠢恐惧症还在。~ + wilsonconflict.2
++ ~!Global("C0AuraKnowsBG1","GLOBAL",1)~ + ~我看不出问题在哪儿……~ + wilsonconflict.3
++ ~!Global("C0AuraKnowsBG1","GLOBAL",1)~ + ~解释一下怎么回事。现在。~ + wilsonconflict.3
 
 CHAIN C0AURA2J wilsonconflict.2
-~I can't believe you actually let a big, honking BEAR of all things join us, knowing I hate the ugly things! Did you do this as a practical joke?~
-== WILSONJ ~...snort. GROWL.~
-== C0AURA2J ~Aah! Look at his mouth. Look at his TEETH! Look at how angry he is! He's thinking of eating me, I know it!~
+~我不敢信你真让一头又大又响的*熊*加入我们，明知我恨那些丑东西！你是拿这当恶作剧吗？~
+== WILSONJ ~……哼。吼。~
+== C0AURA2J ~啊！看他的嘴。看他的*牙*！看他多生气！他在想怎么吃我，我知道！~
 EXTERN WILSONJ wilsonconflict.4
 
 CHAIN C0AURA2J wilsonconflict.3
-~I— I hate bears! I never had to deal with the horrific things in Lantan, but ever since I left I've been seeing them everywhere, and it's awful! Now you're telling me I have to get buddy-buddy with one?~
-== WILSONJ ~Rff? Snort.~
-== C0AURA2J ~Ugh! Just look at his mouth! Look at those big teeth! Look at the slobber dripping from his lips! He's thinking of eating me, I know it!~
+~我——我恨熊！兰坦从没让我应付过这种可怕东西，可自从我离开，就到处都碰见，糟透了！现在你告诉我得跟一头称兄道弟？~
+== WILSONJ ~呜？哼。~
+== C0AURA2J ~呃！就看他的嘴！看那些大牙！看口水从他嘴唇往下滴！他在想怎么吃我，我知道！~
 EXTERN WILSONJ wilsonconflict.4
 
 CHAIN WILSONJ wilsonconflict.4
-~Sniff? Growl. ROOAR!~
-== C0AURA2J ~Aaaaaah! I— I can't stand it anymore! Get him out of here, before he decides to make me into a light snack!~
+~嗅？吼。呜嗷！~
+== C0AURA2J ~啊啊啊啊！我——我受不了了！把他弄走，趁他还没决定拿我当小点心！~
 END
-++ ~Go home, Aura. You're clearly in no fit state for adventuring.~ EXTERN C0AURA2J wilsonconflict.5
-++ ~I'm sorry, my eloquent friend Wilson, but I really really need Aura. You're going to have to return to the woods.~ EXTERN WILSONJ wilsonconflict.6
+++ ~回家吧，奥拉。你显然完全不适合冒险。~ EXTERN C0AURA2J wilsonconflict.5
+++ ~抱歉，我口才了得的朋友威尔森，可我真的、真的很需要奥拉。你得回树林去。~ EXTERN WILSONJ wilsonconflict.6
 
 CHAIN C0AURA2J wilsonconflict.5
-~Seriously? SERIOUSLY?~
-= ~Okay, fine! I guess you like this big, fat, ugly... BEAR more than me, then! I'm taking my things and going home!~
-== WILSONJ ~Growl.~
+~真的？真的？~
+= ~好，算了！我猜你更喜欢这头又大又肥又丑的……熊，胜过喜欢我！我收拾东西回家！~
+== WILSONJ ~低吼。~
 END
-++ ~You... want her to stay?~ EXTERN WILSONJ wilsonconflict.5a
-++ ~She wants to go, Wilson.~ EXTERN WILSONJ wilsonconflict.5a
-++ ~I don't care either way. Just make up your minds already.~ EXTERN WILSONJ wilsonconflict.5a
+++ ~你……想让她留下？~ EXTERN WILSONJ wilsonconflict.5a
+++ ~她想走，威尔森。~ EXTERN WILSONJ wilsonconflict.5a
+++ ~我无所谓。你们快点决定。~ EXTERN WILSONJ wilsonconflict.5a
 
 CHAIN WILSONJ wilsonconflict.5a
-~Snufflesnuff. Growl.~
-== C0AURA2J ~...~
-== WILSONJ ~...~
-== C0AURA2J ~D-do you swear you won't bite my toes while I sleep?~
-== WILSONJ ~Roar.~
-== C0AURA2J ~You won't lick my face?~
-== WILSONJ ~Snort.~
-== C0AURA2J ~You won't eat my hair?~
-== WILSONJ ~Cough. *gagging noise*~
-== C0AURA2J ~...~
-== C0AURA2J ~Okay, fine. Just keep a ten-foot distance from me at all times. I can't tell you apart from an unfriendly bear.~
+~嗅嗅。吼。~
+== C0AURA2J ~……~
+== WILSONJ ~……~
+== C0AURA2J ~你——你发誓我睡觉时不会咬我脚趾？~
+== WILSONJ ~吼。~
+== C0AURA2J ~你不会舔我脸？~
+== WILSONJ ~哼。~
+== C0AURA2J ~你不会吃我头发？~
+== WILSONJ ~咳咳。*干呕声*~
+== C0AURA2J ~……~
+== C0AURA2J ~好，算了。只是任何时候都跟我保持十尺距离。我分不清你跟一头不友善的熊。~
 END
-++ ~Thank goodness that's sorted.~ EXTERN C0AURA2J wilsonconflict.7
-++ ~Can you both stop wasting my time now?~ EXTERN C0AURA2J wilsonconflict.7
+++ ~谢天谢地，解决了。~ EXTERN C0AURA2J wilsonconflict.7
+++ ~你们俩能不能别再浪费我时间？~ EXTERN C0AURA2J wilsonconflict.7
 
 CHAIN WILSONJ wilsonconflict.6
-~Rrrff?! Growl...~
-== C0AURA2J ~Oh, that's a relief. For a moment I thought you might actually drop me for a bear, of all things.~
-== WILSONJ ~Sniff sniff...~
-== C0AURA2J ~There's no point looking at me like that, I'm not having you!~
-== WILSONJ ~Growl? Snuffle.~
-== C0AURA2J ~Ugh! Just go away already!~
-== WILSONJ ~...sniff.~
-== C0AURA2J ~...~
-== WILSONJ ~...~
-== C0AURA2J ~N-nuts and bolts! I can't believe a bear can make puppy-dog eyes like this! Fine, j-just don't get too close to me when we walk!~
+~呜？！吼……~
+== C0AURA2J ~哦，那真松了口气。有一刻我以为你真会为一头熊把我甩了。~
+== WILSONJ ~嗅嗅……~
+== C0AURA2J ~别那样看我，我不会要你的！~
+== WILSONJ ~吼？嗅。~
+== C0AURA2J ~呃！快走开！~
+== WILSONJ ~……嗅。~
+== C0AURA2J ~……~
+== WILSONJ ~……~
+== C0AURA2J ~螺——螺母和螺栓！我不敢信一头熊能做出这种小狗眼！好吧，走的时候别靠我太近！~
 END
-++ ~Thank goodness that's sorted.~ EXTERN C0AURA2J wilsonconflict.7
-++ ~Can you both stop wasting my time now?~ EXTERN C0AURA2J wilsonconflict.7
+++ ~谢天谢地，解决了。~ EXTERN C0AURA2J wilsonconflict.7
+++ ~你们俩能不能别再浪费我时间？~ EXTERN C0AURA2J wilsonconflict.7
 
 CHAIN C0AURA2J wilsonconflict.7
-~I— I will hold you accountable if Muffy gets eaten, <CHARNAME>!~
-== WILSONJ ~Growl.~
+~穆菲若被吃掉，我——我会找你算账，<CHARNAME>！~
+== WILSONJ ~低吼。~
 EXIT
 
 // WINDSPEAR HILLS
 
 CHAIN IF WEIGHT #-1 ~Global("C0AuraOrcishCookbook","GLOBAL",1)~ THEN C0AURA2J wilsonconflict
-~Blech! I don't think I've ever been more glad to be a vegetarian.~
+~呃！我想我从没这么庆幸自己是吃素的。~
 DO ~SetGlobal("C0AuraOrcishCookbook","GLOBAL",2)~
 EXIT
 
 I_C_T FIRWLF01 0 C0AuraFIRWLF01
-== C0AURA2J IF ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~Phew! It smells like wet dog in here.~
+== C0AURA2J IF ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~呼！这儿闻着像湿狗。~
 END
 
 CHAIN IF WEIGHT #-1 ~Global("C0AuraPerfectSunshooter","GLOBAL",1)~ THEN C0AURA2J C0AuraSunshooter
-~Well, that's it. After all this time, it's finally done... the Perfect Sunshooter. I never thought I'd see the day.~ [C0BLANK]
+~好了。过了这么久，终于完成了……完美的太阳射手。我从没想过能看到这一天。~ [C0BLANK]
 DO ~SetGlobal("C0AuraPerfectSunshooter","GLOBAL",2)~
-== C0AURA2J ~I feel like I should be happier, but all I can think of is how much fighting we've gone through to push me into completing it. I feel guilty. Both for everything I've put this bow through, and for not admiring it like it deserves.~
+== C0AURA2J ~我觉得自己该更高兴些，可我满脑子想的都是，我们打了多少仗才逼我把这个做完。我感到愧疚。既为我把这张弓经历的一切，也为我没能像它应得的那样欣赏它。~
 END
-  ++ ~It's beautiful. You should be proud of what you've made.~ + C0AuraSunshooter-1
-  ++ ~A weapon is used as its wielder decides. As long as you know what's right, you shouldn't be ashamed of carrying that bow.~ + C0AuraSunshooter-2
-  ++ ~Since it means you'll be more useful, I'm satisfied.~ + C0AuraSunshooter-0
+  ++ ~真美。你该为自己造出的东西骄傲。~ + C0AuraSunshooter-1
+  ++ ~武器怎么用，由持用者决定。只要你知道什么是对的，就不该为带着这张弓羞耻。~ + C0AuraSunshooter-2
+  ++ ~既然这意味着你更有用，我就满意了。~ + C0AuraSunshooter-0
 
 CHAIN C0AURA2J C0AuraSunshooter-0
-~Yes, I guess I should be satisfied too. Let's go, <CHARNAME>. I should give it a test as soon as possible.~
+~是，我想我也该满意。走吧，<CHARNAME>。我该尽快试一试。~
 EXIT
 
 CHAIN C0AURA2J C0AuraSunshooter-1
-~I am. The first weapon I ever had a part in making with my own hands, and up to now, it's never left my side. ~
+~我是。这是第一件我亲手参与制造的武器，到如今，它从没离开过我身边。~
 EXTERN C0AURA2J C0AuraSunshooter-3
 
 CHAIN C0AURA2J C0AuraSunshooter-2
-~I'm not ashamed. I know that the path we've taken is the best that we've made it. And I wouldn't be ashamed of this bow. Not after everything it's done for me.~
+~我不羞耻。我知道我们走的路，是我们能做到的最好。我也不会为这张弓羞耻。它为我做了这么多之后，不会。~
 EXTERN C0AURA2J C0AuraSunshooter-3
 
 CHAIN C0AURA2J C0AuraSunshooter-3
-~I just thought the day Uncle Dedalus first showed me the completed work... I was so innocent back then, I couldn't even imagine it being covered in blood.~
-= ~Strangely, even though I knew I'd use it for battles that I'd hate, I never thought of a day where I'd actually put it down. It's like a partner to me now... and that's why I've worked hard to make it the best it could possibly be.~
-= ~And even though I'm not excited, I'm... still glad. If it means I can do more for you, then it's a good thing I've succeeded. It may be the whole reason why I was motivated to perfect it at all.~
-= ~I think you deserve some of the credit for the creation of the Perfect Sunshooter, don't you think, <CHARNAME>? Hehe.~
+~我只是想起戴达罗斯叔叔第一次给我看成品的那天……那时我多天真，连它沾满血的样子都想象不出。~
+= ~奇怪的是，尽管我知道会用它打我不喜欢的仗，我从没想过有一天我会真的放下它。如今它像我的伙伴……所以我才努力把它做到最好。~
+= ~虽然我不兴奋，可我……还是高兴。若这意味着我能为你做更多，那我成功就是好事。也许这正是我当初想把它做到完美的全部理由。~
+= ~我觉得完美太阳射手的诞生，你也该记一功，你不觉得吗，<CHARNAME>？嘿嘿。~
 EXIT

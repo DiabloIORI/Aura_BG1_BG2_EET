@@ -63,7 +63,7 @@ BEGIN C0LIRO2
 BEGIN C0AUIMIX
 
 CHAIN IF WEIGHT #-1 ~Global("C0AuraToBImixAngry","GLOBAL",1)~ THEN C0AUIMIX IMIX
-~YOU...! You carry the stolen essence of my foolish, dead spawn! You shall pay in kind with your divine blood, godling!~ [C0BLANK]
+~你……！你身上带着我那愚蠢、死去的子嗣被盗的本质！你要用你的神血来偿，神裔！~ [C0BLANK]
 DO ~SetGlobal("C0AuraToBImixAngry","GLOBAL",2)
 ReallyForceSpell(Myself,WARRIOR_HARDINESS)
 ReallyForceSpell(Myself,WARRIOR_GREATER_WHIRLWIND)
@@ -72,9 +72,9 @@ ReallyForceSpellRES("C0AQEF12",Myself)~ EXIT
 
 
 CHAIN IF WEIGHT #-1 ~IsGabber("C0Aura")~ THEN C0AMISC8 SUNSHOOTERLENS
-~Attach the lens to the Sunshooter?~ [C0BLANK]
+~把镜片装到太阳射手上面？~ [C0BLANK]
 END
-+ ~HasItem("c0amisc8",Myself)~ + ~Attach Precision Lens~ DO ~
++ ~HasItem("c0amisc8",Myself)~ + ~装上精准镜片~ DO ~
 EquipMostDamagingMelee()
 SetInterrupt(FALSE)
 PlaySound("C0AUBOW")
@@ -83,41 +83,41 @@ ApplySpellRES("C0AQEF26",Myself)
 EquipRanged()
 SetSequence(8)
 SetInterrupt(TRUE)~ EXIT
-++ ~Exit~ EXIT
+++ ~离开~ EXIT
 
 CHAIN IF WEIGHT #-1 ~GlobalLT("C0KokoGiveFish","GLOBAL",2)~ THEN C0AKOKO a1
-~*meow*~ [CAT01]
+~*喵*~ [CAT01]
 = IF ~Global("C0KokoGiveFish","GLOBAL",1)
-GlobalTimerExpired("C0KokoGiveFishTimer","GLOBAL")~ THEN ~(The cat brushes itself against your feet.)~
+GlobalTimerExpired("C0KokoGiveFishTimer","GLOBAL")~ THEN ~（那猫在你脚边蹭来蹭去。）~
 END
 + ~Global("C0KokoGiveFish","GLOBAL",1)
-GlobalTimerExpired("C0KokoGiveFishTimer","GLOBAL")~ + ~What's up, are you hungry? Do you want food?~ EXTERN C0AKOKO a1.2
+GlobalTimerExpired("C0KokoGiveFishTimer","GLOBAL")~ + ~怎么了，饿了？想吃东西？~ EXTERN C0AKOKO a1.2
 + ~Global("C0KokoGiveFish","GLOBAL",1)
-GlobalTimerExpired("C0KokoGiveFishTimer","GLOBAL")~ + ~Go away. I don't have anything for you right now.~ EXTERN C0AKOKO a1.2
+GlobalTimerExpired("C0KokoGiveFishTimer","GLOBAL")~ + ~走开。我现在没什么给你的。~ EXTERN C0AKOKO a1.2
 + ~!IsGabber("C0Aura")
 InParty("C0Aura")
 !Dead("C0Aura")
 Range("C0Aura",15)
 !Global("C0AuraKnowBG1","GLOBAL",1)
-Global("C0AuraBG1Koko","GLOBAL",0)~ + ~Hey... isn't this the cat that accompanied you to Dragonspear Castle?~ DO ~SetGlobal("C0AuraBG1Koko","GLOBAL",1)~ EXTERN C0AURA2J a1.1
+Global("C0AuraBG1Koko","GLOBAL",0)~ + ~嘿……这不就是陪你去龙矛堡的那只猫吗？~ DO ~SetGlobal("C0AuraBG1Koko","GLOBAL",1)~ EXTERN C0AURA2J a1.1
 + ~!IsGabber("C0Aura")
 !InParty("C0Aura")
 !Dead("C0Aura")
 Range("C0Aura",15)
 !Global("C0AuraKnowBG1","GLOBAL",1)
-Global("C0AuraBG1Koko","GLOBAL",0)~ + ~Hey... isn't this the cat that accompanied you to Dragonspear Castle?~ DO ~SetGlobal("C0AuraBG1Koko","GLOBAL",1)~ EXTERN C0AURA2P a1.1
+Global("C0AuraBG1Koko","GLOBAL",0)~ + ~嘿……这不就是陪你去龙矛堡的那只猫吗？~ DO ~SetGlobal("C0AuraBG1Koko","GLOBAL",1)~ EXTERN C0AURA2P a1.1
 IF ~~ EXIT
 
 CHAIN C0AURA2J a1.1
-~Yep! Koko-chan came back to me after, well... everything that happened after we beat the crusade. I guess we've formed a bond with the time we spent together.~
-= ~He seems to really like this workshop, so I leave him here and let him do what he likes. Sometimes he goes downstairs to chase mice around the house, but I don't think Tat's kitty likes him very much.~
+~对！我们打赢十字军之后……发生了那么多事，可可酱还是回来了。我想我们一起待的那些时间让我们有了感情。~
+= ~他似乎很喜欢这间工坊，所以我就把他留在这儿，任他爱干什么干什么。有时他会下楼在家里追老鼠，可我觉得塔特的小猫不太喜欢他。~
 END
 IF ~Global("C0KokoGiveFish","GLOBAL",1)~ EXTERN C0AKOKO a1.2
 IF ~!Global("C0KokoGiveFish","GLOBAL",1)~ EXIT
 
 CHAIN C0AURA2P a1.1
-~Yep! Koko-chan came back to me after, well... everything that happened after we beat the crusade. I guess we've formed a bond with the time we spent together.~
-= ~He seems to really like this workshop, so I leave him here and let him do what he likes. Sometimes he goes downstairs to chase mice around the house, but I don't think Tat's kitty likes him very much.~
+~对！我们打赢十字军之后……发生了那么多事，可可酱还是回来了。我想我们一起待的那些时间让我们有了感情。~
+= ~他似乎很喜欢这间工坊，所以我就把他留在这儿，任他爱干什么干什么。有时他会下楼在家里追老鼠，可我觉得塔特的小猫不太喜欢他。~
 END
 IF ~Global("C0KokoGiveFish","GLOBAL",1)
 GlobalTimerExpired("C0KokoGiveFishTimer","GLOBAL")~ EXTERN C0AKOKO a1.2
@@ -126,33 +126,33 @@ IF ~OR(2)
 GlobalTimerNotExpired("C0KokoGiveFishTimer","GLOBAL")~ EXIT
 
 CHAIN IF WEIGHT #-1 ~Global("C0AuraBegin","GLOBAL",1)~ THEN C0APICO begin.0
-~Aha! There you are, you little rascal!~ [C0BLANK]
+~啊哈！你在这儿，你这个小混蛋！~ [C0BLANK]
 DO ~SetGlobal("C0AuraBegin","GLOBAL",2)~
 == MAJAN IF ~InMyArea("MAJAN")
-!Dead("MAJAN")~ THEN ~Goodness me! Is that cat out and about again? I thought I saw something bolting out of the door a moment ago.~
-== C0AKOKO ~*meow!*~ [CAT01]
+!Dead("MAJAN")~ THEN ~天哪！那只猫又跑出来了？我好像刚看见有什么东西冲出门去。~
+== C0AKOKO ~*喵！*~ [CAT01]
 END
-++ ~I presume this cat belongs to you?~ EXTERN C0APICO begin.1
-++ ~Keep this stupid pest under control next time!~ EXTERN C0APICO begin.1
+++ ~我猜这只猫是你的？~ EXTERN C0APICO begin.1
+++ ~下次把这蠢害虫看紧点！~ EXTERN C0APICO begin.1
 
 CHAIN C0APICO begin.1
-~I am so, so sorry, <PRO_SIRMAAM>! He's always trying to escape...~
-== C0AKOKO ~*mee-ow!*~ [CAT01]
-== C0APICO ~Five times a day. Five. Times. A day! If you're not trying to jump out the window, you're managing to pick the latch open and climb down the ladder. How do you even manage that without opposable thumbs?~
-== C0AKOKO ~*yawn*~ [CAT01]
-== C0APICO ~Ooh, just you wait until your owner comes back. *ahem* Beg pardon, <PRO_SIRMAAM>, I'll take him back now.~
+~太、太对不起了，<PRO_SIRMAAM>！他总想逃出去……~
+== C0AKOKO ~*喵——！*~ [CAT01]
+== C0APICO ~一天五次。一天。五次！你不是想跳出窗户，就是设法把门闩拨开、顺着梯子爬下去。你连对生拇指都没有，到底怎么做到的？~
+== C0AKOKO ~*哈欠*~ [CAT01]
+== C0APICO ~哦，等你主人回来你就等着。*咳* 恕罪，<PRO_SIRMAAM>，我这就把他带回去。~
 END
-++ ~Don't worry about it..~ + begin.2
-++ ~I've seen this cat somewhere before...~ DO ~SetGlobal("C0AuraKnowsBG1","GLOBAL",1)~ + begin.2
-++ ~Just get the creature away from me.~ + begin.2
+++ ~别在意。~ + begin.2
+++ ~我以前在哪儿见过这只猫……~ DO ~SetGlobal("C0AuraKnowsBG1","GLOBAL",1)~ + begin.2
+++ ~把这东西从我这儿弄走。~ + begin.2
 
 CHAIN C0APICO begin.2
-~I'll just take him off your hands... bad cat! Now open your mouth... there we go. No more running around with copper wires either, okay?~
+~我这就从他手上接过来……坏猫！张嘴……好了。也别再叼着铜线到处跑了，好吗？~
 == C0APICO IF ~InMyArea("MAJAN")
-!Dead("MAJAN")~ THEN ~I'm so sorry for the noise, auntie.~
+!Dead("MAJAN")~ THEN ~阿姨，真抱歉这么吵。~
 == MAJAN IF ~InMyArea("MAJAN")
-!Dead("MAJAN")~ THEN ~No trouble, dearie. You go on back inside.~
-== C0APICO ~Right, now you're going to get a big scolding once miss Aura gets back home! Come on, back to the workshop, Koko, skedaddle!~
+!Dead("MAJAN")~ THEN ~不碍事，亲爱的。你回屋去吧。~
+== C0APICO ~好，等奥拉小姐回家，你要挨一顿大训！走，回工坊去，可可，快走！~
 DO ~SetGlobal("C0AuraBegin","GLOBAL",2)
 	TakePartyItem("C0AUCAT2")
 	DestroyItem("C0AUCAT2")
@@ -163,145 +163,145 @@ DO ~SetGlobal("C0AuraBegin","GLOBAL",2)
 
 CHAIN IF WEIGHT #-1 ~Global("C0AuraBegin","GLOBAL",2)
 Global("C0AuraMajanTalk","GLOBAL",0)~ THEN MAJAN MAJANSEN
-~Goodness me, the kind of liveliness that comes with having relatives and guests join the household. I'm so sorry for the display, dear. Things usually aren't so loud around here.~
+~天哪，家里多了亲戚和客人就是热闹。真抱歉让你看这出，亲爱的。平常这儿没这么吵。~
 DO ~SetGlobal("C0AuraMajanTalk","GLOBAL",1)~
-== JANJ IF ~IsValidForPartyDialog("JAN")~ THEN ~Wasn't that cousin Pico, ma? Back from working as a shoesmith over in Eshpurta, I see. And in the workshop, too! I didn't think it was being used when I was away.~
-== MAJAN ~We've had a visitor lately, you see. That cat belongs to her. She's out on business right now, but she's been staying at the workshop in the back.~
+== JANJ IF ~IsValidForPartyDialog("JAN")~ THEN ~妈，那不是皮可堂哥吗？我看他从埃什普塔当鞋匠回来了。还在工坊里！我不在时没想到那屋子会有人用。~
+== MAJAN ~你看，我们近来有个客人。那猫是她的。她出门办事去了，可一直住在后面那间工坊。~
 END
-++ ~Your nephew mentioned Aura. Is she perhaps an artificer from Lantan? Pink hair, goggles, metal squirrel on her shoulder?~ DO ~SetGlobal("C0AuraKnowsBG1","GLOBAL",1)~ + MAJANSEN-BG1
-+ ~!InParty("JAN")~ + ~What kind of workshop do you have back there, anyway?~ + MAJANSEN-1a
-+ ~InParty("JAN")~ + ~What kind of workshop do you have back there, anyway?~ + MAJANSEN-1b
-++ ~I need to go now. Excuse me.~ + MAJANSEN-0
+++ ~你侄子提到了奥拉。她莫非是兰坦来的奇械师？粉头发、护目镜、肩上顶着只金属松鼠？~ DO ~SetGlobal("C0AuraKnowsBG1","GLOBAL",1)~ + MAJANSEN-BG1
++ ~!InParty("JAN")~ + ~你们后面那是间什么工坊？~ + MAJANSEN-1a
++ ~InParty("JAN")~ + ~你们后面那是间什么工坊？~ + MAJANSEN-1b
+++ ~我得走了。失陪。~ + MAJANSEN-0
 
 CHAIN MAJAN MAJANSEN-0
-~Of course, I won't take up any more of your time. You have a wonderful <DAYNIGHTALL>.~
+~当然，我不再占用你的时间。愿你有个美好的<DAYNIGHTALL>。~
 EXIT
 
 CHAIN MAJAN MAJANSEN-1a
-~Oh, it's just a room my son Jan uses to work on his various contraptions. Usually it's quiet as a mouse inside when he's not around, but after since our guest arrived in the house, we cleared the room out a bit.~
+~哦，那只是我儿子扬用来弄他各种小装置的一间屋子。他不在时里面通常静得像老鼠，可我们这位客人住进来后，我们把屋子清出了点地方。~
 EXTERN MAJAN MAJANSEN-2
 
 CHAIN MAJAN MAJANSEN-1b
-~Oh, it's just a room Jan uses to work on his various contraptions. Usually it's quiet as a mouse inside when he's not around, but after since our guest arrived in the house, we cleared the room out a bit.~
-== JANJ IF ~IsValidForPartyDialog("JAN")~ THEN ~Mother! You cleared out my things? I hope you didn't throw out the root alchemiser. I worked hard on that, you know.~
-== MAJAN ~No, no, most everything's still in place. She was very interested in the things you've made, you know. She works a similar craft.~
+~哦，那只是扬用来弄他各种小装置的一间屋子。他不在时里面通常静得像老鼠，可我们这位客人住进来后，我们把屋子清出了点地方。~
+== JANJ IF ~IsValidForPartyDialog("JAN")~ THEN ~母亲！你把我的东西清了？希望你没把根茎炼化器扔了。我在这上头可花了不少功夫。~
+== MAJAN ~没有，没有，大部分东西都还在原处。你做的那些东西她很感兴趣。她做的是类似的手艺。~
 EXTERN MAJAN MAJANSEN-2
 
 CHAIN MAJAN MAJANSEN-2
-~She's from Lantan, you see. It's an island nation full of clever inventors and artificers, so it was an unexpected honor to have her company, and offer her our workshop.~
+~你看，她是从兰坦来的。那是个满是聪明发明家和奇械师的岛国，能跟她作伴、把工坊借给她，真是意外的荣幸。~
 END
 + ~OR(2)
 BeenInParty("C0Aura")
-Global("EndOfBG1","GLOBAL",0)~ + ~Did your nephew say her name was Aura? I think I might know her.~ DO ~SetGlobal("C0AuraKnowsBG1","GLOBAL",1)~ + MAJANSEN-2a
+Global("EndOfBG1","GLOBAL",0)~ + ~你侄子说她的名字是奥拉？我想我也许认识她。~ DO ~SetGlobal("C0AuraKnowsBG1","GLOBAL",1)~ + MAJANSEN-2a
 + ~OR(2)
 BeenInParty("C0Aura")
-Global("EndOfBG1","GLOBAL",0)~ + ~I thought that cat looked familiar...~ DO ~SetGlobal("C0AuraKnowsBG1","GLOBAL",1)~ + MAJANSEN-2b
-++ ~Who is this guest of yours?~ + MAJANSEN-3
-++ ~I need to go now. Excuse me.~ + MAJANSEN-0
+Global("EndOfBG1","GLOBAL",0)~ + ~我就觉得那猫看着眼熟……~ DO ~SetGlobal("C0AuraKnowsBG1","GLOBAL",1)~ + MAJANSEN-2b
+++ ~你这位客人是谁？~ + MAJANSEN-3
+++ ~我得走了。失陪。~ + MAJANSEN-0
 
 CHAIN MAJAN MAJANSEN-BG1
-~Yes, that's exactly right. She's from the Glimmershine family—a very prestigous Lantanese name. Might you be a friend of hers?~
+~是，一点没错。她出自格利默夏恩家——兰坦一个极有声望的姓氏。你莫非是她的朋友？~
 END
 + ~!Global("AnomenRomanceActive","GLOBAL",2)
 !Global("RasaadRomanceActive","GLOBAL",2)
 !Global("DornRomanceActive","GLOBAL",2)
 !Global("HexxatRomanceActive","GLOBAL",2)
-Global("C0AuraMatch","GLOBAL",1)~ + ~More than a friend, actually. We were... close.~ DO ~SetGlobal("C0AuraRomanceActive","GLOBAL",1)~ + MAJANSEN-4
-++ ~Yes, I am.~ + MAJANSEN-4
-++ ~Not exactly, but I do know her.~ + MAJANSEN-4
+Global("C0AuraMatch","GLOBAL",1)~ + ~其实不止是朋友。我们曾……很亲近。~ DO ~SetGlobal("C0AuraRomanceActive","GLOBAL",1)~ + MAJANSEN-4
+++ ~是，我是。~ + MAJANSEN-4
+++ ~不完全算，可我确实认识她。~ + MAJANSEN-4
 
 CHAIN MAJAN MAJANSEN-2a
-~Yes, yes, that's what she's called. She's from the Glimmershine family—a very prestigous Lantanese name. Might you be a friend of hers?~
+~是，是，她叫这个名字。她出自格利默夏恩家——兰坦一个极有声望的姓氏。你莫非是她的朋友？~
 END
 + ~!Global("AnomenRomanceActive","GLOBAL",2)
 !Global("RasaadRomanceActive","GLOBAL",2)
 !Global("DornRomanceActive","GLOBAL",2)
 !Global("HexxatRomanceActive","GLOBAL",2)
-Global("C0AuraMatch","GLOBAL",1)~ + ~More than a friend, actually. We were... close.~ DO ~SetGlobal("C0AuraRomanceActive","GLOBAL",1)~ + MAJANSEN-4
-++ ~Yes, I am.~ + MAJANSEN-4
-++ ~Not exactly, but I do know her.~ + MAJANSEN-4
+Global("C0AuraMatch","GLOBAL",1)~ + ~其实不止是朋友。我们曾……很亲近。~ DO ~SetGlobal("C0AuraRomanceActive","GLOBAL",1)~ + MAJANSEN-4
+++ ~是，我是。~ + MAJANSEN-4
+++ ~不完全算，可我确实认识她。~ + MAJANSEN-4
 
 CHAIN MAJAN MAJANSEN-2b
-~Oh, do you know the young lady? Her name's Aura, and she's from the Glimmershine family—a very prestigous Lantanese name. Might you be a friend of hers?~
+~哦，你认识那位年轻小姐？她叫奥拉，出自格利默夏恩家——兰坦一个极有声望的姓氏。你莫非是她的朋友？~
 END
 + ~!Global("AnomenRomanceActive","GLOBAL",2)
 !Global("RasaadRomanceActive","GLOBAL",2)
 !Global("DornRomanceActive","GLOBAL",2)
 !Global("HexxatRomanceActive","GLOBAL",2)
-Global("C0AuraMatch","GLOBAL",1)~ + ~More than a friend, actually. We were... close.~ DO ~SetGlobal("C0AuraRomanceActive","GLOBAL",1)~ + MAJANSEN-4
-++ ~Yes, I am.~ + MAJANSEN-4
-++ ~Not exactly, but I do know her.~ + MAJANSEN-4
+Global("C0AuraMatch","GLOBAL",1)~ + ~其实不止是朋友。我们曾……很亲近。~ DO ~SetGlobal("C0AuraRomanceActive","GLOBAL",1)~ + MAJANSEN-4
+++ ~是，我是。~ + MAJANSEN-4
+++ ~不完全算，可我确实认识她。~ + MAJANSEN-4
 
 CHAIN MAJAN MAJANSEN-3
-~Her name's Aura, of the Glimmershine clan. A very prestigious Lantanese name. Even some of the contraptions we have here owe their existences to their work. She's a lovely girl, too. We're all very glad to have her here.~
+~她叫奥拉，属格利默夏恩一族。兰坦极有声望的姓氏。就连我们这儿的一些装置，也得归功于他们的手艺。她也是个可爱的姑娘。我们都很高兴她在这儿。~
 END
 + ~OR(2)
 BeenInParty("C0Aura")
-Global("EndOfBG1","GLOBAL",0)~ + ~I think I know her. We travelled together for a time in the Sword Coast.~ DO ~SetGlobal("C0AuraKnowsBG1","GLOBAL",1)~ + MAJANSEN-4
-+ ~!BeenInParty("C0Aura")~ + ~Someone like that could be helpful to know. Where is she right now?~ + MAJANSEN-5
-++ ~That's interesting, but I really need to go. Excuse me.~ + MAJANSEN-0
+Global("EndOfBG1","GLOBAL",0)~ + ~我想我认识她。我们曾在剑湾一起旅行过一阵。~ DO ~SetGlobal("C0AuraKnowsBG1","GLOBAL",1)~ + MAJANSEN-4
++ ~!BeenInParty("C0Aura")~ + ~这样的人认识一下会有用。她现在在哪儿？~ + MAJANSEN-5
+++ ~这挺有意思，可我真得走了。失陪。~ + MAJANSEN-0
 
 CHAIN MAJAN MAJANSEN-4
-~Well, isn't that a fortunate coincidence? I suppose you probably want to meet her and catch up, don't you?~
+~哎呀，这不是挺巧？我猜你大概想见她、叙叙旧，对吧？~
 EXTERN MAJAN MAJANSEN-5
 
 CHAIN MAJAN MAJANSEN-5
-~Looking at the time of day... well, I'd say she should be back soon enough, if things are normal. If you take a walk down the district towards the Promenade, chances are you'd run into her along the way.~
+~看这时间……嗯，若一切如常，我说她该快回来了。你若沿着本区往步道走一段，很有可能半路碰上她。~
 DO ~SetGlobal("C0AuraBegin","GLOBAL",3)~
 END
-++ ~Thank you for the help. I'll go look for her.~ + MAJANSEN-6
-++ ~I'll come back later, then.~ + MAJANSEN-6
+++ ~谢谢帮忙。我去找她。~ + MAJANSEN-6
+++ ~那我晚点再来。~ + MAJANSEN-6
 
 CHAIN MAJAN MAJANSEN-6
-~Of course, you go on now. I hope you don't have too much trouble finding the dear girl. She stands out quite a bit.~
+~当然，你现在去吧。希望你别太费劲找那位亲爱的姑娘。她挺显眼。~
 DO ~~ EXIT
 
 EXTEND_BOTTOM MAJAN 7
-+ ~Global("C0AuraBegin","GLOBAL",2) !InParty("JAN")~ + ~Could you tell me about that workshop in the back?~ + MAJANSEN-1a
-+ ~Global("C0AuraBegin","GLOBAL",2) InParty("JAN")~ + ~Could you tell me about that workshop in the back?~ + MAJANSEN-1b
++ ~Global("C0AuraBegin","GLOBAL",2) !InParty("JAN")~ + ~能跟我说说后面那间工坊吗？~ + MAJANSEN-1a
++ ~Global("C0AuraBegin","GLOBAL",2) InParty("JAN")~ + ~能跟我说说后面那间工坊吗？~ + MAJANSEN-1b
 END
 
 CHAIN IF WEIGHT #-1 ~Global("C0AuraBegin","GLOBAL",10)
 Global("C0AuraMaReminder","GLOBAL",0)~ THEN MAJAN MAJANSEN
-~Ah, <CHARNAME>! Aura has come back home, if you're looking for her. She's waiting for you in the workshop right now.~
+~啊，<CHARNAME>！你若找奥拉，她回家了。她这会儿在工坊等你。~
 DO ~SetGlobal("C0AuraMaReminder","GLOBAL",1)~
 EXIT
 
 CHAIN IF WEIGHT #-1 ~Class(Myself,MAGE)
 Kit(Myself,TRUECLASS)~ THEN C0ABOOK3 PYROMANCY
-~After memorizing the contents of the tome, it bursts into flames.~
+~记下书中内容后，它猛地烧了起来。~
 DO ~AddKit(C0PYROM)
 CreateVisualEffectObject("ICFIRSDI",Myself)
 DestroyItem("C0ABOOK3")~ EXIT
 
 CHAIN IF WEIGHT #-1 ~Global("C0KokoGiveFish","GLOBAL",2)~ THEN C0AKOKO a1.2
-~*meows expectantly*~ [CAT02]
+~*期待地喵叫*~ [CAT02]
 DO ~SetGlobal("C0KokoGiveFish","GLOBAL",2)~
 END
-+ ~PartyHasItem("C0AFISH1")~ + ~Here, have this bluefin tuna.~ DO ~TakePartyItem("C0AFISH1") DestroyItem("C0AFISH1") SetGlobal("C0KokoFishType","GLOBAL",1) SetGlobalTimer("C0KokoGivesGift","GLOBAL",ONE_DAY)~ + a1.3
-+ ~PartyHasItem("C0AFISH2")~ + ~Here, have this darkscale bass.~ DO ~TakePartyItem("C0AFISH2") DestroyItem("C0AFISH2") SetGlobal("C0KokoFishType","GLOBAL",2) SetGlobalTimer("C0KokoGivesGift","GLOBAL",ONE_DAY)~ + a1.3
-+ ~PartyHasItem("C0AFISH3")~ + ~Here, have this striped sheepshead.~ DO ~TakePartyItem("C0AFISH3") DestroyItem("C0AFISH3") SetGlobal("C0KokoFishType","GLOBAL",3) SetGlobalTimer("C0KokoGivesGift","GLOBAL",ONE_DAY)~ + a1.3
-+ ~PartyHasItem("C0AFISH4")~ + ~Here, have this amethyst eel.~ DO ~TakePartyItem("C0AFISH4") DestroyItem("C0AFISH4") SetGlobal("C0KokoFishType","GLOBAL",4) SetGlobalTimer("C0KokoGivesGift","GLOBAL",ONE_DAY)~ + a1.3
-+ ~PartyHasItem("C0AFISH5")~ + ~Here, have this queen's knife.~ DO ~TakePartyItem("C0AFISH5") DestroyItem("C0AFISH5") SetGlobal("C0KokoFishType","GLOBAL",5) SetGlobalTimer("C0KokoGivesGift","GLOBAL",ONE_DAY)~ + a1.3
-+ ~PartyHasItem("L#NIFIS")~ + ~Here, have this old fish.~ DO ~ActionOverride(LastTalkedToBy,ApplyDamage(Myself,1,PIERCING))~ + a1.oldfish
-++ ~I'd love to feed you, but I haven't got anything for you. Where might I be able to buy fish in this city...?~ EXIT
-++ ~Go away! Shoo!~ EXIT
++ ~PartyHasItem("C0AFISH1")~ + ~来，吃这条蓝鳍金枪鱼。~ DO ~TakePartyItem("C0AFISH1") DestroyItem("C0AFISH1") SetGlobal("C0KokoFishType","GLOBAL",1) SetGlobalTimer("C0KokoGivesGift","GLOBAL",ONE_DAY)~ + a1.3
++ ~PartyHasItem("C0AFISH2")~ + ~来，吃这条暗鳞鲈。~ DO ~TakePartyItem("C0AFISH2") DestroyItem("C0AFISH2") SetGlobal("C0KokoFishType","GLOBAL",2) SetGlobalTimer("C0KokoGivesGift","GLOBAL",ONE_DAY)~ + a1.3
++ ~PartyHasItem("C0AFISH3")~ + ~来，吃这条条纹羊头鲷。~ DO ~TakePartyItem("C0AFISH3") DestroyItem("C0AFISH3") SetGlobal("C0KokoFishType","GLOBAL",3) SetGlobalTimer("C0KokoGivesGift","GLOBAL",ONE_DAY)~ + a1.3
++ ~PartyHasItem("C0AFISH4")~ + ~来，吃这条紫晶鳗。~ DO ~TakePartyItem("C0AFISH4") DestroyItem("C0AFISH4") SetGlobal("C0KokoFishType","GLOBAL",4) SetGlobalTimer("C0KokoGivesGift","GLOBAL",ONE_DAY)~ + a1.3
++ ~PartyHasItem("C0AFISH5")~ + ~来，吃这条王后刀鱼。~ DO ~TakePartyItem("C0AFISH5") DestroyItem("C0AFISH5") SetGlobal("C0KokoFishType","GLOBAL",5) SetGlobalTimer("C0KokoGivesGift","GLOBAL",ONE_DAY)~ + a1.3
++ ~PartyHasItem("L#NIFIS")~ + ~来，吃这条老鱼。~ DO ~ActionOverride(LastTalkedToBy,ApplyDamage(Myself,1,PIERCING))~ + a1.oldfish
+++ ~我很想喂你，可我没东西给你。这城里哪儿能买到鱼……？~ EXIT
+++ ~走开！嘘！~ EXIT
 
 CHAIN C0AKOKO a1.3
-~Meow! *gobble gobble*~
-= ~*purrs*...~
+~喵！*咀嚼咀嚼*~
+= ~*呼噜*……~
 DO ~SetGlobal("C0KokoGiveFish","GLOBAL",3) EscapeAreaObject("Door0600")~ EXIT
 
 CHAIN C0AKOKO a1.oldfish
-~(The cat gives it a quick sniff before scratching you with his claws and shooting you a look of contempt.)
+~（那猫迅速嗅了一下，随即用爪子挠你，还投来轻蔑的目光。）
 
-*Hisssss!*~
+*嘶——！*~
 DO ~RunAwayFromNoLeaveArea(LastTalkedToBy,25)~ EXIT
 
 CHAIN IF WEIGHT #-1 ~Global("C0KokoGiveFish","GLOBAL",3)~ THEN C0AKOKO a1.4
-~Mrrow!
+~喵！
 
-(The cat rubs against your legs affectionately and drops something shiny at your feet.)~ [CAT02]
+（那猫亲昵地蹭你的腿，还在你脚边丢下个亮闪闪的东西。）~ [CAT02]
 DO ~SetGlobal("C0KokoGiveFish","GLOBAL",2)~
 END
 IF ~Global("C0KokoFishType","GLOBAL",1)~ DO ~SetGlobal("C0KokoFishType","GLOBAL",0) GiveItemCreate("misc41",Player1,1,0,0)~ EXIT
@@ -313,292 +313,292 @@ IF ~Global("C0KokoFishType","GLOBAL",5)~ DO ~SetGlobal("C0KokoFishType","GLOBAL"
 // QUEST 1
 
 CHAIN IF WEIGHT #-1 ~Global("C0AuraBG2Quest1","GLOBAL",1)~ THEN C0APICO QUEST1-PICO
-~Oh, miss Aura! Beg your pardon, I wasn't paying attention, so I didn't recognize you.~
+~哦，奥拉小姐！恕罪，我没留意，没认出你来。~
 DO ~SetGlobal("C0AuraBG2Quest1","GLOBAL",2)~
-	== C0AURA2J ~Pico! What are you doing here?~
-	== C0APICO ~Just takin' a walk around, miss. I was doin' some errands for auntie, but I was done sooner than I expected, so I've been checking out some places to pick up some odds and ends.~
-	== C0AURA2J ~Odds and ends, such as... what's that you have in your hand, Pico? You were staring at it so intently, I thought you were going to bump into me.~
-	== C0APICO ~This? Eh... just a toy, miss. Don't laugh, but I've always liked collecting these kinds of special dolls. I've never seen one like this one before, so I had to bring it home.~
-	== C0AURA2J ~Can I have a closer look?~
-	== C0APICO ~Sure, miss.~
-	== C0AURA2J ~This *is* exceptionally well-made... wait, unless I'm mistaken, this is Lantanese craftsmanship! Where did you get this from, Pico?~
-	== C0APICO ~I picked it up from one of the new stalls in Waukeen's Promenade, miss. Actually, now that I think of it, the vendor was a gnome close to your own age.~
-	== C0AURA2J ~Huh, really? They must also be a fellow Lantanna. Do you know his name?~
-	== C0APICO ~His name's Reese, I think. Brown hair and beard, and wears a blue tunic. If you're interested in meeting him, miss, he should still be at the promenade right now, and on most mornings.~
+	== C0AURA2J ~皮可！你在这儿做什么？~
+	== C0APICO ~就四处走走，小姐。我在替阿姨跑些差事，可比我预想的完得早，所以一直在找些能淘零碎东西的地方。~
+	== C0AURA2J ~零碎东西，比如……你手里那是什么，皮可？你盯着它那么专注，我以为你要撞上我了。~
+	== C0APICO ~这个？呃……只是个玩具，小姐。别笑，我一直喜欢收集这类特别的娃娃。我从没见过这样的，所以非得带回家。~
+	== C0AURA2J ~我能仔细看看吗？~
+	== C0APICO ~当然，小姐。~
+	== C0AURA2J ~这*确实*做得极好……等等，要不是我弄错，这是兰坦的手艺！你从哪儿弄来的，皮可？~
+	== C0APICO ~我在沃金步道一个新摊子上淘的，小姐。其实现在想起来，那摊贩是个跟你差不多年纪的侏儒。~
+	== C0AURA2J ~嗯，真的？那他一定也是兰坦人。你知道他名字吗？~
+	== C0APICO ~我想他叫里斯。棕发棕须，穿蓝上衣。小姐，你若有兴趣见他，他现在该还在步道，多数早晨也在。~
 	DO ~EscapeArea()~
-	== C0AURA2J ~I actually do want to have a look, if he's really making Lantanese crafts... it's been a while since I've spoken face to face with anyone else from home.~
-	== C0AURA2J ~If we have a chance, do you think we could go over and have a look, <CHARNAME>?~
+	== C0AURA2J ~我还真想去看看，若他真在做兰坦的手艺……我已好久没跟故乡的人面对面说话了。~
+	== C0AURA2J ~若有空，你觉得我们能不能过去看看，<CHARNAME>？~
 	END
-		++ ~Sure. We can check it out when we have time.~ EXTERN C0AURA2J QUEST1-PICO-1
-		++ ~I'm not interested in shopping for toys.~ EXTERN C0AURA2J QUEST1-PICO-2
+		++ ~当然。有空我们就去看看。~ EXTERN C0AURA2J QUEST1-PICO-1
+		++ ~我没兴趣买玩具。~ EXTERN C0AURA2J QUEST1-PICO-2
 
 CHAIN C0AURA2J QUEST1-PICO-1
-~Thanks, <CHARNAME>. I know it's a trivial thing, but after hearing about it, I can't help but be curious.~
+~谢谢，<CHARNAME>。我知道这是小事，可听说了之后，我忍不住好奇。~
 EXIT
 
 CHAIN C0AURA2J QUEST1-PICO-2
-~I know, I know. It's probably not an important thing. But I really would like to see if there's really crafts from my home. If we pass by the promenade later, maybe we could take a quick look?~
+~我知道，我知道。这大概不是什么要紧事。可我真想看看这儿是否真有我家乡的手艺。我们若晚点路过步道，也许能快看一眼？~
 EXIT
 
 CHAIN IF WEIGHT #-1 ~Global("C0AuraBG2Quest1","GLOBAL",3)~ THEN C0AREES QUEST1-REESE
-~...and this one looks like a doll, but it can dance all on its own! You see, just push in the key and wind it up, four or five turns should do it, and...~
+~……这个看着像个娃娃，可它能自己跳舞！你看，把钥匙插进去拧，四五圈就够了，然后……~
 DO ~SetGlobal("C0AuraBG2Quest1","GLOBAL",4)~
-== C0AKID3 ~Oooooh...~
-== C0AKID1 ~Mr. Reese! Can you show us the horse with the carriage?~
-== C0AREES ~That one? Well, if you insist... now, clear a path, please. There we go, now I'm going to use the key and... watch it go!~
-== C0AKID2 ~Wow! It really does move on its own! It's like magic.~
-== C0AREES ~No, not magic, young man. It's a brilliant piece of clockwork, put together using complex parts and logic.~
-== C0AKID4 ~Do you make all these amazing toys yourself, Mr. Reese?~
-== C0AREES ~I wish I could claim that honor, my dear, but no. I put together the parts, but all of these are designed by my teacher, Car... well, I think you might find his name a bit of a mouthful, so just call him "Uncle Mag".~
-== C0AKID4 ~Can we meet Uncle Mag one day? I want to know about everything he's made!~
-== C0AREES ~Well... I'm afraid his legs aren't as strong as they used to be. He doesn't leave the workshop often. But I will tell him of your interest, young man. Now then, who wants a closer look at this sweet girl?~
-== C0AKID3 ~I... I really want that doll... but I don't have any money...~
-== C0AREES ~Not to worry, dear girl. Uncle Mag wants these creations to make young children like you happy. It's all yours—come back if it ever needs fixing.~
-== C0AKID3 ~Th–thank you...~
-== C0AREES ~Now, what about this toy knight? Look at the colours, and it comes with a brave steed to match!~
-== C0AKID1 ~Me, me! I want that one!~
-== C0AURA2J ~<CHARNAME>, those are Lantanese crafts! I can tell even from a distance.~
+== C0AKID3 ~哦——哦……~
+== C0AKID1 ~里斯先生！能给我们看那辆带马车的小马吗？~
+== C0AREES ~那个？嗯，你既然坚持……那么，请让条路。好了，现在我要用钥匙，然后……看它跑！~
+== C0AKID2 ~哇！它真能自己动！像魔法一样。~
+== C0AREES ~不，不是魔法，小伙子。这是一件极妙的发条装置，用复杂的零件和逻辑拼起来的。~
+== C0AKID4 ~里斯先生，这些了不起的玩具都是你自己做的吗？~
+== C0AREES ~我希望我能担这份荣耀，亲爱的，可不能。零件是我拼的，可这些都是我老师设计的，卡——嗯，我想你会觉得他名字太拗口，就叫他“麦格叔叔”吧。~
+== C0AKID4 ~我们哪天能见到麦格叔叔吗？我想知道他做的一切！~
+== C0AREES ~嗯……我怕他的腿不如从前有力了。他不大出工坊。可我会告诉他你的兴趣，小伙子。那么，谁想仔细看看这位可爱姑娘？~
+== C0AKID3 ~我……我真想要那个娃娃……可我没钱……~
+== C0AREES ~别担心，好姑娘。麦格叔叔希望这些作品能让像你这样的小孩开心。它就归你了——要修就回来。~
+== C0AKID3 ~谢——谢谢你……~
+== C0AREES ~那么，这个玩具骑士怎么样？看这颜色，还配一匹勇敢的坐骑！~
+== C0AKID1 ~我，我！我要那个！~
+== C0AURA2J ~<CHARNAME>，那些是兰坦的手艺！我隔这么远都看得出。~
 END
-++ ~Really? That's quite the coincidence.~ EXTERN C0AURA2J QUEST1-1
-++ ~Is that gnome a Lantanese inventor like you then?~ EXTERN C0AURA2J QUEST1-1
-++ ~Do you want to have a talk with the fellow?~ EXTERN C0AURA2J QUEST1-1
+++ ~真的？那可真巧。~ EXTERN C0AURA2J QUEST1-1
+++ ~那侏儒也是像你一样的兰坦发明家？~ EXTERN C0AURA2J QUEST1-1
+++ ~你想跟那位聊聊吗？~ EXTERN C0AURA2J QUEST1-1
 
 CHAIN C0AURA2J QUEST1-1
-~I haven't had a chance to talk to someone from my homeland in a long time. And those toys... they're not simple creations. "Uncle Mag" must be a master of his craft. I'd... like to ask him a few questions, if I can.~
-== C0AREES ~Well, that's all I have today, little ones. Come back tomorrow, and maybe I'll show you something else.~
-== C0AKID2 ~Bye, Mr. Reese!~
+~我好久没机会跟故乡的人说话了。而且那些玩具……不是简单的东西。“麦格叔叔”一定是位手艺大师。我……想问他几个问题，若可以。~
+== C0AREES ~好了，小家伙们，今天我就这些了。明天再来，也许我再给你们看点别的。~
+== C0AKID2 ~再见，里斯先生！~
 DO ~ActionOverride("C0AKID1",EscapeArea())
 ActionOverride("C0AKID2",EscapeArea())
 ActionOverride("C0AKID3",EscapeArea())
 ActionOverride("C0AKID4",EscapeArea())~ EXIT
 
 CHAIN IF WEIGHT #-1 ~Global("C0AuraBG2Quest1","GLOBAL",4)~ THEN C0AREES QUEST1
-~Sorry, but I'm closing shop for today. If you wanted something, you'll have to come back tomorrow.~
+~抱歉，我今天要收摊了。你要什么，得明天再来。~
 END
 IF ~!InParty("C0Aura")~ EXIT
 IF ~InParty("C0Aura")~ DO ~SetGlobal("C0AuraBG2Quest1","GLOBAL",5)~ EXTERN C0AURA2J QUEST1.1
 
 CHAIN C0AURA2J QUEST1.1
-~'Ciao! I was hoping to have a chance to talk, if it's not a problem.~
-== C0AREES ~Oh! There's a greeting I didn't think I'd hear around here. You must be from the homeland, sonina. I can definitely spend some time for another Lantanna.~
-== C0AURA2J ~Thank you! I'm Aurelia Glimmershine, but please call me Aura. This is my friend and leader, <CHARNAME>. We learned about your incredible crafts and I was hoping to meet you.~
-== C0AREES ~Glimmershine... you can call me Reese Sprocket. What brings you here?~
-== C0AURA2J ~Well, just travelling, studying from the outer lands... making some friends in the process. What about you, soroni?~
-== C0AREES ~I'm... um, you could say that I've made a living here. I've been learning from my teacher, professor Magnussen. You could call me his student and caretaker.~
-== C0AURA2J ~Magnussen...? That sounds familiar... wait, is he 'Uncle Mag'? He makes the crafts you're selling?~
-== C0AREES ~That's him. He's from the homeland, just as you and me. I came here to seek his tutelage years ago, and he took me in. I help to peddle some of his crafts for some coin, and help him with his studies at other times.~
-== C0AURA2J ~'Studies'... what sorts of things does your professor specialize in?~
-== C0AREES ~Ah, it'd be easier to list what he *doesn't* specialize in. You wouldn't find a field he doesn't have some knowledge of, whether it's engineering, alchemy, botany... well, anything related to the sciences or mathematical theory. He's an unparalleled expert.~
-== C0AURA2J ~Such a distinguished member of the homeland, here... do you think it'd be alright if I met him?~
-== C0AREES ~The professor doesn't see many guests, but he's quite personable, really. I'm sure if he sees another Lantanna, he'll be happy to spare as much time for you as he wants. We live in the back alley of the Slums district... hang on, if you have a map...~
+~Ciao！若不碍事，我希望能有机会聊聊。~
+== C0AREES ~哦！这句问候我没想到会在这儿听到。你一定是从故乡来的，sonina。为另一个兰坦人，我当然能腾出些时间。~
+== C0AURA2J ~谢谢！我是奥瑞莉亚·格利默夏恩，请叫我奥拉。这是我的朋友兼领队，<CHARNAME>。我们听说了你了不起的手艺，希望能见见你。~
+== C0AREES ~格利默夏恩……你可以叫我里斯·斯普罗克特。你怎么会来这儿？~
+== C0AURA2J ~嗯，就是旅行、向外邦求学……顺道交些朋友。你呢，soroni？~
+== C0AREES ~我……呃，你可以说我在此地谋了生。我一直跟着我老师马格努森教授学。你可以说我是他的学生兼看护。~
+== C0AURA2J ~马格努森……？听着耳熟……等等，他就是“麦格叔叔”？你卖的手艺是他做的？~
+== C0AREES ~就是他。他跟你我一样是故乡人。我多年前来此求教，他收留了我。我帮他卖些手艺换点钱，别的时候帮他做研究。~
+== C0AURA2J ~“研究”……你教授专精哪些东西？~
+== C0AREES ~啊，列他不专精的还容易些。你找不到他没点知识的领域，工程、炼金、植物学……嗯，任何跟科学或数学理论相关的。他是无人可比的专家。~
+== C0AURA2J ~这么一位故乡的显赫人物，竟在这儿……你觉得我见他合适吗？~
+== C0AREES ~教授不常见客，可他其实相当可亲。我确定他若看见另一个兰坦人，会乐意尽量腾时间给你。我们住在贫民区后巷……等等，你若有地图……~
 DO ~RevealAreaOnMap("C0AUR1")~
-== C0AREES ~It's mostly a place for lower class folk to live, so strangers don't pass through it very often. You probably wouldn't know to without knowing the way. I'm expected back there, so I should go now, but I'll be looking forward to seeing you at our home, sonina. Farewell!~
+== C0AREES ~那地方主要住下层人，陌生人不大经过。不知道路的人大概不会特意去。我该回去了，我现在得走，可我会盼着在家见到你，sonina。再会！~
 DO ~EscapeArea()~ EXIT
 
 CHAIN IF WEIGHT #-1 ~Global("C0AuraBG2Quest1","GLOBAL",5)~ THEN C0AREES QUEST1
-~The professor's in the other room.~
+~教授在另一间屋。~
 EXIT
 
 CHAIN IF WEIGHT #-1 ~NumTimesTalkedTo(0)
 Global("C0AuraBG2Quest1","GLOBAL",5)~ THEN C0AMAGN magnus1
-~Ach! Do I hear guests? Now where did I put my spectacles... ay, there they are! Now let me have a proper look at you...~
+~啊！我听到客人了？我把眼镜放哪儿了……哎，这儿！让我好好看看你……~
 DO ~SetGlobal("C0AuraBG2Quest1","GLOBAL",6)~
-== C0AMAGN ~Hmm, I don't believe I recognize you. You're not the new delivery <PRO_GIRLBOY>, are you? No, I don't see you carrying anything I'm expecting.~
+== C0AMAGN ~嗯，我想我不认得你。你不是新来的送货<PRO_GIRLBOY>吧？不，我看你没带我在等的东西。~
 END
-++ ~I'm <CHARNAME>. Your assistant, Reese, told me about this place.~ + magnus1.1a
-+ ~InParty("C0Aura")~ + ~My friend here is the one who wanted to meet you.~ EXTERN C0AURA2J magnus1.2
-++ ~Watch your words, old man. I'm not the delivery <PRO_GIRLBOY>.~ + magnus1.1b
+++ ~我是<CHARNAME>。你的助手里斯跟我说了这地方。~ + magnus1.1a
++ ~InParty("C0Aura")~ + ~是我这位朋友想来见你。~ EXTERN C0AURA2J magnus1.2
+++ ~说话当心，老头。我不是送货的<PRO_GIRLBOY>。~ + magnus1.1b
 
 CHAIN C0AMAGN magnus1.1a
-~Reese did that, did he? Now that you mention it, I do believe he said something about that... something about a Lantanese artificer with you that was interested in seeing me, eh?~
+~是里斯说的，是吧？你一提我倒想起来了，他确实说过什么……说有位兰坦奇械师跟你一起，想见我，嗯？~
 END
 IF ~IsValidForPartyDialog("C0Aura")~ EXTERN C0AURA2J magnus1.2
 IF ~!IsValidForPartyDialog("C0Aura")~ EXTERN C0AMAGN magnus1.3
 
 CHAIN C0AMAGN magnus1.1b
-~No? Hmm... come to think of it, Reese did mention that I should possibly expect some guests... something about a Lantanese artificer that was interested in seeing me, eh?~
+~没有？嗯……想起来，里斯确实提过我也许该预备些客人……说有位兰坦奇械师想见我，嗯？~
 END
 IF ~IsValidForPartyDialog("C0Aura")~ EXTERN C0AURA2J magnus1.2
 IF ~!IsValidForPartyDialog("C0Aura")~ EXTERN C0AMAGN magnus1.3
 
 CHAIN C0AURA2J magnus1.2
-~Oh, that's me, sir. I'm Aurelia, of the Glimmershine clan.~
-== C0AMAGN ~Glimmershine, eh? A good family, that. Made plenty of talented artisans over the generations. Might I assume you also have some Mideveningwalker blood as well? I can tell from the nose.~
-== C0AURA2J ~You're... you're right, sir! My mother is a Mideveningwalker. Ahaha... is it that easy to tell just from my nose?~
-== C0AMAGN ~Well, the shape is unmistakable. I've never seen one descended from the clan that broke the pattern.~
+~哦，那就是我，先生。我是奥瑞莉亚，属格利默夏恩一族。~
+== C0AMAGN ~格利默夏恩，嗯？好家族。几代人出了不少有才华的工匠。我可以假定你也有米德文沃克的血吧？看鼻子就知道。~
+== C0AURA2J ~你……你说得对，先生！我母亲是米德文沃克家的人。啊哈哈……光看鼻子就这么容易看出来？~
+== C0AMAGN ~嗯，那形状错不了。我从没见过那一族有谁破过这个型。~
 EXTERN C0AMAGN magnus1.4
 
 CHAIN C0AMAGN magnus1.3
-~I don't seem to see anyone of the sort with your right now, however... believe me, I can recognize my kinsmen at a glance. A shame, but if you could bring them along on the next visit, I'd certainly like to meet them.~
+~不过，你身边似乎没见到这类人……相信我，我一眼就认得出我的亲族。可惜，下次来访你若能带他们来，我一定想见见。~
 EXTERN C0AMAGN magnus1.4
 
 CHAIN C0AMAGN magnus1.4
-~In any case... welcome, welcome to my home! I'd shake your hand, but I've dipped my fingers in some rather messy experiments during the last hour.~
-== C0AMAGN ~Oh yes, I should offer my name. Ahem... Caridius C. Magnussen, scientist and inventor. Formerly of Lantan, but I've called Amn my home for the last half century.~
+~总之……欢迎，欢迎来我家！我该跟你握手，可这一小时我手指泡在些挺脏的实验里了。~
+== C0AMAGN ~哦对，我该报上名字。咳咳……卡里迪乌斯·C·马格努森，科学家兼发明家。原籍兰坦，可这半世纪我都把安姆当作家。~
 END
 IF ~IsValidForPartyDialog("C0Aura")~ EXTERN C0AURA2J magnus1.5
 IF ~!IsValidForPartyDialog("C0Aura")~ EXTERN C0AMAGN magnus1.6
 
 CHAIN C0AURA2J magnus1.5
-~Caridius Magn... I'm sorry, sir, but for some reason, I don't think your name is familiar, strangely.~
-== C0AMAGN ~No? Well... no matter, my dear. You seem rather young for one of our kin, so that is not unexpected. I'm just an old man living out my retirement, these days.~
+~卡里迪乌斯·马格……抱歉，先生，可不知为何，我竟觉得你的名字不熟。~
+== C0AMAGN ~不熟？嗯……没关系，亲爱的。以我们族里的人来说，你显得相当年轻，所以也不意外。我如今只是个安度晚年的老头。~
 EXTERN C0AMAGN magnus1.6
 
 CHAIN C0AMAGN magnus1.6
-~There's not much cause for an inventor here in Athkatla, much less in the poorer district, but this simple abode has been the best I can manage, and so I must do what I can to get by. My skills are at least capable of building playthings for children as "Uncle Mag" for a few coins, and it is enough to put food on my table.~
-= ~That said, if you are the adventuring type, there may be something I have that is of value to you. I may have never taken to the road for extended periods myself, but I am an omnidisciplinary researcher, and perhaps some of my creations may be of use to those of your profession.~
-= ~I'm afraid I don't have much to offer in terms of a proper welcome, but you are free to make yourself home here, small as my little workplace is. I cannot stay idle while there's still so much work to do, but please do tell me if there is anything I can do for you.~
+~在阿斯卡特拉，发明家没什么出路，更别说在穷区，可这简陋住处已是我能弄到的最好，我只能尽力过活。我的手艺至少还能以“麦格叔叔”的名头给孩子做玩具换几个钱，够糊口了。~
+= ~话虽如此，你若属于冒险那类人，我这儿也许有些对你有价值的东西。我自己也许从没长期上路，可我是跨学科研究者，我的某些造物也许对你这类行当有用。~
+= ~我怕我拿不出什么像样的欢迎，可你尽可把这儿当自己家，尽管我这小工作间挺小。还有这么多活要干，我不能闲着，可若有我能为你做的，请一定告诉我。~
 EXIT
 
 CHAIN IF ~RandomNum(4,1)
 !NumTimesTalkedTo(0)~ THEN C0AMAGN QUEST1.1
-~Let's see... if I were to, hmm... with the ether... yes, that would—erm, did you need something?~ [C0A1101]
+~让我看看……我若，嗯……用醚……对，那该——呃，你需要什么吗？~ [C0A1101]
 END
-++ ~Do you have anything to sell?~ + MAGN-SHOP
-++ ~Can I ask you a few questions?~ + MAGN-QUESTIONS
-++ ~Not right now.~ EXIT
+++ ~你有东西卖吗？~ + MAGN-SHOP
+++ ~我能问你几个问题吗？~ + MAGN-QUESTIONS
+++ ~现在不行。~ EXIT
 
 CHAIN IF ~RandomNum(4,2)
 !NumTimesTalkedTo(0)~ THEN C0AMAGN QUEST1.1
-~I do believe another twelve ounces of emulsifier should to do the trick... ah, it's you! Please, make yourself at home.~ [C0A1102]
+~我想再加十二盎司乳化剂就该成了……啊，是你！请随意，当自己家。~ [C0A1102]
 END
-++ ~Do you have anything to sell?~ + MAGN-SHOP
-++ ~Can I ask you a few questions?~ + MAGN-QUESTIONS
-++ ~Not right now.~ EXIT
+++ ~你有东西卖吗？~ + MAGN-SHOP
+++ ~我能问你几个问题吗？~ + MAGN-QUESTIONS
+++ ~现在不行。~ EXIT
 
 CHAIN IF ~RandomNum(4,3)
 !NumTimesTalkedTo(0)~ THEN C0AMAGN QUEST1.1
-~Reese, my boy, have you seen my jar of Formula #157? I could've sworn I left it in... oh, I beg your pardon. Do you need anything?~ [C0A1103]
+~里斯，孩子，你见我那罐 157 号配方了吗？我发誓我放在……哦，恕罪。你需要什么吗？~ [C0A1103]
 END
-++ ~Do you have anything to sell?~ + MAGN-SHOP
-++ ~Can I ask you a few questions?~ + MAGN-QUESTIONS
-++ ~Not right now.~ EXIT
+++ ~你有东西卖吗？~ + MAGN-SHOP
+++ ~我能问你几个问题吗？~ + MAGN-QUESTIONS
+++ ~现在不行。~ EXIT
 
 CHAIN IF ~RandomNum(4,4)
 !NumTimesTalkedTo(0)~ THEN C0AMAGN QUEST1.1
-~By Gond, were I still in my younger days I would test these contraptions for faults myself... erm, don't mind an old man's ramblings. I'm paying attention... mostly.~ [C0A1104]
+~贡德在上，若我还在年轻时候，我会亲自测试这些装置有没有毛病……呃，别在意老人的絮叨。我在听着……多半在。~ [C0A1104]
 END
-++ ~Do you have anything to sell?~ + MAGN-SHOP
-++ ~Can I ask you a few questions?~ + MAGN-QUESTIONS
-++ ~Not right now.~ EXIT
+++ ~你有东西卖吗？~ + MAGN-SHOP
+++ ~我能问你几个问题吗？~ + MAGN-QUESTIONS
+++ ~现在不行。~ EXIT
 
 CHAIN C0AMAGN MAGN-SHOP
-~I've got a few prototypes laying around that could use some testing, if you're interested. Just be careful—most of them are experimental. If anything unexpected does happen, do come back and tell me. Er, if it doesn't kill or horribly maim you, that is.~
+~我这儿放着几个原型，正需要测试，你若感兴趣。只是小心——大多是实验性的。若真出了意外，一定回来告诉我。呃，前提是没要你的命、没把你弄残。~
 END
-++ ~Let me see what you have.~ DO ~StartStore("C0AMAGN",LastTalkedToBy(Myself))~ EXIT
-++ ~Maybe later.~ EXIT
+++ ~让我看看你有什么。~ DO ~StartStore("C0AMAGN",LastTalkedToBy(Myself))~ EXIT
+++ ~也许晚点。~ EXIT
 
 CHAIN C0AMAGN MAGN-QUESTIONS
-~Questions? Questions, yes. Of course you may, my <GIRLBOY>.~
+~问题？问题，对。你当然可以问，我的<GIRLBOY>。~
 END
   + ~GlobalGT("C0AuraBG2Quest1","GLOBAL",53)
-     Global("C0AuraMagnReese","GLOBAL",0)~ + ~Are you aware that Reese is an agent of Oculus here to keep you under surveillance?~ DO ~SetGlobal("C0AuraMagnReese","GLOBAL",1)~ + MAGN-REESE
+     Global("C0AuraMagnReese","GLOBAL",0)~ + ~你知道里斯是奥库卢斯派来监视你的人吗？~ DO ~SetGlobal("C0AuraMagnReese","GLOBAL",1)~ + MAGN-REESE
   + ~GlobalGT("C0AuraBG2Quest1","GLOBAL",48)
-     Global("C0AuraMagnDisciples","GLOBAL",0)~ + ~I noticed you got rather angry when those gnomes from Interitus mentioned disciples. Is there a story behind that?~ DO ~SetGlobal("C0AuraMagnDisciples","GLOBAL",1)~ + MAGN-DISCIPLES
-  ++ ~Actually, I'd rather see what you have to sell.~ + MAGN-SHOP
-  ++ ~Maybe later.~ EXIT
+     Global("C0AuraMagnDisciples","GLOBAL",0)~ + ~我注意到，那些来自因特里图斯的侏儒提到“门徒”时你挺生气。这背后有故事吗？~ DO ~SetGlobal("C0AuraMagnDisciples","GLOBAL",1)~ + MAGN-DISCIPLES
+  ++ ~其实，我更想看看你卖什么。~ + MAGN-SHOP
+  ++ ~也许晚点。~ EXIT
 
 CHAIN C0AMAGN MAGN-QUESTIONS2
-~Now then, is there something else you wished to ask?~
+~那么，你还有别的想问吗？~
 END
   + ~GlobalGT("C0AuraBG2Quest1","GLOBAL",53)
-     Global("C0AuraMagnReese","GLOBAL",0)~ + ~Are you aware that Reese is an agent of Oculus here to keep you under surveillance?~ DO ~SetGlobal("C0AuraMagnReese","GLOBAL",1)~ + MAGN-REESE
+     Global("C0AuraMagnReese","GLOBAL",0)~ + ~你知道里斯是奥库卢斯派来监视你的人吗？~ DO ~SetGlobal("C0AuraMagnReese","GLOBAL",1)~ + MAGN-REESE
   + ~GlobalGT("C0AuraBG2Quest1","GLOBAL",48)
-     Global("C0AuraMagnDisciples","GLOBAL",0)~ + ~I noticed you got rather angry when those gnomes from Interitus mentioned disciples. Is there a story behind that?~ DO ~SetGlobal("C0AuraMagnDisciples","GLOBAL",1)~ + MAGN-DISCIPLES
-  ++ ~Actually, I'd rather see what you have to sell.~ + MAGN-SHOP
-  ++ ~Maybe later.~ EXIT
+     Global("C0AuraMagnDisciples","GLOBAL",0)~ + ~我注意到，那些来自因特里图斯的侏儒提到“门徒”时你挺生气。这背后有故事吗？~ DO ~SetGlobal("C0AuraMagnDisciples","GLOBAL",1)~ + MAGN-DISCIPLES
+  ++ ~其实，我更想看看你卖什么。~ + MAGN-SHOP
+  ++ ~也许晚点。~ EXIT
 
 CHAIN C0AMAGN MAGN-REESE
-~He's told you, eh? Well, naturally I do know, of course. I was expecting one like him to appear sooner or later after my exile.~
-= ~After all, the odds of a clever Lantanna youth just happening to discover me in this den of squalor seems too convenient to be a simple coincidence, don't you think? Not to mention, there is no chance the Ayrorch would simply allow me to go my own ways unsupervised for all these years, given the knowledge I possess. I would be insulted if they didn't send someone to keep watch over me.~
-= ~I am aware, and I suspect he is intelligent enough to have realized that as well, though we have never said it plainly to each other. Besides, it's more convenient for me to have a capable assistant at hand, and Oculus he may be, he is still a young man eager to learn. I believe his decision to remain here is beyond simple duty.~
+~他告诉你了，嗯？嗯，我当然知道，自然。我流亡之后，就料到迟早会有他那样的人出现。~
+= ~毕竟，一个聪明的兰坦年轻人碰巧在这贫民窟里发现我，这概率也太巧，不像单纯的巧合，你不觉得？更别说，凭我掌握的知识，艾罗奇绝不可能就这么放任我这些年无人看管。他们若不派人盯着我，我倒要觉得受辱了。~
+= ~我知道，我也猜他聪明得早想到了，只是我们彼此从没明说。再说，有个能干的助手在身边对我更方便，而他纵是奥库卢斯的人，也仍是个渴望学习的年轻人。我相信他留下的决定不只是出于职责。~
 EXTERN C0AMAGN MAGN-QUESTIONS2
 
 CHAIN C0AMAGN MAGN-DISCIPLES
-~Ah... you should not concern yourself over that, my <GIRLBOY>, though I suppose there is no harm in telling you. When I was still a professor of the Sambaran academy, I naturally mentored many young Lantanna. Among them, there were two... a brother and sister, who had enough talent to become my protégés.~
-== C0AMAGN ~Their names were Dedalus and Glaphyra Dinelstrand, and they both became High Artificers of the Great Workshops. Dedalus, whose proficiency was in machinery and inanimate creations, took charge of the Eleventh Workshop, while Glaphyra... who was fascinated in life and its workings like myself, and was always the one closer to me, was the leader of the Fourth Workshop.~
-== C0AURA2J IF ~InParty("C0Aura")~ THEN ~Dedalus and Glaphyra? They're distant family from my father's side... Uncle Dedalus is my father's half-brother, and the one who helped me build the Sunshooter. I only remember a little bit of Aunt Glaphyra... she died when I was still very young, but I remember she was kind, and doted on me often.~
-== C0AURA2J IF ~InParty("C0Aura")~ THEN ~I never knew that she was Head Artificer of the Fourth Workshop... or what the workshop even was built for. Was the removal of the Fourth Workshop, and her death related...?~
-== C0AMAGN IF ~InParty("C0Aura")~ THEN ~I'm afraid I'm no authority on the matter, my dear. I know very little of it myself... only that there is nobody alive who was present to witness what happened to her, and not long after the tragedy, the Ayrorch revised their restrictions on experimentation on life into complete prohibition.~
-== C0AMAGN ~I suspect Glaphyra likely involved herself in some project which ultimately went out of hand, and her death, as well as the Fourth Workshop becoming a forbidden subject among Lantanna, are related... but that is in the past, now. I do not wish to think of it any longer.~
+~啊……你不必为那事费心，我的<GIRLBOY>，不过告诉你大概也无妨。我还在桑巴尔学院当教授时，自然指导过许多年轻兰坦人。其中有两个……一对兄妹，才华足够做我的门生。~
+== C0AMAGN ~他们叫戴达罗斯和格拉菲拉·迪内尔斯特兰德，后来都成了大工坊的高阶奇械师。戴达罗斯精于机械与无生命造物，掌管第十一工坊；而格拉菲拉……她像我一样着迷于生命及其运作，一向跟我更近，是第四工坊的领袖。~
+== C0AURA2J IF ~InParty("C0Aura")~ THEN ~戴达罗斯和格拉菲拉？他们是我父亲那边的远亲……戴达罗斯叔叔是我父亲的同母异父兄弟，也是帮我造太阳射手的人。格拉菲拉姑母我只记得一点点……我年幼时她就去世了，可我记得她待人温和，常疼我。~
+== C0AURA2J IF ~InParty("C0Aura")~ THEN ~我从不知道她是第四工坊的首席奇械师……也不知道那工坊是为什么建的。第四工坊的撤除，和她的死有关吗……？~
+== C0AMAGN IF ~InParty("C0Aura")~ THEN ~我怕我在这事上算不上权威，亲爱的。我自己也所知甚少……只知道如今没有活着的亲历者见证她出了什么事，而惨剧之后不久，艾罗奇就把对生命实验的限制改成了彻底禁止。~
+== C0AMAGN ~我猜格拉菲拉大概卷进了某个最终失控的计划，她的死，以及第四工坊成为兰坦人间的禁忌话题，彼此相关……可那都是过去了。我不想再想。~
 EXTERN C0AMAGN MAGN-QUESTIONS2
 
 CHAIN IF ~True()~ THEN C0AASCS GILBERT
-~I greet you, friend. Have you come in need of any potions or medical remedies?~
+~我向您问候，朋友。您是需要药水或医药？~
 END
-+ ~Global("C0AuraBG2Quest1","GLOBAL",35)~ + ~I need to see Asclepios. Where is his home?~ + QUEST1-35
-+ ~Global("C0AuraBG2Quest1","GLOBAL",13)~ + ~About that man and his father...~ + GILBERT-QUEST
-++ ~Let me see what you have.~ DO ~StartStore("c0aascs",LastTalkedToBy)~ EXIT
-++ ~Do you make all these potions yourself?~ + GILBERT-ASK
-++ ~No. thank you.~ EXIT
++ ~Global("C0AuraBG2Quest1","GLOBAL",35)~ + ~我要见阿斯克勒庇俄斯。他家在哪儿？~ + QUEST1-35
++ ~Global("C0AuraBG2Quest1","GLOBAL",13)~ + ~关于那人和他父亲……~ + GILBERT-QUEST
+++ ~让我看看你有什么。~ DO ~StartStore("c0aascs",LastTalkedToBy)~ EXIT
+++ ~这些药水都是你自己做的吗？~ + GILBERT-ASK
+++ ~不，谢谢。~ EXIT
 
 CHAIN C0AASCS GILBERT-ASK
-~Not I, no. My mentor, Asclepios, the finest physician and potioneer in all of Athkatla, brews all of these potions himself. Their quality and effects are unrivaled, I assure you.~
+~不是我，不。我的导师阿斯克勒庇俄斯，全阿斯卡特拉最好的医师兼药师，所有药水都是他亲手熬的。我向你保证，品质与效力无人能及。~
 END
-++ ~Why does such a person with such skill ask you to peddle his creations in this kind of place?~ + GILBERT-ASK-1
-++ ~Then I would like to have a look at what you have.~ DO ~StartStore("c0aascs",LastTalkedToBy)~ EXIT
-++ ~I see. I have no need for potions right now, though.~ EXIT
+++ ~这么有本事的人，为什么让你在这种地方卖他的东西？~ + GILBERT-ASK-1
+++ ~那我想看看你有什么。~ DO ~StartStore("c0aascs",LastTalkedToBy)~ EXIT
+++ ~我明白了。可我现在不需要药水。~ EXIT
 
 CHAIN C0AASCS GILBERT-ASK-1
-~Master Asclepios is... unusual, to say the least. He does not care for the richer parts of the city, and prefers to work in this area, where the need for a physician is greatest.~
-= ~He is a reclusive sort, but you will see him here, should you come at the right time, to personally tend to those in need of his skills. Most days, however, he remains in his home, researching and creating remedies while I do the task of providing them to the needy.~
+~阿斯克勒庇俄斯大师……至少可以说，挺特别。他不在乎城里富裕的地方，宁可在这区干活，这里最需要医师。~
+= ~他性子孤僻，可你若在对的时候来，会在这儿见到他亲自照料需要他手艺的人。不过多数日子他待在家里研究、制解药，由我把药提供给穷人。~
 END
-++ ~Then I would like to have a look at what you have.~ DO ~StartStore("c0aascs",LastTalkedToBy)~ EXIT
-++ ~I see. I have no need for potions right now, though.~ EXIT
+++ ~那我想看看你有什么。~ DO ~StartStore("c0aascs",LastTalkedToBy)~ EXIT
+++ ~我明白了。可我现在不需要药水。~ EXIT
 
 CHAIN IF WEIGHT #-1 ~Global("C0AuraBG2Quest1","GLOBAL",7)~ THEN C0AREES QUEST1-BEGIN
-~Oh, before you go, on the off chance... does the word 'Titan' mean anything in particular to you?~
+~哦，你走前，万一……“泰坦”这个词对你有特别意义吗？~
 DO ~SetGlobal("C0AuraBG2Quest1","GLOBAL",8)~
 END
-++ ~Titan? As in, the giants?~ + QUEST1-BEGIN-1
-++ ~Nothing important, no. Why?~ + QUEST1-BEGIN-2
+++ ~泰坦？你是说那些巨人？~ + QUEST1-BEGIN-1
+++ ~没什么要紧的，没有。怎么了？~ + QUEST1-BEGIN-2
 
 CHAIN C0AREES QUEST1-BEGIN-1
-~That is the usual definition... but if that's all that comes to mind, then...~
+~那通常是这意思……可若你只想到这个，那么……~
 EXTERN C0AREES QUEST1-BEGIN-2
 
 CHAIN C0AREES QUEST1-BEGIN-2
-~I was just curious, but if it doesn't ring a bell at all, then you can forget I asked about it.~
+~我只是好奇，可若完全没印象，那就当我没问。~
 END
 IF ~InParty("C0Aura")~ THEN EXTERN C0AREES QUEST1-BEGIN-3
 IF ~!InParty("C0Aura")~ THEN EXTERN C0AREES QUEST1-BEGIN-4
 
 CHAIN C0AREES QUEST1-BEGIN-3
-~What about you, miss Aurelia? I don't suppose you know?~
-== C0AURA2J ~'Titan'... you know, I think I have heard that word being used recently, but... I can't remember, sorry.~
-== C0AREES ~I see.~
+~你呢，奥瑞莉亚小姐？我猜你不知道？~
+== C0AURA2J ~“泰坦”……你知道，我觉得近来听过有人用这词，可……我想不起来，抱歉。~
+== C0AREES ~我明白了。~
 EXTERN C0AREES QUEST1-BEGIN-4
 
 CHAIN C0AREES QUEST1-BEGIN-4
-~I just needed to make sure, but I suppose if you don't know, that might be for the best. I'm sorry to keep you.~
+~我只是想确认一下，可你若不知道，那也许最好。抱歉耽搁你了。~
 DO ~AddJournalEntry(%Quest1_Entry_1%,QUEST)~ EXIT
 
 CHAIN IF WEIGHT #-1 ~Global("C0AuraBG2Quest1","GLOBAL",9)~ THEN C0AQMAN QUEST-MAN
-~Father! Father, please get up, at least so I can carry you! It can't be too far from here now, we can find it if we walk a little longer!~
+~父亲！父亲，求你起来，至少让我背你！离这儿不会太远了，我们再走一段就能找到！~
 DO ~SetGlobal("C0AuraBG2Quest1","GLOBAL",10)~
-== C0AQMAN ~Oh, you there! Please, help me carry my father! He's seriously ill, and I need to get him to a healer!~
+== C0AQMAN ~哦，你！求你帮我背我父亲！他病得很重，我得送他去医者那儿！~
 END
-  ++ ~Why are you going this way? The temple district is in the other direction.~ + QUEST-MAN-1
-  ++ ~Alright. Where do you need to go?~ + QUEST-MAN-2
-  ++ ~This isn't my business. Carry him yourself.~ + QUEST-MAN-0
+  ++ ~你为什么往这边走？神殿区在另一头。~ + QUEST-MAN-1
+  ++ ~好。你要去哪儿？~ + QUEST-MAN-2
+  ++ ~这不关我的事。你自己背他。~ + QUEST-MAN-0
 
 CHAIN C0AQMAN QUEST-MAN-0
-~Curse you for your cruelty... damn it! Father, hold on, I'll bring you to the healer, I promise!~
+~你这残忍的……该死！父亲，撑着，我保证把你送到医者那儿！~
 DO ~ActionOverride("C0AQDAD",DestroySelf())
 EscapeArea()~ EXIT
 
 CHAIN C0AQMAN QUEST-MAN-1
-~The priests... they can't cure what ails him! Something's wrong with him, and there's only one person who might be able to help.~
+~祭司们……他们治不了他的病！他出了毛病，只有一个人也许能帮。~
 EXTERN C0AQMAN QUEST-MAN-2
 
 CHAIN C0AQMAN QUEST-MAN-2
-~'Asclepios'... I've heard there's a healer called Asclepios who lives in the back alley of the slums, a miracle worker who can cure any ill, no matter how dire! Please, you have to help me get my father to him!~
+~“阿斯克勒庇俄斯”……我听说有位叫阿斯克勒庇俄斯的医者住在贫民区后巷，是个能治任何病、无论多凶险的奇迹手！求你，你得帮我把我父亲送到他那儿！~
 END
-  ++ ~Alright. Lift him up, we'll carry him together.~ + QUEST-MAN-3
-  ++ ~Go find someone else. I'm busy.~ + QUEST-MAN-0
+  ++ ~好。把他抬起来，我们一起背。~ + QUEST-MAN-3
+  ++ ~找别人吧。我忙。~ + QUEST-MAN-0
 
 CHAIN C0AQMAN QUEST-MAN-3
-~Thank you, <PRO_SIRMAAM>! Quickly, there's no time to waste!~
+~谢谢你，<PRO_SIRMAAM>！快，没时间可浪费！~
 DO ~ClearAllActions()
 StartCutSceneMode()
 StartCutScene("C0AMOV01")
@@ -606,10 +606,10 @@ ActionOverride("C0AQDAD",DestroySelf())
 EscapeArea()~ EXIT
 
 CHAIN IF WEIGHT #-1 ~Global("C0AuraBG2Quest1","GLOBAL",10)~ THEN C0AASCL QUEST-ASCLEPIOS
-~I have completed my diagnosis. Your father has been afflicted with an unusual poison, which has entered his bloodstream and spread through his body.~
+~诊断完成。你父亲中了一种不寻常的毒，已进入血流、扩散全身。~
 DO ~SetGlobal("C0AuraBG2Quest1","GLOBAL",11)~
-== C0AQMAN ~P-poison?! But, even the priests could not do anything... please, sir, you must be able to cure him!~
-== C0AASCL ~Treatment will take time, but as you have brought him to me, his life is no longer in danger. Stand back and allow me to work.~
+== C0AQMAN ~毒——毒？！可连祭司都束手无策……求你，先生，你一定治得了他！~
+== C0AASCL ~治疗要时间，可你既然把他送到我这儿，他的命已脱离危险。退后，让我动手。~
 DO ~StartCutSceneMode()
 Wait(2)
 ForceSpell("C0AQDAD",CLERIC_NEUTRALIZE_POISON)
@@ -617,13 +617,13 @@ Wait(2)
 StartDialogNoSet(Myself)~ EXIT
 
 CHAIN IF WEIGHT #-1 ~Global("C0AuraBG2Quest1","GLOBAL",11)~ THEN C0AASCL QUEST-ASCLEPIOS-2
-~The encroachment of poisons from his vitals has been cleansed. The only thing left is for his body to naturally purge the remainder of the tainted fluids from his body.~
+~从要害侵入的毒已清除。剩下只等身体自然排出残余的污液。~
 DO ~SetGlobal("C0AuraBG2Quest1","GLOBAL",12)~
-== C0AQMAN ~So... he'll be alright, then?~
-== C0AASCL ~I recommend allowing him to rest here for the moment until he is ready to walk. Feed him with the prescribed medicine and carefully observe his condition for the next week. I will personally examine how his health has recovered in the future.~
-== C0AQMAN ~Understood, sir. Thank you, sir!~
-== C0AASCL ~Gilbert, you should know the composition of the required medicines. I can leave the rest to you.~
-== C0AASCS ~Yes, master.~
+== C0AQMAN ~那……他会没事了？~
+== C0AASCL ~我建议让他先在此歇息，直到能走动。按方喂药，接下来一周仔细观察他的状况。以后我亲自复查他恢复得如何。~
+== C0AQMAN ~明白了，先生。谢谢你，先生！~
+== C0AASCL ~吉尔伯特，你该知道所需药剂的配法。剩下的交给你。~
+== C0AASCS ~是，师父。~
 DO ~ClearAllActions()
 StartCutSceneMode()
 ActionOverride("C0AASCL",EscapeArea())
@@ -631,246 +631,246 @@ Wait(3)
 StartDialogNoSet(Myself)~ EXIT
 
 CHAIN IF WEIGHT #-1 ~Global("C0AuraBG2Quest1","GLOBAL",12)~ THEN C0AASCS QUEST-ASCLEPIOS-3
-~Do not worry, good man. My master's skills as a physician are second to none in all of Amn. Your father will be in perfect health within the week.~
+~别担心，好人。我师父的医术在全安姆无人能及。你父亲一周内就会痊愈。~
 DO ~SetGlobal("C0AuraBG2Quest1","GLOBAL",13)~
-== C0AQMAN ~I can but believe you, sir... it greatly shames me, but I have very little to repay you with...~
-== C0AASCS ~No payment is necessary. My master does his work for its own sake, and I strive to help others in need. If you do not mind, though, I would like to know one thing. How did your father become like this?~
-== C0AQMAN ~He, well...~
-== C0AASCS ~If it is personal, you do not need to explain.~
-== C0AQMAN ~No no, sir. It's just that... I'm trying to get my head around it myself. My father's always been in rather poor health, and at his age, he's only been getting steadily worse. Lately, when I couldn't have imagined it, things started looking up for a while, with father getting better... then, out of nowhere, this happened. I just don't get it... how could he have gotten poisoned?~
-== C0AASCS ~Curious indeed... if I may ask, when exactly did his health start improving, and how quickly?~
-== C0AQMAN ~Let me think... well, it must have been within the last month. I couldn't believe it myself... one day, he was just waking up earlier, eating full meals, even taking walks more often. It was like the gods were showing mercy, with how sudden it was.~
-== C0AASCS ~Did he see any different healers during that time? Or taken any special remedies?~
-== C0AQMAN ~He... he wouldn't say, sir. I asked, as well... all he would tell me was that he had somebody to be thankful for... but I don't know what he meant by that.~
-== C0AASCS ~I see... forgive me if this sounds harsh, friend, but such a rapid and unexpected recovery is... unusual. Such miracles do not happen without reason.~
-== C0AASCS ~Please do not be alarmed, but something about this does not rest easy with me... in which case, there is something I must do.~
-== C0AQMAN ~By the gods! What are you doing? Stop!~ [HIT_01A1]
-== C0AASCS ~Rest easy. I am only taking a sample of blood. The bleeding will stop once I apply some healing salve.~
-== C0AQMAN ~I—I see... then...~
-== C0AQMAN ~Sir, my father... will he be alright? Is something still wrong with him? Is there anything more I can do to help?~
-== C0AASCS ~Well... if you feel safe to leave your father under my care, then I would ask that you return home to examine for anything unusual among your father's possessions. Perhaps some sort of unfamiliar medicine, or any written account of suspicious sales.~
-== C0AASCS ~These symptoms are certainly not born of any natural ailment, so I can only suspect some form of malign compound is the culprit. Any evidence to support my claim may give us grounds for further treatment.~
-== C0AQMAN ~I... I will go immediately and search our house from top to bottom for anything strange, sir. Please tend to my father as well as you can in the meantime!~
+== C0AQMAN ~我只能信你，先生……真惭愧，我几乎没什么能酬谢你……~
+== C0AASCS ~不必付钱。我师父做事是为事本身，我也尽力帮助有需要的人。不过你若不介意，我想知道一件事。你父亲怎么变成这样的？~
+== C0AQMAN ~他，嗯……~
+== C0AASCS ~若是私事，你不必解释。~
+== C0AQMAN ~不不，先生。只是……我自己也在琢磨。我父亲身体一向不好，到了这年纪只会越来越差。近来我根本想不到，情况居然好转了一阵，父亲好起来了……然后忽然就这样了。我就是不明白……他怎么会中毒？~
+== C0AASCS ~确实奇怪……若容我问，他身体究竟何时开始好转，好转得多快？~
+== C0AQMAN ~让我想想……嗯，一定是这一个月内。我自己都不敢信……有一天，他就是起得更早、吃得下整餐，还常出去散步。那么突然，像神在开恩。~
+== C0AASCS ~那期间他见过别的医者吗？或服过什么特别的药？~
+== C0AQMAN ~他……他不肯说，先生。我也问了……他只说他有个人要感谢……可我不知道他什么意思。~
+== C0AASCS ~我明白了……朋友，若这话听着刺耳，请原谅，可这么迅速又意外的康复……不寻常。这样的奇迹不会无缘无故发生。~
+== C0AASCS ~请别惊慌，可这事让我心里不安……这样的话，有件事我必须做。~
+== C0AQMAN ~神啊！你在做什么？停下！~ [HIT_01A1]
+== C0AASCS ~放松。我只是取一点血样。涂上治疗药膏血就会停。~
+== C0AQMAN ~我——我明白了……那么……~
+== C0AQMAN ~先生，我父亲……他会没事吗？他还有毛病吗？我还能做什么帮上忙？~
+== C0AASCS ~嗯……你若放心把你父亲交给我照料，那我请你回家一趟，检查你父亲的东西里有没有异常。也许是某种不熟悉的药，或任何可疑买卖的书面记录。~
+== C0AASCS ~这些症状显然不是自然疾病引起的，所以我只能怀疑是某种恶性的复合物作祟。任何能支持我判断的证据，都可能给我们进一步治疗的依据。~
+== C0AQMAN ~我……我这就回去，把家里上上下下搜一遍找怪东西，先生。这期间请尽量照料我父亲！~
 DO ~EscapeArea()~ EXIT
 
 CHAIN C0AASCS GILBERT-QUEST
-~Yes... the poor lad. I understand his pain, completely helpless to prevent his father's suffering. I will do what I can, but unless we have any further knowledge for what the specific cause is, nothing is certain, I fear.~
-= ~All I can do is my best. With my master Asclepios's training, I believe the chances are better than nothing. ~
+~是……可怜的小子。我完全明白他的痛苦，对父亲的苦无能为力。我会尽力，可除非我们进一步知道具体病因，我怕什么都说不准。~
+= ~我只能尽力。有我师父阿斯克勒庇俄斯的传授，我相信机会总比没有好。~
 END
-  ++ ~Can I help somehow?~ + GILBERT-QUEST-1
-  ++ ~I need to buy some potions.~ DO ~StartStore("c0aascs",LastTalkedToBy)~ EXIT
-  ++ ~Good luck with that. I have to go.~ EXIT
+  ++ ~我能帮上什么吗？~ + GILBERT-QUEST-1
+  ++ ~我要买些药水。~ DO ~StartStore("c0aascs",LastTalkedToBy)~ EXIT
+  ++ ~那祝你好运。我得走了。~ EXIT
 
 CHAIN C0AASCS GILBERT-QUEST-1
-~I should not be asking anything difficult from someone with little involvement in this... but you were kind enough to bring this man here, so perhaps you may be willing to do more.~
-= ~There is... one lead that could be followed that I know of. It is nothing but speculation, but rumor has it that a miracle remedy known as Titan has been spread throughout the black market of this city.~ 
-== C0AURA2J IF ~InParty("C0Aura")~ THEN ~Titan... there's that word again.~
-== C0AASCS IF ~InParty("C0Aura")~ ~You know of it?~
-== C0AURA2J IF ~InParty("C0Aura")~ ~We were told about something called that existing not long ago, but... that's all we know.~
-== C0AASCS ~I see. Then you are as in the dark about it as I am.~
+~我不该对与这事没什么关系的人提出难办的要求……可你好心把这人送来，也许愿意再多做点。~
+= ~据我所知……有一条线索可以跟。纯属猜测，可传言说一种叫泰坦的奇迹药已在这城的黑市流传。~ 
+== C0AURA2J IF ~InParty("C0Aura")~ THEN ~泰坦……又是那个词。~
+== C0AASCS IF ~InParty("C0Aura")~ ~你知道它？~
+== C0AURA2J IF ~InParty("C0Aura")~ ~不久前有人跟我们提过有叫这个名字的东西，可……我们只知道这些。~
+== C0AASCS ~我明白了。那你跟我一样一无所知。~
 END
-  ++ ~That seems suspicious. Why didn't you bring it up to the man's son?~ + GILBERT-QUEST-2
-  ++ ~Do you know if there's any truth to this rumor?~ + GILBERT-QUEST-2
+  ++ ~这看着可疑。你为什么没跟那人的儿子提？~ + GILBERT-QUEST-2
+  ++ ~你知道这传言有几分真吗？~ + GILBERT-QUEST-2
 
 CHAIN C0AASCS GILBERT-QUEST-2
-~Like I said, this is but a mere rumor, and a recent one. Not to mention, if the criminal underworld is involved, then there is likely a massive danger behind the truth.~
-= ~I could not simply expose my theories to a civilian when it is nothing but a baseless claim. Especially in his desperation... I fear for what he might do as a result.~
+~我说过，这只是传言，而且是近来的。更别说若牵涉黑道，真相背后大概是极大的危险。~
+= ~这事不过是毫无根据的猜测，我不能就这么把理论摆到一个平民面前。尤其在他那么绝望的时候……我怕他会因此做出什么事。~
 END
-  ++ ~Fair enough. But do you believe this 'Titan' thing might be involved?~ + GILBERT-QUEST-3
-  ++ ~I'm not afraid of dealing with the black market. What can I do?~ + GILBERT-QUEST-4
+  ++ ~说得有理。可你相信这个“泰坦”可能牵涉其中吗？~ + GILBERT-QUEST-3
+  ++ ~我不怕跟黑市打交道。我能做什么？~ + GILBERT-QUEST-4
 
 CHAIN C0AASCS GILBERT-QUEST-3
-~If such a substance truly exists, then I doubt the sudden occurrence of an unknown malady is any coincidence. That said...~
+~若真有这种物质，那我怀疑这不明疾病的突然出现不会是什么巧合。话虽如此……~
 EXTERN C0AASCS GILBERT-QUEST-4
 
 CHAIN C0AASCS GILBERT-QUEST-4
-~I fear I have no knowledge of how you may find the truth. Perhaps a member of the black market itself, or another underworld organization, assuming you dare to speak with them, may enlighten you further, though it will undoubtedly be dangerous.~
-== JANJ IF ~InParty("Jan")~ THEN ~'Titan', eh? I had aspirations of becoming a Titan, many a lifetime ago... still, if it's a matter of illegal drugs we're talking about, I'm sure some fences around the city will no doubt have heard of it, given this sort of knowledge spreads around like a nasty rash from poison ivy. Maybe if we get some for ourselves, I might be able to have a look at it... just out of curiosity...~
-== JAHEIRAJ IF ~InParty("Jaheira")~ THEN ~When it comes to affairs of this sort, no doubt Bernard at the Copper Coronet has some information he may divulge. I doubt he would be foolish enough to deal in it himself, however, so he can likely point us in the right direction at most.~
+~我怕我不知道你该怎么查明真相。也许黑市的人，或别的黑道组织——若你敢跟他们说话——能让你多知道些，尽管那无疑危险。~
+== JANJ IF ~InParty("Jan")~ THEN ~“泰坦”，嗯？好几辈子以前，我还曾想成为泰坦……不过，若说的是非法药物，我想城里有些销赃人一定听过，这类消息传得像毒藤引起的疹子一样快。也许我们弄到一点，我倒能看看它……就为好奇……~
+== JAHEIRAJ IF ~InParty("Jaheira")~ THEN ~这种事上，铜冠酒馆的伯纳德无疑有些消息可以透露。不过我不信他蠢到自己经手这东西，所以他最多能指个正确方向。~
 == YOSHJ IF ~InParty("Yoshimo")
-!Global("WorkingForBodhi","GLOBAL",1)~ THEN ~This 'Titan'... I seem to have heard something related to the matter during my time in this city, not long before we met, my friend. Though, with my common sense, I wisely keep my hands clean of such substances... still, perhaps our 'friend' Gaelan Bayle may have some knowledge of the matter, given his associations. Asking him may be a prudent way forwards.~
+!Global("WorkingForBodhi","GLOBAL",1)~ THEN ~这“泰坦”……朋友，我们相识前不久，我在这城里似乎听过相关的事。不过凭我的常识，我明智地跟这类东西保持手不沾。可我们那位“朋友”盖兰·贝尔，凭他的门路也许知道内情。问他许是稳妥的一步。~
 == EDWINJ IF ~InParty("Edwin")
-!Global("WorkingForBodhi","GLOBAL",1)~ THEN ~Hmm. A substance of such great claims may warrant some research... perhaps it would be to our benefit to acquire some of this 'Titan' for ourselves. No doubt the Shadow Thieves will have some knowledge on the matter. We should question them.~
-== C0AASCS ~That is all I can tell you, friend. I do not ask you to put yourself at risk, but if you learn of anything, please let me know. There may be something I can do for this sick man if further information is discovered.~
+!Global("WorkingForBodhi","GLOBAL",1)~ THEN ~嗯。声称如此之大的东西也许值得研究……自己弄些“泰坦”来也许对我们有利。影贼无疑知道内情。我们该去问他们。~
+== C0AASCS ~朋友，我能说的就这些。我不要求你去冒险，可你若查出什么，请告诉我。若发现更多信息，我也许能为这病人做点什么。~
 DO ~AddJournalEntry(%Quest1_Entry_2%,QUEST)
 SetGlobal("C0AuraBG2Quest1AskTitan","GLOBAL",1)
 SetGlobal("C0AuraBG2Quest1","GLOBAL",14)~ EXIT
 
 EXTEND_TOP GAELAN 42 49 51
-+ ~Global("C0AuraBG2Quest1","GLOBAL",14) Global("C0AuraBG2Quest1AskTitan","GLOBAL",1)~ + ~I was curious if you knew where to acquire Titan.~ DO ~SetGlobal("C0AuraBG2Quest1AskTitan","GLOBAL",2)~ EXTERN GAELAN GAELAN-TITAN
++ ~Global("C0AuraBG2Quest1","GLOBAL",14) Global("C0AuraBG2Quest1AskTitan","GLOBAL",1)~ + ~我好奇你知不知道哪儿能弄到泰坦。~ DO ~SetGlobal("C0AuraBG2Quest1AskTitan","GLOBAL",2)~ EXTERN GAELAN GAELAN-TITAN
 END
 
 EXTEND_TOP BERNARD 31
-+ ~Global("C0AuraBG2Quest1","GLOBAL",14) Global("C0AuraBG2Quest1AskTitan","GLOBAL",1)~ + ~I was curious if you knew where to acquire Titan.~ DO ~SetGlobal("C0AuraBG2Quest1AskTitan","GLOBAL",2)~ EXTERN BERNARD BERNARD-TITAN
++ ~Global("C0AuraBG2Quest1","GLOBAL",14) Global("C0AuraBG2Quest1AskTitan","GLOBAL",1)~ + ~我好奇你知不知道哪儿能弄到泰坦。~ DO ~SetGlobal("C0AuraBG2Quest1AskTitan","GLOBAL",2)~ EXTERN BERNARD BERNARD-TITAN
 END
 
 EXTEND_TOP BMTHIEF 0 4
-+ ~Global("C0AuraBG2Quest1","GLOBAL",14) Global("C0AuraBG2Quest1AskTitan","GLOBAL",1)~ + ~I was curious if you knew where to acquire Titan.~ DO ~SetGlobal("C0AuraBG2Quest1AskTitan","GLOBAL",2)~ EXTERN BMTHIEF BMTHIEF-TITAN
++ ~Global("C0AuraBG2Quest1","GLOBAL",14) Global("C0AuraBG2Quest1AskTitan","GLOBAL",1)~ + ~我好奇你知不知道哪儿能弄到泰坦。~ DO ~SetGlobal("C0AuraBG2Quest1AskTitan","GLOBAL",2)~ EXTERN BMTHIEF BMTHIEF-TITAN
 END
 
 CHAIN BERNARD BERNARD-TITAN
-~Titan... I know of it, aye, but may the gods strike me down if I e'er dared to lay hands on that poison. Listen, friend. We've peddled in some unlawful substances here, I won't deny it... but I've seen people come in having partaken of Titan, and no matter what it may claim to offer... the consequences ain't worth it, I can assure you of that.~
-= ~If you really value your life so little, I've heard rumors of some dealings in the Graveyard District at night. Suppose it's fitting, since it'll be where anyone involved in that trade ends up, one way or another.~
+~泰坦……我知道，是啊，可我要敢碰那毒药，愿神劈了我。听着，朋友。我们这儿确实卖过些不合法东西，我不否认……可我见过服了泰坦进来的人，不管它声称给什么……后果都不值，我跟你保证。~
+= ~你若真这么不在乎自己的命，我听说墓园区夜里有些交易。这也算合适，反正沾这买卖的人最后都会到那儿去，不管怎么去的。~
 EXIT
 
 CHAIN BMTHIEF BMTHIEF-TITAN
-~Titan...? Ah, I see... that is what you're after, is it?~
-= ~Unfortunately, the Shadow Thieves do not deal in Titan, my <PRO_LADYLORD>. I did have a sample of the curious concoction in my possession some time ago, but the order from the higher-ups was to dispose of any which that falls into our hands. It seems those higher in the chain of command find the benefits not worth the cost.~
-= ~That said, if you are insistent on finding some for whatever reason... I have heard that they deal in the substance in the Graveyard District at night. That is the best lead I can offer you, I fear.~
+~泰坦……？啊，我明白了……你要的是那个，是吗？~
+= ~可惜，影贼不做泰坦，我的<PRO_LADYLORD>。我不久前确实手上有过一份那古怪调配物，可上面下令，落到我们手里的都要销毁。看来高层觉得好处不值那代价。~
+= ~话虽如此，你若因某种原因坚持要弄到手……我听说他们夜里在墓园区做这买卖。我怕这是我给的最好线索了。~
 EXIT
 
 CHAIN GAELAN GAELAN-TITAN
-~Titan? Me <PRO_LADYLORD>, now ye be barkin' up the wrong tree 'ere, I assure ye. Me and my employers, we get our hands in some shady dealin's, no doubt. But even we know a bad investment when we see one.~
-= ~That stuff, it ain't good for ye. Maybe someone sleepin' in the streets would be desperate enough to give it a try, but even they'd regret it given enough time. So ye see, I can't get ye any, if that be what yer asking.~
+~泰坦？我<PRO_LADYLORD>，那你可找错人了，我保证。我跟我雇主确实经手些见不得人的买卖，无疑。可连我们也看得出哪笔投资是烂的。~
+= ~那东西对你有害。也许睡街头的人绝望到会试一口，可日子久了连他们也会后悔。所以你看，我没法给你弄到，若你问的是这个。~
 END
-  ++ ~I just wanted to know if you knew where to get some.~ + GAELAN-TITAN-1
-  ++ ~Why I need it is my own business. I just need information.~ + GAELAN-TITAN-1
-  ++ ~I'm trying to stop the trade. If you're not involved, you shouldn't have a problem with it.~ + GAELAN-TITAN-1
+  ++ ~我只想知道你知不知道哪儿能弄到。~ + GAELAN-TITAN-1
+  ++ ~我为什么需要是我自己的事。我只要消息。~ + GAELAN-TITAN-1
+  ++ ~我在设法阻止这买卖。你若没参与，就不该有意见。~ + GAELAN-TITAN-1
 
 CHAIN GAELAN GAELAN-TITAN-1
-~*siigh* Well... me employers ain't said nothin' about keeping this matter secret, so I suppose... I could point ye in the right direction.~
-= ~Hmm... let me think. I haven't seen any o' the stuff meself, but I recall Arledrian sayin' somethin' bout a regular trade goin' on in the Graveyard District. Told him he shouldn't be dealin' with 'em, but if what he said be true, then I reckon ye'll find one o' the dealers there at night.~
-= ~That bit o' information comes free, but let me tell ye again, me <PRO_LADYLORD>. Ye'd be better off forgettin' ye ever heard o' that substance existin'. It be bad business all around.~
+~*叹* 嗯……雇主没说这事要保密，所以我想……我可以给你指个方向。~
+= ~嗯……让我想想。我自己没见过那东西，可我记起阿勒德里安说过墓园区有常年的交易。我告诉他别跟那些人打交道，可若他说的是真的，那我估摸你夜里去那儿能找到一个卖家。~
+= ~这点消息免费，可我再跟你说一遍，我<PRO_LADYLORD>。你最好忘了听过那东西存在。这买卖从头到尾都是烂事。~
 EXIT
 
 CHAIN IF WEIGHT #-1 ~Global("C0AuraBG2Quest1","GLOBAL",14)~ THEN C0AQTHF QUEST1-TITAN-SELLER
-~What're you starin' at me for, mate? This may be a graveyard, but there ain't no rules 'bout standing round here, are there?~
+~你看我干什么，伙计？这虽是墓园，可没说不能站在这儿吧？~
 DO ~SetGlobal("C0AuraBG2Quest1","GLOBAL",15)~
 END
-  ++ ~Certainly not. Rules on selling illegal concoctions, on the other hand...~ EXTERN C0AQTHF QUEST1-TITAN-SELLER-1
-  ++ ~I know what you're doing here, "mate". Titan. I want a sample.~ EXTERN C0AQTHF QUEST1-TITAN-SELLER-2
-  ++ ~Sorry to bother you.~ EXIT
+  ++ ~当然没有。不过卖非法调配物的规矩，倒是有……~ EXTERN C0AQTHF QUEST1-TITAN-SELLER-1
+  ++ ~我知道你在这儿干什么，“伙计”。泰坦。我要一份。~ EXTERN C0AQTHF QUEST1-TITAN-SELLER-2
+  ++ ~抱歉打扰你。~ EXIT
 
 CHAIN C0AQTHF QUEST1-TITAN-SELLER-1
-~Excuse me? I ain't sure I like what you're implyin', mate.~
+~什么？我可不怎么喜欢你话里的意思，伙计。~
 END
-  ++ ~Don't take me for a fool. Nobody in their right mind would stand around in this place at night without reason. I know what you're carrying, and I want some.~ EXTERN C0AQTHF QUEST1-TITAN-SELLER-2
-  ++ ~Fine, I'll make it clearer for you then. I'm here to buy Titan, and you're going to sell it to me.~ EXTERN C0AQTHF QUEST1-TITAN-SELLER-2
+  ++ ~别把我当傻子。神志清醒的人不会无缘无故夜里站在这地方。我知道你身上带什么，我要一些。~ EXTERN C0AQTHF QUEST1-TITAN-SELLER-2
+  ++ ~好，那我跟你说清楚。我来买泰坦，而你要卖给我。~ EXTERN C0AQTHF QUEST1-TITAN-SELLER-2
 
 CHAIN C0AQTHF QUEST1-TITAN-SELLER-2
-~So you're after the stuff, eh? Well, tough luck for you, mate. Maybe you heard 'bout this thing second-hand, but we got one main rule when it comes to dealin' Titan. "Only those in 'truly desperate need' get to buy".~
-= ~You ain't lookin' scrawny, or too sickly to work. Looks like you're doin' well enough all around. You'll live without the stuff, so you ain't getting any.~
+~原来你是冲着那东西来的，嗯？那你运气不好，伙计。你也许二道听说了这东西，可我们卖泰坦有个主规矩。“只有‘真正急需’的人才买得到”。~
+= ~你不瘦，也不病到干不了活。看来你各方面都过得不错。没那东西你也活得下去，所以不卖你。~
 END
-  ++ ~"Live without the stuff"? That's rich, given that you're killing people with what you're selling.~ + QUEST1-TITAN-SELLER-3
-  ++ ~Listen here. I don't have the patience to trade words with you, so you're going to give me Titan or else I'll make you wish you had.~ + QUEST1-TITAN-SELLER-3A
+  ++ ~“没那东西也活得下去”？真好笑，你卖的东西正在害死人。~ + QUEST1-TITAN-SELLER-3
+  ++ ~听着。我没耐心跟你磨嘴，所以你要么把泰坦给我，要么我让你后悔没给。~ + QUEST1-TITAN-SELLER-3A
 
 CHAIN C0AQTHF QUEST1-TITAN-SELLER-3
-~What the blazes are you talking about? Nobody's gettin' hurt by what I'm doin'. Well, their purses might, a little, but they're willin' to make that trade.~
+~你到底在说什么鬼话？我干的事没害着谁。嗯，他们的钱袋也许瘦一点，可他们是自愿换的。~
 END
-  ++ ~Tell that to Sean's father. He nearly died because of what you gave him!~ + QUEST1-TITAN-SELLER-4
+  ++ ~这话去跟肖恩的父亲说。就因为你给他的东西，他差点死了！~ + QUEST1-TITAN-SELLER-4
 
 CHAIN C0AQTHF QUEST1-TITAN-SELLER-3A
-~Ilmater's patience, the sorts of things people'll do for this kind of stuff... bah.~
-= ~Listen here. I can tell you're serious and I'll probably end up joining the bodies here if I don't change my mind. But I'm still a person with responsibilities and people to take care of. So I can bend the rules a little and give you the Titan that I have, but you'll have to pay a little extra.~
+~伊尔马特在上，人为这种东西能干出什么事来……唉。~
+= ~听着。我看得出你是认真的，我若不改主意，大概也会变成这儿的尸体之一。可我仍是有责任、有人要养的人。所以我可以稍微破点规矩，把我手上的泰坦给你，可你得多付点。~
 END
-  ++ ~Fine. How much are you asking for?~ + QUEST1-TITAN-SELLER-3B
-  ++ ~"People you care for"? You don't seem to mind hurting people others care about.~ + QUEST1-TITAN-SELLER-3
-  ++ ~Forget it. I'll just take it from your cold, dead hands.~ DO ~Enemy()~ EXIT
+  ++ ~好。你要多少？~ + QUEST1-TITAN-SELLER-3B
+  ++ ~“你在意的人”？看来你不在乎害别人在意的人。~ + QUEST1-TITAN-SELLER-3
+  ++ ~算了。我直接从不冷不死的你手上拿。~ DO ~Enemy()~ EXIT
 
 CHAIN C0AQTHF QUEST1-TITAN-SELLER-3B
-~Now, here's how it's gonna work. Normally when ordinary folk come for a deal, there's room for negotiation. But since you don't look like you're hurting for money and you're twistin' my arm to get your hands on some Titan, I'm going to raise it to a thousand. You think the newest big thing on the market comes cheap or easy to get? Think again.~
+~那么，这么办。平常普通老百姓来交易，还有讲价的余地。可你看着不像缺钱，又硬逼着我弄泰坦，我要涨到一千。你以为市面上最新的大玩意儿便宜好弄？再想想。~
 END
-  + ~PartyGoldGT(999)~ + ~A thousand it is. Here you go.~ DO ~TakePartyGold(1000)~ + QUEST1-TITAN-SELLER-3C
-  ++ ~Did you make the same deal for Sean's father while leaving out the part where he'd die?~ + QUEST1-TITAN-SELLER-4
-  ++ ~I can think of a better deal. It ends with you dying.~ DO ~Enemy()~ EXIT
+  + ~PartyGoldGT(999)~ + ~一千就一千。给你。~ DO ~TakePartyGold(1000)~ + QUEST1-TITAN-SELLER-3C
+  ++ ~你卖肖恩父亲时，也这么交易、省掉了他会死那部分？~ + QUEST1-TITAN-SELLER-4
+  ++ ~我能想到更好的交易。结局是你死。~ DO ~Enemy()~ EXIT
 
 CHAIN C0AQTHF QUEST1-TITAN-SELLER-3C
-~Pleasure doing business with you. Just so you know, this is a one time deal, so don't expect to see me around here again.~
+~跟你做生意真愉快。跟你说一声，这是一次性的，别指望再在这儿见到我。~
 DO ~GiveItem("c0atitn",Player1) EscapeArea()~ EXIT
 
 CHAIN C0AQTHF QUEST1-TITAN-SELLER-4
-~Sean's father... what? You're sayin' he nearly died?~
+~肖恩的父亲……什么？你说他差点死了？~
 DO ~SetGlobal("C0AuraBG2Quest1RoyTalk","GLOBAL",1)~
-= ~L-listen here, friend. You've got it all wrong. Sean and I, we used to be best mates when we were kids. Things got a little rough for me, so I've been doing odd jobs with the local gangs to make ends meet, but I'd never mean to hurt his old man!~
-= ~Sean's been scared that his father will die early cause of his illnesses, so I've been supplyin' him with a bit of Titan for free to help him get better. Titan... I thought it worked miracles. Even a little bit'll make sure you don't get sick anymore.~
-= ~Sean's father didn't need much, so nobody realized I was skimmin' from our supply. I asked him not to tell Sean because I didn't want him to know I've been doin' work for the black market. But now you're saying this stuff, it's...~
+= ~听——听着，朋友。你全弄错了。肖恩跟我小时候是最好的伙伴。我自己日子有点难，所以一直跟本地帮派打零工糊口，可我绝没想过害他老爹！~
+= ~肖恩一直怕他父亲因病早死，所以我一直免费给他一点泰坦，帮他好起来。泰坦……我以为它创造奇迹。哪怕一点点，也能让你不再生病。~
+= ~肖恩的父亲要得不多，所以没人发现我从货里偷偷扣。我叫他别告诉肖恩，因为我不想让他知道我替黑市干活。可现在你说这东西，它……~
 END
-  ++ ~Titan is toxic. It makes people healthier and stronger for a while, then kills them slowly from the inside.~ + QUEST1-TITAN-SELLER-5
+  ++ ~泰坦有毒。它让人一时更健康更强，然后从里面慢慢把人杀死。~ + QUEST1-TITAN-SELLER-5
 
 CHAIN C0AQTHF QUEST1-TITAN-SELLER-5
-~Damn it! I should've known it was too good to be true. The gangs, they said this stuff'll rake in the gold faster than black lotus, and we'll all get rich from the profits. I can't believe I didn't realize something was off when I heard the Shadow Thieves weren't distributin' it themselves!~
-= ~I'm sorry, mate. I really am. I got greedy seein' how quickly I was selling the trash, but I wouldn't have taken a single coin if I had known it was actually killing people!~
+~该死！我早该知道好得不真实。帮派说这东西捞金比黑莲花还快，大家都能靠利润发财。我真不敢信，听说影贼自己不铺这货时，我就该觉出不对！~
+= ~对不起，伙计。我真的很抱歉。我看这垃圾卖得那么快就贪了，可我若知道它真在害死人，一个铜板也不会收！~
 END
-  ++ ~I'm not the one you should apologize to. You owe Sean an explanation for what happened to his father.~ + QUEST1-TITAN-SELLER-6
+  ++ ~你该道歉的不是我。肖恩父亲的事，你欠他一个解释。~ + QUEST1-TITAN-SELLER-6
 
 CHAIN C0AQTHF QUEST1-TITAN-SELLER-6
-~You're right. I have to talk to him. Even if he'll probably never forgive me for what I went and done.~
+~你说得对。我得去跟他谈。哪怕他大概永远不会原谅我干的事。~
 EXTERN C0AQTHF QUEST1-TITAN-SELLER-7
 
 CHAIN C0AQTHF QUEST1-TITAN-SELLER-7
-~Listen... I don't know what you want Titan for, but so long as it's not goin' and hurting anyone else, you can have what I got. You must be tryin' to end the dealin', or else you wouldn't have told me all this.~
+~听着……我不知道你要泰坦做什么，可只要不是拿去害别人，我手上的就归你。你一定是在设法了结这买卖，否则不会跟我说这些。~
 DO ~GiveItem("c0atitn",Player1)~
-= ~I'm quittin' the business. I won't be able to stay in for long anyway, not once they hear I gave away my supply without gettin' gold back. Probably for the best. I know it's dirty money I've been earning, but maybe I can use it to leave the city and go back to havin' a normal life.~
-= ~Thanks for openin' my eyes, mate. If you find out where all this Titan stuff's been comin' from, I hope you can put a stop to all of it.~
+= ~我不干这行了。反正也待不久，他们一听说我没拿回钱就白送了货……大概这样最好。我知道我挣的是脏钱，可也许我能用它离开这城，回去过正常日子。~
+= ~谢谢你让我睁眼，伙计。你若查出这些泰坦都是从哪儿来的，希望你能把这全停了。~
 DO ~EscapeArea()~ EXIT
 
 CHAIN IF WEIGHT #-1 ~Global("C0AuraBG2Quest1","GLOBAL",16)~ THEN C0AQINSP INSPECTOR-AEGISFIELD
-~You there, hold a moment. In the name of the Council, I ask that you... wait, I know you, don't I?~
+~你，站住。以议会之名，我要求你……等等，我认得你，对吧？~
 DO ~SetGlobal("C0AuraBG2Quest1","GLOBAL",17)~
 END
-  ++ ~Inspector Aegisfield. It's been a while.~ + INSPECTOR-AEGISFIELD-1
-  ++ ~We met during the skinner murder case.~ + INSPECTOR-AEGISFIELD-1
+  ++ ~埃吉斯菲尔德督察。好久不见。~ + INSPECTOR-AEGISFIELD-1
+  ++ ~剥皮杀人案时我们见过。~ + INSPECTOR-AEGISFIELD-1
 
 CHAIN C0AQINSP INSPECTOR-AEGISFIELD-1
-~Ah, I remember now. It's good to see you. I'll always be grateful for your help during that case, for it is one I'll likely never forget, much as I'd like to.~
-= ~What are you doing here, if I may ask? The back alley is rarely a place for visitors.~
+~啊，我想起来了。见到你真好。那案子我一直感激你的帮助，那是我大概永远忘不掉的一案，尽管我很想忘。~
+= ~若容我问，你在这儿做什么？后巷很少是访客来的地方。~
 END
-  ++ ~I was about to ask you the same thing.~ + INSPECTOR-AEGISFIELD-2
-  ++ ~I'm here to find someone.~ + INSPECTOR-AEGISFIELD-3
+  ++ ~我也正想问你同样的话。~ + INSPECTOR-AEGISFIELD-2
+  ++ ~我来找人。~ + INSPECTOR-AEGISFIELD-3
 
 CHAIN C0AQINSP INSPECTOR-AEGISFIELD-2
-~I am here to conduct a special inspection on the locals and any who enters the area, you see. There has been a rather unusual case of poisonings in the poorer districts as of late, and I have heard from a reliable source that an illegal substance may be the cause of it.~
-= ~The higher-ups don't often care for the well-being of the people here, but regardless of their intent, they've ordered a thorough investigation on whether this rumor is true. No doubt they fear it spreading to the wealthy and highborn and wish to remove the threat before it's too late.~
+~你看，我来此是对本地居民和进入此区的人做特别检查。近来较穷的区出现了相当不寻常的中毒案，我自可靠来源听说，起因也许是一种非法物质。~
+= ~上头不常在乎这里人的福祉，可不管他们意图如何，他们下令彻底调查这传言是否属实。无疑他们怕它传到富人贵人身上，想趁早除掉威胁。~
 END
-  + ~PartyHasItem("c0atitn")~ + ~You mean this substance, right here?~ + INSPECTOR-AEGISFIELD-4
-  ++ ~I assume you'll have to search me as well?~ + INSPECTOR-AEGISFIELD-5
+  + ~PartyHasItem("c0atitn")~ + ~你说的是这东西，就在这儿？~ + INSPECTOR-AEGISFIELD-4
+  ++ ~我猜你也得搜我？~ + INSPECTOR-AEGISFIELD-5
 
 CHAIN C0AQINSP INSPECTOR-AEGISFIELD-3
-~I see. Perhaps it's the physician, or the Lantanese gnomes at the house in the north? Though it sounds rather impolite, they are the only ones of note that I'm aware of.~
+~我明白了。也许是那位医师，或者北边那屋里的兰坦侏儒？虽听着不客气，可我知道的值得一提的只有他们。~
 EXTERN C0AQINSP INSPECTOR-AEGISFIELD-2
 
 CHAIN C0AQINSP INSPECTOR-AEGISFIELD-4
-~Is... is that it? Why do you have this, and why would you show it to me? You understand this is evidence, which means I should at the very least question you if not take you into custody?~
+~就……就这个？你为什么会有这个，又为什么给我看？你明白这是证物，这意味着我至少得审问你，若不该拘押你？~
 END
-  ++ ~It's a long story, inspector. Rest assured, I have no intention of using or distributing it. I'm looking into it as well.~ + INSPECTOR-AEGISFIELD-6
-  ++ ~I'm showing you this to prove to you that it exists, and also to make sure you can trust that I'm not hiding anything.~ + INSPECTOR-AEGISFIELD-6
+  ++ ~说来话长，督察。放心，我无意使用或散布它。我也在查这事。~ + INSPECTOR-AEGISFIELD-6
+  ++ ~我给你看，是为了证明它存在，也为了让你确信我没藏什么。~ + INSPECTOR-AEGISFIELD-6
 
 CHAIN C0AQINSP INSPECTOR-AEGISFIELD-5
-~It is my duty to inspect *all* passers-by... but you've earned my trust from before, so it may be in both our interests if I simply gave you the benefit of the doubt.~
+~检查*所有*过路人本是我的职责……可爱你之前的作为赢得了我的信任，所以我若干脆给你个无疑之惠，也许对我们双方都好。~
 EXTERN C0AQINSP INSPECTOR-AEGISFIELD-7
 
 CHAIN C0AQINSP INSPECTOR-AEGISFIELD-6
-~I see. Though I should ask that you come to the Chief Inspector and share what you know... I feel as though our lot will be all but useless in handling this case.~
+~我明白了。不过我该请你去见首席督察、把你所知的说出来……我觉得我们这班人在处理这案子上几乎毫无用处。~
 EXTERN C0AQINSP INSPECTOR-AEGISFIELD-7
 
 CHAIN C0AQINSP INSPECTOR-AEGISFIELD-7
-~Until this case affects those of high status, my higher-ups are stubbornly refusing to treat it with the severity it deserves, and the rare few among us who share my concerns have been stumbling in the dark for the better part of a month now with no results to show for it. And with some of the conditions I've seen from the afflicted... I would prefer to see this problem dealt with as quickly as possible, no matter the means.~
-= ~You have solved one problematic case as it is, and though this may be beyond my station to say, I feel more confidence allowing you the freedom to investigate under your own terms than wasting both our time on customary procedures. Be careful, though. Other inspectors will no doubt pass through here, and they will not have the history that you and I share.~
-= ~Now, as I have completed my task here, I must return and begin writing my report. Farewell.~
+~在这案子影响到高位者之前，我的上头固执地拒绝以应有的严重程度对待，而我们中少数跟我一样担忧的人，已摸黑近一个月毫无结果。加上我见过病患的某些状况……我宁可尽快解决这问题，不管用什么手段。~
+= ~你已解决过一桩麻烦案子，虽然这话也许超出我的职权，但我觉得让你按自己的方式自由调查，比把双方时间浪费在常规程序上更让我有信心。不过小心。别的督察无疑会经过这儿，他们可没有你我这份交情。~
+= ~那么，我在此的任务已完成，我得回去开始写报告。再会。~
 DO ~EscapeArea()~ EXIT
 
 CHAIN IF WEIGHT #-1 ~Global("C0AuraBG2Quest1","GLOBAL",16)~ THEN C0AQINS2 INSPECTOR-NEW
-~Halt! By order of the Council, all entrants to the back alley are to be searched thoroughly, to prevent the trafficking of illegal substances.~
+~站住！依议会之命，所有进后巷的人都要彻底搜查，以防非法物质流通。~
 DO ~SetGlobal("C0AuraBG2Quest1","GLOBAL",18)~
 END
-  ++ ~What's this all about?~ + INSPECTOR-NEW-1
+  ++ ~这都是怎么回事？~ + INSPECTOR-NEW-1
 
 CHAIN C0AQINS2 INSPECTOR-NEW-1
-~It has been brought to our attention that a potential new dangerous compound has been spreading throughout these indigent districts. The Council will not stand this to spread to the nobility, so until the potential threat is identified, none shall pass without inspection. Set aside your weapons, open your backpacks and empty out your pockets! Nothing will go unsearched!~
+~我们获悉，一种潜在的新型危险复合物正在这些贫民区散布。议会不容它传到贵族身上，所以在潜在威胁查明前，谁都不许不经检查通过。放下武器，打开背包，掏空口袋！什么都要搜！~
 END
 IF ~InParty("C0Aura")~ EXTERN C0AQINS2 INSPECTOR-NEW-2
 IF ~!InParty("C0Aura")~ EXTERN C0AQINS2 INSPECTOR-NEW-3
 
 CHAIN C0AQINS2 INSPECTOR-NEW-2
-~I will start with the gnome! That assortment of objects you're carrying are clearly suspicious. Show me everything you are carrying, now!~
-== C0AURA2J ~Me? But I...~
-== C0AQINS2 ~Silence! Any attempt at refusing inspection, and I will detain you immediately and bring you in for questioning! Now do as I have said!~
+~我从这侏儒开始！你带的这一堆东西显然可疑。把你带的一切都给我看，现在！~
+== C0AURA2J ~我？可是我……~
+== C0AQINS2 ~闭嘴！任何拒绝检查的举动，我立刻拘留你、带你回去审问！照我说的做！~
 END
-  ++ ~You'll do nothing of the sort. Leave her alone.~ EXTERN C0AQINS2 INSPECTOR-NEW-4
-  ++ ~Lay a hand on any of us, and you'll regret it.~ EXTERN C0AQINS2 INSPECTOR-NEW-4
+  ++ ~你什么也别想干。离她远点。~ EXTERN C0AQINS2 INSPECTOR-NEW-4
+  ++ ~你敢碰我们任何一个，你会后悔。~ EXTERN C0AQINS2 INSPECTOR-NEW-4
 
 CHAIN C0AQINS2 INSPECTOR-NEW-3
-~If any suspicious items are found during your search, you will follow me back to headquarters for questioning! Comply and this will be—~
+~搜查中若发现任何可疑物品，你就跟我回总部受审！配合的话这就——~
 DO ~ClearAllActions()
 StartCutSceneMode()
 Wait(1)
@@ -880,7 +880,7 @@ ActionOverride("c0arees",Wait(2))
 ActionOverride("C0arees",StartDialogNoSet(Player1))~ EXIT
 
 CHAIN C0AQINS2 INSPECTOR-NEW-4
-~If you are complicit in defying the demands of the law, I will arrest the lot of you! Now hurry up and—~
+~你若参与违抗法律要求，我就把你们全抓起来！现在快点——~
 DO ~ClearAllActions()
 StartCutSceneMode()
 Wait(1)
@@ -890,20 +890,20 @@ ActionOverride("c0arees",Wait(2))
 ActionOverride("C0arees",StartDialogNoSet(Player1))~ EXIT
 
 CHAIN IF WEIGHT #-1 ~Global("C0AuraBG2Quest1","GLOBAL",17)~ THEN C0AREES REESE-AEGISFIELD
-~You're finally back! I thought the inspector might give you trouble, so I was planning to help, but it looks like you've got some friendly connections of your own. Looks like I got worried for nothing.~
+~你总算回来了！我以为督察会找你麻烦，正打算帮忙，可看来你自己有些友善的门路。看来我白担心了。~
 EXTERN C0AREES REESE-INSPECTOR-2-3
 
 CHAIN IF WEIGHT #-1 ~Global("C0AuraBG2Quest1","GLOBAL",18)~ THEN C0AREES REESE-INSPECTOR
-~Stop...! Stop this right now, officer! These people are sanctioned to pass through here without being subjected to this... harassment!~
+~住手……！马上停下，警官！这些人获准通过此处，不该受这种……骚扰！~
 DO ~SetGlobal("C0AuraBG2Quest1","GLOBAL",19)~
-== C0AQINS2 ~Who do you think you are, gnome?~
-== C0AREES ~I am... who I am is not important. But I believe if you read this, all will be made clear.~
-== C0AQINS2 ~Bah, what is this rubbish? If you are wasting my time, then you...~
-== C0AQINS2 ~...then...~
-== C0AQINS2 ~This is... but this—~
-== C0AREES ~It is clear now, yes? These people are employed by my master, Professor Caridius, to assist against the same task you are assigned to, inspector. It'd be to all our benefits if you allowed them to leave peacefully.~
-== C0AQINS2 ~I... but... ngh. I have no authority to debate this. Very well, you... you may all pass. I... apologize for the trouble.~
-== C0AREES ~No apology needed, inspector.~
+== C0AQINS2 ~你以为你是谁，侏儒？~
+== C0AREES ~我是……我是谁不重要。可我相信你读了这份东西，一切就清楚了。~
+== C0AQINS2 ~呸，这是什么破烂？你若在浪费我时间，那你就……~
+== C0AQINS2 ~……那就……~
+== C0AQINS2 ~这是……可这——~
+== C0AREES ~现在清楚了吧？这些人是受我师父卡里迪乌斯教授雇用的，来协助你被指派的同一任务，督察。你放他们平安离开，对我们大家都有好处。~
+== C0AQINS2 ~我……可……呃。我无权争辩这个。好，你们……你们都可以过。我……为这麻烦道歉。~
+== C0AREES ~不用道歉，督察。~
 DO ~ClearAllActions()
 StartCutSceneMode()
 ActionOverride("C0AQINS2",EscapeArea())
@@ -911,63 +911,63 @@ Wait(4)
 StartDialogNoSet(Player1)~ EXIT
 
 CHAIN IF WEIGHT #-1 ~Global("C0AuraBG2Quest1","GLOBAL",19)~ THEN C0AREES REESE-INSPECTOR-2
-~Sorry about that. The whole business with illegal concoctions has tightened security, especially for the slums. We didn't get a chance to warn you before this happened.~
+~抱歉。非法调配物的事让戒备收紧，贫民区尤其。这事发生前我们没机会警告你。~
 END
-  ++ ~What did you show him?~ + REESE-INSPECTOR-2-1
-  ++ ~Thanks for your help.~ + REESE-INSPECTOR-2-2
-  ++ ~I need to see the professor.~ + REESE-INSPECTOR-2-3
+  ++ ~你给他看了什么？~ + REESE-INSPECTOR-2-1
+  ++ ~谢谢帮忙。~ + REESE-INSPECTOR-2-2
+  ++ ~我要见教授。~ + REESE-INSPECTOR-2-3
 
 CHAIN C0AREES REESE-INSPECTOR-2-1
-~It's... a long story. The professor still has connections with a few officials of some power, and thanks to that we have some precautions just in case any authorities give us the wrong kind of scrutiny.~
+~说来……话长。教授仍跟几个有权势的官员有联系，靠这个我们有些预防措施，万一有当局用错眼光审视我们。~
 EXTERN C0AREES REESE-INSPECTOR-2-3
 
 CHAIN C0AREES REESE-INSPECTOR-2-2
-~It's no trouble. You're working hard to try to solve the problem with Titan, so the professor and I are ready to help however we can.~
+~不麻烦。你在努力解决泰坦的问题，所以教授和我随时尽力帮忙。~
 EXTERN C0AREES REESE-INSPECTOR-2-3
 
 CHAIN C0AREES REESE-INSPECTOR-2-3
-~If you're here to see the professor, just head to his home. He's having a meeting with a guest right now, but it won't be a problem to interrupt him.~
-= ~I have an important errand to attend to, though, so I won't be going back with you right away. Good luck.~
+~你若来见教授，直接去他家。他正跟一位客人会谈，可打断也没问题。~
+= ~不过我有个要紧差事，所以不会马上跟你回去。祝你好运。~
 DO ~SetGlobal("C0AuraBG2Quest1","GLOBAL",20) EscapeArea()~ EXIT
 
 CHAIN IF WEIGHT #-1 ~Global("C0AuraBG2Quest1","GLOBAL",21)~ THEN C0AMAGN QUEST1-MAGNUS-ASCLEPIOS
-~...indeed? I failed to notice that myself, until you just brought attention to it.~
+~……当真？在你说出来之前，我自己都没留意到。~
 DO ~SetGlobal("C0AuraBG2Quest1","GLOBAL",22)~
-== C0AASCL ~One cannot be expected to see every possibility with their own mind, professor. More gin?~
-== C0AMAGN ~No, no, I think I should restrain myself. My liver is not as strong as it once way. I appreciate that you'd treat me with such something of so expensive, however. From what young Gilbert has said, your own finances have not been particularly stable.~
-== C0AASCL ~Gilbert worries too much for my sake. I merely prefer to devote my expenses for matters related to my research. I believe it is a healthy approach to occasionally indulge in some luxuries, however.~
-== C0AASCL ~I think I'll have another glass, myself, if you don't mind.~
-== C0AMAGN ~You should consider your own health as well, my friend. You are not so young yourself, after all... oh, it seems a few familiar faces have returned.~
-== C0AMAGN ~Come and have a seat, dear <PRO_GIRLBOY>. I was just working on some research with a good friend. It involves the mysterious Titan solution which I hear you are investigating, so it is for the best that you have arrived at this time.~
-== C0AASCL ~As I understand, you are the adventurers that my apprentice Gilbert told of the rumor of Titan. Allow me to introduce myself. I am Asclepios, a doctor, apothecary, and researcher of medicine. I have been an acquaintance of Professor Caridius for some months.~
+== C0AASCL ~谁也不能指望凭自己的头脑看尽一切可能，教授。再来点杜松酒？~
+== C0AMAGN ~不，不，我想我该克制。我的肝不如从前。不过多谢你拿这么贵的东西招待我。据小吉尔伯特说，你自己的财务并不特别稳定。~
+== C0AASCL ~吉尔伯特太替我操心了。我只是喜欢把钱花在研究相关的事上。不过我相信偶尔享受些奢侈品是健康的态度。~
+== C0AASCL ~我自己想再来一杯，你若不在意。~
+== C0AMAGN ~朋友，你也该顾顾自己的健康。毕竟你也不年轻了……哦，看来有几张熟面孔回来了。~
+== C0AMAGN ~过来坐，亲爱的<PRO_GIRLBOY>。我刚在跟一位好友做研究。涉及你听说正在调查的神秘泰坦溶液，所以你这时候来正好。~
+== C0AASCL ~据我所知，你们就是我的学徒吉尔伯特讲过泰坦传言的冒险者。容我自我介绍。我是阿斯克勒庇俄斯，医生、药师兼医药研究者。我跟卡里迪乌斯教授相识几个月了。~
 END
-  ++ ~From what I've heard, you're something of a miracle healer.~ EXTERN C0AASCL QUEST1-MAGNUS-ASCLEPIOS-1
-  ++ ~A doctor? I thought the art of healing was generally left to the likes of priests.~ EXTERN C0AASCL QUEST1-MAGNUS-ASCLEPIOS-2
-  ++ ~If you're an apothecary, I have something to show you. I've got a sample of Titan with me.~ DO ~TakePartyItem("C0ATITN") DestroyItem("C0ATITN")~ EXTERN C0AASCL QUEST1-MAGNUS-ASCLEPIOS-4
+  ++ ~据我所听，你算是个奇迹医者。~ EXTERN C0AASCL QUEST1-MAGNUS-ASCLEPIOS-1
+  ++ ~医生？我以为治病之术一般交给祭司之流。~ EXTERN C0AASCL QUEST1-MAGNUS-ASCLEPIOS-2
+  ++ ~你若是药师，我有东西给你看。我身上有一份泰坦样本。~ DO ~TakePartyItem("C0ATITN") DestroyItem("C0ATITN")~ EXTERN C0AASCL QUEST1-MAGNUS-ASCLEPIOS-4
 
 CHAIN C0AASCL QUEST1-MAGNUS-ASCLEPIOS-1
-~I am not the sort to believe in such things as miracles. What you have heard of my practice is merely... a sign of the necessity of such abilities in such an impoverished society. A healer's work is sorely needed, and so the people view my deeds as that of a savior. But I do not view my work as anything truly exceptional.~
+~我不是信奇迹那类人。你听到的关于我行医的说法，不过是……在这样贫困的社会里，这类本事有其必要。医者的活计极被需要，所以人们把我的作为看作救星之举。可我不觉得我的工作真有什么了不起。~
 EXTERN C0AMAGN QUEST1-MAGNUS-ASCLEPIOS-3
 
 CHAIN C0AASCL QUEST1-MAGNUS-ASCLEPIOS-2
-~That is true. The average person would indeed prefer to subscribe to the graces of divine intervention, than the strange and alien complexities of medicine. I do not blame them. Though, when the power of faith fails others, I hope my abilities may succeed. It is a humble service which I try to provide.~
+~那是真的。普通人确实更愿求神恩介入，而不愿碰医药那些古怪陌生的复杂东西。我不怪他们。不过，当信仰之力对一些人失效时，我希望我的本事能成。这是我想提供的微薄服务。~
 EXTERN C0AMAGN QUEST1-MAGNUS-ASCLEPIOS-3
 
 CHAIN C0AMAGN QUEST1-MAGNUS-ASCLEPIOS-3
-~My dear Asclepios, you do your work too little credit. Your understanding of the workings of the body are beyond that of any researcher I have seen. To those without your years of knowledge, what you do can indeed be seen as a miracle.~
-== C0AASCL ~It is simply knowledge, which anyone with the time and dedication may master. Nothing truly worthy of praise. My only concern is what may be achieved with what I know.~
+~我亲爱的阿斯克勒庇俄斯，你太低估自己了。你对身体运作的理解超出我见过的任何研究者。对没有你那些年学识的人，你所做的确实堪称奇迹。~
+== C0AASCL ~那只是知识，任何有时间、肯钻研的人都能掌握。真不值得称赞。我唯一在意的是，凭我所知的能成就什么。~
 END
-  ++ ~If you know so much about medicine, perhaps you can identify this sample of Titan I have.~ DO ~TakePartyItem("C0ATITN") DestroyItem("C0ATITN")~ EXTERN C0AASCL QUEST1-MAGNUS-ASCLEPIOS-4
+  ++ ~你既懂这么多医药，也许你能认出我这份泰坦样本。~ DO ~TakePartyItem("C0ATITN") DestroyItem("C0ATITN")~ EXTERN C0AASCL QUEST1-MAGNUS-ASCLEPIOS-4
 
 CHAIN C0AASCL QUEST1-MAGNUS-ASCLEPIOS-4
-~Let me see it... so, this is the rumored Titan concoction? Fascinating.~
-== C0AMAGN ~Pass that over here, my friend, so that I may have a look as well. Hmm... didn't you have that other bottle the sickly man's son brought to your apprentice from just before you arrived as well? We must compare the residue from that sample to this.~
-== C0AASCL ~That would be the simplest method. It is fortunate that the youth brought this to my attention.~
-== C0AMAGN ~Let's bring this to my station and do some testing at once. Ah, my <PRO_GIRLBOY>, please stay seated and have some tea or gin while you wait. This may take a while.~
-== C0AURA2J IF ~InParty("C0AURA")~ THEN ~Can I help, professor? I'd... like to understand more about this mystery medicine as well.~
-== C0AMAGN IF ~InParty("C0AURA")~ THEN ~I appreciate it, dear girl, but I do not think it wise. Some of my equipment will be rather archaic compared to what you are likely more familiar with. In a matter of such urgency, it would be best if you left this to us.~
-== C0AURA2J IF ~InParty("C0AURA")~ THEN ~Oh, I... I see.~
-== C0AMAGN ~Now then, I think the first step would be to see their reaction to the boiler. I'll get the heat turned on at once...~
+~让我看看……所以，这就是传言的泰坦调配物？真有意思。~
+== C0AMAGN ~朋友，递过来我也看看。嗯……你来之前不久，那病重之人的儿子不是也带了一瓶给你学徒吗？我们得把那份的残渣跟这份比对。~
+== C0AASCL ~那是最简单的办法。幸好那年轻人把这拿到我眼前。~
+== C0AMAGN ~我们把这拿到我的工作台立刻做些测试。啊，我的<PRO_GIRLBOY>，请坐着喝点茶或杜松酒等着。这可能要一阵。~
+== C0AURA2J IF ~InParty("C0AURA")~ THEN ~我能帮忙吗，教授？我也……想多了解这神秘药物。~
+== C0AMAGN IF ~InParty("C0AURA")~ THEN ~我领情，好姑娘，可我觉得不明智。我有些设备跟你大概熟悉的相比相当陈旧。这么急的事上，最好交给我们。~
+== C0AURA2J IF ~InParty("C0AURA")~ THEN ~哦，我……我明白了。~
+== C0AMAGN ~那么，我想第一步是看它们对沸液的受热反应。我这就把火点上……~
 DO ~ClearAllActions()
 StartCutSceneMode()
 FadeToColor([30.0],0)
@@ -983,127 +983,127 @@ Wait(1)
 StartDialogNoSet(Player1)~ EXIT
 
 CHAIN IF WEIGHT #-1 ~Global("C0AuraBG2Quest1","GLOBAL",22)~ THEN C0AMAGN QUEST1-MAGNUS-ASCLEPIOS2
-~Well, that took more time than expected. I haven't been challenged so gravely in a long time, Asclepios. It's both concerning and exhilarating.~
+~嗯，这比预想的费时间。我好久没被如此严峻地拷问过了，阿斯克勒庇俄斯。既令人担忧，又叫人兴奋。~
 DO ~SetGlobal("C0AuraBG2Quest1","GLOBAL",23)~
-== C0AASCL ~I agree. But I think we should be to the point, considering the severity of the matter.~
-== C0AMAGN ~Yes, of course. Now, what to say, my <PRO_GIRLBOY>... well, to put it simply, we learned quite a lot, in fact. Though not all of it is good.~
+== C0AASCL ~我同意。可考虑到事情的严重，我想我们该直入要点。~
+== C0AMAGN ~是，当然。那么，该怎么说呢，我的<PRO_GIRLBOY>……嗯，简单说，我们其实查出了不少。只是不全都是好消息。~
 END
-  ++ ~I didn't expect good news. What have you learned that's important?~ + QUEST1-MAGNUS-ASCLEPIOS2-1
-  ++ ~Do you at least know how to cure its effects?~ + QUEST1-MAGNUS-ASCLEPIOS2-2
-  ++ ~Just get to the point.~ + QUEST1-MAGNUS-ASCLEPIOS2-3
+  ++ ~我没指望好消息。你们查出了什么要紧的？~ + QUEST1-MAGNUS-ASCLEPIOS2-1
+  ++ ~你们至少知道怎么治它的效力吗？~ + QUEST1-MAGNUS-ASCLEPIOS2-2
+  ++ ~直接说重点。~ + QUEST1-MAGNUS-ASCLEPIOS2-3
 
 CHAIN C0AMAGN QUEST1-MAGNUS-ASCLEPIOS2-1
-~Many things, my <PRO_GIRLBOY>. If we were to explain down to the very detail, we may be here until the season's end. But I expect you would prefer a concise version, yes?~
+~很多，我的<PRO_GIRLBOY>。若要细到每一处，我们也许得待到季末。可我猜你更想要简明的版本，对吧？~
 EXTERN C0AMAGN QUEST1-MAGNUS-ASCLEPIOS2-3
 
 CHAIN C0AMAGN QUEST1-MAGNUS-ASCLEPIOS2-2
-~Well... unfortunately, that will still take some time. With how much time it has taken to analyze the drug's composition alone, I fear finding a cure will be no easy process.~
+~嗯……不幸的是，那仍要些时间。单分析这药的成分就花了这么久，我怕找到解药不会是容易事。~
 EXTERN C0AMAGN QUEST1-MAGNUS-ASCLEPIOS2-3
 
 CHAIN C0AMAGN QUEST1-MAGNUS-ASCLEPIOS2-3
-~Asclepios, my friend. This is your forte, and I think it best to leave the explanation to you.~
-== C0AASCL ~As you wish.~
-== C0AASCL ~Before I run the risk of confusing you, I must ask. How much do you understand of physiology?~
+~阿斯克勒庇俄斯，朋友。这是你的专长，我想解释最好交给你。~
+== C0AASCL ~如你所愿。~
+== C0AASCL ~在我把你弄糊涂之前，我得问。你对生理学懂多少？~
 END
-  + ~CheckStatGT(Player1,16,INT)~ + ~I wager I know enough to keep up.~ EXTERN C0AASCL QUEST1-MAGNUS-ASCLEPIOS2-4
-  + ~CheckStatGT(Player1,16,INT)~ + ~A bit, but I'm wouldn't call myself an expert.~ EXTERN C0AASCL QUEST1-MAGNUS-ASCLEPIOS2-4
-  ++ ~Not much, I'm afraid.~ EXTERN C0AASCL QUEST1-MAGNUS-ASCLEPIOS2-5
-  + ~!CheckStatGT(Player1,16,INT)~ + ~Physio... what?~ EXTERN C0AASCL QUEST1-MAGNUS-ASCLEPIOS2-5
+  + ~CheckStatGT(Player1,16,INT)~ + ~我赌我懂得够跟上。~ EXTERN C0AASCL QUEST1-MAGNUS-ASCLEPIOS2-4
+  + ~CheckStatGT(Player1,16,INT)~ + ~一点，可我不会自称专家。~ EXTERN C0AASCL QUEST1-MAGNUS-ASCLEPIOS2-4
+  ++ ~我怕懂得不多。~ EXTERN C0AASCL QUEST1-MAGNUS-ASCLEPIOS2-5
+  + ~!CheckStatGT(Player1,16,INT)~ + ~生理……什么？~ EXTERN C0AASCL QUEST1-MAGNUS-ASCLEPIOS2-5
 
 CHAIN C0AASCL QUEST1-MAGNUS-ASCLEPIOS2-4
-~Then I will do my best to explain as well as I can.~
+~那我尽力讲得清楚些。~
 EXTERN C0AASCL QUEST1-MAGNUS-ASCLEPIOS2-6
 
 CHAIN C0AASCL QUEST1-MAGNUS-ASCLEPIOS2-5
-~Then I will attempt to explain things in the simplest terms I can find.~
+~那我试着用能找到的最简单的说法解释。~
 EXTERN C0AASCL QUEST1-MAGNUS-ASCLEPIOS2-6
 
 CHAIN C0AASCL QUEST1-MAGNUS-ASCLEPIOS2-6
-~I believe a certain amount of understanding will be necessary to truly comprehend the nature of this... 'Titan', and so for this matter I will offer my knowledge as a physician.~
-= ~There is an... idea that certain researchers have theorized of the mortal body. To put it simply, many of us believe that we are only functioning at a portion of our true potential, and there is a strength within man's body which far exceeds their normal limit.~
-= ~To ensure the body does not ruin itself with overuse of its ability, one may never harness this strength, yet sometimes it can be inadvertently unlocked for brief moments in moments of true desperation.~
-== C0AURA2J IF ~InParty("C0Aura")~ THEN ~I've heard of this too... it's called hysterical strength, when your body forces itself to its absolute limit, and you achieve things that would be considered impossible. It could be a life-or-death situation, for yourself, or for someone you care about...~
-== C0AASCL ~I do not speak of the strength that one may find simply from strenuous training. I speak of something which allows a simple mortal to display feats that are far beyond what is expected. Such examples are so rare that they are often dismissed as hearsay, a trick of the senses when the mind is affected by the stresses of the situations it is placed in.~
-= ~Of course, the mere knowledge that such potential exists has led to study of whether it is possible to unlock this strength of our own volition. And that is where our mysterious concoction comes into play.~
-= ~Titan is not a poison. Though it is deeply flawed, it is intended to benefit the imbiber, to enhance and strengthen their body for a limited time. The fault is in the body's inability to manage the strength it is suddenly given.~
+~我相信要真正领会这……“泰坦”的性质，多少得有点理解，所以这事上我以医者身份提供我的知识。~
+= ~关于凡人之躯，某些研究者有过一种……设想。简单说，我们许多人相信，我们只发挥出真正潜能的一部分，人体内有一种力量，远超正常极限。~
+= ~为确保身体不会因过度使用其能力而自毁，人本无法动这力量，可有时在真正绝望的关头，它会无意间被短暂解锁。~
+== C0AURA2J IF ~InParty("C0Aura")~ THEN ~我也听过这个……叫“歇斯底里之力”，身体把自己逼到绝对极限，你做出本该被认为不可能的事。可能是生死关头，为自己，或为你所爱的人……~
+== C0AASCL ~我说的不是单纯靠艰苦训练得来的力气。我说的是能让一个凡人展现远超预期的壮举的东西。这样的例子太罕见，常被当作道听途说，当作心灵被处境压力影响时的感官错觉。~
+= ~当然，光是知道这种潜能存在，就引出了能否自行解锁这份力量的研究。而这就是我们这神秘调配物登场之处。~
+= ~泰坦不是毒药。它虽有大缺陷，本意却是造福饮者，在一段时间内增强、强化其身体。毛病出在身体无法驾驭骤然获得的力量。~
 END
-  ++ ~I don't understand. What makes this different from a tried and true strength potion, or anything else?~ + QUEST1-MAGNUS-ASCLEPIOS2-7
-  ++ ~And what happens when the body can't handle this strength?~ + QUEST1-MAGNUS-ASCLEPIOS2-8
-  ++ ~This is all very interesting, but what I need to know is what to do about it.~ + QUEST1-MAGNUS-ASCLEPIOS2-9
+  ++ ~我不明白。那它跟可靠的力气药水之类有什么不同？~ + QUEST1-MAGNUS-ASCLEPIOS2-7
+  ++ ~那身体承受不住这力量时，会怎样？~ + QUEST1-MAGNUS-ASCLEPIOS2-8
+  ++ ~这些都挺有意思，可我需要知道的是怎么办。~ + QUEST1-MAGNUS-ASCLEPIOS2-9
 
 CHAIN C0AASCL QUEST1-MAGNUS-ASCLEPIOS2-7
-~A reasonable query. The common potion is derived from external supplements or magic. Its effects are temporary, and once its effects dissipate, you are left as you are from before its effects.~
-= ~Titan, however, does not grant you strength from outside influence. The potential you gain from it are entirely those of your own body's making. It is a drug designed to allow you to exceed your limits, and with that, its consequences.~
+~合理之问。寻常药水取自外补或魔法。其效力短暂，效力散去，你就回到从前。~
+= ~可泰坦不从外力给你力量。你从中得到的潜能，全出自你自己身体的造就。这药是为让你超越极限而制的——连同它的后果。~
 EXTERN C0AASCL QUEST1-MAGNUS-ASCLEPIOS2-8
 
 CHAIN C0AASCL QUEST1-MAGNUS-ASCLEPIOS2-8
-~By defying the limits your own body imposes on you for your own health, the withdrawal symptoms are severe. Your heart and muscles are forced to function in a manner they are not meant to, and cannot act at their normal capacity afterwards.~
+~因为你违背了身体为自身健康设下的极限，戒断症状极重。你的心脏与肌肉被迫以本不该有的方式运作，之后无法恢复常态。~
 EXTERN C0AASCL QUEST1-MAGNUS-ASCLEPIOS2-9
 
 CHAIN C0AASCL QUEST1-MAGNUS-ASCLEPIOS2-9
-~If it were merely the failing of the body once the effects of the solution wore off, curing the afflicted would be a grueling, yet achievable process. However, it is not so simple.~
-== C0AMAGN ~This brings us to why Asclepios came to me today, my <PRO_GIRLBOY>. According to his study of the poor man who was suffering withdrawal, it appears once you consume Titan, your body considers it as necessary for survival something as essential as breathing.~
-== C0AMAGN ~Those who use it once are compelled to consume more under threat of unimaginable pain, and yes, doing so may alleviate the symptoms for a time... but regardless of whether they decide to indulge or abstain in it, its influence will lead to their death regardless.~
-== C0AASCL ~Finding a way to alleviate the effects is paramount, but that is our role. Though it is not my place to dictate your current path, I believe culling the source of this problem should be your main priority.~
+~若只是效力退去后身体衰弱，治愈病患会是艰苦但可行的过程。然而，没那么简单。~
+== C0AMAGN ~这就引到阿斯克勒庇俄斯今天为何来找我，我的<PRO_GIRLBOY>。据他对那位戒断中可怜人的研究，看来一旦服下泰坦，你的身体就把它当作呼吸一样生存必需之物。~
+== C0AMAGN ~用过一次的人会被逼着再服，否则就受难以想象的痛苦，是的，再服也许能暂时缓解症状……可不管他们选择沉溺还是戒断，它的影响终将带他们走向死亡。~
+== C0AASCL ~找出缓解效力的办法最要紧，可那是我们的角色。虽然不该由我来指点你现在的路，但我相信铲除这问题的源头该是你的首要之务。~
 END
-  ++ ~I'll deal with whoever is distributing Titan while the two of you try to find a cure.~ EXTERN C0AASCL QUEST1-MAGNUS-ASCLEPIOS2-10
-  ++ ~Seems I have no choice but to go and find a lead on where this stuff is coming from.~ EXTERN C0AMAGN QUEST1-MAGNUS-ASCLEPIOS2-11
+  ++ ~你们俩试着找解药，我去处理散布泰坦的人。~ EXTERN C0AASCL QUEST1-MAGNUS-ASCLEPIOS2-10
+  ++ ~看来我别无选择，只能去查这东西的来源线索。~ EXTERN C0AMAGN QUEST1-MAGNUS-ASCLEPIOS2-11
 
 CHAIN C0AASCL QUEST1-MAGNUS-ASCLEPIOS2-10
-~You need not worry regarding the prospect of a cure. As a doctor, such matters are my duty, and I will not rest until it is done.~
+~解药的事你不必忧心。身为医生，这类事是我的职责，不做到我不会停。~
 EXTERN C0AMAGN QUEST1-MAGNUS-ASCLEPIOS2-11
 
 CHAIN C0AMAGN QUEST1-MAGNUS-ASCLEPIOS2-11
-~Leave the matters involving research to us, my <PRO_GIRLBOY>. You need to stop the problem from getting any worse, or else it'll be far too late for those already affected.~
-== C0AASCL ~I will need to return home to continue my work, professor. Once I have discovered anything of note, you will be the first to know.~
-== C0AASCL ~Farewell, and good luck to you.~
+~研究相关的事交给我们，我的<PRO_GIRLBOY>。你得阻止问题恶化，否则对已受影响的人就太迟了。~
+== C0AASCL ~教授，我得回家继续我的工作。一旦发现任何值得注意的，我第一个让你知道。~
+== C0AASCL ~再会，祝你好运。~
 DO ~ActionOverride("C0AMAGN",MoveToPoint([237.201]) EscapeArea()~ EXIT
 
 CHAIN IF WEIGHT #-1 ~Global("C0AuraBG2Quest1","GLOBAL",23)~ THEN C0AQTHF QUEST1-22
-~There you are, mate! Looks like I came to the right place.~
+~你在这儿，伙计！看来我找对地方了。~
 DO ~SetGlobal("C0AuraBG2Quest1","GLOBAL",24)~
 END
- ++ ~How did you find me?~ + QUEST1-22-1
- ++ ~You were looking for me?~ + QUEST1-22-2
- ++ ~Out of my way. I don't have time for this.~ + QUEST1-22-3
+ ++ ~你怎么找到我的？~ + QUEST1-22-1
+ ++ ~你在找我？~ + QUEST1-22-2
+ ++ ~让开。我没时间。~ + QUEST1-22-3
 
 CHAIN C0AQTHF QUEST1-22-1
-~I asked around. You're... not that hard to find, you know. People like you don't pass by the back alley too often.~
+~我四处问了。你……不那么难找，你知道。像你这样的人不常经过后巷。~
 EXTERN C0AQTHF QUEST1-22-4
 
 CHAIN C0AQTHF QUEST1-22-2
-~Yeah, mate. I have something important I think you need to hear.~
+~是啊，伙计。我有件要紧事，我想你该听。~
 EXTERN C0AQTHF QUEST1-22-4
 
 CHAIN C0AQTHF QUEST1-22-3
-~No, no, listen mate. I've got something to say, and I know it'll be worth your time.~
+~不，不，听着伙计。我有话要说，我知道它值得你花时间。~
 EXTERN C0AQTHF QUEST1-22-4
 
 CHAIN C0AQTHF QUEST1-22-4
-~I was thinkin' more about it, and... well, I figured just the bottle of Titan I gave you wouldn't be much of a lead on its own. So I, uh... did some diggin' around on my former bosses, tryin' to find out something more useful.~
-= ~There wasn't much, really. But one of the lot isn't too careful with his journal, so I was able to open it up and take a peek. Apparently they regularly meet with some gnomes in red to pick up their supply, at the dead of night.~
-== C0AURA2J IF ~InParty("C0Aura")~ THEN ~"Gnomes in red"...? Do you... do you know who they are?~
-== C0AQTHF ~Sorry, I dunno. The ones up top would never trust me with any useful information, lest I get busted while dealin'. But I reckon I know where they'll be.~
+~我越想越觉得……嗯，我想光我给你那瓶泰坦，算不上什么线索。所以我，呃……对我从前的老板们挖了挖，想找出更有用的东西。~
+= ~其实没多少。可他们中有个人不大留心自己的记事本，所以我翻开瞄了一眼。看来他们定期在深夜跟一些穿红衣的侏儒接头取货。~
+== C0AURA2J IF ~InParty("C0Aura")~ THEN ~“穿红衣的侏儒”……？你……你知道他们是谁吗？~
+== C0AQTHF ~抱歉，我不知道。上头的人从不放心把有用消息告诉我，怕我做买卖时被抓。可我估摸我知道他们会去哪儿。~
 END
-++ ~Where?~ + QUEST1-22-5
+++ ~哪儿？~ + QUEST1-22-5
 
 CHAIN C0AQTHF QUEST1-22-5
-~They meet at the southern side of the Bridge District, right outside the Temple of Helm. I dunno what they're thinkin' gathering in a place like that... maybe they think it'll look less suspicious, or they assume nobody would ever think to look there.~
-= ~That's all I got, but I hope it leads to somethin'. I'm plannin' on leaving the city before any one of them finds out I ratted, so you probably won't see me again, mate. Good luck.~
+~他们在桥区南侧接头，就在海姆神殿外头。我不知道他们怎么想的，在那样的地方聚会……也许觉得看着不那么可疑，或者以为没人会想到去那儿找。~
+= ~我就这些了，可我希望它能引出点什么。我打算在任何人发现我告密前离开这城，所以你大概不会再见到我了，伙计。祝你好运。~
 DO ~AddJournalEntry(%Quest1_Entry_5%,QUEST) EscapeArea()~ EXIT 
 
 CHAIN IF WEIGHT #-1 ~Global("C0AuraBG2Quest1","GLOBAL",24)~ THEN C0AQINT2 QUEST1-INTERITUS
-~You are late.~
+~你迟到了。~
 DO ~SetGlobal("C0AuraBG2Quest1","GLOBAL",25)~
-== C0ATHF2 ~I don't believe we are.~
-== C0AQINT2 ~Three minutes and forty-three seconds.~
-== C0ATHF2 ~So what? Bah, I'll never understand you gnomes and your absurd fixations. I couldn't give less of a damn, though. I expect you have the new supply of Titan.~
-== C0AQINT2 ~The most recent, advanced formula has been produced... though yet untested. I have it here. I trust you have the written reports on the status of your customers.~
-== C0ATHF2 ~They're all here. Don't know why you'd need this, but it doesn't matter as long as it means more money in our pockets.~
-== C0AQINT2 ~You'll have your payment, on top of what you earn from the sale. We simply expect your competence in handling the black market.~
+== C0ATHF2 ~我想我们没有。~
+== C0AQINT2 ~三分四十三秒。~
+== C0ATHF2 ~那又怎样？唉，我永远不懂你们侏儒和你们那些荒唐的执念。不过我一点不在乎。我猜你带着新的泰坦货。~
+== C0AQINT2 ~最新、最先进的配方已制出……只是尚未测试。我带来了。我相信你带着你客户的状况书面报告。~
+== C0ATHF2 ~都在这儿。不知道你要这个干什么，可只要意味着我们口袋里的钱更多，就无所谓。~
+== C0AQINT2 ~除了你销售所得，你还会拿到报酬。我们只要求你胜任黑市的运作。~
 END
-  ++ ~(Wait and see)~ EXTERN C0ATHF2 QUEST1-INTERITUS-1
-  ++ ~(Interrupt the meeting)~ DO ~ClearAllActions()
+  ++ ~（静观其变）~ EXTERN C0ATHF2 QUEST1-INTERITUS-1
+  ++ ~（打断会面）~ DO ~ClearAllActions()
 StartCutSceneMode()
 Wait(1)
 FaceObject(Player1)
@@ -1117,14 +1117,14 @@ Wait(1)
 ActionOverride("C0ATHF2",StartDialogNoSet(Player1))~ EXIT
 
 CHAIN C0ATHF2 QUEST1-INTERITUS-1
-~Yeah, yeah. You can count on us to give our best performance in this deal, since it's been crazy profitable. We've earned more in our short time working together than any of us have seen in a lifetime.~
-== C0ATHF2 ~Soon, I reckon even the Shadow Thieves won't be looking down on us anymore. They'll either offer us a cozy place under their wing, or we'll build ourselves a nice little corner in the underworld to keep expanding our own business.~
-== C0AQINT2 ~Your further ambitions in this land are your own matters to settle. We only expect results, and so long as they are without fault, you will continue to profit.~
-== C0ATHF2 ~That sounds all fine and dandy to me, partner. I didn't think you foreigners would be so easy to work with.~
-== C0AQINT2 ~I trust the authorities will not trace any evidence of Titan to you?~
-== C0ATHF2 ~Don't worry. We've been thorough. They only have suspicions right now. By the time they get any real leads, we'll be all done.~
-== C0AQINT2 ~...~
-== C0AQINT2 ~Is that so? Then perhaps you can explain to me who that is.~
+~是，是。你放心，这买卖利润疯狂，我们一定拿出最好表现。我们合作这短短时间里挣的，比我们谁一辈子见的都多。~
+== C0ATHF2 ~我估摸很快连影贼也不敢再看低我们。他们要么给我们翅膀下个舒坦位置，要么我们自己在黑道里建个小角落，继续扩我们的生意。~
+== C0AQINT2 ~你在这地界的进一步野心，是你自己要去解决的事。我们只要结果，只要结果无瑕，你就继续获利。~
+== C0ATHF2 ~我听着都好得很，伙计。我没想到你们外乡人这么好合作。~
+== C0AQINT2 ~我相信当局不会追查到任何指向你的泰坦证据？~
+== C0ATHF2 ~别担心。我们做得周全。他们眼下只是怀疑。等他们拿到真线索，我们早完事了。~
+== C0AQINT2 ~……~
+== C0AQINT2 ~是吗？那也许你能跟我解释一下，那是谁。~
 DO ~ClearAllActions()
 StartCutSceneMode()
 Wait(1)
@@ -1139,17 +1139,17 @@ Wait(1)
 ActionOverride("C0ATHF2",StartDialogNoSet(Player1))~ EXIT
 
 CHAIN IF WEIGHT #-1 ~Global("C0AuraBG2Quest1","GLOBAL",25)~ THEN C0ATHF2 QUEST1-INTERITUS-2
-~Huh? Wh—what?!~
+~嗯？什——什么？！~
 DO ~SetGlobal("C0AuraBG2Quest1","GLOBAL",26)~
-== C0ATHF3 ~Hang on, this lot looks familiar...~
-== C0ATHF1 IF ~InParty("C0Aura")~ THEN ~Isn't that the gnome we caught in the alley?~
-== C0AURA2J IF ~InParty("C0Aura")~ THEN ~I remember you thugs... but more importantly, these gnomes... they're—~
-== C0AQINT2 ~It appears you have made a miscalculation in your... supposedly 'thorough' discretion. This does not bode well for our working relationship.~
-== C0ATHF2 ~This... this is just an unfortunate coincidence. But we can sort this out. Just work with us to get rid of this lot and it'll be like nothing happened!~
-== C0AQINT2 ~I think you're mistaken.~
-== C0AQINT2 ~Since you have proven yourself incapable of remaining discrete, our association is now over. This is your concern, not ours.~
-== C0ATHF1 ~What?~
-== C0AQINT2 ~Withdraw.~
+== C0ATHF3 ~等等，这帮人看着眼熟……~
+== C0ATHF1 IF ~InParty("C0Aura")~ THEN ~不就是我们在巷子里逮到的那个侏儒？~
+== C0AURA2J IF ~InParty("C0Aura")~ THEN ~我记得你们这些混混……可更要紧的是，这些侏儒……他们是——~
+== C0AQINT2 ~看来你那自诩“周全”的谨慎出了个误算。这对我们的合作关系可不是好兆头。~
+== C0ATHF2 ~这……这只是不幸的巧合。可我们能解决。跟我们合作除掉这帮人，就当什么都没发生！~
+== C0AQINT2 ~我想你弄错了。~
+== C0AQINT2 ~既然你已证明自己无法保持谨慎，我们的往来到此为止。这是你的事，不是我们的。~
+== C0ATHF1 ~什么？~
+== C0AQINT2 ~撤。~
 DO ~ClearAllActions()
 StartCutSceneMode()
 	Wait(1)
@@ -1169,89 +1169,89 @@ StartCutSceneMode()
 	DestroySelf()~ EXIT
 
 CHAIN IF WEIGHT #-1 ~Global("C0AuraBG2Quest1","GLOBAL",26)~ THEN C0ATHF2 QUEST1-INTERITUS-3
-~Wha—no! Damn you, you gnome bastards, you can't just leave us to deal with this!~
+~什——不！该死，你们这些侏儒混蛋，你们不能就这么留我们处理这事！~
 DO ~SetGlobal("C0AuraBG2Quest1","GLOBAL",27)~
-== C0ATHF3 ~Boss, this is bad... what do we do now?~
-== C0ATHF2 ~Do I need to spell it out for you, moron? We get out of here, now!~
+== C0ATHF3 ~老大，这可不妙……现在怎么办？~
+== C0ATHF2 ~还要我跟你说明白吗，蠢货？我们走，现在！~
 DO ~ActionOverride("C0ATHF1",EscapeAreaObject("Waypoint4"))
 	ActionOverride("C0ATHF3",EscapeAreaObject("Waypoint4"))
 	ActionOverride("C0ATHF4",EscapeAreaObject("Waypoint4"))
 	EscapeAreaObject("Waypoint4")~
 END
  IF ~InParty("C0Aura")~ EXTERN C0AURA2J QUEST1-INTERITUS-3A
-  ++ ~Stop! You're not getting away!~ DO ~ClearAllActions()
+  ++ ~站住！你们跑不掉！~ DO ~ClearAllActions()
   										  StartCutSceneMode()
 									 	  StartCutScene("c0acut8")~ EXIT 
 
 CHAIN C0AURA2J QUEST1-INTERITUS-3A
-~<CHARNAME>, we can't let them escape! After them!~
+~<CHARNAME>，不能让他们逃！追！~
 DO ~ClearAllActions()
   	StartCutSceneMode()
 	StartCutScene("c0acut8") ~EXIT
 
 CHAIN IF WEIGHT #-1 ~Global("C0AuraBG2Quest1","GLOBAL",27)~ THEN C0ATHF1 QUEST1-INTERITUS-4
-~D—dead end...~
+~死——死路……~
 DO ~SetGlobal("C0AuraBG2Quest1","GLOBAL",28)~
-== C0ATHF2 ~You useless buffoon! How could you have led us this way?~
-== C0ATHF3 ~It's over... we'll all be executed once we they catch us...~
-== C0ATHF2 ~We're not done. Not yet! We still have one last trick up our sleeves.~
-== C0ATHF1 ~Y—you mean... our supply? Boss, these ain't been tested yet, who knows what'll—~
-== C0ATHF2 ~Would it be any worse than facin' the noose come the morn? Them gnomes said this stuff was better than the last batch. If there's any chance it gets us outta this mess, you think you shouldn't take it?~
-== C0ATHF1 ~...~
-== C0ATHF4 ~There's only two bottles, boss. Do we split 'em half and half?~
-== C0ATHF2 ~No. You two use the lot. They say Titan gives the strength to move mountains, and if this one's as good as they claim, we'll make short work of those meddlers.~
-== C0ATHF2 ~Drink up, boys!~
-== C0ATHF4 ~...~
+== C0ATHF2 ~你这没用的蠢货！你怎么带我们走到这儿？~
+== C0ATHF3 ~完了……他们一逮到我们，我们全得被处决……~
+== C0ATHF2 ~还没完。还没！我们还有最后一招。~
+== C0ATHF1 ~你——你是说……我们的货？老大，这些还没测试过，谁知道会——~
+== C0ATHF2 ~还能比明早上绞架更糟？那些侏儒说这批比上批好。只要有一线机会让我们脱身，你觉得不该用？~
+== C0ATHF1 ~……~
+== C0ATHF4 ~只有两瓶，老大。我们对半分？~
+== C0ATHF2 ~不。你们俩用一整批。他们说泰坦能给人移山之力，这批若真像他们说的，收拾那几个多管闲事的用不了多久。~
+== C0ATHF2 ~喝吧，小子们！~
+== C0ATHF4 ~……~
 DO ~ClearAllActions()
   	StartCutSceneMode()
 	StartCutScene("c0acut9") ~EXIT
 
 CHAIN IF WEIGHT #-1 ~Global("C0AuraBG2Quest1","GLOBAL",28)~ THEN C0AQMON1 QUEST1-INTERITUS-5
-~EEEAAAAGGGGHHAGAHHAGAHAHAGGG...!~
+~呃啊啊啊啊啊啊啊啊啊啊……！~
 DO ~AddJournalEntry(%Quest1_Entry_6%,QUEST)
 SetGlobal("C0AuraBG2Quest1","GLOBAL",29)~
-== C0AQMON2 ~GHHGHHHGHGHGHLKLKLKLKHHNNNNNNGGGHHH...!~
+== C0AQMON2 ~咯呜呜呜呜咳咳咳咳呜呜呜……！~
 END
 IF ~InParty("C0Aura")~ EXTERN C0AURA2J QUEST1-INTERITUS-5A
 IF ~!InParty("C0Aura")~ EXIT
 
 CHAIN C0AURA2J QUEST1-INTERITUS-5A
-~*gasp!*~
-== C0AURA2J ~Their... their flesh... it's ripped itself apart from the uncontrollable growth...~
-== C0AURA2J ~They've completely lost their sense of selves... between the pain, and the physical changes to their organs...~
+~*倒吸一口气*~
+== C0AURA2J ~他们的……他们的血肉……被失控的生长从里撕开了……~
+== C0AURA2J ~他们彻底失去了自我……在痛苦与器官的物理变化之间……~
 END
-  ++ ~Then there's no hope of restoring them?~ EXTERN C0AURA2J QUEST1-INTERITUS-5B
-  ++ ~Let's just put them out of their misery, then.~ EXTERN C0AQMON2 QUEST1-INTERITUS-5C
+  ++ ~那就没希望恢复他们了？~ EXTERN C0AURA2J QUEST1-INTERITUS-5B
+  ++ ~那就干脆让他们解脱吧。~ EXTERN C0AQMON2 QUEST1-INTERITUS-5C
 
 CHAIN C0AURA2J QUEST1-INTERITUS-5B
-~No... it's impossible. Titan has fundamentally altered the entirety of their bodies... and with the internal and external damage, it's hopeless.~
-== C0AURA2J ~All we can do is try to end their suffering.~
+~不……不可能了。泰坦从根本上改了他们整个身体……加上内外损伤，没救了。~
+== C0AURA2J ~我们能做的只有设法结束他们的痛苦。~
 EXTERN C0AQMON2 QUEST1-INTERITUS-5C
 
 CHAIN C0AQMON2 QUEST1-INTERITUS-5C
-~GHGLKLKLGGHKLKNNNNGGGHHH!~
+~咯咳咳咳咳呜——！~
 EXIT
 
 CHAIN IF WEIGHT #-1 ~Global("C0AuraBG2Quest1","GLOBAL",29)
     Dead("C0AQMON1")
     Dead("C0AQMON2")~ THEN C0AURA2J QUEST1-INTERITUS-5D
-~I... I can't believe that just happened...~
+~我……我不敢信刚发生的事……~
 DO ~SetGlobal("C0AuraBG2Quest1","GLOBAL",30)~
-== C0AURA2J ~They were awful men, <CHARNAME>, but they didn't deserve to die like that. Having their bodies torn apart, then doing the same to each other out of agony...~
+== C0AURA2J ~他们是恶人，<CHARNAME>，可他们不该那样死。身体被撕开，然后在剧痛中彼此也那样……~
 END
-  ++ ~I know.~ + QUEST1-INTERITUS-5E
-  ++ ~There was nothing we could've done.~ + QUEST1-INTERITUS-5F
-  ++ ~Don't shed any tears for people like these.~ + QUEST1-INTERITUS-5E
+  ++ ~我知道。~ + QUEST1-INTERITUS-5E
+  ++ ~我们什么也做不了。~ + QUEST1-INTERITUS-5F
+  ++ ~别为这种人流泪。~ + QUEST1-INTERITUS-5E
 
 CHAIN C0AURA2J QUEST1-INTERITUS-5E
-~I... I want to stop this, <CHARNAME>. I want to find the people responsible for Titan, and bring them to justice... just so I never have to see skills like mine be used for... for monstrous things like this! We'll find those gnomes in red, and...~
-= ~Those... gnomes in red...~
+~我……我想停下这一切，<CHARNAME>。我想找出该为泰坦负责的人，把他们绳之以法……就为了永远不必再看见我这样的本事被用在……被用在这样的怪物行径上！我们会找到那些红衣侏儒，然后……~
+= ~那些……红衣侏儒……~
 END
-  ++ ~Do you know who they were?~ + QUEST1-INTERITUS-5G
+  ++ ~你知道他们是谁？~ + QUEST1-INTERITUS-5G
 
 CHAIN C0AURA2J QUEST1-INTERITUS-5G
-~I... maybe. It was dark, but something about their outfits looked familiar. Give me a little time to think about it.~
-= ~We should go back to Master Magnussen first, <CHARNAME>. Maybe he's discovered something from studying the Titan sample from before.~
+~我……也许。当时很暗，可他们的装束有点眼熟。给我点时间想想。~
+= ~我们该先回马格努森大师那儿，<CHARNAME>。也许他从之前那份泰坦样本的研究里查出了什么。~
 DO ~StartCutSceneMode()
     Wait(2)
     ReallyForceSpellRES("C0AQEF3","C0AQMON2")
@@ -1261,66 +1261,66 @@ DO ~StartCutSceneMode()
     StartDialogNoSet(Player1)~ EXIT
 
 CHAIN C0AURA2J QUEST1-INTERITUS-5F
-~No. But there's still things we can do. We can make sure this never happens again.~
+~不知道。可我们仍能做点事。我们能确保这种事不再发生。~
 EXTERN C0AURA2J QUEST1-INTERITUS-5E
 
 CHAIN IF WEIGHT #-1 ~Global("C0AuraBG2Quest1","GLOBAL",30)~ THEN C0AURA2J QUEST1-30
-~W—what?! How can he still move...? No... no, he wasn't even breathing anymore!~
+~什——什么？！他怎么还能动……？不……不，他早就不呼吸了！~
 DO ~SetGlobal("C0AuraBG2Quest1","GLOBAL",31)~
-== C0AQMON2 ~Ggggrgrgnngghhh...!~
-== C0AURA2J ~A–ah—!~
+== C0AQMON2 ~咯呃呃呃嗯嗯……~
+== C0AURA2J ~啊——！~
 END
-  ++ ~No!~ DO ~ClearAllActions()
+  ++ ~不！~ DO ~ClearAllActions()
   						   StartCutSceneMode()
 						   StartCutScene("c0acut10") ~EXIT
-  ++ ~Get back!~ DO ~ClearAllActions()
+  ++ ~退后！~ DO ~ClearAllActions()
   						   StartCutSceneMode()
 						   StartCutScene("c0acut10") ~EXIT
 
 CHAIN IF WEIGHT #-1 ~Global("C0AuraBG2Quest1","GLOBAL",31)~ THEN C0AURA2J QUEST1-31
-~*cough* What... what was that...?~
+~*咳* 刚……刚才那是什么……？~
 DO ~SetGlobal("C0AuraBG2Quest1","GLOBAL",32)~
 END
-  ++ ~Aura! Are you alright?~ + QUEST1-31-1
-  ++ ~Don't get so careless, you fool!~ + QUEST1-31-2
+  ++ ~奥拉！你没事吧？~ + QUEST1-31-1
+  ++ ~别这么不小心，你这傻瓜！~ + QUEST1-31-2
 
 CHAIN C0AURA2J QUEST1-31-1
-~I—I'm okay, I think... the explosion didn't get me... I'm just shaken...~
+~我——我想我没事……爆炸没伤到我……只是受了惊……~
 EXTERN C0AURA2J QUEST1-31-3
 
 CHAIN C0AURA2J QUEST1-31-2
-~R—right...~
+~对——对……~
 EXTERN C0AURA2J QUEST1-31-3
 
 CHAIN C0AURA2J QUEST1-31-3
-~I'm sorry, <CHARNAME>, I couldn't have expected that to happen... for them to still move even after their organs have been destroyed... what a horrible creation Titan is.~
-= ~Hmm? Wait... this smell... there's no mistaking it. This is smokepowder! Was it... was it from that bolt just now? But how could...~
+~对不起，<CHARNAME>，我没料到会这样……他们器官都毁了竟还能动……泰坦是多可怕的造物。~
+= ~嗯？等等……这气味……不会错。这是烟粉！是……是刚才那支弩箭？可怎么会……~
 END
-  ++ ~Could it have been those gnomes we saw?~ + QUEST1-31-4
-  ++ ~Just count yourself lucky that mysterious shooter was here to save you.~ + QUEST1-31-5
-  ++ ~Let's not worry about that right now.~ + QUEST1-31-5
+  ++ ~会不会是我们见到的那些侏儒？~ + QUEST1-31-4
+  ++ ~你走运，有那神秘射手在这儿救了你。~ + QUEST1-31-5
+  ++ ~这会儿别操心那个了。~ + QUEST1-31-5
 
 CHAIN C0AURA2J QUEST1-31-4
-~Maybe... they were definitely Lantanese, from their accents and the way they dressed. But it wouldn't make much sense if it were them, right?~
-= ~I have a feeling it's someone else... someone who's probably been watching our backs from the shadows. But I haven't a clue who it could be... so I guess there's no point wondering about it for now.~
+~也许……他们肯定是兰坦人，从口音和穿着就看得出来。可若真是他们，又说不通，对吧？~
+= ~我有种感觉是别人……某人大概一直在暗处护着我们。可我一点头绪都没有……所以这会儿瞎想也没用。~
 EXTERN C0AURA2J QUEST1-31-6
 
 CHAIN C0AURA2J QUEST1-31-5
-~You're right. Regardless of who it might've been been, they just saved my life. I'll just take it to mean they're on our side, even if they didn't show themselves.~
+~你说得对。不管那是谁，他们刚救了我的命。我就当他们是站我们这边的，哪怕没露面。~
 EXTERN C0AURA2J QUEST1-31-6
 
 CHAIN C0AURA2J QUEST1-31-6
-~Let's go, <CHARNAME>. I'd rather get out of here as quickly as possible...~
+~我们走吧，<CHARNAME>。我宁可尽快离开这儿……~
 EXIT
 
 CHAIN IF WEIGHT #-1 ~Global("C0AuraBG2Quest1","GLOBAL",32)~ THEN C0AMAGN QUEST1-32
-~Ahh, here's a familiar face. What brings you here now? Perhaps you've made ground on investigating this Titan business?~
+~啊，又是张熟面孔。这次来有何事？也许你在查泰坦的事上有进展了？~
 DO ~SetGlobal("C0AuraBG2Quest1","GLOBAL",33)~
 END
-  ++ ~You could say that. I encountered those who are responsible for distributing Titan in Athkatla. And... something worse than that.~ + QUEST1-32-1
+  ++ ~可以这么说。我遇上了那些在阿斯卡特拉散布泰坦的人。而且……还有比那更糟的事。~ + QUEST1-32-1
 
 CHAIN C0AMAGN QUEST1-32-1
-~Well now, this does sound serious. Best you take your time and explain everything, then, my <PRO_GIRLBOY>.~
+~哎哟，这听着严重。那我的<PRO_GIRLBOY>，你最好慢慢把一切都讲清楚。~
 DO ~StartCutSceneMode()
 Wait(2)
 FadeToColor([30.0],0)
@@ -1329,254 +1329,254 @@ FadeFromColor([30.0],0)
 StartDialogNoSet(Player1)~ EXIT
 
 CHAIN IF WEIGHT #-1 ~Global("C0AuraBG2Quest1","GLOBAL",33)~ THEN C0AMAGN QUEST1-33
-~Hmm...~
+~嗯……~
 DO ~SetGlobal("C0AuraBG2Quest1","GLOBAL",34)~
-== C0AMAGN ~Yes... yes, I think I understand now. Dear, oh dear. I thought with my years of studying everything you could find written in words and beyond, nothing would surprise me anymore, and here I stand corrected.~
+== C0AMAGN ~是……是，我想我明白了。哎呀，哎呀。我以为凭我这些年研究一切写下来的、写不下来的东西，再没什么能让我吃惊了，可这回我错了。~
 END
-  ++ ~It's unbelievable that something like this could happen.~ + QUEST1-33-1
-  ++ ~What do you mean by that?~ + QUEST1-33-2
-  ++ ~Less meandering and more figuring out what to do next, old man.~ + QUEST1-33-3
+  ++ ~这种事竟能发生，真不敢信。~ + QUEST1-33-1
+  ++ ~你这话什么意思？~ + QUEST1-33-2
+  ++ ~少绕圈子，多想想接下来怎么办，老头。~ + QUEST1-33-3
 
 CHAIN C0AMAGN QUEST1-33-1
-~That is not quite what I meant, my <PRO_GIRLBOY>... well, I'll get to that in a moment.~
+~我不是那个意思，我的<PRO_GIRLBOY>……嗯，我一会儿就说到。不是那个意思……嗯，这想法先放着，我一会儿讲。~
 EXTERN C0AMAGN QUEST1-33-4
 
 CHAIN C0AMAGN QUEST1-33-2
-~I meant... well, let's leave that thought for now. I'll get to it in a moment.~
+~我是说……嗯，这想法先放着。我一会儿就说到。~
 EXTERN C0AMAGN QUEST1-33-4
 
 CHAIN C0AMAGN QUEST1-33-3
-~Yes, of course. What to do next...~
+~是，当然。接下来怎么办……~
 EXTERN C0AMAGN QUEST1-33-4
 
 CHAIN C0AMAGN QUEST1-33-4
-~A new formula of Titan... hm, people turned into monsters... and a suspicious group of Lantanese gnomes... you are certain those gnomes were wearing red, yes?~
+~泰坦的新配方……嗯，人变成怪物……还有一伙可疑的兰坦侏儒……你确定那些侏儒穿红衣，是吗？~
 END
 IF ~InParty("C0Aura")~ EXTERN C0AURA2J QUEST1-33-5A
-+ ~!InParty("C0Aura")~ + ~Yes. All of them wore dark red cloth, and their leader was wearing blood-red armor.~ EXTERN C0AMAGN QUEST1-33-5
++ ~!InParty("C0Aura")~ + ~是。他们都穿暗红衣料，领头那个穿着血红色护甲。~ EXTERN C0AMAGN QUEST1-33-5
 
 CHAIN C0AURA2J QUEST1-33-5A
-~That's right, sir. Even in the dark, you could tell. And the armor their leader wore... it's like it was painted with blood.~
+~没错，先生。就算在黑暗里也看得出来。而且他们领头的护甲……像用血涂过一样。~
 EXTERN C0AMAGN QUEST1-33-5
 
 CHAIN C0AMAGN QUEST1-33-5
-~Well, there's no doubt about it then. They're Interitus. Seems like things have gotten rather unpleasant.~
-== C0AURA2J IF ~InParty("C0Aura")~ THEN ~Interitus? So... they really are real, then? And you're familiar with them, sir?~
-== C0AMAGN IF ~InParty("C0Aura")~ THEN ~Very real, I'm afraid, dear girl. And I know them well, though I'd rather I didn't.~
+~那就无疑了。他们是因特里图斯。看来事情变得相当不妙。~
+== C0AURA2J IF ~InParty("C0Aura")~ THEN ~因特里图斯？那……他们真是存在的？而且你熟悉他们，先生？~
+== C0AMAGN IF ~InParty("C0Aura")~ THEN ~怕是很真实，好姑娘。我熟知他们，虽然我宁愿不熟。~
 END
-++ ~Who are these 'Interitus'?~ EXTERN C0AMAGN QUEST1-33-6
+++ ~这“因特里图斯”是什么人？~ EXTERN C0AMAGN QUEST1-33-6
 
 CHAIN C0AMAGN QUEST1-33-6
-~They are an exceptionally extreme group originating from Lantan. Brilliant minds, many of them, though sorely misguided. As partisan against magic as you can be, in all the worst ways. Thinking about it, I suppose a city like Athkatla would be a suitable place to spread their roots.~
-== C0AURA2J IF ~InParty("C0Aura")~ THEN ~I've heard rumors about them... a long time ago, they were prominent enough to have a seat at the Ayrorch, until someone important in the organization was found responsible for a horrible catastrophe in Orlil... then, I never read anything about them past that.~
-== C0AMAGN IF ~InParty("C0Aura")~ THEN ~Oh yes, my girl. I was still around during that time, and I remember clearly the chaos that followed, the acrid smell of melted flesh and smokepowder in the air... by all my ancestors, I doubt that was what the Wonderbringer sought when he bestowed his knowledge upon us mortals.~
-== C0AMAGN IF ~InParty("C0Aura")~ THEN ~It was deemed an 'accident', officially, and those in the group who were found shed their colours and claimed to have changed their ways, but I knew better. They were never recognized as a respected organization again, but the influence of Interitus never truly went away.~
-== C0AMAGN ~If those who are providing Titan to the black market are indeed Interitus, then no doubt this solution is based off Lantanese alchemy... troubling indeed. However, I can certainly tell you one thing, my friend. Under normal circumstances, that one fact should not be possible.~
+~他们是源自兰坦的一个极端过头的组织。其中许多头脑极聪明，只是严重走岔了路。反魔法反到你能反的最极端，全是最坏的那种。想来，阿斯卡特拉这样的城倒适合他们扎根。~
+== C0AURA2J IF ~InParty("C0Aura")~ THEN ~我听过他们的传言……很久以前，他们显赫到在艾罗奇有席位，直到组织里某位要人被发现该为奥尔利尔岛一场可怕灾难负责……那之后我就再没读到过他们什么了。~
+== C0AMAGN IF ~InParty("C0Aura")~ THEN ~哦对，我的姑娘。那会儿我还在，我清楚记得随后的混乱，空气里熔化的血肉与烟粉的酸臭……我列祖列宗在上，我怀疑奇迹缔造者把知识赐给我们凡人时想要的不是这个。~
+== C0AMAGN IF ~InParty("C0Aura")~ THEN ~官方定论是“意外”，被查到的人褪下颜色、声称已改弦更张，可我知道不是。他们再没被认作受尊敬的组织，可因特里图斯的影响力从未真正消失。~
+== C0AMAGN ~若给黑市供泰坦的真是因特里图斯，那这溶液无疑基于兰坦炼金术……着实令人忧虑。不过朋友，我确实能告诉你一件事。正常情况下，这事实本不该成立。~
 END
-++ ~What do you mean by that?~ EXTERN C0AMAGN QUEST1-33-7
-++ ~Under 'normal' circumstances?~ EXTERN C0AMAGN QUEST1-33-7
-++ ~I think you should explain yourself.~ EXTERN C0AMAGN QUEST1-33-7
+++ ~你这话什么意思？~ EXTERN C0AMAGN QUEST1-33-7
+++ ~在“正常”情况下？~ EXTERN C0AMAGN QUEST1-33-7
+++ ~我想你该解释一下。~ EXTERN C0AMAGN QUEST1-33-7
 
 CHAIN C0AMAGN QUEST1-33-7
-~Well, I suppose this will require some context... ever since you brought me the sample of the Titan formula you discovered, I can confirm that, while the current composition is certainly unique, many of its traits share qualities with Lantanese concotions made in the past.~
-= ~However... it is impossible. The research of the formula that this drug is based on, known as the Pythonic solution, has long been forbidden by the Ayrorch, and all mention of it has been wiped from academia decades ago.~
+~嗯，这得讲些背景……自从你把你发现的泰坦配方样本给我，我能确认，当前这成分固然独特，可它许多特性跟往昔兰坦调配物有共通之处。~
+= ~然而……这不可能。这药所本的那份配方研究，名为“巨蟒溶液”，早被艾罗奇禁止，几十年前所有提及都从学术界抹掉了。~
 END
-  ++ ~So studying it is illegal?~ + QUEST1-33-7A
-  + ~OR(2) CheckStatGT(Player1,15,INT) CheckStatGT(Player1,15,WIS)~ + ~So whoever created Titan must have been involved in its original research?~ + QUEST1-33-7B
+  ++ ~所以研究它违法？~ + QUEST1-33-7A
+  + ~OR(2) CheckStatGT(Player1,15,INT) CheckStatGT(Player1,15,WIS)~ + ~所以造出泰坦的人一定参与过原研究？~ + QUEST1-33-7B
 
 CHAIN C0AMAGN QUEST1-33-7A
-~Oh, very illegal indeed. Not that there is much risk of any Lantanna knowingly studying it nowadays. Even under the infinitesimal chance that they knew its existence, they would have nowhere to start from. The Ayrorch were quite thorough with erasing everything involved with the project.~
+~哦，非常违法。倒不是说如今有哪个兰坦人会明知故犯去研究它。就算他们有极小机会知道它存在，也无从下手。艾罗奇把项目相关的一切都抹得相当干净。~
 EXTERN C0AMAGN QUEST1-33-8
 
 CHAIN C0AMAGN QUEST1-33-7B
-~You catch on quickly, dear <PRO_GIRLBOY>. Yes, that is the only logical conclusion, is it not? I can promise you, there is next to no chance of anyone coming across knowledge of the original project by chance. The Ayrorch have long erased anything involved with the project.~
+~你领会得快，亲爱的<PRO_GIRLBOY>。是，这是唯一合乎逻辑的结论，对吧？我可以保证，谁碰巧撞上原项目知识的可能近乎为零。艾罗奇早把项目相关的一切抹掉了。~
 EXTERN C0AMAGN QUEST1-33-8
 
 CHAIN C0AMAGN QUEST1-33-8
-~However, even compared to its original form, this 'Titan' is a very, very complex piece of alchemy, indeed... more than your simple apothecary would be capable of identifying and replicating. In fact, I doubt even most of the alumni of the Sambaran academy would begin to grasp the complexity without several additional years of study.~
-== C0AMAGN IF ~InParty("C0Aura")~ THEN ~Even you, Aurelia, my dear, brilliant as you are, haven't quite figured it out yet, have you?~
-== C0AURA2J IF ~InParty("C0Aura")~ THEN ~I... no, sir. I haven't.~
-== C0AMAGN ~To put it simply, this is a master of the craft, young <CHARNAME>. They'd have to have a fully understanding of anatomy, medicine, even poisons... why, I doubt you could find three people within this city who could even tell you the first steps of how to create Titan even with the product right in front of them.~
+~可就算跟原形相比，这“泰坦”也是一份非常、非常复杂的炼金成品……超出普通药师能辨识复制的程度。事实上，我怀疑连桑巴尔学院多数校友，再学几年也未必能摸到其复杂之处。~
+== C0AMAGN IF ~InParty("C0Aura")~ THEN ~就连你，奥瑞莉亚，亲爱的，这么有才华，也还没弄明白，对吧？~
+== C0AURA2J IF ~InParty("C0Aura")~ THEN ~我……不，先生。我没弄明白。~
+== C0AMAGN ~简单说，这是位此道宗师，年轻的<CHARNAME>。他们得完全通晓解剖、医学、甚至毒物……唉，我怀疑这城里找不出三个人，哪怕成品摆在眼前，能说得出造泰坦的第一步。~
 END
 IF ~InParty("C0Aura")~ EXTERN C0AURA2J QUEST1-33-9A
-++ ~Then where could we possibly find such a master?~ EXTERN C0AMAGN QUEST1-33-10
-+ ~OR(2) CheckStatGT(Player1,15,INT) CheckStatGT(Player1,15,WIS)~ + ~But... you could, couldn't you?~ EXTERN C0AMAGN QUEST1-33-11
+++ ~那我们上哪儿找这样的宗师？~ EXTERN C0AMAGN QUEST1-33-10
++ ~OR(2) CheckStatGT(Player1,15,INT) CheckStatGT(Player1,15,WIS)~ + ~可……你能，对吧？~ EXTERN C0AMAGN QUEST1-33-11
 
 CHAIN C0AURA2J QUEST1-33-9A
-~Then... where in this city could we possibly find somebody like that?~
+~那……这城里哪儿能找到这样的人？~
 EXTERN C0AMAGN QUEST1-33-10
 
 CHAIN C0AMAGN QUEST1-33-10
-~Well, you can be certain the possibility is not zero. Those of such ability do exist. Me, for instance.~
+~嗯，你可以确定可能性不是零。有这种本事的人确实存在。比如我。~
 END
-++ ~You?~ + QUEST1-33-12
-++ ~Is this a confession?~ + QUEST1-33-12
+++ ~你？~ + QUEST1-33-12
+++ ~这是自白吗？~ + QUEST1-33-12
 
 CHAIN C0AMAGN QUEST1-33-11
-~Oho! Clever, my <PRO_GIRLBOY>. You said it faster than I could say it myself.~
+~哦呵！机灵，我的<PRO_GIRLBOY>。你比我自己说得还快。~
 EXTERN C0AMAGN QUEST1-33-12
 
 CHAIN C0AMAGN QUEST1-33-12
-~Yes, I could indeed concoct a perfect replica of Titan if I tried. Though admittedly, it is less confidence in my ability and more my experience that is most relevant here. After all, the fool responsible for its precursor formula, the Pythonic solution, is myself.~
-== C0AMAGN IF ~InParty("C0Aura")~ THEN ~I presume how you must have found it strange, young Aurelia, that... you'll pardon me for my egoistic self-flattery... as supposedly accomplished as I am, you have never seen a single work of writing produced under my name in Lantan?~
-== C0AURA2J IF ~InParty("C0Aura")~ THEN ~Now that you mention it, sir, I haven't... I've never read any books authored by you, sir.~
-== C0AMAGN IF ~InParty("C0Aura")~ THEN ~Well, I'm certain you have, and simply didn't realize it. The books that I had a hand in writing have had my name taken off them for years now, after all... and that one book, in particular, was deemed "research made on unethical grounds", and you won't find it at any institution of knowledge anywhere on Lantan.~
-== C0AMAGN IF ~InParty("C0Aura")~ THEN ~It was one of the many conditions the Ayrar set for my exile, you see.~
-== C0AURA2J IF ~InParty("C0Aura")~ THEN ~Your... exile? You mean, you didn't leave Lantan by choice?~
-== C0AMAGN IF ~InParty("C0Aura")~ THEN ~Now, don't be mistaken. I accepted my exile voluntarily, as it was an appropriate consequence of my own mistakes... in masterminding that arrogant project.~
-== C0AMAGN ~I was indeed responsible for the research behind the creation of Titan's original formula. For the sin of attempting to upstage nature by creating a formula that may allow us to exceed the limits placed upon us, I was exiled from Lantan by the Ayrorch. But the decision to wipe my name from all of Lantan's academia, and destroy my research on my most regretful project was my own...~
-== C0AMAGN ~It was because of my failure that I realized how nature had imposed limits upon we mortals for a reason. And so I took measures to ensure those after myself, young minds with talent, would never be led to fall prey to the same mistakes. And my epiphany also spared me from the worse fate of being incarcerated in the Poenitens Sanctum, the place meant for those too dangerously imaginative for their own good.~
+~是，我若动手，确实能调出一份完美的泰坦复制品。不过老实说，这里最要紧的不是我对自己本事的信心，而是我的经历。毕竟，为它的前身配方“巨蟒溶液”负责的蠢货，就是我。~
+== C0AMAGN IF ~InParty("C0Aura")~ THEN ~年轻的奥瑞莉亚，我猜你一定觉得奇怪……请容我自负地自夸一句……我据说这么有成就，可你在兰坦从没见过一件署我名字的作品？~
+== C0AURA2J IF ~InParty("C0Aura")~ THEN ~你这么一提，先生，我确实没有……我从没读过你写的书，先生。~
+== C0AMAGN IF ~InParty("C0Aura")~ THEN ~嗯，我确定你读过，只是没认出来。我参与写过的书，多年来名字都被摘掉了……尤其那一本，被定为“基于不道德立场的研究”，兰坦任何知识机构里都找不到。~
+== C0AMAGN IF ~InParty("C0Aura")~ THEN ~你看，那是艾拉给我流放定下的诸多条件之一。~
+== C0AURA2J IF ~InParty("C0Aura")~ THEN ~你的……流放？你是说，你不是自愿离开兰坦的？~
+== C0AMAGN IF ~InParty("C0Aura")~ THEN ~别误会。我是自愿接受流放的，因为那是我自己错误的应有后果……策划那傲慢项目之错。~
+== C0AMAGN ~造泰坦原配方背后的研究，确实是我负责的。因试图以一份能让我们超越自身极限的配方僭越自然的罪，我被艾罗奇逐出兰坦。可把我名字从兰坦所有学术界抹去、毁掉我最悔恨项目研究的决定，是我自己下的……~
+== C0AMAGN ~正因我的失败，我才明白自然给我们凡人设限是有道理的。所以我采取措施，确保我之后有才华的年轻头脑，永远不会落入同样的错。这番醒悟也让我免于更糟的命运——被关进忏悔圣所，那是为想象力危险到害了自己的人准备的地方。~
 END
-  ++ ~But your original research was somehow used for Titan's creation anyways.~ + QUEST1-33-12A
-  ++ ~Which means you're partly responsible for all of this.~ + QUEST1-33-12B
-  ++ ~That's not relevant right now. We need to know who's creating these dangerous concoctions right now.~ + QUEST1-33-12C
+  ++ ~可你的原研究终究还是被拿去造泰坦了。~ + QUEST1-33-12A
+  ++ ~这说明你对这一切有部分责任。~ + QUEST1-33-12B
+  ++ ~现在这不重要。我们得知道眼下是谁在造这危险调配物。~ + QUEST1-33-12C
 
 CHAIN C0AMAGN QUEST1-33-12A
-~Yes, to my consternation, but sadly... not to my surprise.~
+~是，令我惊愕，可悲的是……并不令我意外。~
 EXTERN C0AMAGN QUEST1-33-13
 
 CHAIN C0AMAGN QUEST1-33-12B
-~Oh, yes, and in more ways than one.~
+~哦，是，而且不止一处。~
 EXTERN C0AMAGN QUEST1-33-13
 
 CHAIN C0AMAGN QUEST1-33-12C
-~Indeed, that is the more pressing issue right now, isn't it? Sadly, I fear even our current predicament has more to do with me than I wish.~
+~确实，眼下更迫切的是这个，对吧？可惜我怕连我们当前的困境，都跟我关系太大。~
 EXTERN C0AMAGN QUEST1-33-13
 
 CHAIN C0AMAGN QUEST1-33-13
-~I should have realized sooner. It seems this research has caused me to make the same mistake twice... the first time from curiosity, and the second time, sentimentality.~
-== C0AMAGN ~Though I claimed to have destroyed all of my past research... I could not stop myself from preserving a copy of my magnum opus, "L'an Elementume Vitaer", and keeping it at my side after my exile. All this time, it has been here with me, a piece of forbidden knowledge.~
-== C0AMAGN ~For the longest time, none but myself have known of its existence. But I did show it to one I considered a like-minded friend... I should have known better.~
-== C0AMAGN ~Asclepios is the one you are after. Of all the men I know, only he possesses the talent to replicate and continue my work.~
+~我早该想到。看来这研究让我犯了同样的错两次……第一次因好奇，第二次因念旧。~
+== C0AMAGN ~我虽声称毁掉了过去所有研究……却忍不住留下我那部巨著《生命元素论》的一份，流放后一直带在身边。这么些年，它一直在我这儿，一份禁知。~
+== C0AMAGN ~很久以来，除我之外无人知道它存在。可我把它给了一位我视作同道好友的人看过……我早该知道不该。~
+== C0AMAGN ~阿斯克勒庇俄斯就是你要找的人。我认识的人里，只有他有才华复制、延续我的研究。~
 DO ~AddJournalEntry(%Quest1_Entry_7%,QUEST)~
 END
-++ ~Asclepios? The reputed "greatest healer in all the city"?~ + QUEST1-33-14
-++ ~The man who helped Sean's father? He's the one behind making Titan?~ + QUEST1-33-14
+++ ~阿斯克勒庇俄斯？那位号称“全城最好的医者”？~ + QUEST1-33-14
+++ ~帮过肖恩父亲的人？他就是造泰坦的幕后？~ + QUEST1-33-14
 
 CHAIN C0AMAGN QUEST1-33-14
-~I can perhaps understand his state of mind. Asclepios Cohval is a seeker of knowledge, like myself... and, as a believer that knowledge is itself neither good nor evil, considers the inherent morality of pursuing forms of knowledge secondary.~
-= ~That is how he can achieve such exemplary abilities of healing... and naturally, his mastery of alchemy, of poisons and the working of the body, are equally unmatched.~
-= ~When my studies on that silver concoction led me to realize just what you had brought to me, I finally opened my copy of "L'an Elementume Vitaer" for the first time in many long years... and it was as though the horrors of the past had finally caught up to me.~
-= ~Ah... ha ha, Asclepios, you poor, poor man... how did it come to this?~
+~我或许能理解他的心境。阿斯克勒庇俄斯·科瓦尔跟我一样是求知者……而且，他相信知识本身无善无恶，认为追求各类知识的内在道德是次要的。~
+= ~正因如此，他才能有那样出众的医术……自然，他对炼金、对毒物、对身体运作的精通也同样无人能及。~
+= ~当我研究那银色调配物、终于明白你带给我的是什么时，我多年后第一次翻开我那本《生命元素论》……仿佛过去的恐怖终于追上了我。~
+= ~啊……哈哈，阿斯克勒庇俄斯，你这可怜、可怜的人……怎么到了这一步？~
 END
-++ ~He's not worthy of pity, not after what he's done.~ + QUEST1-33-15
-++ ~I need to stop him. Where can he be found?~ + QUEST1-33-16
-++ ~So what do we do now?~ + QUEST1-33-16
+++ ~他不值得怜悯，做了那些事之后。~ + QUEST1-33-15
+++ ~我得阻止他。哪儿能找到他？~ + QUEST1-33-16
+++ ~那我们现在怎么办？~ + QUEST1-33-16
 
 CHAIN C0AMAGN QUEST1-33-15
-~Aye... I understand that, of course. It's just that... speaking to him, I felt I had found my mirror image... and, perhaps I indeed had in my entirety, at my best and worst.~
+~是啊……这我当然明白。只是……跟他谈话时，我觉得看见了镜子里的自己……也许我确实在其中看见了自己完整的模样，最好与最坏。~
 EXTERN C0AMAGN QUEST1-33-16
 
 CHAIN C0AMAGN QUEST1-33-16
-~Asclepios remains in his laboratory when not called upon for healing, and nobody has ever seen where it is... myself included. Our meetings were always here, spending the hours talking over a kettle of tea.~
-= ~You should talk with young Gilbert. As his student, perhaps he knows where it is, and I believe the dear boy is innocent himself of any wrongdoing. Tell him the truth. He will understand what is best.~
+~阿斯克勒庇俄斯不外出治病时就待在实验室，从没人见过那地方……我也没有。我们的会面总在这儿，就着一壶茶聊上几个钟头。~
+= ~你该跟小吉尔伯特谈谈。身为他的学生，他也许知道那地方，而且我相信这好孩子本身没参与什么坏事。把真相告诉他。他会明白什么最好。~
 EXIT
 
 CHAIN IF WEIGHT #-1 ~Global("C0AuraBG2Quest1","GLOBAL",34)~ THEN C0AQMAN QUEST1-34
-~Oh! I... I know you! You were around when I brought my father to the healer. Do you remember me?~
+~哦！我……我认得你！我带我父亲来求医时你在场。你记得我吗？~
 DO ~SetGlobal("C0AuraBG2Quest1","GLOBAL",35)~
 END
-++ ~You're Sean, right? How's your father doing?~ + QUEST1-34-1
-++ ~Yes, I remember you. What are you doing back here?~ + QUEST1-34-1
-++ ~I don't have time for you right now.~ + QUEST1-34-2
+++ ~你是肖恩，对吧？你父亲怎么样？~ + QUEST1-34-1
+++ ~是，我记得你。你回这儿做什么？~ + QUEST1-34-1
+++ ~我现在没时间理你。~ + QUEST1-34-2
 
 CHAIN C0AQMAN QUEST1-34-1
-~My father... it's about my father again. He's gone! The... the healer, master Asclepios, he came to our home and took him away!~
-== C0AQMAN ~I... I asked him why he had come, and he told me my father needed looking at for his condition, and he had to come to his home. Father was still sick, so I let him go, but the more I think about it, the more wrong it felt!~
-== C0AURA2J IF ~InParty("C0Aura")~ THEN ~Oh, no...~
-== C0AQMAN ~Since then, I haven't heard sign of either of them! I decided to come here to find Gilbert, for surely he knows where his master lives and can tell me where my father is!~
+~我父亲……又是我父亲的事。他不见了！那……那位医者，阿斯克勒庇俄斯大师，他来我们家把他带走了！~
+== C0AQMAN ~我……我问他为什么来，他说我父亲的病需要检查，得去他家。父亲还病着，我就让他带走了，可我越想越觉得不对！~
+== C0AURA2J IF ~InParty("C0Aura")~ THEN ~哦，不……~
+== C0AQMAN ~那之后我就再没听到他们任何一人的消息！我决定来这儿找吉尔伯特，他一定知道他师父住哪儿，能告诉我我父亲在哪儿！~
 END
-++ ~This is bad news... I fear Asclepios took your father for concerns other than his health.~ + QUEST1-34-3
-++ ~You've made a terrible mistake, Sean. That man was the one behind Titan all along.~ + QUEST1-34-4
+++ ~这是坏消息……我怕阿斯克勒庇俄斯带走你父亲，不是为了他的健康。~ + QUEST1-34-3
+++ ~你犯了个可怕的错，肖恩。那人才是泰坦背后的主。~ + QUEST1-34-4
 
 CHAIN C0AQMAN QUEST1-34-2
-~Wait, wait! I wasn't expecting to meet you here, but... maybe it's a stroke of luck that I did! Just allow me a moment, please!~
+~等等，等等！我没想到会在这儿遇见你，可……也许碰上是运气！请给我一点时间！~
 EXTERN C0AQMAN QUEST1-34-1
 
 CHAIN C0AQMAN QUEST1-34-3
-~He... had other reasons for taking my father? Please, help me understand!~
+~他……带走我父亲另有原因？求你，让我明白！~
 END
-++ ~He's been secretly making Titan, which was what poisoned your father to begin with.~ + QUEST1-34-5
-++ ~I don't have time to explain right now. I'm looking for Asclepios too, so just leave the search to me.~ + QUEST1-34-6
+++ ~他一直暗中造泰坦，那正是最初毒了你父亲的东西。~ + QUEST1-34-5
+++ ~我现在没时间解释。我也在找阿斯克勒庇俄斯，搜寻交给我。~ + QUEST1-34-6
 
 CHAIN C0AQMAN QUEST1-34-4
-~W—what? "Titan"? What do you mean?~
+~什——什么？“泰坦”？你什么意思？~
 END
-++ ~It's a long story, but it's a dangerous drug. It's what poisoned your father.~ + QUEST1-34-5
-++ ~I don't have time to explain right now. I'm looking for Asclepios too, so just leave the search to me.~ + QUEST1-34-6
+++ ~说来话长，可那是种危险的药。它就是毒了你父亲的东西。~ + QUEST1-34-5
+++ ~我现在没时间解释。我也在找阿斯克勒庇俄斯，搜寻交给我。~ + QUEST1-34-6
 
 CHAIN C0AQMAN QUEST1-34-5
-~Oh... gods. So that's what happened... And I... I was so grateful to him for seeing my father slowly recovering...~
-= ~That man must be brought to justice! Where is he? What can I do to help you?~
+~哦……神啊。原来是这样……而我……我还那么感激他看我父亲慢慢好转……~
+= ~那人必须被绳之以法！他在哪儿？我能帮什么？~
 END
-++ ~I'm looking for him too. You should wait here.~ + QUEST1-34-6
-++ ~Just don't get in the way. I'll find him.~ + QUEST1-34-6
+++ ~我也在找他。你该在这儿等。~ + QUEST1-34-6
+++ ~别碍事就行。我会找到他。~ + QUEST1-34-6
 
 CHAIN C0AQMAN QUEST1-34-6
-~I... I understand, <PRO_SIRMAAM>. I am extremely worried, but... I will leave this to you. Please, find him and my father!~
+~我……我明白了，<PRO_SIRMAAM>。我极担心，可……这事交给你。求你找到他和我父亲！~
 EXIT
 
 CHAIN C0AASCS QUEST1-35
-~Master Asclepios does not wish for those in need to find him at his home. He comes here on occasion, but at other times, I assure you that my skills of healing are sufficient for most things.~
+~阿斯克勒庇俄斯大师不希望有需要的人去他家找他。他偶尔来这儿，可别的时候，我向你保证，我的医术足以应付大多数事。~
 END
-++ ~I'm not in need of healing. I want to talk to him about Titan.~ + QUEST1-35-1
-++ ~Listen to me. Your master is the one creating Titan. I need to stop him.~ + QUEST1-35-2
-++ ~Bring me to your master's home right now, you ignorant fool!~ + QUEST1-35-3
+++ ~我不需要治病。我要跟他谈泰坦。~ + QUEST1-35-1
+++ ~听我说。你师父就是造泰坦的人。我得阻止他。~ + QUEST1-35-2
+++ ~马上带我去你师父家，你这无知的蠢货！~ + QUEST1-35-3
 
 CHAIN C0AASCS QUEST1-35-1
-~Ah, has there been new revelations on the strange Titan concoction? My master has not told me of any new insights from his study.~
+~啊，关于那古怪的泰坦调配物有新发现了？我师父没告诉我他研究有什么新见解。~
 END
-++ ~And he likely won't, given what he knows. He's the one making it to begin with!~ + QUEST1-35-2
+++ ~他大概也不会说，鉴于他知道的。那东西本来就是他造的！~ + QUEST1-35-2
 
 CHAIN C0AASCS QUEST1-35-2
-~My master...? No, surely there must be some mistake.~
+~我师父……？不，一定是哪里弄错了。~
 END
-++ ~Ask Professor Magnussen yourself if you don't believe me. He's the only one who could have done it.~ + QUEST1-35-4
-++ ~You're the one who's boasted of your master's skills being unmatched. Do you think he's not capable?~ + QUEST1-35-4
+++ ~你不信我就自己去问马格努森教授。只有他可能是那人。~ + QUEST1-35-4
+++ ~你不是吹过你师父本事无人能及？你觉得他做不到？~ + QUEST1-35-4
 
 CHAIN C0AASCS QUEST1-35-3
-~Calm yourself, friend. Master Asclepios spends every waking hour at work, whether in healing or the research of new medicines. Without good enough cause, I would not disrupt him. What is of such importance that you must see him?~
+~冷静，朋友。阿斯克勒庇俄斯大师醒着的每一刻都在工作，或治病或研究新药。没有足够理由，我不会去打扰他。什么事重要到你必须见他？~
 END
-++ ~"Research of new medicines"? Like the Titan drug he's been making?~ + QUEST1-35-2
-++ ~He's been making Titan in his laboratory this entire time. He needs to be stopped!~ + QUEST1-35-2
+++ ~“研究新药”？比如他一直在造的泰坦？~ + QUEST1-35-2
+++ ~他一直在实验室里造泰坦。他必须被阻止！~ + QUEST1-35-2
 
 CHAIN C0AASCS QUEST1-35-4
-~This... you are certain of this, friend? There can be no mistake that our master is a culprit?~
+~这……你确定吗，朋友？我们师父是罪人，这不会有错？~
 END
-++ ~None. He's the one responsible.~ + QUEST1-35-5
-++ ~If there is any doubt, I want to meet him and see how he explains himself.~ + QUEST1-35-5
+++ ~不会错。他就是负责的人。~ + QUEST1-35-5
+++ ~若有疑虑，我要见他，看他自己怎么解释。~ + QUEST1-35-5
 
 CHAIN C0AASCS QUEST1-35-5
-~I... I believe in the integrity of my master's dedication to healing and medicine. And yet... with his ability, I do not believe it beyond him.~
-= ~My master lives in an old house not far from here, indistinguishable from the rest from the outside. He will be at home, as always... I can bring you there.~
+~我……我相信我师父对治病与医药的赤诚。可……凭他的本事，我也不觉得他做不到。~
+= ~我师父住在这附近一栋老屋里，从外头看跟别的没两样。他会像往常一样在家……我能带你去。~
 END
-++ ~Take me there.~ + QUEST1-35-6
+++ ~带我去。~ + QUEST1-35-6
 
 CHAIN C0AASCS QUEST1-35-6
-~Very well. I truly hope your conclusions are wrong... but we must be certain. Follow me.~
+~好。我真希望你的结论是错的……可我们必须确定。跟我来。~
 DO ~SetGlobal("C0AuraBG2Quest1","GLOBAL",36)
 	ClearAllActions()
   	StartCutSceneMode()
 	StartCutScene("c0acut11")~ EXIT
 
 CHAIN IF WEIGHT #-1 ~Global("C0AuraBG2Quest1","GLOBAL",36)~ THEN C0AQDAD QUEST1-36
-~N—no... no more, doctor, p... please, I beg of you...~ [BEGGR05]
+~不——不……别再来了，医生，求……求你，我求你了……~ [BEGGR05]
 DO ~SetGlobal("C0AuraBG2Quest1","GLOBAL",37)~
-== C0AASCL ~The solutions I have injected into your body are still processing the existing toxins that infest your internal organs. Were I to prematurely apply the antidote meant for final treatment, your death would be assured. Is that what you wish?~
-== C0AQDAD ~I... I do not seek death, doctor... but... this pain... perhaps it would be a blessing...~
-== C0AASCL ~Your condition is severe, but it is not beyond my ability to save. You need not die today, so long as you endure the physical pain. And you have reason to live on.~
-== C0AQDAD ~Why... why are you doing this? You... you promised to save me, yet... if you are a savior, why... do you look upon my suffering with such... such—~
-== C0AASCL ~My responsibility is to your life. To shy away from the purpose of my work because of the symptoms would be a betrayal of my duty. Nothing you have experienced so far is outside of my expectations, and so, as long as I do not falter, neither will your eventual healing.~
-== C0AASCL ~Now, do not struggle. It is time for the next dose.~
-== C0AQDAD ~But... but I... aaaAAAGGHH!~ [BEGGR06]
+== C0AASCL ~我注入你体内的溶液仍在处理侵蚀你内脏的既有毒素。我若过早施用最终治疗用的解药，你必死无疑。那是你想要的吗？~
+== C0AQDAD ~我……我不求死，医生……可……这痛……也许倒是一种恩赐……~
+== C0AASCL ~你的状况严重，可并未超出我能救的范围。只要你忍住身痛，你今天不必死。你也有活下去的理由。~
+== C0AQDAD ~你……为什么这样做？你……你答应救我，可……你若是救星，为什么……看我受苦时那样……那样——~
+== C0AASCL ~我负责的是你的命。因症状而回避我工作的目的，就是背叛我的职责。你至今经历的一切都在我预期之内，所以只要我不出错，你终将痊愈。~
+== C0AASCL ~现在，别挣扎。该下一剂了。~
+== C0AQDAD ~可……可是我……啊啊啊啊啊！~ [BEGGR06]
 END
-++ ~Stop. Put down the needle. Now.~ EXTERN C0AQDAD QUEST1-36-1
-++ ~You're a sick, twisted bastard.~ EXTERN C0AQDAD QUEST1-36-1
+++ ~住手。把针放下。现在。~ EXTERN C0AQDAD QUEST1-36-1
+++ ~你是个病态的变态混蛋。~ EXTERN C0AQDAD QUEST1-36-1
 
 CHAIN C0AQDAD QUEST1-36-1
-~H... help me...~
-== C0AASCL ~...~
-== C0AASCL ~You arrived sooner than expected.~
+~救……救我……~
+== C0AASCL ~……~
+== C0AASCL ~你来得比预想的早。~
 DO ~StartCutSceneMode()
 Wait(1)
 ForceSpellRES("C0AQEF4",Player1)
@@ -1584,93 +1584,93 @@ Wait(2)
 StartDialogNoSet(Player1)~ EXIT
 
 CHAIN IF WEIGHT #-1 ~Global("C0AuraBG2Quest1","GLOBAL",37)~ THEN C0AASCL QUEST1-37
-~Fascinating.~
-== C0AURA2J IF ~InParty("C0Aura")~ THEN ~<CHARNAME>!~
+~真有意思。~
+== C0AURA2J IF ~InParty("C0Aura")~ THEN ~<CHARNAME>！~
 DO ~SetGlobal("C0AuraBG2Quest1","GLOBAL",38)~
 END
-++ ~What did you just use on me?~ EXTERN C0AASCL QUEST1-37-1
-++ ~That dart was... poisoned?~ EXTERN C0AASCL QUEST1-37-1
+++ ~你刚才对我用了什么？~ EXTERN C0AASCL QUEST1-37-1
+++ ~那支飞镖……有毒？~ EXTERN C0AASCL QUEST1-37-1
 
 CHAIN C0AASCL QUEST1-37-1
-~Marek was an excellent student. His knowledge of poison flawless, of antidotes, even more so. It would seem that particular formula no longer has any effect upon you, <CHARNAME>, child of Bhaal. Or perhaps it is your divine blood which has bolstered your immune system?~
+~马雷克是个出色的学生。他对毒的知识无瑕，对解药更胜一筹。看来那份特别配方对你不再有任何效力了，<CHARNAME>，巴尔之子。又或者，是你神性的血增强了你的免疫？~
 END
 IF ~InParty("C0Aura")~ EXTERN C0AURA2J QUEST1-37-1A
 IF ~InParty("C0Aura")~ EXTERN C0AASCL QUEST1-37-2
 
 CHAIN C0AURA2J QUEST1-37-1A
-~Are you alright, <CHARNAME>?~
+~你没事吧，<CHARNAME>？~
 END
-++ ~I think so... I don't feel any different.~ EXTERN C0AASCL QUEST1-37-2
-++ ~It looks like that poison won't work on me a second time.~ EXTERN C0AASCL QUEST1-37-2
+++ ~我想是……我没觉得有什么不同。~ EXTERN C0AASCL QUEST1-37-2
+++ ~看来那毒没法第二次对我生效。~ EXTERN C0AASCL QUEST1-37-2
 
 CHAIN C0AASCL QUEST1-37-2
-~A pity that he ultimately took such an unsavory path, for it led him to a destructive end. Such is the way of the underworld. I should have given him more incentive to stay, and follow a more productive path.~
+~可惜他最终走上了那么不像样的路，以致毁了自己。黑道就是这样。我本该多给他些理由留下、走更有效率的路。~
 END
-  ++ ~Marek... the Iron Throne's assassin was your student?~ + QUEST1-37-3
-  ++ ~Looks like I have a bigger quarrel with you than I thought.~ + QUEST1-37-3
-  ++ ~I have you to thank for that poisoning incident at Baldur's Gate?~ + QUEST1-37-3
-  ++ ~Your profession of poisoning and torturing desperate folk is considered productive?~ + QUEST1-37-4
+  ++ ~马雷克……铁王座的刺客是你的学生？~ + QUEST1-37-3
+  ++ ~看来我跟你之间的账比我想的还大。~ + QUEST1-37-3
+  ++ ~博德之门那起投毒事件，得谢你？~ + QUEST1-37-3
+  ++ ~你以毒害、折磨绝望的人为业，还被称为“有效率”？~ + QUEST1-37-4
 
 CHAIN C0AASCL QUEST1-37-3
-~Indeed. You could say I am indirectly to blame for some of your suffering in your past ventures, <CHARNAME> of Candlekeep, and for that, you have my sincere apology. It was never my intent for my talents as an apothecary to be used in such a matter.~
-= ~The loss of my former apprentice was regrettable, but I understood what became of him was likely inevitable when he abandoned his studies to train under the Night Knives. Had I taken him away from Sembia sooner, things could have been different...~
-= ~But that is not what you are here for, is it? Those past conflicts mean nothing to what you are truly seeking now.~
+~确实。你可以说，你过往冒险中某些苦头，间接该怪我，烛堡的<CHARNAME>，为此我诚挚道歉。我从没想过我药师的本事会被用于这种事。~
+= ~失去旧门徒固然可惜，可当初他放弃学业、投到夜刀门下时，我就明白他的结局多半无可避免。若我早些把他从森比亚带走，事情也许不同……~
+= ~可你来此不是为了这个，对吧？那些旧日冲突对你现在真正追寻的毫无意义。~
 EXTERN C0AASCL QUEST1-37-4
 
 CHAIN C0AASCL QUEST1-37-4
-~What you see before you no doubt seems an atrocity. I do not blame you. Few have the resolve to see past the macabre side of scientific healing. It is why I prefer to spare this sight to those who have cause to care for the treated.~
-== C0AQDAD ~H—help... me...~
-== C0AURA2J IF ~InParty("C0Aura")~ THEN ~You...~
-== C0AASCL ~No doubt you view me as the enemy. That is logical. It is likely we must come to conflict, but before that comes to pass, I would request that I share my perspective.~
+~你眼前所见无疑像一场暴行。我不怪你。极少有人有决心看穿科学疗愈那阴森的一面。所以我才宁可不让那些该被关怀的受治者之外的人看见这番景象。~
+== C0AQDAD ~救……救我……~
+== C0AURA2J IF ~InParty("C0Aura")~ THEN ~你……~
+== C0AASCL ~你无疑把我当敌人。这合乎逻辑。我们大概难免一战，但在那之前，我请求让我说说我的看法。~
 END
-  ++ ~What reason could you possibly give to justify your actions?~ + QUEST1-37-5
-  ++ ~Fine. Explain yourself.~ + QUEST1-37-5
-  + ~InParty("C0Aura")~ + ~I have no interest in hearing your explanation. Stand down, or defend yourself.~ EXTERN C0AURA2J QUEST1-37-6
+  ++ ~你能给出什么理由为你的行为辩护？~ + QUEST1-37-5
+  ++ ~好。你解释吧。~ + QUEST1-37-5
+  + ~InParty("C0Aura")~ + ~我没兴趣听你解释。投降，否则自卫吧。~ EXTERN C0AURA2J QUEST1-37-6
 
 CHAIN C0AASCL QUEST1-37-5
-~I hold no intentions of understating the weight of my deeds. Indeed, I have indulged in practices which any reasonable man would deem unethical and heartless. My attempts and failures have led to suffering I could not hope to undo. But I do so with the intention of overcoming a foe which has plagued we mortals for as long as history can remember.~
-== C0AURA2J IF ~InParty("C0Aura")~ THEN ~Overcoming... a foe? What do you...~
-== C0AASCL ~Disease, the harbinger of suffering and death. Those who study the natural order claim it, like many things, is a necessary aspect of life, yet do we not consider the mission to eradicate it truly righteous and just?~
-== CERNDJ IF ~InParty("CERND")~ THEN ~Nature is often deemed unkind, yet it is the trials that the ailing must suffer that lead to greater fortitude in those. You see only a piece of the whole, doctor, and thus regardless of your intent, you are misguided.~
-== C0AASCL ~I have travelled far and wide to learn all there is of healing, of the mortal body and the natural forces that may heal or harm it... or in some cases, both. There is a saying I have learned from Shou healers... "to fight poison with poison", so to speak, and make use of that which harms as a weapon against harm itself.~
-== C0AASCL ~Though I have committed worse acts than others of my path, I have done so because the accepted methods are insufficient for the purposes of truly combating the suffering that disease has inflicted upon those undeserving. As I know it, my greatest fault has not been the deliberate pain I have inflicted for the sake of my research, but my failure.~
-== C0AQDAD ~Nn...ugh...~
-== C0AASCL ~...Too many are given up for lost due to the inadequacy of those who claim to understand healing. My desire is to save them. No matter the cost that must be paid.~
+~我无意轻描淡写我所作所为的分量。确实，我沉溺于任何通情达理之人都会视为不道德、无情的做法。我的尝试与失败造成了无法指望挽回的苦。可我这样做，是为了战胜一个自历史可追溯以来一直折磨我们凡人的敌人。~
+== C0AURA2J IF ~InParty("C0Aura")~ THEN ~战胜……一个敌人？你指……~
+== C0AASCL ~疾病，苦难与死亡的先驱。研究自然秩序的人声称它像许多事一样，是生命必要的部分，可我们难道不认为根除它的使命才是真正正义公道的吗？~
+== CERNDJ IF ~InParty("CERND")~ THEN ~自然常被认为冷酷，可正是病患必须承受的试炼，让人获得更大的坚韧。医生，你只看见整体的一角，所以不管你的意图如何，你都走错了。~
+== C0AASCL ~我远行四方，学尽疗愈之道、凡人之躯的奥秘，以及能治愈或伤害它的自然之力……有时两者兼有。我从守龙医者那儿学到一句谚语……所谓“以毒攻毒”，把有害之物当作武器，去对抗伤害本身。~
+== C0AASCL ~我虽比同道中人犯下更糟的行径，可那是因为公认的方法不足以真正对抗疾病加诸不该受苦之人的苦难。据我所知，我最大的过错不是为研究而故意施加的痛苦，而是我的失败。~
+== C0AQDAD ~嗯……呃……~
+== C0AASCL ~……太多人因为那些自称懂疗愈之人的无能而被放弃。我的愿望是救他们。不管要付什么代价。~
 END
-  ++ ~The wish to find ways to save others is admirable, but it doesn't justify the suffering you've caused in the process.~ + QUEST1-37-7
-  ++ ~Is that how you absolve yourself? Even when you fail to save the people you've hurt yourself with your experimentation?~ + QUEST1-37-7
-  ++ ~No matter what you say, you're still a criminal, and I plan to treat you as such.~ + QUEST1-37-7
+  ++ ~想找到救人的办法值得敬佩，可这不能为你过程中造成的苦开脱。~ + QUEST1-37-7
+  ++ ~你就这样自我开脱？哪怕你用自己的实验伤了人、又救不回来时？~ + QUEST1-37-7
+  ++ ~不管你说什么，你仍是罪人，我打算照样处置你。~ + QUEST1-37-7
 
 CHAIN C0AURA2J QUEST1-37-6
-~W—wait, <CHARNAME>. I... want to hear what he has to say. I know his experiments are completely wrong, but I don't believe him to be the sort to do it without reason. I want to know why he did this, even if it doesn't change what we have to do.~
+~等——等等，<CHARNAME>。我……想听他说。我知道他的实验完全错了，可我不信他是那种无缘无故这么做的人。我想知道他为什么这样，哪怕这改变不了我们必须做的事。~
 EXTERN C0AASCL QUEST1-37-5
 
 CHAIN C0AASCL QUEST1-37-7
-~You speak of my involvement with Titan. It is true... the extremist Lantanese faction, Interitus, came to me with an offer upon learning of my association with professor Caridius. They hoped that my knowledge, along with their resources, would be the key to perfecting Titan into a beneficial compound that would provide all of its virtues, and none of its flaws.~
-= ~A just man would have chosen to expose their plots. But I am a doctor, and even more a researcher. My duty is to advance the field of healing so that it may benefit mankind beyond my lifetime. In the end, I chose to assist in their research under the hopes that something good would come of what they had to offer, while saving as many lives as I could from their test subjects.~
-= ~Though you may see it as otherwise, the purpose of Titan, and the experiments that preceded such a difficult project, has never been to harm or inflict death. With his original formula, Caridius attempted to turn the pinnacle of the mortal body from theory to reality, but his efforts had resulted in nothing but failure, despite his many years of experience.~
-= ~I do not mean to disparage his efforts. As a fellow researcher, I truly sympathize with the good professor's plight. He wished to create a formula which would allow the average person to exceed their limits, and eliminate all flaws and defects that plague the unfortunate, whose lives are cut unfairly short by the cruelty of the natural world, and the limits of the body.~
-= ~If it were to succeed, the future... the lives of many... the suffering you see in the current state of the Realms would seem a pittance, by comparison.~
-= ~My logic may abhor you, and rightfully so. But for better or worse, I have long distanced myself from standard conventions of morality, so that what I hope to truly achieve may yet be accomplished.~
+~你说的是我跟泰坦的牵连。这是真的……兰坦极端派系因特里图斯得知我跟卡里迪乌斯教授的关系后，来找我提出合作。他们希望我的知识，加上他们的资源，能成为把泰坦完善成有益调配物的关键——保留它一切长处，去掉一切缺陷。~
+= ~正直之人会选择揭发他们的阴谋。可我是医生，更是研究者。我的职责是推进疗愈之术，让它在我身后仍能造福人类。最终，我选择协助他们的研究，希望他们提供的东西能结出善果，同时尽量从他们的试验对象手里多救些命。~
+= ~你也许看法不同，可泰坦以及这艰难项目之前的实验，目的从不是伤害或致死。卡里迪乌斯用他最初的配方，试图把凡人身体的极致从理论变为现实，可尽管他经验丰富，努力只落得失败。~
+= ~我无意贬低他的努力。身为同道研究者，我真心同情这位好教授的困境。他想造一份配方，让普通人超越极限，消除一切折磨不幸者的缺陷与瑕疵——那些被自然界的残酷与身体的极限不公地截短了生命的人。~
+= ~若能成功，那未来……许多人的性命……相比之下，你在诸国度现状里见到的苦都只算微不足道。~
+= ~我的逻辑也许令你憎恶，理应如此。可不管好坏，我早已远离常俗的道德规范，好让我真正希望成就的事得以完成。~
 END
-  ++ ~Do you think this explanation is enough to convince me to spare you?~ + QUEST1-37-8
-  ++ ~That's enough. Nothing you say will change the fact that you must be stopped.~ + QUEST1-37-8
-  ++ ~Get to the point.~ + QUEST1-37-9
+  ++ ~你觉得这解释够让我放过你吗？~ + QUEST1-37-8
+  ++ ~够了。你说什么都改变不了你必须被阻止的事实。~ + QUEST1-37-8
+  ++ ~说重点。~ + QUEST1-37-9
 
 CHAIN C0AASCL QUEST1-37-8
-~I do not expect to convince you for the sake of my life. But I do ask one thing of you.~
+~我不指望为保命说服你。可我求你一件事。~
 EXTERN C0AASCL QUEST1-37-9
 
 CHAIN C0AASCL QUEST1-37-9
-~This is my one wish—regardless of how you intend to deal with me, I hope that my knowledge and research may be spared. If my own efforts must end today, I do not hope for what I have already accomplished to go to waste.~
-= ~Everything here must serve the purpose in which I built it for, or else all the harm I have done will have been for naught. If you can assure me of this, I will not regret even my own death.~
+~这是我唯一的愿望——不管你打算怎么处置我，我希望我的知识与研究能留下。若我的努力今天必须终结，我不希望我已成就的东西白费。~
+= ~这里的一切必须用于我造它的目的，否则我造成的一切伤害都将成空。你若能向我保证这点，我连自己的死都不会后悔。~
 END
-  ++ ~Your research is tainted with blood. It deserves to be destroyed.~ + QUEST1-37-10
-  ++ ~What happens to your work is none of my business.~ + QUEST1-37-10
-  ++ ~I have to stop you, but I'll respect your last wish.~ + QUEST1-37-11
+  ++ ~你的研究沾着血。它该被毁掉。~ + QUEST1-37-10
+  ++ ~你的工作怎样不关我的事。~ + QUEST1-37-10
+  ++ ~我必须阻止你，可我会尊重你最后的愿望。~ + QUEST1-37-11
 
 CHAIN C0AASCL QUEST1-37-10
-~So be it. Though I abhor taking lives, I have no choice but to defy you for the sake of everything I have built. I will make this as painless as possible.~
+~那就这样吧。我虽厌恶夺命，可为了我建立的一切，我别无选择只能反抗你。我会尽量让它不痛。~
 END
 IF ~!InParty("C0Aura")~ DO ~ReallyForceSpellRES("C0AUSP01",Myself)
 CreateCreatureObjectEffect("MISTPO01","C0ABAM02",Myself)
@@ -1681,7 +1681,7 @@ Enemy()~ EXIT
 IF ~InParty("C0Aura")~ EXTERN C0AURA2J QUEST1-37-12
 
 CHAIN C0AASCL QUEST1-37-11
-~That will do. Let us do what must be done, then.~
+~那就好。那么我们做该做的事吧。~
 END
 IF ~!InParty("C0Aura")~ DO ~ReallyForceSpellRES("C0AUSP01",Myself)
 CreateCreatureObjectEffect("MISTPO01","C0ABAM02",Myself)
@@ -1692,38 +1692,38 @@ Enemy()~ EXIT
 IF ~InParty("C0Aura")~ EXTERN C0AURA2J QUEST1-37-12
 
 CHAIN C0AURA2J QUEST1-37-12
-~Please wait. I just... have one thing to ask you.~
-== C0AASCL ~I am listening.~
-== C0AURA2J ~Just... for how long have you seen things this way, master Asclepios...~
-== C0AURA2J ~...no.~
-== C0AURA2J ~I should refer to you as... Asclepios Cohval, Grand Alchemist of Porthia, founder of the Twenty-Seven Theories of Alchymia. You are regarded as one of the greatest modern scholars of medicine and herblore within the Realms. I believed you left Halruaa due to simple ideological differences with your magisters... now I see that it's far more than that.~
-== C0AASCL ~It seems that you have read my old works, and know a little of my past, Aurelia Glimmershine.~
-== C0AURA2J ~I respect your works as a physician. Despite what you have done, I... still wouldn't know as much as I do now of medicine if not for your research.~
-== C0AASCL ~...~
-== C0AASCL ~Yes. Like professor Caridius, I was exiled from my homeland of Halruaa for my unethical practices. Yet while the professor regretted his actions and chose his fate of his own accord, I have never deviated from my path despite the opposition. Knowing the truth, he must be disappointed... as well as you.~
-== C0AURA2J ~I believe that everything you've said is the truth. But I could never follow that same path. I... can't help but pity you for whatever made you fall this low.~
-== C0AASCL ~No. You may feel disappointment, but... you have no right to feel pity for me.~
-== C0AURA2J ~What?~
-== C0AASCL ~You have yet to understand that is you who are worthy of pity, Aurelia... despite your talent, you are bound to the same limitations which once held me, and led me to failure and disgrace. Those without the gift have no capacity to understand, yet you... you lack the strength to accept what you see, and use that which is within your grasp.~
-== C0AURA2J ~No... no, I only—~
-== C0AASCL ~Your state betrays your true thoughts. The subtle, yet panicked breathing, the whitening of your knuckles as you grasp onto your bow... you consider what I have done as being *wrong*, yet you cannot see an alternate path forwards which would accomplish what you hope for, one that is truly *right*.~
-== C0AASCL ~You lack the argument to truly deny my perspective as wrong, just as you lack the determination to properly turn your weapon against me to prove it. That is your failing, one which will deny you any progress in your path for as long as you carry that weight on your shoulders.~
+~请等等。我只是……有件事要问你。~
+== C0AASCL ~我在听。~
+== C0AURA2J ~只是……阿斯克勒庇俄斯大师，你从什么时候起这样看事情的……~
+== C0AURA2J ~……不。~
+== C0AURA2J ~我该称你为……阿斯克勒庇俄斯·科瓦尔，波西亚的大炼金师，《炼金术二十七论》的创立者。你被视为诸国度当今最伟大的医药与草药学者之一。我以为你离开哈鲁阿只是跟你那些法师在理念上不合……现在我看出远不止如此。~
+== C0AASCL ~看来你读过我的旧作，对我过去也略知一二，奥瑞莉亚·格利默夏恩。~
+== C0AURA2J ~我敬重你身为医者的著作。不管你做了什么，我……若不是你的研究，我不会像现在这样懂医药。~
+== C0AASCL ~……~
+== C0AASCL ~是。像卡里迪乌斯教授一样，我因不道德的做法被逐出故乡哈鲁阿。可教授悔恨自己的行为、自愿选择命运，而我从没因反对而偏离我的路。知道真相的他一定很失望……你也是。~
+== C0AURA2J ~我相信你说的都是真话。可我永远没法走上同一条路。我……忍不住为你落到这么低而可怜你，不管是什么让你如此。~
+== C0AASCL ~不。你可以失望，可……你无权可怜我。~
+== C0AURA2J ~什么？~
+== C0AASCL ~你还不明白，值得可怜的是你，奥瑞莉亚……尽管你有才华，你仍被曾束缚我、令我失败蒙羞的同样极限困住。没有天赋的人无从理解，可你……你缺乏力量去接受你所见的，去用你手中之物。~
+== C0AURA2J ~不……不，我只是——~
+== C0AASCL ~你的状态暴露了你的真心。那细微却惊慌的呼吸，你握弓时泛白的指节……你认为我所做的*错了*，可你看不到一条能达成你所愿的、真正*对*的前路。~
+== C0AASCL ~你缺乏论据真正否定我的看法，正如你缺乏决心真正把武器转向我来证明它。这就是你的缺陷，只要你还把那份重量扛在肩上，它就让你在自己的路上寸步难行。~
 END
-  ++ ~Shut up. Aura understands the weight of responsibility as much as knowledge. It's a far heavier burden than you bear, Asclepios.~ EXTERN C0AURA2J QUEST1-37-13
-  ++ ~We don't need to debate you. Your evils are enough cause to see you dead today.~ EXTERN C0AURA2J QUEST1-37-14
-  ++ ~Are you done talking yet? You might be able to scare Aura with your blather, but I'm not so easily defeated by empty words.~ EXTERN C0AURA2J QUEST1-37-14
+  ++ ~闭嘴。奥拉对责任的分量、对知识的理解都不比你少。她背负的担子比你重得多，阿斯克勒庇俄斯。~ EXTERN C0AURA2J QUEST1-37-13
+  ++ ~我们没必要跟你辩论。你的恶行已足够让我们今天送你死。~ EXTERN C0AURA2J QUEST1-37-14
+  ++ ~你话说完没？你那些废话也许能吓到奥拉，可我不会被空话这么轻易打倒。~ EXTERN C0AURA2J QUEST1-37-14
 
 CHAIN C0AURA2J QUEST1-37-13
-~Thank you, <CHARNAME>, but I'm fine. I just needed a reminder... thank you for encouraging me.~
+~谢谢，<CHARNAME>，可我没事。我只是需要被提醒一下……谢谢你鼓励我。~
 EXTERN C0AURA2J QUEST1-37-14
 
 CHAIN C0AURA2J QUEST1-37-14
-~...~
-== C0AURA2J ~I can't deny that what you're saying is true. I struggle too much with finding the balance between my desire for knowledge and doing what's right... it's for that reason that, no matter how hard I try, I may never reach what those like you, or professor Caridius, or the greatest minds of the Realms could accomplish.~
-== C0AURA2J ~And... I know that not being able to achieve what I'm truly capable of does haunt me deep inside. Maybe I've reached my limit as a researcher, but... I can't stop trying. I can't let all those who are in doubt like me fall into a path like yours.~
-== C0AASCL ~I see.~
-== C0AURA2J ~Forgive me, master Asclepios. It's not that I can't understand your reasoning. I know it's what you believe, because every other path has failed you. But I don't believe that yet. And... that's why I have to stop you!~
-== C0AASCL ~So be it. Though our roads differ, I can admire your conviction. But it is because of such differences that we must come into conflict here. I truly regret this, but it must be done.~
+~……~
+== C0AURA2J ~我不能否认你说的是真的。我在求知与行正事之间找平衡，挣得太苦……正因如此，不管我怎么努力，我也许永远达不到像你、像卡里迪乌斯教授，或诸国度最伟大头脑所能成就的。~
+== C0AURA2J ~而且……我知道达不到自己真正能做到的事，一直在内心深处折磨我。也许我作为研究者已到极限，可……我不能停止尝试。我不能让那些像我一样心存疑惑的人落入你这样的路。~
+== C0AASCL ~我明白了。~
+== C0AURA2J ~原谅我，阿斯克勒庇俄斯大师。不是我不懂你的道理。我知道那是你所信的，因为别的路都让你失败了。可我还不能信。而……这就是我必须阻止你的原因！~
+== C0AASCL ~那就这样吧。我们的路虽不同，我却能敬佩你的信念。可正因这样的不同，我们才必须在此一战。我真心遗憾，但不得不做。~
 DO ~ReallyForceSpellRES("C0AUSP01",Myself)
 CreateCreatureObjectEffect("MISTPO01","C0ABAM02",Myself)
 CreateCreatureObjectEffect("MISTPO01","C0ABAM02",Myself)
@@ -1732,24 +1732,24 @@ CreateCreatureObjectEffect("MISTPO01","C0ABAM02",Myself)
 Enemy()~ EXIT
 
 CHAIN IF WEIGHT #-1 ~Global("Defeat","LOCALS",1)~ THEN C0AASCL QUEST1-DEFEAT
-~Ngh... so it seems the tales of your accomplishment are nothing less than the truth. It was clearly an act of hubris to consider victory in my circumstances.~
-= ~My specialty is in working with life, not death. Very well... it is clear that resistance is futile. I surrender.~
+~呃……看来关于你成就的传说一点不假。在我这处境里还想着取胜，显然是狂妄。~
+= ~我的专长是跟生命打交道，不是死亡。好……显然抵抗无用。我投降。~
 END
-  + ~!Dead("C0AQDAD")~ + ~Good. You'll be brought to the authorities, and get the justice you deserve.~ + QUEST1-DEFEAT-1
-  + ~Dead("C0AQDAD")~ + ~Good. You'll be brought to the authorities, and get the justice you deserve.~ + QUEST1-DEFEAT-2
-  + ~!Dead("C0AQDAD")~ + ~I have no interest in sparing you. Prepare to die!~ + QUEST1-DEFEAT-1
-  + ~Dead("C0AQDAD")~ + ~I have no interest in sparing you. Prepare to die!~ + QUEST1-DEFEAT-2
+  + ~!Dead("C0AQDAD")~ + ~好。你会被交给当局，得到你应得的审判。~ + QUEST1-DEFEAT-1
+  + ~Dead("C0AQDAD")~ + ~好。你会被交给当局，得到你应得的审判。~ + QUEST1-DEFEAT-2
+  + ~!Dead("C0AQDAD")~ + ~我没兴趣饶你。准备死吧！~ + QUEST1-DEFEAT-1
+  + ~Dead("C0AQDAD")~ + ~我没兴趣饶你。准备死吧！~ + QUEST1-DEFEAT-2
 
 CHAIN C0AASCL QUEST1-DEFEAT-1
-~Do what you will. But you should not forget about the condition of the patient next to us. It seems I can no longer treat him as is needed, but another must take up the task in my stead.~
+~随你。可你不该忘了我们旁边这位病人的状况。看来我已无法按需医治他，得由别人接手这活。~
 EXTERN C0AASCL QUEST1-DEFEAT-3
 
 CHAIN C0AASCL QUEST1-DEFEAT-2
-~Do what you will. I only regret that it appears though the patient paid the price for our meaningless conflict. It is not what he deserved.~
+~随你。我只遗憾看来这位病人为我们这场无意义的冲突付了代价。这不是他该得的。~
 EXTERN C0AASCL QUEST1-DEFEAT-3
 
 CHAIN C0AASCL QUEST1-DEFEAT-3
-~How tragic that it must all end this way...~
+~一切竟要这样收场，多可悲……~
 END
 IF ~!InParty("C0Aura")~ DO ~ClearAllActions()
     StartCutSceneMode()
@@ -1757,26 +1757,26 @@ IF ~!InParty("C0Aura")~ DO ~ClearAllActions()
 IF ~InParty("C0Aura")~ EXTERN C0AURA2J QUEST1-DEFEAT-4
 
 CHAIN C0AURA2J QUEST1-DEFEAT-4
-~Wait...! <CHARNAME>, what is that...?!~
+~等等……！<CHARNAME>，那是什么……？！~
 DO ~ClearAllActions()
     StartCutSceneMode()
     StartCutSceneEx("C0ACUT12",TRUE)~ EXIT
 
 CHAIN IF WEIGHT #-1 ~Global("C0AuraBG2Quest1","GLOBAL",39)~ THEN C0AURA2J QUEST1-39
-~*cough*... *cough*... huff... ugh... oh, what an overwhelming incapacitant... it still hurts to breathe in...~
+~*咳*……*咳*……呼……呃……哦，多么压倒性的失能剂……吸进去还疼……~
 DO ~SetGlobal("C0AuraBG2Quest1","GLOBAL",40)~
-= ~<CHARNAME>... <CHARNAME>, are you awake?~
+= ~<CHARNAME>……<CHARNAME>，你醒着吗？~
 END
-  ++ ~I... am, yes. My vision's still blurry, though.~ + QUEST1-39-1
-  ++ ~Never mind that. What happened to Asclepios?~ + QUEST1-39-2
+  ++ ~我……醒着，是。可我视线还在模糊。~ + QUEST1-39-1
+  ++ ~先别管那个。阿斯克勒庇俄斯怎么了？~ + QUEST1-39-2
 
 CHAIN C0AURA2J QUEST1-39-1
-~It should be fine... it looks like whatever that was, it wasn't fatally poisonous. There shouldn't be any lasting effects... but I'll do a proper checkup later when I have a chance. As for Asclepios, he...~
+~应该没事……看来不管那是什么，都不是致命毒。不该有持久影响……不过我得空再好好检查一遍。至于阿斯克勒庇俄斯，他……~
 EXTERN C0AURA2J QUEST1-39-2
 
 CHAIN C0AURA2J QUEST1-39-2
-~He... he got away. I'm still not sure what happened... that phantom just appeared when we had him subdued, and did... something. The last thing I remember was seeing him fade into the mist that we were surrounded in.~
-= ~Never mind that now, though. We're alive, at least. But... the old man... that poor man's father...~
+~他……他跑了。我还不清楚发生了什么……我们制住他时，那幽灵忽然出现，做了……什么。我记得最后看见他消失在包围我们的雾里。~
+= ~现在别管那个了。至少我们活着。可……那位老人……那可怜人的父亲……~
 DO ~ClearAllActions()
     StartCutSceneMode()
     MoveToPoint([583.262])
@@ -1787,247 +1787,247 @@ DO ~ClearAllActions()
 
 CHAIN IF WEIGHT #-1 ~Global("C0AuraBG2Quest1","GLOBAL",40)
 Global("C0AuraBG2Quest1DeadMan","GLOBAL",0)~ THEN C0AURA2J QUEST1-40
-~He's... he's dead.~
+~他……他死了。~
 DO ~SetGlobal("C0AuraBG2Quest1DeadMan","GLOBAL",1)~
-= ~It looks like he was killed during the struggle. I can't believe it... was it the mist that suffocated him to death? Or did we accidentally... no, we couldn't have...~
-= ~We didn't manage to accomplish anything, <CHARNAME>. The person responsible for all this escaped... and there's an innocent man dead in front of us.~
+= ~看来他是在搏斗中死的。我不敢信……是那雾让他窒息而死？还是我们不小心……不，我们不可能……~
+= ~我们什么都没办成，<CHARNAME>。这一切的负责人逃了……而我们面前死了一个无辜的人。~
 END
-  ++ ~I'm sorry. I feel like we failed, too.~ + QUEST1-40-1
-  ++ ~Just another dead body. I'm not too torn up about it.~ + QUEST1-40-1
+  ++ ~对不起。我也觉得我们失败了。~ + QUEST1-40-1
+  ++ ~不过又一具尸体。我没那么难受。~ + QUEST1-40-1
 
 CHAIN C0AURA2J QUEST1-40-1
-~I know we did our best, but... I haven't felt this hopeless in a long time. As though I just hate my lack of strength.~
-== C0AURA2J ~...I wonder... if that's how he felt... for whatever it was that made him feel he needed to go this far...~
-== C0AURA2J ~I want to take a closer look at this man, <CHARNAME>. He must have been suffering from something truly terrible, and I need to know. I have to.~
-== C0AURA2J ~...~
-== C0AURA2J ~Th–this is...~
-== C0AURA2J ~...'Kusoyarou'.~
-== JAHEIRAJ IF ~InParty("JAHEIRA")~ THEN ~This is... a truly horrific blight upon this man's flesh. One which must have amounted to unimaginable pain.~
-== CERNDJ IF ~InParty("CERND")~ THEN ~I have seen such conditions upon the skins of wild beasts in the past. The pain drives them to rage... and that is but the beginning.~
-== EDWINJ IF ~InParty("EDWIN")~ THEN ~Fascinating. The skin is dead and rotting, even as the rest of the man lives... or lived, once.~
-== AERIEJ IF ~InParty("AERIE")~ THEN ~B-Baervan preserve us! The skin... it's as though it's already long dead! How much suffering would this poor man have been though...?~
-== C0AURA2J ~Look, <CHARNAME>. This... discolored, greying and scabrous skin. This is... in Lantan, we know this as 'living petrifaction'—a rare, horrible mutation in which living flesh undergoes a particular necrosis.~
-== C0AURA2J ~First, your skin becomes as though leather... then, gradually, inevitably, it hardens and calluses, resembling bark, and eventually stone... and the process is excruciatingly painful, until you eventually lose all feeling but pain in the affected limbs... as the petrifaction spreads throughout your entire body.~
-== C0AURA2J ~What's worse, it has no known cure. And because it's more akin to a mutation than a disease, even healing magic fails to restore the dying flesh... it's one of the worst ways to suffer. Some resort to flaying their own skin in desperation. Most eventually go mad from the agony.~
-== C0AURA2J ~This is... the first time I've ever seen it. It's... almost like learning the most terrifying monsters in the stories you've been told were real all along.~
-== C0AURA2J ~...~
+~我知道我们尽力了，可……我好久没这么绝望过。就像我恨自己无力。~
+== C0AURA2J ~……我在想……不管是什么让他觉得必须走到这一步，他是不是也这样感觉……~
+== C0AURA2J ~我想仔细看看这个人，<CHARNAME>。他一定受着某种真正可怕的东西折磨，我需要知道。我必须。~
+== C0AURA2J ~……~
+== C0AURA2J ~这——这是……~
+== C0AURA2J ~……“Kusoyarou”。~
+== JAHEIRAJ IF ~InParty("JAHEIRA")~ THEN ~这是……这人肉身上真正骇人的病害。一定造成了难以想象的痛苦。~
+== CERNDJ IF ~InParty("CERND")~ THEN ~我过去在野兽皮上见过这种状况。痛楚逼它们发狂……而那只是开始。~
+== EDWINJ IF ~InParty("EDWIN")~ THEN ~真有意思。皮已死去腐烂，而人其余部分还活着……或者说，曾活着。~
+== AERIEJ IF ~InParty("AERIE")~ THEN ~贝——贝尔凡保佑我们！这皮……就像早已死了很久！这可怜人得受多少苦……？~
+== C0AURA2J ~看，<CHARNAME>。这……变色、发灰、结痂的皮。这是……在兰坦，我们叫它“活石化”——活肉发生某种坏死的罕见可怕变异。~
+== C0AURA2J ~先是你的皮变得像皮革……然后逐渐、不可避免地，它硬化成茧、似树皮，最终似石头……过程痛得钻心，直到受影响肢体除了痛再没别的感觉……石化蔓延全身。~
+== C0AURA2J ~更糟的是，它没有已知的解药。而且因为它更像变异而非疾病，连治疗魔法也无法恢复正在死去的肉……它是最糟的受苦方式之一。有人绝望到剥掉自己的皮。多数人最终被剧痛逼疯。~
+== C0AURA2J ~这是我……第一次见到。几乎就像得知故事里最可怕的怪物原来一直是真的。~
+== C0AURA2J ~……~
 END
-  ++ ~Wait, don't touch it!~ + QUEST1-40-2
-  ++ ~What are you doing?~ + QUEST1-40-3
-  ++ ~Don't get close to me if you plan to touch that.~ + QUEST1-40-3
+  ++ ~等等，别碰它！~ + QUEST1-40-2
+  ++ ~你在干什么？~ + QUEST1-40-3
+  ++ ~你若要碰那个，别靠近我。~ + QUEST1-40-3
 
 CHAIN C0AURA2J QUEST1-40-2
-~It's alright, <CHARNAME>. This condition isn't contagious. I won't... be affected. Not physically.~
+~没事，<CHARNAME>。这状况不传染。我不会……被影响。至少身体上不会。~
 EXTERN C0AURA2J QUEST1-40-3
 
 CHAIN C0AURA2J QUEST1-40-3
-~I... what am I even doing? There's nothing I can do here. Why am I even pretending I can still help?~
-= ~What... what could we have done, <CHARNAME>? Even if he was still alive, even if we had stopped Asclepios... this man would still have been suffering for the rest of his life. I... I don't know...~
+~我……我到底在干什么？我在这儿什么都做不了。我为什么还要假装自己还能帮忙？~
+= ~我们……我们能做什么，<CHARNAME>？就算他还活着，就算我们阻止了阿斯克勒庇俄斯……这人余生仍会受苦。我……我不知道……~
 END
-  ++ ~I don't know either. But it's not our fault.~ + QUEST1-40-4
-  ++ ~Maybe one day there'll be a way to help others like him. But we can't do more harm in the process.~ + QUEST1-40-5
-  ++ ~Just be happy you're not the one who has to deal with this sort of pain.~ + QUEST1-40-6
+  ++ ~我也不知道。可这不是我们的错。~ + QUEST1-40-4
+  ++ ~也许有一天会有办法帮像他这样的人。可我们不能在过程中造成更多伤害。~ + QUEST1-40-5
+  ++ ~高兴点吧，至少不是你摊上这种痛。~ + QUEST1-40-6
 
 CHAIN C0AURA2J QUEST1-40-4
-~Maybe I shouldn't blame anyone, not for something like this. Not even...~
+~也许我不该怪任何人，不为这种事。连……也不该。~
 EXTERN C0AURA2J QUEST1-40-7
 
 CHAIN C0AURA2J QUEST1-40-5
-~What if nobody ever finds a way, <CHARNAME>? What if the only way was...~
+~要是永远没人找到办法呢，<CHARNAME>？要是唯一的办法是……~
 EXTERN C0AURA2J QUEST1-40-7
 
 CHAIN C0AURA2J QUEST1-40-6
-~How can I be happy, <CHARNAME>? How many people have ended up like this, begging to be saved, but...~
+~我怎么能高兴，<CHARNAME>？有多少人落到这地步，求着被救，可……~
 EXTERN C0AURA2J QUEST1-40-7
 
 CHAIN C0AURA2J QUEST1-40-7
-~...just how many have there been, that couldn't be saved? How many before...~
-= ~...I need to get out of here, <CHARNAME>. Let's just... go back. Please.~
+~……究竟有多少人，救不回来？之前有多少……~
+= ~……我得离开这儿，<CHARNAME>。我们就……回去吧。求你。~
 EXIT
 
 CHAIN IF WEIGHT #-1 ~Global("C0AuraBG2Quest1","GLOBAL",40)~ THEN C0AEX1 QUEST1-40
-~That was quite a brush with death, Asclepios. Though you seem not long for the world regardless. It seems I was just a little too late.~
+~这真是与死亡擦肩，阿斯克勒庇俄斯。不过看来你反正也活不久了。我似乎来得稍晚了点。~
 DO ~SetGlobal("C0AuraBG2Quest1","GLOBAL",41)~
-== C0AASCL ~*cough*... *cough*~
-== C0AASCL ~I doubt that. This is but another of the twisted games you play. To see me on the brink of death so that you may offer hope with your own hands.~
-== C0AEX1 ~Hehe... you see through me as always.~
-== C0AASCL ~Unfortunately for you, I have little time to waste here. There is still... *cough cough*~
-== C0AEX1 ~You're going to go back? You'd go to your death, and so soon after I just saved you.~
-== C0AASCL ~I have a patient. My duty is to the ailing.~
-== C0AEX1 ~He's already dead.~
-== C0AASCL ~...~
-== C0AEX1 ~Don't feel responsible. There's no guarantee you would have saved him regardless. Living petrifaction is an agonizing death—a quick end is a form of mercy in itself, don't you think?~
-== C0AASCL ~Enough... I have precious little time left as it is. I do not intend to waste what remains debating our professional ethics with each other.~
-== C0AEX1 ~Fair enough. I believe you owe me something for saving your life, though.~
-== C0AASCL ~The last variant of Titan... so be it. Take it, though I did not expect this apparition of yours to be more than a simple illusion.~
-== C0AEX1 ~Courtesy of a little assistance from a new friend. Those obsolete fools in Interitus may believe otherwise, but magic has its uses.~
-== C0AASCL ~Hmph.~
-== C0AASCL ~It has yet to be perfected, despite my efforts. I regret that... *cough* I will not live to see that day of accomplishment.~
-== C0AEX1 ~Oh...? You're already resigned to death, my friend? And after I spared the effort to make an appearance sooner than expected, just to help you.~
-== C0AASCL ~Is it my life you value? Or your own that you fear for, once you can no longer benefit from my research?~
-== C0AEX1 ~How little you think of me, Asclepios. Yes, once you are gone... I expect I won't live for much longer either. Even I cannot deny your understanding of medicine and healing far exceeds mine. But now that you have come into conflict with 'her', I will not need to continue to cheat death. I have almost prepared as far as I need to.~
-== C0AASCL ~Your petty goals... are not my affair. In certain respects, you have already lost to the one you hate so greatly.~
-== C0AEX1 ~Is that so? I did not expect you to think of me so poorly, given you deigned to associate with me at all?~
-== C0AASCL ~Your mind is undeniably brilliant. With the apt resources, even I could not compare to the your sheer capacity for knowledge and resourcefulness.~
-== C0AASCL ~But you lack the quality which makes a true researcher—a vision for the future, and subsequently, something to truly strive for. In that, you cannot match her... Overseer.~
-== C0AEX1 ~...~
-== C0AEX1 ~Oh my, dear Asclepios. I'm hurt. All this time, I believed we are alike.~
-== C0AASCL ~I believe there is nothing else to be said. I cannot help you any further... and whether you can see the truth for yourself depends on your own ability now. Though I cannot help but doubt your chance of success.~
-== C0AEX1 ~It's truly a shame, Asclepios. Even though I'm disappointed in you... I've liked our association for the past few years. And if you asked me to right now... I would still save you, out of simple respect for you as a scientist.~
-== C0AASCL ~I decline.~
-== C0AEX1 ~As you wish.~
-== C0AEX1 ~I'll leave you to die in peace.~
+== C0AASCL ~*咳*……*咳*~
+== C0AASCL ~我不信。这不过是你玩的又一场扭曲游戏。看我濒死，好让你亲手递上希望。~
+== C0AEX1 ~嘿嘿……你总是一眼看穿我。~
+== C0AASCL ~可惜对你来说，我没多少时间浪费在这儿。还有……*咳咳*~
+== C0AEX1 ~你要回去？你这是去送死，而且我刚救了你。~
+== C0AASCL ~我有个病人。我的职责在病患身上。~
+== C0AEX1 ~他已经死了。~
+== C0AASCL ~……~
+== C0AEX1 ~别觉得有责任。不管怎样你也未必救得了他。活石化是痛苦的死法——快些了结本身就算一种慈悲，你不觉得吗？~
+== C0AASCL ~够了……我剩下的时间本就少。我无意把它浪费在互相辩论职业伦理上。~
+== C0AEX1 ~行。不过我相信你欠我点什么，为救你的命。~
+== C0AASCL ~泰坦最后的变体……那就这样吧。拿去吧，虽然我没料到你这幽灵竟不只是一场简单的幻象。~
+== C0AEX1 ~承蒙一位新朋友略施援手。因特里图斯里那些过时的蠢货也许另有看法，可魔法自有其用。~
+== C0AASCL ~哼。~
+== C0AASCL ~尽管我努力，它仍未完善。我遗憾……*咳* 我活不到功成那天了。~
+== C0AEX1 ~哦……？你已经认命等死了，朋友？我还是特意比预想更早现身来帮你呢。~
+== C0AASCL ~你珍视的是我的命？还是等我再也供你利用研究时，你怕的是自己的命？~
+== C0AEX1 ~你把我想得真轻，阿斯克勒庇俄斯。是，你一死……我想我也活不了多久了。连我都没法否认，你对医药与疗愈的理解远胜于我。可既然你已跟“她”起了冲突，我就不需要再继续欺瞒死亡了。我差不多已备到所需之处。~
+== C0AASCL ~你那点小算盘……不关我的事。在某些方面，你早已输给了你如此憎恨的那人。~
+== C0AEX1 ~是吗？你既肯跟我来往，我倒没料到你把我看得这么低？~
+== C0AASCL ~你的头脑无疑出众。若有合适资源，连我在知识与机变上都比不过你。~
+== C0AASCL ~可你缺少真正研究者所需的那种品质——对未来的远见，以及随之而来的、真正值得奋力追求的东西。这一点上，你比不上她……监察官。~
+== C0AEX1 ~……~
+== C0AEX1 ~哎呀，亲爱的阿斯克勒庇俄斯。我受伤了。我一直以为我们很像。~
+== C0AASCL ~我相信没什么好说的了。我没法再帮你了……而你能不能自己看清真相，如今全看你自己的本事。不过我忍不住怀疑你成功的可能。~
+== C0AEX1 ~真可惜，阿斯克勒庇俄斯。虽然我对你失望……这几年的交往我还是喜欢的。你若此刻开口，我仍会救你，纯粹出于对一位科学家的尊重。~
+== C0AASCL ~我拒绝。~
+== C0AEX1 ~如你所愿。~
+== C0AEX1 ~我会让你安静地死。~
 DO ~ClearAllActions()
   	StartCutSceneMode()
 	StartCutScene("c0acut14")~ EXIT
 
 CHAIN IF WEIGHT #-1 ~Global("C0AuraBG2Quest1","GLOBAL",41)~ THEN C0AASCL QUEST1-41
-~Reese?~ [C0BLANK]
+~里斯？~ [C0BLANK]
 DO ~SetGlobal("C0AuraBG2Quest1","GLOBAL",42)~
-== C0AREES ~...~
-== C0AASCL ~I see... so that's how it is. Ha. *cough* Haha...~
-== C0AASCL ~...Very well, then, Make it a quick one, at least. Right here.~
+== C0AREES ~……~
+== C0AASCL ~我明白了……原来如此。哈。*咳* 哈哈……~
+== C0AASCL ~……好，那么，至少让我快些。就这儿。~
 DO ~ClearAllActions()
   	StartCutSceneMode()
 	StartCutScene("c0acut15")~ EXIT
 
 CHAIN IF WEIGHT #-1 ~Global("C0AuraBG2Quest1","GLOBAL",42)~ THEN C0AREES QUEST1-42
-~...~ [C0BLANK]
-= ~You didn't have to come and see this, you know.~
+~……~ [C0BLANK]
+= ~你其实不必来看这个的。~
 DO ~SetGlobal("C0AuraBG2Quest1","GLOBAL",43)
 	ClearAllActions()
   	StartCutSceneMode()
 	StartCutScene("c0acut16")~ EXIT
 
 CHAIN IF WEIGHT #-1 ~Global("C0AuraBG2Quest1","GLOBAL",43)~ THEN C0AREES QUEST1-43
-~Gil.~ [C0BLANK]
+~吉尔。~ [C0BLANK]
 DO ~SetGlobal("C0AuraBG2Quest1","GLOBAL",44)~
-== C0AASCS ~I had to... make sure the mission was complete.~
-== C0AREES ~Mmm.~
-== C0AREES ~I should by reason tell you not to get attached. But... I won't say anything this time.~
-== C0AASCS ~...~
-== C0AREES ~Thinking of going back home after this? Your assignment is over, no more need to dye your hair or fake your accent every day...~
-== C0AASCS ~I... I think I'll stay for a bit longer. Asclepios did... teach me many things, despite whatever else he's done. Rather than letting these skills go to waste, I'd rather they be of use in helping others... like he truly believed in, once.~
-== C0AREES ~*nod*~
-== C0AREES ~That's not too bad of an idea, either. You won't have to take any more missions like this for a while.~
-== C0AREES ~We'll go back to our places, then. Keep up the act of being acquaintances... and watch for the Interitus's movements, if we can keep track of the bastards.~
-== C0AREES ~And don't worry about to the report to the captain... I'll write it to her myself.~
-== C0AASCS ~Reese...~
-== C0AREES ~Hmm?~
-== C0AASCS ~I was wondering. Now that we've gotten to the bottom of this... you're glad it wasn't her, aren't you?~
-== C0AREES ~*sigh* Well... I'm relieved, at least, I wouldn't have had to write *that* report.~
-== C0AREES ~And... she has a good heart. It's our duty to make sure people like her remain safe.~
+== C0AASCS ~我得……确认任务完成。~
+== C0AREES ~嗯。~
+== C0AREES ~按道理我该告诉你别动感情。可……这次我什么也不说。~
+== C0AASCS ~……~
+== C0AREES ~之后打算回家吗？你的任务结束了，不用再每天染头发、装口音……~
+== C0AASCS ~我……我想再待一阵。阿斯克勒庇俄斯确实……教了我许多，不管他还做过什么。与其让这些本事白费，我宁愿用它们去帮别人……就像他曾真心相信的那样。~
+== C0AREES ~*点头*~
+== C0AREES ~这也算不坏的主意。你有一阵不用再接这种任务了。~
+== C0AREES ~那我们就各回各位。继续装熟人……若能跟上因特里图斯那帮混蛋的动向，就盯着。~
+== C0AREES ~报告给队长的事别担心……我自己写给她。~
+== C0AASCS ~里斯……~
+== C0AREES ~嗯？~
+== C0AASCS ~我一直在想。既然我们把这事查清了……你庆幸不是她，对吧？~
+== C0AREES ~*叹气* 嗯……至少我松了口气，不必写*那份*报告。~
+== C0AREES ~而且……她心肠好。确保像她这样的人平安，是我们的职责。~
 DO ~ClearAllActions()
   	StartCutSceneMode()
 	StartCutScene("c0acut17")~ EXIT
 
 CHAIN IF WEIGHT #-1 ~Global("C0AuraBG2Quest1","GLOBAL",44)~ THEN C0AMAGN QUEST1-44
-~I see... what a terrible affair this all has been.~ [C0BLANK]
+~我明白了……这一整件事真可怕。~ [C0BLANK]
 DO ~SetGlobal("C0AuraBG2Quest1","GLOBAL",45) AddExperienceParty(50000)~
-= ~To think that the fruits of my past research could have caused such harm... though I had no deliberate part in the details of what has occurred, it seems my actions—or perhaps inactions—have left me with much to make up for.~
-= ~Reese has gone to deliver the bad news of the poor, innocent young man's father. And I will dedicate my study in the forseeable future to producing a cure for the afflictions caused by this... 'Titan'. Perhaps some lives may yet be saved.~
-= ~As for Asclepios... he managed to escape, you said?~
+= ~想不到我过去研究的成果竟能造成这样的伤害……虽然事情的具体经过我并未有意参与，可看来我的作为——或者说不作为——让我有许多要弥补的。~
+= ~里斯已去把那可怜无辜年轻人的父亲之死的坏消息告诉他。接下来可预见的日子里，我会专心研究，为这“泰坦”造成的病症制出解药。也许还能救下些人命。~
+= ~至于阿斯克勒庇俄斯……你说他逃了？~
 END
-  ++ ~Unfortunately, he did. But he was badly injured from the battle.~ + QUEST1-44-1
-  ++ ~You sound unusually forlorn, considering what he's done.~ + QUEST1-44-2
+  ++ ~不幸，是逃了。可他在战斗中受了重伤。~ + QUEST1-44-1
+  ++ ~考虑到他做的事，你听着异常怅然。~ + QUEST1-44-2
 
 CHAIN C0AMAGN QUEST1-44-1
-~He will not be able to leave the city, I imagine. His name has already been brought to the enforcers, and they will be watchful for his presence. And the law will not be merciful on him.~
+~我想他离不开这城了。他的名字已报给执法者，他们会盯着他的行踪。法律对他不会宽厚。~
 EXTERN C0AMAGN QUEST1-44-3
 
 CHAIN C0AMAGN QUEST1-44-2
-~I cannot help it, my <GIRLBOY>... if you had dedicated your life to research as I have, you may understand...~
+~我忍不住，我的<GIRLBOY>……你若像我一样把一生献给研究，也许能明白……~
 EXTERN C0AMAGN QUEST1-44-3
 
 CHAIN C0AMAGN QUEST1-44-3
-~I cannot justify the outcome of what he's done, of course. But I have no doubt he was truly a dedicated researcher with a mind few could hope to compare against.~
-= ~Once the tales of all he has done begins to spread, he will no doubt be condemned as a madman, a villain... not unrightfully so, I may add. But that is all the world will remember him as, nothing more.~
-= ~*sigh* Truly a pity...~
+~当然，我无法为他所作所为的结果开脱。可我无疑他真是个专心致志的研究者，头脑少有几人能比。~
+= ~一旦他所作所为的传闻传开，他无疑会被斥为疯子、恶人……我也得说，并非不该。可世人记住他的就只会是这个，再无别的。~
+= ~*叹气* 真可惜……~
 END
 IF ~InParty("C0Aura")~ EXTERN C0AURA2J QUEST1-44-4A
-  ++ ~You knew him better than most. Do you understand what drove him at all?~ + QUEST1-44-4
-  ++ ~It seemed like he had a true desire to heal others. Why would he turn to such cruel methods?~ + QUEST1-44-4
-  ++ ~My part in this is done. The rest of the work in handling this case is up to you.~ + QUEST1-44-6
+  ++ ~你比多数人更了解他。你究竟明白是什么驱使他吗？~ + QUEST1-44-4
+  ++ ~他似乎真心想治病救人。为什么转向这么残忍的手段？~ + QUEST1-44-4
+  ++ ~我该做的部分做完了。处理这案子剩下的工作交给你们。~ + QUEST1-44-6
 
 CHAIN C0AURA2J QUEST1-44-4A
-~Professor, I still don't understand... how could someone so brilliant, and so driven to heal people... what could lead someone to become like he did?~
+~教授，我还是不明白……一个这么出众、这么想救人的人……什么能让人变成他那样？~
 EXTERN C0AMAGN QUEST1-44-4
 
 CHAIN C0AMAGN QUEST1-44-4
-~I cannot presume to truly understand his mind, of course. But he and I did spend many evenings sitting at this table, talking about our theories and philosophies as men of science and knowledge... and so my guesses may be more accurate than most, at least.~
-= ~He was never very forthright about his personal history, but under the influence of a few glasses of gin, I have learned a few things. Asclepios Cohval was once one of Halruaa's most respected scholars, a true paragon. But... there are always consequences of reaching such heights.~
-= ~Many years ago, Asclepios's beloved daughter fell victim to a never-before seen malady, one which naturally had no known cure at the time. Even for all his knowledge, he was helpless to serve who he cared for the most, and as the greatest in his field, naturally none other could succeed where he failed.~
-= ~Perhaps in desperation, he turned to... other methods. Those which held unspeakable ramifications for his ethics and his standing among his peers. But at the time, it seemed there was still a line he was unwilling to cross. In the end, not only could he not save his kin, but what he had already done was more than enough to have him exiled from his homeland.~
-= ~It appears as though he learned a certain lesson from that, and chose knowledge and what he believed the greater good over his own morality. I know from studying his past research that he has long since created the cure for the ailment which took his daughter's life... alas, far too late. No doubt he believes it would have been better had he chosen the same measures when he had the chance. Were I in his place, I wonder if *I* could deny the same thought.~
+~当然，我不敢说自己真懂他的心思。可他和我确实许多夜晚坐在这桌边，以科学与知识之人的身份谈我们的理论与哲学……所以至少我的猜测也许比多数人准些。~
+= ~他从不坦率讲自己的过往，可在几杯杜松酒之下，我知道了一些事。阿斯克勒庇俄斯·科瓦尔曾是哈鲁阿最受敬重的学者之一，真正的典范。可……攀到那样的高处，总有代价。~
+= ~许多年前，阿斯克勒庇俄斯钟爱的女儿染上一种前所未见的病，当时自然没有已知的解药。纵然他有那么多知识，面对自己最在意的人却无能为力，而身为本领域最杰出者，自然也没别人能在他失败处成功。~
+= ~也许是绝望之下，他转向了……别的方法。那些对他的伦理、他在同侪间的地位都有不可言说后果的方法。可当时，似乎还有一条他不愿越的线。最后，他不但救不了亲人，已做的事更足以让他被逐出故乡。~
+= ~看来他从中学到了某种教训，选择知识和他所信的更大善，胜过自己的道德。我从研究他过去的成果知道，他早已制出了夺走他女儿性命那病的解药……唉，太迟了。无疑他相信，若当初有机会就采取同样手段会更好。若我在他的位置，我不知道*我*能否拒绝同样的念头。~
 END
 IF ~InParty("C0Aura")~ EXTERN C0AURA2J QUEST1-44-5
 IF ~!InParty("C0Aura")~ EXTERN C0AMAGN QUEST1-44-6
 
 CHAIN C0AURA2J QUEST1-44-5
-~So, that's why. Even I'm not sure if I could...~
-== C0AMAGN ~The most common downfall of every researcher is obsession, dear girl, as you've no doubt seen. Some would even say that it is inevitable, as the more that we advance our own knowledge, the more powerful that lure becomes for each and one of us, wearing away at our moral foundations bit by bit... until we've completely lost sight of exactly how deep we've sunk.~
-== C0AURA2J ~...*nod*~
-== C0AMAGN ~Now, there is one last question we must ask ourselves—what now?~
-== C0AURA2J ~Excuse me...?~
-== C0AMAGN ~No matter his fate, it appears that Asclepios's work is at its end. And now the responsibility is upon us to decide what is done about the research he has already accomplished.~
-== C0AMAGN ~He and I have collaborated for many months now. I have kept most of the knowledge he has shared with me right here in this house. You, of course, are welcome to study it yourself, should you hold the desire.~
-== C0AURA2J ~That's... but—professor, you're planning to keep using his research?~
-== C0AMAGN ~But of course. We are Lantanna, my dear. We understand that knowledge at its purest form has no interent morality. The actions taken in gathering it is a different matter, of course, but it is up to yourself to decide right and wrong. From my perspective, the damage has been done, and so I choose to move forwards.~
-== C0AMAGN ~You could view it as a validation of the chosen means, of course. I cannot argue with such reasoning. But so long as the pursuit of knowledge continues, those such as Asclepios will exist. Neither you nor I can change that. If there is one way to stop such men from falling astray, it is to lay the foundations for their path first.~
-== C0AURA2J ~I understand. But, still—I... I'll have to think about it.~
-== C0AMAGN ~Take your time, my dear. You have that gift yet at your disposal.~
+~原来如此。连我都不确定我能不能……~
+== C0AMAGN ~每个研究者最常见的堕落就是执念，好姑娘，你无疑见过。有人甚至说这不可避免，因为我们越推进自己的知识，那诱惑对我们就越强，一点点磨掉我们的道德根基……直到我们完全看不清自己陷得多深。~
+== C0AURA2J ~……*点头*~
+== C0AMAGN ~那么，我们得问自己最后一个问题——现在怎么办？~
+== C0AURA2J ~请问……？~
+== C0AMAGN ~不管他的命运如何，看来阿斯克勒庇俄斯的工作到头了。如今责任在我们身上，要决定如何处置他已成就的研究。~
+== C0AMAGN ~他和我合作了好几个月。他跟我分享的知识，大部分都留在这栋房子里。你当然可以自行研读，若你有意。~
+== C0AURA2J ~那……可——教授，你打算继续用他的研究？~
+== C0AMAGN ~当然。我们是兰坦人，亲爱的。我们明白纯粹形态的知识本身无道德属性。收集它的行为另当别论，可对错由你自己判断。在我看来，损害已经造成，所以我选择往前走。~
+== C0AMAGN ~你当然可以把这看作对所选手段的肯定。我无法反驳这种推理。可只要求知的追求继续，像阿斯克勒庇俄斯这样的人就会存在。你我都没法改变。若说有办法阻止这样的人走岔，那就是先替他们的路打好地基。~
+== C0AURA2J ~我明白。可还是——我……我得想想。~
+== C0AMAGN ~慢慢来，亲爱的。你还有那份天赐之礼可用。~
 EXTERN C0AMAGN QUEST1-44-6
 
 CHAIN C0AMAGN QUEST1-44-6
-~In any case, I must thank you for what you have done, my <PRO_GIRLBOY>. Had you not happened to intervene in this terrible business, I have no doubt the situation would have only gotten further out of hand.~
-= ~Though I believe there are still unexplained factors at play in this whole matter. After all, those—~
+~总之，我得谢你所做的一切，我的<PRO_GIRLBOY>。这事若你没碰巧插手，我无疑局势只会愈发失控。~
+= ~不过我相信这整件事里还有些说不清的因由。毕竟，那些——~
 DO ~ClearAllActions()
   	StartCutSceneMode()
 	StartCutScene("c0acut18")~ EXIT
 
 CHAIN IF WEIGHT #-1 ~Global("C0AuraBG2Quest1","GLOBAL",46)~ THEN C0AQINT2 QUEST1-44
-~Professor Caridius. A pleasure to finally meet you, truly. I am Otho Aventinus.~
+~卡里迪乌斯教授。终于见到你，真是荣幸。我是奥托·阿文提努斯。~
 DO ~SetGlobal("C0AuraBG2Quest1","GLOBAL",47)~
-== C0AMAGN ~Hmph. And what brings such a distinguished officer of Interitus to an mere exiled researcher such as myself?~
-== C0AQINT2 ~You are too humble, professor. While your name may no longer grace our land's tomes of knowledge, those familiar with our history still respect your name to this day. Why, even with all our greatest minds, we could not have come close to replicating the ingenuity that was your Pythonic solution, not without the assistance of your own writings.~
-== C0AMAGN ~And that is why you made Asclepios aware of my presence, and gave him the opportunity to get close to me?~
-== C0AQINT2 ~Ah... that need not concern you any longer. I should inform you that Asclepios Cohval will no longer be a problem. The local authorities have discovered his body and confirmed his death. And with him gone, the threat of Titan will cease, now that the source has been eliminated.~
-== C0AMAGN ~Will it, now? I was under the impression that Asclepios was but your collaborator. How else could his creation of Titan, derived from Lantanese alchemy, have come to spread here of all places?~
-== C0AQINT2 ~You accuse us? You misunderstand our goals, professor. Asclepios was a heretic, a short-sighted human, and a wretched practitioner of magic. True, we made use of his services as an alchemist to further our own research, but the production and distribution of Titan was by his own making. We disavow his actions, and ended our association with him once his insane actions were known to us.~
-== C0AMAGN ~I suppose I have no evidence to prove otherwise. Your lot are skilled at covering your tracks, if nothing else.~
-== C0AQINT2 ~Besides... from what our agents have gathered, the foundations of his work which lead to the substance... the Pythonic solutions, has its roots in your own research. Or am I mistaken, honored professor? Perhaps this once-revered title, the "L'an Elementume Vitaer", was written by another's hand?~
-== C0AMAGN ~I believe your threats are misaimed. I have no expectations of pursuing this matter further—that is a role for the authorities. As for what led to this, I will not deny my own fault in this disaster. Unlike certain others, I have the wisdom to own up to my own errors.~
-== C0AQINT2 ~Most admirable.~
-== C0AMAGN ~Let us get to the point. What is it that you Interitus want?~
-== C0AQINT2 ~What we want has never changed, not since the days of our original glory, professor. Like any Lantanna, we seek the prosperity of the homeland, nothing more.~
-== C0AMAGN ~Is that so? Then has all of this... reckless use of forbidden research, sowing discord in the outerlands... this is for the good of Lantan, is it? We were a nation forged with the goal of advancing the realms through knowledge, boy. Can you truly claim that what you have done serves our original, sacred purpose?~
-== C0AQINT2 ~But of course it does, sir.~
-== C0AMAGN ~What?~
-== C0AQINT2 ~Come now, professor. You have spent many long years away from home since your exile. Surely you cannot be blind and deaf to how our kind are viewed in these ignorant lands?~
-== C0AMAGN ~...~
-== C0AQINT2 IF ~InParty("C0Aura")~ THEN ~What of you, dame Aurelia?~
-== C0AURA2J IF ~InParty("C0Aura")~ THEN ~...that's...~
-== C0AQINT2 ~Our nation is one blessed with the greatest gifts of all—knowledge, innovation, imagination... yet how many outside of our home has the wisdom to consider as such? To the realms, our kind are nothing more than a spectacle at best, insects at worst.~
-== C0AQINT2 ~While we have used such notions as our means of protection, we Lantanna have still been forced to suffer the consequences caused by the barbarism of others. The chaos of the Time of Troubles, when foul magic ran wild and tore the realms apart... even then, when we Lantanna could have been the saviors of many, we could have taken a rightful position of power, yet our narrowminded leaders did nothing, while the world beyond overlooked us as always. Does the level of ignorance not disgust you?~
-== C0AMAGN ~That is how you justify your actions? Perhaps you have forgotten what makes a researcher. Our work is precious for its own sake, not for petty gains such as personal standing.~
-== C0AQINT2 ~Nor do I care about the approval of these barbarians. But you should look at yourself, professor. For all your knowledge, you should be in a position fit for your greatness, with innumerable students as your side... yet here you are, alone, living in squalor, gathering knowledge around those for whom it serves nothing.~
-== C0AQINT2 ~I find it galling. And, as Interitus, I believe the time for our influence in shaping the realms to be far past due.~
-== C0AURA2J IF ~InParty("C0Aura")~ THEN ~You—you're speaking absolute nonsense!~
-== C0AMAGN ~And how do you intend to do so, if you would care to explain? Your research on Titan is halted. Unless you have further plans of expanding your influence, which I know is not supported by the Ayrorch?~
-== C0AQINT2 ~That, I fear, I cannot tell you. As any skilled player would know, one does not reveal their hand until the opportune moment. Not unless you are willing to choose a side, and support our noble cause. As a Lantanna, you would be more than welcome.~
-== C0AMAGN ~I think not.~
-== C0AQINT2 ~That is not unexpected. Though, as a warning made out of respect, I would advise that you interfere no longer in our affairs, just as we will not interfere in yours.~
-== C0AQINT2 ~But rest assured that this will not be our last meeting. Soon, these unenlightened lands will understand what knowledge is truly capable of. When Lantan is recognized as the power that it is, those such as you, professor, who wither away in exile, can finally claim the station you are worthy of.~
-== C0AMAGN ~Ha!~
-== C0AQINT2 ~Do you find my words amusing?~
-== C0AMAGN ~I beg your pardon. It is just that I have not seen such rigid, shallow thoughts coming from another of the homeland for many, many years. I presumed the passing of times, and lessons taught by past failures, may have eroded away at the same intentions that brought you to such depths.~
-== C0AQINT2 ~...~
-== C0AMAGN ~In this age, you dare not even wear the colors you so arrogantly display here and now within the land you claim to love. In your mad pursuits, you intend to make enemies both the realms and your own people, simply because you have allowed any logic or reason to be devoured utterly by ego. You pursue an impossible dream, one which you cling desperately onto as you have long forsaken any chance of returning to the right path.~
-== C0AMAGN ~How laughable, and pitiable.~
-== C0AQINT2 ~Pity? Unlike those who bow to their lessers, who hide away with their boundless knowledge, betraying their duty to the homeland. We, the Interitus, who offer our blood and sweat to our land, have no use for pity, neither to give, nor receive it from others.~
-== C0AMAGN ~I pity that your minds have gone to waste chasing such a worthless endeavor. Truly, by ideology, you all have died long ago. If there is nothing else, I ask that you begone. It is courtesy for a scientist to keep an open mind, yet I see little progress to be made in conversing with ghosts.~
-== C0AQINT2 ~...!~
-== C0AQINT2 ~...Hahaha...~
+== C0AMAGN ~哼。因特里图斯这么一位显要的官长，来找我这样区区流亡研究者，有何贵干？~
+== C0AQINT2 ~教授太谦了。你的名字虽不再见于我国的知识典籍，可熟悉我们历史的人至今仍敬重你的名。唉，就算我们最杰出的头脑，没有你自己著述的助力，也远不能复制你那份“巨蟒溶液”的巧思。~
+== C0AMAGN ~所以你们才让阿斯克勒庇俄斯知道我在这儿，给他机会接近我？~
+== C0AQINT2 ~啊……那已不必你操心了。我该通知你，阿斯克勒庇俄斯·科瓦尔不再是问题了。本地当局已发现他的尸体，确认死亡。他一死，源头既除，泰坦的威胁也就终止了。~
+== C0AMAGN ~是吗？我以为阿斯克勒庇俄斯不过是你们的合作者。不然，他那源自兰坦炼金术的泰坦，怎会偏偏传到这儿来散布？~
+== C0AQINT2 ~你指控我们？教授，你误解了我们的目标。阿斯克勒庇俄斯是个异端、短视的人类、可鄙的施法者。诚然，我们利用他炼金师的本事推进自己的研究，可泰坦的生产与散布全是他一手所为。我们否认他的行为，一得知他疯狂的举动就终止了跟他的往来。~
+== C0AMAGN ~我想我没有证据反驳。你们这班人别的本事不说，抹痕迹倒是熟练。~
+== C0AQINT2 ~再说……据我们探员所集，他工作里导向这物质的根基……巨蟒溶液，根源在你自己的研究。我弄错了吗，尊敬的教授？也许这曾受敬重的书名《生命元素论》，是别人写的？~
+== C0AMAGN ~我想你的威胁指错了地方。我不打算再追这事——那是当局的角色。至于事情的由来，我不会否认我在这场灾难里的过错。跟某些人不同，我有智慧承认自己的错误。~
+== C0AQINT2 ~可敬至极。~
+== C0AMAGN ~我们说重点吧。你们因特里图斯想要什么？~
+== C0AQINT2 ~我们想要的从未改变，自我们最初荣光的日子起，教授。像任何兰坦人一样，我们求的是故乡的兴旺，仅此而已。~
+== C0AMAGN ~是吗？那么这一切……肆意使用禁研、在外邦播撒不和……这也是为兰坦好，是吗？孩子，我们这国是为以知识推进诸国度而铸的。你真能说你所做的服务于我们最初神圣的目的？~
+== C0AQINT2 ~当然如此，先生。~
+== C0AMAGN ~什么？~
+== C0AQINT2 ~得了，教授。你流放后离开家乡许多年了。你总不至于看不见、听不见我们一族在这些无知之地被如何看待？~
+== C0AMAGN ~……~
+== C0AQINT2 IF ~InParty("C0Aura")~ THEN ~你呢，奥瑞莉亚女士？~
+== C0AURA2J IF ~InParty("C0Aura")~ THEN ~……那是……~
+== C0AQINT2 ~我们这国蒙受一切最伟大的恩赐——知识、创新、想象……可家乡之外有多少人有智慧如此看待？对诸国度而言，我们一族最好不过是个奇观，最坏不过是虫豸。~
+== C0AQINT2 ~我们虽以这些观念为自保之策，可我们兰坦人仍被迫承受他人野蛮造成的后果。动荡之年，恶魔法横行、撕裂诸国度……就连那时，我们兰坦人本可成为许多人的救星，本可取得应得的权位，可我们目光短浅的领袖什么也没做，而外面的世界一如既往无视我们。这种无知程度不令你厌恶吗？~
+== C0AMAGN ~你就是这样为行为辩护？也许你忘了什么造就一个研究者。我们的工作因自身而珍贵，不为个人地位这种小利。~
+== C0AQINT2 ~我也不在乎这些野蛮人的认可。可你该看看你自己，教授。凭你的知识，你本该处在配得上你伟大的位置，身边无数学生……可你却在这儿，孤身一人，住在破败里，把知识聚给那些用不上它的人。~
+== C0AQINT2 ~我觉得可憎。而身为因特里图斯的一员，我相信我们影响、塑造诸国度的时机早已迟了太久。~
+== C0AURA2J IF ~InParty("C0Aura")~ THEN ~你——你简直在胡说八道！~
+== C0AMAGN ~那你打算怎么做，若你愿意解释？你们对泰坦的研究已停。除非你们另有扩张影响的计划——而我知道艾罗奇不支持。~
+== C0AQINT2 ~那点我怕不能告诉你。任何高明的玩家都知道，时机未到不亮底牌。除非你愿意选边，支持我们高贵的事业。身为兰坦人，你会大受欢迎。~
+== C0AMAGN ~我想不必了。~
+== C0AQINT2 ~并不意外。不过，出于尊重给个警告，我劝你别再插手我们的事，正如我们不插手你的。~
+== C0AQINT2 ~但请放心，这不会是我们最后一次见面。很快，这些未开化之地就会明白知识真正能做什么。当兰坦被认作它本来的强国，像你这样在流放中枯萎的教授，终能取得配得上你的地位。~
+== C0AMAGN ~哈！~
+== C0AQINT2 ~你觉得我的话好笑？~
+== C0AMAGN ~恕罪。只是我许多、许多年没见过故乡来的人有如此僵硬浅薄的念头了。我以为时光流逝、往昔失败给的教训，该会磨掉那些把你们带到这般深处的同样心志。~
+== C0AQINT2 ~……~
+== C0AMAGN ~这个时代，你甚至不敢在你声称热爱的土地上穿戴你此刻如此傲慢展示的颜色。在你疯狂的追求里，你打算既与诸国度、又与你自己的人民为敌，只因你任由自我把一切逻辑与理性吞噬殆尽。你追一个不可能的梦，死死抓着它，因为你早已放弃任何回归正途的机会。~
+== C0AMAGN ~多可笑，多可悲。~
+== C0AQINT2 ~可悲？我们不像那些向不如自己者低头、怀着无尽知识躲起来、背叛对故乡职责的人。我们因特里图斯把血汗献给我们的土地，用不着可悲——既不给，也不受。~
+== C0AMAGN ~我可悲你们的头脑浪费在追这么不值当的事业上。真的，按理念说，你们早已死了。若无别的事，我请你离开。科学家该保持开放的心，这是礼数，可我看跟鬼魂交谈难有什么进展。~
+== C0AQINT2 ~……！~
+== C0AQINT2 ~……哈哈哈……~
 DO ~StartCutSceneMode()
 	Wait(2)
 	FaceObject("C0AQINT1")
@@ -2041,22 +2041,22 @@ DO ~StartCutSceneMode()
 	StartDialogNoSet(Player1)~ EXIT
 
 CHAIN IF WEIGHT #-1 ~Global("C0AuraBG2Quest1","GLOBAL",47)~ THEN C0AQINT2 QUEST1-47
-~Get up.~
+~起来。~
 DO ~SetGlobal("C0AuraBG2Quest1","GLOBAL",48)~
-== C0AMAGN ~Truly the impulsive actions of a lesser mind.~
-== C0AQINT2 ~Think what you wish. The minds of the old and rigid are impossible to restore to their old glory, it seems... so be it, your disciples—ah, singular, not plural—may see otherwise. Forgive me my insensitivity.~
-== C0AMAGN ~You have very nearly succeeded in angering me. Begone, lest I test my latest inventions in a manner for which they are not intended!~
-== C0AQINT2 ~Very well. We have overstayed our welcome, and will waste your... leisure time no longer. Good <DAYNIGHTALL>.~
-== C0AQINT2 IF ~InParty("C0Aura")~ THEN ~Oh, and as for dame Aurelia of the Clan Glimmershine... allow me to express the Interitus's candid joy to learn that you yet live.~
-== C0AURA2J IF ~InParty("C0Aura")~ THEN ~Ah...!~
-== C0AQINT2 IF ~InParty("C0Aura")~ THEN ~When the account of your ship's capsize all those years ago reached the fatherland... well, we were all most aggrieved, of course. One of the great clans' youngest prodigies, lost to the Great Ice Sea...~
-== C0AQINT2 IF ~InParty("C0Aura")~ THEN ~We thought the cruelty of nature was too much, yet it seems they showed mercy in the end, and brought you back to us. Such a great relief, that even such a terrible tragedy did not claim you.~
-== C0AURA2J IF ~InParty("C0Aura")~ THEN ~I'm... touched by the sentiment. I hope no other tragedies like that will occur again, to me... or any other young Lantanna.~
-== C0AQINT2 IF ~InParty("C0Aura")~ THEN ~Our leader, still in Lantan, prepared a gift of something that is rightfully yours, originally to welcome you for your return home. Since you have taken to the road, however, we have made new plans for it to be delivered here, to this very city. I hope you might accept our token of good faith.~
-== C0AURA2J IF ~InParty("C0Aura")~ THEN ~I... see. I guess whether I want this gift or not doesn't matter, does it?~
-== C0AQINT2 IF ~InParty("C0Aura")~ THEN ~Surely you jest, madame. This is but a gesture by us to our homeland's treasured jewel.~
-== C0AQINT2 IF ~InParty("C0Aura")~ THEN ~It should arrive in Athkatla in... oh, five days, by my estimation. I am certain its nature will make quite the pleasant *surprise* for you.~
-== C0AQINT2 IF ~InParty("C0Aura")~ THEN ~And with that, I bid you all adieu.~
+== C0AMAGN ~真是低劣头脑的冲动之举。~
+== C0AQINT2 ~随你怎么想。老旧僵硬的头脑看来无法恢复昔日荣光……那就这样吧，你的门徒——啊，单数，不是复数——也许另有看法。恕我不够体贴。~
+== C0AMAGN ~你差点真把我惹怒了。滚，免得我拿最新的发明用在它们不该用的地方！~
+== C0AQINT2 ~好。我们已待得太久，不再浪费你的……闲暇。愿<DAYNIGHTALL>安好。~
+== C0AQINT2 IF ~InParty("C0Aura")~ THEN ~哦，还有格利默夏恩一族的奥瑞莉亚女士……容我表达因特里图斯得知你仍活着的由衷喜悦。~
+== C0AURA2J IF ~InParty("C0Aura")~ THEN ~啊……！~
+== C0AQINT2 IF ~InParty("C0Aura")~ THEN ~当年你船倾覆的消息传到祖国时……唉，我们当然都极悲痛。大族中最年轻的奇才之一，失落在大冰海……~
+== C0AQINT2 IF ~InParty("C0Aura")~ THEN ~我们以为自然太残酷，可看来它最终发了慈悲，把你送回我们身边。真是大慰，连那样的惨剧都没夺走你。~
+== C0AURA2J IF ~InParty("C0Aura")~ THEN ~我……被这份心意感动了。希望再不会有那样的惨剧发生在我身上……或任何别的年轻兰坦人身上。~
+== C0AQINT2 IF ~InParty("C0Aura")~ THEN ~我们仍在兰坦的领袖备了一件本该属于你的礼物，原是为你归乡接风。可你既已上路，我们就另作了安排，让它送到这儿，就送到这座城。希望你能接受我们这份善意之礼。~
+== C0AURA2J IF ~InParty("C0Aura")~ THEN ~我……明白了。我猜我想不想要这礼物都无所谓，对吧？~
+== C0AQINT2 IF ~InParty("C0Aura")~ THEN ~女士说笑了。这不过是我们对故乡珍宝的一点心意。~
+== C0AQINT2 IF ~InParty("C0Aura")~ THEN ~据我估算，它该在……哦，五天后抵达阿斯卡特拉。我确信它的性质会给你一个相当愉快的*惊喜*。~
+== C0AQINT2 IF ~InParty("C0Aura")~ THEN ~那么，我就此向诸位告别。~
 DO ~AddJournalEntry(%Quest1_Entry_8%,QUEST_DONE)
 StartCutSceneMode()
 	Wait(1)
@@ -2075,156 +2075,156 @@ StartCutSceneMode()
 	DestroySelf()~ EXIT
 
 CHAIN IF WEIGHT #-1 ~Global("C0AuraBG2Quest1","GLOBAL",48)~ THEN C0AMAGN QUEST1-48
-~Mind-boggling... in the years that they have worked in the shadows, their mouthpieces have seemingly only become increasingly conceited.~
+~令人瞠目……他们潜伏这些年，代言人似乎只越来越自负。~
 DO ~SetGlobal("C0AuraBG2Quest1","GLOBAL",49)~
-== C0AMAGN IF ~InParty("C0Aura")~ THEN ~And a *gift*? I can imagine why they would see fit to offer you such a thing, my girl. You had best be cautious... that they would say it so brazenly speaks of either arrogance, or a certain belief that what ever it is, it will succeed in achieving their goals.~
-== C0AURA2j IF ~InParty("C0Aura")~ THEN ~...*nod*~
-== C0AMAGN ~This has all quite ruined the mood. I will return inside and brew another cup of tea to calm the nerves... if you care to have one as well, I shall leave the kettle at the table.~
+== C0AMAGN IF ~InParty("C0Aura")~ THEN ~还有一份*礼物*？姑娘，我能想到他们为何觉得该送你这样的东西。你最好当心……他们敢说得这么露骨，要么是傲慢，要么是笃信不管那是什么，都能达成他们的目的。~
+== C0AURA2j IF ~InParty("C0Aura")~ THEN ~……*点头*~
+== C0AMAGN ~这一切把气氛都毁了。我要回屋再煮一壶茶静静神……你若也想喝，我把壶留在桌上。~
 DO ~SetGlobalTimer("C0AuraBG2BattleEncounter","GLOBAL",FIVE_DAYS)
 EscapeAreaMove("C0AUR2",237,201,NE)~ EXIT
 
 CHAIN IF WEIGHT #-1 ~Global("C0AuraBG2Quest1","GLOBAL",52)~ THEN C0AURA2J QUEST1-52
-~Hah... haah... that was... really some 'gift', wasn't it?~
+~哈……哈啊……那真是……好一份“礼物”，对吧？~
 DO ~SetGlobal("C0AuraBG2Quest1","GLOBAL",53)~
 END
-  ++ ~You could say that again.~ + QUEST1-52-1
-  ++ ~Your tendency to draw trouble is almost as bad as mine.~ + QUEST1-52-2
+  ++ ~这话你再说一遍也不为过。~ + QUEST1-52-1
+  ++ ~你招麻烦的本事快跟我一样糟了。~ + QUEST1-52-2
 
 CHAIN C0AURA2J QUEST1-52-1
-~Besides their new model of automaton, the 'Eye' they mentioned that shut down our magic... if I'm not wrong, it must be...~
+~除了他们那新型构造体，他们提到那只切断我们魔法的“眼”……我若没弄错，那一定是……~
 EXTERN C0AURA2J QUEST1-52-3
 
 CHAIN C0AURA2J QUEST1-52-2
-~But— well, heehee... I guess I can't... really argue with that. Though, there's something that concerns me.~
+~可——嗯，嘿嘿……我想这我真没法反驳。不过有件事让我担心。~
 EXTERN C0AURA2J QUEST1-52-1
 
 CHAIN C0AURA2J QUEST1-52-3
-~Wait, look over there, <CHARNAME>! There's more of them!~
+~等等，看那边，<CHARNAME>！还有更多！~
 DO ~ClearAllActions()
   	StartCutSceneMode()
 	StartCutScene("c0acut19")~ EXIT
 
 CHAIN IF WEIGHT #-1 ~Global("C0AuraBG2Quest1","GLOBAL",53)~ THEN C0AREES QUEST1-53
-~Looks like I came late. Are you both alright?~
+~看来我来晚了。你们俩都没事吧？~
 DO ~SetGlobal("C0AuraBG2Quest1","GLOBAL",54)~
 END
 IF ~InParty("C0Aura")~ EXTERN C0AURA2J QUEST1-53-1
-  ++ ~Reese? Why are you here?~ + QUEST1-53-2
-  ++ ~You're that assistant, aren't you? Though it seems you're more than that.~ + QUEST1-53-2
+  ++ ~里斯？你怎么在这儿？~ + QUEST1-53-2
+  ++ ~你就是那个助手，对吧？可看来你不止是助手。~ + QUEST1-53-2
 
 CHAIN C0AURA2J QUEST1-53-1
-~Reese? What are you doing here...? And... did you just fire that smokepowder bolt?~
+~里斯？你来这儿做什么……？而且……刚那支烟粉弩箭是你放的？~
 EXTERN C0AREES QUEST1-53-2
 
 CHAIN C0AREES QUEST1-53-2
-~I believe I owe you an explanation as well as an apology for my part in getting you involved in this whole mess. I'll begin by introducing myself properly.~
+~我想我该向你解释，并为让你卷入这整摊烂事道歉。我先正式介绍自己。~
 END
 IF ~InParty("C0Aura")~ EXTERN C0AURA2J QUEST1-53-3
 IF ~!InParty("C0Aura")~ EXTERN C0AREES QUEST1-53-3A
 
 CHAIN C0AURA2J QUEST1-53-3
-~I think I understand now... you're part of Oculus, aren't you?~
-== C0AREES ~Correct, I am.~
+~我想我明白了……你是奥库卢斯的人，对吧？~
+== C0AREES ~对，我是。~
 END
-  ++ ~What is 'Oculus'?~ EXTERN C0AURA2J QUEST1-53-4
+  ++ ~“奥库卢斯”是什么？~ EXTERN C0AURA2J QUEST1-53-4
 
 CHAIN C0AURA2J QUEST1-53-4
-~It's... well, you can consider the closest thing my people have to a military. Its members are among the most disciplined and skilled in battle that the Lantanna have to offer. Our home may not be built for war, but we still have to train select members to be prepared to fight for our defence. My sister's been a captain of Oculus for several years now.~
+~那是……嗯，你可以把它当作我们一族最接近军队的东西。成员是兰坦人中最守纪律、最善战的一批。我们故乡也许不是为战争而建，可我们仍得训练一些精选成员，随时准备为我们而战。我姐姐当奥库卢斯的队长已好几年了。~
 EXTERN C0AREES QUEST1-53-5
 
 CHAIN C0AREES QUEST1-53-3A
-~I'm an enforcer of Oculus, which you Lantan's equivalent of a military force. Few outside of our nation know of our existence, as we have maintained the image of a pacifistic nation. While we strive to avoid conflict, there is still a need for skilled individuals to be prepared to defend our nation when necessary.~
+~我是奥库卢斯的执法者，相当于你们兰坦的军力。国境外少有人知道我们存在，因为我们一直维持着和平之国的形象。我们虽力求避免冲突，可仍需要有本事的人在必要时准备保卫国家。~
 EXTERN C0AREES QUEST1-53-5
 
 CHAIN C0AREES QUEST1-53-5
-~However, Oculus's duties involve more than training soldiers for protecting the nation's borders. Over time, we have cultivated an information network throughout the realms as well, and it is among our tasks to protect our nation's secrets from being stolen and exposed, as well as eliminating potential threats.~
+~不过，奥库卢斯的职责不止训练士兵守边。久而久之，我们也在诸国度间经营起情报网，保护我国机密不被窃取泄露、消除潜在威胁，也是我们的任务之一。~
 END
-  ++ ~And that includes the Interitus, who I assume are your enemies.~ + QUEST1-53-6
-  ++ ~Does that mean you are here to keep an eye on Professor Caridius?~ + QUEST1-53-7
+  ++ ~那包括因特里图斯，我猜他们是你们的敌人。~ + QUEST1-53-6
+  ++ ~这是说你来这儿是盯着卡里迪乌斯教授？~ + QUEST1-53-7
 
 CHAIN C0AREES QUEST1-53-6
-~We have fought against Interitus within the shadows for many years now, attempting to completely eradicate their influence in Lantan as well as putting a stop to their schemes throughout the realms. As you have no doubt seen, their extreme actions threaten both our nation and those who their fanatical beliefs deem to be inferior.~
+~我们在暗处跟因特里图斯斗了许多年，想彻底根除他们在兰坦的影响，并止住他们在诸国度的阴谋。你无疑已看到，他们的极端行径既威胁我国，也威胁那些被他们狂信视为低劣的人。~
 EXTERN C0AREES QUEST1-53-7
 
 CHAIN C0AREES QUEST1-53-7
-~My original directive was to seek out Professor Caridius, who despite his exile is nonetheless an esteemed and valuable asset for Lantan. By taking the role of his student, I may both observe his actions while also allowing for the results of his research to be conveyed back to Lantan.~
-= ~Moreover, my presence allowed for the professor to be absolved of any potential suspicion of involvement of Interitus when signs of their presence, as well as the spread of the Titan compound, surfaced here in Amn. Regarding that matter... I fear I must apologize to you.~
+~我最初的指令是找到卡里迪乌斯教授——他虽被流放，对兰坦仍是受敬重、有价值的资产。扮作他的学生，我既能观察他的作为，也能把他研究的成果传回兰坦。~
+= ~此外，我在此也让教授免于被怀疑跟因特里图斯有牵连——当他们在安姆现身的迹象、以及泰坦调配物的散布浮出水面时。关于那件事……我怕我必须向你道歉。~
 END
-  ++ ~Apologize to me? What for?~ + QUEST1-53-8
-  ++ ~It wasn't a coincidence that we met you at the Promenade, was it?~ + QUEST1-53-8
+  ++ ~向我道歉？为什么？~ + QUEST1-53-8
+  ++ ~我们在步道遇见你，不是巧合，对吧？~ + QUEST1-53-8
 
 CHAIN C0AREES QUEST1-53-8
-~It was my intention to make contact with you, or more specifically, with your companion, dame Aurelia Glimmershine. I used her assistant, the young gnome from the Jansen family, as an intermediary to draw her interest.~
+~我本意是接触你，更确切说，接触你的同伴奥瑞莉亚·格利默夏恩女士。我利用她的助手、简森家那个年轻侏儒作中介，引她兴趣。~
 END
 IF ~InParty("C0Aura")~ EXTERN C0AURA2J QUEST1-53-9
-  ++ ~Why did you want to contact Aura?~ + QUEST1-53-10
+  ++ ~你为什么要接触奥拉？~ + QUEST1-53-10
 
 CHAIN C0AURA2J QUEST1-53-9
-~You were after me?~
-== C0AREES ~As I said, I owe you an apology. The professor could be proven to be innocent of involvement with Interitus, but you are another skilled artificer with connections to Lantan, and I had to be certain of whether or not you were also free from suspicion.~
+~你是冲我来的？~
+== C0AREES ~我说过，我欠你一个道歉。教授可以被证明跟因特里图斯无涉，可你是另一位跟兰坦有牵连的有本事奇械师，我必须确认你是否也没有嫌疑。~
 EXTERN C0AREES QUEST1-53-11
 
 CHAIN C0AREES QUEST1-53-10
-~Professor Caridius could be proven to be innocent of involvement with Interitus, but dame Aurelia is another skilled artificer with connections to Lantan, and I had to be certain of whether or not she was also free from suspicion.~
+~卡里迪乌斯教授可以被证明跟因特里图斯无涉，可奥瑞莉亚女士是另一位跟兰坦有牵连的有本事奇械师，我必须确认她是否也没有嫌疑。~
 EXTERN C0AREES QUEST1-53-11
 
 CHAIN C0AREES QUEST1-53-11
-~Once I had made certain of that, I had intended to keep you from being further involved in our affairs... but, unexpectedly, the incident of the man poisoned by Titan occurred, and you unexpectedly played a vital part in solving the case.~
-== C0AREES ~Ever since that time, I have been shadowing your movements throughout the city whenever I can, both in anticipation for Interitus to appear, as well as ensure that no sample of Titan, if found by you, finds its way into the local authorities.~
-== C0AREES ~You may have wondered how despite the severity of this case, no sample of Titan has found its way into the hands of the those investigating it... and that is because we of Oculus have been making every effort to remove them. If you recall your encounter with the inspector... had they taken the sample of Titan you carried on you at the time, I would have been forced to remove it from him... through any means necessary.~
+~一旦我确认了这点，我本打算让你不再卷入我们的事……可没想到，那男人被泰坦毒害的事件发生了，而你意外地在破案中起了关键作用。~
+== C0AREES ~自那时起，只要有机会，我就一路暗随你在城里的行踪，既盼因特里图斯现身，也确保你手上的泰坦样本不会流入本地当局。~
+== C0AREES ~你也许奇怪，这案子既这么严重，为何没有一份泰坦样本落到调查者手里……那是因为我们奥库卢斯一直在尽力清除它们。你若还记得跟督察那次遭遇……他们若把你当时带的泰坦样本拿走，我就得用任何必要手段从他那儿弄走。~
 END
 IF ~InParty("C0Aura")~ EXTERN C0AURA2J QUEST1-53-12
-  ++ ~And the one who launched an exploding bolt at those abominations to save Aura... that was also you, I assume?~ + QUEST1-53-13
-  ++ ~So, we've dealt with Titan, and also quite a few members of Interitus. What now?~ + QUEST1-53-14
+  ++ ~而朝那些怪物射爆炸弩箭救奥拉的也是你，我猜？~ + QUEST1-53-13
+  ++ ~那么，我们处理了泰坦，也收拾了因特里图斯不少人。现在呢？~ + QUEST1-53-14
 
 CHAIN C0AURA2J QUEST1-53-12
-~So... were you the one who saved me from those abominations, using that smokepowder bolt?~
+~那么……用那支烟粉弩箭把我从怪物手里救出来的，是你？~
 EXTERN C0AREES QUEST1-53-13
 
 CHAIN C0AREES QUEST1-53-13
-~Yes.~
+~是。~
 EXTERN C0AREES QUEST1-53-14
 
 CHAIN C0AREES QUEST1-53-14
-~You've done an unspeakably large favor for Lantan, regardless of your intentions. Titan is no longer a threat, and Interitus will have suffered a massive blow this day with the loss of several of their members as well as the destruction of the Eye of Akintaer.~
+~不管你的意图如何，你都为兰坦做了难以言喻的大忙。泰坦不再是威胁，因特里图斯今天损失数名成员、又毁了阿金泰尔之眼，必遭重创。~
 END
 IF ~InParty("C0Aura")~ EXTERN C0AURA2J QUEST1-53-15
 IF ~!InParty("C0Aura")~ EXTERN C0AREES QUEST1-53-17
 
 CHAIN C0AURA2J QUEST1-53-15
-~So... that really is the Eye of Akintaer? I... didn't want to believe it, even though I recognized it.~
+~所以……那真是阿金泰尔之眼？我……虽认出来了，却不想信。~
 END
   + ~OR(2)
   Class(Player1,BARD_ALL)
-  Class(Player1,MAGE_ALL)~ + ~I've heard of this name before. It's a Netherese artifact, designed to stop magic within a large area. Have you seen it before, Aura?~ + QUEST1-53-16
+  Class(Player1,MAGE_ALL)~ + ~我听过这名字。那是耐色瑞尔的神器，设计来在一大片区域内阻断魔法。你以前见过它吗，奥拉？~ + QUEST1-53-16
   + ~!Class(Player1,BARD_ALL)
-    !Class(Player1,MAGE_ALL)~ + ~You know what this is, Aura?~ + QUEST1-53-16
+    !Class(Player1,MAGE_ALL)~ + ~你知道这是什么，奥拉？~ + QUEST1-53-16
 
 CHAIN C0AURA2J QUEST1-53-16
-~I'm very familiar with it... even though it brings back nothing but bad memories. Several years ago, when I ended up in my horrible shipwreck accident and washed up in Kozakura... this Netherese artifact was on that same ship when it sunk.~
-== C0AREES ~Considering the circumstances, Oculus has had much difficulty investigating that incident. However, if I'm not mistaken, you were involved in the archeological expedition when it was retrieved?~
-== C0AURA2J ~Yes, it was an excavation I was proud of. I wanted to bring it back home, and then... seeing it again, I'm starting to realize that there was no accident after all.~
-== C0AREES ~It's highly likely that members of Interitus had infiltrated the members of the Lantanna that were with you at the time. It seems this artifact was their goal, or its unexpected acquisition incited them to steal it... and eliminate any potential witnesses along the way.~
-== C0AURA2J ~I started suspecting it when their lieutenant spoke to me... seeing the Eye here again just made me sure of what happened.~
+~我很熟……尽管它只勾起坏回忆。几年前，我遭遇那场可怕的沉船事故、被冲上科祖库拉时……这耐色瑞尔神器就在同一条船上，随船沉了。~
+== C0AREES ~考虑到当时的情况，奥库卢斯调查那事故极为困难。不过，我若没弄错，它被打捞时你参与了那次考古远征？~
+== C0AURA2J ~是，那是我引以为傲的一次发掘。我想把它带回家，然后……再次看见它，我开始明白那根本不是事故。~
+== C0AREES ~极有可能因特里图斯的成员混进了当时跟你在一起的兰坦人里。看来这神器就是他们的目标，或者它意外的取得促使他们偷走它……并沿途除掉任何潜在见证人。~
+== C0AURA2J ~他们那位副手跟我说话时，我就起了疑……在这儿再见到这眼，只是让我确信发生了什么。~
 EXTERN C0AREES QUEST1-53-17
 
 CHAIN C0AREES QUEST1-53-17
-~Its presence here serves as further proof of Interitus's past and present crimes, and as such, I must bring it back to Lantan. Moreover, there may yet be a chance of restoring it, even in its current state.~
-== C0AREES ~And with that, I believe I have briefed you on all that there is to say. If all goes well, my captain will ensure that you need not worry about Interitus again. Soon they will no longer be a threat, and all of Lantan may breathe more easily.~
-== C0AREES ~However... though my captain may consider this classified, in case Interitus prove to be a threat to you once more... I should notify you of one last detail, in case it leads you to any useful information in the future. There is sufficient proof to believe they are involved with a mysterious benefactor known as the 'Overseer'.~
-== C0AURA2J ~The 'Overseer'? Who... is that?~
-== C0AREES ~I fear there is nothing else I can tell you, not from lack of desire but lack of ability. We know next to nothing of this 'Overseer' as of right now, of who or where they may be, only that they are capable of creating truly mighty and powerful creations made for destruction... such as the automaton you have fought. But should my fellow enforcers discover more, we will do our very best to inform you.~
-== C0AREES ~For now, I must return to my task of continuing to hunt down what remains of Interitus in this region. We may not meet again for some time. I salute you as an ally of Lantan, a friend of Wisdom, and wish you good luck on your journey.~
+~它在此出现，进一步证明因特里图斯过去与当下的罪行，因此我必须把它带回兰坦。而且，就算它如今这状态，也许仍有修复的可能。~
+== C0AREES ~那么，我相信该说的我都向你交代了。若一切顺利，我的队长会确保你不必再担心因特里图斯。很快他们不再是威胁，全兰坦都能松口气。~
+== C0AREES ~不过……虽然我队长也许视此为机密，万一因特里图斯再次威胁你……我该告诉你最后一个细节，以防它日后给你有用的线索。有足够证据相信他们跟一位被称为“监察官”的神秘恩主有关。~
+== C0AURA2J ~“监察官”？那是……谁？~
+== C0AREES ~我怕别的我再不能说，不是不愿，而是不能。我们对这“监察官”所知近乎为零，不知是谁、在哪儿，只知道其人能造出真正强大、为毁灭而生的造物……比如你打过的那台构造体。可若我的同僚查出更多，我们会尽力通知你。~
+== C0AREES ~现在，我得回去继续追剿本区因特里图斯的残余。我们也许一阵不会再见面。我以兰坦盟友、智慧之友的身份向你致敬，祝你旅途好运。~
 DO ~EscapeArea()~ EXIT
 
 ///////////////////////////
 
 CHAIN IF WEIGHT #-1 ~Global("C0TamiaEncounter","GLOBAL",0)~ THEN C0TAMIA TAMIA-ENCOUNTER-BEGIN
-~Oh, darned stinking trolls! No one told me there'd be trolls in this region! What should we do, Chip?~
+~哦，该死的臭巨魔！没人跟我说这地区有巨魔！我们怎么办，奇普？~
 DO ~SetGlobal("C0TamiaEncounter","GLOBAL",1)~
-== C0KORSH ~Trolls are simple-minded and bloodthirsty. No talking our way out of this one.~
-== C0TAMIA ~I know, I kno– oh, look! Hey, you there! Mind offering a poor little gnome and hob... er, a pair of innocent merchants a hand?~
-== C0KORSH ~Here they come.~
+== C0KORSH ~巨魔头脑简单、嗜血。这回没法靠嘴皮子脱身。~
+== C0TAMIA ~我知道，我知——哦，看！嘿，你！能不能帮一个可怜的小侏儒和一个半……呃，两个无辜商人一把？~
+== C0KORSH ~它们来了。~
 DO ~DisplayStringHead(Myself,%*applies flaming oil to weapon*%)
 	ApplySpellRES("c0afire1",Myself)
 	ChangeEnemyAlly(Myself,ALLY)
@@ -2234,466 +2234,466 @@ DO ~DisplayStringHead(Myself,%*applies flaming oil to weapon*%)
 
 CHAIN IF WEIGHT #-1 ~Global("Begin","MYAREA",2)
 Global("C0TamiaEncounter","GLOBAL",1)~ THEN C0TAMIA TAMIA-ENCOUNTER-AFTER
-~Whew! Things got a little scary there. Thanks for helping out there, stranger.~
+~呼！刚才有点吓人。谢谢你帮忙，陌生人。~
 DO ~SetGlobal("C0TamiaEncounter","GLOBAL",2)~
 EXTERN C0KORSH TAMIA-ENCOUNTER-AFTER-2
 
 CHAIN C0KORSH TAMIA-ENCOUNTER-AFTER-2
-~You have our gratitude.~
+~我们感激你。~
 END
 IF ~!InParty("C0Aura")~ EXTERN C0TAMIA TAMIA-ENCOUNTER-AFTER-4
 IF ~InParty("C0Aura")~ EXTERN C0AURA2J TAMIA-ENCOUNTER-AFTER-3
 
 CHAIN C0AURA2J TAMIA-ENCOUNTER-AFTER-3
-~Tamia! Goodness, it's been so long, I didn't even recognize you until just now!~
-== C0TAMIA ~Cousin Aura! How nice to see you.~
-== C0AURA2J IF ~!Dead("C0Korsh")~ THEN ~<CHARNAME>, this is my cousin Tamia. Her family runs a prominent trading business back home. You're here in Amn for a business trip, right? I, um, don't recognize your travelling partner though.~
+~塔米娅！天哪，好久不见，我刚才都没认出你！~
+== C0TAMIA ~奥拉堂姐！见到你真好。~
+== C0AURA2J IF ~!Dead("C0Korsh")~ THEN ~<CHARNAME>，这是我堂妹塔米娅。她家在故乡做一门显赫的买卖。你是来安姆出差的，对吧？我，呃，可不认得你的旅伴。~
 EXTERN C0KORSH TAMIA-ENCOUNTER-AFTER-5
 
 CHAIN C0TAMIA TAMIA-ENCOUNTER-AFTER-4
-~Oh, allow me to introduce myself! Tamia Spindleweaver, of the Spindleweaver Trading Company of Lantan. And this here is my friend, Chip.~
+~哦，容我自我介绍！塔米娅·斯平德尔韦弗，兰坦斯平德尔韦弗贸易公司。这位是我朋友奇普。~
 EXTERN C0KORSH TAMIA-ENCOUNTER-AFTER-5
 
 CHAIN C0KORSH TAMIA-ENCOUNTER-AFTER-5
-~Korsh Thurgarr. My name tends to put humanoids on edge. This little one calls me "Chip".~
-== C0TAMIA ~Chip's an aspiring merchant. I met him not long ago, while I was on my way to Trademeet. This is the way, isn't it?~
+~科尔什·瑟尔加尔。我这名字常让类人生物紧张。这小家伙叫我“奇普”。~
+== C0TAMIA ~奇普是个有志气的商人。我不久前遇见他，那时我正往贸市去。这就是去贸市的路，对吧？~
 END
-++ ~Yes, it is.~ EXTERN C0TAMIA TAMIA-ENCOUNTER-AFTER-6
-++ ~A hobgoblin merchant?~ EXTERN C0KORSH TAMIA-ENCOUNTER-AFTER-7
+++ ~是的。~ EXTERN C0TAMIA TAMIA-ENCOUNTER-AFTER-6
+++ ~一个大地精商人？~ EXTERN C0KORSH TAMIA-ENCOUNTER-AFTER-7
 
 CHAIN C0TAMIA TAMIA-ENCOUNTER-AFTER-5a
-~Naturally. Business is passable back home in Lantan, but the real opportunities for profit lie overseas. Anyways, is this the road to Trademeet?~
+~自然。在兰坦故乡生意还过得去，可真正赚钱的机会在海外。总之，这是去贸市的路吗？~
 END
-++ ~Yes, it is.~ EXTERN C0TAMIA TAMIA-ENCOUNTER-AFTER-6
+++ ~是的。~ EXTERN C0TAMIA TAMIA-ENCOUNTER-AFTER-6
 
 CHAIN C0TAMIA TAMIA-ENCOUNTER-AFTER-6
-~Good, looks like the map was right after all. Wonder where all those trolls came from, though. That wasn't on the travel pamphlet.~
+~好，看来地图到底没错。不过不知道那些巨魔都是从哪儿来的。旅行手册上可没写。~
 END
 IF ~!InParty("C0Aura")~ EXTERN C0TAMIA TAMIA-ENCOUNTER-AFTER-8
 IF ~InParty("C0Aura")~ EXTERN C0AURA2J TAMIA-ENCOUNTER-AFTER-9
 
 CHAIN C0KORSH TAMIA-ENCOUNTER-AFTER-7
-~I'm used to that reaction.~
-== C0TAMIA ~Don't let his looks deceive you, my friend, Chip over here cuts deals as expertly as he cuts troll meat. He's a little new to the business, but he's got talent.~
+~我习惯这种反应了。~
+== C0TAMIA ~别让他的样子骗了你，朋友，奇普做起生意来跟他切巨魔肉一样老练。他入行不久，可有天分。~
 END
 IF ~!InParty("C0Aura")~ EXTERN C0TAMIA TAMIA-ENCOUNTER-AFTER-8
 IF ~InParty("C0Aura")~ EXTERN C0AURA2J TAMIA-ENCOUNTER-AFTER-9
 
 CHAIN C0TAMIA TAMIA-ENCOUNTER-AFTER-8
-~Now then, we really need to get going, don't we, Chip? I hear trading caravans are starting to head towards Trademeet again, so if we don't get a move on, there won't be anywhere left for us!~
-== C0KORSH ~Agreed.~
-== C0TAMIA ~Thank you ever so much for your help, friend! Here's a little something for you. And if you find yourself in Trademeet, look around for us and we'll be sure to give you a respectable bargain on our deals. Come on, Chip! I can almost taste the profits already!~
+~那么，我们真得走了，对吧，奇普？我听说商队又开始往贸市去了，我们再不动身，就没地方留给我们了！~
+== C0KORSH ~同意。~
+== C0TAMIA ~太谢谢你帮忙了，朋友！这点小东西给你。你若到了贸市，来找我们，我们一定给你一笔像样的好价。走吧，奇普！我几乎已经尝到利润的味道了！~
 DO ~GiveGoldForce(500)
 ActionOverride("c0korsh",EscapeAreaObject("En"))
 ActionOverride("C0TAMIA",EscapeAreaObject("En"))~ EXIT
 
 CHAIN C0AURA2J TAMIA-ENCOUNTER-AFTER-9
-~You're heading to Trademeet, cousin? We were just there, actually. Are you acting independently or on behalf of the Spindlewaver Company?~
-== C0TAMIA ~Can't tell you yet, it's a surprise! Besides, nothing's certain yet. I wouldn't like to disappoint you if things don't work out, you know?~
-== C0KORSH ~Ahem.~
-== C0TAMIA ~Yes, yes, we should really be going. I hear trading caravans are starting to head towards Trademeet again, so if we don't get a move on, there won't be anywhere left for us!~
-== C0AURA2J ~Oh. Well, it was nice seeing you, Tamia. We should sit down and catch up over a pot of tea the next time we meet.~
-== C0TAMIA ~Absolutely! Oh, before I forget, I should give you something for helping us out just now.~
+~你要去贸市，堂姐？我们刚从那儿来。你是自己单干，还是代表斯平德尔韦弗公司？~
+== C0TAMIA ~现在还不能说，是惊喜！再说，什么都还没定。事情若不成，我不想让你失望，你知道吧？~
+== C0KORSH ~咳。~
+== C0TAMIA ~对，对，我们真该走了。我听说商队又开始往贸市去了，我们再不动身，就没地方留给我们了！~
+== C0AURA2J ~哦。嗯，见到你真好，塔米娅。下次见面我们该坐下来喝壶茶叙叙。~
+== C0TAMIA ~一定！哦，我差点忘了，该给你点什么，谢你刚才帮忙。~
 DO ~GiveGoldForce(500)~
-== C0AURA2J ~You don't––oh, come on, Tamia, we're family!~
-== C0TAMIA ~No, no, trader's etiquette. I'd feel worse if you didn't take this. If you find yourself in Trademeet, though, I wouldn't mind it if you spent some of that on my stuff. We'll be sure to give you and your friends a great deal for everything!~
+== C0AURA2J ~你不必——哦，得了，塔米娅，我们是一家人！~
+== C0TAMIA ~不，不，商人礼数。你不收我更难受。不过你若到了贸市，我倒不介意你把那点钱花在我的货上。我们一定给你和你的朋友样样好价！~
 END
-++ ~We'll be sure to remember that.~ EXTERN C0TAMIA TAMIA-ENCOUNTER-AFTER-10
-++ ~As touching as this family reunion is, I think we've all got places to be.~ EXTERN C0TAMIA TAMIA-ENCOUNTER-AFTER-10
+++ ~我们一定记得。~ EXTERN C0TAMIA TAMIA-ENCOUNTER-AFTER-10
+++ ~这场家族重逢虽感人，我想我们各有去处。~ EXTERN C0TAMIA TAMIA-ENCOUNTER-AFTER-10
 
 CHAIN C0TAMIA TAMIA-ENCOUNTER-AFTER-10
-~Alright then, I'll see you around, cuz!~
-== C0KORSH ~Farewell.~
+~那好，回头见，堂姐！~
+== C0KORSH ~再会。~
 DO ~ActionOverride("c0korsh",EscapeAreaObject("En"))
 ActionOverride("C0TAMIA",EscapeAreaObject("En"))~ EXIT
 
 CHAIN IF ~GlobalGT("C0TamiaEncounter","GLOBAL",0)
 GlobalLT("C0KorshQuest","GLOBAL",1)~ THEN C0KORSH KORSH-SHOP
-~Good <DAYNIGHTALL>, <RACE>. Might I interest you in my wares?~
+~<DAYNIGHTALL>好，<RACE>。可愿看看我的货？~
 END
-++ ~Show me your wares.~ DO ~StartStore("c0ashop2",LastTalkedToBy)~ EXIT
-++ ~Not right now.~ EXIT
+++ ~给我看看你的货。~ DO ~StartStore("c0ashop2",LastTalkedToBy)~ EXIT
+++ ~现在不行。~ EXIT
 
 CHAIN IF WEIGHT #-1 ~Global("feudplot","GLOBAL",2)
 Global("C0KorshQuest","GLOBAL",0)~ THEN C0KORSH KORSH-QUEST-0
-~Greetings, <RACE>. If you have time, there is something I would ask of you.~
+~问候你，<RACE>。你若有时间，我有件事想求你。~
 END
-++ ~What is it?~ DO ~SetGlobal("C0KorshQuest","GLOBAL",1)~ + KORSH-QUEST-0-1
+++ ~是什么？~ DO ~SetGlobal("C0KorshQuest","GLOBAL",1)~ + KORSH-QUEST-0-1
 
 CHAIN C0KORSH KORSH-QUEST-0-1
-~I have heard the tales of your heroism throughout this town. I believe there is a task that you would be capable of accomplishing, and I will pay you well for it.~
-= ~Alongside my friend Tamia, I have set up a fairly comfortable place here as a trader in the outskirts of town. Were it only for myself, I would be satisfied. However, I have family and friends who left my former tribe with me, who are still in need of a proper home and safety.~
-= ~Though my personal connections here lend me enough goodwill to avoid scrutiny, I do not have the trust of the leaders of Trademeet to allow for the rest of my kin to join me here. You, however, may be able to persuade them.~
+~我听过你在这镇上各处的英勇传闻。我相信有件任务你能完成，我会重重酬谢。~
+= ~我跟朋友塔米娅一起，在镇外置了处还算舒适的商人落脚地。若只为我自己，我就满足了。可我有家人和朋友跟我离开旧部族，他们仍需要一个像样的家与安全。~
+= ~我在此的人脉虽够让我免于被审视，可我还没得到贸市领袖们的信任，让他们准许我其余亲族来此。可你，也许能说服他们。~
 END
-++ ~I could ask the High Merchant to give your people a place to live.~ + KORSH-QUEST-0-2
-++ ~And what business is this of mine?~ + KORSH-QUEST-0-2
-++ ~You want hobgoblins to live among the people here? And why should they allow you?~ + KORSH-QUEST-0-2
+++ ~我可以请高商会长给你的族人一个住处。~ + KORSH-QUEST-0-2
+++ ~这跟我有什么关系？~ + KORSH-QUEST-0-2
+++ ~你想让大地精住到这儿的人中间？他们凭什么该允你？~ + KORSH-QUEST-0-2
 
 CHAIN C0KORSH KORSH-QUEST-0-2
-~Of course, I am not so unreasonable to make such a demand without recompense. I am a trader, after all, and I know of something that may earn the trust of the High Merchant, if nobody else.~
-== C0KORSH ~I have here one of the Golden Acorns of Providence, one of multiple rare ingots that were once owned by the wealthiest merchants of Amn. Most are lost now, and the possession of them is desired for any merchant or Waukeenar in this nation.~
+~当然，我没那么不讲理，会不提报酬就提这种要求。毕竟我是商人，我知道有样东西也许能赢得高商会长的信任，若别人不能。~
+== C0KORSH ~我这儿有一枚天命金橡实，是曾属于安姆最富商人的多块稀有金锭之一。多数已失传，如今国内任何商人或沃金信徒都渴望拥有。~
 DO ~GiveItemCreate("C0AMISC7",Player1,1,0,0)~
-== NALIAJ IF ~InParty("NALIA")~ THEN ~The Acorns of Providence! My father showed me one when I was a child. They used to be a highly valued type of currency throughout Amn, though they're no longer treated as such because of how many have disappeared. Nowadays, they're mostly sought out by collectors.~
-== C0KORSH ~It was a stroke of luck that allowed for this one to fall into my hands. As a show of trust, I will give you mine, so that you may use it to compare against others, for there have been many forgeries made over time. If you may find at least four more during your travels, I believe that would be a gift that the merchants would be eager to accept.~
+== NALIAJ IF ~InParty("NALIA")~ THEN ~天命橡实！我小时候父亲给我看过一枚。它们曾是全安姆极受重视的一种通货，可因为失散太多，如今不再作通货用。现在多半只有收藏家在找。~
+== C0KORSH ~这一枚落在我手里纯属运气。为表信任，我把我这枚给你，好让你拿去跟别的比对，因为这些年伪造的很多。你若旅途中能再找到至少四枚，我相信那会是一份商人们乐意接受的礼物。~
 END
-++ ~Very well. I'll keep an eye out for them.~ + KORSH-QUEST-0-3
-++ ~You believe the merchants will accept you for some gold acorns?~ + KORSH-QUEST-0-3
+++ ~好。我会留意。~ + KORSH-QUEST-0-3
+++ ~你以为几枚金橡实就能让商人接纳你？~ + KORSH-QUEST-0-3
 
 CHAIN C0KORSH KORSH-QUEST-0-3
-~There is one more item I have heard tales of from the priests of Waukeen from whom I learned the art of trade. The weighing scales blessed and used by the Lady of Trade herself during the Time of Troubles.~
-= ~Unlike the acorns, however, I have no proof that such an item is anything more than a story. But should you discover it as well, it would make for even greater of a peace offering.~
-= ~It is not a simple task I ask of you, I know, for these are no common items to find. But I wish the best for my kin. Should you do this for me, I will repay you with a reward you will not be disappointed in.~
+~还有一样东西，是我从教我贸易之道的沃金祭司那儿听来的传说。贸易女神本人在动荡之年祝福并使用过的那台天平。~
+= ~不过跟橡实不同，我没有证据证明那东西不只是故事。可你若也找到了它，那会是更好的和平献礼。~
+= ~我知道我求你的不是简单事，这些都不是寻常能找的东西。可我希望我的亲族安好。你若为我办成，我会以你不会失望的报酬答谢。~
 EXIT
 
 CHAIN IF WEIGHT #-1 ~GlobalGT("C0KorshQuest","GLOBAL",0)
 GlobalLT("C0KorshQuest","GLOBAL",7)~ THEN C0KORSH KORSH-QUEST-1
-~Greetings again, <RACE>. What progress has there been towards my request?~
+~又问候你，<RACE>。我的请求有进展吗？~
 END
-+ ~Global("C0KorshQuest","GLOBAL",3)~ + ~The High Merchant is willing to meet with you for negotiations.~ + KORSH-QUEST-3
++ ~Global("C0KorshQuest","GLOBAL",3)~ + ~高商会长愿意跟你见面谈判。~ + KORSH-QUEST-3
 + ~!PartyHasItem("C0AMISC6")
-    NumItemsPartyGT("C0AMISC7",4)~ + ~I've found five of the acorns.~ + KORSH-QUEST-1-1
+    NumItemsPartyGT("C0AMISC7",4)~ + ~我找到五枚橡实了。~ + KORSH-QUEST-1-1
 + ~PartyHasItem("C0AMISC6")
-    NumItemsPartyGT("C0AMISC7",4)~ + ~I've found five of the acorns, and the scales of Waukeen.~ + KORSH-QUEST-1-2
-++ ~Not yet. Can I see your wares?~ DO ~StartStore("c0ashop2",LastTalkedToBy)~ EXIT
-++ ~I'm still looking for more.~ EXIT
+    NumItemsPartyGT("C0AMISC7",4)~ + ~我找到五枚橡实了，还有沃金的天平。~ + KORSH-QUEST-1-2
+++ ~还没有。能看看你的货吗？~ DO ~StartStore("c0ashop2",LastTalkedToBy)~ EXIT
+++ ~我还在找更多。~ EXIT
 
 CHAIN C0KORSH KORSH-QUEST-1-1
-~You have? Indeed, I see they are the real makings, as well. A pity the scales of Waukeen appeared to be no more than a legend.~
+~你找到了？果然，我看这些也是真品。可惜沃金的天平看来只是传说。~
 DO ~SetGlobal("C0KorshQuest","GLOBAL",2)~ EXTERN C0KORSH KORSH-QUEST-1-3
 
 CHAIN C0KORSH KORSH-QUEST-1-2
-~You have? Indeed, I see they are the real makings, as well. And Waukeen's blessed scales, as well? This is even more than I had hoped for, my friend.~
+~你找到了？果然，我看这些也是真品。还有沃金祝福过的天平？这比我期望的还多，朋友。~
 DO ~SetGlobal("C0KorshQuest","GLOBAL",2)~ EXTERN C0KORSH KORSH-QUEST-1-3
 
 CHAIN C0KORSH KORSH-QUEST-1-3
-~Please, bring them to the High Merchant and tell him of what I ask. I believe he will be more than reasonable when he sees my offering.~
+~请把它们带去给高商会长，告诉他我的请求。我相信他见了我的献礼会通情达理得多。~
 EXIT
 
 CHAIN C0KORSH KORSH-QUEST-3
-~Truly? I thank you, <RACE>. I will leave immediately to see him, then. You are welcome to come as well, if you wish to observe our negotiations.~
-== C0TAMIA IF ~InMyArea("C0TAMIA")~ THEN ~Good luck, Chip!~
-== C0KORSH ~Thank you.~
+~当真？谢谢你，<RACE>。那我这就去见。你若想旁观我们的谈判，也欢迎同去。~
+== C0TAMIA IF ~InMyArea("C0TAMIA")~ THEN ~祝你好运，奇普！~
+== C0KORSH ~谢谢。~
 DO ~SetGlobal("C0KorshQuest","GLOBAL",4)
 EscapeArea()~ EXIT
 
 EXTEND_TOP CELOGAN 80
 + ~Global("C0KorshQuest","GLOBAL",2)
-   NumItemsPartyGT("C0AMISC7",4)~ + ~Lord Logan, I've come in place of a merchant in the outskirts of town.~ EXTERN CELOGAN KORSH-QUEST-2
+   NumItemsPartyGT("C0AMISC7",4)~ + ~洛根大人，我代表镇外一位商人前来。~ EXTERN CELOGAN KORSH-QUEST-2
 END
 
 CHAIN CELOGAN KORSH-QUEST-2
-~Indeed? Such matters are usually brought to the attention of the guildmistress. Perhaps you should try to contact her, instead.~
+~是吗？这种事通常交公会女会长处理。也许你该去联系她。~
 END
-++ ~This is a... special case. He hopes you might hear his plea personally.~ + KORSH-QUEST-2-1
-++ ~I think you might be better suited for this. The merchant I speak of is the hobgoblin, Korsh Thurgarr.~ + KORSH-QUEST-2-2
+++ ~这是……特例。他希望你能亲耳听他的请求。~ + KORSH-QUEST-2-1
+++ ~我想这事你更适合。我说的商人是大地精科尔什·瑟尔加尔。~ + KORSH-QUEST-2-2
 
 CHAIN CELOGAN KORSH-QUEST-2-1
-~I see. Then perhaps you should explain the situation fully to me. So long as your client is reasonable, I will ~
+~我明白了。那你也许该把情况完整讲给我听。只要你的委托人通情达理，我会~
 END
-++ ~The merchant is a hobgoblin named Korsh Thurgarr. He hopes the town might allow his kin to find a home here, safe from the dangers of the wild.~ + KORSH-QUEST-2-2
+++ ~那商人是个叫科尔什·瑟尔加尔的大地精。他希望镇上能让他亲族在此安家，避开荒野的危险。~ + KORSH-QUEST-2-2
 
 CHAIN CELOGAN KORSH-QUEST-2-2
-~Ah... the hobgoblin working for Spindleweaver Traders? I believe I know whom you speak of. Though I have not met him personally, I have heard of his work alongside his employer, madame Tamia. By all accounts, he is an honest merchant, and some of the savvier merchants from other towns have come to prefer trading with him over others.~
-= ~I am certainly sympathetic towards his cause. It must have been undoubtedly difficult to escape the violent life he comes from, and become a skilled and relatively successful trader. If it were in my power, I would not hesitate to give his people the safety of a home.~
-= ~But such decisions are not mine alone to make, and some of the others with power in the town's politics will be... less enthused by the idea. Some will distrust him for his race, while others may not like the competition.~
-= ~Perhaps I will raise his case during our next official meeting, but that is the most I can do. Tell him I apologize for my limited power to give him what he asks.~
+~啊……替斯平德尔韦弗商行干活的那个大地精？我想我知道你说的是谁。我虽没亲自见过他，却听过他跟雇主塔米娅女士一起做事的传闻。据各方说法，他是个诚实的商人，外镇一些精明的商人也渐渐更愿跟他交易。~
+= ~我当然同情他的处境。从那种暴力的生活里脱身、成为有本事又相对成功的商人，一定极其艰难。若在我权内，我会毫不犹豫给他族人一个安全的家。~
+= ~可这样的决定不是我一人能做的，镇上政界另一些有权者会……不那么热衷。有人会因他的种族而不信他，另一些人也许不喜竞争。~
+= ~也许我会在下一次正式会议上提他的事，可我能做的仅此而已。告诉他，我为权力有限、无法给他所求而道歉。~
 END
 + ~NumItemsPartyGT("C0AMISC7",4)
-   !PartyHasItem("C0AMISC6")~ + ~Korsh understands the difficulty of what he asks. As his peace offering, I've been entrusted with five Golden Acorns of Providence, personally appraised by him.~ DO ~TakePartyItemNum("C0AMISC7",5) DestroyItem("C0AMISC7")~ + KORSH-QUEST-2-3
+   !PartyHasItem("C0AMISC6")~ + ~科尔什明白他所求之难。作为他的和平献礼，我受托带来五枚天命金橡实，由他亲自鉴定。~ DO ~TakePartyItemNum("C0AMISC7",5) DestroyItem("C0AMISC7")~ + KORSH-QUEST-2-3
 + ~NumItemsPartyGT("C0AMISC7",4)
-   PartyHasItem("C0AMISC6")~ + ~Korsh understands the difficulty of what he asks. As his peace offering, I've been entrusted with five Golden Acorns of Providence, personally appraised by him, as well as Waukeen's own blessed scales.~ DO ~SetGlobal("C0KorshQuestGaveScales","GLOBAL",1) TakePartyItem("C0AMISC6") DestroyItem("C0AMISC6") TakePartyItemNum("C0AMISC7",5) DestroyItem("C0AMISC7")~ + KORSH-QUEST-2-4
+   PartyHasItem("C0AMISC6")~ + ~科尔什明白他所求之难。作为他的和平献礼，我受托带来五枚天命金橡实，由他亲自鉴定，以及沃金本人祝福过的天平。~ DO ~SetGlobal("C0KorshQuestGaveScales","GLOBAL",1) TakePartyItem("C0AMISC6") DestroyItem("C0AMISC6") TakePartyItemNum("C0AMISC7",5) DestroyItem("C0AMISC7")~ + KORSH-QUEST-2-4
 
 CHAIN CELOGAN KORSH-QUEST-2-3
-~Five Golden Acorns of Providence, you say? Indeed, that is impressive, both for the gathering and the skills needed for appraising them for their integrity and value. That would, perhaps, be enough to persuade the other merchants...~
+~五枚天命金橡实，你说？果然，这很了不起，无论收集还是鉴定其真伪与价值的本事。那也许足以说服其他商人……~
 EXTERN CELOGAN KORSH-QUEST-2-5
 
 CHAIN CELOGAN KORSH-QUEST-2-4
-~By the gods! Waukeen's own scales from the Time of Troubles? I can scarcely believe my eyes. Most believe that these scales were naught but a legend, yet here they are before me. No doubt this would not only impress the merchants, but gain the support of the Waukeenar church as well.~
+~神啊！动荡之年沃金本人的天平？我几乎不敢信自己的眼睛。多数人以为这天平只是传说，可它就在我眼前。无疑这不但会让商人们折服，还能赢得沃金教会的支持。~
 EXTERN CELOGAN KORSH-QUEST-2-5
 
 CHAIN CELOGAN KORSH-QUEST-2-5
-~Very well, <CHARNAME>. I see the possibility of convincing the others with influence to agree to negotiations. Please, bring Korsh Thurgarr to me, and I will speak with him about the terms.~
+~好，<CHARNAME>。我看见了说服其他有影响者同意谈判的可能。请把科尔什·瑟尔加尔带来见我，我会跟他谈条件。~
 DO ~SetGlobal("C0KorshQuest","GLOBAL",3)~ EXIT
 
 CHAIN IF WEIGHT #-1 ~Global("C0KorshQuest","GLOBAL",5)~ THEN CELOGAN KORSH-QUEST-4
-~Ah, I see you've come as well, <CHARNAME>. We are still in the midst of negotiations. Please take a seat if you're interested.~
+~啊，我看你也来了，<CHARNAME>。我们还在谈判中。你若感兴趣，请坐。~
 DO ~SetGlobal("C0KorshQuest","GLOBAL",6)~
-== TRHMER01 ~Indeed, though this meeting should not be too much longer. We have just finished writing the contract for Mr... Thurgarr.~
-== C0KORSH ~In return for our fulfilling our part of the contract, a quota of our earnings as an officially recognized merchant branch will be taxed, as the law of the land dictates. Those of the Thurgarr family who wish to invest or otherwise become involved in trade will become associates of the merchants' guild, with all the benefits and responsibilities that entail. And... our kin will settle in the currently unoccupied land north of Trademeet.~
-== CELOGAN ~Forgive me. I understand it is not ideal, but there will be those who are... apprehensive towards having such unusual neighbors.~
-== TRHMER01 IF ~Global("C0KorshQuestGaveScales","GLOBAL",1)~ THEN ~Rest assured, however, that you will have our full support during the process of settling into your land. The church of Waukeen has made a very generous donation for your cause, and construction has already began. If you feel anything more is required, we may continue our negotiations...~
-== C0KORSH ~No, these terms are acceptable. I accept without complaints.~
-== TRHMER01 ~In that case, please sign under here. And you as well, milord.~
-== CELOGAN ~Of course.~
-== TRHMER01 ~I must say, Mr. Thurgarr, it is remarkably refreshing to have an honest meeting with entirely reasonable terms and no need to read the fine print for furtively written clauses that can be conveniently reinterpreted. You'll do well within our circle, I'm sure.~
-== CELOGAN ~Once we have passed the contract to be signed by the other merchants, everything will truly be in order. I assume I can leave the responsibility of that to you, guildmistress?~
-== TRHMER01 ~*sigh* It will not be a pleasant conversation. But I'm sure it'll all work out.~
-== CELOGAN ~Indeed. And with that, I officially congratulate and welcome you and your kin as official citizens of Trademeet, Mr. Thurgarr.~
-== C0KORSH ~Thank you. Since I have my own preparations to make, I will take up no more of your time. Good <DAYNIGHTALL>.~
+== TRHMER01 ~确实，不过这场会谈不会太久。我们刚写完给……瑟尔加尔先生的契约。~
+== C0KORSH ~作为我们履行契约那部分的条件，我们作为正式承认的商行分支，收益要按本地法律抽税。瑟尔加尔家那些想投资或参与贸易的人，会成为商人公会的伙伴，享有随之而来的一切权益与责任。而且……我们的亲族将定居在贸市北面目前无人占用的土地。~
+== CELOGAN ~请原谅。我明白这不理想，可总会有人对有这样的怪邻居……感到不安。~
+== TRHMER01 IF ~Global("C0KorshQuestGaveScales","GLOBAL",1)~ THEN ~不过请放心，在你们安顿进那片土地的过程中，我们会全力支持。沃金教会已为你们的事慷慨捐赠，建造也已开始。你若觉得还缺什么，我们可以继续谈……~
+== C0KORSH ~不，这些条件可接受。我毫无怨言地接受。~
+== TRHMER01 ~那就请在这下面签字。您也一样，大人。~
+== CELOGAN ~当然。~
+== TRHMER01 ~我得说，瑟尔加尔先生，能有一场条件完全合理、不必细读小字去找那些可被顺手重新解释的偷偷条款的诚实会谈，真令人神清气爽。你在我们这圈子里会做得很好，我确定。~
+== CELOGAN ~等我们把契约送去给其他商人签字，一切就真正就绪了。我想这责任可以交给你，公会女会长？~
+== TRHMER01 ~*叹气* 那不会是一场愉快的谈话。可我相信一切会成。~
+== CELOGAN ~确实。那么，我就此正式祝贺并欢迎你和你的亲族成为贸市的正式市民，瑟尔加尔先生。~
+== C0KORSH ~谢谢你。我还有些准备要做，不再占用你的时间。愿<DAYNIGHTALL>安好。~
 DO ~EscapeAreaMove("AR2014",356,270,SSE)~ EXIT
 
 CHAIN IF WEIGHT #-1 ~Global("C0KorshQuest","GLOBAL",6)~ THEN CELOGAN KORSH-QUEST-5
-~So, what do you think, guildmistress?~
+~那么，你觉得如何，公会女会长？~
 DO ~SetGlobal("C0KorshQuest","GLOBAL",7)~
-== TRHMER01 ~Well, certainly intelligent, well-mannered, remarkably shrewd in assessing the contract. I can sense he was still nervous once we started making progress, of course. That's to be expected, given his background and limited experience in the field.~
-== TRHMER01 IF ~Global("C0KorshQuestGaveScales","GLOBAL",1)~ THEN ~And, considering we now have the prestige of possessing an artifact of Waukeen, I am certain he will be quite popular before long.~
-== TRHMER01 ~We're going to need to give him support when it comes to dealing with the other guilds, naturally, given outer appearances. But I think in the long-term, it'll be a worthy investment.~
-== CELOGAN ~I trust your judgment, of course. With luck, Trademeet shall be all the more prosperous with our newest colleague.~
-== CELOGAN ~Thank you for your part in this, <CHARNAME>. I can see what has been put to paper today will be beneficial for everyone involved. I wish you a good <DAYNIGHTALL>.~
+== TRHMER01 ~嗯，当然聪明、有礼、在评估契约时精明得惊人。当然，我能感觉出我们开始有进展时他仍紧张。考虑到他的出身与在这一行的有限经验，这也在意料之中。~
+== TRHMER01 IF ~Global("C0KorshQuestGaveScales","GLOBAL",1)~ THEN ~而且，考虑到我们现在拥有了沃金的神器这份声望，我确定他不久就会相当受欢迎。~
+== TRHMER01 ~当然，对外观感上，我们得在跟其他公会打交道时给他支持。可我想长远看，这是一笔值得的投资。~
+== CELOGAN ~我当然信你的判断。运好的话，有了我们这位新同道，贸市会更兴旺。~
+== CELOGAN ~谢谢你在这事上出的力，<CHARNAME>。我看今天写下纸上的一切对各方都有益。愿你有个美好的<DAYNIGHTALL>。~
 DO ~ActionOverride("TRHMER01",EscapeArea())
 MoveToPoint([1222.426])
 SmallWait(1)
 Face(SW)~ EXIT
 
 CHAIN IF WEIGHT #-1 ~Global("C0KorshQuest","GLOBAL",7)~ THEN C0KORSH KORSH-QUEST-FINISH
-~Thank you for all of your assistance, <CHARNAME>. My kin now have a future thanks to your efforts and the generosity of the town. Please accept this reward along with my utmost gratitude.~
+~谢谢你的一切帮助，<CHARNAME>。多亏你的努力和镇上的慷慨，我的亲族如今有了未来。请收下这份报酬，连同我最大的感激。~
 DO ~SetGlobal("C0KorshQuest","GLOBAL",8) GiveGoldForce(3000) AddExperienceParty(10000) ChangeStoreMarkup("C0ASHOP2",100,40)~
-== C0KORSH IF ~Global("C0KorshQuestGaveScales","GLOBAL",1)~ THEN ~And, for the extra effort in finding the Scales of Waukeen and offering it for my need, please take my personal armor as an exchange. I believe I will no longer need it.~
+== C0KORSH IF ~Global("C0KorshQuestGaveScales","GLOBAL",1)~ THEN ~此外，为谢你额外费心找到沃金的天平并为我的需要献上它，请收下我私人的护甲作交换。我想我不再需要它了。~
 DO ~GiveItem("C0ACHAN1",Player1)~
-== C0KORSH ~Of course, I would be more than pleased to have you spend that gold back in my shop. And as extra incentive, you'll receive an exclusive discount for my wares from hereon, as you rightly deserve.~
+== C0KORSH ~当然，你若把那笔金币花回我店里，我会极高兴。再给你个额外诱因：从今往后你买我的货都享独家折扣，这是你应得的。~
 END
-+ ~Global("C0KorshQuest","GLOBAL",8)~ + ~So, what are your plans now, Korsh?~ + KORSH-QUEST-POST-1
-++ ~Then I'd like to take advantage of that. Show me your wares.~ DO ~StartStore("c0ashop2",LastTalkedToBy)~ EXIT
-++ ~I'm happy to have helped. Goodbye, Korsh.~ EXIT
++ ~Global("C0KorshQuest","GLOBAL",8)~ + ~那你现在有什么打算，科尔什？~ + KORSH-QUEST-POST-1
+++ ~那我想用上它。给我看看你的货。~ DO ~StartStore("c0ashop2",LastTalkedToBy)~ EXIT
+++ ~很高兴帮上忙。再见，科尔什。~ EXIT
 
 CHAIN IF WEIGHT #-1 ~GlobalGT("C0KorshQuest","GLOBAL",7)~ THEN C0KORSH KORSH-QUEST-POST
-~I greet you warmly, my friend. Have you come to see my wares?~
+~我热诚问候你，朋友。你来看我的货？~
 END
-+ ~Global("C0KorshQuest","GLOBAL",8)~ + ~So, what are your plans now, Korsh?~ + KORSH-QUEST-POST-1
-++ ~Yes, show me what you have.~ DO ~StartStore("c0ashop2",LastTalkedToBy)~ EXIT
-++ ~Not right now. Goodbye.~ EXIT
++ ~Global("C0KorshQuest","GLOBAL",8)~ + ~那你现在有什么打算，科尔什？~ + KORSH-QUEST-POST-1
+++ ~是，给我看看你有什么。~ DO ~StartStore("c0ashop2",LastTalkedToBy)~ EXIT
+++ ~现在不了。再见。~ EXIT
 
 CHAIN C0KORSH KORSH-QUEST-POST-1
-~I will continue my association with Spindleweaver Traders, of course. Now that we are recognized as proper citizens, my kin can begin to enter the mercantile world and build proper lives of their own. They have much to learn first, and working with the other merchants will be a good start.~
-= ~In the future, perhaps I will seek to build friendly relations with the neighboring human settlements, but that will have to wait, for I doubt all the leaders of such places will be as welcoming as those of Trademeet.~
+~我当然会继续跟斯平德尔韦弗商行来往。既然我们已是正式市民，我的亲族就能开始进入商界、建立自己的正当生活。他们得先学很多，跟别的商人共事是个好开始。~
+= ~将来，也许我会设法跟邻近的人类聚落建立友好往来，可那得等，因为我怀疑这类地方的领袖未必都像贸市诸公那么好客。~
 END
-+ ~Global("OgreAlliance","GLOBAL",1)~ + ~Perhaps you can start with the village of Imnesvale. They have an alliance with a group of benevolent ogres, so I'm certain they'd be willing to trade with you.~ DO ~SetGlobal("C0KorshQuest","GLOBAL",9)~ + KORSH-QUEST-POST-2
-++ ~Show me your wares, Korsh.~ DO ~StartStore("c0ashop2",LastTalkedToBy)~ EXIT
-++ ~I see. Good luck on that end, Korsh. I'll talk to you another time.~ EXIT
++ ~Global("OgreAlliance","GLOBAL",1)~ + ~也许你可以从伊姆斯谷村开始。他们跟一群和善的食人魔有盟约，所以我确定他们愿跟你贸易。~ DO ~SetGlobal("C0KorshQuest","GLOBAL",9)~ + KORSH-QUEST-POST-2
+++ ~给我看看你的货，科尔什。~ DO ~StartStore("c0ashop2",LastTalkedToBy)~ EXIT
+++ ~我明白了。那边祝你好运，科尔什。下次再聊。~ EXIT
 
 CHAIN C0KORSH KORSH-QUEST-POST-2
-~Indeed? That would be a potential opportunity... and I know some of my kin would be more comfortable in the country as opposed to here. Thank you again, <CHARNAME>, for giving me this valuable information. I will send my younger brother, Torpuk Thurgarr, as a liaison to this Imnesvale.~
-= ~Perhaps you might meet him there should he establish trade relations there. Though be warned, my brother is a little... odd, so do not be alarmed by his antics. He is harmless.~
+~当真？那会是个潜在机会……我知道我有几个亲族在乡下会比在这儿自在。再次谢你给我这宝贵消息，<CHARNAME>。我会派我弟弟托尔普克·瑟尔加尔去伊姆斯谷做联络。~
+= ~他若在那儿建立贸易往来，你也许能见到他。不过先警告你，我弟弟有点……古怪，别被他的举动吓到。他无害。~
 EXIT
 
 CHAIN IF WEIGHT #-1 ~Global("C0KorshQuest","GLOBAL",9)~ THEN C0KORSHB KORSH-QUEST-BROTHER-1
-~Hello hello! You <CHARNAME> or you not? Yes, you <CHARNAME>, yes, yes?~
+~你好你好！你<CHARNAME>还是不是？是，你<CHARNAME>，是，是？~
 DO ~SetGlobal("C0KorshQuest","GLOBAL",10)~
 END
-++ ~Uh... that's right, I'm <CHARNAME>.~ + KORSH-QUEST-BROTHER-2
-++ ~You're... Korsh's brother, I assume?~ + KORSH-QUEST-BROTHER-2
+++ ~呃……对，我是<CHARNAME>。~ + KORSH-QUEST-BROTHER-2
+++ ~我猜你是……科尔什的弟弟？~ + KORSH-QUEST-BROTHER-2
 
 CHAIN C0KORSHB KORSH-QUEST-BROTHER-2
-~Yes yes yes. You <CHARNAME>, friend of Thurgarr family. Me "Trip". Torpuk Thurgarr. Also, me trip. Many times on journey. Trip come to village, very welcome. Make friends with ogres who come to village too.~
-= ~Now Trip sells, also buys. Learn from brother. Also get things from brother, so you buy from me or Korsh, same deal. You want to see 'wores'? No, wares! Yes. Trip get new wares from brother when go on journey. You can see.~
+~是是是。你<CHARNAME>，瑟尔加尔家的朋友。我“崔普”。托尔普克·瑟尔加尔。还有，我绊（trip）。旅途中绊很多次。崔普到村子，很受欢迎。还跟来村子的食人魔交朋友。~
+= ~现在崔普卖，也买。跟哥哥学。也从哥哥拿东西，所以你跟我买、跟科尔什买，一样交易。你想看“货”？不，货！对。崔普远行时从哥哥拿新货。你可以看。~
 END
-++ ~Sure... just don't sell any more of your terrible jokes.~ DO ~StartStore("c0ashop2",LastTalkedToBy)~ EXIT
-++ ~Maybe another time... I've, um, got somewhere to be.~ EXIT
-++ ~I'm going to get far, faaaar away from you now.~ EXIT
+++ ~好……只是别再讲你那些烂笑话了。~ DO ~StartStore("c0ashop2",LastTalkedToBy)~ EXIT
+++ ~也许下次……我，呃，有事要去。~ EXIT
+++ ~我现在要离你远、很远。~ EXIT
 
 CHAIN IF WEIGHT #-1 ~GlobalGT("C0KorshQuest","GLOBAL",9)~ THEN C0KORSHB KORSH-QUEST-BROTHER-3
-~Hello hello, <CHARNAME>. You buy from Trip, or sell to Trip? Trip knows how to do both.~
+~你好你好，<CHARNAME>。你跟崔普买，还是卖给崔普？崔普两样都会。~
 END
-++ ~How's the village treating you?~ + KORSH-QUEST-BROTHER-4
-++ ~Show me your wares.~ DO ~StartStore("c0ashop2",LastTalkedToBy)~ EXIT
-++ ~I don't need to do either right now.~ EXIT
+++ ~村子待你怎么样？~ + KORSH-QUEST-BROTHER-4
+++ ~给我看看你的货。~ DO ~StartStore("c0ashop2",LastTalkedToBy)~ EXIT
+++ ~我现在两样都不需要。~ EXIT
 
 CHAIN C0KORSHB KORSH-QUEST-BROTHER-4
-~Very good, yes yes. People here good to Trip. Trade many things, teach Trip how to do things properly. Trip like it here.~
-= ~You buy or sell from Trip?~
+~很好，是是。这儿人对崔普好。交易很多东西，教崔普怎么正经做事。崔普喜欢这儿。~
+= ~你跟崔普买还是卖？~
 END
-++ ~Show me your wares.~ DO ~StartStore("c0ashop2",LastTalkedToBy)~ EXIT
-++ ~Not right now.~ EXIT
+++ ~给我看看你的货。~ DO ~StartStore("c0ashop2",LastTalkedToBy)~ EXIT
+++ ~现在不行。~ EXIT
 
 CHAIN IF WEIGHT #-1 ~InParty("C0Aura")
 Range("C0Aura",15)
 !Dead("C0Aura")
 GlobalGT("C0TamiaEncounter","GLOBAL",0)~ THEN C0TAMIA TAMIA-SHOP1
-~Hey there, dearest cousin and friends! Might I interest you in something shiny, glittery... or perhaps magical?~
+~哟，最亲爱的堂姐和朋友们！可要看看亮闪闪、晃眼……或者带魔法的东西？~
 END
-++ ~Show me your wares.~ DO ~StartStore("c0ashop1",LastTalkedToBy)~ EXIT
-++ ~Not right now.~ EXIT
+++ ~给我看看你的货。~ DO ~StartStore("c0ashop1",LastTalkedToBy)~ EXIT
+++ ~现在不行。~ EXIT
 
 CHAIN IF WEIGHT #-1 ~OR(3)
 !InParty("C0Aura")
 !Range("C0Aura",15)
 Dead("C0Aura")
 GlobalGT("C0TamiaEncounter","GLOBAL",0)~ THEN C0TAMIA TAMIA-SHOP2
-~Hey there, friends! Might I interest you in something shiny, glittery... or perhaps magical?~
+~哟，朋友们！可要看看亮闪闪、晃眼……或者带魔法的东西？~
 END
-++ ~Show me your wares.~ DO ~StartStore("c0ashop1",LastTalkedToBy)~ EXIT
-++ ~Not right now.~ EXIT
+++ ~给我看看你的货。~ DO ~StartStore("c0ashop1",LastTalkedToBy)~ EXIT
+++ ~现在不行。~ EXIT
 
 ///////////////////////////
 // Portal Quest
 ///////////////////////////
 
 CHAIN IF WEIGHT #-1 ~Global("C0AuraBG2Quest2","GLOBAL",1)~ THEN C0AURA2J QUEST2-1
-~<CHARNAME>, can I take a look at that gem?~ [C0BLANK]
+~<CHARNAME>，我能看看那颗宝石吗？~ [C0BLANK]
 DO ~SetGlobal("C0AuraBG2Quest2","GLOBAL",2)~
 END
-  ++ ~Sure, here you go.~ + QUEST2-1-1
-  ++ ~Fine, but be quick with it.~ + QUEST2-1-1
+  ++ ~当然，给你。~ + QUEST2-1-1
+  ++ ~好，可快点。~ + QUEST2-1-1
 
 CHAIN C0AURA2J QUEST2-1-1
-~This is... if I'm not mistaken, this is an elemental essence. They're magical gem-like items that come from the various Elemental Planes, and are filled with elemental energy. You don't find them normally on the Prime Material Plane.~
-== C0AURA2J IF ~Global("C0AuraKnowsBG1","GLOBAL",1)~ THEN ~They're like... hmm, remember that ice crystal we found while travelling the Sword Coast? It's something like that, but many times more powerful.~
+~这是……我若没弄错，这是元素精华。那是来自各个元素位面、充满元素能量的魔法宝石般的东西。主物质界通常找不到。~
+== C0AURA2J IF ~Global("C0AuraKnowsBG1","GLOBAL",1)~ THEN ~它们像……嗯，还记得我们在剑湾旅行时找到的那颗冰晶吗？跟那类似，可强上许多倍。~
 END
   + ~OR(2)
   	 Class(Player1,MAGE_ALL)
-	 CheckStatGT(Player1,50,LORE)~ + ~I've heard of these things. They're normally used as power sources, aren't they?~ + QUEST2-1-2A
-  ++ ~So what can they be used for?~ + QUEST2-1-2
-  ++ ~Get to the point.~ + QUEST2-1-2
+	 CheckStatGT(Player1,50,LORE)~ + ~我听过这东西。它们通常用作动力源，对吧？~ + QUEST2-1-2A
+  ++ ~那它们能用来做什么？~ + QUEST2-1-2
+  ++ ~说重点。~ + QUEST2-1-2
 
 CHAIN C0AURA2J QUEST2-1-2
-~Well, to put it simply... they can be used as for enchantment, most of the time. Magical items made with them will have elemental powers. This one, though...~
+~嗯，简单说……多数时候能用来附魔。用它造的魔法物品会带元素之力。可这一颗……~
 EXTERN C0AURA2J QUEST2-1-3
 
 CHAIN C0AURA2J QUEST2-1-2A
-~Yes! That's exactly right. Smaller kinds can be used to create magical items with the power of the elements. This one, though...~
+~对！一点没错。小些的能用来造带元素之力的魔法物品。可这一颗……~
 EXTERN C0AURA2J QUEST2-1-3
 
 CHAIN C0AURA2J QUEST2-1-3
-~Compared to the kinds I've seen before, it's a little unstable. Ah—don't worry, I'm not saying it'll explode or anything like that. But it's a little *too* full of energy to be used for standard crafting.~
-= ~I do know one thing they could be used for, though... with an appropriate housing system, they can be used as a conduit to open portals into small pockets of the planes they were made in. Most of these types of crystals don't have enough power for that, but these are very exceptional.~
+~跟我以前见过的相比，它有点不稳定。啊——别担心，我不是说它会炸之类。可它能量太满了点，没法用于常规制作。~
+= ~不过我知道能拿它做一件事……配上一套合适的容纳装置，能作导管，打开通往其诞生位面小口袋的传送门。这类晶体多没那能量，可这些非常特殊。~
 END
-  ++ ~But what use would that be?~ + QUEST2-1-4
-  ++ ~And I'd assume these planes would be very dangerous?~ + QUEST2-1-5
+  ++ ~可那有什么用？~ + QUEST2-1-4
+  ++ ~而且我猜那些位面会非常危险？~ + QUEST2-1-5
 
 CHAIN C0AURA2J QUEST2-1-4
-~Well... the joy of exploration, I suppose. It'd be extremely dangerous, of course. But so exciting!~
+~嗯……探索的乐趣，我想。当然会极危险。可多刺激！~
 EXTERN C0AURA2J QUEST2-1-6
 
 CHAIN C0AURA2J QUEST2-1-5
-~Oh, yes. Of course. But also, potentially wondrous!~
+~哦，是。当然。可也可能奇妙无比！~
 EXTERN C0AURA2J QUEST2-1-6
 
 CHAIN C0AURA2J QUEST2-1-6
-~I know, I know... it's unnecessary. But think about it! The sights, the treasures, the hidden knowledge! We'd just need a portal to use as a medium for these power crystals...~
+~我知道，我知道……没必要。可你想想！那些景致、那些宝藏、那些隐藏的知识！我们只需要一道传送门作这些能量晶体的媒介……~
 END
-  ++ ~You have a portal in your workshop, don't you?~ + QUEST2-1-7
+  ++ ~你工坊里有一道传送门，对吧？~ + QUEST2-1-7
 
 CHAIN C0AURA2J QUEST2-1-7
-~Oh... right! I was trying to build as way to get back and forth from my home in Anchoril... but I never got it to work. I couldn't get my hands on a proper translocation crystal that would be powerful enough to make the distance.~
-= ~It's possible... maybe. But without some adjustments... I think the energies would probably destroy the structure before it had a chance to open a planar portal. I'd need some extra parts... and they have to be from a specific material, or it won't be strong enough.~
-= ~Well, maybe it's something to keep in mind if you want to try and explore the planes. Who knows what we might find?~
+~哦……对！我一直想建条往返我故乡安科里尔的路……可从没弄成。我弄不到一颗能量够跨越那距离的合规格转移晶体。~
+= ~有可能……也许。可没些调整……我想那些能量大概会在打开位面传送门之前先把结构毁掉。我需要些额外零件……而且必须是特定材料，否则不够强。~
+= ~嗯，也许你若想尝试探索位面，这事可以记着。谁知道我们会找到什么？~
 END
-  ++ ~It could be interesting. I'll keep my eye out for unusual parts.~ + QUEST2-1-8
-  ++ ~That seems overly risky. Let's not get too ahead of ourselves.~ + QUEST2-1-9
+  ++ ~可能挺有意思。我会留意不寻常的零件。~ + QUEST2-1-8
+  ++ ~那似乎太冒险。别走得太远。~ + QUEST2-1-9
 
 CHAIN C0AURA2J QUEST2-1-8
-~Okay! I'll tell you if we've found enough suitable parts, and then we can bring them back to the workshop and I'll see what I can put together.~
+~好！若我们找够合适零件，我告诉你，然后带回工坊，我看看能拼出什么。~
 EXIT
 
 CHAIN C0AURA2J QUEST2-1-9
-~You may be right. Well, it's just a crazy idea, but if we find enough parts, I'll tell you and we can think about finishing the portal I've got in the workshop.~
+~你也许说得对。嗯，这只是个疯主意，可若我们找够零件，我告诉你，我们可以想着把工坊那道传送门弄完。~
 EXIT
 
 CHAIN IF WEIGHT #-1 ~Global("C0AuraBG2Quest2","GLOBAL",3)~ THEN C0AURA2J QUEST2-3
-~Hmm... huh... oh, this looks just right! <CHARNAME>, I think these parts will do!~ [C0BLANK]
+~嗯……嗯……哦，这看着正合适！<CHARNAME>，我想这些零件行！~ [C0BLANK]
 DO ~SetGlobal("C0AuraBG2Quest2","GLOBAL",4)~
-= ~We can get back to the workshop whenever we have time and I'll set things up. This'll be fun!~
+= ~我们有空就回工坊，我来布置。这会有意思！~
 EXIT
 
 CHAIN IF WEIGHT #-1 ~Global("C0AuraBG2Quest2","GLOBAL",5)~ THEN C0AURA2J QUEST2-5
-~Okay, let's see... if I readjust it so that fits there... no, wait, that'll break it. Bad idea.~ [C0BLANK]
+~好，看看……我若重新调一下，让它装在那儿……不，等等，那会弄坏。坏主意。~ [C0BLANK]
 DO ~SetGlobal("C0AuraBG2Quest2","GLOBAL",6)~
-= ~No... no... that's not going to work, too unstable, we might end up trapped in limbo if it breaks down halfway... okay, let me think it through again...~
-= ~Yep, that should go... there... hgggnnhhh!~
-= ~Nnnngh...! Oh, come on, just a little bit more...!~
+= ~不……不……那不行，太不稳定，中途坏掉我们也许会困在limbo——呃，困在虚空里……好，让我再想一遍……~
+= ~对，那该装……那儿……嗯嗯嗯！~
+= ~嗯嗯……！哦，来嘛，就差一点……！~
 END
-  ++ ~You seem to be having a hard time.~ + QUEST2-5-1
-  ++ ~Need a hand?~ + QUEST2-5-1
-  ++ ~Hurry up, will you?~ + QUEST2-5-1
+  ++ ~看来你挺吃力。~ + QUEST2-5-1
+  ++ ~要帮忙吗？~ + QUEST2-5-1
+  ++ ~快点，行吗？~ + QUEST2-5-1
 
 CHAIN C0AURA2J QUEST2-5-1
-~Sorry, I just... can't... get these two pieces to secure themselves together... ugh, I give up. Guess I need to build up some muscle for this kind of thing.~
-= ~<CHARNAME>, could you... help me out on this? Just put the parts into the generators in the right order. I've labelled the parts so you know which goes first. Oh, just in case there's anything in the generators, I'll put it on the shelf to the right.~
+~抱歉，我只是……没法……把这两块固定到一起……呃，我放弃。看来我得练点肌肉才干得了这种活。~
+= ~<CHARNAME>，你能……帮我一把吗？按正确顺序把零件放进发生器就行。我给零件标了号，你知道哪个先。哦，万一发生器里有东西，我放到右边架子上。~
 DO ~ActionOverride(Player1,TakePartyItem("C0AMISC1")
 ActionOverride(Player1,TakePartyItem("C0AMISC2")
 ActionOverride(Player1,TakePartyItem("C0AMISC3")
 ActionOverride(Player1,TakePartyItem("C0AMISC4")~ EXIT
 
 CHAIN IF WEIGHT #-1 ~Global("C0AuraBG2Quest2","GLOBAL",7)~ THEN C0AURA2J QUEST2-7
-~Ooh, there we go. Looks like that did it... now just let me unlock the power compartment on the right. That's where the power crystal goes.~ [C0BLANK]
+~哦，好了。看来成了……现在让我打开右边那个动力隔间。动力晶体就装那儿。~ [C0BLANK]
 DO ~SetGlobal("C0AuraBG2Quest2","GLOBAL",8)
 PlaySound("AMB_D21")
 Unlock("Container007")~ EXIT
 
 CHAIN IF WEIGHT #-1 ~Global("C0AuraBG2Quest2FireFirstTalk","GLOBAL",1)~ THEN C0AURA2J QUEST2-FIRE
-~The Elemental Plane of Fire... the tomes of lore say that its landscape resembles that of the Prime Material Plane most closely, but with extreme heat... it'll be lethal to try and enter without some protection from fire, or the environment itself will burn us to death. I can make potions that will keep us at least able to survive there for a couple of hours, but it'd be best if we have some appropriate spells or magical items to help us.~ [C0BLANK]
+~火元素位面……典籍说它的地貌最接近主物质界，只是极热……不做火焰防护就进去会致命，或者环境本身会把我们烧死。我能做药水让我们至少撑住几个钟头，可最好还有些合适的法术或魔法物品帮忙。~ [C0BLANK]
 DO ~SetGlobal("C0AuraBG2Quest2FireFirstTalk","GLOBAL",2)~
 END
 IF ~Global("C0AuraBG2Quest2FirstTime","GLOBAL",0)~ EXTERN C0AURA2J QUEST2-FIRSTTIME
 IF ~!Global("C0AuraBG2Quest2FirstTime","GLOBAL",0)~ EXIT
 
 CHAIN C0AURA2J QUEST2-FIRSTTIME
-~Since the portal will only exist from our end... I've prepared a device that will pull us back to this plane if we want to return or if things get dangerous. Don't worry about being stranded over on the other side.~
+~既然传送门只在我们这端存在……我做了个装置，我们想回去或出事时能把我们拉回本位面。别担心被困在对面。~
 DO ~SetGlobal("C0AuraBG2Quest2FirstTime","GLOBAL",1)~ EXIT
 
 CHAIN IF WEIGHT #-1 ~Global("C0AuraBG2Quest2FireBattle","GLOBAL",1)~ THEN C0AURA2J QUEST2-FIRE-BATTLE-1
-~Oh... ohhh... I think even "extreme heat" was an understatement. This has to be nearly as hot as the sun... and the smoke... *cough* *cough*~ [C0BLANK]
+~哦……哦……我想连“极热”都说轻了。这几乎跟太阳一样热……还有那烟……*咳* *咳*~ [C0BLANK]
 DO ~SetGlobal("C0AuraBG2Quest2FireBattle","GLOBAL",2)~
-== C0AURA2J ~And, um... it looks like we've got company.~
-== C0AFIR01 ~Wretched primessss... what madnessss of you to intrude upon the palace of Lord V'thilix, the Almighty Csssinder... your charred corpssssesss will be a tribute to our massster...~
-== C0AFIR01 ~Take pride in knowing that General Sssss'aalvlani the assshen ssspear, Hissss Lordssship'ssss loyal ssservant will be your undoing...~
+== C0AURA2J ~而且，呃……看来我们有伴了。~
+== C0AFIR01 ~可悲的凡人……竟敢闯全能者克辛德陛下、维斯利克斯大人的宫殿……你们烧焦的尸体将献给我们主人……~
+== C0AFIR01 ~自豪吧，知道灰烬之矛萨阿尔夫拉尼将军、陛下忠仆，将是你们的终结者……~
 DO ~Enemy()~ EXIT
 
 CHAIN IF WEIGHT #-1 ~Global("C0AuraBG2Quest2FireBattle","GLOBAL",3)~ THEN C0AURA2J QUEST2-FIRE-BATTLE-3
-~Whew... that was pretty rough. I thought we might've been done for, trying to fight in this scorching heat...~ [C0BLANK]
+~呼……真够呛。我以为在这烤人的热里作战我们可能完了……~ [C0BLANK]
 DO ~SetGlobal("C0AuraBG2Quest2FireBattle","GLOBAL",4)~
-= ~It looks like we appeared in a pretty bad position too, with all this magma surrounding us... I'll just teleport us back and...~
-= ~*click*~
-= ~...Huh?~
-= ~*click* *click* *clickclickclick*... oh no, it's not working...~
+= ~看来我们出现的位置也糟，四周全是岩浆……我这就把我们传送回去，然后……~
+= ~*咔*~
+= ~……嗯？~
+= ~*咔* *咔* *咔咔咔*……哦不，不管用……~
 END
-  ++ ~What?!~ + QUEST2-FIRE-BATTLE-3-1
-  ++ ~This was a terrible idea...~ + QUEST2-FIRE-BATTLE-3-1
-  ++ ~Did it break during the fight?~ + QUEST2-FIRE-BATTLE-3-1
+  ++ ~什么？！~ + QUEST2-FIRE-BATTLE-3-1
+  ++ ~这主意糟透了……~ + QUEST2-FIRE-BATTLE-3-1
+  ++ ~是战斗中弄坏了吗？~ + QUEST2-FIRE-BATTLE-3-1
 
 CHAIN C0AURA2J QUEST2-FIRE-BATTLE-3-1
-~No... no, I made sure it was functioning! Wait... it must be the temperature... it's damaged the mechanisms! How did I not think of that?~
-= ~I... I can fix it, I promise, <CHARNAME>... it's just going to take a moment...~
+~不……不，我确认过它能用！等等……一定是温度……把机构弄坏了！我怎么没想到这个？~
+= ~我……我能修好，我保证，<CHARNAME>……只是得一会儿……~
 END
-  ++ ~We might not have a moment to spare. Look over there!~ DO ~ClearAllActions() StartCutSceneMode() StartCutScene("C0ACUT20")~ EXIT
-  ++ ~Hurry up! There's more enemies coming our way!~ DO ~ClearAllActions() StartCutSceneMode() StartCutScene("C0ACUT20")~ EXIT
+  ++ ~我们也许没一会儿可浪费。看那边！~ DO ~ClearAllActions() StartCutSceneMode() StartCutScene("C0ACUT20")~ EXIT
+  ++ ~快点！更多敌人来了！~ DO ~ClearAllActions() StartCutSceneMode() StartCutScene("C0ACUT20")~ EXIT
 
 
 CHAIN IF WEIGHT #-1 ~Global("C0AuraBG2Quest2FireBattle","GLOBAL",4)~ THEN C0AUKARI QUEST2-FIRE-BATTLE-4
-~Hmph. It seems the precision of the device wasn't fully tuned to the correct level.~ [C0BLANK]
+~哼。看来这装置的精度没调到正确水准。~ [C0BLANK]
 DO ~SetGlobal("C0AuraBG2Quest2FireBattle","GLOBAL",5)~
-== C0AUKARI ~Who are you? No denizen of the Plane of Fire, that much is obvious. Another planeswalker, then? Should I regard you as friend or foe?~
+== C0AUKARI ~你是谁？显然不是火位面的居民。那么，另一位位面旅者？我该把你当友还是敌？~
 END
-  ++ ~I could ask you the same question.~ EXTERN C0AUKARI QUEST2-FIRE-BATTLE-4-1
-  ++ ~As long as you have no quarrel with us, I have no quarrel with you.~ EXTERN C0AUKARI QUEST2-FIRE-BATTLE-4-1
-  ++ ~If you want a fight, I'll give you a fight.~ EXTERN C0AUKARI QUEST2-FIRE-BATTLE-4-2
+  ++ ~我也能问你同样的话。~ EXTERN C0AUKARI QUEST2-FIRE-BATTLE-4-1
+  ++ ~只要你们不跟我为敌，我就不跟你们为敌。~ EXTERN C0AUKARI QUEST2-FIRE-BATTLE-4-1
+  ++ ~你要打，我就陪你打。~ EXTERN C0AUKARI QUEST2-FIRE-BATTLE-4-2
 
 CHAIN C0AUKARI QUEST2-FIRE-BATTLE-4-1
-~Fair enough.~
+~行。~
 EXTERN C0AUKARI QUEST2-FIRE-BATTLE-4-3
 
 CHAIN C0AUKARI QUEST2-FIRE-BATTLE-4-2
-~Hmph. Bold, but I advise you keep your temper in check. You may regret coming into conflict with one of my ability, especially here where my magic is even greater.~
+~哼。大胆，可我劝你收敛火气。跟我这样本事的人起冲突，你也许会后悔，尤其在这儿，我的魔法更强。~
 EXTERN C0AUKARI QUEST2-FIRE-BATTLE-4-3
 
 CHAIN C0AUKARI QUEST2-FIRE-BATTLE-4-3
-~In terms of introductions, you may refer to me as Karihi, arch-pyromancer and headmistress of the Academy of Flame Shapers. It is an institution created by myself in order to train arcanists hoping to master the energies of elemental fire.~
+~自我介绍的话，你可以称我卡里希，首席焰法兼塑焰学院院长。那是我为训练有志掌握火元素能量的奥术师而创的学府。~
 END
-  ++ ~I'm <CHARNAME>.~ + QUEST2-FIRE-BATTLE-4-4
-  ++ ~I feel like I've heard of you somewhere before...~ EXTERN C0AUKARI QUEST2-FIRE-BATTLE-4-5
+  ++ ~我是<CHARNAME>。~ + QUEST2-FIRE-BATTLE-4-4
+  ++ ~我觉得我以前在哪儿听过你……~ EXTERN C0AUKARI QUEST2-FIRE-BATTLE-4-5
 
 CHAIN C0AUKARI QUEST2-FIRE-BATTLE-4-4
-~<CHARNAME>, is it? I believe I have heard tales of you, now that I think of it... quite an adventurer and troubleseeker you are, from what I hear... much like someone I know.~
+~<CHARNAME>，是吗？想起来，我确实听过你的传闻……据我所听，你是个相当能冒险、能惹麻烦的人……像我认识的某人。~
 EXTERN C0AUKARI QUEST2-FIRE-BATTLE-4-5
 
 CHAIN C0AUKARI QUEST2-FIRE-BATTLE-4-5
-~Perhaps you have heard of my name in the past? It has been many years since my adventuring days, but perhaps I still have a reputation outside of Silverymoon? No? No matter, there is still time, once my apprentices start to prove their merit.~
+~你也许以前听过我的名字？我冒险的日子已过去许多年，可爱也许在银月城之外仍有名声？没有？没关系，等我的学徒开始显出本事，还有的是时间。~
 END
 IF ~Dead("C0Aura")~ EXTERN C0AUKARI QUEST2-FIRE-BATTLE-4-DEAD
 IF ~!Dead("C0Aura")~ EXTERN C0AUKARI QUEST2-FIRE-BATTLE-4-ALIVE
 
 CHAIN C0AUKARI QUEST2-FIRE-BATTLE-4-DEAD
-~That said, perhaps we are wasting time here conversing, as I see one of your allies seems to have fallen by the hands of this plane's denizens? You are quite fortunate that I come prepared. I have a frequent need for Rods of Resurrection when faced with the ineptitude of my students.~
+~话虽如此，也许我们在这儿闲聊是浪费时间，我看你一位同伴似乎倒在位面居民手里了？你运气好，我备着东西。面对我学生的无能，我常需复活法杖。~
 DO ~SetGlobal("C0AuraKarihiRevived","GLOBAL",1)
 ClearAllActions()
 StartCutSceneMode()
@@ -2706,79 +2706,79 @@ StartDialogNoSet(Player1)~ EXIT
 
 CHAIN IF WEIGHT #-1 ~Global("C0AuraBG2Quest2FireBattle","GLOBAL",5)
 Global("C0AuraKarihiRevived","GLOBAL",1)~ THEN C0AUKARI QUEST2-FIRE-BATTLE-4-REVIVED
-~There you go.~ [C0BLANK]
+~好了。~ [C0BLANK]
 DO ~SetGlobal("C0AuraKarihiRevived","GLOBAL",-1)~
-== C0AURA2J ~Oww... that's a sort of pain I'd rather not feel again if I can avoid it. Oh, there you are, <CHARNAME>. And, um... who's this?~
-== C0AUKARI ~Your benevolent savior, Archmage Karihi. Be grateful for my generosity, would you? I will not even charge you for this expense.~
+== C0AURA2J ~哎哟……只要我能避开，这种痛我不想再尝。哦，你在这儿，<CHARNAME>。而且，呃……这是谁？~
+== C0AUKARI ~你的恩人，大法师卡里希。感激我的慷慨吧？这花费我都不收你的。~
 EXTERN C0AUKARI QUEST2-FIRE-BATTLE-4-ALIVE
 
 CHAIN C0AUKARI QUEST2-FIRE-BATTLE-4-ALIVE
-~There is something familiar about your gnome companion... though I cannot put my finger on it. But I feel unnaturally at ease to see her, despite this being our first meeting...~
-== C0AURA2J ~Well... it's nice to meet a friendly face. I'm Aura, of the Lantanese clan of Glimmershine.~
-== C0AUKARI ~'Glimmershine'? Lantanese clan...? Ah... I see now. What an unexpected coincidence.~
-== C0AURA2J ~Hmm?~
-== C0AUKARI ~Your grandmother is Minerva Glimmershine, if I am not mistaken? You resemble her closely in appearance.~
-== C0AURA2J ~Yes... yes! How did you know?~
-== C0AUKARI ~How did *I* know? That would be quite the tale. Put simply, I had the... pleasure of travelling alongside her in my younger days. Blue-haired, wild, careless, talked too quickly and too often. But I valued her company... as uncharacteristic as it is for me to say it.~
-== C0AURA2J ~You're... one of the heroes who fought in the North, aren't you?~
-== C0AUKARI ~I have that honor, yes. That was a long time ago... but many of the details, I remember as well as if it were yesterday. The banishment of the devil Belhifet from this plane was perhaps my greatest accomplishment to date.~
+~你这侏儒同伴有点眼熟……可我说不上来。可第一次见面，我却觉得莫名安心……~
+== C0AURA2J ~嗯……见到友善的面孔真好。我是奥拉，兰坦格利默夏恩一族。~
+== C0AUKARI ~“格利默夏恩”？兰坦一族……？啊……我现在明白了。多么意外的巧合。~
+== C0AURA2J ~嗯？~
+== C0AUKARI ~我若没弄错，你祖母是密涅瓦·格利默夏恩？你长得跟她很像。~
+== C0AURA2J ~是……对！你怎么知道？~
+== C0AUKARI ~我*怎么*知道？那说来话长。简单说，我年轻时有幸……跟她同行过。蓝头发、野、不谨慎、说话又快又多。可我珍视她的陪伴……虽说这话不像我会说的。~
+== C0AURA2J ~你是……在北地作战的英雄之一，对吧？~
+== C0AUKARI ~我有那份荣幸，是。那是很久以前……可许多细节我记得像昨天一样。把魔鬼贝尔海费特逐出本位面，也许是我至今最大的成就。~
 END
-  ++ ~You fought Belhifet as well?~ EXTERN C0AUKARI QUEST2-FIRE-BATTLE-4-6
-  ++ ~Seems like we've had some similar experiences.~ EXTERN C0AUKARI QUEST2-FIRE-BATTLE-4-6
+  ++ ~你也跟贝尔海费特打过？~ EXTERN C0AUKARI QUEST2-FIRE-BATTLE-4-6
+  ++ ~看来我们有些相似的经历。~ EXTERN C0AUKARI QUEST2-FIRE-BATTLE-4-6
 
 CHAIN C0AUKARI QUEST2-FIRE-BATTLE-4-6
-~It sounds as though you appear to have had your own struggles against that fiend. The incident in Dragonspear Castle, I presume? Even in Silverymoon, I have heard stories. It seems I owe you for finishing the task fully.~
-== C0AURA2J ~This is... wow. I never thought I'd meet someone who fought side by side with my grandmother. I've always wanted to know more about her adventures!~
-== C0AUKARI ~From your words, I take it she has yet to return home for the past century?~
-== C0AURA2J ~No... nobody's seen or heard from her for ages. The only sign of her was that book.~
-== C0AUKARI ~Still? That silly creature... I told her many times to return to her roots, even if only briefly... no doubt my words entered one ear and came out the other.~
-== C0AURA2J ~A-hahaha... sounds like you knew her well... I'm glad. From the sounds of it, she's met some interesting friends.~
-== C0AUKARI ~Hmph. That is putting it lightly. If it is of any relief to you, however, I am certain she is out there, somewhere... no doubt seeking her next tale to write into some fantastical tripe.~
-== C0AUKARI ~*ahem* Though this reminiscing was pleasant, albeit unexpected, given our current location, I think it better to get to a more important point. What brings you here? Few would enter the Plane of Fire with casual intentions.~
+~听来你似乎也跟那魔鬼苦战过。我猜是龙矛堡那件事？就连银月城也听过传闻。看来我得谢你把那任务彻底了结。~
+== C0AURA2J ~这真是……哇。我从没想到会遇见跟我祖母并肩作战的人。我一直想多知道她的冒险！~
+== C0AUKARI ~听你这话，我猜她这百年来还没回家？~
+== C0AURA2J ~没有……好久没人见过或听过她了。她唯一的痕迹就是那本书。~
+== C0AUKARI ~还这样？那傻东西……我跟她说过许多次该回她的根，哪怕只回一阵……无疑我的话左耳进右耳出。~
+== C0AURA2J ~啊哈哈……听来你很了解她……我很高兴。听来她交过些有意思的朋友。~
+== C0AUKARI ~哼。这说得轻了。不过若这能让你安慰，我确定她仍在某处……无疑在为她下一篇要写进什么荒唐读物的故事而奔走。~
+== C0AUKARI ~*咳* 这番追忆虽愉快，也虽意外——考虑到我们现处何地——我想还是说更要紧的。你为何来此？少有人会抱着随便的心思进火位面。~
 END
-  ++ ~I assumed there was something valuable here.~ EXTERN C0AUKARI QUEST2-FIRE-BATTLE-4-7
-  ++ ~We came using a crystal attuned to this plane, thinking it might lead to something important.~ EXTERN C0AUKARI QUEST2-FIRE-BATTLE-4-8
-  ++ ~This was all Aura's idea. She was curious.~ EXTERN C0AUKARI QUEST2-FIRE-BATTLE-4-9
+  ++ ~我以为这儿有什么有价值的东西。~ EXTERN C0AUKARI QUEST2-FIRE-BATTLE-4-7
+  ++ ~我们用一颗调谐此位面的晶体来的，以为它能引向什么重要东西。~ EXTERN C0AUKARI QUEST2-FIRE-BATTLE-4-8
+  ++ ~这都是奥拉的主意。她好奇。~ EXTERN C0AUKARI QUEST2-FIRE-BATTLE-4-9
 
 CHAIN C0AUKARI QUEST2-FIRE-BATTLE-4-7
-~Ah. Seeking power, that is something I can understand.~
+~啊。追求力量，这我能理解。~
 EXTERN C0AUKARI QUEST2-FIRE-BATTLE-4-10
 
 CHAIN C0AUKARI QUEST2-FIRE-BATTLE-4-8
-~A crystal? I see... so it seems another has been to this location in the past, and survived. Whoever did so must have been an accomplished mage, and one I would like to meet, should they still live.~
+~一颗晶体？我明白了……看来以前另有人到过此处，还活了下来。那样做的人一定是位有成的法师，若还在世，我倒想见见。~
 EXTERN C0AUKARI QUEST2-FIRE-BATTLE-4-10
 
 CHAIN C0AUKARI QUEST2-FIRE-BATTLE-4-9
-~Is that so? Well, she's alike to her grandmother in that respect, at least.~
+~是吗？那至少在这方面，她像她祖母。~
 EXTERN C0AUKARI QUEST2-FIRE-BATTLE-4-10
 
 CHAIN C0AUKARI QUEST2-FIRE-BATTLE-4-10
-~I personally came here as part of my research into harnessing the power of this plane into objects of power. My apprentices and I created a portal which would be attuned to powerful entities... no doubt one is close by, or on its way, if it has brought me here.~
-= ~If you came seeking a challenge, one will come soon enough. If not, I presume you have a way to return to our plane, and you had best be quick with returning...~
-= ~...or not. It appears that we've already drawn the attention of whoever lays claim to this particular territory.~
+~我本人来此，是为研究如何把本位面的力量收进有力量的物品。我和学徒们造了一道传送门，调谐到强大的存在……无疑已有一个就在附近、或正赶来，既然它把我引到了这里。~
+= ~你若来求一场挑战，不久就会来一个。若不来，我猜你有回本位面的办法，那你最好快些回去……~
+= ~……或者不回。看来我们已引起了占据这片地盘者的注意。~
 DO ~ClearAllActions() StartCutSceneMode() StartCutScene("C0ACUT21")~ EXIT
 
 CHAIN IF WEIGHT #-1 ~Global("C0KarihiRetreat","GLOBAL",1)~ THEN C0AUKARI QUEST2-FIRE-BATTLE-4
-~Ngh... to think I might still miscalculate to this extent... I must withdraw!~ [C0BLANK]
+~呃……想不到我仍会算错这么多……我必须撤退！~ [C0BLANK]
 DO ~CreateVisualEffectObject("ICFIRSDI","Myself")
 Deactivate(Myself)~ EXIT
 
 CHAIN IF WEIGHT #-1 ~Global("C0AuraBG2Quest2FireBattle","GLOBAL",5)~ THEN C0AFIR05 QUEST2-FIRE-BATTLE-5
-~Primes... weak, fleshy creatures... you defile my palace, slay my servants... today, you shall feel pain unlike any other by the hands of V'thilix, trueborn son of Imix...~ [C0BLANK]
+~凡人……软弱、血肉的造物……你们玷污我的宫殿、杀我仆从……今天，你们将尝到维斯利克斯亲手给的、前所未有的痛，伊米克斯真正的子嗣……~ [C0BLANK]
 DO ~SetGlobal("C0AuraBG2Quest2FireBattle","GLOBAL",6)~
-== C0AUKARI ~There you are, creature. I've found what I was looking for at last. Now, I suggest you submit, and make this easier for both of us.~
-== C0AFIR05 ~Feeble being... you believe yourself worthy of subjugating me? Your grasp on the power of flame is nothing compared to what I am capable of... you shall suffer tenfold for your insolence!~
+== C0AUKARI ~你在这儿，造物。我终于找到了要找的东西。现在，我劝你臣服，让你我都省事。~
+== C0AFIR05 ~卑微的东西……你自以为配降服我？你对火焰之力的掌握，跟我所能做的比什么都不是……你的无礼将让你付十倍的苦！~
 EXTERN C0AURA2J QUEST2-FIRE-BATTLE-5-1
 
 CHAIN C0AURA2J QUEST2-FIRE-BATTLE-5-1
-~<CHARNAME>, I can't repair the anchoring device and help you in battle at the same time! You'll have to cover for me... I'll do my best to fix it, as quickly as I can!~
+~<CHARNAME>，我没法同时修锚定装置又帮你作战！你得替我顶着……我会尽快修好，尽力而为！~
 END
-  ++ ~Don't worry. I'll defeat this creature.~ + QUEST2-FIRE-BATTLE-5-2
-  ++ ~Just get on with it!~ + QUEST2-FIRE-BATTLE-5-2
+  ++ ~别担心。我会打败这造物。~ + QUEST2-FIRE-BATTLE-5-2
+  ++ ~赶紧干活吧！~ + QUEST2-FIRE-BATTLE-5-2
 
 CHAIN C0AURA2J QUEST2-FIRE-BATTLE-5-2
-~Right! You can count on me!~
-= ~Wait... what's this...?~
+~好！交给我！~
+= ~等等……这是什么……？~
 DO ~StartCutSceneMode()
 Wait(1)
 ActionOverride("C0AUKARI",ForceSpellRES("C0AQEF11","C0Aura"))
@@ -2786,197 +2786,197 @@ ActionOverride("C0AUKARI",SmallWait(5))
 ActionOverride("C0AUKARI",StartDialogNoSet(Player1))~ EXIT
 
 CHAIN IF WEIGHT #-1 ~Global("C0AuraBG2Quest2FireBattle","GLOBAL",6)~ THEN C0AUKARI QUEST2-FIRE-BATTLE-6
-~There. You won't suffer any distractions within the safety of this barrier.~ [C0BLANK]
+~好了。在这屏障里，你不会受任何干扰。~ [C0BLANK]
 DO ~SetGlobal("C0AuraBG2Quest2FireBattle","GLOBAL",7)~
-== C0AURA2J ~W—whoa! This is... quite warm and comforting, actually. Don't worry, <CHARNAME>! I'm fine... I think.~
-== C0AUKARI ~If the little one is going to be preoccupied, allow me to assist you in her stead. My magic will make for a more than worthy substitute.~
+== C0AURA2J ~哇——哇！这其实……挺暖挺舒服的。别担心，<CHARNAME>！我没事……我想。~
+== C0AUKARI ~若小家伙要忙，就让我替她助你。我的魔法会是完全合格的替代。~
 END
-  ++ ~Thank you for your assistance.~ + QUEST2-FIRE-BATTLE-6-1
-  ++ ~I don't need your help.~ + QUEST2-FIRE-BATTLE-6-2
+  ++ ~谢谢你的帮助。~ + QUEST2-FIRE-BATTLE-6-1
+  ++ ~我不需要你帮。~ + QUEST2-FIRE-BATTLE-6-2
 
 CHAIN C0AUKARI QUEST2-FIRE-BATTLE-6-1
-~No gratitude is necessary. Consider this a... repayment towards an old debt of friendship.~
+~不必谢。把这当作……偿还一笔旧日的友谊之债。~
 EXTERN C0AUKARI QUEST2-FIRE-BATTLE-6-3
 
 CHAIN C0AUKARI QUEST2-FIRE-BATTLE-6-2
-~This is no mere offer, and I do not need your approval.~
+~这不是提议，我也不需要你同意。~
 EXTERN C0AUKARI QUEST2-FIRE-BATTLE-6-3
 
 CHAIN C0AUKARI QUEST2-FIRE-BATTLE-6-3
-~Sentiments aside, I would greatly like to test my potential against the strongest beings this plane has to offer. This will make for a ripe opportunity.~
-== C0AUKARI ~Command me as you see fit. I am no stranger to co-operating on the battlefield. The feeling of fighting alongside others in this manner is almost nostalgic.~
+~抛开情绪不说，我很想借这机会，拿本位面最强的存在试一试我的本事。这会是个好机会。~
+== C0AUKARI ~随你调遣。协同作战我并不陌生。这样跟人并肩的感觉几乎令人怀旧。~
 DO ~ChangeEnemyAlly("C0AUKARI",CONTROLLED)
 ReallyForceSpellRES("C0AQEF12",Myself)~
-== C0AFIR05 ~Fools... you will all BURN!~
+== C0AFIR05 ~蠢货……你们全都BURN——全都烧起来！~
 DO ~ReallyForceSpellRES("C0AQEF12",Myself)~ EXIT
 
 CHAIN IF WEIGHT #-1 ~Global("C0AuraBG2Quest2FireBattle","GLOBAL",8)~ THEN C0AURA2J QUEST2-FIRE-BATTLE-8
-~Okay... okay! I think I fixed it... oh, the fighting's over...~ [C0BLANK]
+~好了……好了！我想我修好了……哦，打完了……~ [C0BLANK]
 DO ~ApplySpellRES("c0aqef16","c0aura")
 SetGlobal("C0AuraBG2Quest2FireBattle","GLOBAL",9)~
-== C0AUKARI ~And what convenient timing it is, that you were able to avoid the entirety of the battle.~
-== C0AUKARI ~I have acquired what I came for. The essence of an elder fire elemental. You have my gratitude for your assistance.~
-== C0AUKARI ~Hmm, this particular being was particularly powerful, and its spirit essence is highly unstable... it seems it has split into two in order to contain its energies.~
-== C0AUKARI ~As a gift, I may use my art to create a magical item using one half of the elemental essence. You may have the choice of which you would prefer—a cloak to wreathe yourself in pure flame, or a black iron crown to shape the essence of fire with greater potency.~
+== C0AUKARI ~时机可真凑巧，你竟能整场战斗都避开。~
+== C0AUKARI ~我得到了我要的东西。一位长老火元素的精华。多谢你相助。~
+== C0AUKARI ~嗯，这个存在格外强大，它的灵精华极不稳定……看来它为了容纳能量，分成了两半。~
+== C0AUKARI ~作为礼物，我可以用我的技艺，拿其中一半元素精华造一件魔法物品。你可以选——一件让你裹在纯焰中的斗篷，或一顶能以更大效力驾驭火之精华的黑铁冠冕。~
 END
-  ++ ~I want the cloak.~ DO ~GiveItemCreate("C0ACLCK1",Player1,1,0,0)~ EXTERN C0AUKARI QUEST2-FIRE-BATTLE-8-1
-  ++ ~I want the crown.~ DO ~GiveItemCreate("C0ACIRC2",Player1,1,0,0)~ EXTERN C0AUKARI QUEST2-FIRE-BATTLE-8-1
+  ++ ~我要斗篷。~ DO ~GiveItemCreate("C0ACLCK1",Player1,1,0,0)~ EXTERN C0AUKARI QUEST2-FIRE-BATTLE-8-1
+  ++ ~我要冠冕。~ DO ~GiveItemCreate("C0ACIRC2",Player1,1,0,0)~ EXTERN C0AUKARI QUEST2-FIRE-BATTLE-8-1
 
 CHAIN C0AUKARI QUEST2-FIRE-BATTLE-8-1
-~So be it. I am certain that it will serve you well.~
-== C0AUKARI ~As for you, little one... Aura, was it? I have something for you, as well. An item your... capricious grandmother left to me for safekeeping. Which, of course, she has clearly all but forgotten about for the past decades. The most appropriate act would be to pass it on to you.~
+~那就这样。我确定它会好好为你效力。~
+== C0AUKARI ~至于你，小家伙……奥拉，是吗？我也有东西给你。你那位……任性的祖母留给我保管的一件物事。当然，这几十年她显然早把它忘光了。最恰当的做法就是转交给你。~
 DO ~GiveItemCreate("C0ACANN1","C0AURA",1,0,0)~
-== C0AURA2J ~This is... an autocannon. An older model, but still working! And... you said she left it with you decades ago... and yet it's still so well-maintained. Did you...~
-== C0AUKARI ~Hmph. Don't overthink it.~
-== C0AUKARI ~And... oh, I suppose you can have this as well. Something of my own creation. Perhaps an arcanist you trust may make use of it... otherwise, I am certain it should be a fascinating read for you, if you are anything like her.~
+== C0AURA2J ~这是……一门自动炮。旧型号，可还能用！而且……你说她几十年前就留在你这儿……可它还保养得这么好。难道你……~
+== C0AUKARI ~哼。别多想。~
+== C0AUKARI ~还有……哦，这个你也拿去吧。我自己做的东西。也许你信任的某位奥术师能用上……不然，我确定对你来说它也该是本有趣的读物，你若像她的话。~
 DO ~GiveItemCreate("C0ABOOK3","C0AURA",1,0,0)~
-== C0AURA2J ~Thank you... ouch, it's hot!~
-== C0AUKARI ~Well, what did you expect?~
-== C0AUKARI ~Now then, I shall return to my home. I must not be late for my students' lecture, after all. Perhaps one day, you will see fit to visit my abode in Silverymoon? You would be most welcome.~
-== C0AUKARI ~Just something to consider. Farewell.~
+== C0AURA2J ~谢谢……哎哟，好烫！~
+== C0AUKARI ~嗯，你还指望什么？~
+== C0AUKARI ~那么，我该回家了。毕竟我不能迟了学生们的课。也许有一天，你会愿意来银月城我住处坐坐？你会极受欢迎。~
+== C0AUKARI ~只是给你想想。再会。~
 DO ~ClearAllActions()
 StartCutSceneMode()
 StartCutScene("C0ACUT22")~ EXIT
 
 CHAIN IF WEIGHT #-1 ~Global("C0AuraBG2Quest2FireBattle","GLOBAL",9)~ THEN C0AURA2J QUEST2-FIRE-BATTLE-9
-~She seemed nice.~ [C0BLANK]
+~她看着挺好。~ [C0BLANK]
 DO ~SetGlobal("C0AuraBG2Quest2FireBattle","GLOBAL",10)
 SetGlobal("C0AuraBG2Quest2Done","GLOBAL",1)~
 END
-  ++ ~Behind all the arrogance and sass, sure.~ + QUEST2-FIRE-BATTLE-9-1
-  ++ ~If you say so.~ + QUEST2-FIRE-BATTLE-9-1
-  ++ ~Can we get out of here, now?~ + QUEST2-FIRE-BATTLE-9-2
+  ++ ~在那一身傲慢和刻薄底下，是的。~ + QUEST2-FIRE-BATTLE-9-1
+  ++ ~既然你这么说。~ + QUEST2-FIRE-BATTLE-9-1
+  ++ ~我们现在能离开这儿吗？~ + QUEST2-FIRE-BATTLE-9-2
 
 CHAIN C0AURA2J QUEST2-FIRE-BATTLE-9-1
-~I never thought I'd meet someone outside of home who knew my grandmother personally. I'm actually kind of relieved... even though I've never met her, it sounds like we're pretty similar... and it gives me some hope she's still out there, somewhere.~
+~我从没想到会在故乡之外遇见认识我祖母的人。我其实有点安心……虽从没见过她，听来我们挺像……这也让我有点希望她仍在某处。~
 EXTERN C0AURA2J QUEST2-FIRE-BATTLE-9-2
 
 CHAIN C0AURA2J QUEST2-FIRE-BATTLE-9-2
-~I've reconfigured the anchoring device. Just give me a signal and I'll turn it on and get us out of here. I'll give you some time to look around and pick up anything we might've missed first.~
+~我重新配置了锚定装置。你给我个信号，我就开动，带我们离开。我先给你点时间看看四周，捡些我们可能漏掉的东西。~
 END
-  ++ ~Alright.~ EXIT
-  ++ ~No need. We can go right away.~ + C0AuraBG2Quest2Done-1
+  ++ ~好。~ EXIT
+  ++ ~不必。我们这就走。~ + C0AuraBG2Quest2Done-1
 
 CHAIN C0AURA2J C0AuraBG2Quest2Done-1
-~Okay... *click*~
+~好……*咔*~
 DO ~SetGlobal("C0AuraBG2Quest2Done","GLOBAL",0)
 ClearAllActions()
 StartCutSceneMode()
 StartCutScene("C0ATELE1")~ EXIT
 
 CHAIN IF WEIGHT #-1 ~Global("C0AuraBG2Quest2IceFirstTalk","GLOBAL",1)~ THEN C0AURA2J QUEST2-ICE
-~The Frostfell... it's a Para-Elemental plane between the planes of air and water. From what I've read, the entire landscape is made from solid ice, and the environment is nothing but freezing winds and snowstorms. It'll take more than just wearing warm clothes to survive in there. With the extreme temperature we'd be exposed to, it might be hard to move or even breathe. We'd better prepare any sorts of protection from cold that we can.~ [C0BLANK]
+~霜落之地……是气与水位面之间的副元素位面。据我读过的，整片地貌都是坚冰，环境只有刺骨寒风与暴雪。光穿暖衣在里面活不了。那样的极端温度下，我们可能连动都难、呼吸都难。最好备上一切能备的防寒手段。~ [C0BLANK]
 DO ~SetGlobal("C0AuraBG2Quest2IceFirstTalk","GLOBAL",2)~
 END
 IF ~Global("C0AuraBG2Quest2FirstTime","GLOBAL",0)~ EXTERN C0AURA2J QUEST2-FIRSTTIME
 IF ~!Global("C0AuraBG2Quest2FirstTime","GLOBAL",0)~ EXIT
 
 CHAIN IF WEIGHT #-1 ~Global("C0AuraBG2Quest2IceEncounter","GLOBAL",1)~ THEN C0AURA2J QUEST2-ICE-ENCOUNTER-1
-~Ohh... brr... this is even worse than I imagined...~ [C0BLANK]
+~哦……哆嗦……这比我想的还糟……~ [C0BLANK]
 DO ~SetGlobal("C0AuraBG2Quest2IceEncounter","GLOBAL",2) CreateCreatureEffect("C0AYUKI","C0FREEZEE",[466.369],S)~ EXIT
 
 CHAIN IF WEIGHT #-1 ~Global("INTRO","LOCALS",0)
 Global("C0AuraBG2Quest2IceEncounter","GLOBAL",2)~ THEN C0AYUKI QUEST2-ICE-ENCOUNTER-2
-~Strangers... you... you should not be here.~ [C0BLANK]
+~陌生人……你……你们不该在这儿。~ [C0BLANK]
 DO ~SetGlobal("INTRO","LOCALS",1)
 SetGlobal("C0AuraBG2Quest2IceEncounter","GLOBAL",3)~
-== C0AURA2J ~A yuki-onna...~
+== C0AURA2J ~一个雪女……~
 END
-  + ~CheckStatGT(Player1,30,LORE)~ + ~The 'snow-women' of the East, as I recall. They're fey spirits of the cold.~ EXTERN C0AURA2J QUEST2-ICE-ENCOUNTER-2-1
-  + ~!CheckStatGT(Player1,30,LORE)~ + ~What is she, Aura?~ EXTERN C0AURA2J QUEST2-ICE-ENCOUNTER-2-2
+  + ~CheckStatGT(Player1,30,LORE)~ + ~东方的“雪女”，我记得。她们是寒冷中的妖精灵。~ EXTERN C0AURA2J QUEST2-ICE-ENCOUNTER-2-1
+  + ~!CheckStatGT(Player1,30,LORE)~ + ~她是什么，奥拉？~ EXTERN C0AURA2J QUEST2-ICE-ENCOUNTER-2-2
 
 CHAIN C0AURA2J QUEST2-ICE-ENCOUNTER-2-1
-~Yes, that's right... they live on Toril as well, in the snowy hills in Kozakura...~
+~对，没错……她们也住在托瑞尔，在科祖库拉的雪山里……~
 EXTERN C0AURA2J QUEST2-ICE-ENCOUNTER-2-3
 
 CHAIN C0AURA2J QUEST2-ICE-ENCOUNTER-2-2
-~'Snow-woman'... that's what 'yuki-onna' means. You can think of her like a snow spirit. They live on Toril as well, in the snowy hills in Kozakura...~
+~“雪女”……“yuki-onna”就是这个意思。你可以把她当雪之灵。她们也住在托瑞尔，在科祖库拉的雪山里……~
 EXTERN C0AURA2J QUEST2-ICE-ENCOUNTER-2-3
 
 CHAIN C0AURA2J QUEST2-ICE-ENCOUNTER-2-3
-~I've seen them before, or at least, I think I have... very distantly while exploring the mountains. Sometimes, I wasn't sure if I was really seeing them, or if it was just the movement of the snow.~
-= ~They're often feared by humans, but they're really just shy and reclusive. We should try to talk to her, <CHARNAME>, but try not to scare her.~
+~我以前见过，至少我以为见过……在山里探索时远远地。有时我不确定是真看见了，还是只是雪在动。~
+= ~人类常怕她们，可她们其实只是害羞、避世。我们该试着跟她说话，<CHARNAME>，可别吓到她。~
 END
-  ++ ~Alright, then.~ EXTERN C0AYUKI QUEST2-ICE-ENCOUNTER-2-4
-  ++ ~I suppose I'll try.~ EXTERN C0AYUKI QUEST2-ICE-ENCOUNTER-2-4
+  ++ ~好，那就。~ EXTERN C0AYUKI QUEST2-ICE-ENCOUNTER-2-4
+  ++ ~我想我试试。~ EXTERN C0AYUKI QUEST2-ICE-ENCOUNTER-2-4
 
 CHAIN C0AYUKI QUEST2-ICE-ENCOUNTER-2-4
-~You... should not be here... go, now... this place will not be safe for you...~
+~你……不该在这儿……走，现在……这地方对你不安全……~
 END
-  ++ ~We mean you no harm.~ EXTERN C0AYUKI QUEST2-ICE-ENCOUNTER-2-5
-  ++ ~What do you mean?~ EXTERN C0AYUKI QUEST2-ICE-ENCOUNTER-2-6
-  ++ ~What is this place?~ EXTERN C0AYUKI QUEST2-ICE-ENCOUNTER-2-6
+  ++ ~我们无意伤害你。~ EXTERN C0AYUKI QUEST2-ICE-ENCOUNTER-2-5
+  ++ ~你什么意思？~ EXTERN C0AYUKI QUEST2-ICE-ENCOUNTER-2-6
+  ++ ~这是什么地方？~ EXTERN C0AYUKI QUEST2-ICE-ENCOUNTER-2-6
 
 CHAIN C0AYUKI QUEST2-ICE-ENCOUNTER-2-5
-~Neither I to you... if things were different, I would welcome you to this place, as it should've been...~
+~我也无意伤你……若情况不同，我会欢迎你来这地方，照它本该有的样子……~
 EXTERN C0AYUKI QUEST2-ICE-ENCOUNTER-2-6
 
 CHAIN C0AYUKI QUEST2-ICE-ENCOUNTER-2-6
-~This place was once a beautiful garden... one built from ice, where creatures of this plane could seek peace. I was its caretaker, and with my friends, we shared in the once-beautiful paradise.~
-== C0AYUKI ~Our home plane... most of it is as harsh and unforgiving as it appears, but there are still those who want to seek comfort, and friendship, and peace. I was here to give them a home. Once, it was all perfect.~
-== C0AYUKI ~But then... the ice hag, Ishallir found us, found this place... she is utterly hideous, and hateful, and evil. She was the very antithesis of the beauty we shared, and sought to destroy it.~
-== C0AYUKI ~My friends fought her, but were frozen, one by one, their corpses turned into statues of ice as horrible trophies, monuments to her destruction... what was once a paradise because a terrible garden of death, where any who meets her gaze becomes another statue, frozen for eternity.~
-== C0AURA2J ~That's awful...! To create a garden of beauty in such an unforgiving plane, only for an evil being to tear it all apart.~
-== C0AYUKI ~I alone escaped her wrath, taking the last flower of our garden with me in the hopes that one day, everything may be regrown... but I am too weak. Soon, Ishallir will find me. When she does... you must not be here, or you will meet the same fate as everyone else...~
+~这地方曾是座美丽的花园……一座冰造的花园，本位面的生灵可在此求安宁。我是它的看守，跟朋友们一起，共享这曾美丽的乐园。~
+== C0AYUKI ~我们的本位面……大部分如所见般严酷无情，可仍有人想求慰藉、友谊与安宁。我在此给他们一个家。曾经，一切完美。~
+== C0AYUKI ~可后来……冰鬼婆伊莎莉尔发现了我们，发现了这地方……她极其丑恶、可恨、邪恶。她正是我们所共享之美的反面，想把它毁掉。~
+== C0AYUKI ~我的朋友们跟她作战，却一个个被冻住，尸身变成冰像，成了她毁灭的可怕战利品与纪念碑……曾是乐园的地方变成可怕的死亡庭园，谁对上她的目光，就会成为又一尊永远冻结的像。~
+== C0AURA2J ~太可怕了……！在这样无情的地方造一座美的花园，却让一个邪恶存在全毁掉。~
+== C0AYUKI ~只有我逃过她的怒火，带着我们花园最后一朵花，希望有一天一切能重新长起……可我太弱了。伊莎莉尔很快会找到我。她来时……你绝不能在这儿，否则你会像别人一样落得同样下场……~
 END
-  ++ ~I'm not afraid of this hag. Maybe I can do something to help you.~ + QUEST2-ICE-ENCOUNTER-2-7
-  ++ ~Your story is a sad one. If you want me to help you defeat this hag, you only need to ask.~ + QUEST2-ICE-ENCOUNTER-2-7
-  ++ ~Perhaps I would be willing to help... if there is something you can offer in return.~ + QUEST2-ICE-ENCOUNTER-2-7
-  ++ ~Well, that's terrible. I'd rather not be here to witness it, though. Aura, get us out of here.~ EXTERN C0AURA2J QUEST2-ICE-ENCOUNTER-2-8
+  ++ ~我不怕这鬼婆。也许我能帮你做些什么。~ + QUEST2-ICE-ENCOUNTER-2-7
+  ++ ~你的故事很悲伤。你若想让我帮你打败这鬼婆，开口便是。~ + QUEST2-ICE-ENCOUNTER-2-7
+  ++ ~也许我愿意帮……若你能给点什么作回报。~ + QUEST2-ICE-ENCOUNTER-2-7
+  ++ ~唉，真糟。不过我倒不想在这儿亲眼见证。奥拉，带我们离开。~ EXTERN C0AURA2J QUEST2-ICE-ENCOUNTER-2-8
 
 CHAIN C0AYUKI QUEST2-ICE-ENCOUNTER-2-7
-~No, I cannot ask that of you, kind one... and there little I can give. Everything has been claimed by the hag... all I hope is to never see another innocent become a victim to her malice and hatred.~
+~不，我不能向你求这个，善心人……我也没什么可给。一切都被鬼婆夺了……我只盼再不见另一个无辜者成为她恶意与憎恨的牺牲。~
 EXTERN C0AYUKI QUEST2-ICE-ENCOUNTER-2-9
 
 CHAIN C0AURA2J QUEST2-ICE-ENCOUNTER-2-8
-~But, <CHARNAME>, are you sure we can't do anything? Look at her... she looks so sad, and grim. There's no hope for her here on her own.~
+~可，<CHARNAME>，你确定我们什么都做不了？看她……她看着那么悲伤、凄苦。她独自在这儿没有指望。~
 EXTERN C0AYUKI QUEST2-ICE-ENCOUNTER-2-9
 
 CHAIN C0AYUKI QUEST2-ICE-ENCOUNTER-2-9
-~There is only a little time before the last of my wards are broken by the hag's magic... what little beauty there is left to witness here, I welcome you to see, and remember... before it is all lost...~
+~鬼婆的魔法攻破我最后几道守护结界只剩一点时间……这儿还剩下的一点美，我欢迎你看看、记住……在它全失去之前……~
 EXIT
 
 CHAIN IF WEIGHT #-1 ~IsGabber(Player1)
 Global("INTRO","LOCALS",1)
 Global("C0AuraBG2Quest2IceEncounter","GLOBAL",3)~ THEN C0AYUKI QUEST2-ICE-ENCOUNTER-2A
-~Please, leave while you can. I am glad someone is here to see the last traces of beauty here... but it is not worth your life.~ [C0BLANK]
+~求你，趁还能走就走吧。我很高兴有人来见这儿最后的美丽痕迹……可这不值得你的命。~ [C0BLANK]
 END
-  ++ ~I can't ignore seeing someone in need. I want to help you.~ + QUEST2-ICE-ENCOUNTER-2A-1
-  + ~InParty("C0Aura")~ + ~Right. Let's get out of here, Aura.~ EXTERN C0AURA2J QUEST2-ICE-ENCOUNTER-2A-0
+  ++ ~我没法无视需要帮助的人。我想帮你。~ + QUEST2-ICE-ENCOUNTER-2A-1
+  + ~InParty("C0Aura")~ + ~对。我们离开这儿，奥拉。~ EXTERN C0AURA2J QUEST2-ICE-ENCOUNTER-2A-0
 
 CHAIN C0AURA2J QUEST2-ICE-ENCOUNTER-2A-0
-~...Alright. I don't feel good about this, but you're the one in charge... and I can't force you to stay in a dangerous place like this.~
-= ~Reconfiguring the anchoring device... we'll be out of here soon. I'm sorry, yuki-onna... *click*~
+~……好。我心里不好受，可作主的是你……我也没法强迫你留在这危险的地方。~
+= ~重新配置锚定装置……我们很快就走。对不起，雪女……*咔*~
 DO ~SetGlobal("C0AuraBG2Quest2Done","GLOBAL",0)
 ClearAllActions()
 StartCutSceneMode()
 StartCutScene("C0ATELE1")~ EXIT
 
 CHAIN C0AYUKI QUEST2-ICE-ENCOUNTER-2A-1
-~But... it will be dangerous. The hag is powerful. Even the strongest of my friends could not withstand her cold magic... would you truly face her for a creature like me?~
+~可……那会危险。鬼婆很强大。连我最强的朋友都挡不住她的寒魔法……你真会为我这样的生灵去面对她？~
 END
-  ++ ~Don't worry. I'm sure I'll be able to handle it.~ + QUEST2-ICE-ENCOUNTER-2A-2
-  ++ ~I've faced all sorts of monsters. A hag doesn't sound so scary.~ + QUEST2-ICE-ENCOUNTER-2A-2
-  + ~InParty("C0Aura")~ + ~On second thought, maybe you're right. I should get out of here.~ EXTERN C0AURA2J QUEST2-ICE-ENCOUNTER-2A-0
+  ++ ~别担心。我确定我应付得了。~ + QUEST2-ICE-ENCOUNTER-2A-2
+  ++ ~我见过各种怪物。鬼婆听着没那么吓人。~ + QUEST2-ICE-ENCOUNTER-2A-2
+  + ~InParty("C0Aura")~ + ~再想想，也许你说得对。我该离开这儿。~ EXTERN C0AURA2J QUEST2-ICE-ENCOUNTER-2A-0
 
 CHAIN C0AYUKI QUEST2-ICE-ENCOUNTER-2A-2
-~Thank you... thank you! There... may be hope for my garden again, if you succeed... I will never forget your bravery and kindness, warm one.~
-= ~When you are prepared, I may dispel my wards and allow the hag to come. She will arrive eventually regardless... but this way, you will be prepared.~
-= ~Be warned... the ice hag commands the freezing wind itself, and there is no escaping it. You must weather the cold with your fortitude. Tell me when you are ready.~
+~谢谢你……谢谢你！你若成功……我的花园也许还有希望……我永不会忘记你的勇敢与善良，温暖的人。~
+= ~你准备好时，我可以撤去守护结界，让鬼婆来。不管怎样她终究会来……可这样，你就能有准备。~
+= ~先警告你……冰鬼婆号令寒风本身，无处可逃。你得以坚毅熬过严寒。准备好了就告诉我。~
 DO ~SetGlobal("INTRO","LOCALS",2)~ EXIT
 
 CHAIN IF WEIGHT #-1 ~IsGabber(Player1)
 Global("INTRO","LOCALS",2)
 Global("C0AuraBG2Quest2IceEncounter","GLOBAL",3)~ THEN C0AYUKI QUEST2-ICE-ENCOUNTER-2B
-~Are you prepared, kind one?~ [C0BLANK]
+~你准备好了吗，善心人？~ [C0BLANK]
 END
-  ++ ~Alright. Dispel your wards, and allow the hag to come.~ + QUEST2-ICE-ENCOUNTER-2B-1
-  + ~OR(2) !Global("C0AuraBG2Quest2IceQ1","GLOBAL",1) !Global("C0AuraBG2Quest2IceQ2","GLOBAL",1)~ + ~If there's time, I'd like to ask a few questions. About you and this garden.~ + QUEST2-ICE-ENCOUNTER-2B-2
-  ++ ~I'm not ready yet. Just a little bit longer.~ EXIT
+  ++ ~好。撤去你的结界，让鬼婆来。~ + QUEST2-ICE-ENCOUNTER-2B-1
+  + ~OR(2) !Global("C0AuraBG2Quest2IceQ1","GLOBAL",1) !Global("C0AuraBG2Quest2IceQ2","GLOBAL",1)~ + ~若还有时间，我想问几个问题。关于你，和这座花园。~ + QUEST2-ICE-ENCOUNTER-2B-2
+  ++ ~我还没准备好。再等一会儿。~ EXIT
 
 CHAIN C0AYUKI QUEST2-ICE-ENCOUNTER-2B-1
-~Very well. For this battle, I will fight together at your side... for my friends both old and new. If the hag claims you, then I will join you in the endless cold.~
-= ~Now, be ready. She comes...~
+~好。这一战，我会在你身边并肩作战……为我旧友与新友。若鬼婆夺了你，我就随你一同落入无尽寒冷。~
+= ~现在，准备。她来了……~
 DO ~ClearAllActions()
 StartCutSceneMode()
 Wait(1)
@@ -2991,131 +2991,131 @@ Wait(1)
 ActionOverride("C0AICE01",StartDialogNoSet(Player1))~ EXIT
 
 CHAIN C0AYUKI QUEST2-ICE-ENCOUNTER-2B-2
-~There is some time yet... what would you like to know?~
+~还有些时间……你想知道什么？~
 END
-  + ~Global("C0AuraBG2Quest2IceQ1","GLOBAL",0)~ + ~Can you tell me about the yuki-onna?~ DO ~SetGlobal("C0AuraBG2Quest2IceQ1","GLOBAL",1)~ + QUEST2-ICE-ENCOUNTER-2B-3
-  + ~Global("C0AuraBG2Quest2IceQ2","GLOBAL",0)~ + ~What was this garden like, before the hag arrived?~ DO ~SetGlobal("C0AuraBG2Quest2IceQ2","GLOBAL",1)~ + QUEST2-ICE-ENCOUNTER-2B-4
-  + ~Global("C0AuraBG2Quest2IceQ1","GLOBAL",1) Global("C0AuraBG2Quest2IceQ2","GLOBAL",1)~ + ~I haven't even asked yet. What is your name?~ + QUEST2-ICE-ENCOUNTER-2B-5
-  ++ ~Never mind. Dispel your wards, and allow the hag to come.~ + QUEST2-ICE-ENCOUNTER-2B-1
-  ++ ~Actually, I need to prepare for the hag. Wait just one moment.~ EXIT
+  + ~Global("C0AuraBG2Quest2IceQ1","GLOBAL",0)~ + ~能给我讲讲雪女吗？~ DO ~SetGlobal("C0AuraBG2Quest2IceQ1","GLOBAL",1)~ + QUEST2-ICE-ENCOUNTER-2B-3
+  + ~Global("C0AuraBG2Quest2IceQ2","GLOBAL",0)~ + ~鬼婆来之前，这座花园是什么样子？~ DO ~SetGlobal("C0AuraBG2Quest2IceQ2","GLOBAL",1)~ + QUEST2-ICE-ENCOUNTER-2B-4
+  + ~Global("C0AuraBG2Quest2IceQ1","GLOBAL",1) Global("C0AuraBG2Quest2IceQ2","GLOBAL",1)~ + ~我还没问。你叫什么名字？~ + QUEST2-ICE-ENCOUNTER-2B-5
+  ++ ~算了。撤去结界，让鬼婆来。~ + QUEST2-ICE-ENCOUNTER-2B-1
+  ++ ~其实，我得为鬼婆做准备。稍等一下。~ EXIT
 
 CHAIN C0AYUKI QUEST2-ICE-ENCOUNTER-2B-3
-~We are spirits, born in this plane. Many like yourself have encountered many evil examples of our kind... those who venture into your realm, who seek to ensnare and torment mortals for their cruel whims.~
-= ~Those who choose to remain in our home are gentler, and only seek to create beauty and preserve life... there are few of us, relative to our crueler fellows. But many of us were once together here, nurturing our garden. Until Ishallir claimed all of my sisters...~
+~我们是生于本位面的灵。许多像你这样的人遇过我们族中许多邪恶的例子……那些闯进你们国度、为残忍任性去诱捕折磨凡人的。~
+= ~选择留在家园的比较温和，只想创造美、护住生命……相比残酷的同族，我们为数不多。可我们许多曾在此一起照料花园。直到伊莎莉尔夺走了我所有姐妹……~
 END
-  + ~Global("C0AuraBG2Quest2IceQ2","GLOBAL",0)~ + ~What was this garden like, before the hag arrived?~ DO ~SetGlobal("C0AuraBG2Quest2IceQ2","GLOBAL",1)~ + QUEST2-ICE-ENCOUNTER-2B-4
-  + ~Global("C0AuraBG2Quest2IceQ1","GLOBAL",1) Global("C0AuraBG2Quest2IceQ2","GLOBAL",1)~ + ~I haven't even asked yet. What is your name?~ + QUEST2-ICE-ENCOUNTER-2B-5
-  ++ ~Never mind. Dispel your wards, and allow the hag to come.~ + QUEST2-ICE-ENCOUNTER-2B-1
-  ++ ~Actually, I need to prepare for the hag. Wait just one moment.~ EXIT
+  + ~Global("C0AuraBG2Quest2IceQ2","GLOBAL",0)~ + ~鬼婆来之前，这座花园是什么样子？~ DO ~SetGlobal("C0AuraBG2Quest2IceQ2","GLOBAL",1)~ + QUEST2-ICE-ENCOUNTER-2B-4
+  + ~Global("C0AuraBG2Quest2IceQ1","GLOBAL",1) Global("C0AuraBG2Quest2IceQ2","GLOBAL",1)~ + ~我还没问。你叫什么名字？~ + QUEST2-ICE-ENCOUNTER-2B-5
+  ++ ~算了。撤去结界，让鬼婆来。~ + QUEST2-ICE-ENCOUNTER-2B-1
+  ++ ~其实，我得为鬼婆做准备。稍等一下。~ EXIT
 
 CHAIN C0AYUKI QUEST2-ICE-ENCOUNTER-2B-4
-~I wish you, and many others could have seen it... within the harsh, rough tundra, this small piece of land was once full of life... creatures of the ice and snow played and frolicked here freely, and the earth was blooming with trees and flowers, all grown from living ice and snow.~
-= ~It seems impossible, but such is the care that I and my sisters gave to the land, that we could create such a haven... one day, it may be so once again.~
+~我希望你、还有许多别人能看见它……在严酷粗粝的冻原里，这一小片土地曾满是生命……冰与雪的生灵在此自由嬉戏玩耍，地上开满树与花，全由活的冰雪长出。~
+= ~听起来不可能，可我和姐妹们对这片土地倾注的照料，让我们造出了这样的乐土……有一天，也许还能再如此。~
 END
-  + ~Global("C0AuraBG2Quest2IceQ1","GLOBAL",0)~ + ~Can you tell me about the yuki-onna?~ DO ~SetGlobal("C0AuraBG2Quest2IceQ1","GLOBAL",1)~ + QUEST2-ICE-ENCOUNTER-2B-3
-  + ~Global("C0AuraBG2Quest2IceQ1","GLOBAL",1) Global("C0AuraBG2Quest2IceQ2","GLOBAL",1)~ + ~I haven't even asked yet. What is your name?~ + QUEST2-ICE-ENCOUNTER-2B-5
-  ++ ~Never mind. Dispel your wards, and allow the hag to come.~ + QUEST2-ICE-ENCOUNTER-2B-1
-  ++ ~Actually, I need to prepare for the hag. Wait just one moment.~ EXIT
+  + ~Global("C0AuraBG2Quest2IceQ1","GLOBAL",0)~ + ~能给我讲讲雪女吗？~ DO ~SetGlobal("C0AuraBG2Quest2IceQ1","GLOBAL",1)~ + QUEST2-ICE-ENCOUNTER-2B-3
+  + ~Global("C0AuraBG2Quest2IceQ1","GLOBAL",1) Global("C0AuraBG2Quest2IceQ2","GLOBAL",1)~ + ~我还没问。你叫什么名字？~ + QUEST2-ICE-ENCOUNTER-2B-5
+  ++ ~算了。撤去结界，让鬼婆来。~ + QUEST2-ICE-ENCOUNTER-2B-1
+  ++ ~其实，我得为鬼婆做准备。稍等一下。~ EXIT
 
 CHAIN C0AYUKI QUEST2-ICE-ENCOUNTER-2B-5
-~My... my name? It is Shirayuri... named after the flowers that once grew here. My older sisters gifted me with this name, soon after I found this place... it was they who tended to our garden before myself.~
+~我……我的名字？是白百合……取自曾在此生长的花。我找到这地方后不久，姐姐们给我取了这个名字……在我之前，是她们照料我们的花园。~
 END
-  ++ ~It's a beautiful name. Just like yourself.~ DO ~SetGlobal("C0AuraBG2YukionnaFlirt","GLOBAL",1)~ + QUEST2-ICE-ENCOUNTER-2B-6
-  ++ ~I'll be sure to remember it, even once I'm gone from here.~ + QUEST2-ICE-ENCOUNTER-2B-7
-  ++ ~That's enough talk. Summon the hag. I'm ready to fight.~ + QUEST2-ICE-ENCOUNTER-2B-1
-  ++ ~Actually, I need to prepare for the hag. Wait just one moment.~ EXIT
+  ++ ~这名字很美。就像你一样。~ DO ~SetGlobal("C0AuraBG2YukionnaFlirt","GLOBAL",1)~ + QUEST2-ICE-ENCOUNTER-2B-6
+  ++ ~我一定会记住，哪怕我离开此地之后。~ + QUEST2-ICE-ENCOUNTER-2B-7
+  ++ ~说够了。召鬼婆来。我准备好一战。~ + QUEST2-ICE-ENCOUNTER-2B-1
+  ++ ~其实，我得为鬼婆做准备。稍等一下。~ EXIT
 
 CHAIN C0AYUKI QUEST2-ICE-ENCOUNTER-2B-6
-~I... I thank you... I have never seen anyone like yourself. If there are more with your kindness from where you come, even if it is only a few... I would like to see your world one day, just as you see mine...~
+~我……我谢谢你……我从没见过像你这样的人。若你来的地方还有更多像你这样善心的，哪怕只有几个……有一天我想看看你们的世界，就像你看我的……~
 EXTERN C0AYUKI QUEST2-ICE-ENCOUNTER-2B-7
 
 CHAIN C0AYUKI QUEST2-ICE-ENCOUNTER-2B-7
-~What is your name, dear <PRO_RACE>? I would like to remember it... if the hag does not claim us. Even if it happens... I would still like to know.~
+~你叫什么名字，亲爱的<PRO_RACE>？我想记住……若鬼婆没夺走我们的话。就算发生了……我也想知。~
 END
-  ++ ~<CHARNAME>.~ + QUEST2-ICE-ENCOUNTER-2B-8
-  ++ ~Forget it. We should deal with the hag.~ + QUEST2-ICE-ENCOUNTER-2B-1
-  ++ ~Never mind my name. Give me another moment to prepare.~ + QUEST2-ICE-ENCOUNTER-2B-11
+  ++ ~<CHARNAME>。~ + QUEST2-ICE-ENCOUNTER-2B-8
+  ++ ~算了。我们该对付鬼婆。~ + QUEST2-ICE-ENCOUNTER-2B-1
+  ++ ~先别管我的名字。再给我一会儿准备。~ + QUEST2-ICE-ENCOUNTER-2B-11
 
 CHAIN C0AYUKI QUEST2-ICE-ENCOUNTER-2B-8
-~<CHARNAME>... I like this name.~
+~<CHARNAME>……我喜欢这名字。~
 END
 IF ~Global("C0AuraBG2YukionnaFlirt","GLOBAL",1)~ + QUEST2-ICE-ENCOUNTER-2B-9
 IF ~!Global("C0AuraBG2YukionnaFlirt","GLOBAL",1)~ + QUEST2-ICE-ENCOUNTER-2B-10
 
 CHAIN C0AYUKI QUEST2-ICE-ENCOUNTER-2B-9
-~Please, beautiful, strong <PRO_RACE>. Win, and live... I hope you will not die here. I do not want to see it.~
+~求你，美丽又坚强的<PRO_RACE>。要赢，要活……我希望你别死在这儿。我不想看见。~
 EXTERN C0AYUKI QUEST2-ICE-ENCOUNTER-2B-11
 
 CHAIN C0AYUKI QUEST2-ICE-ENCOUNTER-2B-10
-~I hope you will not die here, <CHARNAME>... as a new friend, one I will speak of to other new friends one day.~
+~我希望你别死在这儿，<CHARNAME>……作为一位新朋友，一位我日后会讲给别的新朋友听的朋友。~
 EXTERN C0AYUKI QUEST2-ICE-ENCOUNTER-2B-11
 
 CHAIN C0AYUKI QUEST2-ICE-ENCOUNTER-2B-11
-~Talk to me when you are prepared to fight the hag... today, her evil must end.~
+~准备好跟鬼婆一战时跟我说……今天，她的邪恶必须终结。~
 EXIT
 
 CHAIN IF WEIGHT #-1 ~Global("C0ShirayuriRetreat","GLOBAL",1)~ THEN C0AYUKI QUEST2-ICE-RETREAT
-~F—forgive me, my friend... I can fight no longer. I will... I will return once my wounds are healed.~ [C0BLANK]
+~请——请原谅我，朋友……我不能再战了。我……我伤好后会回来。~ [C0BLANK]
 DO ~CreateVisualEffectObject("SPSOLBRD","Myself")
 Deactivate(Myself)~ EXIT
 
 CHAIN IF WEIGHT #-1 ~Global("C0AuraBG2Quest2IceEncounter","GLOBAL",3)~ THEN C0AICE01 QUEST2-ICE-ENCOUNTER-3
-~Ahh, there you are. There you are, pretty thing...~ [C0BLANK]
+~啊，你在那儿。你在那儿，漂亮东西……~ [C0BLANK]
 DO ~SetGlobal("C0AuraBG2Quest2IceEncounter","GLOBAL",4)~
-== C0AURA2J IF ~InParty("C0Aura")~ THEN ~A bheur... I've only ever read about them in old anthologies of magical beings in northeastern Faerûn. Be careful, <CHARNAME>... their hearts are as black and cold as they appear, and their ice magic is deadly.~
-== C0AYUKI ~Ishallir... finally, we meet again. I will not run, this time.~
-== C0AICE01 ~Kyeh heh heh... good, that is good indeed. So, shall you finally accept your fate, and join your lovely sisters in their eternal embrace? Or perhaps beg, and provide me with a modicum of amusement?~
-== C0AYUKI ~I may be willing to beg, but not for myself. Though I already know the answer... I will ask once regardless. Will you return my friends to me?~
-== C0AICE01 ~Kyeh HEH! So, that is your position, is it? I will commend you on your bravery, my dear... but you should already know. My answer is no.~
-== C0AYUKI ~It is as I feared... but for my own sake, I had no choice but to ask... the memory of fleeing in fear as my sisters attempted to put an end to your destruction haunts me more than the thought of death ever will. To this day, I regret that they all had to be sacrificed so that I may live. But now... I finally feel my action was no mistake, as I no longer stand alone.~
-== C0AICE01 ~Oh? Heh... these old eyes do not play tricks on me, I see... there are indeed guests to this frozen domain. Welcome, godchild. I do hope you find the chill of the Frostfell comforting.~
+== C0AURA2J IF ~InParty("C0Aura")~ THEN ~一个冰妖婆……我只在费伦东北魔法生灵的旧选集里读到过。小心，<CHARNAME>……她们的心像外表一样黑冷，冰魔法致命。~
+== C0AYUKI ~伊莎莉尔……终于，我们又见了。这次我不逃。~
+== C0AICE01 ~嘿嘿嘿……好，确实好。那么，你终于要接受命运，去跟你可爱的姐妹们永拥了？还是要求饶，给我一点消遣？~
+== C0AYUKI ~我或许愿意求，可不是为我自己。虽然我已知答案……我仍要问一次。你会把我朋友还我吗？~
+== C0AICE01 ~嘿嘿！那么，这就是你的立场，是吗？我赞赏你的勇气，亲爱的……可你早该知道。我的答案是不。~
+== C0AYUKI ~正如我所怕……可为了自己，我别无选择只能问……我姐妹们试图终结你的毁灭时，我惊惧逃走的那记忆，比死的念头更折磨我。至今我后悔她们全得牺牲才让我活。可现在……我终于觉得我的做法没错，因为我不再孤身一人。~
+== C0AICE01 ~哦？嘿……我这双老眼没看错，我看……这冰封之地确实有客。欢迎，神子。我倒希望你觉得霜落之地的寒意惬意。~
 END
-  ++ ~You know who I am?~ + QUEST2-ICE-ENCOUNTER-4
-  ++ ~It's a bit chilly, but I'll get used to it~ + QUEST2-ICE-ENCOUNTER-5
-  ++ ~Time to die, hag!~ + QUEST2-ICE-ENCOUNTER-6
+  ++ ~你知道我是谁？~ + QUEST2-ICE-ENCOUNTER-4
+  ++ ~是有点冷，可我会习惯。~ + QUEST2-ICE-ENCOUNTER-5
+  ++ ~该死了，鬼婆！~ + QUEST2-ICE-ENCOUNTER-6
 
 CHAIN C0AICE01 QUEST2-ICE-ENCOUNTER-4
-~I know *what* you are, godchild. The reek of murder clings to you, though you may or may not attempt to conceal it... personally, I find it rather appealing.~
+~我知道你*是*什么，神子。谋杀的气味黏在你身上，不管你是否试图遮掩……个人而言，我倒觉得挺对胃口。~
 EXTERN C0AICE01 QUEST2-ICE-ENCOUNTER-7
 
 CHAIN C0AICE01 QUEST2-ICE-ENCOUNTER-5
-~Kyeh heh! It seems you have a sense of wit about you, quite unlike the boring souls similar to you I have encountered before. This old crone may become rather fond of you.~
+~嘿嘿！看来你有点风趣，跟我以前遇到的、像你这类无聊灵魂大不相同。这老妪也许会渐渐喜欢上你。~
 EXTERN C0AICE01 QUEST2-ICE-ENCOUNTER-7
 
 CHAIN C0AICE01 QUEST2-ICE-ENCOUNTER-6
-~Now, now. Is that any way to greet a host, godchild? Needless to say, this former garden, and all the lands within sight, belong to me. You had best mind your manners.~
+~好了，好了。这是招待主人的方式吗，神子？不用说，这座曾经的园子及目力所及的一切土地都归我。你最好注意礼数。~
 EXTERN C0AICE01 QUEST2-ICE-ENCOUNTER-7
 
 CHAIN C0AICE01 QUEST2-ICE-ENCOUNTER-7
-~I did think it rather curious that the snow woman allowed me entry, just while I was finding some amusement in tearing down her wards, one by one... but I see now what her intent is. Do you seek to use the godchild as another sacrifice to save yourself, as you did your sisters?~
-== C0AYUKI ~No... never again. The brave <PRO_RACE> chose to stand with me against your cruelty. But I had hoped, seeing that I would not be as easy prey as you expected, you may choose to relent, and spare whatever beauty that you have not yet corrupted.~
-== C0AICE01 ~You believe I fear the godchild? I have watched many of <PRO_HISHER> like wither and fade with time. Such a shame to see how easily even those burdened with divinity may fall... perhaps I shall show some mercy, and immortalize <PRO_HIMHER> as well within my collection.~
-== C0AYUKI ~So we must fight? There truly is no beauty in your heart.~
-== C0AICE01 ~*spit* Beauty? It is your beauty that offends me, spirit. Your very existence heats this crone's blood with rage, knowing of the existence of those so privileged, so arrogant in flaunting what is freely given. How *dare* you be beautiful? For that alone, I see reason to crush all that you hold dear to dust.~
-== C0AYUKI ~Is the surface all you ever see, Ishallir? I remember, though I was little more than a child, the first day we met... after suffering a defeat against your own coven, it was my sisters who saw past your face, and offered you a home in our garden. Yet you saw nothing but mockery in what we had created, and betrayed our kindness by turning it all into your own twisted image.~
-== C0AICE01 ~Kyeh heh heh... yes, I remember well... and a much finer sight to mine own eyes, this place, as it is now.~
-== C0AYUKI ~And it is still not enough to you? This last flower is all that remains of what once was. It will never bloom again in these lands, so long as you are here. Leave it be... find some mercy in your heart.~
-== C0AICE01 ~KYEH! You truly are brave, to seek mercy within the heart of a hag... so be it... I can find a little bit of mercy, should I wring with all my might. The flower, and you, cannot be suffered to exist... but I will allow our unexpected guests to leave unharmed.~
-== C0AICE01 ~And, as I am feeling generous... should you surrender, I will give your fair shape some dignity in its everlasting frozen form. Otherwise... I will be certain to make what remains of you into an image that would make even my eyes squint and turn away in disgust.~
-== C0AYUKI ~You seek to stoke my fear... but I understand you better than you think, Ishallir. You would never hold true to the spirit of your word... you have proven that already.~
-== C0AICE01 ~Kyeh heh... and? Do you seek to make a final display of defiance, knowing how feeble your power is against mine? It would be such a pity to crush you all under the ice, before I even had a proper chance to play!~
+~我原觉得奇怪，那雪女竟放我进来，正好在我一道道拆她守护结界取乐时……可我现在看出她的用意了。你是想拿神子当又一个牺牲来保全自己，像你当初对姐妹们那样？~
+== C0AYUKI ~不……再也不会。勇敢的<PRO_RACE>选择跟我一起对抗你的残酷。可我原希望，你见我并不像你预想的那样好猎，会愿意收手，放过你还没污损的那些美。~
+== C0AICE01 ~你以为我怕神子？我见过许多像<PRO_HISHER>这样的人随岁月枯萎消散。真可惜，连肩负神性者都如此轻易堕落……也许我该发点慈悲，把<PRO_HIMHER>也永久收进我的收藏。~
+== C0AYUKI ~那么我们必须一战？你心里真的毫无美。~
+== C0AICE01 ~*啐* 美？正是你的美冒犯我，精灵。想到世上存在这样得天独厚、这样傲慢炫耀白白得来之物的人，就烧得这老妪血脉沸腾。你竟*敢*美？单凭这点，我就有理由把你珍视的一切碾成灰。~
+== C0AYUKI ~伊莎莉尔，你只看得见表面吗？我记得，虽那时我不过是个孩子，我们初见那天……你败给自己的巫团之后，是我姐妹们看穿你的面目，在我们花园里给你一个家。可你在我们造出的一切里只看见嘲弄，把我们善意全变成你自己扭曲的模样，背叛了我们。~
+== C0AICE01 ~嘿嘿嘿……是，我记得清楚……而在我眼里，这地方眼下这番模样可顺眼得多。~
+== C0AYUKI ~这对你仍不够？这最后一朵花是往昔仅剩之物。只要你在这些土地上，它就永不会再开。放过它吧……在你心里找一点慈悲。~
+== C0AICE01 ~嘿！你真有胆，竟想在鬼婆心里找慈悲……那就这样……我若拼尽全力拧一拧，倒也能挤出一点慈悲。这花和你不能留……可我会放我们意外的客人安然离开。~
+== C0AICE01 ~而且，我今儿心情宽厚……你若投降，我会给你那副美貌在永恒冰封之形里留些尊严。否则……我一定把你剩下的部分做成一件连我都要眯眼扭头嫌恶的像。~
+== C0AYUKI ~你想煽起我的恐惧……可我比你想的更懂你，伊莎莉尔。你从不会守信到底……你已证明了。~
+== C0AICE01 ~嘿嘿……是吗？明知你的力量在我面前多微弱，你还要作最后的反抗姿态？在我还没好好玩够之前就把你们全碾在冰下，多可惜！~
 END
-  ++ ~Enough, hag. Your evil ends here and now.~ + QUEST2-ICE-ENCOUNTER-8
-  ++ ~You sure like to talk. I'm ready to fight just to shut you up.~ + QUEST2-ICE-ENCOUNTER-8
-  ++ ~Actually, I was just thinking I needed to be off somewhere...~ + QUEST2-ICE-ENCOUNTER-9
+  ++ ~够了，鬼婆。你的邪恶到此为止。~ + QUEST2-ICE-ENCOUNTER-8
+  ++ ~你真爱说。我准备好一战，就为让你闭嘴。~ + QUEST2-ICE-ENCOUNTER-8
+  ++ ~其实，我刚在想我该去别处了……~ + QUEST2-ICE-ENCOUNTER-9
 
 CHAIN C0AICE01 QUEST2-ICE-ENCOUNTER-8
-~Aye, so it shall be, then, and all the better. I have not had proper entertainment since my victory for too long!~
+~哎，那就这样吧，再好不过。我自那次胜利以来，太久没好好取乐了！~
 EXTERN C0AICE01 QUEST2-ICE-ENCOUNTER-10
 
 CHAIN C0AICE01 QUEST2-ICE-ENCOUNTER-9
-~Kyeh heh! No, I do not think so. You have entered the field, and so you are a player in this game whether you like it or not, godchild! From the moment I laid eyes upon you, your fate has been sealed!~
+~嘿嘿！不，我想不行。你已上场，不管愿不愿意，你就是这局里的玩家，神子！我一眼看见你时，你的命运就定了！~
 EXTERN C0AICE01 QUEST2-ICE-ENCOUNTER-10
 
 CHAIN C0AICE01 QUEST2-ICE-ENCOUNTER-10
-~There shall be no escape! Prepare yourselves, for you shall see what it means to face the Frostfell itself!~
-== C0AYUKI ~My newest, and now dearest friend... forgive me for your part in this, but I thank you for standing with me... I will protect you against the cold of this realm with my magic.~
-== C0AICE01 ~Ohohoho! You will all be lovely for my collection, your bodies trapped in ice! Come, my darling pets!~
+~无处可逃！准备吧，你们会见识面对霜落之地本身是什么滋味！~
+== C0AYUKI ~我最新的、如今最亲爱的朋友……原谅你被卷入此事，可我谢你与我并肩……我会用魔法护你免受这地界的寒冷。~
+== C0AICE01 ~哦呵呵呵！你们都会成为我收藏里的漂亮货，身体困在冰里！来吧，我心爱的宠物们！~
 DO ~ClearAllActions()
 StartCutSceneMode()
 Wait(1)
@@ -3131,13 +3131,13 @@ Wait(2)
 EndCutSceneMode()~ EXIT
 
 CHAIN IF WEIGHT #-1 ~Global("C0AuraBG2Quest2IceEncounter","GLOBAL",5)~ THEN C0AYUKI QUEST2-ICE-ENCOUNTER-4
-~She... is dead. The hag, she is no more.~ [C0BLANK]
+~她……死了。那鬼婆，她不在了。~ [C0BLANK]
 DO ~SetGlobal("C0AuraBG2Quest2IceEncounter","GLOBAL",6)~
-== C0AYUKI ~Thank you... thank you, brave one. This world will be once again as it was, untainted by death. One day, it will be full of life again.~
-== C0AYUKI ~I did not know mortal souls could have such kindness... you risked death to protect me, and protect this place.~
-== C0AYUKI ~Please take my bow. It carries the spirit of the winter in it... I hope it will keep you safe in your world.~
+== C0AYUKI ~谢谢你……谢谢你，勇敢的人。这世界会恢复原样，不再被死亡污染。有一天，它会再次满是生命。~
+== C0AYUKI ~我不知道凡人灵魂能这样善良……你冒着死来护我、护这地方。~
+== C0AYUKI ~请收下我的弓。它带着冬之灵……我希望它在你那边护你平安。~
 DO ~GiveItem("c0abow1",Player1)~
-== C0AYUKI IF ~Global("C0AuraBG2YukionnaFlirt","GLOBAL",1)~ THEN ~And... I'm very happy to have met you, and it is difficult to say goodbye. Please accept this kiss...~
+== C0AYUKI IF ~Global("C0AuraBG2YukionnaFlirt","GLOBAL",1)~ THEN ~而且……我很高兴遇见你，说再见却很难。请接受这一吻……~
 DO ~AddJournalEntry(%quest_snow_kiss%,QUEST_DONE)
 ApplySpellRES("C0AICES0",Player1)~
 == C0AYUKI IF ~OR(6)
@@ -3146,18 +3146,18 @@ ApplySpellRES("C0AICES0",Player1)~
   HPPercentLT(Player3,1)
   HPPercentLT(Player4,1)
   HPPercentLT(Player5,1)
-  HPPercentLT(Player6,1)~ THEN ~As for your companions who have fallen in battle... I sense their spirits lingering here, and I can guide them back to their mortal bodies.~
+  HPPercentLT(Player6,1)~ THEN ~至于你在战斗中倒下的同伴……我感到他们的灵仍在此徘徊，我能引他们回自己的肉身。~
 DO ~ReallyForceSpellRES("SPPR550",Player1)
 ReallyForceSpellRES("SPPR550",Player2)
 ReallyForceSpellRES("SPPR550",Player3)
 ReallyForceSpellRES("SPPR550",Player4)
 ReallyForceSpellRES("SPPR550",Player5)
 ReallyForceSpellRES("SPPR550",Player6)~
-== C0AYUKI ~Goodbye, my friend.~
+== C0AYUKI ~再会，我的朋友。~
 EXIT
 
 CHAIN IF WEIGHT #-1 ~GlobalGT("C0AuraBG2Quest2IceEncounter","GLOBAL",5)~ THEN C0AYUKI QUEST2-ICE-ENCOUNTER-5
-~Goodbye, my friend.~ [C0BLANK]
+~再会，我的朋友。~ [C0BLANK]
 END
   + ~OR(6)
   HPPercentLT(Player1,1)
@@ -3165,12 +3165,12 @@ END
   HPPercentLT(Player3,1)
   HPPercentLT(Player4,1)
   HPPercentLT(Player5,1)
-  HPPercentLT(Player6,1)~ + ~Can you help me raise my fallen friends?~ + QUEST2-ICE-ENCOUNTER-5-1
-  ++ ~I hope to see your garden restored one day.~ + QUEST2-ICE-ENCOUNTER-5-2
-  ++ ~Goodbye.~ EXIT
+  HPPercentLT(Player6,1)~ + ~你能帮我把倒下的朋友复活吗？~ + QUEST2-ICE-ENCOUNTER-5-1
+  ++ ~我希望有一天看到你的花园复原。~ + QUEST2-ICE-ENCOUNTER-5-2
+  ++ ~再会。~ EXIT
 
 CHAIN C0AYUKI QUEST2-ICE-ENCOUNTER-5-1
-~Of course.~
+~当然。~
 DO ~ReallyForceSpellRES("SPPR550",Player1)
 ReallyForceSpellRES("SPPR550",Player2)
 ReallyForceSpellRES("SPPR550",Player3)
@@ -3179,20 +3179,20 @@ ReallyForceSpellRES("SPPR550",Player5)
 ReallyForceSpellRES("SPPR550",Player6)~ EXIT
 
 CHAIN C0AYUKI QUEST2-ICE-ENCOUNTER-5-2
-~I hope I can show you as well... you will always be welcome, when that day comes.~
+~我也希望能让你看看我的世界……那一天到来时，你永远受欢迎。~
 EXIT
 
 CHAIN IF WEIGHT #-1 ~Global("C0AuraBG2Quest2IceEncounter","GLOBAL",6)~ THEN C0AURA2J QUEST2-ICE-ENCOUNTER-3
-~I hope she'll be able to bring this place back to life... maybe if we find another power crystal, we can come back one day and see her again?~ [C0BLANK]
+~我希望她能让这地方恢复生机……也许若我们再找到一颗能量晶体，有一天能回来再见她？~ [C0BLANK]
 DO ~SetGlobal("C0AuraBG2Quest2IceEncounter","GLOBAL",7)~
-== C0AURA2J ~Anyway, I've tuned the anchoring device to bring us home, <CHARNAME>. We can go whenever you're ready.~
+== C0AURA2J ~总之，我已把锚定装置调好带我们回家，<CHARNAME>。你准备好了我们就走。~
 DO ~SetGlobal("C0AuraBG2Quest2Done","GLOBAL",1)~ EXIT
 
 CHAIN IF WEIGHT #-1 ~Global("C0AuraBG2Quest2Done","GLOBAL",1)~ THEN C0AURA2J C0AuraBG2Quest2Done
-~Ready to go?~ [C0BLANK]
+~准备好走了？~ [C0BLANK]
 END
-  ++ ~Yes.~ + C0AuraBG2Quest2Done-1
-  ++ ~Not yet.~ EXIT
+  ++ ~是。~ + C0AuraBG2Quest2Done-1
+  ++ ~还没有。~ EXIT
 
 EXTEND_BOTTOM PPSAEM 52
  IF ~InParty("C0Aura")~ THEN EXTERN C0AURA2J C0AuraC4CutScene
@@ -3203,131 +3203,131 @@ EXTEND_BOTTOM PPSAEM 13
 END
 
 CHAIN C0AURA2J C0AuraC4CutScene
-~Hmm...? That sound...~
+~嗯……？那声音……~
 END
-  ++ ~What is it, Aura?~ EXTERN C0AURA2J C0AuraC4CutScene-0
-  ++ ~Stop daydreaming. We're about to board.~ EXTERN C0AURA2J C0AuraC4CutScene-0
+  ++ ~怎么了，奥拉？~ EXTERN C0AURA2J C0AuraC4CutScene-0
+  ++ ~别发愣了。我们要上船了。~ EXTERN C0AURA2J C0AuraC4CutScene-0
 
 CHAIN C0AURA2J C0AuraC4CutScene-0
-~Ah... nothing, <CHARNAME>. I thought I just heard the familiar voice humming across the wind... but that's impossible...~
-== PPBODHI3 IF ~InMyArea("ppbodhi3")~ THEN ~Fascinating. This mystery chanter's voice is powerful enough to be carried over the sea, without magic.~
-== PPARAN2 IF ~InMyArea("aran")~ THEN ~Quite a resounding baritone, for us to hear it from here. Yet, I can sense it is not magical in nature.~
-== C0AURA2J ~I must just be feeling homesick... it just sounds so much like—nevermind. Let's go, <CHARNAME>.~
+~啊……没什么，<CHARNAME>。我以为刚听见那熟悉的嗓音随风飘过海面……可那不可能……~
+== PPBODHI3 IF ~InMyArea("ppbodhi3")~ THEN ~真有意思。这神秘歌者的嗓音强到不用魔法就能漂过海面。~
+== PPARAN2 IF ~InMyArea("aran")~ THEN ~那么浑厚的男中音，竟能传到这儿。可我感觉得出它并非魔法性质。~
+== C0AURA2J ~我一定只是思乡了……它听着太像——算了。走吧，<CHARNAME>。~
 DO ~SetGlobal("C0AuraC4CutScene","GLOBAL",1)
 ClearAllActions()
 StartCutSceneMode()
 StartCutScene("C0ACUTS1")~ EXIT
 
 CHAIN IF WEIGHT #-1 ~Global("C0AuraC4CutScene","GLOBAL",1)~ THEN C0AQINT2 C0AuraC4CutScene-1
-~That is his ship. So he has arrived at last.~ [C0BLANK]
+~那是他的船。他终于到了。~ [C0BLANK]
 DO ~SetGlobal("C0AuraC4CutScene","GLOBAL",2)~
-== C0AQINT1 ~That humming... what meaning does it hold?~
-== C0AQINT3 ~Who knows. I do not believe it to be noteworthy.~
-== C0AQINT2 ~Do not underestimate the High Artificer of the Eleventh. Remain on your guard at all times, and be prepared in case of the worst.~
-== C0AQINT3 ~Must we be so ill at ease? Regardless of what power he holds in the fatherland, he is still but an inventor, like any other. What could be—~
-== C0AQINT2 ~Quiet! He comes.~
+== C0AQINT1 ~那哼唱……有什么含义？~
+== C0AQINT3 ~谁知道。我不觉得值得一提。~
+== C0AQINT2 ~别低估第十一工坊的最高奇械师。始终戒备，做好最坏打算。~
+== C0AQINT3 ~我们非得这么不安吗？不管他在祖国有多大权势，他也不过是个发明家，跟别人一样。能有什么——~
+== C0AQINT2 ~安静！他来了。~
 DO ~ClearAllActions()
 StartCutSceneMode()
 StartCutScene("C0ACUTS2")~ EXIT
 
 CHAIN IF WEIGHT #-1 ~Global("C0AuraC4CutScene","GLOBAL",2)~ THEN C0AQINT2 C0AuraC4CutScene-2
-~Master Dedalus, good eve... it has been a long time since we last met. I trust you have fared well? The journey by sea was no trouble, as I can deduct from hearing the robustness of your voice.~ [C0BLANK]
+~戴达罗斯大人，晚安……我们上次见面已过去很久。我相信你过得还好？听你声音这么洪亮，我推断海上航程没什么麻烦。~ [C0BLANK]
 DO ~SetGlobal("C0AuraC4CutScene","GLOBAL",3)~
-== C0DEDAL ~Your bodyguards may leave.~
-== C0AQINT1 ~What?!~
-== C0AQINT3 ~Sir...~
-== C0AQINT2 ~Do as he says. Go and stand guard while the two of us talk.~
-== C0DEDAL ~The four in the shadows as well.~
-== C0AQINT2 ~...Them too.~
-== C0AQINT3 ~Yes, sir.~
+== C0DEDAL ~你的护卫可以走了。~
+== C0AQINT1 ~什么？！~
+== C0AQINT3 ~大人……~
+== C0AQINT2 ~照他说的做。去外头守着，我们俩谈。~
+== C0DEDAL ~阴影里那四个也走。~
+== C0AQINT2 ~……他们也走。~
+== C0AQINT3 ~是的，先生。~
 DO ~ClearAllActions()
 StartCutSceneMode()
 StartCutScene("C0ACUTS3")~ EXIT
 
 CHAIN IF WEIGHT #-1 ~Global("C0AuraC4CutScene","GLOBAL",3)~ THEN C0AQINT2 C0AuraC4CutScene-3
-~*ahem*... heh, beg pardon, most esteemed one. A precaution, as I hope you can understand.~ [C0BLANK]
+~*咳*……嘿，恕罪，最尊贵的大人。一点预防，希望你能理解。~ [C0BLANK]
 DO ~SetGlobal("C0AuraC4CutScene","GLOBAL",4)~
-== C0DEDAL ~...~
-== C0DEDAL ~I believe you owe me an explanation, Otho.~
-== C0AQINT2 ~Do I? And what has the Interitus done to earn your ire?~
-== C0DEDAL ~Against the will of the Ayrorch, I have provided you with a duty, and the chance to work towards the future of the homeland. Had you done as required, I would not be here tonight. The unsanctioned distribution of unstable Titan, sequestering the Eleventh Workshop's prototype automation...~
-== C0DEDAL ~And there is the matter of your attempts on the life of my young niece.~
-== C0AQINT2 ~Your Eminence, sir, a moment... I believe the long journey has taken leave of your senses. These are some rather heavy accusations you are imposing, and quite unfounded. Feeble as we are now, the Interitus still owes all that we are now to your benevolence.~
-== C0DEDAL ~Enough, Otho. What you have done of your own accord, and its consequences, will be evaluated in due time. I am here for the results of your work, no more. The "L'an Elementume Vitaer", if you will.~
-== C0AQINT2 ~Of course, of course. Returned to its rightful owner, as it should be. Along with the newly-acquired research, though it is no doubt primitive compared to the magnificent works of your former teacher, or High Artificer Glaphyra... rest her soul.~
-== C0DEDAL ~...~
-== C0AQINT2 ~Ah... I take it you prefer not to be reminded of your late sister, Your Eminence. Forgive me for my impertinence.~
-== C0DEDAL ~That is all in the past, Otho. We Lantanna look to the future, and never allow our failures to cloud our judgment. You still understand this simple creed, I hope?~
-== C0AQINT2 ~I... well, of course I do, Your Eminence. My pride as a member of the homeland is without question.~
-== C0DEDAL ~Good. Then you and all under your command are to cease all your current activity and return with me to Lantan, without delay.~
-== C0AQINT2 ~What?!~
-== C0DEDAL ~I have been patient, Otho. Where our kin see naught but the crimes of your predecessors, I offered you the benefit of the doubt, that you would faithfully serve the land you claim to love when given the opportunity. And while I do not condone the beliefs of your organization, your contribution up to now has been of undeniable merit.~
-== C0DEDAL ~However... while I am willing to compromise on many things, your recent actions have gone beyond the terms of our cooperation. Our duty is to the homeland, and while that may mean we must be prepared for the potential threat of the outerlands... that does not equate to deliberately sowing discord, nor using innocents as your disposable test subjects.~
-== C0DEDAL ~And... turning our own creations upon another Lantanna, putting further weight on your past sins... you have crossed a line, Otho, one which I cannot overlook.~
-== C0AQINT2 ~Please, Your Eminence. I am willing to acknowledge my errors in judgment. Perhaps we overstepped in our experimentation with your teacher's research... but Interitus would never act against Lantan, nor any Lantanna who calls it home.~
-== C0DEDAL ~These games of deception are beneath us. I am well aware that the Eye of Akintaer was believed lost in the Great Ice Sea, along with my niece, six years ago. To find out that it has been in your possession all this time... you have kept many secrets from me.~
-== C0AQINT2 ~Ah... I see. It seems that I have underestimated your information network. You may have taken us under your wing, but it seems even then, you still have never trusted us fully.~
-== C0DEDAL ~You have had as much of my trust as is deserved. I offered you a chance... a choice not to repeat your mistakes, and you have chosen wrongly. This must end, Otho. No more.~
-== C0AQINT2 ~End? No, I fear it cannot end so easily, not while our nation's safety hangs by a thread... as a fellow Lantanna, surely you would be willing to hear my case, before rushing to a decision?~
-== C0DEDAL ~...~
-== C0DEDAL ~I am listening.~
-== C0AQINT2 ~Your Eminence, look around you... at this primitive scene before you. If I may ask, what do you see?~
-== C0DEDAL ~...~
-== C0DEDAL ~A realm engulfed in darkness.~
-== C0AQINT2 ~Pitiable, is it not?~
-== C0AQINT2 ~I will not deny that we who serve Interitus view these barbarians of the outerlands with a contempt that those who have lived in our nation's comforts... those who have never seen the stupidity, the brutality and ignorance, would understandably balk at. Few have the vision of those like yourself, who are wise enough to truly see the threat that looms beyond us. That darkness will consume us as well, one day, should we not act.~
-== C0AQINT2 ~You may question our methods, but you may never doubt our loyalty. We live to serve the interests of our home, yet that service requires more than to simply protect ourselves. What our people need is not a shield, but a blade. After all... what do you carry your blade for, Your Eminence?~
-== C0DEDAL ~...~
-== C0DEDAL ~For duty. For the safety and prosperity of Lantan, and the minds that have shaped it into our home.~
-== C0AQINT2 ~That is what we all wish to see, is it not? To see Lantan, our glorious nation, that rightfully deserves to be above these ignorant savages, rise above and topple the benighted?~
-== C0DEDAL ~And that is what you truly desire? You, and all who wear your colors?~
-== C0AQINT2 ~It is what *all* Lantanna should aspire for, Your Eminence.~
-== C0DEDAL ~I see.~
+== C0DEDAL ~……~
+== C0DEDAL ~我想你欠我一个解释，奥托。~
+== C0AQINT2 ~是吗？因特里图斯做了什么招你恼火？~
+== C0DEDAL ~我违背艾罗奇的意志，给了你一份职责、一个为祖国未来出力的机会。你若照要求做了，我今晚就不会来。未经许可散布不稳定的泰坦、私藏第十一工坊的原型自动机械……~
+== C0DEDAL ~还有你企图谋害我年轻侄女性命这件事。~
+== C0AQINT2 ~大人，阁下，稍等……我想长途航行让你失了判断。你加的这些指控相当重，而且毫无根据。我们如今虽弱，可因特里图斯现有的一切仍全赖你的恩惠。~
+== C0DEDAL ~够了，奥托。你自作主张做的事及其后果，到时自会评估。我来此只为你的成果，别无其他。那本《生命元素论》，请交出来。~
+== C0AQINT2 ~当然，当然。物归原主，本该如此。还有新近取得的研究，虽说跟你旧日老师、或格拉菲拉的杰作相比无疑原始……愿她安息。~
+== C0DEDAL ~……~
+== C0AQINT2 ~啊……我猜你不愿被提起已故的妹妹，大人。恕我冒昧。~
+== C0DEDAL ~那都是过去了，奥托。我们兰坦人只看未来，绝不让失败蒙住判断。我希望你仍懂这条简单的信条？~
+== C0AQINT2 ~我……嗯，当然懂，大人。我身为祖国一员的骄傲无可置疑。~
+== C0DEDAL ~好。那你和你麾下所有人立即停止一切当前活动，随我回兰坦，不得延误。~
+== C0AQINT2 ~什么？！~
+== C0DEDAL ~我已耐心够久了，奥托。当我们的同胞只看见你前辈们的罪行时，我给了你疑罪从无的机会，指望你得到机会时会忠实服务你声称热爱的土地。我虽不认同你们组织的信念，可你至今的贡献无可否认有价值。~
+== C0DEDAL ~不过……我虽愿在许多事上妥协，你近来的作为已超出我们合作的条件。我们的职责在祖国，那也许意味着我们得预备外邦的潜在威胁……可那不等于故意播撒不和，也不等于拿无辜者当一次性试验品。~
+== C0DEDAL ~而且……把我们的造物转向另一个兰坦人，又给你过往的罪添分量……你越了线，奥托，这条线我没法视而不见。~
+== C0AQINT2 ~求你，大人。我愿意承认我判断有误。也许我们在用你老师的研究做实验时越了界……可因特里图斯绝不会对兰坦、对任何以兰坦为家的兰坦人不利。~
+== C0DEDAL ~这些欺瞒的把戏配不上我们。我很清楚阿金泰尔之眼被认为六年前跟我侄女一起失落在大冰海。得知它一直在你手里……你瞒了我许多事。~
+== C0AQINT2 ~啊……我明白了。看来我低估了你的情报网。你也许把我们收在羽翼下，可看来即便那时，你也从没真正信过我们。~
+== C0DEDAL ~你得到过我应给的信任。我给过你机会……一次不重犯错误的选择，而你选错了。这必须结束，奥托。不再有。~
+== C0AQINT2 ~结束？不，我怕没法这么轻易结束，只要我国安危还悬于一线……同为兰坦人，你总该愿意在仓促决定前听听我的说法？~
+== C0DEDAL ~……~
+== C0DEDAL ~我在听。~
+== C0AQINT2 ~大人，看看四周……看看眼前这原始景象。容我问一句，你看见了什么？~
+== C0DEDAL ~……~
+== C0DEDAL ~一个陷在黑暗里的国度。~
+== C0AQINT2 ~可悲，不是吗？~
+== C0AQINT2 ~我不否认我们因特里图斯看待这些外邦野蛮人时，带着一种住在我国舒适里的人……那些从没见过其愚蠢、残暴与无知的人，理当会退缩的轻蔑。少有像你这样有远见的人，足智多谋到真看见我们外头逼近的威胁。若我们不行动，那黑暗有一天也会吞掉我们。~
+== C0AQINT2 ~你可以质疑我们的方法，但绝不可怀疑我们的忠诚。我们活着是为服务故乡的利益，可那服务不只意味着保护自己。我们的人民需要的不是盾，是刀。毕竟……大人，你佩刀是为了什么？~
+== C0DEDAL ~……~
+== C0DEDAL ~为了职责。为了兰坦的安全与兴旺，也为了那些把它塑造成我们家园的头脑。~
+== C0AQINT2 ~那正是我们都想看到的，不是吗？看到兰坦——我们光荣的国度，理应高于这些无知野蛮人之上——崛起并推翻那些愚昧者？~
+== C0DEDAL ~那真是你所愿的？你，以及所有穿你那种颜色的人？~
+== C0AQINT2 ~那是*所有*兰坦人都该追求的，大人。~
+== C0DEDAL ~我明白了。~
 DO ~ClearAllActions()
 StartCutSceneMode()
 StartCutScene("C0ACUTS4")~ EXIT
 
 CHAIN IF WEIGHT #-1 ~Global("C0AuraC4CutScene","GLOBAL",4)~ THEN C0DEDAL C0AuraC4CutScene-4
-~As I said... my duty is to the immutable security of the homeland. And that includes the removal of *all* destabilizing elements, from wherever they might originate.~ [C0BLANK]
+~我说过……我的职责是祖国不可动摇的安全。而那包括清除*一切*不稳定的因素，不管它们源自何处。~ [C0BLANK]
 DO ~SetGlobal("C0AuraC4CutScene","GLOBAL",5)~
-== C0AQINT2 ~Hrgh *cough* gah...~
-== C0DEDAL ~The role of the Interitus is done. Your leader will not outlast you for long, nor your compatriots. Though it seems this was unavoidable, I regret nonetheless that this has to be done.~
-== C0AQINT2 ~D—damn... you, Dedalus Dinelstr... nngh...~
-== C0DEDAL ~It's over, Otho.~
+== C0AQINT2 ~呃……*咳*……啊……~
+== C0DEDAL ~因特里图斯的角色结束了。你们领袖也活不过你多久，你的同伙亦然。虽说看来无可避免，我仍后悔不得不这样做。~
+== C0AQINT2 ~该——该死……你，戴达罗斯·迪内尔斯特……呃……~
+== C0DEDAL ~结束了，奥托。~
 DO ~ClearAllActions()
 StartCutSceneMode()
 StartCutScene("C0ACUTS5")~ EXIT
 
 CHAIN IF WEIGHT #-1 ~Global("C0AuraC4CutScene","GLOBAL",5)~ THEN C0DEDAL C0AuraC4CutScene-5
-~"To rise above and topple the benighted"? Hmph, and would we even recognize ourselves then...?~ [C0BLANK]
+~“崛起并推翻那些愚昧者”？哼，到那时我们还认得自己吗……？~ [C0BLANK]
 DO ~SetGlobal("C0AuraC4CutScene","GLOBAL",6)
 ClearAllActions()
 StartCutSceneMode()
 StartCutScene("C0ACUTS6")~ EXIT
 
 CHAIN IF WEIGHT #-1 ~Global("C0AuraC4CutScene","GLOBAL",6)~ THEN C0AFRITZ C0AuraC4CutScene-6
-~The remainder of Interitus have been cornered and neutralized. I've also received word from Lantan that Oculus has sent agents to their leader's safehouse, using the information we gave to them in secret.~ [C0BLANK]
+~因特里图斯其余的人已被围困制伏。我也收到兰坦的消息，奥库卢斯用我们暗中给的情报，已派探员去了他们领袖的安全屋。~ [C0BLANK]
 DO ~SetGlobal("C0AuraC4CutScene","GLOBAL",7)~
-== C0DEDAL ~I see. Well done, Fritz.~
-== C0AFRITZ ~What next, director?~
-== C0DEDAL ~Take them home and bury them in our soil. They deserve that much.~
-== C0AFRITZ ~It will be done.~
-== C0DEDAL ~...Fritz.~
-== C0AFRITZ ~Yes, sir?~
-== C0DEDAL ~In the past decade of my actions for our homeland, my blade has been stained with naught but the blood of fellow Lantanna. Is this not laughable?~
-== C0AFRITZ ~Director, you...~
-== C0DEDAL ~I am far beyond regrets. And yet, how did it come to this? We were meant to be one people, the pioneers of the Realms's future. This was never meant to be the way.~
-== C0AFRITZ ~We... knew what taking this path would cost us, teacher. All of us did. We all chose it regardless.~
-== C0DEDAL ~...~
-== C0DEDAL ~How fares your father, Fritz? Have you received his letters?~
-== C0AFRITZ ~I... yes. He is not well. I have responded to him, many times, urging him to consider retirement... but he will not hear of it. Not so long as he believes the Ayrorch needs him.~
-== C0DEDAL ~Perhaps you should return to Lantan and see him. I give you leave to. Over a century's loyal service... he deserves a loved one at his side for his remaining years.~
-== C0AFRITZ ~When my mission here is complete... director, I hope you understand one crucial thing.~
-== C0AFRITZ ~It was never a choice I had to make between you, my teacher, against my father. I wish to be the shield for our homeland, just as you... just as he. When the time comes, he will understand.~
-== C0DEDAL ~I do not doubt you, Fritz. I merely do not wish for you to follow me believing my way is the sole truth. There will be those who oppose me, with logical reason. It may be your father, my brother, my nieces... none of them would approve of what I have done. Especially not Aurelia.~
-== C0AFRITZ ~Dame Aurelia... did you not plan to meet her, director? If we follow that ship, we might still—~
-== C0DEDAL ~No. I believe she is steadfast towards whatever cause she is working towards. I do not want to impede her.~
-== C0DEDAL ~We will continue our plans here and await her return. Come, Fritz.~
+== C0DEDAL ~我明白了。干得好，弗里茨。~
+== C0AFRITZ ~接下来呢，主管？~
+== C0DEDAL ~把他们的遗体带回家，葬在我们的土里。他们至少该得这个。~
+== C0AFRITZ ~会办到。~
+== C0DEDAL ~……弗里茨。~
+== C0AFRITZ ~是，大人？~
+== C0DEDAL ~这十年我为祖国奔忙，刀上沾的血竟全是兰坦同胞的。这不可笑吗？~
+== C0AFRITZ ~主管，你……~
+== C0DEDAL ~我早谈不上后悔。可怎么会走到这一步？我们本该是一族人，诸国度未来的先驱。从不该是这样的路。~
+== C0AFRITZ ~我们……早知道走这条路要付什么代价，老师。我们全都知道。我们还是都选了它。~
+== C0DEDAL ~……~
+== C0DEDAL ~你父亲怎么样，弗里茨？收到他的信了吗？~
+== C0AFRITZ ~我……收到了。他不好。我回了他许多次，劝他考虑退休……可他不听。只要他还觉得艾罗奇需要他，就不听。~
+== C0DEDAL ~也许你该回兰坦看看他。我准了。一个多世纪的忠诚服务……他剩下的年头该有个亲人在身边。~
+== C0AFRITZ ~等我在这里的任务完成……主管，我希望你明白一件要紧事。~
+== C0AFRITZ ~我从不必在你——我的老师——和我父亲之间做选择。我想做祖国的盾，就像你……就像他。到时候，他会明白。~
+== C0DEDAL ~我不怀疑你，弗里茨。我只是不愿你跟着我时，以为我的路是唯一真理。会有人反对我，理由充分。也许是你父亲、我弟弟、我的侄女们……他们都不会赞同我做的事。尤其奥瑞莉亚。~
+== C0AFRITZ ~奥瑞莉亚女士……你不是打算见她吗，主管？我们若跟上那条船，也许还来得及——~
+== C0DEDAL ~不。我相信她对所奔的事业坚定不移。我不想阻碍她。~
+== C0DEDAL ~我们在此继续计划，等她回来。走吧，弗里茨。~
 DO ~ClearAllActions()
 StartCutSceneMode()
 StartCutScene("C0ACUTS7")~ EXIT
@@ -3335,48 +3335,48 @@ StartCutScene("C0ACUTS7")~ EXIT
 // QUEST 3
 
 CHAIN IF WEIGHT #-1 ~Global("C0AuraBG2Quest3","GLOBAL",1)~ THEN C0AURA2J quest3
-~Ahh... it's so lovely to finally see the sky again. I don't know how long it's been since we sailed away from Amn, but it feels like it's been forever.~ [C0BLANK]
+~啊……终于又见到天空，真好。不知我们离开安姆航行了多久，可感觉像过了永远。~ [C0BLANK]
 DO ~SetGlobal("C0AuraBG2Quest3","GLOBAL",2)~
-= ~I know we still have a task to complete, but before we go hunting down those vampires, I was hoping we could go back to the Jansens and have a look at my workshop, <CHARNAME>. It's not anything important, but now that we're back, I just want to be sure that everything's the way I left it.~
+= ~我知道我们还有任务，可去追那些吸血鬼之前，我希望我们能回简森家看看我的工坊，<CHARNAME>。不是什么要紧事，可既然回来了，我只想确认一切都还是我离开时的样子。~
 END
-  ++ ~Alright. There's a few places I'd like to go first as well.~ + quest3-1-1
-  ++ ~We don't have time, Aura. Dealing with Bodhi is more important.~ + quest3-1-2
+  ++ ~好。我也有几个地方想先去。~ + quest3-1-1
+  ++ ~我们没时间，奥拉。对付波蒂更重要。~ + quest3-1-2
 
 CHAIN C0AURA2J quest3-1-1
-~Thank you, <CHARNAME>. There's no rush, but if we could stop by if we have a chance, it would make me really happy.~
+~谢谢你，<CHARNAME>。不急，可若有机会能顺路去一趟，我会很高兴。~
 EXIT
 
 CHAIN C0AURA2J quest3-1-2
-~You're right. Maybe afterwards, assuming nothing goes wrong, then? I just want to take a quick look.~
+~你说得对。也许之后吧，假设一切顺利，行吗？我只想快看一眼。~
 EXIT
 
 CHAIN IF WEIGHT #-1 ~Global("C0AuraBG2Quest3","GLOBAL",3)~ THEN C0CARNIF quest3-3
-~Woof! Arooo! *pant* *wag*~ [C0BLANK]
+~汪！嗷呜！*喘气* *摇尾巴*~ [C0BLANK]
 DO ~SetGlobal("C0AuraBG2Quest3","GLOBAL",4)~
-== C0AURA2J ~Carnifex? Is that you? Then that means... *gasp* Juno's here in the city, isn't she?~
+== C0AURA2J ~卡尼费克斯？是你吗？那就是说……*倒吸一口气* 朱诺在这城里，对吧？~
 END
-  ++ ~Do you recognize this hound?~ EXTERN C0AURA2J quest3-3-1
-  ++ ~He belongs to your sister?~ EXTERN C0AURA2J quest3-3-2
+  ++ ~你认得这条猎犬？~ EXTERN C0AURA2J quest3-3-1
+  ++ ~他是你姐姐的？~ EXTERN C0AURA2J quest3-3-2
 
 CHAIN C0AURA2J quest3-3-1
-~Yes, he's been my sister's partner for many years, and a very well-trained hunting hound.~
+~是，他当我姐姐的伙伴许多年了，是条训练极好的猎犬。~
 EXTERN C0AURA2J quest3-3-2
 
 CHAIN C0AURA2J quest3-3-2
-~Juno rescued him when we were camping together in the jungle, a long time ago. He was still just a tiny pup back then. And even though he looks scary—and definitely is, if you're a criminal, he's very friendly to everyone in my family.~
-= ~If he's here... Juno wants to see me again, doesn't she? Is Luna here too? I have to find out! Carnifex, where are they right now?~
-== C0CARNIF ~Woof!~
+~很久以前我们一起在丛林露营时，朱诺救了他。那时他还是只小崽子。别看他样子吓人——而且若你是罪犯，他确实吓人——他对我家每个人都极友善。~
+= ~他若在这儿……朱诺想再见我，对吧？露娜也在吗？我得弄清楚！卡尼费克斯，他们现在在哪儿？~
+== C0CARNIF ~汪！~
 DO ~EscapeArea()~
-== C0AURA2J IF ~AreaCheck("AR0400")~ THEN ~It looks like... he's heading towards the Jansen home. My sisters must be waiting for me there! <CHARNAME>, let's go right now!~
-== C0AURA2J IF ~!AreaCheck("AR0400")~ THEN ~It looks like... he's heading towards the slums. My sisters must be waiting for me at the Jansen home! <CHARNAME>, let's go right now!~
+== C0AURA2J IF ~AreaCheck("AR0400")~ THEN ~看来……他往简森家去了。我姐妹们一定在那儿等我！<CHARNAME>，我们这就走！~
+== C0AURA2J IF ~!AreaCheck("AR0400")~ THEN ~看来……他往贫民区去了。我姐妹们一定在简森家等我！<CHARNAME>，我们这就走！~
 EXIT
 
 CHAIN IF WEIGHT #-1 ~Global("C0AuraBG2Quest3","GLOBAL",5)~ THEN MAJAN quest3-5
-~Oh, there she is, the little darling! Back from her adventures at last!~
+~哦，她在那儿，小宝贝！终于冒险回来了！~
 DO ~SetGlobal("C0AuraBG2Quest3","GLOBAL",6)~
-== C0AURA2J ~I was right! It was you two...~
-== C0AJUNO ~Surprise, baby sister.~
-== C0AURA2J ~...Juno!~
+== C0AURA2J ~我没错！是你们俩……~
+== C0AJUNO ~惊喜吧，小妹妹。~
+== C0AURA2J ~……朱诺！~
 DO ~ClearAllActions()
 StartCutSceneMode()
 MoveToObjectOffset("C0AJUNO",[15.0])
@@ -3386,13 +3386,13 @@ ActionOverride("C0AJUNO",SmallWait(1))
 ActionOverride("C0AJUNO",StartDialogNoSet(Player1))~ EXIT
 
 CHAIN IF WEIGHT #-1 ~Global("C0AuraBG2Quest3","GLOBAL",6)~ THEN C0AJUNO quest3-6
-~Oof...! You really have grown. That was almost enough to topple me over.~
+~哎哟……！你真的长大了。刚才差点把我撞倒。~
 DO ~SetGlobal("C0AuraBG2Quest3","GLOBAL",7)~
-== C0AURA2J ~I'm sorry, Juno, I'm just... so happy to see you! It's been so long...~
-== C0AJUNO ~That's right, it has. You've got a lot of stories to tell us all, for sure. And don't you two think you should say something... Luna? Uncle?~
-== C0ALUNA ~...I'm glad to see you didn't get yourself into too much trouble.~
-== C0DEDAL ~Yes... it's good to see you have been well, Aurelia. Though I believe your companion should come forth so that we can have a proper introduction.~
-== C0AURA2J ~That's right... <CHARNAME>, over here! I want you to meet my family.~
+== C0AURA2J ~对不起，朱诺，我只是……太高兴见到你了！过了这么久……~
+== C0AJUNO ~是啊，确实久。你肯定有一大堆故事要讲给我们听。你们俩不该说点什么吗……露娜？叔叔？~
+== C0ALUNA ~……很高兴看到你没给自己惹太多麻烦。~
+== C0DEDAL ~是……看到你安好真好，奥瑞莉亚。不过我想你的同伴该上前来，我们好正经介绍一番。~
+== C0AURA2J ~对……<CHARNAME>，这边来！我想让你见见我家人。~
 DO ~ClearAllActions()
 StartCutSceneMode()
 ActionOverride(Player1,MoveToPoint([350.330]))
@@ -3402,60 +3402,60 @@ Wait(5)
 StartDialogNoSet(Player1)~ EXIT
 
 CHAIN IF WEIGHT #-1 ~Global("C0AuraBG2Quest3","GLOBAL",7)~ THEN C0AURA2J quest3-7
-~<CHARNAME>, these are my older sisters, Juno and Luna. And that's my uncle, Dedalus Dinelstrand.~
+~<CHARNAME>，这是我姐姐朱诺和露娜。那是我叔叔戴达罗斯·迪内尔斯特兰德。~
 DO ~SetGlobal("C0AuraBG2Quest3","GLOBAL",8)~
-== C0DEDAL ~I greet you warmly. Your name is well-known across the Sword Coast, and even Lantan has heard tales of your exploits.~
-== C0ALUNA ~...Hello.~
-== C0AJUNO ~You have all our gratitude for taking care of our young, inexperienced sister throughout her journey, <CHARNAME>. Although I can tell she's far from inexperienced these days.~
+== C0DEDAL ~我热诚问候你。你的名字在剑湾广为人知，就连兰坦也听过你的事迹。~
+== C0ALUNA ~……你好。~
+== C0AJUNO ~我们都很感激你在旅途中照顾我们年轻、没经验的妹妹，<CHARNAME>。不过我看出她如今早不是没经验了。~
 END
-  ++ ~You don't have to thank me. Aura's been an irreplacable companion.~ EXTERN C0AURA2J quest3-7-1
-  ++ ~I'm glad I can finally meet her family. She's talked a lot about you.~ EXTERN C0AURA2J quest3-7-1
-  ++ ~Don't mind me. You and Aura all have a lot to catch up on.~ EXTERN C0AURA2J quest3-7-1
+  ++ ~不必谢我。奥拉是不可替代的同伴。~ EXTERN C0AURA2J quest3-7-1
+  ++ ~我很高兴终于见到她家人。她讲过许多关于你们的事。~ EXTERN C0AURA2J quest3-7-1
+  ++ ~别管我。你和奥拉有的是话要叙。~ EXTERN C0AURA2J quest3-7-1
 
 CHAIN C0AURA2J quest3-7-1
-~So what brings you all from the homeland to here, Juno? Just to visit me? I wrote that it wouldn't be too long before I'd visit home.~
-== C0AJUNO ~And that means we shouldn't come and see our dear sister ourselves, given the chance? Aw, that hurts... no, I'm joking. Actually, it was our uncle's idea to come and see you ourselves.~
-== C0AURA2J ~Really? Uncle, you're leading the Eleventh Workshop. Is it okay for you to just leave Lantan for a personal visit?~
-== C0DEDAL ~Hmm... the responsibilities of a High Artificer are heavy, but I have a responsibility to family above all, child. It was a favor to Kairos. He would have preferred to see you himself, but he has no such opportunity. Thus, I came in his stead.~
-== C0AURA2J ~What's been going on with father? Nothing bad, right, uncle?~
-== C0DEDAL ~No, not... well, it depends on your perspective, I suppose. The Ayrorch are assessing him as a candidate for joining the council.~
-== C0AURA2J ~Really?! That's... the council hasn't changed members as far as I can remember. I thought it'd be years before a new Santar was elected.~
-== C0DEDAL ~Many other believed so as well. However, the High Tribunus Constantine has saw fit to retire in his old age, and so the council must find his replacement. It is not a guarantee that your father will be chosen yet, but if he is, there will be great changes for the Glimmershine clan. It is for that reason he could not come to Amn.~
-== C0ALUNA ~Not that he didn't try his hardest. Uncle argued with him for hours before he finally decided to relent.~
-== C0AJUNO ~*ahem*! I'm sure we can tell Aura everything that's been going on in the homeland in suitable time. Right now, I think we should spend some time to celebrate, don't you think, uncle?~
-== C0DEDAL ~Of course.~
-== C0AJUNO ~Let's go upstairs and talk, sister. I want to hear all about everything you've been through.~
-== C0AURA2J ~I'd really love to, Juno, but, um... I've still got...~
+~那么朱诺，你们怎么从故乡到这儿来了？就为看我？我信里说过不用太久我就会回家的。~
+== C0AJUNO ~这意思是有了机会我们就不该来看亲爱的妹妹？哎，伤人……不，我开玩笑。其实是我们叔叔的主意，让我们亲自来见你。~
+== C0AURA2J ~真的？叔叔，你可是领导第十一工坊的。为私事离开兰坦没关系吗？~
+== C0DEDAL ~嗯……最高奇械师的职责很重，可我对家人的责任高于一切，孩子。这是给凯罗斯的人情。他本想亲自来看你，可没这机会。所以我代他来了。~
+== C0AURA2J ~父亲怎么了？没什么坏事吧，叔叔？~
+== C0DEDAL ~不，不是……嗯，这得看你怎么看。艾罗奇正在评议他，作为加入议会的候选人。~
+== C0AURA2J ~真的？！那……据我所知，议会好多年没换过成员了。我以为选新桑塔还得等好些年。~
+== C0DEDAL ~许多人也这么以为。可高等护民官康斯坦丁觉得年迈该退了，所以议会得找他的继任。你父亲未必一定被选上，可若选上，格利默夏恩一族将有大变。正因如此他没法来安姆。~
+== C0ALUNA ~倒不是他没尽力。叔叔跟他争了好几个钟头，他才终于松口。~
+== C0AJUNO ~*咳*！我相信咱们有的是时间告诉奥拉故乡的一切。现在，我想我们该花点时间庆祝，你觉得呢，叔叔？~
+== C0DEDAL ~当然。~
+== C0AJUNO ~我们上楼聊聊吧，妹妹。我想听你这一路的全部经过。~
+== C0AURA2J ~我真想去，朱诺，可，呃……我还有……~
 END
-  ++ ~Go ahead, Aura. You shouldn't miss this chance.~ EXTERN C0AURA2J quest3-7-2
-  ++ ~Don't worry. I can take care of things without you for a while.~ EXTERN C0AURA2J quest3-7-2
-  ++ ~I still need her help.~ EXTERN C0AJUNO quest3-7-3
+  ++ ~去吧，奥拉。你不该错过这机会。~ EXTERN C0AURA2J quest3-7-2
+  ++ ~别担心。你不在我也能照应一阵。~ EXTERN C0AURA2J quest3-7-2
+  ++ ~我还需要她帮忙。~ EXTERN C0AJUNO quest3-7-3
 
 CHAIN C0AURA2J quest3-7-2
-~Thank you, <CHARNAME>. Don't worry, I'll be sure to catch up to you when I have a chance.~
+~谢谢你，<CHARNAME>。别担心，我一有机会就来找你。~
 EXTERN C0AURA2J quest3-7-4
 
 CHAIN C0AJUNO quest3-7-3
-~Ah... yes, I should not forget that. Aura, if there is something more important on your hands, you can...~
-== C0AURA2J ~No, I... I'm sorry, <CHARNAME>, but I really would like to stay for at least a little while.~
+~啊……对，我不该忘了这点。奥拉，你手上若有更要紧的事，你可以……~
+== C0AURA2J ~不，我……对不起，<CHARNAME>，可我真的想至少留一会儿。~
 EXTERN C0AURA2J quest3-7-4
 
 CHAIN C0AURA2J quest3-7-4
-~In the meantime, there's still a way I can help you... if I'm going to be away from you for a while, why don't I give you access to the master control of my automaton? I'm sure you can understand the basics of commanding it, after seeing me do it for so long.~
+~这期间，我还是有办法帮你……既然我要离开你一阵，不如把我自动构造体的主控权限给你？看我操作这么久，基础指令你该懂。~
 DO ~SetGlobal("C0AuraBG2AutomatonControl","GLOBAL",1)~
-= ~Just give it the order to follow you if you need it. I can still help you indirectly like this, even if I won't be around.~
+= ~需要时给它下令跟着你就行。就算我不在，我也能这样间接帮你。~
 END
-  ++ ~Are you sure you don't need it for yourself?~ + quest3-7-5
-  ++ ~That'll help a lot. Thank you, Aura.~ + quest3-7-6
-  ++ ~It'll have to do. Just don't stay here for too long.~ + quest3-7-6
+  ++ ~你确定你自己不用它？~ + quest3-7-5
+  ++ ~那帮大忙了。谢谢，奥拉。~ + quest3-7-6
+  ++ ~也只能这样了。只是别在这儿待太久。~ + quest3-7-6
 
 CHAIN C0AURA2J quest3-7-5
-~Teehee, I think the danger we've gone through is affecting you, <CHARNAME>. What's going to happen to me here? Besides, I have Juno with me. You haven't seen what she's like with a bow yet.~
+~嘻嘻，我想我们经历的危险影响你了，<CHARNAME>。我在这儿能出什么事？再说，我有朱诺陪着。你还没见过她使弓的样子呢。~
 EXTERN C0AURA2J quest3-7-6
 
 CHAIN C0AURA2J quest3-7-6
-~I'll find you as soon as I've said goodbye to my family and seen them off. Take care of yourself, okay?~
-== C0AURA2J ~Let's go, Juno. I've got the perfect blend of tea to share while we talk! Oh, and you should join us for a little bit before you go too, <CHARNAME>.~
+~我跟家人道别、送走他们后就去找你。你自己当心，好吗？~
+== C0AURA2J ~走吧，朱诺。我调了最合适的一款茶，边聊边喝！哦，<CHARNAME>，你走之前也该来坐一会儿。~
 DO ~SetGlobalTimer("C0AuraBG2QuestTime3Timer","GLOBAL",ONE_DAY)
 ActionOverride("C0AJUNO",EscapeAreaMove("AR0403",671,419,NE))
 ActionOverride("C0ALUNA",EscapeAreaMove("AR0403",752,361,SW))
@@ -3468,350 +3468,350 @@ EscapeAreaMove("AR0403",720,432,N)~ EXIT
 
 CHAIN IF WEIGHT #-1 ~Global("Intro","LOCALS",0)
 Global("C0AuraBG2Quest3","GLOBAL",8)~ THEN C0AJUNO JUNO-0
-~I'm glad we're finally able to meet, <CHARNAME>. After everything Aura's told me about you, I would've been disappointed if I didn't have a chance to talk to you at least once.~
+~很高兴我们终于见面了，<CHARNAME>。奥拉把关于你的事都讲给我之后，若没机会至少跟你谈一次，我会失望的。~
 DO ~SetGlobal("Intro","LOCALS",1)~
-= ~As you already know, I'm Aura's eldest sister, Juno. I owe you a lot for taking care of her, and teaching her everything you have during your adventures together.~
+= ~如你所知，我是奥拉的大姐朱诺。你照顾她、在同行旅途中教她一切，我欠你很多。~
 END
-  ++ ~She's been an incomparable ally, and a good friend. I'm glad to have her around.~ + JUNO-0-1
-  ++ ~I think I also owe you for your part in raising her. She's said many good things about you.~ + JUNO-0-2
-  ++ ~Her skills are useful. That's all I care about.~ + JUNO-0-3
+  ++ ~她是无可比拟的盟友，也是好朋友。我很高兴有她在。~ + JUNO-0-1
+  ++ ~我想你在抚养她这事上出了力，我也欠你一份。她说过你许多好话。~ + JUNO-0-2
+  ++ ~她的本事有用。我只在乎这个。~ + JUNO-0-3
 
 CHAIN C0AJUNO JUNO-0-1
-~I'm glad you've managed to build such a strong bond with her. It may be a surprise to hear, seeing her as she is now, but a long time ago, she... struggled to connect with people. You've given her a lot of confidence, and it's changed her for the better.~
+~很高兴你跟她建立了这么牢固的纽带。看她如今这样也许令人惊讶，可在很久以前，她……很难与人相处。你给了她许多自信，让她变好了。~
 EXTERN C0AJUNO JUNO-0-4
 
 CHAIN C0AJUNO JUNO-0-2
-~I think you've overestimated my part in making my sister who she is now. I know she looks up to me, but in many ways, she's also far surpassed me, and it's her admiration of you that's driving her to improve herself further now.~
+~我想你高估了我在塑造我妹妹这事上的部分。我知道她敬仰我，可在许多方面，她也早已远远超过我；如今真正推她继续长进的，是她对你的钦佩。~
 EXTERN C0AJUNO JUNO-0-4
 
 CHAIN C0AJUNO JUNO-0-3
-~Hmm. While I can say that, seeing how she is now, I can trust Aura's judgment of people, I do hope you recognize her value as a friend and treat her with the respect she deserves. With what she's said about you, however, I'm willing to give the benefit of the doubt.~
+~嗯。我虽这么说，可看她如今这样，我能信奥拉看人的判断。我确实希望你明白她作为朋友的价值，以她应得的尊重待她。不过听她讲你那些话，我愿意先给你疑罪从无。~
 EXTERN C0AJUNO JUNO-0-4
 
 CHAIN C0AJUNO JUNO-0-4
-~While this family reunion will likely be shorter than I like, as long as I am here I hope that we may develop a friendship of our own. In time, I expect that even the rest of my family will want to become acquainted with you.~
-= ~If there is something you wish to talk to me about, please don't hesitate to ask. And I'm certain Luna and my uncle will be eager to introduce themselves as well, if they haven't already.~
+~这场家族重逢大概比我想要的短，可我在此期间，希望我们也能建立自己的友谊。时候到了，我想我家里其余人也会想认识你。~
+= ~你若有想跟我谈的，尽管开口。而且我确定露娜和我叔叔也会急着自我介绍，若他们还没的话。~
 EXIT
 
 CHAIN IF ~!Global("Intro","LOCALS",0) Global("C0AuraBG2Quest3","GLOBAL",8)~ THEN C0AJUNO JUNO-1
-~Yes, <CHARNAME>? Is there something I can do for you?~
+~是，<CHARNAME>？我能为你做什么？~
 END
-  ++ ~I'd like to know more about your family.~ + JUNO-1-FAMILY
-  ++ ~I'd like to know more about you.~ + JUNO-1-SELF
-  ++ ~Nothing right now. Excuse me.~ EXIT
+  ++ ~我想多了解你的家族。~ + JUNO-1-FAMILY
+  ++ ~我想多了解你。~ + JUNO-1-SELF
+  ++ ~现在没事。失陪。~ EXIT
 
 CHAIN C0AJUNO JUNO-1-FAMILY
-~Of course. Is there anyone in particular you want to talk about?~
+~当然。有特别想谈的谁吗？~
 END
-  + ~Global("C0AuraJunoFamily1","GLOBAL",0)~ + ~What can you tell me about Aura?~ DO ~SetGlobal("C0AuraJunoFamily1","GLOBAL",1)~ + JUNO-1-FAMILY-1
-  + ~Global("C0AuraJunoFamily2","GLOBAL",0)~ + ~What can you tell me about Luna?~ DO ~SetGlobal("C0AuraJunoFamily2","GLOBAL",2)~ + JUNO-1-FAMILY-2
-  + ~Global("C0AuraJunoFamily3","GLOBAL",0)~ + ~What can you tell me about your uncle, Dedalus?~ DO ~SetGlobal("C0AuraJunoFamily3","GLOBAL",3)~ + JUNO-1-FAMILY-3
-  ++ ~I'd like to know more about you.~ + JUNO-1-SELF
-  ++ ~Actually, never mind. I'll be going now.~ EXIT
+  + ~Global("C0AuraJunoFamily1","GLOBAL",0)~ + ~奥拉的事你能告诉我什么？~ DO ~SetGlobal("C0AuraJunoFamily1","GLOBAL",1)~ + JUNO-1-FAMILY-1
+  + ~Global("C0AuraJunoFamily2","GLOBAL",0)~ + ~露娜的事你能告诉我什么？~ DO ~SetGlobal("C0AuraJunoFamily2","GLOBAL",2)~ + JUNO-1-FAMILY-2
+  + ~Global("C0AuraJunoFamily3","GLOBAL",0)~ + ~你叔叔戴达罗斯的事你能告诉我什么？~ DO ~SetGlobal("C0AuraJunoFamily3","GLOBAL",3)~ + JUNO-1-FAMILY-3
+  ++ ~我想多了解你。~ + JUNO-1-SELF
+  ++ ~其实，算了。我这就走。~ EXIT
 
 CHAIN C0AJUNO JUNO-1-FAMILY2
-~Is there anyone in particular you want to talk about?~
+~有特别想谈的谁吗？~
 END
-  + ~Global("C0AuraJunoFamily1","GLOBAL",0)~ + ~What can you tell me about Aura?~ DO ~SetGlobal("C0AuraJunoFamily1","GLOBAL",1)~ + JUNO-1-FAMILY-1
-  + ~Global("C0AuraJunoFamily2","GLOBAL",0)~ + ~What can you tell me about Luna?~ DO ~SetGlobal("C0AuraJunoFamily2","GLOBAL",2)~ + JUNO-1-FAMILY-2
-  + ~Global("C0AuraJunoFamily3","GLOBAL",0)~ + ~What can you tell me about your uncle, Dedalus?~ DO ~SetGlobal("C0AuraJunoFamily3","GLOBAL",3)~ + JUNO-1-FAMILY-3
-  ++ ~I'd like to know more about you.~ + JUNO-1-SELF
-  ++ ~Actually, never mind. I'll be going now.~ EXIT
+  + ~Global("C0AuraJunoFamily1","GLOBAL",0)~ + ~奥拉的事你能告诉我什么？~ DO ~SetGlobal("C0AuraJunoFamily1","GLOBAL",1)~ + JUNO-1-FAMILY-1
+  + ~Global("C0AuraJunoFamily2","GLOBAL",0)~ + ~露娜的事你能告诉我什么？~ DO ~SetGlobal("C0AuraJunoFamily2","GLOBAL",2)~ + JUNO-1-FAMILY-2
+  + ~Global("C0AuraJunoFamily3","GLOBAL",0)~ + ~你叔叔戴达罗斯的事你能告诉我什么？~ DO ~SetGlobal("C0AuraJunoFamily3","GLOBAL",3)~ + JUNO-1-FAMILY-3
+  ++ ~我想多了解你。~ + JUNO-1-SELF
+  ++ ~其实，算了。我这就走。~ EXIT
 
 CHAIN C0AJUNO JUNO-1-FAMILY-1
-~About Aura? I think you know as much about her as there can be said, having played the role of her leader for so long.~
-= ~Perhaps I should be the one asking you. What are your impressions of my little sister, given all you know about her character?~
+~奥拉？你当了她这么久的领队，我想你对她的了解该到没什么可多说的地步了。~
+= ~也许该我问你。凭你对她性情的了解，你对我小妹妹有什么印象？~
 END
-  ++ ~She's pure-hearted and idealistic. And even though she has her doubts, she's brave enough to face them.~ + JUNO-1-FAMILY-1-1
-  ++ ~There's still a lot she has to understand about people, and the world. But she's willing and ready to learn.~ + JUNO-1-FAMILY-1-1
-  ++ ~I think she's far too naive. If I weren't around, I doubt she would last long in the world.~ + JUNO-1-FAMILY-1-2
-  ++ ~I'd much rather just know what you think.~ + JUNO-1-FAMILY-1-3
+  ++ ~她心地纯善、理想主义。而且就算有疑虑，她也勇敢到足以面对。~ + JUNO-1-FAMILY-1-1
+  ++ ~关于人、关于世界，她还有许多要懂。可她愿意、也准备好去学。~ + JUNO-1-FAMILY-1-1
+  ++ ~我觉得她太天真。若我不在，我怀疑她在世上撑不了多久。~ + JUNO-1-FAMILY-1-2
+  ++ ~我倒更想听听你的看法。~ + JUNO-1-FAMILY-1-3
 
 CHAIN C0AJUNO JUNO-1-FAMILY-1-1
-~That is how she has always been. It is something that many could do well to emulate, though it also makes me fear for her future sometimes, as she is keen to take on others' burdens as their own.~
+~她一直是这样。许多人倒该学她这点，虽说这有时也让我为她的将来担心，因为她热衷把别人的担子揽成自己的。~
 EXTERN C0AJUNO JUNO-1-FAMILY-1-3
 
 CHAIN C0AJUNO JUNO-1-FAMILY-1-2
-~Perhaps. I cannot deny that she tries too hard, and too often, to see the best in all things. But I do not believe it to be necessarily a flaw. It merely requires an additional hand as guidance.~
+~也许。我不否认她太用力、太频繁地想看见一切中最好的一面。可我不觉得这必然是缺点。只是需要多一只手来引导。~
 EXTERN C0AJUNO JUNO-1-FAMILY-1-3
 
 CHAIN C0AJUNO JUNO-1-FAMILY-1-3
-~What you see in her is exactly the same as what I do. My sister has grown, but her innermost self has not changed. As such, I doubt my insight will add more than what you already know.~
+~你看到的跟我看到的完全一样。我妹妹长大了，可最内里的她没变。因此我怀疑我的见解不会比你已知的更多。~
 END
 IF ~Global("C0AuraRomanceActive","GLOBAL",2)~ + JUNO-1-FAMILY-1-4
 IF ~!Global("C0AuraRomanceActive","GLOBAL",2)~ + JUNO-1-FAMILY2
 
 CHAIN C0AJUNO JUNO-1-FAMILY-1-4
-~Though, that aside, I understand that Aura is... especially fond of you, not only as a leader but also as a person. She has never said it plainly in her letters, but I know her well enough to understand what you mean to her.~
-= ~Forgive me for saying this, but I still have a responsibility as a sister to ask that you take care of her. She has always given her all for those she cares about. I hope you will give no less in return.~
+~不过，撇开这些，我知道奥拉……格外喜欢你，不只是作为领队，也作为一个人。她信里从没明说，可我太了解她，明白你对她的意义。~
+= ~恕我直言，可我仍有做姐姐的责任要求你照顾她。她对她所在意的人总是倾其所有。我希望你回报时也不少于她。~
 END
-  ++ ~There's no need to doubt me. Aura is very close to my heart.~ + JUNO-1-FAMILY-1-5
-  ++ ~I understand your concerns. But I assure you that I care about Aura greatly.~ + JUNO-1-FAMILY-1-5
-  ++ ~You may be her sister, but I still don't appreciate your insinuations about our relationship.~ + JUNO-1-FAMILY-1-6
+  ++ ~不必怀疑我。奥拉在我心里极重。~ + JUNO-1-FAMILY-1-5
+  ++ ~我明白你的顾虑。可我向你保证，我很在意奥拉。~ + JUNO-1-FAMILY-1-5
+  ++ ~你也许是她姐姐，可我仍不喜欢你对我们关系的暗示。~ + JUNO-1-FAMILY-1-6
 
 CHAIN C0AJUNO JUNO-1-FAMILY-1-5
-~I understand. I wish for my sister's happiness above all, and I trust that you are able to give it to her.~
+~我明白。我最盼妹妹幸福，我相信你能给她。~
 EXTERN C0AJUNO JUNO-1-FAMILY-1-6
 
 CHAIN C0AJUNO JUNO-1-FAMILY-1-6
-~It is not my place to involve myself in your relationship. I believe that Aura knows who to entrust her heart with, and so now that I have said my part, I won't interrogate you any further on the matter.~
+~轮不到我插手你们的关系。我相信奥拉知道该把心托付给谁，所以我话已说了，就不再追问这事。~
 EXTERN C0AJUNO JUNO-1-FAMILY2
 
 CHAIN C0AJUNO JUNO-1-FAMILY-2
-~If you are accustomed to Aura's personality, I should warn you ahead of time that Luna is... quite different. She can be abrasive, especially when in an unfamiliar position.~
-= ~She has always been this way. I fear a large part of it is likely my fault—I wasn't as large of a part of her life during her childhood as I should've been. I hoped not to repeat my mistake after Aura was born, but that has only made her envious.~
-= ~Please don't be too hard on her, if she says or does anything that offends you. She truly means no harm, and her time with the Seekers of Gond has helped to temper her personality, though she still has some progress to make.~
+~你若习惯了奥拉的性情，我得先警告你，露娜……大不相同。她可以很刺人，尤其在不熟悉的位置上。~
+= ~她一直这样。我怕很大一部分是我的错——她童年时我陪她的时间远不够。奥拉出生后我希望能不重犯，可那只让她更嫉妒。~
+= ~她若说了什么、做了什么冒犯你，请别对她太苛刻。她真无恶意，在贡德探求者那儿的日子也磨了她的性子，虽说她还有些要长进。~
 EXIT
 
 CHAIN C0AJUNO JUNO-1-FAMILY-3
-~My uncle, Dedalus Dinelstrand, is one of the esteemed High Artificers of our homeland, and a master artificer. He is the half-brother of Kairos, my father, and although he does not share our name, he is as close as any immediate member of our family.~
-= ~If you intend to speak with him, be aware that he is... rather reserved. His duties as an inventor of Lantanese weaponry has instilled upon him a strong sense of discipline and caution, and this carries over to his daily life.~
-= ~However, I know he has visited Candlekeep in the past, and has great respect for its many scholars and readers. You may find some common ground with him in that.~
+~我叔叔戴达罗斯·迪内尔斯特兰德，是故乡受敬重的最高奇械师之一，也是奇械大师。他是我父亲凯罗斯的同母异父兄弟，虽不同姓，却跟任何直系家人一样亲。~
+= ~你若打算跟他谈，要知道他……相当内敛。身为兰坦军械发明者的职责，养成了他极强的纪律感与谨慎，这也带进了他的日常生活。~
+= ~不过，我知道他过去去过烛堡，极敬重那儿的许多学者与读者。也许你在这方面能跟他有共同语言。~
 EXTERN C0AJUNO JUNO-1-FAMILY2
 
 CHAIN C0AJUNO JUNO-1-SELF
-~I'm the eldest child of our family, and I've had a hand in raising my siblings—all five of them—throughout my life, making sure they're prepared for whatever life they choose to lead, whether it's within Lantan or elsewhere.~
-= ~Nowadays, I serve as a member of the closest thing Lantan has to a proper military force. I trained Aura in archery from a young age, though it is the only practical skill I was capable of imparting upon her. I'm fairly competent with artifice, as most of my family are, but in that regard she is far above me in talent.~
+~我是家里长女，一生中帮着养育弟妹——一共五个——确保他们为所选的人生做好准备，不管在兰坦还是别处。~
+= ~如今，我在兰坦最接近正规军力的那支队伍里任职。我从小就教奥拉射箭，可那也许是我唯一能传给她的实用本事。我奇械上还算过得去，跟家里多数人一样，可在这一点上她天分远高于我。~
 EXTERN C0AJUNO JUNO-1-FAMILY2
 
 CHAIN IF WEIGHT #-1 ~NumTimesTalkedTo(0)
 Global("C0AuraBG2Quest3","GLOBAL",8)~ THEN C0ALUNA LUNA-1
-~So you're <CHARNAME>? I've heard all about you. After all, you're all that Aura's been writing to us about recently.~
-= ~You sure it's not my sisters that you want to talk to? I'm sure there's nothing about me that interests you. My sisters have all the talent and accomplishments nowadays.~
+~那么你就是<CHARNAME>？你的事我全听过了。毕竟最近奥拉写信回来讲的全是你。~
+= ~你确定你想谈的不是我姐妹？我身上肯定没什么让你感兴趣的。如今才能与成就都是我姐妹的。~
 END
-  ++ ~I'd still like to get acquainted with you, regardless.~ + LUNA-1-1
-  ++ ~Sounds like you feel rather overshadowed by your sisters.~ + LUNA-1-2
+  ++ ~不管怎样，我还是想认识你。~ + LUNA-1-1
+  ++ ~听来你觉得自己被姐妹遮住了。~ + LUNA-1-2
 
 CHAIN C0ALUNA LUNA-1-1
-~Really? You'd actually care to know? Fine, just don't set your expectations too high. Luna Glimmershine, second eldest child of the clan, Seeker of the Gondar church. In other words, I'm just a priestess. Nothing exceptional.~
+~真的？你真会在意去了解？好，只是别把期望放太高。露娜·格利默夏恩，族中次女，贡德教会探求者。换句话说，我不过是个祭司。没什么出众。~
 EXTERN C0ALUNA LUNA-1-3
 
 CHAIN C0ALUNA LUNA-1-2
-~Me? I wouldn't dare. I'm just one among many of the Glimmershine clan's daughters, as well as an honored priestess of the church of Gond. Plenty of expectations are set upon me, for how little of worth that I truly do.~
+~我？我不敢。我不过是格利默夏恩族众多女儿中的一个，也是贡德教会一位受敬重的祭司。对我这真做不出什么价值的人，期望倒设了不少。~
 EXTERN C0ALUNA LUNA-1-3
 
 CHAIN C0ALUNA LUNA-1-3
-~The duties for a priestess of Gond sound grandiose when put into words, but in truth, I do very little as opposed to all the hard workers in my family. I can't protect Lantan with a weapon, and I'm certainly not brave enough to go venturing the world like my little sister, trying to learn as much as she can.~
-= ~If you want to hear me preach, I certainly know how to do that, but I'm happier staying away from my scriptures while I have this opportunity. And if you're after anything else, you're out of luck, really.~
-= ~Anyway, if you'll excuse me, I'll go back to enjoying this sisterly reunion. We won't be here forever, after all, and you'll have my darling sister back before long.~
+~身为贡德祭司，职责写出来听着宏大，可说实话，跟我们家里那些辛苦干活的人比，我做的不多。我没法拿武器保护兰坦，也肯定没胆子像我妹妹那样出去闯世界、尽量多学。~
+= ~想听我布道我倒是会，可趁这机会，我更愿离我的经文远点。你若想要别的，那真没戏。~
+= ~总之，恕我失陪，我回去享受这场姐妹重逢。毕竟我们不会永远在这儿，你不久就能把我亲爱的妹妹带回去。~
 EXIT
 
 CHAIN IF ~Global("C0AuraBG2Quest3","GLOBAL",8)~ THEN C0ALUNA LUNA-2
-~Back again, <CHARNAME>? I'm really not that interesting.~
+~又来了，<CHARNAME>？我真没那么有意思。~
 END
-  + ~Global("C0AuraLuna1","GLOBAL",0)~ + ~I wanted to hear your thoughts about your family.~ DO ~SetGlobal("C0AuraLuna1","GLOBAL",1)~ + LUNA-2-1
-  + ~Global("C0AuraLuna2","GLOBAL",0)~ + ~I'd still like to know more about you.~ DO ~SetGlobal("C0AuraLuna2","GLOBAL",1)~ + LUNA-2-2
-  ++ ~I'll leave you alone, then.~ EXIT
+  + ~Global("C0AuraLuna1","GLOBAL",0)~ + ~我想听听你对家人的看法。~ DO ~SetGlobal("C0AuraLuna1","GLOBAL",1)~ + LUNA-2-1
+  + ~Global("C0AuraLuna2","GLOBAL",0)~ + ~我还是想多了解你。~ DO ~SetGlobal("C0AuraLuna2","GLOBAL",1)~ + LUNA-2-2
+  ++ ~那我就不打扰了。~ EXIT
 
 CHAIN C0ALUNA LUNA-2-1
-~About them, of course it's about them... why don't you ask them yourself? I'm sure you'll hear more of what you want without me getting in the way.~
+~关于他们，当然是关于他们……你何不自己去问？我保证你不必我在场挡着，也能听到你想听的更多。~
 END
-  ++ ~You seem to have a rather large chip on your shoulder.~ + LUNA-2-3
-  ++ ~Do they upset you that much? From what I hear, Aura thinks highly of you.~ + LUNA-2-4
-  ++ ~Never mind, then. Excuse me.~ EXIT
+  ++ ~你肩上那根刺似乎不小。~ + LUNA-2-3
+  ++ ~他们真让你这么难受？据我所听，奥拉很看重你。~ + LUNA-2-4
+  ++ ~那算了。失陪。~ EXIT
 
 CHAIN C0ALUNA LUNA-2-2
-~There's really nothing more to tell. I don't have any exciting stories like all the ones Aura's got, and I'm not some genius with the future of our people in my sights. I'm nobody to you.~
+~真没什么可说的。我没有奥拉那些精彩故事，也不是什么把族人未来放在眼里的天才。对你来说我谁都不是。~
 EXIT
 
 CHAIN C0ALUNA LUNA-2-3
-~What, you think I've got a grudge? Hardly. I'm in the type of position that I deserve. After all, I'm not a brave soldier or a prodigy of our peoples' craft. I still have to do my part for the Lantanna.~
-= ~If I had any ambitions of being more than what I am, I learned to live with the disappointment a long time ago. That's all.~
+~怎么，你以为我有怨气？哪有。我处在我该处的位置。毕竟我不是勇敢的士兵，也不是族人技艺的奇才。我仍得为兰坦尽我那份力。~
+= ~我若曾有过超越现状的野心，也早学会与失望共处了。就这些。~
 EXIT
 
 CHAIN C0ALUNA LUNA-2-4
-~Of course she does. I've never seen her say otherwise. That's just how she is, and naturally there's no reason for me to complain about it. Frankly, if she have bad things to say about me, I might have fewer issues.~
+~她当然看重我。我从没见她说过别的。她就是这样，我自然没理由抱怨。说实话，她若说我坏话，我麻烦也许还少些。~
 EXTERN C0ALUNA LUNA-2-3
 
 CHAIN IF WEIGHT #-1 ~NumTimesTalkedTo(0)
 Global("C0AuraBG2Quest3","GLOBAL",8)~ THEN C0DEDAL DEDAL-0
-~It is my honor to meet you, <CHARNAME>. Dedalus Dinelstrand, High Artificer of the Eleventh of the Great Workshops of Lantan. I have heard many tales of you from Aurelia.~
-= ~You have my gratitude for taking care of my niece. She is the jewel of the Glimmershine clan, but her curiosity oft has a tendency to land herself in trouble.~
+~幸会，<CHARNAME>。戴达罗斯·迪内尔斯特兰德，兰坦诸大工坊中第十一工坊的最高奇械师。我从奥瑞莉亚那儿听过许多你的事。~
+= ~我感激你照顾我侄女。她是格利默夏恩一族的珍宝，可她的好奇心常让她惹上麻烦。~
 END
-++ ~It is no trouble. I greatly value Aura's company.~ + DEDAL-0-1
-++ ~That much, I know from experience.~ + DEDAL-0-2
+++ ~不算麻烦。我很看重奥拉的陪伴。~ + DEDAL-0-1
+++ ~这我凭经验知道。~ + DEDAL-0-2
 
 CHAIN C0DEDAL DEDAL-0-1
-~Indeed. She is a child of many gifts, not the least of which is her capacity for befriending others.~
+~确实。她是个多有天赋的孩子，其中之一便是交朋友的本事。~
 EXTERN C0DEDAL DEDAL-0-2
 
 CHAIN C0DEDAL DEDAL-0-2
-~You are of the great library Candlekeep, as I have heard. A respectable place, with many great minds. Though it is rarely mentioned, the people of Lantan owe much of their knowledge to the ancient records held there.~
-= ~I, myself, have had the pleasure of visiting those halls many years ago, not long before the Time of Troubles left its mark.~
+~据我所听，你出身大图书馆烛堡。那是可敬之地，有诸多伟大头脑。虽少有人提，兰坦人的知识许多都要归功于那儿的古老典藏。~
+= ~我本人多年前也曾有幸造访那些厅堂，就在动荡之年留下印记前不久。~
 END
-++ ~You've been to Candlekeep? Perhaps you met my foster father, Gorion?~ + DEDAL-0-3
+++ ~你去过烛堡？也许你见过我养父葛立安？~ + DEDAL-0-3
 
 CHAIN C0DEDAL DEDAL-0-3
-~Alas, I did not, although I know him by reputation. I am, however, acquainted with Keeper Ulraunt and First Reader Tethtoril, who provided me with much-needed guidance. I greatly respect their wisdom and guidance... *ahem*. Forgive me, I should remain on subject.~
-= ~As you are a former ward of Candlekeep, I feel it is your right to have this. It is a ring gifted to me by the First Reader during our... 'cultural exchange', as I may most appropriately put it. I have carried it for many years, but it is of merely sentimental value to me.~
+~唉，没有，不过我知其名声。可我认识馆长乌尔劳恩特与首席读经者泰斯托里尔，他们给了我极需要的指引。我极敬重他们的智慧与教诲……*咳*。恕我，我该说正题。~
+= ~你既是烛堡旧日受监护者，我觉得你有权得这个。这是一枚首席读经者在我们……“文化交流”时赠我的戒指，这么讲最恰当。我带着它许多年，可它对我只是情感价值。~
 DO ~GiveItemCreate("C0ARING3",Player1,1,0,0)~
-= ~I believe you may find more use from it than I will, and I offer it as a token of gratitude for your care of my niece.~
+= ~我相信它对你比对我更有用，我以它表谢意，谢你照顾我侄女。~
 END
-++ ~Thank you. I treasure the memories of my home.~ + DEDAL-0-4
-++ ~You said this was part of an exchange. What did you give to the library?~ + DEDAL-0-5
+++ ~谢谢。我珍视关于我家的记忆。~ + DEDAL-0-4
+++ ~你说这是交流的一部分。你给了图书馆什么？~ + DEDAL-0-5
 
 CHAIN C0DEDAL DEDAL-0-4
-~Think nothing of it. Aurelia's safety and well-being is of more worth than any device. If this token is of any use to you, then it carries more value than it has had in the past thirty years.~
+~不必挂怀。奥瑞莉亚的平安与安好比任何装置都更有价值。这信物若对你有用，那它比过去三十年都更有价值了。~
 EXTERN C0DEDAL DEDAL-0-6
 
 CHAIN C0DEDAL DEDAL-0-5
-~A time-device invented by Aurelia's father and myself, meant to supplant the use of sundials. They are common enough in Lantan nowadays, but a relatively recent invention in those days. We believed it would be an object of value for the monks, both as an object of curiosity and a practical tool for their halls.~
+~一件由奥瑞莉亚的父亲和我发明的计时装置，本想取代日晷。如今在兰坦已很常见，可当时还算较新的发明。我们相信它对僧侣们会是件有价值的东西，既是奇物，也是他们厅堂里的实用工具。~
 EXTERN C0DEDAL DEDAL-0-6
 
 CHAIN C0DEDAL DEDAL-0-6
-~If you have anything you wish to know of myself or my nieces, we will be here awhile yet. For now, there is much I wish to ask Aurelia. Excuse me.~
+~你若对本人或我侄女们有什么想知道的，我们还会在这儿一阵。眼下我还有许多想向奥瑞莉亚问的。失陪。~
 EXIT
 
 CHAIN IF ~Global("C0AuraBG2Quest3","GLOBAL",8)~ THEN C0DEDAL DEDAL-1-0
-~<CHARNAME>. What can I do for you?~
+~<CHARNAME>。我能为你做什么？~
 END
-++ ~Tell me of yourself, master Dedalus.~ + DEDAL-1-1
-++ ~What is your relationship with Aura's family, exactly?~ + DEDAL-1-2
-++ ~I noticed the sword you're carrying. I didn't think Lantanese inventors practiced combat.~ + DEDAL-1-3
-++ ~What do you personally think of Aura?~ + DEDAL-1-4
-++ ~I'll talk to you some other time.~ EXIT
+++ ~说说你自己吧，戴达罗斯大人。~ + DEDAL-1-1
+++ ~你跟奥拉家究竟是什么关系？~ + DEDAL-1-2
+++ ~我注意到你佩的剑。我以为兰坦发明家不习武。~ + DEDAL-1-3
+++ ~你个人怎么看奥拉？~ + DEDAL-1-4
+++ ~改天再跟你谈。~ EXIT
 
 CHAIN C0DEDAL DEDAL-1-1
-~It is difficult to find things to speak of that would make sense to a non-Lantanna, but I will do my best. I am an artificer of Lantan, with leadership over the Eleventh Workshop of the Lantanna, specializing the creation of armaments for the protection of our nation.~
-= ~Lantan is not a militant land, and many do not see the worth nor the virtues of our work. It... is discouraging, but I empathize with my kin. Consequently, we are the smallest of the Great Workshops, but that is not entirely a weakness. I personally oversee the process of all inventions as Head Artificer, and have a trusting relationship with my subordinates.~
+~要找到能让非兰坦人听懂的话题很难，可我会尽力。我是兰坦的奇械师，领导兰坦第十一工坊，专精制造护卫我国的军械。~
+= ~兰坦不是好武之地，许多人看不见我们工作的价值或长处。这……令人泄气，可我理解同胞。因此我们是诸大工坊中最小的，可那并不完全是弱点。我身为首席奇械师亲自主管一切发明的流程，跟部属关系信任。~
 END
-++ ~So all the weapons Aura uses come from your workshop?~ + DEDAL-1-1-1
-++ ~Do you sell any of your weaponized inventions?~ + DEDAL-1-1-2
-++ ~What is your relationship with Aura's family, exactly?~ + DEDAL-1-2
-++ ~I noticed the sword you're carrying. I didn't think Lantanese inventors practiced combat.~ + DEDAL-1-3
-++ ~What do you personally think of Aura?~ + DEDAL-1-4
-++ ~I'll talk to you some other time.~ EXIT
+++ ~那奥拉用的一切武器都出自你的工坊？~ + DEDAL-1-1-1
+++ ~你们的武器发明卖吗？~ + DEDAL-1-1-2
+++ ~你跟奥拉家究竟是什么关系？~ + DEDAL-1-2
+++ ~我注意到你佩的剑。我以为兰坦发明家不习武。~ + DEDAL-1-3
+++ ~你个人怎么看奥拉？~ + DEDAL-1-4
+++ ~改天再跟你谈。~ EXIT
 
 CHAIN C0DEDAL DEDAL-1-1-1
-~Not directly. 'Weapon' has a broad definition, and thus our artificers learn a greater variety of crafts compared to the more specialized workshops. Alchemy, metallurgy, even magic, can be used in the creation of weapons. And not all weapons began as such.~
-= ~As you likely know, Aurelia is greatly averse to violence. But she has the knowledge to apply her craft for means of it, when necessary. The people of the Eleventh Workshop are not so different.~
+~不直接卖。“武器”定义很宽，所以我们奇械师学的技艺品种比专精工坊更多。炼金、冶金，甚至魔法都能用于造武器。而且并非所有武器一开始就是武器。~
+= ~你大概知道，奥瑞莉亚极厌恶暴力。可当必要时，她也有知识把技艺用于此。第十一工坊的人也不两样。~
 END
-++ ~Do you sell any of your weaponized inventions?~ + DEDAL-1-1-2
-++ ~What is your relationship with Aura's family, exactly?~ + DEDAL-1-2
-++ ~I noticed the sword you're carrying. I didn't think Lantanese inventors practiced combat.~ + DEDAL-1-3
-++ ~What do you personally think of Aura?~ + DEDAL-1-4
-++ ~I'll talk to you some other time.~ EXIT
+++ ~你们的武器发明卖吗？~ + DEDAL-1-1-2
+++ ~你跟奥拉家究竟是什么关系？~ + DEDAL-1-2
+++ ~我注意到你佩的剑。我以为兰坦发明家不习武。~ + DEDAL-1-3
+++ ~你个人怎么看奥拉？~ + DEDAL-1-4
+++ ~改天再跟你谈。~ EXIT
 
 CHAIN C0DEDAL DEDAL-1-1-2
-~No. The Eleventh Workshop is greatly restricted, far more so than the other workshops. We are forbidden from selling our creations to other nations, and even within Lantan, our permissions to distibute weapons are strictly under the discretion of the Ayrorchs.~
-= ~It... is limiting, but for the best. Lantan does not pride itself on its military strength. We maintain our safety by keeping our perceived threat to a minimum. Many nations do not trust us for the potential dangers of our work, and would be quick to view us as an enemy if provoked.~
+~不。第十一工坊受极大限制，远甚于别的工坊。我们被禁向别国出售造物，就算在兰坦境内，我们分发武器的许可也严格听凭艾罗奇裁夺。~
+= ~这……有限制，可也是为了最好。兰坦不以军力自傲。我们靠把外界所感知的威胁降到最低来维持安全。许多国家因我们工作的潜在危险而不信我们，一被激怒就会轻易视我们为敌。~
 END
-++ ~So all the weapons Aura uses come from your workshop?~ + DEDAL-1-1-1
-++ ~What is your relationship with Aura's family, exactly?~ + DEDAL-1-2
-++ ~I noticed the sword you're carrying. I didn't think Lantanese inventors practiced combat.~ + DEDAL-1-3
-++ ~What do you personally think of Aura?~ + DEDAL-1-4
-++ ~I'll talk to you some other time.~ EXIT
+++ ~那奥拉用的一切武器都出自你的工坊？~ + DEDAL-1-1-1
+++ ~你跟奥拉家究竟是什么关系？~ + DEDAL-1-2
+++ ~我注意到你佩的剑。我以为兰坦发明家不习武。~ + DEDAL-1-3
+++ ~你个人怎么看奥拉？~ + DEDAL-1-4
+++ ~改天再跟你谈。~ EXIT
 
 CHAIN C0DEDAL DEDAL-1-2
-~I am, as you know, Aurelia's uncle. Her father, Kairos Glimmershine, is my half-brother. Between us, he is the elder by twelve years.~
-= ~Aurelia's grandmother—that is to say, Kairos's mother, Minerva—had the spirit of an adventurer. She separated with my father, Arthur Dinelstrand, a few years after Kairos's birth, and he remarried with my mother, Vera, until both... perished, in an tragic accident.~
-= ~Kairos and I were raised together, and we have been close since childhood. Though I am not a Glimmershine by blood, I am... as close to the clan as is possible.~
+~如你所知，我是奥瑞莉亚的叔叔。她父亲凯罗斯·格利默夏恩是我同母异父的兄长。我们俩之间，他大我十二岁。~
+= ~奥瑞莉亚的祖母——也就是凯罗斯的母亲密涅瓦——有颗冒险者的心。她在凯罗斯出生几年后跟我父亲亚瑟·迪内尔斯特兰德分开，后来父亲续娶我母亲薇拉，直到两人……在一场惨祸中双双亡故。~
+= ~凯罗斯和我一起长大，自小亲密。我虽不是格利默夏恩血脉，可……跟这一族的亲近已到可能的地步。~
 END
-++ ~I noticed the sword you're carrying. I didn't think Lantanese inventors practiced combat.~ + DEDAL-1-3
-++ ~What do you personally think of Aura?~ + DEDAL-1-4
-++ ~I'll talk to you some other time.~ EXIT
+++ ~我注意到你佩的剑。我以为兰坦发明家不习武。~ + DEDAL-1-3
+++ ~你个人怎么看奥拉？~ + DEDAL-1-4
+++ ~改天再跟你谈。~ EXIT
 
 CHAIN C0DEDAL DEDAL-1-3
-~Ah... this? A means for self-protection, nothing more. I would not call myself a dedicated swordsman. But with my various duties that involve travelling outside of the homeland, it is a necessary precaution.~
-= ~I have seen my share of combat, far beyond most Lantanna, but I would not consider myself close to the skill of a seasoned adventurer.~
+~啊……这个？自卫的手段，仅此而已。我不会自称专注的剑手。可我各种职责常要离开故乡出行，这是必要的预防。~
+= ~我见过的战斗比多数兰坦人多得多，可我不认为自己的本事接近老练冒险者。~
 END
-++ ~What is your relationship with Aura's family, exactly?~ + DEDAL-1-2
-++ ~What do you personally think of Aura?~ + DEDAL-1-4
-++ ~I'll talk to you some other time.~ EXIT
+++ ~你跟奥拉家究竟是什么关系？~ + DEDAL-1-2
+++ ~你个人怎么看奥拉？~ + DEDAL-1-4
+++ ~改天再跟你谈。~ EXIT
 
 CHAIN C0DEDAL DEDAL-1-4
-~Aurelia is a prodigy. For as long as I have known her, she has displayed an unquenchable curiosity for all things and a rare talent to create anything she sets her mind to. The Lantanna who know her see her as a shining example of our future.~
-= ~You have, no doubt, travelled with her long enough to understand her strength of character. She is not merely capable, but she values the knowledge and creations that come from her hand. She is motivated by a desire to aid those of importance to her, whether it be nation, family or friend.~
-= ~Though I have not seen her for many years, I can see that travelling at your side has bolstered her growth far quicker than I have seen in her youth. You are, undoubtedly, both a motivation and inspiration to her.~
+~奥瑞莉亚是个奇才。自我认识她起，她对万事都显出止不住的好奇，还有一种稀有天赋——凡她决意要做的东西都能造出来。认识她的兰坦人视她为我们未来的闪亮典范。~
+= ~你无疑跟她同行够久，明白她品性之坚。她不只是有本事，更看重出于她手的东西——知识与造物。她的动力是帮她在意的人，不管是国家、家族还是朋友。~
+= ~我虽多年没见她，可看得出在你身边旅行，让她的成长比我在她少年时所见的快得多。你无疑既是她的动力，也是她的启发。~
 END
-++ ~Tell me of yourself, master Dedalus.~ + DEDAL-1-1
-++ ~What is your relationship with Aura's family, exactly?~ + DEDAL-1-2
-++ ~I noticed the sword you're carrying. I didn't think Lantanese inventors practiced combat.~ + DEDAL-1-3
-++ ~I'll talk to you some other time.~ EXIT
+++ ~说说你自己吧，戴达罗斯大人。~ + DEDAL-1-1
+++ ~你跟奥拉家究竟是什么关系？~ + DEDAL-1-2
+++ ~我注意到你佩的剑。我以为兰坦发明家不习武。~ + DEDAL-1-3
+++ ~改天再跟你谈。~ EXIT
 
 CHAIN IF WEIGHT #-1 ~Global("C0AuraBG2Quest3","GLOBAL",9)~ THEN C0APICO quest3-9
-~*huff* *puff*... oh... I finally found you, <PRO_SIRMAAM>! You... you need to come back to the Jansen home! There's a big problem!~ [C0BLANK]
+~*喘* *喘*……哦……我终于找到你了，<PRO_SIRMAAM>！你……你得回简森家一趟！出大事了！~ [C0BLANK]
 DO ~SetGlobal("C0AuraBG2Quest3","GLOBAL",10)~
 END
-  ++ ~What happened?~ EXTERN C0APICO quest3-9-1
-  ++ ~Did Aura send you?~ EXTERN C0APICO quest3-9-1
+  ++ ~怎么了？~ EXTERN C0APICO quest3-9-1
+  ++ ~是奥拉派你来的？~ EXTERN C0APICO quest3-9-1
 
 CHAIN C0APICO quest3-9-1
-~It's... it's miss Aura, <PRO_SIRMAAM>! She... she was taken away!~
-= ~Nobody else in the family noticed until the morning, but I saw the night before after coming home... she was talking to her uncle, and they looked so grim that it was frightening!~
-= ~I... I couldn't get close enough to hear what they said, but then two gnomes in yellow appeared and led her out of the city! I'm so sorry, <PRO_SIRMAAM>, but I lost them while following their path once they left the gates...~
-= ~After I lost them, I went back and told miss Aura's sisters... miss Juno told me to look for you immediately and come back to meet her! She's waiting for you at the workshop!~
+~是……是奥拉小姐，<PRO_SIRMAAM>！她……她被带走了！~
+= ~家里别人到早上才发觉，可前一晚我回家后看见了……她在跟她叔叔说话，两人脸色阴沉得吓人！~
+= ~我……我没敢靠太近听他们说什么，可后来两个穿黄衣的侏儒出现，把她带出了城！对不起，<PRO_SIRMAAM>，他们出城门后我跟丢了……~
+= ~跟丢之后我回去告诉了奥拉小姐的姐姐们……朱诺小姐让我立刻找你，再回去跟她会合！她在工坊等你！~
 END
-  ++ ~Alright. I'll make my way back to the house immediately.~ + quest3-9-2
-  ++ ~Fine. I don't know what's going on, but I need Aura back.~ + quest3-9-2
+  ++ ~好。我这就赶回那房子。~ + quest3-9-2
+  ++ ~行。我不知道出了什么事，可我必须把奥拉带回来。~ + quest3-9-2
 
 CHAIN C0APICO quest3-9-2
-~I'll head back first and tell everyone I found you, <PRO_SIRMAAM>. Please hurry, there's no time to waste!~
+~我先回去告诉大家我找到你了，<PRO_SIRMAAM>。请快些，不能耽搁！~
 DO ~AddJournalEntry(%Quest3_Entry_1%,QUEST) EscapeArea()~ EXIT
 
 CHAIN IF WEIGHT #-1 ~Global("C0AuraBG2Quest3","GLOBAL",12)~ THEN C0AJUNO quest3-12
-~Good, you're here, <CHARNAME>. I was worried the young lad Pico might not have been able to find you. Do you understand what's happened?~ [C0BLANK]
+~好，你来了，<CHARNAME>。我还担心小皮可找不到你。你明白出了什么事吗？~ [C0BLANK]
 DO ~SetGlobal("C0AuraBG2Quest3","GLOBAL",13)~
 END
-  ++ ~Where did your uncle take Aura?~ EXTERN C0AJUNO quest3-12-1
-  ++ ~Just make it quick. What happened?~ EXTERN C0AJUNO quest3-12-1
-  ++ ~Who are these other gnomes that are searching this place?~ EXTERN C0AJUNO quest3-12-2
+  ++ ~你叔叔把奥拉带去哪儿了？~ EXTERN C0AJUNO quest3-12-1
+  ++ ~快点说吧。出了什么事？~ EXTERN C0AJUNO quest3-12-1
+  ++ ~这些在搜这地方的其他侏儒是谁？~ EXTERN C0AJUNO quest3-12-2
 
 CHAIN C0AJUNO quest3-12-1
-~This was my fault. I should have been more aware of things, but I underestimated my uncle's resourcefulness. Otherwise, I might have been able to stop him from taking Aura away.~
+~这是我的错。我本该更留心，可我低估了叔叔的手段。否则，我也许能拦住他把奥拉带走。~
 EXTERN C0AJUNO quest3-12-2
 
 CHAIN C0AJUNO quest3-12-2
-~I'm uncertain whether Aura has told you before, but I am a captain of Oculus, an elite group of agents who serve Lantan. Some call us the Hands of Gond, though we primarily answer to the Ayrorch over the church itself. These others here are my subordinates.~
-= ~You are my sister's close companion, and so despite the fact I should not ordinarily share information with outsiders, I will tell you the truth. Our original purpose for arriving in Amn was not solely for a family reunion, but to investigate certain unauthorized Lantanese operations outside of the homeland.~
-= ~I don't know how much you are aware of the situation, but Oculus has discovered during our investigations of the presence of a criminal organization, the Interitus, who have attempted to subtly cause chaos within Amn while simultaneously testing illegal experiments throughout the nation.~
-= ~Fortunately, we have mostly removed these operations by the efforts of our own agents. The only remaining factor is the mastermind behind them, who has yet to be apprehended. The only thing we know of them, aside from the knowledge they are certainly in Amn, is the title that their allies know them by... the 'Overseer'.~
+~我不确定奥拉是否跟你说过，但我是奥库卢斯的队长，那是服务兰坦的一支精锐探员队伍。有人叫我们贡德之手，可我们主要听命于艾罗奇，而非教会本身。这儿这些人是我部属。~
+= ~你是我妹妹的亲近同伴，所以尽管我本不该向外人透露消息，我还是告诉你实情。我们来安姆的初衷不只是家族团聚，而是调查某些在故乡之外未经许可的兰坦行动。~
+= ~不知你对情况了解多少，但奥库卢斯在调查中发现一个犯罪组织因特里图斯的存在，他们一边在全国暗中测试非法实验，一边试图在安姆悄悄制造混乱。~
+= ~所幸靠我们探员的努力，这些行动大部分已被清除。剩下的只有幕后主脑，尚未被抓到。关于此人，除了确知其在安姆，我们只知道其盟友称呼的头衔……“监察官”。~
 END
-  + ~GlobalGT("C0AuraBG2Quest1","GLOBAL",53)~ + ~I'm aware of Oculus and the Interitus. Reese is one of your agents, correct?~ + quest3-12-3
-  ++ ~Do you believe your uncle is this mastermind?~ + quest3-12-4
-  ++ ~Who did you come here to arrest?~ + quest3-12-4
+  + ~GlobalGT("C0AuraBG2Quest1","GLOBAL",53)~ + ~我知道奥库卢斯和因特里图斯。里斯是你们的探员，对吧？~ + quest3-12-3
+  ++ ~你觉得你叔叔就是这位主脑？~ + quest3-12-4
+  ++ ~你们来这儿要抓谁？~ + quest3-12-4
 
 CHAIN C0AJUNO quest3-12-3
-~You've been made aware of Reese's identity? I presume he told you, and circumstances required that he do so. Our agents are quite exceptional at remaining discreet when needed to.~
+~你已知道里斯的身份？我猜是他告诉你的，且情况要求他这么做。我们探员在需要时极善于守密。~
 EXTERN C0AJUNO quest3-12-4
 
 CHAIN C0AJUNO quest3-12-4
-~The known citizens of Lantan here in Amn are few, and those exceptional enough to perform dangerous experiments even fewer. Ultimately, we narrowed it down to three people of interest.~
-= ~The first was former artificer Caridius Magnussen. From careful investigation, we removed him as a suspect. The second was my uncle, Dedalus Dinelstrand, who had undisclosed records of travel to Amn that we found through much effort. The third... was Aura herself.~
-= ~Although this is my personal feelings rather than evidence, I didn't believe for a second that my sister would be responsible. When my uncle made known his plans to come and visit her, I used my relation to the family as an excuse to follow and keep him under watch.~
+~在安姆已知的兰坦公民很少，有能力做危险实验的更少。最终我们缩小到三个可疑对象。~
+= ~第一个是前奇械师卡里迪乌斯·马格努森。经仔细调查，我们排除了他。第二个是我叔叔戴达罗斯·迪内尔斯特兰德，我们费尽力气查出他有未申报的前往安姆的记录。第三个……是奥拉本人。~
+= ~虽说这是我的个人感觉而非证据，可我一刻也不信我妹妹会有责任。叔叔表明要来探望她时，我就以家族关系为借口跟来，把他看住。~
 END
-  ++ ~You didn't do a very good job of it.~ EXTERN C0AJUNO quest3-12-5
-  ++ ~And now he's taken Aura away. What do you think he intends to do?~ EXTERN C0AJUNO quest3-12-6
-  ++ ~How did your uncle throw you off his trail?~ EXTERN C0AJUNO quest3-12-6
+  ++ ~你这活干得不怎么样。~ EXTERN C0AJUNO quest3-12-5
+  ++ ~现在他把奥拉带走了。你觉得他想做什么？~ EXTERN C0AJUNO quest3-12-6
+  ++ ~你叔叔怎么甩掉你的？~ EXTERN C0AJUNO quest3-12-6
 
 CHAIN C0AJUNO quest3-12-5
-~I know. I regret it deeply. Aura is my dear sister, someone who I helped to raise with my own hands. I can't afford to have anything happen to her.~
+~我知道。我深为后悔。奥拉是我亲爱的妹妹，是我亲手帮着养大的。我不能让她出任何事。~
 EXTERN C0AJUNO quest3-12-6
 
 CHAIN C0AJUNO quest3-12-6
-~My uncle is... a genius. I would go as far to say that even Aura's mind pales in comparison to his own. He is not only a brilliant inventor tutored by master Magnussen himself, but also adept in various other fields, including swordsmanship and subterfuge.~
-= ~I believed my training enough to match him, but he was able to find an opportunity to throw me off and take my sister away. Though... it is the opportunity itself that concerns me.~
-= ~Since the incident, Luna has disappeared as well. Not only that, but she was with me the night before, and acting unlike herself. Looking back, I believe she was intentionally attempting to distract me. Which means she is likely assisting my uncle in some way.~
-= ~I have no leads on where my uncle and Aura have gone, but I will continue to search on that end. <CHARNAME>, I need you to find Luna. Learn how much she knows of what happened, but... please do not harm her. I don't believe she has any intent to harm her own family. She is... simply prone to making hasty errors. I will need to talk to her properly once this has been settled.~
-= ~If you find anything, remain in touch with me, and I will do the same. Good luck, <CHARNAME>... and thank you.~
+~我叔叔是……天才。我甚至敢说，连奥拉的头脑跟他比都逊色。他不仅是马格努森大师亲自教出的杰出发明家，还精通许多别的领域，包括剑术与暗中行事。~
+= ~我以为我的训练足以对付他，可他找到机会甩掉我、带走我妹妹。不过……正是这“机会”让我担心。~
+= ~自那事之后，露娜也不见了。不止如此，前一晚她还跟我在一起，举动反常。回想起来，我相信她是故意想分散我注意。那就是说她很可能在以某种方式协助叔叔。~
+= ~我没有叔叔和奥拉去向的线索，可我会继续在那边搜。 <CHARNAME>，我需要你去找露娜。弄清她知道多少，可……请别伤她。我不信她有意害自己家人。她只是……容易仓促犯错。等这事了结，我得好好跟她谈。~
+= ~你若查出什么，跟我保持联系，我也会。祝你好运，<CHARNAME>……谢谢你。~
 DO ~AddJournalEntry(%Quest3_Entry_2%,QUEST)~ EXIT
 
 CHAIN IF WEIGHT #-1 ~Global("C0AuraBG2Quest3","GLOBAL",13)~ THEN C0ALUNA quest3-13
-~You're... <CHARNAME>, right? Hold on. I–I need to talk to you.~ [C0BLANK]
+~你是……<CHARNAME>，对吧？等等。我——我需要跟你谈。~ [C0BLANK]
 DO ~SetGlobal("C0AuraBG2Quest3","GLOBAL",14)~
 END
-  ++ ~I need to talk to you, too. Where did your uncle take Aura?~ + quest3-13-1
+  ++ ~我也要跟你谈。你叔叔把奥拉带去哪儿了？~ + quest3-13-1
 
 CHAIN C0ALUNA quest3-13-1
-~I can tell you. But you need to know one thing first—I... I never meant for this to happen! I thought my uncle was going to protect her, with the suspicion from the things my people have done. I didn't think he had anything to do with it, or that he'd take my sister away!~
-= ~You have to believe me. I don't want anything to happen to Aura. You've probably been told I've never been the kindest to her, and maybe she has reason to hate me, but it's the truth!~
+~我可以告诉你。可你得先知道一件事——我……我从没想让这事发生！我以为叔叔是要保护她，免遭我们族人那些作为引起的怀疑。我没想到他真跟这事有关，也没想到他会带走我妹妹！~
+= ~你得信我。我不想奥拉出任何事。你大概听过我对她从不算最和善，也许她有理由恨我，可这是真话！~
 END
-  ++ ~I believe you. Just tell me where she is.~ + quest3-13-2
-  ++ ~Stop wasting time. If you want to make up for a mistake, do it properly.~ + quest3-13-2
+  ++ ~我信你。只告诉我她在哪儿。~ + quest3-13-2
+  ++ ~别浪费时间了。你要弥补过错，就正经弥补。~ + quest3-13-2
 
 CHAIN C0ALUNA quest3-13-2
-~My uncle... he's been building an underground workshop outside of Lantan using his resources as the Eleventh Workshop's leader. It's not a recent thing... I don't know the details, but I'm certain he's been working on this in secret for years, if not decades. That's where he's gone.~
-= ~I'll lead you there, but it needs to be just you and me, and whoever else you can trust. Don't let Juno—~
+~我叔叔……他利用第十一工坊领袖的资源，在兰坦之外建了一座地下工坊。这不是最近的事……我不知道细节，可我确定他暗中搞了好多年，甚至几十年。他去的就是那儿。~
+= ~我带你去，可只能你和我，还有你能信的人。别让朱诺——~
 DO ~StartCutSceneMode()
 SmallWait(5)
 CreateCreature("C0AJUNO",[3507.1400],SW)
@@ -3819,34 +3819,34 @@ SmallWait(5)
 ActionOverride("C0AJUNO",StartDialogNoSet(Player1))~ EXIT
 
 CHAIN IF WEIGHT #-1 ~Global("C0AuraBG2Quest3","GLOBAL",14)~ THEN C0AJUNO quest3-14
-~*sigh*~ [C0BLANK]
+~*叹气*~ [C0BLANK]
 DO ~SetGlobal("C0AuraBG2Quest3","GLOBAL",15)~
-== C0ALUNA ~Ah!~
-== C0AJUNO ~Really, sister? "Don't let me know", is that it? I'd have thought you would grow out of that.~
-== C0ALUNA ~Juno... I didn't mean to...~
-== C0AJUNO ~I know. There's a lot I'd like to say, but I'm not going to waste time blaming you right now. You've never been able to handle it well, so I'll save it for later. Looking for Aura's more important.~
-== C0AJUNO ~I've already heard the most important details, <CHARNAME>. If my uncle has truly built workshops outside of his authority and the knowledge of the Ayrorch, he'll be facing charges far more serious than he's already under suspicion for. We'll go right away.~
-== C0ALUNA ~No! You can't, Juno.~
-== C0AJUNO ~Why can't I? I expect you have a good explanation, sister.~
-== C0ALUNA ~The workshop... it's an offshoot of the Eleventh, and there are countless weapons of unbelievable design in there. If you or anyone from Oculus gets seen there, there's no way my uncle or his subordinates won't notice, and there'll be a battle for sure, and who knows how much destruction will be caused!~
-== C0ALUNA ~I can't have that happen... let me go with <CHARNAME> alone first. We'll find my uncle, and then you can back us up once we've ensured Aura's safety. Then, hopefully... we won't have to let anyone be hurt.~
-== C0AJUNO ~...You have a point. That would make things better for everyone. Alright, I'll trust you with this mission, Luna. Don't fail the family.~
-== C0ALUNA ~I won't.~
-== C0AJUNO ~I'll gather up as many agents as I can, then come and join you. Luna will leave a trail for me to follow. Find my sister, <CHARNAME>, and keep her safe. The Glimmershine clan is all counting on you.~
+== C0ALUNA ~啊！~
+== C0AJUNO ~真的吗，妹妹？“别让朱诺知道”，是这样？我以为你该长大不玩这套了。~
+== C0ALUNA ~朱诺……我不是想……~
+== C0AJUNO ~我知道。我有很多想说，可眼下我不打算浪费时间怪你。你从来受不住这个，所以我留着以后说。找奥拉更要紧。~
+== C0AJUNO ~我已听到最要紧的细节，<CHARNAME>。若我叔叔真在越权、瞒着艾罗奇建工坊，他要面对的指控比他已被怀疑的严重得多。我们这就去。~
+== C0ALUNA ~不！你不能去，朱诺。~
+== C0AJUNO ~我为什么不能？我指望你有个好解释，妹妹。~
+== C0ALUNA ~那工坊……是第十一的分支，里头有无数设计难以置信的武器。你或奥库卢斯任何人若在那儿被看见，我叔叔和他部属不可能不发觉，那一战必不可免，谁知道会造成多大破坏！~
+== C0ALUNA ~我不能让那种事发生……先让我跟<CHARNAME>单独去。我们找到我叔叔，等确保奥拉安全，你再接应。然后但愿……我们不必让任何人受伤。~
+== C0AJUNO ~……你说得有理。那样对大家都好。好，这任务我就信你，露娜。别辜负家族。~
+== C0ALUNA ~我不会。~
+== C0AJUNO ~我会尽量召集探员，然后来跟你们会合。露娜会给我留踪迹。找到我妹妹，<CHARNAME>，护她平安。格利默夏恩一族全指望你了。~
 DO ~EscapeArea()~ EXIT
 
 CHAIN IF WEIGHT #-1 ~Global("C0AuraBG2Quest3","GLOBAL",15)~ THEN C0ALUNA quest3-15
-~The workshop is hidden in the Small Teeth Pass. It's masterfully concealed, and no one will ever find it unless they know it's there. I'll meet you at the pass, <CHARNAME>.~ [C0BLANK]
+~工坊藏在小牙隘口。掩蔽得极巧妙，不知情的人永远找不到。隘口见，<CHARNAME>。~ [C0BLANK]
 DO ~AddJournalEntry(%Quest3_Entry_3%,QUEST) SetGlobal("C0AuraBG2Quest3","GLOBAL",16) EscapeArea()~ EXIT
 
 CHAIN IF WEIGHT #-1 ~Global("C0AuraBG2Quest3","GLOBAL",16)~ THEN C0ALUNA quest3-16
-~There you are.~ [C0BLANK]
+~你来了。~ [C0BLANK]
 DO ~SetGlobal("C0AuraBG2Quest3","GLOBAL",17)~
-= ~The workshop is to the southwest, past the bridge. This place is dangerous... so I'll follow your lead and tell you when we're there. I'm no good in a fight, but I can heal you if necessary. Let's go.~
+= ~工坊在西南，过桥之后。这地方危险……所以我跟着你走，到了告诉你。我不擅打斗，可必要时能给你治疗。走吧。~
 DO ~SetGlobal("Allies","LOCALS",1)~ EXIT
 
 CHAIN IF WEIGHT #-1 ~Global("C0AuraBG2Quest3","GLOBAL",18)~ THEN C0ALUNA quest3-18
-~Here! This is the entrance to the secret workshop. Like I said, it's impossible to spot by the naked eye. I'll open the passage...~ [C0BLANK]
+~这儿！这就是秘密工坊的入口。我说过，肉眼根本看不出来。我来开通道……~ [C0BLANK]
 DO ~SetGlobal("C0AuraBG2Quest3","GLOBAL",19)
 ClearAllActions()
 StartCutSceneMode()
@@ -3862,76 +3862,76 @@ Wait(2)
 StartDialogNoSet(Player1)~ EXIT
 
 CHAIN IF WEIGHT #-1 ~Global("C0AuraBG2Quest3","GLOBAL",19)~ THEN C0ALUNA quest3-19
-~I've opened the path to the workshop. Follow me inside, and do not say a word to anyone. Just let me handle the talking.~ [C0BLANK]
+~我已打开通往工坊的路。跟我进去，别对任何人说一个字。让我来应付。~ [C0BLANK]
 DO ~SetGlobal("C0AuraBG2Quest3","GLOBAL",20) EscapeAreaObject("C011thShop")~ EXIT
 
 CHAIN IF WEIGHT #-1 ~Global("C0AuraBG2Quest3","GLOBAL",21)~ THEN C0AGNO05 quest3-21
-~Lady Seeker Glimmershine! You're back already?~
+~探求者格利默夏恩女士！你这么快就回来了？~
 DO ~SetGlobal("C0AuraBG2Quest3","GLOBAL",22)~
-== C0ALUNA ~Surprised? By your tone, it's almost as if you were hoping I wouldn't come anytime soon.~
-== C0AGNO05 ~No, no, perish the thought. It's just that, given the High Artificer's commands, you would be...~
-== C0ALUNA ~Enough. Where is my uncle? I wish to see him.~
-== C0AGNO05 ~He... he is in the armory, milady. But... who are these with you? Should I notify the High Artificer of your arrival?~
-== C0ALUNA ~These are my guests, here on business with the Eleventh Workshop. And my uncle is expecting us already, so I will greet him myself, thank you. I am, after all, still his niece. I prefer to dispense with the formalities.~
-== C0AGNO05 ~As you command, Lady Seeker.~
-== C0ALUNA ~Well? Get back to work!~
-== C0AGNO05 ~Y–y–yes! Right away, milady!~
+== C0ALUNA ~奇怪吗？听你口气，倒像盼着我别这么快来。~
+== C0AGNO05 ~不，不，绝无此意。只是照最高奇械师的命令，你该……~
+== C0ALUNA ~够了。我叔叔在哪儿？我要见他。~
+== C0AGNO05 ~他……他在军械库，小姐。可……跟你一起的这些人是谁？我该通知最高奇械师你到了吗？~
+== C0ALUNA ~这些是我的客人，来跟第十一工坊办事。我叔叔已在等我们，所以我自己去见他，谢谢。毕竟我还是他侄女。我宁可不讲那些虚礼。~
+== C0AGNO05 ~遵命，探求者女士。~
+== C0ALUNA ~怎么？回去干活！~
+== C0AGNO05 ~是——是——是！马上，小姐！~
 DO ~MoveToPoint([1408.945])
 SmallWait(1)
 Face(E)~ EXIT
 
 CHAIN IF WEIGHT #-1 ~!See("C0AGNO05")
 Global("C0AuraBG2Quest3","GLOBAL",22)~ THEN C0ALUNA quest3-22
-~Bah. Having to act appropriately to my station is such a nuisance. But at least my rank was useful for something this time.~ [C0BLANK]
+~呸。非得照身份行事，真烦人。可至少这回我的位阶有点用。~ [C0BLANK]
 DO ~SetGlobal("C0AuraBG2Quest3","GLOBAL",23)~
 END
-  ++ ~Aura told me you don't enjoy your duties as a priestess. You seem comfortable in it, though?~ + quest3-22-1
-  ++ ~That was rather impressive. I'm half-convinced you weren't even acting.~ + quest3-22-2
-  ++ ~Let's go. We need to find Aura as quickly as possible.~ + quest3-22-4
+  ++ ~奥拉说你并不喜欢当祭司的差事。可你看上去挺从容？~ + quest3-22-1
+  ++ ~刚才相当了得。我几乎信了你根本不是在演。~ + quest3-22-2
+  ++ ~走吧。我们得尽快找到奥拉。~ + quest3-22-4
 
 CHAIN C0ALUNA quest3-22-1
-~What else should you expect? I must do my best for the Glimmershine name. Always the best, without exception...~
+~你还指望什么？为了格利默夏恩之名，我必须尽全力。永远最好，无一例外……~
 EXTERN C0ALUNA quest3-22-3
 
 CHAIN C0ALUNA quest3-22-2
-~Perhaps you already know, but I'm infamous in Lantan for being the spoiled princess of my family. That comes with some benefits.~
+~也许你已知道，我在兰坦以家里被惯坏的小公主而闻名。那也有些好处。~
 EXTERN C0ALUNA quest3-22-3
 
 CHAIN C0ALUNA quest3-22-3
-~Now hush. If anyone gets an idea that you're not who you're supposed to be, it'll be a disaster. You have no idea what the kinds of things made here are capable of.~
+~现在别出声。若有人觉得你身份不对，那就是灾难。你根本不知道这儿造的东西能做什么。~
 EXTERN C0ALUNA quest3-22-4
 
 CHAIN C0ALUNA  quest3-22-4
-~My uncle will be in the furthest part of the workshop. I'll tell you which way to go when needed.~
+~我叔叔在工坊最深处。需要时我告诉你怎么走。~
 DO ~SetGlobal("Allies","LOCALS",1)~ EXIT
 
 CHAIN IF WEIGHT #-1 ~Global("C0AuraBG2Quest3","GLOBAL",24)~ THEN C0AFRITZ quest3-24
-~So you did come. Lady Seeker Glimmershine, and <CHARNAME> of Candlekeep. Master Dedalus expected that you would.~ [C0BLANK]
+~你果然来了。探求者格利默夏恩女士，还有烛堡的<CHARNAME>。戴达罗斯大人料到你们会来。~ [C0BLANK]
 DO ~SetGlobal("C0AuraBG2Quest3","GLOBAL",25)~
-== C0ALUNA ~*sigh* Fritz... I suppose I should've expected that you were here, loyal to my uncle as you are. Still, with your elderly father the Tribunus about to enjoy his retirement, I thought just maybe you'd have gone back to Lantan.~
-== C0AFRITZ ~My father understands my wishes to act for the homeland... and I am grateful to him for it, and I owe just as much to Master Dedalus for his dedication to our people. That is why I am here, milady.~
-== C0ALUNA ~"Protection of our people"? I believed so, too, even despite the involvement with Interitus and their despicable plans, and your part in hiding that from me.~
-== C0AFRITZ ~Interitus is no longer a threat. The efforts of Oculus and our own enforcers has ensured that, and Lantan will be better without their shadow spreading across the realms. Now, the workers of the Eleventh Workshop may devote ourselves fully to our true calling.~
-== C0ALUNA ~So you say, but... I want to speak with my uncle. If he truly believes what he's doing is for the good of Lantan... I will hear it from his mouth. And I also want to see my sister.~
-== C0AFRITZ ~You have my sworn promise that Dame Aurelia is alive and well. Master Dedalus would never wish harm upon his own blood, no matter the differences.~
-== C0ALUNA ~Then why are you here? If he feels no shame, then he shouldn't hesitate to come forth and meet us, instead of having you standing in our way.~
-== C0AFRITZ ~...I am here by my own deduction. Though Master Dedalus has not asked it of me, for the sake of our long-wrought plans I cannot allow any uncertain factors to threaten us. I will not.~
-== C0ALUNA ~Get out of our way, Fritz. If my uncle hasn't given you the order, then you have no right to intervene here. I only want to hear the truth from my uncle regarding the future of our people, our plans, along with everything else that he's hidden from me so far.~
-== C0AFRITZ ~Then you will have to subdue me by force, I fear. You are correct, milady, that I have no right. To stand between you and the director is partly an excuse... in truth, I see this as my opportunity. I will have a chance to test myself against none other than the hero <CHARNAME> <PRO_HIMHER>self.~
+== C0ALUNA ~*叹气* 弗里茨……我猜我该想到你在这儿，你这么忠于我叔叔。不过你年老的父亲、护民官大人就要退休享福了，我还以为你也许会回兰坦。~
+== C0AFRITZ ~我父亲理解我为祖国行事的意愿……我为此感谢他，也同等感谢戴达罗斯大人对我们族人的赤诚。所以我在这儿，女士。~
+== C0ALUNA ~“保护我们的族人”？我也这么信过，哪怕有因特里图斯的牵涉、他们卑劣的计划，以及你帮着瞒我。~
+== C0AFRITZ ~因特里图斯不再是威胁。奥库卢斯和我们执法者的努力已确保这点，兰坦没有他们的阴影蔓延诸国度会更好。如今，第十一工坊的人可以全心投入我们真正的使命。~
+== C0ALUNA ~你这么说，可……我要跟我叔叔谈。若他真信自己所做为兰坦好……我要听他亲口说。我也要见我妹妹。~
+== C0AFRITZ ~我郑重向你保证，奥瑞莉亚女士安然无恙。戴达罗斯大人绝不会害自己的血亲，不管分歧多大。~
+== C0ALUNA ~那你为什么在这儿？他若问心无愧，就该出来见我们，而不是让你挡路。~
+== C0AFRITZ ~……我在此是我自己的推断。虽说戴达罗斯大人没要求我，可为了我们筹划已久的计划，我不能让任何不确定因素威胁我们。我不会。~
+== C0ALUNA ~让开，弗里茨。我叔叔若没下令，你就无权插手。我只想从我叔叔口中听到关于我们族人未来、我们的计划，以及他至今瞒我的一切真相。~
+== C0AFRITZ ~那恐怕你得用武力制伏我。女士说得对，我无权。挡在你和主管之间，一半是借口……其实我把这看作我的机会。我将有机会跟英雄<CHARNAME><PRO_HIMHER>本人较量。~
 END
-  ++ ~What has this got to do with me all of a sudden?~ EXTERN C0AFRITZ quest3-24-1
-  ++ ~Your true intention is to fight me?~ EXTERN C0AFRITZ quest3-24-1
-  ++ ~If we have to battle, then can we just get this over already?~ EXTERN C0AFRITZ quest3-24-2
+  ++ ~这跟我突然有什么关系？~ EXTERN C0AFRITZ quest3-24-1
+  ++ ~你真正的意图是跟我打？~ EXTERN C0AFRITZ quest3-24-1
+  ++ ~若非得打，能不能赶紧了结？~ EXTERN C0AFRITZ quest3-24-2
 
 CHAIN C0AFRITZ quest3-24-1
-~You are recognized as a hero among many, <CHARNAME>, a legend among mortals. Knowledge of your deeds has even spread throughout Lantan, though our people rarely regard affairs in the outerland that do not involve us.~
-= ~It is my dream to become worthy of considering myself a proper defender of our nation... and nothing less than the strength of a legend is acceptable for such a role. Despite my training, I could not hope to achieve nearly as much as the <PRO_MANWOMAN> who has prevented war twice... but even so, I will pit my strength against yours, and see how great the divide before us truly is.~
+~你被众人认作英雄，<CHARNAME>，凡人中的传奇。你的事迹甚至传遍兰坦，尽管我们族人很少关心不涉己的外邦事务。~
+= ~我的梦想是配得上自称祖国真正的守护者……而这角色只容传奇般的力量。虽经训练，我也不能指望达到两次阻止战争的<PRO_MANWOMAN>那般成就……可即便如此，我也要拿我的力量跟你较量，看看我们之间的差距究竟多大。~
 EXTERN C0AFRITZ quest3-24-2
 
 CHAIN C0AFRITZ quest3-24-2
-~Under normal circumstances, I likely could not hope to match you... but we of the Eleventh Workshop have achieved many great things. There is one path in which I may hope to stand a chance as an obstacle to you.~
-== C0ALUNA ~That... is that Titan?! Stop, you idiot! Do you have any idea what it'll—!~
-== C0AFRITZ ~*gulp*~ [GULP]
+~正常情况下，我大概没法跟你匹敌……可我们第十一工坊成就了许多伟业。有一条路，我或许有希望成为你的障碍。~
+== C0ALUNA ~那……那是泰坦？！住手，你这蠢货！你知道它会——！~
+== C0AFRITZ ~*咽口水*~ [GULP]
 DO ~StartCutSceneMode()
 Wait(2)
 ApplySpellRES("c0aqef19",Myself)
@@ -3946,25 +3946,25 @@ Wait(2)
 ActionOverride("C0ALUNA",StartDialogNoSet(Player1))~ EXIT
 
 CHAIN IF WEIGHT #-1 ~Global("C0AuraBG2Quest3","GLOBAL",25)~ THEN C0ALUNA quest3-25
-~Great Gond... how stupid and pig-headed men can be...~ [C0BLANK]
+~伟大的贡德……人竟能蠢到、犟到这般地步……~ [C0BLANK]
 DO ~SetGlobal("C0AuraBG2Quest3","GLOBAL",26)~
-= ~This looks to be a new composition of Titan, <CHARNAME>. He might not be able to speak, but he seems to be under more control than previous users of the solution. And he'll be extremely dangerous!~
-= ~I–I can't help you here... subdue him however you can, but please try... try not to kill him.~
+= ~这看来是泰坦的新配方，<CHARNAME>。他也许说不了话，可看来比以前的用药者控制得更好。而且他会极危险！~
+= ~我——我在这儿帮不上……尽量制伏他，可求你……尽量别杀他。~
 DO ~Deactivate(Myself)~ EXIT
 
 CHAIN IF WEIGHT #-1 ~Global("C0AuraBG2Quest3","GLOBAL",27)~ THEN C0DEDAL quest3-27
-~That's enough, Fritz.~ [C0BLANK]
+~够了，弗里茨。~ [C0BLANK]
 DO ~SetGlobal("C0AuraBG2Quest3","GLOBAL",28)~
-== C0AFRITZ ~D... director...~
-== C0DEDAL ~*sigh* You have used the new formula of Titan against my wishes, Fritz, as I feared. What symptoms are you feeling right now?~
-== C0AFRITZ ~I... I am well enough.~
-== C0DEDAL ~I wish to know the truth. Take your time.~
-== C0AFRITZ ~Then, I... burning aches on all limbs, internal pain... headache...~
-== C0DEDAL ~Can you walk?~
-== C0AFRITZ ~I... I believe so.~
-== C0DEDAL ~Go to the healers. Do not leave until you've recovered fully.~
-== C0AFRITZ ~But—~
-== C0DEDAL ~I can handle things from here. Go.~
+== C0AFRITZ ~主……主管……~
+== C0DEDAL ~*叹气* 你不顾我意愿用了泰坦新配方，弗里茨，正如我所怕。你现在有什么症状？~
+== C0AFRITZ ~我……我还好。~
+== C0DEDAL ~我要知道实情。慢慢说。~
+== C0AFRITZ ~那，我……四肢灼痛，体内疼……头痛……~
+== C0DEDAL ~你能走吗？~
+== C0AFRITZ ~我……我想能。~
+== C0DEDAL ~去医者那儿。没好全之前不许离开。~
+== C0AFRITZ ~可是——~
+== C0DEDAL ~这儿我接手。去吧。~
 DO ~ClearAllActions()
 StartCutSceneMode()
 Wait(2)
@@ -3973,32 +3973,32 @@ Wait(4)
 StartDialogNoSet(Player1)~ EXIT
 
 CHAIN IF WEIGHT #-1 ~Global("C0AuraBG2Quest3","GLOBAL",28)~ THEN C0DEDAL quest3-28
-~I know why you have come. Aurelia is waiting for you.~ [C0BLANK]
+~我知道你们为何而来。奥瑞莉亚在等你们。~ [C0BLANK]
 DO ~SetGlobal("C0AuraBG2Quest3","GLOBAL",29)~
-== C0ALUNA ~Uncle...~
-== C0DEDAL ~Come inside.~
+== C0ALUNA ~叔叔……~
+== C0DEDAL ~进来。~
 DO ~ActionOverride("C0ALUNA",EscapeAreaObject("Exit1"))
 EscapeAreaObject("Exit1")~ EXIT
 
 CHAIN IF WEIGHT #-1 ~Global("C0AuraBG2Quest3","GLOBAL",31)~ THEN C0AURA2P quest3-31
-~Oh... <CHARNAME>. You're here.~ [C0BLANK]
+~哦……<CHARNAME>。你来了。~ [C0BLANK]
 DO ~SetGlobal("C0AuraBG2Quest3","GLOBAL",32)~
 END
-  ++ ~Are you okay, Aura?~ EXTERN C0AURA2P quest3-31-1
-  ++ ~You don't seem to be hurt. That's a relief.~ EXTERN C0AURA2P quest3-31-1
-  ++ ~Why have you been doing here?~ EXTERN C0DEDAL quest3-31-2
+  ++ ~你没事吧，奥拉？~ EXTERN C0AURA2P quest3-31-1
+  ++ ~看来你没受伤。那就好。~ EXTERN C0AURA2P quest3-31-1
+  ++ ~你在这儿做什么？~ EXTERN C0DEDAL quest3-31-2
 
 CHAIN C0AURA2P quest3-31-1
-~Yes... I–I'm fine. I know my uncle would never try to harm me, no matter what.~
+~是……我——我没事。我知道不管怎样，叔叔绝不会想害我。~
 EXTERN C0DEDAL quest3-31-2
 
 CHAIN C0DEDAL quest3-31-2
-~I believe I owe you an apology for unintentionally misleading you. My intention was not to endanger Aurelia, nor to concern you over the misunderstanding.~
-== C0AURA2P ~I haven't been mistreated or threatened, I've just... been awed. I once thought machines such as these were only a theory... now I'm surrounded by so many of them. It's like an old legend suddenly coming true.~
-== C0AURA2P ~Uncle... he told me everything. The truth about this place, about Interitus, and about our home. About all the things that have been created here. After that, I agreed to come along. But...~
-== C0DEDAL ~This workshop is under my own supervision, and the Ayrorch have no knowledge of it. Because of that, its knowledge is reserved purely to whom I can trust the most. Though my eldest niece is an enforcer of Oculus, I believed Aurelia could see my perspective... as well as Luna.~
-== C0ALUNA ~Forgive me, uncle.~
-== C0DEDAL ~You have no need to ask for forgiveness. Just as you have trusted in my judgement, so do I in yours.~
+~我想我该向你道歉，无意间误导了你。我的本意不是危及奥瑞莉亚，也不是让你为这误会担心。~
+== C0AURA2P ~我没有被虐待或威胁，我只是……被震住了。我曾以为这样的机械只是理论……如今我身边满是这些东西。就像古老传说忽然成真。~
+== C0AURA2P ~叔叔……他把一切都告诉我了。这地方的真相、因特里图斯的真相，还有我们故乡的真相。还有这里造出的一切。之后，我同意跟他来。可是……~
+== C0DEDAL ~这座工坊由我亲自监督，艾罗奇不知情。因此，这里的一切只留给我最信得过的人。虽我大侄女是奥库卢斯执法者，我相信奥瑞莉亚能明白我的看法……还有露娜。~
+== C0ALUNA ~原谅我，叔叔。~
+== C0DEDAL ~你不必求原谅。正如你信我的判断，我也信你的。~
 DO ~StartCutSceneMode()
 Wait(1)
 FaceObject("C0DEDAL")
@@ -4006,139 +4006,139 @@ Wait(1)
 ActionOverride("C0AURA",StartDialogNoSet(Player1))~ EXIT
 
 CHAIN IF WEIGHT #-1 ~Global("C0AuraBG2Quest3","GLOBAL",32)~ THEN C0AURA2P quest3-32
-~Before I give you my answer, uncle, I just have to ask you directly... are you really the Overseer?~ [C0BLANK]
+~在给你答复之前，叔叔，我得直接问你……你真的是监察官？~ [C0BLANK]
 DO ~SetGlobal("C0AuraBG2Quest3","GLOBAL",33)~
-== C0DEDAL ~...~
-== C0DEDAL ~Yes.~
-== C0AURA2P ~*sigh* I was afraid of that... uncle, why would you?~
-== C0DEDAL ~It is as I have always said to you. Everything I have done is for the sake of Lantan.~
-== C0AURA2P ~I know. That has never changed, and it's something you would never lie about. That being said, however... I still don't agree with your reasoning, uncle.~
-== C0DEDAL ~Continue.~
-== C0AURA2P ~I didn't fully believe you at first when you said you were certain of Lantan's future, that we would be safe against future threat from the outerland... and I'll admit, seeing what I have today makes me think it's possible. But I still don't believe this is the right way.~
-== C0DEDAL ~No. I expect that not only you, but every member of the homeland would hold the same viewpoint.~
-== C0DEDAL ~That is natural—we Lantanna are adepts of many trades, but war has never been among them. We have a natural aversion to war and conflict, yet our lack of understanding of it has made us complacent.~
-== C0AURA2P ~I don't disagree with that, uncle. Ever since I left on my journey, I've learned a lot about the world, and I know that others' intentions aren't always pure, but—~
-== C0DEDAL ~Enough. You need not explain, as I understand fully.~
-== C0DEDAL ~In truth, knowing that your time out of Lantan has hardened you brings me little joy, Aurelia. Our blood relation may be distant, but I remember your upbringing well, as you have been Kairos's favored child since your birth.~
-== C0DEDAL ~From the age of three, you had already shown your talent in learning. By adolescence, you had awed each and every tutor with your memory and affinity at innovation.~
-== C0DEDAL ~By the time you had finished your studies at the Sambaran academy, every guild in Lantan had offered you a place in their circle. You are considered a prodigy in every sense, and given the privilege befitting your ability.~
-== C0AURA2P ~That's... uncle, I never—~
-== C0DEDAL ~You misunderstand, Aurelia. I do not intend to criticise you. If I had my way, all inspired minds of our homeland should have the same.~
-== C0DEDAL ~I only wish for you to understand that it has always been the goal of those who have nurtured you to keep you within Lantan, so that your gift could be used in turn to enrich the nation. That... was Kairos's wish, most of all.~
-== C0AURA2P ~Papa... but he always supported my wishes. Even when I decided I wanted to leave Lantan, he...~
-== C0DEDAL ~Indeed. When you declared, in your youth, that your aspiration was to use your knowledge to aid not only Lantan, but the world, your father chose to give you his utmost support, even giving the approval for you to travel the world.~
-== C0AURA2P ~I never knew...~
-== C0DEDAL ~And I agreed with him. Do you remember what I told you, the day the Eleventh Workshop finished the creation of your bow?~
-== C0AURA2P ~"A weapon forged in Lantan must always be prepared to be held to protect the ideals of the Lantanna".~
-== C0DEDAL ~Correct. But I never told you against whom we must be protected from. I believed, in seeing the world, that you would eventually find the answer. And have you?~
-== C0AURA2P ~I... I'm not sure.~
-== C0DEDAL ~I expected as much. It is a difficult question to answer. But there is one here who may teach you better than myself.~
-== C0ALUNA ~...~
-== C0AURA2P ~Luna?~
-== C0DEDAL ~You are not the only one who has come to understand much of the world outside of Lantan, child.~
-== C0DEDAL ~Since your departure, the church of Gond has appointed Luna as spokeswoman for the Ayrorch, and as you came to know those from the outerland through your travels... she has become exposed to many who came to Lantan of their own initiative.~
-== C0ALUNA ~That'll do, uncle. I'll... I'll tell her myself.~
-== C0ALUNA ~Since I became spokewoman, it's been expected of me to meet those from all over the realms. On the surface, it's to establish friendly relations, but in reality, it's to gauge the intentions of those who are seeking to know about us. As a priestess, I've learned how to sift through who can be trusted, and who have... other intentions.~
-== C0AURA2P ~I... think I understand now. Luna, you've seen threats... those who covet what we have, our knowledge and creations...~
-== C0ALUNA ~*nods*~
-== C0ALUNA ~More than that, I've seen... how those who are ignorant of our ways look down upon us. If they sought our knowledge for enlightenment, or improvement, even if it's just for themselves, that I could understand... but as time went on, all I saw were more and more who simply saw what we made as tools and weapons, to use for their own greedy and self-centered purposes.~
-== C0ALUNA ~It made me angry. And eventually, even though I would never support their ways... I began to understand the logic of those who hated everything outside of the homeland so much.~
-== C0AURA2P ~That was when you decided to support uncle?~
-== C0DEDAL ~On the contrary, I came to her. I feared the conclusions that Luna would inevitably make should no one intervene, and gradually informed her of my own goals to ease her mind. She has given me the support she can offer as a high priestess of the Gondar church since then.~
-== C0AURA2P ~But... why? Uncle, why would you do all this... without the knowledge of the Ayrorch? If you care about the homeland, then shouldn't you—~
-== C0DEDAL ~To answer that... perhaps I should ask a hypothetical of your leader instead. <CHARNAME>, if I may have a moment of your time.~
-== C0DEDAL ~If, one day, should Candlekeep be targeted by an outside force, whether for its knowledge, or because it is seen as a threat... what would you do?~
+== C0DEDAL ~……~
+== C0DEDAL ~是。~
+== C0AURA2P ~*叹气* 我怕就是这样……叔叔，你为什么要这样？~
+== C0DEDAL ~正如我一贯对你说的。我做的一切都为兰坦。~
+== C0AURA2P ~我知道。这从没变过，这也是你绝不会撒谎的事。可话虽如此……叔叔，我仍不认同你的道理。~
+== C0DEDAL ~继续说。~
+== C0AURA2P ~你说你确信兰坦的未来、确信我们能免受外邦未来的威胁时，我起初并不全信……我承认，今天所见让我觉得那有可能。可我仍不认为这是对的法子。~
+== C0DEDAL ~不。我想不只你，故乡每一个人都会持同样看法。~
+== C0DEDAL ~这很自然——我们兰坦人精通许多行当，可战争从来不在其中。我们对战争与冲突有天生的厌恶，可正因为不懂它，我们才自满了。~
+== C0AURA2P ~这我不反对，叔叔。自从踏上旅途，我对世界懂了许多，我知道别人的意图未必总是纯正，可是——~
+== C0DEDAL ~够了。你不必解释，我完全明白。~
+== C0DEDAL ~说实话，知道你离开兰坦的日子把你磨得冷硬，我并不怎么高兴，奥瑞莉亚。我们血亲关系也许远，可我记得你的成长，毕竟你自出生起就是凯罗斯宠爱的孩子。~
+== C0DEDAL ~三岁时你就显出学习的天分。到少年时，你的记忆与创新上的悟性让每一位老师都惊叹。~
+== C0DEDAL ~等你在桑巴尔学院读完，兰坦每个公会都邀你入他们的圈子。你各方面都被视为奇才，也得到了配得上你本事的特权。~
+== C0AURA2P ~那……叔叔，我从没——~
+== C0DEDAL ~你误会了，奥瑞莉亚。我不是要批评你。若由我做主，我们故乡所有有灵感的头脑都该得同样的待遇。~
+== C0DEDAL ~我只想让你明白，养育你的人一贯的目标就是把你留在兰坦，好让你的天赋反过来富国。那……尤其是凯罗斯的愿望。~
+== C0AURA2P ~爸爸……可他一直支持我的愿望。连我决定要离开兰坦时，他也……~
+== C0DEDAL ~确实。你年少时宣告你的志向是用知识不只帮兰坦、还要帮整个世界，你父亲选择全力支持你，甚至批准你周游世界。~
+== C0AURA2P ~我从不知道……~
+== C0DEDAL ~我也赞同他。你还记得第十一工坊造完你的弓那天，我对你说的话吗？~
+== C0AURA2P ~“兰坦铸造的武器，必须永远准备着被举起，以守护兰坦人的理想”。~
+== C0DEDAL ~对。可我从没告诉你，我们必须防备谁。我相信你见了世界，终会找到答案。你找到了吗？~
+== C0AURA2P ~我……我不确定。~
+== C0DEDAL ~我也料想如此。这问题难答。可这儿有一个人能比我教得更好。~
+== C0ALUNA ~……~
+== C0AURA2P ~露娜？~
+== C0DEDAL ~明白外邦世界之多的，不只你一个，孩子。~
+== C0DEDAL ~你走后，贡德教会任命露娜作艾罗奇的代言人；而你通过旅行认识了外邦人……她也接触了许多自愿来兰坦的人。~
+== C0ALUNA ~行了，叔叔。我……我自己跟她说。~
+== C0ALUNA ~我当代言人以来，就得会见诸国度来的人。表面上是建立友好关系，实际上是揣度那些想了解我们者的意图。作为祭司，我学会了筛出谁可信、谁有……别的意图。~
+== C0AURA2P ~我……我想我现在明白了。露娜，你见过威胁……那些觊觎我们所有、我们的知识与造物的人……~
+== C0ALUNA ~*点头*~
+== C0ALUNA ~不止如此，我见过……那些不懂我们行事的人如何看待我们。他们若为启蒙或改进求知，哪怕只为自身，我也能理解……可随着时间过去，我只看见越来越多的人把我们造的东西单纯当作工具与武器，用于他们贪婪自私的目的。~
+== C0ALUNA ~这让我愤怒。最终，尽管我绝不会支持那些人的做法……我开始明白那些憎恨故乡之外一切之人的逻辑。~
+== C0AURA2P ~那时你决定支持叔叔？~
+== C0DEDAL ~相反，是我找的她。我怕若无人干预，露娜终会得出那种结论，于是逐渐把自己的目标告诉她，好让她安心。自那以后，她以贡德教会高等祭司的身份给了我所能给的支持。~
+== C0AURA2P ~可……为什么？叔叔，你为什么要瞒着艾罗奇做这一切……？你既在意故乡，那你不该——~
+== C0DEDAL ~要回答这个……也许我该问你的领队一个假设。 <CHARNAME>，可否借你一点时间。~
+== C0DEDAL ~若有朝一日，烛堡被外力盯上，或为它的知识，或因为它被视为威胁……你会怎么做？~
 END
-  ++ ~Defend my home, of course.~ EXTERN C0DEDAL quest3-32-1
-  ++ ~I couldn't care less about Candlekeep.~ EXTERN C0DEDAL quest3-32-2
-  ++ ~I'd rather not get involved in this family dispute.~ EXTERN C0DEDAL quest3-32-2
+  ++ ~当然保卫我的家。~ EXTERN C0DEDAL quest3-32-1
+  ++ ~烛堡我才不在乎。~ EXTERN C0DEDAL quest3-32-2
+  ++ ~我不想卷进这场家族争执。~ EXTERN C0DEDAL quest3-32-2
 
 CHAIN C0DEDAL quest3-32-1
-~And would those who hold authority within the library ever consider the possibility of engaging in war?~
+~而图书馆内掌权的人，会考虑开战的可能吗？~
 END
-  ++ ~They would not, no.~ + quest3-32-3
-  ++ ~Ulraunt and Tethtoril, those old codgers? Doubtful.~ + quest3-32-3
+  ++ ~不会。~ + quest3-32-3
+  ++ ~乌尔劳恩特和泰斯托里尔那两个老家伙？难说。~ + quest3-32-3
 
 CHAIN C0DEDAL quest3-32-2
-~So be it. I will make my point regardless.~
+~那就这样。不管怎样我都要把话说完。~
 EXTERN C0DEDAL quest3-32-4
 
 CHAIN C0DEDAL quest3-32-3
-~Indeed. Candlekeep seeks only the preservation and protection of their knowledge, and with the magic and discretion, has done so with success for many years. Despite this, it still failed you in your own time of need, as I understand it.~
+~确实。烛堡只求保存、保护其知识，凭魔法与谨慎，多年来一直成功。尽管如此，据我所知，它在你自己需要时仍没能帮你。~
 EXTERN C0DEDAL quest3-32-4
 
 CHAIN C0DEDAL quest3-32-4
-~Even the strongest defenses can only do so much as a precaution. Candlekeep is a resolute fortress, yet conflict has marked it regardless. And our homeland, Lantan... could not possibly even be compared to Candlekeep.~
-== C0DEDAL ~I believe you have seen it clearly yourself, Aurelia. Despite all of the efforts of Oculus, secrets of the nation are inevitably stolen and spread throughout the outerland, some even by the hands of our own.~
-== C0DEDAL ~Conflict ravages the realms as our people continue to work, under the hope that it will never reach our shores. We present ourselves as eccentrics and researchers, strange yet harmless to others... but that cannot possibly last.~
-== C0AURA2P ~...~
-== C0ALUNA ~...~
-== C0DEDAL ~There is no doubt that I believe the future of our people lies in the hands of those of pure heart and mind such as yourself, Aurelia. Yet how many like yourself will continue to live on should the rest of the realms finally seek us, only for our people to discover that we have long been left behind?~
-== C0AURA2P ~I...~
-== C0DEDAL ~I do not expect an answer here from you, Aurelia, any more than I could expect one from the Ayrorch. It is not a question I wish to force on anyone with a love for the homeland. It is a burden, one that should be carried by as few as possible. But we cannot betray our home by avoiding the truth, any more than we can live with our ignorance in any other realm of knowledge.~
+~再强的防御，作为预防也只能做这么多。烛堡是坚固的堡垒，可它仍被冲突留下了印记。而我们的故乡兰坦……根本不能跟烛堡相比。~
+== C0DEDAL ~我相信你自己已看得很清，奥瑞莉亚。尽管奥库卢斯全力而为，国家的机密仍不可避免地外泄到外邦，有些甚至是族人自己经手。~
+== C0DEDAL ~我们族人继续工作时，冲突正蹂躏诸国度，而他们只盼它永不波及我们的海岸。我们以怪人与研究者的形象示人，古怪却无害……可那不可能一直维持。~
+== C0AURA2P ~……~
+== C0ALUNA ~……~
+== C0DEDAL ~我无疑相信我们族人的未来握在像你这样心性纯正者手里，奥瑞莉亚。可若诸国度其余地方终于找上我们，而我们族人却发现自己早已落后，那有多少像你这样的人还能继续活着？~
+== C0AURA2P ~我……~
+== C0DEDAL ~奥瑞莉亚，我不指望你在此给我答案，正如我不能指望艾罗奇给。我不愿把这个问题强加给任何热爱故乡的人。这是重担，该由尽可能少的人扛。可我们不能靠回避真相背叛家园，正如我们也不能在其他任何知识领域里靠无知活着。~
 DO ~ClearAllActions()
 StartCutSceneMode()
 StartCutScene("c0acut23")~ EXIT
 
 CHAIN IF WEIGHT #-1 ~Global("C0AuraBG2Quest3","GLOBAL",33)~ THEN C0AJUNO quest3-33
-~Allow me to answer you, uncle, to the best of my ability.~ [C0BLANK]
+~让我尽我所能回答你吧，叔叔。~ [C0BLANK]
 DO ~SetGlobal("C0AuraBG2Quest3","GLOBAL",34)~
-== C0DEDAL ~Juno.~
-== C0AJUNO ~Stand down, please. We've already detained all of the workshop's builders and their guards. Don't make this harder than it needs to be.~
-== C0DEDAL ~I trust you did not hurt any of them.~
-== C0AJUNO ~Of course not. They are some of your oldest and most loyal workers. Many of them I recognize by name and face. Even I wouldn't have the heart for it.~
-== C0DEDAL ~Thank you.~
-== C0AJUNO ~I've listened to enough to get the picture, uncle. Even despite this being among the highest transgressions for a Lantanna... I can't deny all of your reasoning. As an Oculus, I know full well the danger our own knowledge holds for us.~
-== C0AJUNO ~And it sounds like my sisters have learned that difficult lesson for themselves as well... though I wish a certain someone might have trusted me enough to keep me out of the dark regarding their own doubts, as well.~
-== C0ALUNA ~...~
-== C0AJUNO ~While my sisters may not know conflict and war well enough yet to grasp at your intentions, uncle, I think I understand well enough. You do not wish for these weapons to be used any more than any Lantanna in this room does. This is a tool for deterrence, a warning to the outside world that we are not unprepared, should the greedy or ambitious see us as easy prey.~
-== C0AJUNO ~And, even should the worst come to pass, these weapons would serve as your secret countermeasure, so that as little blood is shed on our own soil as possible. Am I wrong?~
-== C0DEDAL ~...It is the most logical conclusion to come to.~
-== C0AJUNO ~Judging from that, it can be insinuated... this isn't your only workshop outside of Lantan, is it?~
-== C0AURA2P ~What?!~
-== C0DEDAL ~...~
-== C0DEDAL ~No.~
-== C0ALUNA ~That... even I never knew about that... uncle, how long have you...~
-== C0AJUNO ~*sigh* Uncle...~
-== C0AJUNO ~Ignoring how your position looks worse by the second, I have to ask... what could you hope to accomplish for our people this way?~
-== C0AJUNO ~By giving us a weapon to use against conflict, you are all but inviting it to our doorstep. If there are those as ravenous for power and resources as you believe, once they know what we are truly capable of... whether out of greed, envy or paranoia, war will become an inevitably for all Lantanna, whether they like it or not.~
-== C0AJUNO ~All you have done is ensure we hold an effective weapon against our future enemies for now... but even that can't last. Will we all be forced to turn our attention and research towards conflict, and continue to feed the beast you create?~
-== C0DEDAL ~...~
-== C0AJUNO ~You may not know, uncle, but when I first recommended Luna as spokesman to the church, I had truly hoped that her position would allow our people to find trustworthy allies willing to mutually enrich our nations.~
-== C0AJUNO ~In hindsight, perhaps I was too naive, and did not consider the effect it would have on my sister... and the blame is on me that she felt the need to support your cause.~
-== C0ALUNA ~No, Juno...~
-== C0AJUNO ~But I believe if there is a future for the Lantanna, it cannot be seen by standing alone. Your solution would make us appear nothing more than self-serving at best, a potential enemy to the realms at worst.~
-== C0ALUNA ~I, I...~
-== C0ALUNA ~I... agree with Juno, uncle. I decided to support you because I truly feared for my home... but if it was only because I couldn't fully trust in others, then I've been making a terrible mistake all along. I don't want to see bloodshed become as natural for our people as it is for those I fear so much.~
-== C0AURA2P ~I also agree. I can't give you an answer to how the Lantanna should prepare for our future, uncle, but it isn't this. You're perhaps the most knowledgable Lantanna I've ever known, and one of my most respected mentors... surely you can see it.~
-== C0AURA2P ~<CHARNAME>... you're not a Lantanna, but as someone who's taught me much in our journey, whether knowingly or not... you see things the same way as I do, right?~
+== C0DEDAL ~朱诺。~
+== C0AJUNO ~请放下武器。我们已拘留了工坊所有的建造者与守卫。别让事情更难办。~
+== C0DEDAL ~我相信你没伤他们任何人。~
+== C0AJUNO ~当然没有。他们是你最老、最忠的工人。许多我认得出名字与面孔。连我也不忍心。~
+== C0DEDAL ~谢谢。~
+== C0AJUNO ~我听得够多，明白大概了，叔叔。尽管这在兰坦人看来是最重的越界……我不能否认你全部的道理。身为奥库卢斯，我很清楚我们自己的知识对我们有多危险。~
+== C0AJUNO ~而且听来我妹妹们自己也学到了这艰难的一课……虽说我倒希望某人能信任我，也把自己的疑虑告诉我，别把我蒙在鼓里。~
+== C0ALUNA ~……~
+== C0AJUNO ~我妹妹们也许还不懂冲突与战争，抓不住你的意图，叔叔，可我想我明白得够了。你并不比这屋里任何兰坦人更希望这些武器被使用。这是威慑的工具，是对外界的警告——若贪婪或野心之辈视我们为好猎，我们并非毫无准备。~
+== C0AJUNO ~而且，就算最坏情形发生，这些武器也是你秘密的对策，好让我们自己的土地上流尽可能少的血。我错了吗？~
+== C0DEDAL ~……这是最合乎逻辑的结论。~
+== C0AJUNO ~由此可以推想……这不是你在兰坦之外唯一的工坊，对吧？~
+== C0AURA2P ~什么？！~
+== C0DEDAL ~……~
+== C0DEDAL ~不。~
+== C0ALUNA ~那……连我都从不知道这事……叔叔，你这样有多久了……~
+== C0AJUNO ~*叹气* 叔叔……~
+== C0AJUNO ~先不管你的处境一秒比一秒难看，我得问……这样你指望为族人成就什么？~
+== C0AJUNO ~给我们一件对抗冲突的武器，你几乎是在把冲突请到家门口。若真有人像你信的那样贪求权势与资源，一旦他们知道我们真能做到什么……不管出于贪婪、嫉妒还是疑惧，战争对所有兰坦人都将不可避免，不管他们愿不愿意。~
+== C0AJUNO ~你所做的只是确保我们眼下握有一件对付未来之敌的有效武器……可连那也维持不了。我们难道全得把注意与研究转向冲突，继续喂养你造出的那头兽？~
+== C0DEDAL ~……~
+== C0AJUNO ~你也许不知道，叔叔，可我当初向教会推荐露娜作代言人时，我真希望她的位置能让我族人找到愿意互利共富的可信盟友。~
+== C0AJUNO ~事后看，也许我太天真，没考虑那对我妹妹的影响……她竟觉得有必要支持你的事业，这错在我。~
+== C0ALUNA ~不，朱诺……~
+== C0AJUNO ~可我相信兰坦人若有未来，那不是靠孤身而立能看见的。你的法子最好也只让我们显得自私自利，最坏则成诸国度的潜在之敌。~
+== C0ALUNA ~我，我……~
+== C0ALUNA ~我……我同意朱诺，叔叔。我决定支持你，是因为我真为故乡害怕……可若那只是因为我没法完全信任别人，那我一直就在犯大错。我不想看到流血对我族人变得像对我如此惧怕的那些人一样自然。~
+== C0AURA2P ~我也同意。叔叔，兰坦人该如何为未来做准备，我给不出答案，可绝不是这个。你也许是我认识的最博学的兰坦人，也是我最敬重的导师之一……你一定能看出这点。~
+== C0AURA2P ~<CHARNAME>……你不是兰坦人，可你在旅途中教了我许多，不管有意无意……你看事情跟我一样，对吧？~
 END
-  ++ ~I do. Your uncle is endangering your home, not protecting it.~ EXTERN C0DEDAL quest3-33-1
-  ++ ~This doesn't concern me. Leave me out of this.~ EXTERN C0DEDAL quest3-33-2
-  ++ ~I actually agree with your uncle's position.~ EXTERN C0DEDAL quest3-33-2
+  ++ ~是。你叔叔是在危害你的故乡，不是保护它。~ EXTERN C0DEDAL quest3-33-1
+  ++ ~这与我无关。别把我算进去。~ EXTERN C0DEDAL quest3-33-2
+  ++ ~我其实赞同你叔叔的立场。~ EXTERN C0DEDAL quest3-33-2
 
 CHAIN C0DEDAL quest3-33-1
-~You, <CHARNAME>? Though the affairs of the outerland have yet to affect Lantan, I have heard much of the conflict in the Sword Coast, of which you had a part in combating.~
-= ~Did you not personally see how little it took to spark the flames of warfare between opposing nations? When the need for survival was used as a pretext for conquering others simply because the victory seemed possible?~
+~你，<CHARNAME>？外邦事务虽还没波及兰坦，可我听过许多剑湾的冲突，你曾参与对抗。~
+= ~你没亲眼见过点燃敌对国家间战火有多容易吗？当生存的需要被用作征服他人的借口，只因为胜利看来可能？~
 END
-  ++ ~It's true—I did see it. But I also saw how easily two nations were almost manipulated into war. All it took was for both sides to believe the other would strike first. You're giving every nation you fear a reason to act against you.~ + quest3-33-2
-  ++ ~You may have a point. But if you think that the solution is to hold a blade over the necks of those who threaten you, all you're doing is proving to others that you're the threat that should be feared.~ + quest3-33-2
-  ++ ~You're right. And it's because of that which I can say that you're just repeating the same mistakes of those I've seen before, in a much greater scale. Stop this madness, before you invoke the consequences that you've been trying to prevent.~ + quest3-33-2
-  ++ ~That doesn't matter. Right now, you need to be stopped, and I see the reasons for it right before my eyes.~ + quest3-33-3
+  ++ ~确实——我见过。可我也见过两国多容易被操纵到战争边缘。只需双方都相信对方会先动手。你是在给每一个你惧怕的国家对你动手的理由。~ + quest3-33-2
+  ++ ~你也许有理。可你若以为解决办法是把刀架在威胁你的人脖子上，那你只是在向别人证明，你才是那个该被惧怕的威胁。~ + quest3-33-2
+  ++ ~你说得对。正因如此我才能说，你只是在重复我见过的那些人犯过的错，规模却大得多。趁你还没招来你想防的后果，停手吧。~ + quest3-33-2
+  ++ ~那不重要。现在你必须被阻止，而理由就在我眼前。~ + quest3-33-3
 
 CHAIN C0DEDAL quest3-33-2
-~Hmm.~
-== C0AURA2P ~Uncle, please listen. I've seen the sorts of chaos that leads to conflict. I know what could become of our people if we just continue to do nothing. But we—all Lantanna—need to work together to find a better way. You don't have to shoulder the burden for our whole nation by yourself.~
+~嗯。~
+== C0AURA2P ~叔叔，求你听。我见过导致冲突的那种混乱。我知道若我们继续什么都不做，族人会变成什么样。可我们——所有兰坦人——得一起找出更好的路。你不必一个人替全国扛这担子。~
 EXTERN C0DEDAL quest3-33-3
 
 CHAIN C0DEDAL quest3-33-3
-~...Enough.~
-= ~I cannot deny that you have grounds for your reasoning, as I do mine. But though we may speak in hypotheticals, the truth cannot be known until it comes to light.~
-= ~Should I stop now, everything I have built will have been for nothing. And if the future is as I fear it, and we are unprepared... that is what I would truly regret.~
-= ~But you are committed to your cause, and so from your perspective, as a Lantanna and enforcer of Oculus, I am now your enemy, Juno. If you wish to apprehend me by force, then do not hesitate.~
-== C0ALUNA ~Please don't do this, uncle...~
-== C0AJUNO ~Uncle, if you choose to resist, or worse, turn these automatons against us... there will be no avoiding Lantann blood being shed in this place. And I must also see you—bearing your sword with skill that far surpasses mine—as a physical threat, and act accordingly. Is this what you truly desire?~
-== C0DEDAL ~You have thought carefully, Juno, yet your reasoning is flawed at its base. I am an inventor, not a fighter. I am not unprepared for the possibility for battle, yet I can only act as an inventor may.~
+~……够了。~
+= ~我不能否认你的道理有根据，正如我的也有。可我们虽在谈假设，真相不到显露之时无法确知。~
+= ~我若现在停手，我建立的一切都将成空。而若未来真如我所惧、我们毫无准备……那才是我真正会后悔的。~
+= ~可你忠于你的事业，所以在你看来，身为兰坦人和奥库卢斯执法者，我现在是你的敌人，朱诺。你若想用武力抓我，别犹豫。~
+== C0ALUNA ~求你别这样，叔叔……~
+== C0AJUNO ~叔叔，你若选择抵抗，或更糟，把这些自动机械转向我们……那就免不了此地流兰坦人的血。而我也必须把你——佩剑的本事远胜于我——视为实体威胁，并相应行事。这真是你想要的？~
+== C0DEDAL ~你想得很仔细，朱诺，可你的道理根基有误。我是发明家，不是战士。我对可能的一战并非毫无准备，可我只能以发明家的方式行事。~
 DO ~ClearAllActions()
 StartCutSceneMode()
 Wait(2)
@@ -4147,33 +4147,33 @@ Wait(4)
 ActionOverride("C0ALUNA",StartDialogNoSet(Player1))~ EXIT
 
 CHAIN IF WEIGHT #-1 ~Global("C0AuraBG2Quest3","GLOBAL",34)~ THEN C0ALUNA quest3-34
-~Wh–what in the Nine Hells is this...?!~ [C0BLANK]
+~这——这到底是九层地狱里的什么……？！~ [C0BLANK]
 DO ~SetGlobal("C0AuraBG2Quest3","GLOBAL",35)~
-== C0AGNO03 ~Arrrgh...!~
-== C0AURA2P ~The... the gravity... it's been altered... everything's so heavy...~
-== C0AJUNO ~That's... the Inertial Engine...? Impossible... when was it completed?! We never received a report on that!~
-== C0DEDAL ~I understand that your agents are within the Eleventh Workshop's number, Juno. An understandable necessity, yet Interitus has served an equally necessary purpose. I had hoped to rehabilitate them, and give them a chance to serve the nation properly... it is regrettable that there was no stifling their ambitions.~
-== C0AGNO04 ~I... I can't move...~
-== C0DEDAL ~Worry not. I have no intention of harming any of you. But I cannot allow my work to end today, and so I will do as I must. You will all be released once I have made all the necessary preparations to account for this setback.~
-== C0ALUNA ~Uncle... stop this...~
-== C0AURA2P ~<CHARNAME>... can you... move your arm?~
+== C0AGNO03 ~啊啊啊……！~
+== C0AURA2P ~那……那重力……被改了……一切都好重……~
+== C0AJUNO ~那是……惯性引擎……？不可能……什么时候完工的？！我们从没收到过相关报告！~
+== C0DEDAL ~我知道你的探员就在第十一工坊的人里，朱诺。这是可以理解的必要，可因特里图斯也起了同样必要的作用。我本想改造他们，给他们机会正经服务国家……可惜没法压住他们的野心。~
+== C0AGNO04 ~我……我动不了……~
+== C0DEDAL ~别担心。我无意伤害你们任何一人。可我不能让我的工作今天终结，所以我必须做我该做的。等我做好一切必要准备来弥补这次挫折，就会放你们。~
+== C0ALUNA ~叔叔……停手……~
+== C0AURA2P ~<CHARNAME>……你……能动胳膊吗？~
 END
-  ++ ~Maybe... do you have a plan?~ EXTERN C0AURA2P quest3-34-1
-  ++ ~Barely... if I try my hardest...~ EXTERN C0AURA2P quest3-34-1
-  ++ ~I can't use my weapon, if that's what you're thinking...~ EXTERN C0AURA2P quest3-34-1
+  ++ ~也许……你有办法吗？~ EXTERN C0AURA2P quest3-34-1
+  ++ ~勉强……若我拼尽全力……~ EXTERN C0AURA2P quest3-34-1
+  ++ ~我用不了武器，如果你是这意思……~ EXTERN C0AURA2P quest3-34-1
 
 CHAIN C0AURA2P quest3-34-1
-~I... I have a CL-2 grenade in my pocket... try to reach for it and open the mechanism... it might be able to disrupt the field...~
+~我……我口袋里有颗CL-2手雷……想办法够到它，打开机构……也许能扰乱这力场……~
 END
-  ++ ~Will that work?~ EXTERN C0AURA2P quest3-34-2
-  ++ ~Alright, I'll try...~ EXTERN C0AURA2P quest3-34-3
+  ++ ~那管用吗？~ EXTERN C0AURA2P quest3-34-2
+  ++ ~好，我试试……~ EXTERN C0AURA2P quest3-34-3
 
 CHAIN C0AURA2P quest3-34-2
-~I... I don't know... but it's worth a try...~
+~我……我不知道……可值得一试……~
 EXTERN C0AURA2P quest3-34-3
 
 CHAIN C0AURA2P quest3-34-3
-~Just pull the pin, and try to push it as far forward as you can... now!~
+~拔掉拉环，尽量往前推……现在！~
 DO ~ClearAllActions()
 StartCutSceneMode()
 Wait(2)
@@ -4189,31 +4189,31 @@ Wait(3)
 StartDialogNoSet(Player1)~ EXIT
 
 CHAIN IF WEIGHT #-1 ~Global("C0AuraBG2Quest3","GLOBAL",35)~ THEN C0AURA2P quest3-35
-~Phew... I can't believe that actually did the trick.~ [C0BLANK]
+~呼……真不敢信这法子竟成了。~ [C0BLANK]
 DO ~SetGlobal("C0AuraBG2Quest3","GLOBAL",36)~
-== C0DEDAL ~...Curious.~
-== C0DEDAL ~So the energy pattern is still vulnerable to interference... fascinating. I didn't think I could've overlooked such a fault.~
-== C0DEDAL ~And with an anti-mechanism grenade? An advancement over the original model, no less... you've improved greatly, Aurelia. I remembered how much you once shied away from weapons.~
-== C0AURA2P ~You taught me, uncle. The day you approved the creation of my Sunshooter at the Eleventh Workshop... you told me that to succeed, I needed to accept knowledge in all its forms.~
-== C0DEDAL ~So I did. Strangely, even now, I do not regret teaching you that lesson.~
-== C0DEDAL ~...It appears the automatons have turned unresponsive as well. My last means of defense has truly collapsed. *chuckle* I suppose I should be proud.~
-== C0ALUNA ~Uncle...~
-== C0AJUNO ~Surrender, uncle. Any further resistance would be pointless, and only make your judgement harsher. And I do not wish to be the one to bring news to Father of your complete downfall.~
-== C0AURA2P ~Please... do it for all of us. We—all of us of the Glimmershine clan—have always admired and looked up to you. Don't make things any worse.~
-== C0DEDAL ~...~
-== C0DEDAL ~Very well. It seems I have exhausted my options. There is no use in resisting further.~
-== C0ALUNA ~...ah... thank the gods...~
-== C0AJUNO ~Thank you, uncle. And you for your help, <CHARNAME>. I doubt this would have went as well without your assistance. We will handle the rest.~
+== C0DEDAL ~……有意思。~
+== C0DEDAL ~看来这能量模式仍易受干扰……妙。我没想到我会漏掉这样的缺陷。~
+== C0DEDAL ~而且是拿一颗反机械手雷？还是原型的改进型号……你长进很大，奥瑞莉亚。我记得你曾多么避讳武器。~
+== C0AURA2P ~是你教的，叔叔。你在第十一工坊批准造我的太阳射手那天……你告诉我，要成功，就得接受一切形态的知识。~
+== C0DEDAL ~确实。奇怪的是，就算现在，我也不后悔教了你这一课。~
+== C0DEDAL ~……看来自动机械也没反应了。我最后的防御手段真的崩溃了。*轻笑* 我想我该骄傲。~
+== C0ALUNA ~叔叔……~
+== C0AJUNO ~投降吧，叔叔。再抵抗毫无意义，只会让你的判决更重。我也不想当那个把彻底垮台的消息带给父亲的人。~
+== C0AURA2P ~求你……为我们所有人做吧。我们——格利默夏恩一族所有人——一直敬慕你。别让事情更糟。~
+== C0DEDAL ~……~
+== C0DEDAL ~好。看来我选择用尽。再抵抗无用。~
+== C0ALUNA ~……啊……谢天谢地……~
+== C0AJUNO ~谢谢你，叔叔。也谢你相助，<CHARNAME>。我怀疑没你帮忙，事情不会这么顺。剩下的我们来处理。~
 DO ~ClearAllActions()
 StartCutSceneMode()
 StartCutScene("C0ACUT24")~ EXIT
 
 CHAIN IF WEIGHT #-1 ~Global("C0AuraBG2Quest3","GLOBAL",36)~ THEN C0ALUNA quest3-36
-~W–what's going on? Uncle, what are you doing?!~ [C0BLANK]
+~出——出什么事了？叔叔，你在做什么？！~ [C0BLANK]
 DO ~SetGlobal("C0AuraBG2Quest3","GLOBAL",37)~
-== C0AURA2P ~That's... impossible! The CL-2 should've deactivated them! It's... it's never failed before! I... uncle, please stop this! You've already agreed to surrender!~
-== C0AJUNO ~Damn it, shut them down, uncle! Now!~
-== C0AURA2P ~W–wait... Juno? I–I don't think he...~
+== C0AURA2P ~那……不可能！CL-2 该让它们失能！它……它从没失灵过！我……叔叔，求你停手！你已答应投降了！~
+== C0AJUNO ~该死，关掉它们，叔叔！马上！~
+== C0AURA2P ~等——等等……朱诺？我——我想他不是……~
 DO ~ClearAllActions()
 StartCutSceneMode()
 ActionOverride("Aura Golem 2",SetSequence(SEQ_ATTACK_SLASH))
@@ -4225,24 +4225,24 @@ Wait(2)
 StartDialogNoSet(Player1)~ EXIT
 
 CHAIN IF WEIGHT #-1 ~Global("C0AuraBG2Quest3","GLOBAL",37)~ THEN C0AURA2P quest3-37
-~Uncle...? Uncle, say something!~ [C0BLANK]
+~叔叔……？叔叔，说话！~ [C0BLANK]
 DO ~SetGlobal("C0AuraBG2Quest3","GLOBAL",38)~
-== C0DEDAL ~Why... why is this...~
-== C0AJUNO ~How do we stop them, uncle? Is this not your doing?!~
-== C0DEDAL ~My master control... they're not responding to it...~
-== C0AGOL02 ~THREATS ANALYZED. WANTED TARGET IS WITHIN RANGE.~
-== C0AGOL02 ~ORIGINAL DIRECTIVE ASSIGNED BY THE OVERSEER WILL NOW BE EXECUTED. ALL PRESENT MUST BE TERMINATED.~
-== C0DEDAL ~Is this... what was intended all along...? You... you foolish...~
-== C0ALUNA ~This—oh, gods damn it! Aura, Juno, get back! That one's coming right at you!~
-== C0DEDAL ~No—!~
+== C0DEDAL ~为什么……为什么这样……~
+== C0AJUNO ~我们怎么停住它们，叔叔？这不都是你做的吗？！~
+== C0DEDAL ~我的主控……它们不响应了……~
+== C0AGOL02 ~威胁已分析。目标在射程内。~
+== C0AGOL02 ~监察官原定指令现将执行。在场者一律清除。~
+== C0DEDAL ~这是……一开始就打算的……？你……你这蠢货……~
+== C0ALUNA ~这——哦，神啊，该死！奥拉、朱诺，退后！那台正朝你们去！~
+== C0DEDAL ~不——！~
 DO ~ClearAllActions()
 StartCutSceneMode()
 StartCutScene("C0ACUT25")~ EXIT
 
 CHAIN IF WEIGHT #-1 ~Global("C0AuraBG2Quest3","GLOBAL",38)~ THEN C0ALUNA quest3-38
-~A—aaah!~ [C0BLANK]
-== C0AURA2P ~UNCLE!~
-== C0AJUNO ~Argh, bollocks! Men, take position and escort everyone out of here, now! We'll regroup with our agents outside and set up a proper defense!~
+~啊——啊啊！~ [C0BLANK]
+== C0AURA2P ~叔叔！~
+== C0AJUNO ~啊，该死！伙计们，就位，把所有人护送出去，快！我们在外头跟探员会合，布置正经防御！~
 DO ~TriggerActivation("Exit3",FALSE)
 AmbientActivate("Animation 1",TRUE)
 ClearAllActions()
@@ -4250,11 +4250,11 @@ StartCutSceneMode()
 StartCutScene("C0ACUT26")~ EXIT
 
 CHAIN IF WEIGHT #-1 ~Global("C0AuraBG2Quest3","GLOBAL",38)~ THEN C0AGNO06 quest3-38-1
-~N... negative, ma'am! The door's suddenly been sealed! We're trapped!~
+~不……不行，女士！门忽然封死了！我们被困住了！~
 DO ~SetGlobal("C0AuraBG2Quest3","GLOBAL",39)~
-== C0AJUNO ~Of all the...! We'll do this the hard way then. <CHARNAME>, we need to bring down these rogue automatons! Protect my sister! Luna, stay clear of the battle! We need you to take care of the wounded once this is over!~
-== C0ALUNA ~I... alright! Be careful!~
-== C0AURA2P ~I'm with you, <CHARNAME>!~
+== C0AJUNO ~真是……！那就硬来。 <CHARNAME>，我们得打倒这些失控的自动机械！护住我妹妹！露娜，别靠近战斗！打完后我们需要你处理伤员！~
+== C0ALUNA ~我……好！当心！~
+== C0AURA2P ~我跟你一起，<CHARNAME>！~
 END
 IF ~NumInPartyLT(6)~ DO ~StartCutSceneMode()
 ActionOverride("Aura Golem 2",SetSequence(SEQ_AWAKE))
@@ -4291,7 +4291,7 @@ ApplySpellRES("c0aqef24",Myself)
 ChangeEnemyAlly(Myself,ALLY)~ EXIT
 
 CHAIN IF WEIGHT #-1 ~Global("C0AuraBG2Quest3","GLOBAL",40)~ THEN C0ALUNA quest3-40
-~Ugh... it's over, finally. What wretched piles of junk...~
+~呃……终于结束了。多可恨的一堆破烂……~
 DO ~SetGlobal("C0AuraBG2Quest3","GLOBAL",41)~
 END
 IF ~Dead("C0Aura")~ EXTERN C0ALUNA quest3-40-dead
@@ -4299,10 +4299,10 @@ IF ~InParty("C0Aura")~ EXTERN C0AURA2J quest3-40-1J
 IF ~!InParty("C0Aura")~ EXTERN C0AURA2P quest3-40-1P
 
 CHAIN C0ALUNA quest3-40-dead
-~Ah—NO! Aura... damn it! This is all my fault!~
+~啊——不！奥拉……该死！这全怪我！~
 DO ~SetGlobal("C0AuraBG2Quest3Resurrection","GLOBAL",1)~
-== C0AJUNO ~Calm yourself, Luna. Remember your training. This is what you studied under the Gondar clerics all these years for. Can you do it?~
-== C0ALUNA ~I... maybe... no, I have to do it. Be quiet and let me try.~
+== C0AJUNO ~冷静，露娜。记得你的训练。你这些年跟贡德祭司学的就是为这个。你行吗？~
+== C0ALUNA ~我……也许……不，我必须做。安静，让我试。~
 DO ~ClearAllActions()
 StartCutSceneMode()
 ForceSpell("C0Aura",CLERIC_RESURRECTION)
@@ -4311,25 +4311,25 @@ StartDialogNoSet(Player1)~ EXIT
 
 CHAIN IF WEIGHT #-1 ~Global("C0AuraBG2Quest3","GLOBAL",41)
 Global("C0AuraBG2Quest3Resurrection","GLOBAL",1)~ THEN C0ALUNA quest3-40-raise
-~Oh... thank you, Lord Gond... I'm so glad...~
+~哦……谢谢你，贡德大人……我真高兴……~
 DO ~SetGlobal("C0AuraBG2Quest3Resurrection","GLOBAL",2)~
-== C0AURA2J IF ~InParty("C0Aura")~ THEN ~Ngh... what happened? I... was I just raised? Is the fighting done?~
-== C0AURA2P IF ~!InParty("C0Aura")~ THEN ~Ngh... what happened? I... was I just raised? Is the fighting done?~
-== C0AJUNO ~Ha... yes, baby sister, it's done. Thank the Wonderbringer you're not, yet.~
+== C0AURA2J IF ~InParty("C0Aura")~ THEN ~呃……出了什么事？我……我是刚被复活的？打完了？~
+== C0AURA2P IF ~!InParty("C0Aura")~ THEN ~呃……出了什么事？我……我是刚被复活的？打完了？~
+== C0AJUNO ~哈……是，小妹妹，打完了。谢奇迹缔造者，你还没死。~
 END
 IF ~InParty("C0Aura")~ EXTERN C0AURA2J quest3-40-1J
 IF ~!InParty("C0Aura")~ EXTERN C0AURA2P quest3-40-1P
 
 CHAIN C0AURA2J quest3-40-1J
-~What... what about uncle Dedalus? He took a hit to protect me... please tell me he's not...~
+~那……那戴达罗斯叔叔呢？他为护我挨了一下……求你别告诉我他……~
 EXTERN C0AJUNO quest3-40-2
 
 CHAIN C0AURA2P quest3-40-1P
-~What... what about uncle Dedalus? He took a hit to protect me... please tell me he's not...~
+~那……那戴达罗斯叔叔呢？他为护我挨了一下……求你别告诉我他……~
 EXTERN C0AJUNO quest3-40-2
 
 CHAIN C0AJUNO quest3-40-2
-~...Luna, let's go have a look.~
+~……露娜，我们去看看。~
 DO ~SetGlobal("C0AuraBG2Quest3","GLOBAL",42)
 StartCutSceneMode()
 ActionOverride("C0ALUNA",MoveToObjectOffset("C0DEDAL",[30.0]))
@@ -4342,11 +4342,11 @@ Wait(2)
 StartDialogNoSet(Player1)~ EXIT
 
 CHAIN IF WEIGHT #-1 ~Global("C0AuraBG2Quest3","GLOBAL",42)~ THEN C0AJUNO quest3-42
-~He's alive. It seems we have a lot to be thankful for today. The blow was severe, but it looks like his special blade took some of the impact and saved his life, barely.~
+~他活着。看来今天我们有许多要感谢的。那一击很重，可看来他特殊的剑分掉了些冲击，勉强救了他的命。~
 DO ~SetGlobal("C0AuraBG2Quest3","GLOBAL",43)~
-== C0ALUNA ~I–I'll take him away for treatment immediately. It looks like the mechanism behind the sealed door has also been deactivated.~
-== C0AJUNO ~Yes, do that, sister. I'll handle the cleaning up of this place. There were active automatons outside as well—there's a good chance they also went berserk like the rest. I just hope I haven't lost too many agents dealing with those.~
-== C0AJUNO ~<CHARNAME>, take a moment to catch your breath and take care of your wounds. We'll be waiting for you outside.~
+== C0ALUNA ~我——我这就带他去治。封死门后的机构看来也已失能。~
+== C0AJUNO ~是，去吧，妹妹。我来处理这地方的善后。外头也有活动着的自动机械——很可能也像其余那些一样失控了。我只希望对付它们时没损失太多探员。~
+== C0AJUNO ~<CHARNAME>，歇口气，处理下你的伤。我们在外头等你。~
 END
 IF ~InParty("C0Aura")~ DO ~ActionOverride("C0AGNO03",EscapeAreaObject("Exit3"))
 ActionOverride("C0AGNO04",EscapeAreaObject("Exit3"))
@@ -4365,142 +4365,142 @@ ActionOverride("C0ALuna",EscapeAreaObject("Exit3"))
 EscapeAreaObject("Exit3")~ EXIT
 
 CHAIN IF WEIGHT #-1 ~Global("C0AuraBG2Quest3","GLOBAL",44)~ THEN C0AJUNO quest3-44
-~My men have secured the workshop and taken care of any hostile automatons still remaining. It looks like we'll all have a chance to breathe again.~
+~我的人已控制工坊，处理掉残余的敌对自动机械。看来我们都能再喘口气了。~
 DO ~SetGlobal("C0AuraBG2Quest3","GLOBAL",45)~
-== C0AJUNO ~The worst is over. Now my biggest problem is going to be the headache that'll come from the report I'll have to write...~
-== C0ALUNA ~...~
-== C0AJUNO ~Don't look at me like that. I'm not going to leave you out of it just from a pitiable look, Luna. But you're a revered Seeker of the church—chances are, you'll get off the lightest out of everyone responsible for this mess.~
-== C0ALUNA ~That... doesn't make me feel any better.~
-== C0AJUNO ~Good. That means you might've finally grown up a little.~
-== C0ALUNA ~What about... all the rest of the workers? They don't deserve to be punished any more than I do. My uncle didn't tell them about the details of this workshop. Most of them weren't aware they were doing anything wrong.~
-== C0AJUNO ~*sigh* There's no chance they won't suffer at least some consequences. Even if they were only following our uncle's instruction, they still knowingly took part in building weapons without the council's approval.~
-== C0AJUNO ~That cannon alone would be enough to start a war if any evidence of it found its way to Amnian authorities. I'm still wondering how I'll even get it transported back to Lantan without anyone finding out. Gods, I don't know what anybody here was thinking. This type of deterrence only works until our enemies make something even more terrifying in retribution.~
-== C0ALUNA ~They only... wanted the best for our homeland.~
-== C0AJUNO ~Well, they'll certainly be expected to do their best at wherever they'll be confined to for the next couple of years. Thankfully, this incident didn't cause any irreversable damage, so that may be the harshest sentence they'll get. We can only guess right now.~
+== C0AJUNO ~最坏的过去了。如今最大的麻烦是我得写那份报告带来的头疼……~
+== C0ALUNA ~……~
+== C0AJUNO ~别那样看我。我不会因为一副可怜相就把你撇出去，露娜。可你是教会受敬重的探求者——很可能在这场烂摊子所有责任人里，你会被判得最轻。~
+== C0ALUNA ~那……没让我好受些。~
+== C0AJUNO ~好。那说明你也许终于长大了一点。~
+== C0ALUNA ~那……其余那些工人呢？他们不该比我多受罚。叔叔没告诉他们这座工坊的细节。多数人并不知道自己在做错事。~
+== C0AJUNO ~*叹气* 他们不可能一点后果都不担。就算他们只是听我叔叔的吩咐，他们仍明知故犯地参与了未经议会批准造武器。~
+== C0AJUNO ~单是那门炮，若有一点证据流到安姆当局手里，就足以挑起战争。我还在想怎么把它运回兰坦而不被人发现。神啊，我不知道这儿的人都在想什么。这种威慑只在敌人造出更可怕的东西报复之前有效。~
+== C0ALUNA ~他们只是……想为故乡做最好的。~
+== C0AJUNO ~嗯，那他们在接下来几年被关的地方，肯定会好好“尽力”。所幸这事没造成不可逆的损害，所以那也许就是最重的判决。眼下只能猜。~
 END
-  ++ ~You sound like you have some sympathy for these workers.~ EXTERN C0AJUNO quest3-44-1
-  ++ ~They could've easily caused the very war they were hoping to prevent.~ EXTERN C0AJUNO quest3-44-2
-  ++ ~So what now?~ EXTERN C0AJUNO quest3-44-4
+  ++ ~听来你对这些工人有些同情。~ EXTERN C0AJUNO quest3-44-1
+  ++ ~他们很可能造成他们本想防的那场战争。~ EXTERN C0AJUNO quest3-44-2
+  ++ ~那现在呢？~ EXTERN C0AJUNO quest3-44-4
 
 CHAIN C0AJUNO quest3-44-1
-~Can I really blame them for their intentions? It's not untrue that our nation's security is hanging on by a thinner thread than anyone else suspects. My uncle isn't the only one who has expressed similar concerns.~
+~我真能怪他们的意图吗？我国的安全的确比任何人所猜的都更悬于一线，这并不假。表达类似忧虑的不只我叔叔。~
 EXTERN C0AJUNO quest3-44-3
 
 CHAIN C0AJUNO quest3-44-2
-~There's the irony, wouldn't you say? Not that history is lacking for these sorts of tragic mistakes. But I can't bring myself to blame anyone for this, even though the results could have been catastrophic.~
+~这就是讽刺之处，你不觉得吗？并非历史上缺这类惨错。可我没法怪任何人，尽管结果本可能灾难性。~
 EXTERN C0AJUNO quest3-44-3
 
 CHAIN C0AJUNO quest3-44-3
-~Regardless, I have my duty as an enforcer for the Ayrorch. The Oculus must act for the peace of Lantan, regardless of how we feel personally about it.~
+~不管怎样，我有作为艾罗奇执法者的职责。奥库卢斯必须为兰坦的和平行事，不管我们个人感受如何。~
 EXTERN C0AJUNO quest3-44-4
 
 CHAIN C0AJUNO quest3-44-4
-~I'll have to begin plans for bringing everyone back home, my uncle included. Thank you for all of your help, <CHARNAME>. We could not have avoided even worse casualties without you here, even in the best scenario.~
-== C0AJUNO ~Not to mention... you came here for the sake of my baby sister. Beyond my duties as an officer, my duty to my family is more valuable than anything. I'll be forever grateful.~
+~我得开始计划把所有人带回家，包括我叔叔。谢谢你一切帮助，<CHARNAME>。没你在这儿，就算最好情形，我们也免不了更多伤亡。~
+== C0AJUNO ~更别说……你来是为我小妹妹。除了军官的职责，我对家族的责任比什么都珍贵。我永远感激。~
 END
-  ++ ~You don't need to thank me. I was merely helping a close companion.~ EXTERN C0AJUNO quest3-44-5
-  ++ ~I don't suppose the gratitude comes with a reward, would it?~ EXTERN C0AJUNO quest3-44-6
+  ++ ~不必谢我。我只是帮一位亲近的同伴。~ EXTERN C0AJUNO quest3-44-5
+  ++ ~我猜这份感激不会附带报酬吧？~ EXTERN C0AJUNO quest3-44-6
 
 CHAIN C0AJUNO quest3-44-5
-~My sister is blessed to find such a dependable friend. I must admit, I was not originally enthusiastic about her decision to journey away without my protection, yet... seeing what she has gained tells me it was for the best, after all. I can see she's grown much under your leadership.~
-== C0AJUNO IF ~Global("C0AuraRomanceActive","GLOBAL",2)~ THEN ~Perhaps it is more than friendship that she has gained, as well... I hope you'll always be at her side for when she needs you.~
-== C0AURA2J IF ~Global("C0AuraRomanceActive","GLOBAL",2) InParty("C0Aura")~ THEN  ~J–Juno... I'm right here, you know. Don't you think you're embarrassing me a little?~
-== C0AURA2P IF ~Global("C0AuraRomanceActive","GLOBAL",2) !InParty("C0Aura")~ THEN  ~J–Juno... I'm right here, you know. Don't you think you're embarrassing me a little?~
-== C0AJUNO IF ~Global("C0AuraRomanceActive","GLOBAL",2)~ THEN ~Haha... true enough. But I expect to hear everything from your own mouth in the future.~
-== C0AJUNO ~I'll tell my mother and father all of your heroism here once I return to Lantan, <CHARNAME>. You'll forever be a friend to the Glimmershine clan, and you will always be welcome at our door, should you see fit to come to our homeland.~
-== C0ALUNA ~Thank you. For everything.~
+~我妹妹有幸找到这样可靠的朋友。我得承认，我起初并不热衷她离开我的保护去远行，可……看她所得，我知道那到底是最好的。我看得出在你带领下她长进很大。~
+== C0AJUNO IF ~Global("C0AuraRomanceActive","GLOBAL",2)~ THEN ~也许她所得的不止友谊……我希望她需要你时，你总在她身边。~
+== C0AURA2J IF ~Global("C0AuraRomanceActive","GLOBAL",2) InParty("C0Aura")~ THEN  ~朱——朱诺……我就在这儿呢。你不觉得有点让我难为情吗？~
+== C0AURA2P IF ~Global("C0AuraRomanceActive","GLOBAL",2) !InParty("C0Aura")~ THEN  ~朱——朱诺……我就在这儿呢。你不觉得有点让我难为情吗？~
+== C0AJUNO IF ~Global("C0AuraRomanceActive","GLOBAL",2)~ THEN ~哈哈……说得也是。不过我指望将来从你自己口中听到这些。~
+== C0AJUNO ~我回兰坦后会把你在此的英勇全告诉我父母，<CHARNAME>。你永远是格利默夏恩一族的朋友；你若愿意来我们故乡，我们家门永远为你开。~
+== C0ALUNA ~谢谢你。为这一切。~
 END
 IF ~InParty("C0AURA")~ EXTERN C0AURA2J quest3-44-7j
 IF ~!InParty("C0AURA")~ EXTERN C0AURA2P quest3-44-7p
 
 CHAIN C0AJUNO quest3-44-6
-~It is not my place to offer a reward, but I cannot deny you deserve something more substantial here. I will try to arrange for something once we have finished dealing with this workshop. For now, allow me to fulfill my role as an eldest sibling.~
+~轮不到我提供报酬，可我不能否认你该得些更实在的东西。等我们处理完这工坊，我会设法安排。眼下，让我尽长姐的本分。~
 EXTERN C0AJUNO quest3-44-5
 
 CHAIN C0AURA2J quest3-44-7j
-~By the way... what about uncle Dedalus? What's going to happen to him once he returns home?~
+~顺便……戴达罗斯叔叔呢？他回故乡后会怎样？~
 EXTERN C0AJUNO quest3-44-8
 
 CHAIN C0AURA2P quest3-44-7p
-~By the way... what about uncle Dedalus? What's going to happen to him once he returns home?~
+~顺便……戴达罗斯叔叔呢？他回故乡后会怎样？~
 EXTERN C0AJUNO quest3-44-8
 
 CHAIN C0AJUNO quest3-44-8
-~...~
-== C0ALUNA ~...~
-== C0AJUNO ~There's no way to put it gently. Our uncle's actions go against the laws set by the Ayrorch. Even if his intention was not to seize power or cause chaos in an outside nation, the councilors will not look kindly upon him. And I know him well enough to know he will not try to understate the scope of his actions.~
-== C0AJUNO ~His sentence will be indefinite confinement, without any doubt... if he's fortunate, and the Ayrar show sympathy to him, he'll be able to at least spend it in the comfort of his home. If not... he'll be sent to Poenitens.~
-== C0AURA2J IF ~InParty("C0Aura")~ THEN  ~No... not there...~
-== C0AURA2P IF ~!InParty("C0Aura")~ THEN  ~No... not there...~
-== C0AJUNO ~I can't say for certain what it will be. Perhaps father may be able to say something in his defense... though considering his current status as a candidate for the council, it would be better if he does not. And Luna cannot speak for him under the Gondar church, given that she's been personally involved as well.~
-== C0ALUNA ~...I'm such a fool. If I had just tried to talk him down instead of supporting him...~
-== C0AJUNO ~What's done is done. We'll just have to try and make the best of things. Uncle is not the most popular among the Lantanna, given his role as Head Artificer of weapons invention, but there are still many high-ranking craftmasters who respect him. There might still be hope should a few of them speak up.~
-== C0AURA2J IF ~InParty("C0Aura")~ THEN  ~...Has he woken up yet?~
-== C0AURA2P IF ~!InParty("C0Aura")~ THEN  ~...Has he woken up yet?~
-== C0ALUNA ~Yes, not too long ago. I've treated his injury as best I can. He can't walk for long, but the two of us have had a chance to talk with him.~
-== C0AJUNO ~If you want to say a few words to him as well before we take him back to Lantan, you'll have a chance.~
-== C0AJUNO ~That is, assuming the fact that you won't be returning to the homeland with us any time soon.~
-== C0AURA2J IF ~InParty("C0Aura")~ THEN  ~I...~
-== C0AURA2P IF ~!InParty("C0Aura")~ THEN  ~I...~
-== C0AJUNO ~Did I guess correctly?~
-== C0AURA2J IF ~InParty("C0Aura")~ THEN  ~...Mhm.~
-== C0AURA2P IF ~!InParty("C0Aura")~ THEN  ~...Mhm.~
-== C0AJUNO ~Haha. You might have grown, Aura, but I can still read your face like a book as when you were still a little girl. Don't worry. I know you're doing what you believe you need to.~
-== C0AJUNO ~If I didn't have such an important mission at hand, I'd go with you, but I can tell that <CHARNAME> will keep you safe.~
-== C0ALUNA ~Right. We'll sort out the problems at home. Just don't spend another six years out here, or mother and father will really start to worry.~
-== C0AURA2J IF ~InParty("C0Aura")~ THEN  ~Hehe... I know. Send them my love, will you, Luna?~
-== C0AURA2P IF ~!InParty("C0Aura")~ THEN  ~Hehe... I know. Send them my love, will you, Luna?~
-== C0ALUNA ~Yes, I'm sure they'll be delighted to receive it.~
-== C0AJUNO ~*ahem!*~
-== C0ALUNA ~Th–that is to say... I'll be sure to, little sister. And despite what's happened... I'm happy to see you again.~
-== C0AJUNO ~Now, don't be too hasty with the farewells. We'll still be here for a while—it's going to take some time to sort out all the things in this workshop, after all. If you ever need anything, or you just miss your loving sisters, don't be shy to come back and say hello.~
-== C0AJUNO ~And that goes for you too, <CHARNAME>.~
+~……~
+== C0ALUNA ~……~
+== C0AJUNO ~没法说得委婉。叔叔的作为违背艾罗奇定的律法。就算他本意不是夺权或在外邦制造混乱，议员们也不会宽待他。而我太了解他，知道他不会试图轻描淡写自己的作为。~
+== C0AJUNO ~他的判决无疑是不定期的拘禁……若他运气好、艾拉们同情他，至少能在自己家中舒适地服刑。若不然……他会被送往忏悔圣所。~
+== C0AURA2J IF ~InParty("C0Aura")~ THEN  ~不……不要那儿……~
+== C0AURA2P IF ~!InParty("C0Aura")~ THEN  ~不……不要那儿……~
+== C0AJUNO ~我不能确定会是怎样。也许父亲能为他辩护几句……可考虑到他如今是议会候选人，最好不要。而露娜身为贡德教会的人也不能替他说话，因为她自己也牵涉其中。~
+== C0ALUNA ~……我真蠢。若我当初劝住他而不是支持他……~
+== C0AJUNO ~事已如此。我们只能尽力往好处办。叔叔身为军械发明首席奇械师，在兰坦人中不算最受欢迎，可仍有不少高位匠师敬重他。若有几位开口，也许仍有希望。~
+== C0AURA2J IF ~InParty("C0Aura")~ THEN  ~……他醒了吗？~
+== C0AURA2P IF ~!InParty("C0Aura")~ THEN  ~……他醒了吗？~
+== C0ALUNA ~是，不久前醒了。我尽力治了他的伤。他走不久，可我们俩已有机会跟他谈了谈。~
+== C0AJUNO ~你若想在我们带他回兰坦前也跟他说几句，有机会。~
+== C0AJUNO ~前提是你不会很快跟我们回故乡。~
+== C0AURA2J IF ~InParty("C0Aura")~ THEN  ~我……~
+== C0AURA2P IF ~!InParty("C0Aura")~ THEN  ~我……~
+== C0AJUNO ~我猜得对吗？~
+== C0AURA2J IF ~InParty("C0Aura")~ THEN  ~……嗯。~
+== C0AURA2P IF ~!InParty("C0Aura")~ THEN  ~……嗯。~
+== C0AJUNO ~哈哈。你也许长大了，奥拉，可我还是能像你小时候一样把你的脸当书读。别担心。我知道你在做你认为必须做的事。~
+== C0AJUNO ~我手上没有这么要紧的任务，就会跟你去，可我看得出<CHARNAME>会护你平安。~
+== C0ALUNA ~对。家里的事我们来理。只是别再在外头待六年，不然父母真会开始担心。~
+== C0AURA2J IF ~InParty("C0Aura")~ THEN  ~嘿嘿……我知道。替我向他们问好，好吗，露娜？~
+== C0AURA2P IF ~!InParty("C0Aura")~ THEN  ~嘿嘿……我知道。替我向他们问好，好吗，露娜？~
+== C0ALUNA ~好，我确定他们收到会很高兴。~
+== C0AJUNO ~*咳！*~
+== C0ALUNA ~那——那就是说……我一定带到，小妹妹。而且不管出了什么事……我很高兴再见到你。~
+== C0AJUNO ~现在，别急着道别。我们还会在这儿一阵——毕竟理清这工坊里的一切得花些时间。你若需要什么，或只是想念你亲爱的姐姐们，别不好意思回来说声好。~
+== C0AJUNO ~这话对你也一样，<CHARNAME>。~
 END
-  ++ ~I'll remember that.~ EXTERN C0AJUNO quest3-44-9
-  + ~InParty("C0Aura")~ + ~Aura, don't you want to stay for a while longer?~ EXTERN C0AURA2J quest3-44-10
-  ++ ~We need to go. There's still our own work to be done.~ EXTERN C0AJUNO quest3-44-9
+  ++ ~我记着。~ EXTERN C0AJUNO quest3-44-9
+  + ~InParty("C0Aura")~ + ~奥拉，你不想再多留一会儿？~ EXTERN C0AURA2J quest3-44-10
+  ++ ~我们得走了。还有我们自己的事要做。~ EXTERN C0AJUNO quest3-44-9
 
 CHAIN C0AJUNO quest3-44-9
-~Oh, and before I forget... I have something for each of you. A gift for our cooperation and newly forged friendship, <CHARNAME>... and something for my sister, too, to make up for the years of birthdays and celebrations we've missed.~
+~哦，趁我还没忘……我给你们每人都有东西。为我们的合作与新结的友谊，<CHARNAME>……也有给我妹妹的，补上我们错过的那些生日和庆祝。~
 DO ~GiveItemCreate("C0AAMU1",Player1,1,0,0) GiveItemCreate("C0AMISC8","C0Aura",1,0,0)~
-== C0AURA2J IF ~InParty("C0Aura")~ THEN  ~Thank you, Juno... take care of yourselves here, and on the way back. You too, Luna. I love you both.~
-== C0AURA2P IF ~!InParty("C0Aura")~ THEN  ~Thank you, Juno... take care of yourselves here, and on the way back. You too, Luna. I love you both.~
-== C0ALUNA ~Don't worry about us. We're the ones who should be worried.~
+== C0AURA2J IF ~InParty("C0Aura")~ THEN  ~谢谢你，朱诺……你们在这儿和回去路上都照顾好自己。你也是，露娜。我爱你们俩。~
+== C0AURA2P IF ~!InParty("C0Aura")~ THEN  ~谢谢你，朱诺……你们在这儿和回去路上都照顾好自己。你也是，露娜。我爱你们俩。~
+== C0ALUNA ~别担心我们。该担心的是我们才对。~
 DO ~AddJournalEntry(%Quest3_Entry_4%,QUEST_DONE) AddExperienceParty(60000)~
-== C0AJUNO ~Good luck, <CHARNAME>. Keep my little sister safe. She's a treasure to Lantan, to her people... and to us, more than anything. May Gond's blessing be with you.~
+== C0AJUNO ~祝你好运，<CHARNAME>。护好我小妹妹。她是兰坦的珍宝、她族人的珍宝……更是我们的，胜过一切。愿贡德的祝福与你同在。~
 END
 IF ~!InParty("C0Aura")~ DO ~ActionOverride("C0Aura",JoinParty())~ EXIT
 IF ~~ EXIT
 
 CHAIN C0AURA2J quest3-44-10
-~<CHARNAME>, you should know me better by now. My sisters will be fine here, and your situation's much more dire. You should be happier to rely on me to help you when you need it, don't you think?~
-== C0AJUNO ~You really have grown.~
+~<CHARNAME>，你该更了解我了。我姐姐们在这儿会没事，你的处境糟得多。你该更乐意在需要时依靠我帮忙，你不觉得吗？~
+== C0AJUNO ~你真的长大了。~
 EXTERN C0AJUNO quest3-44-9
 
 CHAIN IF WEIGHT #-1 ~AreaCheck("C0AU05")
 Global("C0AuraBG2Quest3SpawnGuards","C0AU05",1)~ THEN C0AGNO03 quest3-45-uncle
-~Dame Aurelia. Are you here to speak with master Dedalus?~
+~奥瑞莉亚女士。你是来跟戴达罗斯大人说话的吗？~
 DO ~SetGlobal("C0AuraBG2Quest3SpawnGuards","C0AU05",2)~
-== C0AURA2J ~My uncle's in there? Is he alright?~
-== C0AGNO03 ~He has woken and is quite coherent. As he has shown no intentions of struggle, we've left him alone inside, by the captain's request. But you are permitted to see him, should you desire.~
-== C0AURA2J ~...~
+== C0AURA2J ~我叔叔在里面？他没事吧？~
+== C0AGNO03 ~他醒了，神志相当清楚。既然他没有挣扎的意思，照队长的要求，我们让他独自留在里头。可你若愿意，准许你去见他。~
+== C0AURA2J ~……~
 END
-  ++ ~Go ahead, Aura. I'll be with you.~ EXTERN C0AURA2J quest3-45-uncle-1
-  ++ ~Do you want to speak to him alone?~ EXTERN C0AURA2J quest3-45-uncle-2
+  ++ ~去吧，奥拉。我陪着你。~ EXTERN C0AURA2J quest3-45-uncle-1
+  ++ ~你想单独跟他谈？~ EXTERN C0AURA2J quest3-45-uncle-2
 
 CHAIN C0AURA2J quest3-45-uncle-1
-~Let's go inside.~
+~我们进去吧。~
 DO ~SetGlobal("C0AuraBG2Quest3PostTalk","GLOBAL",1)
 TriggerActivation("Exit1",TRUE)~ EXIT
 
 CHAIN C0AURA2J quest3-45-uncle-2
-~If you don't mind, <CHARNAME>... I'd rather you came with me.~
+~你若不在意，<CHARNAME>……我更希望你也跟我一起。~
 EXTERN C0AURA2J quest3-45-uncle-1
 
 CHAIN IF WEIGHT #-1 ~Global("C0AuraBG2Quest3PostTalk","GLOBAL",2)~ THEN C0DEDAL quest3-45-uncle2
-~...~
+~……~
 DO ~SetGlobal("C0AuraBG2Quest3PostTalk","GLOBAL",3)~
-== C0AURA2J ~Uncle...~
+== C0AURA2J ~叔叔……~
 DO ~StartCutSceneMode()
 ActionOverride("C0DEDAL",Face(NE))
 Wait(1)
@@ -4509,46 +4509,46 @@ Wait(1)
 ActionOverride("C0DEDAL",StartDialogNoSet(Player1))~ EXIT
 
 CHAIN IF WEIGHT #-1 ~Global("C0AuraBG2Quest3PostTalk","GLOBAL",3)~ THEN C0DEDAL quest3-45-uncle3
-~So you've come.~
+~你来了。~
 DO ~SetGlobal("C0AuraBG2Quest3PostTalk","GLOBAL",4)~
-== C0AURA2J ~I... I felt like I should see you. This might be the last time for a long while... since you'll be going home soon.~
-== C0DEDAL ~Though it will not be a pleasant homecoming. By reason, it would have been better for you not to meet me, in my current situation. You are standing before one who will be remembered as one of Lantan's greatest heretics and traitors.~
-== C0AURA2J ~...I can't deny that I feel hurt, uncle. You once taught me that no invention of Lantan should ever be primarily viewed as a weapon. To believe so would be to betray our identities as Lantanna... that's why, when I saw all of this, and what you were planning, I couldn't believe my eyes.~
-== C0AURA2J ~I don't believe your actions were that of betrayal. I know, in your own way, your zeal in protecting our home has never changed.~
-== C0AURA2J ~However... uncle, I still believe your methods are ultimately wrong. Even should you have succeeded, and ensured Lantan would never be threatened by outside ambition and greed... the cost being paid would be the Lantanna's current way of peace, which has been the foundation of our principles for as long as we have existed.~
-== C0DEDAL ~Yes... perhaps you are right. Succeed or fail, I would be no less of a traitor regardless, for I have committed a far greater sin than the simple endangerment of the homeland. I have betrayed the lasting endeavors of our people, the desire to further our knowledge to move the realms forward... and I have known that since the beginning, from the day I tainted the purity of our arts with blood, in my belief that I would empower us in return.~
+== C0AURA2J ~我……我觉得我该来看看你。这也许是往后很久最后一次……因为你很快就要回家了。~
+== C0DEDAL ~虽说那不会是愉快的归乡。按理说，在我这处境，你不见我更好。你面前站着的，是日后会被记作兰坦最大异端与叛徒之一的人。~
+== C0AURA2J ~……我不能否认我难过，叔叔。你曾教我，兰坦的任何发明都不该首先被当作武器。若信如此，就是背叛我们身为兰坦人的身份……正因如此，当我看见这一切、看见你的计划，我不敢信自己的眼睛。~
+== C0AURA2J ~我不信你的作为是背叛。我知道，以你自己的方式，你护家的热忱从没变过。~
+== C0AURA2J ~可是……叔叔，我仍认为你的法子终究错了。就算你成功，确保兰坦永不受外界野心与贪婪威胁……代价将是兰坦人如今的和平之道，而那是我们立国以来原则的根基。~
+== C0DEDAL ~是……也许你说得对。成或败，我终究一样是叛徒，因为我犯的罪远比单纯危及故乡更重。我背叛了我们族人长久的努力，那推进知识、推动诸国度前行的愿望……而我从一开始就知道，从我以血玷污我们技艺之纯的那天就知道，我当时还自信那会反过来壮大我们。~
 END
-  ++ ~If you knew your actions was opposed to everything Lantan stood for, then why did you stand by them?~ EXTERN C0DEDAL quest3-45-uncle3-1
-  ++ ~You may have had the best intentions, but your methods have hurt others, and the people who love and trust you, more than you know.~ EXTERN C0DEDAL quest3-45-uncle3-2
-  ++ ~It's a little too late to regret your actions now.~ EXTERN C0DEDAL quest3-45-uncle3-3
+  ++ ~你既知道你的作为与兰坦所代表的一切相悖，为什么还坚持？~ EXTERN C0DEDAL quest3-45-uncle3-1
+  ++ ~你也许本意最好，可你的手段伤了许多人，也伤了许多爱你、信你的人，比你知的多得多。~ EXTERN C0DEDAL quest3-45-uncle3-2
+  ++ ~现在后悔你的作为，有点太迟了。~ EXTERN C0DEDAL quest3-45-uncle3-3
 
 CHAIN C0DEDAL quest3-45-uncle3-1
-~I believed that if someone did not act, then inevitably we would lose something far, far greater. No matter what sacrifices I had to make, of myself, of our people's ways, it would have been worth it to prevent something worse. You may understand one day... even if you still may not agree with it.~
+~我相信若无人行动，我们终将失去远为更多的东西。不管我得牺牲什么——我自己、我们族人的行事之道——只要能防住更糟的事，就值得。也许有一天你会明白……哪怕你仍不赞同。~
 EXTERN C0DEDAL quest3-45-uncle3-3
 
 CHAIN C0DEDAL quest3-45-uncle3-2
-~Yes... that, I cannot deny. In believing I was doing what my people dared not to in order to keep us safe, I was prepared to create an insurmountable rift between myself and my family. Among all my doubts, that was the greatest.~
+~是……这我不能否认。我相信自己在做族人不敢做之事以保我们平安时，已准备好在我跟家人之间造出无法弥合的裂痕。在我所有疑虑中，这是最大的。~
 EXTERN C0DEDAL quest3-45-uncle3-3
 
 CHAIN C0DEDAL quest3-45-uncle3-3
-~I do not regret the sacrifices I have made to ensure our home remains a haven for our innocent and idealistic people. But I owe an apology for what my actions will mean for your family, Aurelia. It is perhaps for the best that you and I do not share the same family name, for it may lessen the scrutiny that you and Kairos may face once I am sentenced.~
-== C0AURA2J ~Uncle, you... you're family too. I know father will do everything he can to make sure your judgment is not too harsh.~
-== C0DEDAL ~And it will cost him his chance of a seat on the council. No, I cannot allow that. My plan has already failed. If he is given a chance to stand at a position to guide Lantan, then there will still be hope for a greater future. That is more important than my fate.~
-== C0AURA2J ~But—~
-== C0DEDAL ~Make no mistake, Aurelia. Regardless of where the Ayrorch sentence me to, so long as I may breathe and act, my desire to serve the nation to my utmost ability will not change. I owe that to the land, the people, to you... and to the souls of my father, mother, and Glaphyra.~
-== C0AURA2J ~My aunt... would be sad to see the position you are in now.~
-== C0DEDAL ~She would never have agreed to this... any of this. That, I know. But it is because of that, the gentle nature of those such as she, and those others who we have lost due to the ambitions of those impure of heart... that, which I could no longer endure.~
-== C0DEDAL ~I suppose that, too, is my failing. My sense of duty, which I have long considered my greatest virtue, had become my fatal weakness. And it had made me easy to manipulate.~
+~我不后悔为确保故乡仍是我们天真理想族人的乐土而做的牺牲。可我欠一个道歉，为我作为将对你家意味着什么，奥瑞莉亚。你我不同姓也许是最好，因为那也许能减轻你与凯罗斯在我被判后所受的审视。~
+== C0AURA2J ~叔叔，你……你也是家人。我知道父亲会尽全力确保你的判决不太重。~
+== C0DEDAL ~而那会让他失去议会席位的机会。不，我不能允许。我的计划已失败。若他有机会站在引导兰坦的位置上，那更大的未来就仍有希望。那比我的命运重要。~
+== C0AURA2J ~可是——~
+== C0DEDAL ~别误会，奥瑞莉亚。不管艾罗奇判我去哪儿，只要我还能呼吸、还能行动，我竭尽全力服务国家的愿望就不会变。我欠那片土地、那些人、欠你……也欠我父亲、母亲和格拉菲拉的在天之灵。~
+== C0AURA2J ~我姑母……看到你如今的处境会难过。~
+== C0DEDAL ~她绝不会赞同这事……这一整套。这我知道。可正因如此，正因像她这样的人、以及那些因心怀不纯者的野心而失去的人那种温柔心性……我再也受不了了。~
+== C0DEDAL ~我想那也是我的缺陷。我长久视为最大美德的职责感，成了我致命的弱点。而它让我变得易于被人操纵。~
 END
-  ++ ~Are you now implying someone manipulated you, too?~ EXTERN C0DEDAL quest3-45-uncle3-4
-  ++ ~What are you talking about now?~ EXTERN C0DEDAL quest3-45-uncle3-5
+  ++ ~你现在是在暗示也有人操纵了你？~ EXTERN C0DEDAL quest3-45-uncle3-4
+  ++ ~你在说什么？~ EXTERN C0DEDAL quest3-45-uncle3-5
 
 CHAIN C0DEDAL quest3-45-uncle3-4
-~Oh, I am not so naive as to try and absolve myself of any blame, <CHARNAME>. I was convinced of this path, and I must accept my role in it.~
+~哦，我没那么天真，不会试图替自己开脱，<CHARNAME>。我确曾深信这条路，我必须接受自己在其中的角色。~
 EXTERN C0DEDAL quest3-45-uncle3-5
 
 CHAIN C0DEDAL quest3-45-uncle3-5
-~...~
+~……~
 DO ~StartCutSceneMode()
 Wait(2)
 Face(NW)
@@ -4560,140 +4560,140 @@ Wait(1)
 StartDialogNoSet(Player1)~ EXIT
 /*
 CHAIN C0DEDAL quest3-45-uncle3-6
-~Regardless of any circumstance, the fault ultimately lies with me. That is the truth. I am only wondering if I ever held as much control as I believed I did. Looking back at how quickly those creations turned against me, it seems my defense was more fragile than I could have ever thought.~
-== C0AURA2J ~Uncle... who is the one really behind all this? When the automatons attacked us, I was already suspecting... it was more like they were following someone else's predetermined command, rather than truly losing control. And all this time, you've spoken of them as though they are not truly yours.~
-== C0DEDAL ~...~
-== C0DEDAL ~You even noticed that. I have few secrets left to keep, it seems.~
-== C0AURA2J ~Will you tell me, uncle? No matter what, I won't believe that you came to believe on your own that the best way to protect Lantan was through this kind of oppressive method.~
-== C0AURA2J ~That isn't your nature, even despite all the years you've spent building weapons of destruction. Somebody must have convinced you.~
-== C0DEDAL ~I had hoped to spare you this particular knowledge, Aurelia. If I tell you here, your perspective will be tainted by bias and subjectivity, and you will not understand the truth, even though you may hear it. There is more to this than you, or even I myself, can know of.~
+~不管什么情形，过错终究在我。这是真相。我只是在想，我是否真有过我自以为的那么多掌控。回想那些造物多快就反噬我，看来我的防御比我想的脆弱得多。~
+== C0AURA2J ~叔叔……这事真正背后是谁？自动机械袭击我们时，我就已在怀疑……那更像它们在执行别人预设的命令，而非真失控。而且你一直谈它们，像它们并非真属于你。~
+== C0DEDAL ~……~
+== C0DEDAL ~连这你都注意到了。看来我剩下的秘密不多了。~
+== C0AURA2J ~你会告诉我吗，叔叔？不管怎样，我都不信你是自己得出“保护兰坦最好的方式是这种压迫手段”的结论。~
+== C0AURA2J ~那不是你的本性，哪怕你造了这么多年毁灭性武器。一定有人说服了你。~
+== C0DEDAL ~我本想瞒住你这件事，奥瑞莉亚。我若在此告诉你，你的看法会被偏见与主观污染，就算听见真相，你也不会理解。这事背后有你我甚至都无法知晓的东西。~
 EXTERN C0DEDAL quest3-45-uncle3-5
 */
 CHAIN IF WEIGHT #-1 ~Global("C0AuraBG2Quest3PostTalk","GLOBAL",4)~ THEN C0DEDAL quest3-45-uncle4
-~I will give this to you.~
+~这个我给你。~
 DO ~SetGlobal("C0AuraBG2Quest3PostTalk","GLOBAL",5)~
-== C0AURA2J ~This is... your sword, uncle. The one you've carried with you all these years. I can't take this!~
+== C0AURA2J ~这是……你的剑，叔叔。你这些年随身带着的那把。我不能收！~
 DO ~GiveItemCreate("C0AUSS01","C0AURA",1,0,0)~
-== C0DEDAL ~It will no longer be mine to wield regardless. My duty from hereon will be within the confines of my home, if not Poenitens. My time as our nation's blade is done... and perhaps a blade has never been what we needed.~
-== C0DEDAL ~From now on, as a true artificer of Lantan, it is your place to decide what purpose this tool will serve.~
-/*== C0AURA2J ~I...~
-== C0DEDAL ~There is more. Remove the stone from the pommel.~
+== C0DEDAL ~反正它也不再由我执掌。从今往后我的职责会在我家的范围内，若非忏悔圣所的话。我作为我国之刃的日子结束了……也许我们需要的从来就不是一把刃。~
+== C0DEDAL ~从今往后，身为兰坦真正的奇械师，该由你决定这件工具将服务于什么目的。~
+/*== C0AURA2J ~我……~
+== C0DEDAL ~还有。把剑柄尾端的石头取下来。~
 DO ~GiveItemCreate("C0AMISC9","C0AURA",1,0,0)~
-== C0AURA2J ~This is... what is it, uncle?~
-== C0DEDAL ~Consider it... a key, of sorts. When you return to the homeland, remember to keep it close at hand, and you will find its purpose soon enough. It will guide you to the remnants of the Fourth Workshop. There you may... understand, a little.~
-== C0AURA2J ~The Fourth...? The lost workshop, which has been removed from our texts and is never spoken of... uncle, what do you know of it?~
-== C0DEDAL ~It has been forgotten, and not without reason. The few Lantanna who remember it view it as a graveyard of sins... but to me, it is... you may consider it once Glaphyra's sacred garden.~
-== C0AURA2J ~Aunt Glaphyra... was involved with the Fourth Workshop? Uncle, what...~
-== C0DEDAL ~As I said, you may understand once you find it. It will explain more than my words alone could.~*/
-== C0AURA2J ~...Thank you, uncle.~
-== C0DEDAL ~For now, fulfill what duty you believe to be the most correct. If that is to support <CHARNAME>, then do not allow this knowledge to make you hesitate.~
-== C0AURA2J ~I know.~
-== C0DEDAL ~Very good. Go, now... I feel the need for rest. Luna has tended to my wounds, but a proper recovery will still take time. Though the Wonderbringer may condemn me, my prayers in His name will be with you on your journey.~
-== C0AURA2J ~I wish the best for you too, uncle. And before we go, I just wanted to say one last thing... thank you. For protecting me in the end.~
-== C0DEDAL ~Farewell, Aurelia.~
+== C0AURA2J ~这是……这是什么，叔叔？~
+== C0DEDAL ~把它当作……一把钥匙之类。你回故乡后，记得随身带着它，很快你就会发现它的用处。它会引你到第四工坊的遗迹。在那儿你也许能……明白一点。~
+== C0AURA2J ~第四……？那座失落的工坊，从我们典籍里删去、没人提起的……叔叔，你知道它什么？~
+== C0DEDAL ~它被遗忘，并非没有原因。记得它的少数兰坦人视其为罪恶的坟场……可对我来说，那是……你可以当作格拉菲拉昔日的圣园。~
+== C0AURA2J ~格拉菲拉姑母……跟第四工坊有关？叔叔，什么……~
+== C0DEDAL ~我说过，你找到它后也许会明白。它能解释的，比我的话多。~*/
+== C0AURA2J ~……谢谢你，叔叔。~
+== C0DEDAL ~眼下，去完成你认为最正确的职责。若那是支持<CHARNAME>，那就别让这些知识让你犹豫。~
+== C0AURA2J ~我知道。~
+== C0DEDAL ~很好。去吧……我觉得需要休息了。露娜已处理过我的伤，可正经复原还得时间。就算奇迹缔造者也许会责我，我以祂之名的祈祷仍会伴你旅途。~
+== C0AURA2J ~我也祝你好，叔叔。走之前，我只想说最后一件事……谢谢你。谢谢你到最后还护着我。~
+== C0DEDAL ~再会，奥瑞莉亚。~
 DO ~ClearAllActions()
 StartCutSceneMode()
 StartCutScene("c0acut31")~ EXIT
 
 CHAIN IF WEIGHT #-1 ~Global("C0AuraBG2Quest3PostTalk","GLOBAL",5)~ THEN C0AURA2J quest3-45-uncle5
-~Well... that's that, I suppose. Who knows how long it'll be before I see him again.~
+~那么……就这样吧，我想。不知要过多久才能再见他。~
 DO ~AddJournalEntry(%Quest3_Entry_5%,QUEST_DONE) SetGlobal("C0AuraBG2Quest3PostTalk","GLOBAL",6)~
 END
-  ++ ~Are you okay, Aura?~ EXTERN C0AURA2J quest3-45-uncle5-1
-  ++ ~He seemed to be handling things well, all in all.~ EXTERN C0AURA2J quest3-45-uncle5-2
-  ++ ~So what now?~ EXTERN C0AURA2J quest3-45-uncle5-3
+  ++ ~你没事吧，奥拉？~ EXTERN C0AURA2J quest3-45-uncle5-1
+  ++ ~总的来说，他好像处理得不错。~ EXTERN C0AURA2J quest3-45-uncle5-2
+  ++ ~那现在呢？~ EXTERN C0AURA2J quest3-45-uncle5-3
 
 CHAIN C0AURA2J quest3-45-uncle5-1
-~I'm alright, <CHARNAME>. To be honest, I'm relieved... I was worried the physical and mental toll on my uncle after what happened would affect him more... but he's as stable and resolute as I've always known him.~
+~我没事，<CHARNAME>。说实话，我松了口气……我原担心事发后身心的损耗对叔叔影响更大……可他还像我历来所知的那样沉稳坚定。~
 EXTERN C0AURA2J quest3-45-uncle5-3
 
 CHAIN C0AURA2J quest3-45-uncle5-2
-~I agree. He's faring better after what happened than I assumed. Even though I can't help but regret his position... I'm still at least a little relieved.~
+~我同意。事发之后他比我预想的过得更好。尽管我忍不住为他处境惋惜……我至少还是稍微安心。~
 EXTERN C0AURA2J quest3-45-uncle5-3
 
 CHAIN C0AURA2J quest3-45-uncle5-3
-//~The last bit of knowledge my uncle gave me concerns me a little... the Fourth Workshop, the lost and forbidden knowledge of my people... if my aunt Glaphyra really has something to do with it, I need to find out the truth someday.~
-~I hope the Ayrorch don't judge him too harshly... I know he cares about our nation, and all of us, as much as anyone if not more. Maybe I can try to speak on his behalf, when I return home...~
-= ~For now, though, your situation is more important, <CHARNAME>. I'll worry about my own problems once I finally make my way home to Lantan. I came to have a last talk with my uncle, I'm satisfied. Let's go.~
+//~叔叔给我的最后那点知识让我有点不安……第四工坊，我们族人失落而被禁的知识……若格拉菲拉姑母真与它有关，我总有一天要查明真相。~
+~我希望艾罗奇别判他太重……我知道他像任何人一样、甚至更在意我们的国家与我们所有人。也许我回家后能试着替他说话……~
+= ~不过眼下，你的处境更重要，<CHARNAME>。等我终于回兰坦，再操心我自己的问题。我来跟叔叔最后谈过，我满足了。我们走吧。~
 EXIT
 
 CHAIN IF WEIGHT #-1 ~Global("C0AuraBG2Quest1","GLOBAL",54)
 Global("C0AuraBG2Quest3","GLOBAL",45)
 Global("C0AuraBG2Quest3MagnusTalk","GLOBAL",0)~ THEN C0AMAGN magnus-quest3
-~I hear Dedalus has been detained by the Hands of Gond. Dear, oh dear... what a terrible shame it is.~
+~我听说戴达罗斯被贡德之手扣下了。哎呀，哎呀……多可惜。~
 DO ~SetGlobal("C0AuraBG2Quest3MagnusTalk","GLOBAL",1)~
 END
-  ++ ~How do you know about that?~ EXTERN C0AMAGN magnus-quest3-1
-  ++ ~You're familiar with Dedalus?~ EXTERN C0AMAGN magnus-quest3-2
+  ++ ~你怎么知道的？~ EXTERN C0AMAGN magnus-quest3-1
+  ++ ~你熟悉戴达罗斯？~ EXTERN C0AMAGN magnus-quest3-2
 
 CHAIN C0AMAGN magnus-quest3-1
-~Reese told me what happened. You helped to do what was right... but still, what a sorry end to this tale.~
+~里斯把经过告诉我了。你帮着做了对的事……可这故事收场终究可惜。~
 EXTERN C0AMAGN magnus-quest3-2
 
 CHAIN C0AMAGN magnus-quest3-2
-~Dedalus was one of my two greatest students, you know. He, and his sister Glaphyra, learned all the fundamentals of my knowledge, and I knew they could use it for great things. It just goes to show that 'great' is not always synonymous with 'good'. Tsk, tsk...~
-= ~Now, with one of my students long gone, and the other no doubt headed for Poenitens... I suppose my legacy will remain only in parchment and ink. No matter... a true inventor must always consider the outcome of their work over their own name.~
+~你知道，戴达罗斯是我两个最出色的学生之一。他和他妹妹格拉菲拉，学了我知识的全部根基，我知道他们能拿它成就伟业。可见“伟大”并不总等于“良善”。啧，啧……~
+= ~如今我一个学生早不在了，另一个无疑要进忏悔圣所……看来我的传承只剩羊皮纸与墨迹了。没关系……真正的发明家该看重作品的结果，而非自己的名字。~
 END
 IF ~InParty("C0Aura") InMyArea("C0Aura")~ EXTERN C0AMAGN magnus-quest3-3
 IF ~OR(2)
 !InParty("C0Aura") !InMyArea("C0Aura")~ EXTERN C0AMAGN magnus-quest3-4
 
 CHAIN C0AMAGN magnus-quest3-3
-~Aurelia, my dear girl... I want you to take this. This is a culmination of my many years of alchemical research... I had other intentions for it, but with my disciples gone, you may be the most suitable to inherit my knowledge. My days of properly mentoring other Lantanna are behind me, but I hope you might consider me a teacher, if only indirectly.~
-== C0AURA2J ~I... thank you, master Magnussen.~
+~奥瑞莉亚，我亲爱的姑娘……我要你收下这个。这是我多年炼金研究的结晶……我本另有打算，可我的门徒不在了，你也许最适合继承我的知识。我正经教导其他兰坦人的日子已过去，可我希望你能把我当老师，哪怕只是间接的。~
+== C0AURA2J ~我……谢谢你，马格努森大师。~
 DO ~GiveItemCreate("c0abook5","C0Aura",1,0,0)~ EXTERN C0AMAGN magnus-quest3-5
 
 CHAIN C0AMAGN magnus-quest3-4
-~<CHARNAME>, my <PRO_GIRLBOY>, when you see young Aurelia again, please give her this. I may no longer be a tutor of Lantan, but I hope my works will never truly be forgotten. With my disciples gone, I will have to hand this knowledge to the most capable inheritor.~
+~<CHARNAME>，我的<PRO_GIRLBOY>，你再见到小奥瑞莉亚时，请把这个给她。我或许不再是兰坦的导师，可我希望我的著作永不被真正遗忘。我的门徒不在了，我得把这知识交给最有能力的继承者。~
 DO ~GiveItemCreate("c0abook5",Player1,1,0,0)~ EXTERN C0AMAGN magnus-quest3-5
 
 CHAIN C0AMAGN magnus-quest3-5
-~Now, then. I must resume my research. So much left to do, and so little time remaining... *cough* I bid you good <DAYNIGHTALL>.~
+~那么，就这样。我得继续研究了。要做的事那么多，剩下的时间那么少……*咳* 愿你有个美好的<DAYNIGHTALL>。~
 EXIT
 
 /*
 INTERJECT MGAPPR02 70 C0AuraBG2AppQuest
-== C0AURA2J IF ~InParty("C0Aura")~ THEN ~Hey, <CHARNAME>? Can I just pull you aside for a moment?~
+== C0AURA2J IF ~InParty("C0Aura")~ THEN ~嘿，<CHARNAME>？能借一步说话吗？~
 END
-  ++ ~Sure. What's on your mind?~ EXTERN C0AURA2J C0AuraBG2AppQuest-1
-  ++ ~Not right now, this is important.~ EXTERN MGAPPR02 71
+  ++ ~当然。你想什么？~ EXTERN C0AURA2J C0AuraBG2AppQuest-1
+  ++ ~现在不行，这事要紧。~ EXTERN MGAPPR02 71
 
 CHAIN C0AURA2J C0AuraBG2AppQuest-1
-~Okay, listen, <CHARNAME>... this is some pretty dangerous work these kids are proposing. I don't think even with how much experience I have making magical items, I could manage it without life-threatening risk.~
-== C0AURA2J ~I know it's tempting, but maybe you should tell them to just quit while they're ahead, you know? It's safer for everyone if you do that.~
+~好，听我说，<CHARNAME>……这些孩子想做的活相当危险。就算以我造魔法物品的经验，我也做不到而不冒生命危险。~
+== C0AURA2J ~我知道很诱人，可也许你该叫他们趁早收手，你懂？那样对大家都安全。~
 END
-  ++ ~You're right. I shouldn't let them try something so dangerous. I'll tell them.~ EXTERN MGAPPR02 71
-  ++ ~Wait, I have another idea. What if you helped them through the creation process?~ EXTERN C0AURA2J C0AuraBG2AppQuest-1
-  ++ ~I want the extra power. They'll just have to take the risk.~ EXTERN C0AURA2J C0AuraBG2AppQuest-2
+  ++ ~你说得对。我不该让他们试这么危险的事。我去告诉他们。~ EXTERN MGAPPR02 71
+  ++ ~等等，我另有主意。要是你帮他们完成制作过程呢？~ EXTERN C0AURA2J C0AuraBG2AppQuest-1
+  ++ ~我要那份额外力量。他们只好担这风险。~ EXTERN C0AURA2J C0AuraBG2AppQuest-2
 
 CHAIN C0AURA2J C0AuraBG2AppQuest-2
-~This is a bad idea, <CHARNAME>... not only can making these sorts of things *kill* people, there's no guarantee they even can finish the item. Please, think this through.~
+~这是坏主意，<CHARNAME>……造这类东西不光可能*弄死*人，也没有保证他们能完成。求你三思。~
 EXTERN MGAPPR02 71
 
 CHAIN C0AURA2J C0AuraBG2AppQuest-1
-~I don't know... even if I helped them, I can't promise they'll finish the work unscathed... and I can't make it for them, either. Although...~
-= ~I... guess I could teach them how to make something else. Something a lot safer, from my own design concepts. It probably wouldn't be as powerful as what's in their books, but if it's unique enough, it could~
+~我不知道……就算我帮他们，我也不能保证他们完工时毫发无伤……我也不能替他们做。不过……~
+= ~我……想我可以教他们造点别的。按我自己的设计概念，造安全得多的东西。它大概不如他们书上那些强，可若够独特，它能~
 END
-  ++ ~What kind of item would you be able to teach them to make?~ EXTERN C0AURA2J C0AuraBG2AppQuest-3
-  ++ ~That won't be necessary. I won't ask them to make anything.~ EXTERN MGAPPR02 71
-  ++ ~If it's not going to be as powerful, I'd rather the apprentices just take the risk.~ EXTERN C0AURA2J C0AuraBG2AppQuest-2
+  ++ ~你能教他们造什么样的东西？~ EXTERN C0AURA2J C0AuraBG2AppQuest-3
+  ++ ~不必了。我不会要他们造任何东西。~ EXTERN MGAPPR02 71
+  ++ ~若不会那么强，我宁愿这些学徒就担风险。~ EXTERN C0AURA2J C0AuraBG2AppQuest-2
 
 CHAIN C0AURA2J C0AuraBG2AppQuest-3
-~Hmm... I'll have to think... I can't say anything for certain right now. I'd need to observe their skills, see what's within reason... and then I'll have to think on what materials would be practical...~
-= ~Well, I can promise you it'd be something useful for an arcanist, at least. And if I get some kind of inspiration, it'll definitely do something you wouldn't expect.~
-= ~I'd have to stay with these kids for a while, though. At least five days, maybe even a week. I can't let them out of my sight for even a moment if we're going to be working with magical items. You'd have to make do without me for that time.~
+~嗯……我得想想……现在我什么都说不准。我得观察他们的本事，看出什么在合理范围内……然后还得琢磨什么材料实用……~
+= ~嗯，至少我能保证它是对奥术师有用的东西。而且我若来点灵感，它肯定会做点你料不到的事。~
+= ~不过得跟这些孩子待一阵。至少五天，也许一星期。既然要弄魔法物品，我一刻都不能让他们离开视线。那段时间你只好没我在。~
 END
-  ++ ~I can live with that. Shall we propose our idea to them now?~ EXTERN MGAPPR02 C0AuraBG2AppQuest-4
-  ++ ~Maybe it'd be easier to just tell them not to make anything.~ EXTERN MGAPPR02 71
-  ++ ~This all seems too complicated. I'll just tell them to stick to their original plans.~ EXTERN C0AURA2J C0AuraBG2AppQuest-2
+  ++ ~我能接受。现在就把我们的主意提给他们？~ EXTERN MGAPPR02 C0AuraBG2AppQuest-4
+  ++ ~也许直接叫他们什么都别造更省事。~ EXTERN MGAPPR02 71
+  ++ ~这看着太复杂。我就叫他们照原计划。~ EXTERN C0AURA2J C0AuraBG2AppQuest-2
 
 CHAIN MGAPPR02 C0AuraBG2AppQuest-4
-~Master <CHARNAME>, might we have your opinion now? You look like you have an idea on your mind.~
+~<CHARNAME>大师，我们现在能听你的意见了吗？看来你心里有主意。~
 END
-  ++ ~I do, in fact. I'd like to introduce you to Aura. She'll be guiding through your next project.~ EXTERN MGAPPR01 C0AuraBG2AppQuest-5
-  ++ ~Listen, you all. I'm going to leave the last part of your lesson to Aura.~
+  ++ ~其实确实有。我想给你们介绍奥拉。她会指导你们下一个项目。~ EXTERN MGAPPR01 C0AuraBG2AppQuest-5
+  ++ ~都听好。你们这课最后一部分，我交给奥拉。~
 
 CHAIN MGAPPR01 C0AuraBG2AppQuest-5
-~Her? I don't know... seems a little undersized to me.~
+~她？我不知道……我看她身量有点小。~
 ==
 */

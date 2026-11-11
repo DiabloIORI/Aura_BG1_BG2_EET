@@ -6,19 +6,19 @@ Range("C0Aura",15)
 !StateCheck("E3Fade",CD_STATE_NOTVALID)
 !StateCheck("C0Aura",CD_STATE_NOTVALID)
 Global("C0AuraE3Fade","GLOBAL",0)~ THEN BE3FADE banter1
-~You're a strange one, Aura, do you know that?~
+~奥拉，你这人真怪，你自己知道吗？~
 DO ~SetGlobal("C0AuraE3Fade","GLOBAL",1)~
-== BC0AURA2 ~It's because of all the contraptions and gear, isn't it? I've heard it a million times. Well, not that many. More like... 8,582 times, as I can recall.~
-== BE3FADE ~No, those I can get used to. They seem pretty damn useful, and I'd filch a couple for my own use if I could make heads or tails of them... er, scratch that. You didn't hear me say anything.~
-== BC0AURA2 ~Note to self: draft some better preventative measures for my tools in case of sticky fingers from friends.~
-== BE3FADE ~Easy, there. What I mean is, you have all these skills a thief would envy, and you don't take advantage of it at all? Now that's what I would call strange.~
-== BC0AURA2 ~Well, I'm not a thief!~
-== BE3FADE ~Oh, come on. You can spot a trap from a mile away, crack locks like you see right through them, and even I'd never want to get on the wrong end of your traps. If you were a Shadow Thief, I'd be jealous of you.~
-== BC0AURA2 ~Ehehe... you're flattering me, but I'll say it again. I'm not a thief. You have nothing to be jealous about.~
-== BE3FADE ~Never looked at a closed chest and felt the urge to break it open? Or looked at a conspicuously-shaped pocket and decided you must have what's inside?~
-== BE3FADE ~You can tell me. I won't spread your naughty secrets around. Maybe.~
-== BC0AURA2 ~No!~
-== BE3FADE ~*sigh* And without a moment's hesitation. And here I was hoping I could rope you into being my partner-in-crime for some future heist. No dice, it seems. I can respect that... kind of.~
+== BC0AURA2 ~是因为那些机件和装备吧？这话我都听过一百万遍了。嗯，倒也没那么多，大概是……我记着，8,582 遍。~
+== BE3FADE ~不，那些我倒能习惯。它们看着相当有用，要是我能弄明白怎么使，我还想顺走两件自己用……呃，当我没说。你什么也没听见。~
+== BC0AURA2 ~记下来：得给工具想些更好的防范手段，以防朋友的手不老实。~
+== BE3FADE ~别急。我的意思是，你有那些连贼都要羡慕的本事，却一点也不拿来用？这才叫奇怪。~
+== BC0AURA2 ~可我确实不是贼！~
+== BE3FADE ~哦，得了吧。你隔着老远就能瞧出陷阱，开锁像能看穿锁芯一样，就连我都不想落到你那些陷阱的对面。你要是个影贼，我可要嫉妒你了。~
+== BC0AURA2 ~嘿嘿……你这是在夸我，可我再说一遍：我不是贼。你没什么好嫉妒的。~
+== BE3FADE ~从没盯着一个关着的箱子，心里发痒想把它撬开？或者看见一个鼓得可疑的口袋，就打定主意里头的东西非得弄到手？~
+== BE3FADE ~你可以告诉我。我不会把你那些小秘密传出去的。大概吧。~
+== BC0AURA2 ~不！~
+== BE3FADE ~*叹气* 还一点没犹豫。我本来还指望拉你当我往后哪桩窃案的共犯呢。看来是没戏了。这点我佩服你……勉强吧。~
 EXIT
 
 CHAIN
@@ -29,21 +29,21 @@ Range("C0Aura",15)
 !StateCheck("E3Fade",CD_STATE_NOTVALID)
 !StateCheck("C0Aura",CD_STATE_NOTVALID)
 Global("C0AuraE3Fade","GLOBAL",1)~ THEN BE3FADE banter2
-~Ugh, the problem with having hair this long is how much of a pain it is to maintain sometimes... I need to get a better brush. This one's getting messier than a dwarf's beard.~
+~唉，头发留这么长，麻烦就是有时候打理起来真要命……我得换把好点的梳子。这把越梳越乱，比矮人的胡子还糟。~
 DO ~SetGlobal("C0AuraE3Fade","GLOBAL",2)~
-== BKORGAN IF ~InParty("KORGAN")~ THEN ~What was that, fiendling? Care ter say it again?~
-== BE3FADE IF ~InParty("KORGAN")~ THEN ~I said what I said, Korgan. Not my fault your ears are full of pus.~
-== BE3FADE ~Hmm... although now that I think about it, you've never seemed to have that problem, Aura. You're not keeping any special secrets, are you? Come on, share a little, from one girl to another.~
-== BC0AURA2 ~Not... really? I usually just use this special brush made from home. I've never thought of it as being anything special though, it's just a different design.~
-== BE3FADE ~That is very special! Can I give it a try? I'll lend you whatever you want in exchange. What'll it be? Knives, lockpicks, a new...~
-== BC0AURA2 ~Um... you can just take it. I trust you to give it back.~
-== BE3FADE ~Ooh... now this feels great. It takes care of all the tangles without any struggle at all. You people from Lantan really know how to do things right.~
-== BC0AURA2 ~Hehe, you're teasing me.~
-== BE3FADE ~I'm serious! If I had known you had something like this packed in that bag of yours, I would've snuck it out a long time ago.~
-== BC0AURA2 ~Huh?~
-== BE3FADE ~Wait, you didn't just hear me say that!~
-== BC0AURA2 ~Sure, whatever... do you want some hair oil too? Now that your head's turned down, I can see a bit of dryness at the scalp, maybe this'll take care of it... this is all I have, but I can make more.~
-== BE3FADE ~You have that as well?! Is there anything you can't do? Oh, we're going to get along great, I can already tell...~
+== BKORGAN IF ~InParty("KORGAN")~ THEN ~你说什么，小妖崽？有种再说一遍？~
+== BE3FADE IF ~InParty("KORGAN")~ THEN ~我说都说了，库尔甘。你耳朵里塞满脓，可不怪我。~
+== BE3FADE ~嗯……不过现在想起来，你好像从没这个烦恼，奥拉。你该不是藏了什么秘诀吧？来嘛，说说，姑娘跟姑娘之间。~
+== BC0AURA2 ~也……不算吧？我平时就用家里做的这把特制梳子。不过我从不觉得它有什么特别，只是样式不同罢了。~
+== BE3FADE ~那可太特别了！我能试试吗？你想要的我都借给你，换着来。要什么？小刀、开锁器，还是新的——~
+== BC0AURA2 ~呃……你直接拿去吧。我信你会还回来。~
+== BE3FADE ~哦……这感觉真好。一点不费劲就把所有打结的地方都梳开了。你们兰坦人做事真是有一套。~
+== BC0AURA2 ~嘿嘿，你在逗我。~
+== BE3FADE ~我说真的！早知道你那包里装着这种东西，我早就偷偷弄出来了。~
+== BC0AURA2 ~嗯？~
+== BE3FADE ~等等，你刚才什么也没听见！~
+== BC0AURA2 ~行，随你……你要不要也来点头油？你头低下来，我就看见头皮有点干，这个或许能管用……我只有这些，不过我能再做。~
+== BE3FADE ~你连那个也有？！还有什么是你办不到的吗？哦，我们一定会处得很好，我已经看出来了……~
 EXIT
 
 CHAIN
@@ -54,17 +54,17 @@ Range("C0Aura",15)
 !StateCheck("E3Fade",CD_STATE_NOTVALID)
 !StateCheck("C0Aura",CD_STATE_NOTVALID)
 Global("C0AuraE3Fade","GLOBAL",2)~ THEN BC0AURA2 banter3
-~Fade, can I ask you a few things about the fey'ri? This is the first time I've been lucky enough to meet one, and a friendly one as well. I've got questions I can think of no one better to answer.~
+~菲德，我能问你几件关于费瑞的事吗？我还是头一回有幸遇到一位，而且还是好相处的。我有些问题，想不出还有谁比你更适合回答。~
 DO ~SetGlobal("C0AuraE3Fade","GLOBAL",3)~
-== BE3FADE ~If it were anyone else, I'd give them a cold look and start walking away. You, though... alright, fine. Just don't get carried away.~
-== BC0AURA2 ~No, of course not... I've just been thinking that you aren't anything like the books say. Even your appearance is so... unique. All the drawings of fey'ri I've seen are so fearsome, with copper skin, horns, batlike wings... but you're so... well, normal, relatively speaking.~
-== BE3FADE ~My tail doesn't disturb you at all?~
-== BC0AURA2 ~Well... I was startled when I saw it lashing for the first time, I'll be honest about that. But I've kind of just accepted it now. Plus, it's the least scary thing I could imagine you having. In some ways, it's kind of cute.~
-== BE3FADE ~It's... ha ha ha! You know, I'm usually annoyed by these kinds of conversations, but having my tail called cute is a new one. I'll let it slide. People rarely appreciate the 'special' parts of me, so thank you for that.~
-== BC0AURA2 ~Would you mind letting me make a drawing of you sometime? I'm not an amazing artist, but there's some things that I see that I just want to keep on paper.~
-== BE3FADE ~You're not going to add it to some catalog of otherworldly creatures and publish it, are you? I like you, Aura, but there's a few things I won't stand for, and being displayed like an oddity is one of them.~
-== BC0AURA2 ~Of course not! I just want to make a sketch of a pretty friend for the memories, how about that?~
-== BE3FADE ~That's much better. I'll be your model, Aura, but you'll have to wait for me to figure out the best attire. And the pose. That's even more important.~
+== BE3FADE ~换了别人，我就冷冷看一眼转身走了。可你……好吧，行。别得寸进尺就行。~
+== BC0AURA2 ~不，当然不会……我只是在想，你一点也不像书里写的那样。就连你的模样都那么……特别。我见过的费瑞画像都凶得很，铜色的皮肤、犄角、蝙蝠似的翅膀……可你却那么……怎么说，相对来说，挺普通的。~
+== BE3FADE ~我的尾巴一点也不让你别扭？~
+== BC0AURA2 ~嗯……头一回看见它甩来甩去，我是被吓了一跳，老实说。不过现在我也差不多认了。再说，我能想到你身上有的东西里，它算最不吓人的了。某种角度说，还挺可爱。~
+== BE3FADE ~这……哈哈哈！你知道，这种话我平时听着就烦，可夸我尾巴可爱还是头一遭。这回就算了。很少有人看得上我身上那些“特别”的地方，所以谢谢你。~
+== BC0AURA2 ~你介意我哪天给你画幅画吗？我不是什么了不起的画师，可有些看见的东西，我就是想留在纸上。~
+== BE3FADE ~你不会把它编进什么异界生物名录里去发表吧？我喜欢你，奥拉，可有些事我受不了，被人当怪物展出去就是其中一样。~
+== BC0AURA2 ~当然不会！我只是想给一位漂亮朋友画张速写留个念想，这样行不行？~
+== BE3FADE ~这下好多了。我给你当模特，奥拉，可你得等我想好穿什么。还有姿势——那更要紧。~
 EXIT
 
 CHAIN
@@ -75,23 +75,23 @@ Range("C0Aura",15)
 !StateCheck("E3Fade",CD_STATE_NOTVALID)
 !StateCheck("C0Aura",CD_STATE_NOTVALID)
 Global("C0AuraE3FadeToB","GLOBAL",0)~ THEN BC0AUR25 bantertob
-~Agh, this stupid strap is being really annoying today... if I didn't still need it, I'd just cut it with my knife... Aura, could you help me out a little?~
+~唉，这条破带子今天真是烦人……要不是还用得着，我就一刀割了它……奥拉，你能帮我一把吗？~
 DO ~SetGlobal("C0AuraE3FadeToB","GLOBAL",1)~
-== BC0AUR25 ~Hm? Oh, sure. Right here, yep?~
-== BE3FAD25 ~Yep. Right there... just reach up a little... a little more... and... aha! Gotcha!~
-== BC0AUR25 ~Oof—! Hey, hey! Knock that off, and put me down, Fade!~
-== BE3FAD25 ~Ahaha! Nope, not while your indignation is just so adorable. This make my mood better every time I do it.~
-== BC0AUR25 ~It definitely doesn't improve my mood... okay, okay, put me down now, I'm not going to be able to feel my legs at this rate...~
-== BE3FAD25 ~Mmh... fine.~
-== BC0AUR25 ~*sigh* Don't you think you're just being a little too much with your teasing? I know it's not mean-spirited, but at this rate, I might be afraid to approach you anymore.~
-== BE3FAD25 ~Point taken. I just... mm, I'm sorry. It's just, who knows for how much longer I'll be able to, you know? We'll go our separate ways eventually, and I can make you remember me with a little mischief, it's better than nothing.~
-== BC0AUR25 ~I'm not going to forget about you, Fade. You're good at hiding, but you're even better at make people remember you when you want it.~
-== BE3FAD25 ~I know, I know. You won't. I don't think you ever forget a thing, Aura. But, wherever we end up after this, we'll make sure meet again someday, right? I promise, I won't play a trick on you every time.~
-== BC0AUR25 ~Hehe... I'll think about it, but... you might want to take a look at your tail first.~
-== BE3FAD25 ~Huh? What about my t... ack! What is this thing? By the Abyss, it's ugly, and makes such an irritating tinkling noise! When did you clasp this onto me? And why?~
-== BC0AUR25 ~Hmm... who knows? I'll ask the person who's been such a bad influence, I guess.~
-== BE3FAD25 ~Ooh... impaling me on my own sword, are you?~
-== BC0AUR25 ~Don't you regret it now?~
-== BE3FAD25 ~Yes! Well... maybe not? Argh, I don't know, just take it off! I can't do any thieving with this on! Please?~
-== BC0AUR25 ~Heehee. You don't even need to ask.~
+== BC0AUR25 ~嗯？哦，好。就在这儿，对吧？~
+== BE3FAD25 ~对。就在那儿……再往上一点……再一点……然后……啊哈！逮到了！~
+== BC0AUR25 ~唔——！喂，喂！别闹了，放我下来，菲德！~
+== BE3FAD25 ~啊哈哈！不行，你气得这么可爱，我才不放。每回这么做我心情都好。~
+== BC0AUR25 ~这绝对没让我心情变好……好，好，快放我下来，再这样我腿都要没知觉了……~
+== BE3FAD25 ~嗯……好吧。~
+== BC0AUR25 ~*叹气* 你不觉得自己逗得有点过火了吗？我知道你没恶意，可照这样下去，我怕是都不敢靠近你了。~
+== BE3FAD25 ~明白了。我只是……嗯，对不起。只是，谁知道我还能这么做多久呢，你懂吧？我们迟早各走各路，我至少能耍点小把戏让你记住我，总比什么都没有强。~
+== BC0AUR25 ~我不会忘记你的，菲德。你擅长躲藏，可你更擅长在你想的时候让人记住你。~
+== BE3FAD25 ~我知道，我知道。你不会的。奥拉，我觉得你从不忘记任何事。不过，这之后不管我们各自到哪儿去，总有一天一定会再见的，对吧？我保证，不会每次都耍你。~
+== BC0AUR25 ~嘿嘿……我会想想的，不过……你也许该先看看自己的尾巴。~
+== BE3FAD25 ~嗯？我尾巴怎么……啊！这是什么东西？以深渊之名，真丑，还响个不停，烦死人！你什么时候把它扣到我身上的？为什么？~
+== BC0AUR25 ~嗯……谁知道呢？我大概得去问问那个带坏我的人。~
+== BE3FAD25 ~哦……拿我自己的话扎我，是吧？~
+== BC0AUR25 ~你就不后悔吗？~
+== BE3FAD25 ~是！嗯……也许不是？唉，我不知道，快把它取下来！戴着这个我什么也偷不了！求你了？~
+== BC0AUR25 ~嘿嘿。你都不用问。~
 EXIT

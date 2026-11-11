@@ -1,62 +1,62 @@
 CHAIN IF WEIGHT #-1 ~Global("C0AuraBegin","GLOBAL",4)~ THEN C0AURA2 a0
-~Don't worry, Muffy... I know this looks bad, but we'll get out of this... I'm sure...~ [C0BLANK]
+~别担心，穆菲……我知道这看着糟，可我们会脱身的……我确定……~ [C0BLANK]
 DO ~SetGlobal("C0AuraBegin","GLOBAL",5)~
-== C0ATHF2 ~Drop the package, and you walk out alive, gnome.~
-== C0AURA2 ~This? I—I'm not sure what you think this is, but it's not what you looking for, I promise you.~
-== C0ATHF2 ~We'll be the judge of that. A little bird told us there's been a market for weapons made by your kind, weapons unlike anything the rest of the realm's ever seen. If that's true, then they'll fetch a rather high price in the right hands, wouldn't you say?~
-== C0AURA2 ~'Weapons from my kind'? There must be some kind of mistake, I've never—~
-== C0ATHF2 ~Quit your yapping, girl. Hand over the goods.~
-== C0AURA2 ~*sigh* Of all the days to leave the automaton at home... I guess I'll have to...~
-== C0ATHF3 ~Boss! Someone's comin' our way.~
+== C0ATHF2 ~把包裹放下，你就能活着走出去，侏儒。~
+== C0AURA2 ~这个？我——我不确定你们以为这是什么，可它不是你们要找的东西，我保证。~
+== C0ATHF2 ~那由我们来判断。有小鸟告诉我们，你们这种人造的武器有个市场，是诸国度其他地方从没见过的东西。若属实，在合适的人手里能卖个好价钱，你说呢？~
+== C0AURA2 ~“我这种人造的武器”？一定是弄错了，我从没——~
+== C0ATHF2 ~别叽叽喳喳了，丫头。把货交出来。~
+== C0AURA2 ~*叹气* 哪天不好，偏偏今天把发条仆役留在家里……看来我只能……~
+== C0ATHF3 ~老大！有人往咱们这边来了。~
 DO ~ClearAllActions()
 StartCutsceneMode()
 StartCutscene("c0acut2")~ EXIT
 
 CHAIN IF WEIGHT #-1 ~Global("C0AuraBegin","GLOBAL",5)~ THEN C0ATHF2 a01
-~This don't concern you, stranger. Move along if you know what's good for you.~ [C0BLANK]
+~不关你的事，陌生人。识相就滚开。~ [C0BLANK]
 DO ~SetGlobal("C0AuraBegin","GLOBAL",6)~
-== C0AURA2 IF ~Global("C0AuraKnowsBG1","GLOBAL",1)~ THEN ~...<CHARNAME>?~
-== C0ATHF2 IF ~Global("C0AuraKnowsBG1","GLOBAL",1)~ THEN ~Quiet, gnome.~
+== C0AURA2 IF ~Global("C0AuraKnowsBG1","GLOBAL",1)~ THEN ~……<CHARNAME>？~
+== C0ATHF2 IF ~Global("C0AuraKnowsBG1","GLOBAL",1)~ THEN ~闭嘴，侏儒。~
 END
-+ ~Global("C0AuraKnowsBG1","GLOBAL",1)~ + ~You're threatening a precious friend of mine. Leave, before you regret it.~ EXTERN C0ATHF3 a01.1
-+ ~Global("C0AuraKnowsBG1","GLOBAL",1)~ + ~That gnome's far more dangerous than she looks. You don't want to mess with her, trust me.~ EXTERN C0ATHF3 a01.1
-++ ~I'd like to, but I don't think I can ignore just someone being accosted in the streets.~ EXTERN C0ATHF3 a01.1
-++ ~You'll leave her be if you know what's good for you.~ EXTERN C0ATHF3 a01.1
-+ ~Global("C0AuraKnowsBG1","GLOBAL",1)~ + ~By all means, go on ahead. I'll keep my distance.~ DO ~SetGlobal("C0AuraNoHelp","GLOBAL",1)~ EXTERN C0AURA2 a01.2
-+ ~!Global("C0AuraKnowsBG1","GLOBAL",1)~ + ~By all means, go on ahead. I'll keep my distance.~ DO ~SetGlobal("C0AuraNoHelp","GLOBAL",1)~ EXTERN C0AURA2 a01.3
++ ~Global("C0AuraKnowsBG1","GLOBAL",1)~ + ~你们在威胁我一位珍贵的朋友。走开，免得后悔。~ EXTERN C0ATHF3 a01.1
++ ~Global("C0AuraKnowsBG1","GLOBAL",1)~ + ~那侏儒比看上去危险得多。别惹她，信我。~ EXTERN C0ATHF3 a01.1
+++ ~我倒想，可我想我没法无视有人在街上被围住。~ EXTERN C0ATHF3 a01.1
+++ ~识相就放开她。~ EXTERN C0ATHF3 a01.1
++ ~Global("C0AuraKnowsBG1","GLOBAL",1)~ + ~尽管去吧。我会保持距离。~ DO ~SetGlobal("C0AuraNoHelp","GLOBAL",1)~ EXTERN C0AURA2 a01.2
++ ~!Global("C0AuraKnowsBG1","GLOBAL",1)~ + ~尽管去吧。我会保持距离。~ DO ~SetGlobal("C0AuraNoHelp","GLOBAL",1)~ EXTERN C0AURA2 a01.3
 
 CHAIN C0ATHF3 a01.1
-~This ain't worth the trouble, boss. I think we should just get out of here, before things get ugly.~
-== C0ATHF2 ~...Bah. It's your lucky day, gnome. Men, withdraw.~
+~这不值得惹麻烦，老大。我看我们趁还没闹大，赶紧走。~
+== C0ATHF2 ~……呸。算你走运，侏儒。弟兄们，撤。~
 DO ~SetGlobal("C0AuraBegin","GLOBAL",8)
 ClearAllActions()
 StartCutsceneMode()
 StartCutscene("c0acut4")~ EXIT
 
 CHAIN C0AURA2 a01.2
-~Pfft, seriously...?~
+~噗，认真的……？~
 EXTERN C0AURA2 a01.3
 
 CHAIN C0AURA2 a01.3
-~Well, I really didn't have to do this, but I guess I'm on my own here, so...~
+~嗯，我其实不必这么做，可看来我在这儿只能靠自己，所以……~
 DO ~SetGlobal("C0AuraBegin","GLOBAL",7)
 ClearAllActions()
 StartCutsceneMode()
 StartCutscene("c0acut3")~ EXIT
 
 CHAIN IF WEIGHT #-1 ~Global("C0AuraBegin","GLOBAL",7)~ THEN C0ATHF4 a02
-~AAAGH! *cough* What... *hic* the blazes... *hhcckk!* is this?!~ [C0BLANK]
-== C0ATHF1 ~My eyes! Agh! So itchy!~
-== JANJ IF ~IsValidForPartyDialog("JAN")~ THEN ~Ahh... a choking powder formula. Simple, but effective. I've always favored a poison sumac oil spray myself. Gives quite the nasty rash, especially in the privates.~
-== C0AURA2 ~Sorry... I didn't have a choice. You can wash it out with oil, but you'd better go and do it quickly before...~
-== C0ATHF2 ~This is not over, gnome! *cough!*~
+~啊——！*咳* 什么……*嗝* 见鬼……*咳——咳！* 这是什么？！~ [C0BLANK]
+== C0ATHF1 ~我的眼睛！啊！好痒！~
+== JANJ IF ~IsValidForPartyDialog("JAN")~ THEN ~啊……一份窒息粉末配方。简单，但有效。我自己一向偏爱毒漆树油喷雾。起的疹子相当难看，尤其在私处。~
+== C0AURA2 ~抱歉……我别无选择。你们可以用油洗掉，可最好快点去洗，免得……~
+== C0ATHF2 ~这事没完，侏儒！*咳！*~
 DO ~SetGlobal("C0AuraBegin","GLOBAL",8)
 ClearAllActions()
 StartCutsceneMode()
 StartCutscene("c0acut4")~ EXIT
 
 CHAIN IF WEIGHT #-1 ~Global("C0AuraBegin","GLOBAL",8)~ THEN C0AURA2 a03
-~And off they go... see, Muffy? I told you we'd get out of this.~ [C0BLANK]
+~他们跑了……看，穆菲？我说过我们会脱身的。~ [C0BLANK]
 DO ~SetGlobal("C0AuraBegin","GLOBAL",9)~
 END
 IF ~Global("C0AuraKnowsBG1","GLOBAL",1)
@@ -71,15 +71,15 @@ IF ~!Global("C0AuraKnowsBG1","GLOBAL",1)
 !Global("C0AuraNoHelp","GLOBAL",1)~ + a03.4
 
 CHAIN C0AURA2 a03.1
-~But really, <CHARNAME>. "I'll keep my distance"? I thought we knew each other better than that.~
+~可真是的，<CHARNAME>。“我会保持距离”？我以为我们彼此更熟些。~
 END
-++ ~I'm sorry. But you handled it, didn't you?~ + a03.1.1
-++ ~I knew you had something up your sleeve.~ + a03.1.1
-++ ~You should be capable of taking care of yourself.~ + a03.1.2
-++ ~That doesn't mean I'm responsible for your trouble.~ + a03.1.2
+++ ~抱歉。可你自己处理了，不是吗？~ + a03.1.1
+++ ~我就知道你袖子里藏着东西。~ + a03.1.1
+++ ~你该有能力照顾自己。~ + a03.1.2
+++ ~那不代表我该为你的麻烦负责。~ + a03.1.2
 
 CHAIN C0AURA2 a03.1.1
-~Sure, I guess... well, I can't really get mad. I'm just really happy to see you again.~
+~当然，我想……嗯，我没法真生气。我只是真的很高兴又见到你。~
 END
 IF ~Global("C0AuraRomanceActive","GLOBAL",1)~ DO ~SetGlobal("C0AuraBeginRomance","GLOBAL",1)
 StartCutSceneMode()
@@ -92,7 +92,7 @@ StartDialogueNoSet(Player1)~ EXIT
 IF ~!Global("C0AuraRomanceActive","GLOBAL",1)~ + a03.5
 
 CHAIN C0AURA2 a03.1.2
-~Wow, you're nastier than I remember you... oh, well. I'm still happy to see you.~
+~哇，你比我记得的还刻薄……哦，算了。我还是很高兴见到你。~
 END
 IF ~Global("C0AuraRomanceActive","GLOBAL",1)~ DO ~SetGlobal("C0AuraBeginRomance","GLOBAL",1)
 StartCutSceneMode()
@@ -106,12 +106,12 @@ IF ~!Global("C0AuraRomanceActive","GLOBAL",1)~ + a03.5
 IF ~!Global("C0AuraRomanceActive","GLOBAL",1)~ + a03.5
 
 CHAIN C0AURA2 a03.2
-~Well, um... thanks for distracting them for a moment, I suppose... can't really expect more than that.~
-= ~I'll be going now, so please excuse me.~
+~嗯，呃……谢谢你至少分散了他们一会儿注意力，我想……不能指望更多了。~
+= ~我这就走了，请见谅。~
 DO ~SetGlobal("C0AuraBegin","GLOBAL",-1)~ EXIT
 
 CHAIN C0AURA2 a03.3
-~Anyway... <CHARNAME>! It's so wonderful to see you again!~
+~总之……<CHARNAME>！又见到你真是太好了！~
 END
 IF ~Global("C0AuraRomanceActive","GLOBAL",1)~ DO ~SetGlobal("C0AuraBeginRomance","GLOBAL",1)
 StartCutSceneMode()
@@ -125,97 +125,97 @@ IF ~!Global("C0AuraRomanceActive","GLOBAL",1)~ + a03.5
 
 CHAIN IF WEIGHT #-1 ~Global("C0AuraBegin","GLOBAL",9)
 Global("C0AuraBeginRomance","GLOBAL",1)~ THEN C0AURA2 a03.rom
-~Haha... sorry, I just really, really needed to give you a hug. *sniffle* Ooh... I've missed this so much, you know?~
+~哈哈……抱歉，我就是非常非常需要抱你一下。*抽鼻子* 哦……我太想念这个了，你知道？~
 EXTERN C0AURA2 a03.5
 
 CHAIN C0AURA2 a03.4
-~Thank you for the help. I was worried about what I'd have to do if nobody intervened... I might've had to really hurt them.~
+~谢谢帮忙。我刚还在担心若没人插手我得怎么办……我也许得真的伤他们。~
 END
-++ ~Are you alright? Those men seemed pretty intent on hurting you.~ + a03.6
-++ ~You're Aura, the Lantanese artificer, I assume?~ + a03.7
-++ ~Well, count yourself lucky today. It might not happen the next time.~ + a03.8
+++ ~你没事吧？那些人看起来很想伤你。~ + a03.6
+++ ~我猜你就是奥拉，那位兰坦的奇械师？~ + a03.7
+++ ~嗯，今天算你走运。下次也许就不会了。~ + a03.8
 
 CHAIN C0AURA2 a03.5
-~It feels like it's been forever... I had no idea when we'd meet again, but it's such a wonderful surprise that it did. We have lot to catch up on!~
+~感觉像过了永远……我不知何时能再见，可重逢真是美妙的惊喜。我们有好多要补的！~
 END
-+ ~Global("C0AuraRomanceActive","GLOBAL",1)~ + ~I've missed you too, Aura.~ + a03.rom2
-++ ~Are you alright? Those men seemed pretty intent on hurting you.~ + a03.14
-++ ~I didn't expect to find you here in Amn, either.~ + a03.15
-++ ~What was it those thugs wanted from you, exactly?~ + a03.16
++ ~Global("C0AuraRomanceActive","GLOBAL",1)~ + ~我也想你了，奥拉。~ + a03.rom2
+++ ~你没事吧？那些人看起来很想伤你。~ + a03.14
+++ ~我也没想到会在安姆找到你。~ + a03.15
+++ ~那些混混到底想从你这儿要什么？~ + a03.16
 
 CHAIN C0AURA2 a03.rom2
-~I'm always thinking about you, you know? I regret leaving you in the first place, but... well, it's done now. You're with me again, and that's enough.~
+~我一直在想你，你知道？我后悔当初离开你，可……嗯，已经过去了。你又在我身边，这就够了。~
 EXTERN C0AURA2 a03.17
 
 CHAIN C0AURA2 a03.6
-~Oh, I'm fine... just a bit shaken. Those people didn't get the chance to really do anything thanks to you... wait a minute...~
+~哦，我没事……只是有点受惊。多亏你，那些人没机会真做什么……等等……~
 EXTERN C0AURA2 a03.9
 
 CHAIN C0AURA2 a03.7
-~Yes, that's me. I didn't know you knew who I was already. Although now that I think of it...~
+~是，是我。我不知道你已经知道我是谁。不过现在想想……~
 EXTERN C0AURA2 a03.9
 
 CHAIN C0AURA2 a03.8
-~Fair point. I guess I shouldn't count on being lucky enough to be helped at the right time by someone... like...~
+~说得对。我想我不该指望总能走运，在恰当的时候被像……这样的……~
 EXTERN C0AURA2 a03.9
 
 CHAIN C0AURA2 a03.9
-~*gasp* You... you're <CHARNAME>! I knew I recognized you!~
+~*倒吸一口气* 你……你是<CHARNAME>！我就知道我认出来了！~
 END
-++ ~You know who I am?~ + a03.10
+++ ~你知道我是谁？~ + a03.10
 
 CHAIN C0AURA2 a03.10
-~It's a lot to explain at once, but... I was in Baldur's Gate during, you know... the crisis. The first one, anyway. I saw your face!~
-= ~Wow... I didn't think I'd meet you here of all places. There's so much I'd like to hear from you.~
+~一下讲不完，可……危机时我在博德之门，你知道……第一次那个。我见过你的脸！~
+= ~哇……我没想到会在这种地方遇见你。我有好多想听你说。~
 END
-++ ~I'd be happy to tell you about myself.~ + a03.11
-++ ~Great, a loony fan.~ + a03.11
+++ ~我很乐意讲讲我自己。~ + a03.11
+++ ~好极了，一个疯粉丝。~ + a03.11
 
 CHAIN C0AURA2 a03.11
-~Oh, I'm so sorry... I know this isn't really the place. But if you're not busy with anything important... I'm heading back to my workshop in the Slums district. If you ever find the time, you wouldn't mind paying me a little visit, would you?~
+~哦，太对不起了……我知道这不是合适的地方。可你若没在忙要紧事……我要回贫民区我的工坊。你若有空，不介意来看看我吗？~
 END
-++ ~Sure, I don't see why not.~ + a03.12
-++ ~I doubt it's something worth my time.~ + a03.13
+++ ~当然，我看没什么不可以。~ + a03.12
+++ ~我怀疑那不值得我花时间。~ + a03.13
 
 CHAIN C0AURA2 a03.12
-~Great! I'll be sure to prepare some tea for you when you're there. I'll be going now. See you again soon!~
+~太好了！你来时我一定备好茶。我这就走了。很快再见！~
 DO ~SetGlobal("C0AuraBegin","GLOBAL",10)
 TriggerActivation("C0AuraHome",TRUE)
 EscapeAreaMove("C0AU01",427,207,NNE)~ EXIT
 
 CHAIN C0AURA2 a03.13
-~Oh... I understand. You're a very busy person, I'm sure. Still, if you ever change your mind, I'll be waiting for you. Goodbye!~
+~哦……我明白。你一定很忙。不过你若改变主意，我会等你。再见！~
 DO ~SetGlobal("C0AuraBegin","GLOBAL",10)
 TriggerActivation("C0AuraHome",TRUE)
 EscapeAreaMove("C0AU01",427,207,NNE)~ EXIT
 
 CHAIN C0AURA2 a03.14
-~Me? I'm fine, <CHARNAME>, you know I'm tougher than I look... mostly. It's better than being stared down by bears, right? Anything's better than that.~
+~我？我没事，<CHARNAME>，你知道我比看起来结实……多半是。这总比被熊瞪要强，对吧？什么都比那强。~
 EXTERN C0AURA2 a03.17
 
 CHAIN C0AURA2 a03.15
-~Oh, I can tell you the whole story if you've got time. It's mostly a coincidence we ended up here together. But if I knew you'd be here, I would've tried to find you immediately.~
+~哦，你若有时，我可以把整件事讲给你听。我们最后一起到这儿大多是巧合。可要早知道你会来，我会立刻去找你。~
 EXTERN C0AURA2 a03.17
 
 CHAIN C0AURA2 a03.16
-~I'm not sure. I mean... they wanted this package I'm carrying, but for what reason, I don't know. They seemed to know something about what I have.~
+~我不确定。我是说……他们要的是我带的这个包裹，可为什么，我不知道。他们似乎对我手里的东西知道些什么。~
 END
-++ ~What's in it?~ + a03.18
+++ ~里面是什么？~ + a03.18
 
 CHAIN C0AURA2 a03.17
-~Why don't we head back to my workshop together? We can talk about everything we've been up to there. I was on my way just now, so it's not far. Is that alright with you?~
+~我们何不一起回我的工坊？在那里可以聊聊我们各自都干了些什么。我正要去，路不远。你觉得好吗？~
 END
-++ ~Sure, I've got the time.~ + a03.19
-++ ~I'm a bit busy right now.~ + a03.20
+++ ~当然，我有时间。~ + a03.19
+++ ~我现在有点忙。~ + a03.20
 
 CHAIN C0AURA2 a03.18
-~You know, I can tell you everything if we head back to my workshop together. I was on my way just now, so it's not far. Is that alright with you?~
+~你知道，我们一起回我工坊，我就能全讲给你听。我正要去，路不远。你觉得好吗？~
 END
-++ ~Sure, I've got the time.~ + a03.19
-++ ~I'm a bit busy right now.~ + a03.20
+++ ~当然，我有时间。~ + a03.19
+++ ~我现在有点忙。~ + a03.20
 
 CHAIN C0AURA2 a03.19
-~Great! Off we go then. I'll make sure to have some tea ready once we get there.~
+~太好了！那我们走吧。到了我一定备好茶。~
 DO ~SetGlobal("C0AuraBegin","GLOBAL",10)
 TriggerActivation("C0AuraHome",TRUE)
 ClearAllActions()
@@ -223,25 +223,25 @@ StartCutsceneMode()
 StartCutscene("c0acut7")~ EXIT
 
 CHAIN C0AURA2 a03.20
-~Oh, all right. I hope you'll stop by soon though. I'm hoping to catch up with you as soon as I can. See you around!~
+~哦，好吧。不过我希望你很快来一趟。我盼着能尽快跟你叙叙。回头见！~
 DO ~SetGlobal("C0AuraBegin","GLOBAL",10)
 EscapeAreaMove("C0AU01",427,207,NNE)~ EXIT
 
 CHAIN IF WEIGHT #-1 ~Global("C0AuraBegin","GLOBAL",10)~ THEN C0AURA2 b1
-~Well, here we are. Welcome to my workshop! Well, technically not mine, but it's where I've been working.~ [C0BLANK]
+~好，我们到了。欢迎来到我的工坊！嗯，严格说不是我的，可这是我一直在干活的地方。~ [C0BLANK]
 DO ~SetGlobal("C0AuraBegin","GLOBAL",11)~
-== C0APICO ~Welcome back, miss Aura! There's tea on the kettle if you want some.~
-== JANJ IF ~InParty("JAN")~ THEN ~Oh, my... this place has seen some improvements since I was gone, hasn't it?~
-== JAHEIRAJ IF ~InParty("JAHEIRA") Global("C0AuraKnowsBG1","GLOBAL",1)~ THEN ~It seems like she has done well for herself.~
-== C0AURA2 ~I haven't had a place of my own to work on for a long while, so I'm really grateful for the Jansens to offer me this room. It's worked wonders for me.~
+== C0APICO ~欢迎回来，奥拉小姐！壶里有茶，想喝就喝。~
+== JANJ IF ~InParty("JAN")~ THEN ~哦，天哪……我不在的时候，这地方改善了不少，不是吗？~
+== JAHEIRAJ IF ~InParty("JAHEIRA") Global("C0AuraKnowsBG1","GLOBAL",1)~ THEN ~看来她混得不错。~
+== C0AURA2 ~我很久没有自己的地方干活了，所以真感激简森家给了我这间屋。它对我帮助极大。~
 END
-++ ~It's quite nice.~ + b1.1
-++ ~Interesting stuff you have here.~ + b1.1
-+ ~Global("C0AuraKnowsBG1","GLOBAL",1)~ + ~I see there's a few things from our past travels laying around.~ + b1.1
+++ ~相当不错。~ + b1.1
+++ ~你这里的东西很有意思。~ + b1.1
++ ~Global("C0AuraKnowsBG1","GLOBAL",1)~ + ~我看这儿还摆着几样我们过去旅行时的东西。~ + b1.1
 
 CHAIN C0AURA2 b1.1
-~Make yourself at home, <CHARNAME>! I've got this wonderful lemon leaf tea that goes perfectly with the local pastries. It's going to be great.~
-== JANJ IF ~InParty("JAN")~ THEN ~Tea, eh? Well then, don't mind if I make myself at home. Oh, silly me, this IS my home...~
+~就当自己家，<CHARNAME>！我有种极好的柠檬叶茶，配本地糕点正合适。会很棒的。~
+== JANJ IF ~InParty("JAN")~ THEN ~茶，嗯？那好，那我就不客气了。哦，我真傻，这本来就是我家……~
 END
 IF ~!InParty("JAN")~ DO ~ClearAllActions()
 StartCutsceneMode()
@@ -252,64 +252,64 @@ StartCutscene("c0acut4b")~ EXIT
 
 /*
 CHAIN IF WEIGHT #-1 ~Global("C0AuraBegin","GLOBAL",1)~ THEN C0AURA2 a1
-~Oh, is there someone at the door?~ [C0BLANK]
+~哦，门口有人吗？~ [C0BLANK]
 DO ~SetGlobal("C0AuraBegin","GLOBAL",3)~
-== JANJ IF ~InParty("JAN")~ THEN ~Oh, my... this place has seen some improvements since I was gone, hasn't it?~
-== JAHEIRAJ IF ~InParty("JAHEIRA") Global("C0AuraKnowsBG1","GLOBAL",1)~ THEN ~It seems like she is doing well for herself.~
-== C0AURA2 ~Hang on a minute, just need to get this drawn... there! Now, what's going on?~
+== JANJ IF ~InParty("JAN")~ THEN ~哦，天哪……我不在的时候，这地方改善了不少，不是吗？~
+== JAHEIRAJ IF ~InParty("JAHEIRA") Global("C0AuraKnowsBG1","GLOBAL",1)~ THEN ~看来她过得不错。~
+== C0AURA2 ~稍等，我把这张画完……好了！那么，怎么回事？~
 END
 + ~Global("C0AuraKnowsBG1","GLOBAL",1)
-Global("C0AuraRomanceActive","GLOBAL",1)~ + ~Hey there, Aura. You're looking good.~ EXTERN C0AURA2 INTRO-DIALOG-1-1
-+ ~Global("C0AuraKnowsBG1","GLOBAL",1)~ + ~Hello, Aura. It's been a while.~ EXTERN C0AURA2 INTRO-DIALOG-1-1
-+ ~Global("C0AuraKnowsBG1","GLOBAL",1)~ + ~Never thought I'd see you again here, of all places.~ EXTERN C0AURA2 INTRO-DIALOG-1-1
-+ ~!Global("C0AuraKnowsBG1","GLOBAL",1)~ + ~I'm sorry to interrupt.~ EXTERN C0AURA2 INTRO-DIALOG-1-1
-+ ~!Global("C0AuraKnowsBG1","GLOBAL",1)~ + ~You must be the artificer, then.~ EXTERN C0AURA2 INTRO-DIALOG-1-1
+Global("C0AuraRomanceActive","GLOBAL",1)~ + ~嘿，奥拉。你气色不错。~ EXTERN C0AURA2 INTRO-DIALOG-1-1
++ ~Global("C0AuraKnowsBG1","GLOBAL",1)~ + ~你好，奥拉。好久不见了。~ EXTERN C0AURA2 INTRO-DIALOG-1-1
++ ~Global("C0AuraKnowsBG1","GLOBAL",1)~ + ~真没想到会在这种地方再见到你。~ EXTERN C0AURA2 INTRO-DIALOG-1-1
++ ~!Global("C0AuraKnowsBG1","GLOBAL",1)~ + ~抱歉打扰。~ EXTERN C0AURA2 INTRO-DIALOG-1-1
++ ~!Global("C0AuraKnowsBG1","GLOBAL",1)~ + ~那么，你一定就是那位奇械师。~ EXTERN C0AURA2 INTRO-DIALOG-1-1
 
 CHAIN C0AURA2 INTRO-DIALOG-1-1
-~Huh...?~
+~嗯……？~
 DO ~ClearAllActions()
 StartCutsceneMode()
 StartCutscene("c0acut2")~ EXIT
 
 CHAIN IF WEIGHT #-1 ~Global("C0AuraBegin","GLOBAL",3) !Global("C0AuraKnowsBG1","GLOBAL",1)~ THEN C0AURA2 INTRO-DIALOG-1-1a
-~Um... good <DAYNIGHTALL>. To whom do I owe this pleasure?~ [C0BLANK]
+~呃……<DAYNIGHTALL>好。我该谢哪位？<DAYNIGHTALL>好。~ [C0BLANK]
 END
-++ ~My name is <CHARNAME>. I heard there was a Lantanese artificer here and wanted to meet your acquaintance.~ + INTRO-DIALOG-2
-++ ~My name is <CHARNAME>. To be honest, I was just curious of what was making all the noise.~ + INTRO-DIALOG-2
+++ ~我叫<CHARNAME>。听说这里有位兰坦的奇械师，想来认识一下。~ + INTRO-DIALOG-2
+++ ~我叫<CHARNAME>。老实说，我只是好奇是什么弄出这么大动静。~ + INTRO-DIALOG-2
 
 CHAIN IF WEIGHT #-1 ~Global("C0AuraBegin","GLOBAL",3) Global("C0AuraKnowsBG1","GLOBAL",1)~ THEN C0AURA2 INTRO-DIALOG-1-1b
-~<CHARNAME>?~ [C0BLANK]
+~<CHARNAME>？~ [C0BLANK]
 END
 IF ~Global("C0AuraRomanceActive","GLOBAL",1)~ + INTRO-DIALOG-1-3
 IF ~!Global("C0AuraRomanceActive","GLOBAL",1)~ + INTRO-DIALOG-1-4
 
 CHAIN C0AURA2 INTRO-DIALOG-1-3
-~I... I—~
+~我……我——~
 END
-++ ~What's—~ DO ~SetGlobal("C0AuraBegin","GLOBAL",4)
+++ ~什么——~ DO ~SetGlobal("C0AuraBegin","GLOBAL",4)
 ClearAllActions()
 StartCutsceneMode()
 StartCutscene("c0acut3")~ EXIT
-++ ~You—~ DO ~SetGlobal("C0AuraBegin","GLOBAL",4)
+++ ~你——~ DO ~SetGlobal("C0AuraBegin","GLOBAL",4)
 ClearAllActions()
 StartCutsceneMode()
 StartCutscene("c0acut3")~ EXIT
-++ ~Um—~ DO ~SetGlobal("C0AuraBegin","GLOBAL",4)
+++ ~呃——~ DO ~SetGlobal("C0AuraBegin","GLOBAL",4)
 ClearAllActions()
 StartCutsceneMode()
 StartCutscene("c0acut3")~ EXIT
 
 CHAIN C0AURA2 INTRO-DIALOG-1-4
-~Wow, it really is you! After what I heard happened back at Baldur's Gate, I thought... anyways, it's great to see you again!~
-= ~When did you get here? If I had known, I would've come looking for you, but I didn't think you'd be... I mean, I never expected to see you here of all places!~
+~哇，真是你！听说博德之门出的事之后，我以为……总之，又见到你太好了！~
+= ~你什么时候到的？早知道我就去找你，可我没想你会……我是说，我从没想过会在这种地方见到你！~
 END
-++ ~It's a long story. Do you have time to listen?~ + INTRO-DIALOG-1-5
-++ ~Shall I tell you of how I was attacked, captured and experimented on before I found myself in this city?~ + INTRO-DIALOG-1-6
-++ ~Let me start from the beginning...~ + INTRO-DIALOG-1-5
+++ ~说来话长。你有时间听吗？~ + INTRO-DIALOG-1-5
+++ ~要我讲讲我怎么被袭击、被抓、被做实验，然后才流落到这座城里的吗？~ + INTRO-DIALOG-1-6
+++ ~我从头讲起……~ + INTRO-DIALOG-1-5
 
 CHAIN C0AURA2 INTRO-DIALOG-1-5
-~W-wait, let me prepare ourselves some tea first... I can tell that we've got a lot to catch up on.~
-== JANJ IF ~InParty("JAN")~ THEN ~Tea, eh? Well then, don't mind if I make myself at home. Oh, silly me, this IS my home...~
+~等——等等，我先给咱们备些茶……我看得出我们有好多要补的。~
+== JANJ IF ~InParty("JAN")~ THEN ~茶，嗯？那好，那我就不客气了。哦，我真傻，这本来就是我家……~
 END
 IF ~!InParty("JAN")~ DO ~SetGlobal("C0AuraBegin","GLOBAL",5)
 ClearAllActions()
@@ -321,29 +321,29 @@ StartCutsceneMode()
 StartCutscene("c0acut4b")~ EXIT
 
 CHAIN C0AURA2 INTRO-DIALOG-1-6
-~You were— oh, my...~
+~你被——哦，天哪……~
 EXTERN C0AURA2 INTRO-DIALOG-1-5
 
 CHAIN IF WEIGHT #-1 ~Global("C0AuraRomanceActive","GLOBAL",1)
 Global("C0AuraBegin","GLOBAL",4)~ THEN C0AURA2 INTRO-ROMANCE-1
-~*hugs*~ [C0BLANK]
+~*抱*~ [C0BLANK]
 END
-++ ~Oof!~ + INTRO-ROMANCE-2
+++ ~哎哟！~ + INTRO-ROMANCE-2
 
 CHAIN C0AURA2 INTRO-ROMANCE-2
-~Oh... it really is you! I— I can't believe it... I missed you so, so much, <CHARNAME>! I... *sniffle*~
+~哦……真是你！我——我不敢信……我好想好想你，<CHARNAME>！我……*抽鼻子*~
 END
-++ ~H-hey, you're hugging a bit too tightly...~ + INTRO-ROMANCE-3
-++ ~I missed you too, Aura.~ + INTRO-ROMANCE-3
-++ ~Wait, don't start crying on me now...~ + INTRO-ROMANCE-3
+++ ~嘿——嘿，你抱得有点太紧了……~ + INTRO-ROMANCE-3
+++ ~我也想你了，奥拉。~ + INTRO-ROMANCE-3
+++ ~等等，别现在就哭……~ + INTRO-ROMANCE-3
 
 CHAIN C0AURA2 INTRO-ROMANCE-3
-~*sniff* ...S-sorry, I— I got a little overwhelmed. I don't know why, I should be happy...~
+~*抽鼻子* ……对——对不起，我——我有点撑不住。我不知道为什么，我该高兴……~
 EXTERN C0AURA2 INTRO-DIALOG-1-5
 
 CHAIN C0AURA2 INTRO-DIALOG-2
-~Oh, I see. Umm, why don't I prepare us some tea first? We can talk over there if you don't mind.~
-== JANJ IF ~InParty("JAN")~ THEN ~Tea, eh? Well then, don't mind if I make myself at home. Oh, silly me, this IS my home...~
+~哦，我明白。呃，我先给咱们备些茶吧？不介意的话，我们去那边聊。~
+== JANJ IF ~InParty("JAN")~ THEN ~茶，嗯？那好，那我就不客气了。哦，我真傻，这本来就是我家……~
 END
 IF ~!InParty("JAN")~ DO ~SetGlobal("C0AuraBegin","GLOBAL",5)
 ClearAllActions()
@@ -355,297 +355,297 @@ StartCutsceneMode()
 StartCutscene("c0acut4b")~ EXIT
 */
 CHAIN IF WEIGHT #-1 ~Global("C0AuraBegin","GLOBAL",11) !Global("C0AuraKnowsBG1","GLOBAL",1)~ THEN C0AURA2 a3
-~I'm really sorry I couldn't clean up a little. I wasn't really prepared to have visitors lately.~ [C0BLANK]
+~真抱歉我没能收拾一下。近来我没准备会有客人。~ [C0BLANK]
 DO ~SetGlobal("C0AuraBegin","GLOBAL",12)~
-== C0AURA2 IF ~InParty("JAN")~ THEN ~Oh, by the way, is this Pico's cousin? I haven't met him at all until just now. It's nice to meet you at last.~
-== JANJ IF ~InParty("JAN")~ THEN ~Yes, very nice to meet you too. It's been a long time since I've ran into anyone from Lantan. How's the place doing now anyway? The people haven't blown themselves up yet, I hope. That would be a great loss. Not to mention it'd be a big mess to clean up.~
-== C0AURA2 IF ~InParty("JAN")~ THEN ~Umm, I haven't been home in a long time, but if the letters I've gotten mean anything, then they haven't...~
-== JANJ IF ~InParty("JAN")~ THEN ~Oh, good. In that case, I hope I'll hear from some of my old friends soon. Now then, don't mind me. I'll just partake of this excellent tea while you speak with <CHARNAME>. <PRO_HESHE> doesn't have my wit and panache, of course, but <PRO_HESHE> is the leader, nonetheless. *sip* Ahh... it doesn't compare to our home-grown turnip leaf tea, but it comes a very close second.~
-== C0AURA2 ~Anyways, it's nice to meet you, <CHARNAME>. I never thought I'd run into the famous hero of Baldur's Gate here of all places!~
+== C0AURA2 IF ~InParty("JAN")~ THEN ~哦，对了，这是皮可的堂亲吗？我到刚才都没见过他。终于见到你真好。~
+== JANJ IF ~InParty("JAN")~ THEN ~是，也很高兴见到你。我好久没碰到兰坦来的人了。那儿如今怎么样？希望人们还没把自己炸上天。那会是巨大的损失。更别说收拾起来一团糟。~
+== C0AURA2 IF ~InParty("JAN")~ THEN ~呃，我很久没回家了，可若我收到的信还算数，那他们确实没有……~
+== JANJ IF ~InParty("JAN")~ THEN ~哦，好。那样的话，我希望不久能听到些老友的消息。那么，别管我。你们跟<CHARNAME>说话，我就享用这壶好茶。<PRO_HESHE>当然没有我的机智与派头，可<PRO_HESHE>毕竟是领头的。*啜* 啊……比不上我们家乡的芜菁叶茶，可排得很近的第二。~
+== C0AURA2 ~总之，很高兴认识你，<CHARNAME>。我从没想到会在这种地方遇上博德之门的著名英雄！~
 END
-++ ~How much do you know about me, exactly?~ + INTRO-DIALOG-2-1
-++ ~It's very nice to meet you too, Aura.~ + INTRO-DIALOG-2-1
-++ ~So, who are you, exactly?~ + INTRO-DIALOG-2-4
+++ ~你到底知道我多少？~ + INTRO-DIALOG-2-1
+++ ~也很高兴认识你，奥拉。~ + INTRO-DIALOG-2-1
+++ ~那么，你究竟是谁？~ + INTRO-DIALOG-2-4
 
 CHAIN C0AURA2 INTRO-DIALOG-2-1
-~I was actually at Baldur's Gate myself too, not long ago. It's a shame we didn't cross paths there, but I heard all the stories about your heroism in stopping a war!~
-= ~There aren't so many tales about you here in Amn, but I suppose that makes sense... it sounds like the people at the Gate are trying to keep quiet about everything, so I was lucky to have been there when it all happened.~
+~其实我不久前也在博德之门。可惜我们没在那儿碰上，可我听过所有你阻止战争的那些英雄事迹！~
+= ~在安姆关于你的传说不多，可我想这也说得通……听说门城那边想对一切保持沉默，所以我在事发时正好在那儿，真是走运。~
 END
-++ ~Come to think of it, I think we have met before, briefly... in Beregost?~ + INTRO-DIALOG-2-2
-++ ~It's a miracle we haven't met before, then. I'm sure I would've remembered you.~ + INTRO-DIALOG-2-3
+++ ~说起来，我觉得我们以前见过，很短暂……在贝雷戈斯特？~ + INTRO-DIALOG-2-2
+++ ~那我们以前没见过真是奇迹。我肯定会记得你。~ + INTRO-DIALOG-2-3
 
 CHAIN C0AURA2 INTRO-DIALOG-2-2
-~Really? Wait, I remember that now! You seem so different from when we met then. Heehee... I guess I haven't changed that much, comparatively.~
-= ~Ooh, that's such a shame. If I had joined up with you at that time, we could've gotten to know each other so much better! Well, that's what fate is, I suppose...~
+~真的？等等，我想起来了！你跟我们那时见的样子差别好大。嘿嘿……相比之下，我想我没怎么变。~
+= ~哦，太可惜了。那时我若加入了你们，我们本可以更了解彼此！嗯，命运就是这样吧，我想……~
 EXTERN C0AURA2 INTRO-DIALOG-2-4
 
 CHAIN C0AURA2 INTRO-DIALOG-2-3
-~That's nice of you to say. I can't imagine myself being important enough for someone like you to remember, but I'm glad I've met you now.~
+~你这么说真好。我想象不出自己重要到让你这样的人记得，可我很高兴如今遇见了你。~
 EXTERN C0AURA2 INTRO-DIALOG-2-4
 
 CHAIN C0AURA2 INTRO-DIALOG-2-4
-~Okay, I should introduce myself properly. I'm Aurelia Glimmershine, but please, call me Aura. I'm a scholar and artificer from Lantan.~
+~好，我该正式自我介绍。我是奥瑞莉亚·格利默夏恩，请叫我奥拉。我是兰坦的学者与奇械师。~
 END
 + ~!Global("C0AuraBattleTalk","GLOBAL",1)
 CheckStatGT(Player1,11,INT)
 !CheckStatGT(Player1,15,INT)
 !Class(Player1,FIGHTER)
-!Kit(Player1,FERALAN)~ + ~You're a scholar, but given that armor you're wearing, you must some experience with combat too, right?~ DO ~SetGlobal("C0AuraBattleTalk","GLOBAL",1) SetGlobal("C0AuraJoinTalk","GLOBAL",1)~ + INTRO-DIALOG-2-5
+!Kit(Player1,FERALAN)~ + ~你是学者，可看你这身盔甲，你战斗也该有些经验，对吧？~ DO ~SetGlobal("C0AuraBattleTalk","GLOBAL",1) SetGlobal("C0AuraJoinTalk","GLOBAL",1)~ + INTRO-DIALOG-2-5
 + ~!Global("C0AuraBattleTalk","GLOBAL",1)
 OR(3)
 CheckStatGT(Player1,15,INT)
 Class(Player1,FIGHTER)
-Kit(Player1,FERALAN)~ + ~You're a scholar, but I notice you're wearing armor, and I can tell you're skilled with a bow... am I wrong?~ DO ~SetGlobal("C0AuraBattleTalk","GLOBAL",1) SetGlobal("C0AuraJoinTalk","MYAREA",1)~ + INTRO-DIALOG-2-5
-+ ~!Global("C0AuraBackgroundTalk","MYAREA",1)~ + ~What is a Lantanese scholar doing all the way here in Amn, anyway?~ + INTRO-DIALOG-2-6
-+ ~!Global("C0AuraConstructTalk","MYAREA",1)~ + ~I noticed that rather impressive construct over there. Is that Lantanese work?~ DO ~SetGlobal("C0AuraConstructTalk","MYAREA",1)~ + INTRO-DIALOG-2-8
-++ ~It's been nice talking with you, but I'm afraid I need to go.~ + INTRO-DIALOG-2-9
+Kit(Player1,FERALAN)~ + ~你是学者，可我注意到你穿着盔甲，也看得出你弓术熟练……我说错了吗？~ DO ~SetGlobal("C0AuraBattleTalk","GLOBAL",1) SetGlobal("C0AuraJoinTalk","MYAREA",1)~ + INTRO-DIALOG-2-5
++ ~!Global("C0AuraBackgroundTalk","MYAREA",1)~ + ~一位兰坦学者到底在安姆这儿做什么？~ + INTRO-DIALOG-2-6
++ ~!Global("C0AuraConstructTalk","MYAREA",1)~ + ~我注意到那边那台相当了不起的构造体。那是兰坦的手艺吗？~ DO ~SetGlobal("C0AuraConstructTalk","MYAREA",1)~ + INTRO-DIALOG-2-8
+++ ~跟你聊得挺愉快，可我怕得走了。~ + INTRO-DIALOG-2-9
 
 CHAIN C0AURA2 INTRO-DIALOG-2-5
-~Oh?~
-= ~Heehee... good eye. I'm not a fighter, but as a travelling scholar, sometimes you need the ability to protect yourself... though I guess I don't need to tell you that.~
-= ~I'm really not that good, though. I certainly don't have the experience you do, and a lot of the time, I have to depend on the big guy over there.~
+~哦？~
+= ~嘿嘿……好眼力。我不是战士，可作为旅行的学者，有时你需要保护自己的能力……不过我想这不用我说。~
+= ~可我真没那么厉害。我肯定没有你的经验，很多时候我得靠那边那大块头。~
 END
-+ ~!Global("C0AuraConstructTalk","MYAREA",1)~ + ~Speaking of... that's quite an impressive construct you have. Is that Lantanese work?~ DO ~SetGlobal("C0AuraConstructTalk","MYAREA",1)~ + INTRO-DIALOG-2-8
-+ ~!Global("C0AuraBackgroundTalk","MYAREA",1)~ + ~What is a Lantanese scholar doing all the way here in Amn, anyway?~ + INTRO-DIALOG-2-6
-+ ~Global("C0AuraJoinTalk","MYAREA",1)~ + ~If you've got experience on the road, I could do with allies. Would you be interested in joining me?~ + INTRO-JOINME
-++ ~It's been nice talking with you, but I'm afraid I need to go.~ + INTRO-DIALOG-2-9
++ ~!Global("C0AuraConstructTalk","MYAREA",1)~ + ~说到这个……你那台构造体真了不起。是兰坦的手艺吗？~ DO ~SetGlobal("C0AuraConstructTalk","MYAREA",1)~ + INTRO-DIALOG-2-8
++ ~!Global("C0AuraBackgroundTalk","MYAREA",1)~ + ~一位兰坦学者到底在安姆这儿做什么？~ + INTRO-DIALOG-2-6
++ ~Global("C0AuraJoinTalk","MYAREA",1)~ + ~你若路上有经验，我正需要盟友。有兴趣加入我吗？~ + INTRO-JOINME
+++ ~跟你聊得挺愉快，可我怕得走了。~ + INTRO-DIALOG-2-9
 
 CHAIN C0AURA2 INTRO-DIALOG-2-6
-~Oh... that would be the question, wouldn't it? The truth is, I haven't been home for a very long time. I, um... left a few years ago, to travel the world so I could learn about and experience the rest of the world.~
-= ~Lantan's not so far away, and it's a wonderful place, but it's so isolated. I've learned so much in the past few years I never would have managed to at home.~
-= ~I haven't been in Amn for too long. It's not easy for a gnome to find a place here, though, but I was lucky that the Jansens were kind enough to offer shelter and a place to work. If not for that, I doubt I'd be here.~
+~哦……这正是那个问题，不是吗？其实我很久没回家了。我，呃……几年前离开，去游历世界，好了解、体验世界的其余部分。~
+= ~兰坦不算太远，也是个好地方，可它太与世隔绝。这几年我学到的许多东西，在家怎么也学不到。~
+= ~我在安姆待得不算久。可侏儒在这儿找地方不容易，我运气好，简森家好心给了我住处和干活的地方。若不是这样，我大概不会在这儿。~
 END
-++ ~You say you've been across the world? Where else have you been to?~ DO ~SetGlobal("C0AuraJoinTalk","MYAREA",1)~ + INTRO-DIALOG-2-7
+++ ~你说你走遍世界？你还去过哪儿？~ DO ~SetGlobal("C0AuraJoinTalk","MYAREA",1)~ + INTRO-DIALOG-2-7
 + ~!Global("C0AuraBattleTalk","GLOBAL",1)
 CheckStatGT(Player1,11,INT)
 !CheckStatGT(Player1,15,INT)
 !Class(Player1,FIGHTER)
-!Kit(Player1,FERALAN)~ + ~You're a scholar, but given that armor you're wearing, you must some experience with combat too, right?~ DO ~SetGlobal("C0AuraBattleTalk","GLOBAL",1) SetGlobal("C0AuraJoinTalk","GLOBAL",1)~ + INTRO-DIALOG-2-5
+!Kit(Player1,FERALAN)~ + ~你是学者，可看你这身盔甲，你战斗也该有些经验，对吧？~ DO ~SetGlobal("C0AuraBattleTalk","GLOBAL",1) SetGlobal("C0AuraJoinTalk","GLOBAL",1)~ + INTRO-DIALOG-2-5
 + ~!Global("C0AuraBattleTalk","GLOBAL",1)
 OR(3)
 CheckStatGT(Player1,15,INT)
 Class(Player1,FIGHTER)
-Kit(Player1,FERALAN)~ + ~You're a scholar, but I notice you're wearing armor, and I can tell you're skilled with a bow... am I wrong?~ DO ~SetGlobal("C0AuraBattleTalk","GLOBAL",1) SetGlobal("C0AuraJoinTalk","MYAREA",1)~ + INTRO-DIALOG-2-5
-+ ~!Global("C0AuraConstructTalk","MYAREA",1)~ + ~I noticed that rather impressive construct over there. Is that Lantanese work?~ DO ~SetGlobal("C0AuraConstructTalk","MYAREA",1)~ + INTRO-DIALOG-2-8
-+ ~Global("C0AuraJoinTalk","MYAREA",1)~ + ~If you've got experience on the road, I could do with allies. Would you be interested in joining me?~ + INTRO-JOINME
-++ ~It's been nice talking with you, but I'm afraid I need to go.~ + INTRO-DIALOG-2-9
+Kit(Player1,FERALAN)~ + ~你是学者，可我注意到你穿着盔甲，也看得出你弓术熟练……我说错了吗？~ DO ~SetGlobal("C0AuraBattleTalk","GLOBAL",1) SetGlobal("C0AuraJoinTalk","MYAREA",1)~ + INTRO-DIALOG-2-5
++ ~!Global("C0AuraConstructTalk","MYAREA",1)~ + ~我注意到那边那台相当了不起的构造体。那是兰坦的手艺吗？~ DO ~SetGlobal("C0AuraConstructTalk","MYAREA",1)~ + INTRO-DIALOG-2-8
++ ~Global("C0AuraJoinTalk","MYAREA",1)~ + ~你若路上有经验，我正需要盟友。有兴趣加入我吗？~ + INTRO-JOINME
+++ ~跟你聊得挺愉快，可我怕得走了。~ + INTRO-DIALOG-2-9
 
 CHAIN C0AURA2 INTRO-DIALOG-2-7
-~Well, counting them all would take a while, but all sorts, really. The Dalelands, Aglarond, Chondath... not as many in the North, I've heard it's rough surviving up there... a few lands outside of Faerûn, too— Maztica and Kara-Tur... I actually lived in Kozakura for a few years, not long ago from now.~
+~嗯，全数出来要些时间，可真是各种各样。谷区、阿格拉隆德、琼达斯……北方去得少些，听说在那儿活下来很苦……也去过费伦以外的几片土地——玛兹特克和卡拉图……其实我不久前还在科祖库拉住过几年。~
 DO ~SetGlobal("C0AuraBackgroundTalk","GLOBAL",1)~ 
-= ~I wasn't alone for most of it, but I lost my entourage some time ago, long before I settled here... but that's a long story.~
+= ~多半时候我不是一个人，可我很久前失散了随行的人，早在我定居这儿之前……那可是个长故事。~
 END
 + ~!Global("C0AuraBattleTalk","GLOBAL",1)
 CheckStatGT(Player1,11,INT)
 !CheckStatGT(Player1,15,INT)
 !Class(Player1,FIGHTER)
-!Kit(Player1,FERALAN)~ + ~You're a scholar, but given that armor you're wearing, you must some experience with combat too, right?~ DO ~SetGlobal("C0AuraBattleTalk","GLOBAL",1) SetGlobal("C0AuraJoinTalk","GLOBAL",1)~ + INTRO-DIALOG-2-5
+!Kit(Player1,FERALAN)~ + ~你是学者，可看你这身盔甲，你战斗也该有些经验，对吧？~ DO ~SetGlobal("C0AuraBattleTalk","GLOBAL",1) SetGlobal("C0AuraJoinTalk","GLOBAL",1)~ + INTRO-DIALOG-2-5
 + ~!Global("C0AuraBattleTalk","GLOBAL",1)
 OR(3)
 CheckStatGT(Player1,15,INT)
 Class(Player1,FIGHTER)
-Kit(Player1,FERALAN)~ + ~You're a scholar, but I notice you're wearing armor, and I can tell you're skilled with a bow... am I wrong?~ DO ~SetGlobal("C0AuraBattleTalk","GLOBAL",1) SetGlobal("C0AuraJoinTalk","MYAREA",1)~ + INTRO-DIALOG-2-5
-+ ~!Global("C0AuraConstructTalk","MYAREA",1)~ + ~I noticed that rather impressive construct over there. Is that Lantanese work?~ DO ~SetGlobal("C0AuraConstructTalk","MYAREA",1)~ + INTRO-DIALOG-2-8
-+ ~Global("C0AuraJoinTalk","MYAREA",1)~ + ~If you've got experience on the road, I could do with allies. Would you be interested in joining me?~ + INTRO-JOINME
-++ ~It's been nice talking with you, but I'm afraid I need to go.~ + INTRO-DIALOG-2-9
+Kit(Player1,FERALAN)~ + ~你是学者，可我注意到你穿着盔甲，也看得出你弓术熟练……我说错了吗？~ DO ~SetGlobal("C0AuraBattleTalk","GLOBAL",1) SetGlobal("C0AuraJoinTalk","MYAREA",1)~ + INTRO-DIALOG-2-5
++ ~!Global("C0AuraConstructTalk","MYAREA",1)~ + ~我注意到那边那台相当了不起的构造体。那是兰坦的手艺吗？~ DO ~SetGlobal("C0AuraConstructTalk","MYAREA",1)~ + INTRO-DIALOG-2-8
++ ~Global("C0AuraJoinTalk","MYAREA",1)~ + ~你若路上有经验，我正需要盟友。有兴趣加入我吗？~ + INTRO-JOINME
+++ ~跟你聊得挺愉快，可我怕得走了。~ + INTRO-DIALOG-2-9
 
 CHAIN C0AURA2 INTRO-DIALOG-2-8
-~Oh, yes, it is. It's an old Lantanese craft, built from metal and clockwork. The design is rather complex, but most inventors with enough experience can build them without much trouble.~
-== JANJ IF ~InParty("JAN")~ THEN ~I must say, that massive fellow has caught my eye ever since we entered. I wonder if I could get two of those to manage our garden?~
-== C0AURA2 ~It's not so different from a mage's golem in concept. We're not particularly fond of conflict, though, so mostly they're used for heavy construction work. I've modified mine to be battle-ready, though, given I have to get into some dangerous situations now and again.~
+~哦，是的。那是兰坦的古老手艺，用金属和钟表机构制成。设计相当复杂，可多数有足够经验的发明家都能不太费劲地造出来。~
+== JANJ IF ~InParty("JAN")~ THEN ~我得说，我们一进来，那大块头就吸住了我的眼。我在想能不能弄两台来打理我们的园子？~
+== C0AURA2 ~概念上跟法师的魔像差别不大。不过我们不太喜欢冲突，所以多半用于重型建造。不过我这台改成了能上战场的，因为我时不时得进些危险境地。~
 END
 + ~!Global("C0AuraBattleTalk","GLOBAL",1)
 CheckStatGT(Player1,11,INT)
 !CheckStatGT(Player1,15,INT)
 !Class(Player1,FIGHTER)
-!Kit(Player1,FERALAN)~ + ~You're a scholar, but given that armor you're wearing, you must some experience with combat too, right?~ DO ~SetGlobal("C0AuraBattleTalk","GLOBAL",1) SetGlobal("C0AuraJoinTalk","GLOBAL",1)~ + INTRO-DIALOG-2-5
+!Kit(Player1,FERALAN)~ + ~你是学者，可看你这身盔甲，你战斗也该有些经验，对吧？~ DO ~SetGlobal("C0AuraBattleTalk","GLOBAL",1) SetGlobal("C0AuraJoinTalk","GLOBAL",1)~ + INTRO-DIALOG-2-5
 + ~!Global("C0AuraBattleTalk","GLOBAL",1)
 OR(3)
 CheckStatGT(Player1,15,INT)
 Class(Player1,FIGHTER)
-Kit(Player1,FERALAN)~ + ~You're a scholar, but I notice you're wearing armor, and I can tell you're skilled with a bow... am I wrong?~ DO ~SetGlobal("C0AuraBattleTalk","GLOBAL",1) SetGlobal("C0AuraJoinTalk","MYAREA",1)~ + INTRO-DIALOG-2-5
-+ ~!Global("C0AuraBackgroundTalk","MYAREA",1)~ + ~What is a Lantanese scholar doing all the way here in Amn, anyway?~ + INTRO-DIALOG-2-6
-+ ~Global("C0AuraJoinTalk","MYAREA",1)~ + ~If you've got experience on the road, I could do with allies. Would you be interested in joining me?~ + INTRO-JOINME
-++ ~It's been nice talking with you, but I'm afraid I need to go.~ + INTRO-DIALOG-2-9
+Kit(Player1,FERALAN)~ + ~你是学者，可我注意到你穿着盔甲，也看得出你弓术熟练……我说错了吗？~ DO ~SetGlobal("C0AuraBattleTalk","GLOBAL",1) SetGlobal("C0AuraJoinTalk","MYAREA",1)~ + INTRO-DIALOG-2-5
++ ~!Global("C0AuraBackgroundTalk","MYAREA",1)~ + ~一位兰坦学者到底在安姆这儿做什么？~ + INTRO-DIALOG-2-6
++ ~Global("C0AuraJoinTalk","MYAREA",1)~ + ~你若路上有经验，我正需要盟友。有兴趣加入我吗？~ + INTRO-JOINME
+++ ~跟你聊得挺愉快，可我怕得走了。~ + INTRO-DIALOG-2-9
 
 CHAIN C0AURA2 INTRO-DIALOG-2-9
-~Oh, you're leaving already? Well...~
-== C0AURA2 ~Actually... I've got a favor I'd like to ask you, <CHARNAME>. If it's not so much of a bother to you, would you consider allowing me to join you?~
-== C0AURA2 IF ~!Class(Myself,MAGE_ALL) !Class(Myself,CLERIC_ALL)~ ~I know you're an experienced traveller, and I don't have the achievements to match you, but I feel like there's still more for me to learn, but I don't think my strength alone is enough to pass whatever trials are out there. I'm good with mechanics and alchemy, and I can handle a bow. I'm sure I won't drag you down!~
-== C0AURA2 IF ~Class(Myself,MAGE_ALL)~ ~I know you're an experienced traveller, and I don't have the achievements to match you, but I feel like there's still more for me to learn, but I don't think my strength alone is enough to pass whatever trials are out there. I'm good with mechanics and alchemy, and I can handle a bow. Besides my skills in rune magic, I know a bit of standard magic as well. I'm sure I won't drag you down!~
-== C0AURA2 IF ~Class(Myself,CLERIC_ALL)~ ~I know you're an experienced traveller, and I don't have the achievements to match you, but I feel like there's still more for me to learn, but I don't think my strength alone is enough to pass whatever trials are out there. I'm good with mechanics and alchemy, and I can handle a bow. I know a bit of divine magic as well, thanks to my training in Kozakura. I'm sure I won't drag you down!~
+~哦，你这就要走了？那……~
+== C0AURA2 ~其实……我有件事想求你，<CHARNAME>。若不太麻烦你，你愿不愿让我加入？~
+== C0AURA2 IF ~!Class(Myself,MAGE_ALL) !Class(Myself,CLERIC_ALL)~ ~我知道你是经验丰富的旅人，我没有能与你相比的功绩，可我觉得我还有更多要学，光靠我自己的力量，我怕过不了前头的试炼。我擅长机械与炼金，也会使弓。我肯定不拖你后腿！~
+== C0AURA2 IF ~Class(Myself,MAGE_ALL)~ ~我知道你是经验丰富的旅人，我没有能与你相比的功绩，可我觉得我还有更多要学，光靠我自己的力量，我怕过不了前头的试炼。我擅长机械与炼金，也会使弓。除了符文法术，我也懂一点普通魔法。我肯定不拖你后腿！~
+== C0AURA2 IF ~Class(Myself,CLERIC_ALL)~ ~我知道你是经验丰富的旅人，我没有能与你相比的功绩，可我觉得我还有更多要学，光靠我自己的力量，我怕过不了前头的试炼。我擅长机械与炼金，也会使弓。多亏在科祖库拉受的训练，我也懂一点神术。我肯定不拖你后腿！~
 END
-++ ~I certainly wouldn't mind having more companions.~ + INTRO-JOINME
-+ ~NumInPartyGT(1)~ + ~I'm afraid I have all the company I need right now.~ + INTRO-JOINME-NO
-+ ~!NumInPartyGT(1)~ + ~I'm afraid I'd rather work alone.~ + INTRO-JOINME-NO
-++ ~Not a chance.~ + INTRO-JOINME-NO
+++ ~我当然不介意多些同伴。~ + INTRO-JOINME
++ ~NumInPartyGT(1)~ + ~我怕我现在需要的同伴都齐了。~ + INTRO-JOINME-NO
++ ~!NumInPartyGT(1)~ + ~我怕我宁愿独自干活。~ + INTRO-JOINME-NO
+++ ~不可能。~ + INTRO-JOINME-NO
 
 CHAIN IF WEIGHT #-1 ~Global("C0AuraBegin","GLOBAL",11) Global("C0AuraKnowsBG1","GLOBAL",1)~ THEN C0AURA2 a4
-~Umm... I'm sorry I couldn't set up something a bit nicer. If I had more time to prepare, I could've done a lot more to welcome you. I hope you don't mind.~ [C0BLANK]
+~呃……抱歉我没能布置得更好些。若我有更多时间准备，本可以做更多来迎接你。希望你不介意。~ [C0BLANK]
 DO ~SetGlobal("C0AuraBegin","GLOBAL",12)~
 END
-++ ~It's fine. I appreciate the effort.~ + INTRO-DIALOG-3-1
-++ ~So... where should I start?~ + INTRO-DIALOG-3-1
-++ ~I didn't come for tea, Aura.~ + INTRO-DIALOG-3-2
+++ ~没关系。我感谢你的心意。~ + INTRO-DIALOG-3-1
+++ ~那么……我该从哪儿讲起？~ + INTRO-DIALOG-3-1
+++ ~我不是来喝茶的，奥拉。~ + INTRO-DIALOG-3-2
 
 CHAIN C0AURA2 INTRO-DIALOG-3-1
-~I saw what happened at the Promenade. Well... I heard about it first, then I went to check out the aftermath... I was horrified. I thought it might have been a smokepowder accident, with just how terrible the damage was.~
-== C0AURA2 IF ~InParty("JAN")~ THEN ~I didn't realize you'd already met Pico's cousin, either. I hadn't even seen him myself until just now. It's nice to meet you at last.~
-== JANJ IF ~InParty("JAN")~ THEN ~Yes, very nice to meet you too. It's been a long time since I've ran into anyone from Lantan. How's the place doing now anyway? The people haven't blown themselves up yet, I hope. That would be a great loss. Not to mention it'd be a big mess to clean up.~
-== C0AURA2 IF ~InParty("JAN")~ THEN ~Umm, I haven't been home in a long time, but if the letters I've gotten mean anything, then they haven't...~
-== JANJ IF ~InParty("JAN")~ THEN ~Oh, good. In that case, I hope I'll hear from some of my old friends soon. Now then, don't mind me. I'll just partake of this excellent tea while you speak with <CHARNAME>. <PRO_HESHE> doesn't my wit and panache, of course, but <PRO_HESHE> is the leader, nonetheless. *sip* Ahh... it doesn't compare to our home-grown turnip leaf tea, but it comes a very close second.~
-== C0AURA2 IF ~InParty("JAN")~ THEN ~Anyways... what was I talking about? Oh, right. The stuff that happened at the Promenade.~
-== C0AURA2 ~This is mostly a guess... but I don't suppose you had anything to do with that?~
+~我看见了步道上出的事。嗯……我先听说了，然后去看残局……我吓坏了。看那破坏的惨状，我以为也许是烟火药事故。~
+== C0AURA2 IF ~InParty("JAN")~ THEN ~我也没料到你已经见过了皮可的堂亲。我到刚才自己都没见过他。终于见到你真好。~
+== JANJ IF ~InParty("JAN")~ THEN ~是，也很高兴见到你。我好久没碰到兰坦来的人了。那儿如今怎么样？希望人们还没把自己炸上天。那会是巨大的损失。更别说收拾起来一团糟。~
+== C0AURA2 IF ~InParty("JAN")~ THEN ~呃，我很久没回家了，可若我收到的信还算数，那他们确实没有……~
+== JANJ IF ~InParty("JAN")~ THEN ~哦，好。那样的话，我希望不久能听到些老友的消息。那么，别管我。你们跟<CHARNAME>说话，我就享用这壶好茶。<PRO_HESHE>当然没有我的机智与派头，可<PRO_HESHE>毕竟是领头的。*啜* 啊……比不上我们家乡的芜菁叶茶，可排得很近的第二。~
+== C0AURA2 IF ~InParty("JAN")~ THEN ~总之……我刚才说到哪儿了？哦，对。步道上出的事。~
+== C0AURA2 ~这多半是猜的……可我想那跟你有关吧？~
 END
-+ ~Global("C0AuraKnowsBG1","GLOBAL",1)~ + ~I was there when it happened. The Cowled Wizards took who was responsible... and Imoen as well.~ + INTRO-DIALOG-3-3
-+ ~!Global("C0AuraKnowsBG1","GLOBAL",1)~ + ~I was there when it happened. The Cowled Wizards took who was responsible... and my friend as well.~ + INTRO-DIALOG-3-4
-+ ~Global("C0AuraKnowsBG1","GLOBAL",1)~ + ~Things like that only ever happen to me, don't they?~ + INTRO-DIALOG-3-5
-++ ~I had nothing to do with it. It was all the work of the mage that captured me.~ + INTRO-DIALOG-3-6
-++ ~You're not entirely wrong to say I was involved, I suppose.~ + INTRO-DIALOG-3-7
-++ ~I'd rather not talk about that. What else have you heard?~ + INTRO-DIALOG-3-7
++ ~Global("C0AuraKnowsBG1","GLOBAL",1)~ + ~事发时我在场。兜帽法师带走了该负责的人……还有爱蒙。~ + INTRO-DIALOG-3-3
++ ~!Global("C0AuraKnowsBG1","GLOBAL",1)~ + ~事发时我在场。兜帽法师带走了该负责的人……还有我的朋友。~ + INTRO-DIALOG-3-4
++ ~Global("C0AuraKnowsBG1","GLOBAL",1)~ + ~这种事好像总只落到我头上，不是吗？~ + INTRO-DIALOG-3-5
+++ ~我与此事无关。那全是我被抓我的那个法师干的。~ + INTRO-DIALOG-3-6
+++ ~你说我牵涉其中，也不算全错，我想。~ + INTRO-DIALOG-3-7
+++ ~我宁愿不谈那个。你还听说什么了？~ + INTRO-DIALOG-3-7
 
 CHAIN C0AURA2 INTRO-DIALOG-3-2
-~I know. I was just getting to what you probably wanted to discuss.~
+~我知道。我只是正要说到你大概想谈的事。~
 EXTERN C0AURA2 INTRO-DIALOG-3-1
 
 CHAIN C0AURA2 INTRO-DIALOG-3-3
-~W-what? Imoen was— oh, that's awful!~
+~什——什么？爱蒙被——哦，太可怕了！~
 EXTERN C0AURA2 INTRO-DIALOG-3-7
 
 CHAIN C0AURA2 INTRO-DIALOG-3-4
-~The Cowled Wizards took—? Oh, I'm sorry.~
+~兜帽法师带走了——？哦，对不起。~
 EXTERN C0AURA2 INTRO-DIALOG-3-7
 
 CHAIN C0AURA2 INTRO-DIALOG-3-5
-~Heehee... I didn't mean it that way, <CHARNAME>, I'm sorry. But I'm not wrong to assume you were involved in a way, right?~
+~嘿嘿……我不是那个意思，<CHARNAME>，对不起。可我猜你某种程度上有牵涉，这不算错，对吧？~
 EXTERN C0AURA2 INTRO-DIALOG-3-7
 
 CHAIN C0AURA2 INTRO-DIALOG-3-6
-~I heard the mage who blew up the Promenade had power beyond imagination. If what I saw was just the after-effects, I shudder to think what it would have been like to see it first-hand.~
+~我听说炸毁步道的那个法师力量超乎想象。若我看到的只是余波，我都不敢想亲眼看见会是什么样。~
 EXTERN C0AURA2 INTRO-DIALOG-3-7
 
 CHAIN C0AURA2 INTRO-DIALOG-3-7
-~I'm sorry I can't be of much more help. Besides the rumors, I really don't know much of what's going on out there. I'm cooped up in this little workshop most days, and when I go out it's usually to the same few places. Even the few things I know, I mostly heard by accident.~
-= ~Anyways... I guess there's a reason you came by and waited for me, right? What can I do for you, <CHARNAME>?~
+~抱歉我帮不上更多。除了传闻，我对那边发生的事真知道不多。我多数日子闷在这小工坊里，出门也常只去那几个地方。就连我知道的这点，多半也是偶然听来的。~
+= ~总之……我猜你来等我是有原因的，对吧？我能为你做什么，<CHARNAME>？~
 END
-++ ~Let's start with you. How have you been? It feels like it's been forever since we travelled together.~ + INTRO-DIALOG-3-8
-+ ~Global("C0AuraRomanceActive","GLOBAL",1)~ + ~I'm in need of allies right now, Aura. Would you be interested in joining me again?~ + INTRO-JOINME-ROMANCE
-+ ~Global("C0AuraKnowsBG1","GLOBAL",1) !Global("C0AuraRomanceActive","GLOBAL",1)~ + ~I'm in need of allies right now, Aura. Would you be interested in joining me again?~ + INTRO-JOINME-BG1
-+ ~!Global("C0AuraKnowsBG1","GLOBAL",1)~ + ~I'm in need of allies right now, Aura. Would you be interested in joining me?~ + INTRO-JOINME
-++ ~Nothing for the moment. I'm sorry to bother you.~ + INTRO-GOODBYE
+++ ~先从你说起。你过得怎么样？感觉我们上次一起旅行已是很久很久以前。~ + INTRO-DIALOG-3-8
++ ~Global("C0AuraRomanceActive","GLOBAL",1)~ + ~我现在需要盟友，奥拉。你愿意再与我同行吗？~ + INTRO-JOINME-ROMANCE
++ ~Global("C0AuraKnowsBG1","GLOBAL",1) !Global("C0AuraRomanceActive","GLOBAL",1)~ + ~我现在需要盟友，奥拉。你愿意再与我同行吗？~ + INTRO-JOINME-BG1
++ ~!Global("C0AuraKnowsBG1","GLOBAL",1)~ + ~我现在需要盟友，奥拉。你愿意加入我吗？~ + INTRO-JOINME
+++ ~暂时没事。抱歉打扰你。~ + INTRO-GOODBYE
 
 CHAIN C0AURA2 INTRO-DIALOG-3-8
-~I know, right? I thought the days went by so quickly when we were venturing up and down the Sword Coast, but after we parted, it suddenly felt like the days were a lot longer.~
-== C0AURA2 IF ~Global("C0AuraRomanceActive","GLOBAL",1)~ THEN ~I really did miss you, you know. I couldn't stop wondering if I'd ever see you again...~
-== C0AURA2 ~Well, as they say in old Lantanna: 'pasientia cul es sathienae'— um, that is, sometimes patience is all you need, right?~
+~我知道，对吧？我们在剑湾上上下下冒险时，我觉得日子过得飞快，可分开之后，忽然觉得日子长了好多。~
+== C0AURA2 IF ~Global("C0AuraRomanceActive","GLOBAL",1)~ THEN ~我真的想你了，你知道。我总忍不住想还能不能再见到你……~
+== C0AURA2 ~嗯，就像老兰坦语说的：“pasientia cul es sathienae”——呃，就是说，有时你只需要耐心，对吧？~
 END
-++ ~How exactly did you end up living with the Jansens anyway?~ + INTRO-DIALOG-3-9
-+ ~Global("C0AuraRomanceActive","GLOBAL",1)~ + ~I'm in need of allies right now, Aura. Would you be interested in joining me again?~ + INTRO-JOINME-ROMANCE
-+ ~Global("C0AuraKnowsBG1","GLOBAL",1) !Global("C0AuraRomanceActive","GLOBAL",1)~ + ~I'm in need of allies right now, Aura. Would you be interested in joining me again?~ + INTRO-JOINME-BG1
-+ ~!Global("C0AuraKnowsBG1","GLOBAL",1)~ + ~I'm in need of allies right now, Aura. Would you be interested in joining me?~ + INTRO-JOINME
-++ ~Nothing for the moment. I'm sorry to bother you.~ + INTRO-GOODBYE
+++ ~你到底怎么跟简森家住到一起的？~ + INTRO-DIALOG-3-9
++ ~Global("C0AuraRomanceActive","GLOBAL",1)~ + ~我现在需要盟友，奥拉。你愿意再与我同行吗？~ + INTRO-JOINME-ROMANCE
++ ~Global("C0AuraKnowsBG1","GLOBAL",1) !Global("C0AuraRomanceActive","GLOBAL",1)~ + ~我现在需要盟友，奥拉。你愿意再与我同行吗？~ + INTRO-JOINME-BG1
++ ~!Global("C0AuraKnowsBG1","GLOBAL",1)~ + ~我现在需要盟友，奥拉。你愿意加入我吗？~ + INTRO-JOINME
+++ ~暂时没事。抱歉打扰你。~ + INTRO-GOODBYE
 
 CHAIN C0AURA2 INTRO-DIALOG-3-9
-~Well, to be honest... it was a stroke of luck, really. After we were forced to part ways, I decided to make my way down south back to Lantan.~
-= ~I made it all the way here to Athkatla. They're not fond of gnomes here, but I figured it'd be the likeliest place to charter a boat back home... but there weren't any that would travel towards there at the time.~
-= ~While I was exploring the city, I met Kylie when she was peddling in the Bridge District. She was being harassed by a couple of thugs who didn't like what she was selling, so I had to step in and scare them off with my automaton.~
-= ~Afterwards, I talked with Kylie and found out about her family's business, and how they're not doing so well recently. When I told them I was from Lantan, they offered me their workshop to stay in, and they've been treating me like family since. I've even had the chance to write home for the first time in a while. I'm very grateful to them.~
+~嗯，老实说……真是撞了大运。我们被迫分开后，我决定南下回兰坦。~
+= ~我一路到了阿斯卡特拉。这儿的人不待见侏儒，可我想这大概最容易租到回家的船……可当时没有愿意去那边的船。~
+= ~我在城里逛时，在桥区碰见凯莉在摆摊。几个混混不喜欢她卖的东西在骚扰她，我只得插手，用我的发条仆役把他们吓跑。~
+= ~之后我跟凯莉聊，知道了她家的生意，还有近来不太景气。我告诉他们我来自兰坦，他们就把工坊让给我住，从此待我如家人。我甚至有机会好久以来第一次写信回家。我很感激他们。~
 END
-+ ~Global("C0AuraRomanceActive","GLOBAL",1)~ + ~I'm in need of allies right now, Aura. Would you be interested in joining me again?~ + INTRO-JOINME-ROMANCE
-+ ~Global("C0AuraKnowsBG1","GLOBAL",1) !Global("C0AuraRomanceActive","GLOBAL",1)~ + ~I'm in need of allies right now, Aura. Would you be interested in joining me again?~ + INTRO-JOINME-BG1
-+ ~!Global("C0AuraKnowsBG1","GLOBAL",1)~ + ~I'm in need of allies right now, Aura. Would you be interested in joining me?~ + INTRO-JOINME
-++ ~Nothing for the moment. I'm sorry to bother you.~ + INTRO-GOODBYE
++ ~Global("C0AuraRomanceActive","GLOBAL",1)~ + ~我现在需要盟友，奥拉。你愿意再与我同行吗？~ + INTRO-JOINME-ROMANCE
++ ~Global("C0AuraKnowsBG1","GLOBAL",1) !Global("C0AuraRomanceActive","GLOBAL",1)~ + ~我现在需要盟友，奥拉。你愿意再与我同行吗？~ + INTRO-JOINME-BG1
++ ~!Global("C0AuraKnowsBG1","GLOBAL",1)~ + ~我现在需要盟友，奥拉。你愿意加入我吗？~ + INTRO-JOINME
+++ ~暂时没事。抱歉打扰你。~ + INTRO-GOODBYE
 
 CHAIN C0AURA2 INTRO-JOINME-ROMANCE
-~Yes, absolutely yes! I was just about to offer anyway. I've missed travelling with you so much, <CHARNAME>.~
+~是，当然愿意！我本来也正想提。我好想念跟你一起旅行，<CHARNAME>。~
 EXTERN C0AURA2 INTRO-JOINME-1
 
 CHAIN C0AURA2 INTRO-JOINME-BG1
-~Oh, I'd love to travel with you again! It's nice being able to work here, but I think a trip outside to put my work to practical use might be exactly what I need.~
+~哦，我很想再跟你一起旅行！能在这儿干活挺好，可我想出去一趟、把我的手艺实际用起来，也许正是我需要的。~
 EXTERN C0AURA2 INTRO-JOINME-1
 
 CHAIN C0AURA2 INTRO-JOINME
-~You'd really ask for my help? I'd be happy to! My latest creations could use some field testing anyway, and I'd appreciate the company.~
+~你真会请我帮忙？我很乐意！我最新的造物反正也需要实地测试，而且我也有个伴。~
 EXTERN C0AURA2 INTRO-JOINME-1
 
 CHAIN C0AURA2 INTRO-JOINME-1
-~I've got my portable toolkit, my alchemical skills and my Sunshooter. I might not be the best fighter, but I'm sure I'll still be an asset to you!~
+~我带着便携工具包、炼金本事和我的太阳射手。我也许不是最好的战士，可我肯定还是对你有用的！~
 END
-+ ~GlobalLT("chapter","GLOBAL",%bg2_chapter_4%) Global("C0AuraKnowsBG1","GLOBAL",1)~ + ~I should tell you first about our mission. Imoen was taken by the Cowled Wizards during that incident at Waukeen's Promenade, and I aim to rescue her. There will be considerable danger involved.~ + INTRO-JOINME-2
-+ ~GlobalLT("chapter","GLOBAL",%bg2_chapter_4%) !Global("C0AuraKnowsBG1","GLOBAL",1)~ + ~I should tell you first about our mission. An old friend of mine, Imoen, was taken by the Cowled Wizards during that incident at Waukeen's Promenade, and I aim to rescue her. There will be considerable danger involved.~ + INTRO-JOINME-3
-+ ~GlobalLT("chapter","GLOBAL",%bg2_chapter_4%)~ + ~Alright. You should know, however, that I am hunting a powerful wizard by the name of Irenicus. He was the one who captured and tortured me, and I plan to find him. It'll be dangerous.~ + INTRO-JOINME-4
-++ ~Alright, let's go.~ DO ~SetGlobal("C0AuraQuest1","GLOBAL",1) JoinParty()~ + INTRO-JOINME-5
++ ~GlobalLT("chapter","GLOBAL",%bg2_chapter_4%) Global("C0AuraKnowsBG1","GLOBAL",1)~ + ~我该先跟你说说我们的任务。步道那场事里，爱蒙被兜帽法师抓走了，我要去救她。会有相当的危险。~ + INTRO-JOINME-2
++ ~GlobalLT("chapter","GLOBAL",%bg2_chapter_4%) !Global("C0AuraKnowsBG1","GLOBAL",1)~ + ~我该先跟你说说我们的任务。我的一位老友，爱蒙，在步道那场事里被兜帽法师抓走了，我要去救她。会有相当的危险。~ + INTRO-JOINME-3
++ ~GlobalLT("chapter","GLOBAL",%bg2_chapter_4%)~ + ~好。不过你该知道，我在追一个叫爱瑞尼库斯的强大法师。就是他抓了我、折磨我，我打算找到他。会很危险。~ + INTRO-JOINME-4
+++ ~好，我们走。~ DO ~SetGlobal("C0AuraQuest1","GLOBAL",1) JoinParty()~ + INTRO-JOINME-5
 
 CHAIN C0AURA2 INTRO-JOINME-2
-~Imoen's my friend as well, so I'm not afraid of danger if it means saving her. I know the Cowled Wizards are powerful, but that just means you'll need all the assistance you can get. I'll do my best to help you, <CHARNAME>.~
+~爱蒙也是我的朋友，所以若救她意味着冒险，我不怕。我知道兜帽法师很强，可那正说明你需要能得到的全部帮助。我会尽力帮你，<CHARNAME>。~
 EXTERN C0AURA2 INTRO-JOINME-5
 
 CHAIN C0AURA2 INTRO-JOINME-3
-~If she's that important to you, then I'm not afraid of danger if it means saving her. I know the Cowled Wizards are powerful, but that just means you'll need all the assistance you can get. I'll do my best to help you, <CHARNAME>.~
+~她对你这么重要，那若救她意味着冒险，我不怕。我知道兜帽法师很强，可那正说明你需要能得到的全部帮助。我会尽力帮你，<CHARNAME>。~
 EXTERN C0AURA2 INTRO-JOINME-5
 
 CHAIN C0AURA2 INTRO-JOINME-4
-~That's the one who caused all that destruction in the Promenade, right? If you're going against someone so dangerous and powerful, then you'll need all the assistance you can get. I'll do my best to help you, <CHARNAME>.~
+~就是那个在步道造成大片破坏的人，对吧？你若要去对付这么危险强大的人，那你就需要能得到的全部帮助。我会尽力帮你，<CHARNAME>。~
 EXTERN C0AURA2 INTRO-JOINME-5
 
 CHAIN C0AURA2 INTRO-JOINME-5
-~Oh, but before we go... I've got a few design schematics that I left on my desk over there. If you can gather all the things that are on them, I can create some wondrous items that'll help us out a lot.~
-= ~And my automaton over there could be helpful too, if you're interested in bringing it along. I'd just need a second to activate it and it'll be good to go.~
-= ~Yep, I think that's all. Alright, I can trust Pico to take care of the workshop while I'm out. Let's go!~
+~哦，可我们走之前……我桌上还留着几份设计图。你若能把上面列的东西都凑齐，我就能造出些神妙物品，帮我们大忙。~
+= ~还有我那台发条仆役也能帮上忙，你若想带上它。我只要一点时间启动它，就能走。~
+= ~嗯，我想就这些了。好，我出门时可以把工坊托给皮可。我们走！~
 DO ~EquipRanged() JoinParty()~ EXIT
 
 CHAIN C0AURA2 INTRO-GOODBYE
-~Oh, no trouble at all.~
-= IF ~Global("C0AuraKnowsBG1","GLOBAL",1)~ THEN ~It was nice to see you again, <CHARNAME>. I hope you can come by and say hello once in a while. I'll be here most of the time.~
-= IF ~!Global("C0AuraKnowsBG1","GLOBAL",1)~ THEN ~It was nice to meet you, <CHARNAME>. You can always come by and say hello if you want. I'll be here most of the time.~
+~哦，一点也不麻烦。~
+= IF ~Global("C0AuraKnowsBG1","GLOBAL",1)~ THEN ~又见到你真好，<CHARNAME>。希望你能偶尔来打个招呼。我多数时候都在这儿。~
+= IF ~!Global("C0AuraKnowsBG1","GLOBAL",1)~ THEN ~很高兴认识你，<CHARNAME>。你想的话随时来打招呼。我多数时候都在这儿。~
 EXIT
 
 CHAIN C0AURA2 INTRO-JOINME-NO
-~Oh... that's a shame.~
-= IF ~Global("C0AuraKnowsBG1","GLOBAL",1)~ THEN ~It was nice to see you again, <CHARNAME>. I hope you can come by and say hello once in a while. I'll be here most of the time.~
-= IF ~!Global("C0AuraKnowsBG1","GLOBAL",1)~ THEN ~It was nice to meet you, <CHARNAME>. You can always come by and say hello if you want. I'll be here most of the time.~
+~哦……真可惜。~
+= IF ~Global("C0AuraKnowsBG1","GLOBAL",1)~ THEN ~又见到你真好，<CHARNAME>。希望你能偶尔来打个招呼。我多数时候都在这儿。~
+= IF ~!Global("C0AuraKnowsBG1","GLOBAL",1)~ THEN ~很高兴认识你，<CHARNAME>。你想的话随时来打招呼。我多数时候都在这儿。~
 EXIT
 
 CHAIN IF WEIGHT #-1 ~Global("C0AuraBegin","GLOBAL",12)~ THEN C0AURA2 a1
-~Hello again, <CHARNAME>, it's nice to see you alive and well. Is there something I can do for you?~ [C0BLANK]
+~又见面了，<CHARNAME>，见你平安无事真好。有什么我能为你做的吗？~ [C0BLANK]
 END
-+ ~Global("C0AuraRomanceActive","GLOBAL",1)~ + ~I'm in need of allies right now, Aura. Would you be interested in joining me again?~ + INTRO-JOINME-ROMANCE
-+ ~Global("C0AuraKnowsBG1","GLOBAL",1) !Global("C0AuraRomanceActive","GLOBAL",1)~ + ~I'm in need of allies right now, Aura. Would you be interested in joining me again?~ + INTRO-JOINME-BG1
-+ ~!Global("C0AuraKnowsBG1","GLOBAL",1)~ + ~I'm in need of allies right now, Aura. Would you be interested in joining me?~ + INTRO-JOINME
-++ ~Nothing for the moment. I'm sorry to bother you.~ + INTRO-GOODBYE
++ ~Global("C0AuraRomanceActive","GLOBAL",1)~ + ~我现在需要盟友，奥拉。你愿意再与我同行吗？~ + INTRO-JOINME-ROMANCE
++ ~Global("C0AuraKnowsBG1","GLOBAL",1) !Global("C0AuraRomanceActive","GLOBAL",1)~ + ~我现在需要盟友，奥拉。你愿意再与我同行吗？~ + INTRO-JOINME-BG1
++ ~!Global("C0AuraKnowsBG1","GLOBAL",1)~ + ~我现在需要盟友，奥拉。你愿意加入我吗？~ + INTRO-JOINME
+++ ~暂时没事。抱歉打扰你。~ + INTRO-GOODBYE
 
 
 CHAIN IF WEIGHT #-1 ~Global("C0AuraBG2Quest3","GLOBAL",8)~ THEN C0AURA2P quest3-8
-~Hey there, <CHARNAME>! Don't worry, I won't forget to find you. I'll only spend a bit of time here to catch up.~
+~喂，<CHARNAME>！别担心，我不会忘了去找你。我只在这儿待一会儿叙叙。~
 EXIT
 
 CHAIN IF WEIGHT #-1 ~Global("C0AuraBG2Quest3","GLOBAL",39)~ THEN C0AURA2P quest3-39-fight
-~I'll back you up with my arrows, <CHARNAME>!~
+~我用箭给你压阵，<CHARNAME>！~
 DO ~ApplySpellRES("c0aqef24",Myself)
 ChangeEnemyAlly(Myself,ALLY)~ EXIT
 
 
 CHAIN IF ~AreaCheck("C0AU01")
 Global("KickedOut","LOCALS",1)~ THEN C0AURA2P a2
-~Heya! It's always good to see you, <CHARNAME>. What do you need?~
+~嘿！见到你总是好事，<CHARNAME>。你需要什么？~
 END
-+ ~AreaCheck("C0AU01")~ + ~I'd like you to craft something for me.~ EXTERN BC0AURA2 CRAFT
-++ ~I'd like for you to join me again.~ + a2.1
-++ ~Nothing for now.~ + a2.2
-++ ~Just checking in.~ + a2.2
++ ~AreaCheck("C0AU01")~ + ~我想请你造点东西。~ EXTERN BC0AURA2 CRAFT
+++ ~我想请你再跟我同行。~ + a2.1
+++ ~暂时没事。~ + a2.2
+++ ~只是来看看。~ + a2.2
 
 CHAIN IF ~!AreaCheck("C0AU01")
 Global("KickedOut","LOCALS",1)~ THEN C0AURA2P a3
-~There you are! I was wondering when I'd see you again. So, what'cha need?~
+~你来了！我刚还在想什么时候能再见到你。那么，你需要什么？~
 END
-++ ~I'd like for you to join me again.~ + a2.1
-++ ~Nothing for now.~ + a3.1
-++ ~Just checking in.~ + a3.1
+++ ~我想请你再跟我同行。~ + a2.1
+++ ~暂时没事。~ + a3.1
+++ ~只是来看看。~ + a3.1
 
 APPEND C0AURA2P
 
 IF WEIGHT #-1 ~Global("C0AuraKilledInnocents","GLOBAL",1)~ angry
-SAY ~Wh-- what have you done? WHAT HAVE YOU DONE?!~
+SAY ~你——你做了什么？你做了什么？！~
 IF ~~ DO ~SetGlobal("C0AuraKilledInnocents","GLOBAL",2)
     ChangeAIScript("",DEFAULT)
     LeaveParty()
@@ -653,7 +653,7 @@ IF ~~ DO ~SetGlobal("C0AuraKilledInnocents","GLOBAL",2)
 END
 
 IF WEIGHT #-1 ~Global("C0AuraKnowsBG1","GLOBAL",1) HappinessLT(Myself,-299)~ unhappy1
-SAY ~You've... you've changed, <CHARNAME>. I-- I'm sorry, but... I can't bear this anymore. I'm leaving.~
+SAY ~你……你变了，<CHARNAME>。我——对不起，可是……我再也受不了了。我要走。~
 IF ~!Global("C0AuraRomanceActive","GLOBAL",1)
 !Global("C0AuraRomanceActive","GLOBAL",2)~ DO ~EscapeArea()~ EXIT
 IF ~OR(2)
@@ -662,7 +662,7 @@ Global("C0AuraRomanceActive","GLOBAL",2)~ DO ~SetGlobal("C0AuraRomanceActive","G
 END
 
 IF WEIGHT #-1 ~!Global("C0AuraKnowsBG1","GLOBAL",1) HappinessLT(Myself,-299)~ unhappy2
-SAY ~I-- I'm sorry, but... I can't bear this anymore. I'm leaving.~
+SAY ~我——对不起，可是……我再也受不了了。我要走。~
 IF ~!Global("C0AuraRomanceActive","GLOBAL",1)
 !Global("C0AuraRomanceActive","GLOBAL",2)~ DO ~EscapeArea()~ EXIT
 IF ~OR(2)
@@ -673,52 +673,52 @@ END
 IF ~!Global("C0AuraRomanceActive","GLOBAL",1)
 !Global("C0AuraRomanceActive","GLOBAL",2)
 Global("KickedOut","LOCALS",0)~ a1
-SAY ~Are you sure you want me to go, <CHARNAME>? I'm still happy to stay in your company.~
-++ ~Never mind. Stay in the group.~ + a1.1
+SAY ~你真要我去，<CHARNAME>？我仍乐意留在你身边。~
+++ ~算了。留在队里。~ + a1.1
 + ~!Global("chapter","GLOBAL",%bg2_chapter_4%)
 !Global("chapter","GLOBAL",%bg2_chapter_5%)
-!Global("chapter","GLOBAL",%bg2_chapter_7%)~ + ~I'd rather we part ways for the moment.~ + a1.2a
+!Global("chapter","GLOBAL",%bg2_chapter_7%)~ + ~我宁愿我们暂时分开。~ + a1.2a
 + ~OR(3)
 Global("chapter","GLOBAL",%bg2_chapter_4%)
 Global("chapter","GLOBAL",%bg2_chapter_5%)
-Global("chapter","GLOBAL",%bg2_chapter_7%)~ + ~I'd rather we part ways for the moment.~ + a1.2b
+Global("chapter","GLOBAL",%bg2_chapter_7%)~ + ~我宁愿我们暂时分开。~ + a1.2b
 END
 
 IF ~OR(2)
 Global("C0AuraRomanceActive","GLOBAL",1)
 Global("C0AuraRomanceActive","GLOBAL",2)
 Global("KickedOut","LOCALS",0)~ a1
-SAY ~Aww... I really don't want to leave you, <CHARNAME>, but... I'm sure you know best. Are you sure you don't need me anymore?~
-++ ~Never mind. Stay in the group.~ + a1.1
+SAY ~唉……我真不想离开你，<CHARNAME>，可……我信你最清楚。你真不再需要我了？~
+++ ~算了。留在队里。~ + a1.1
 + ~!Global("chapter","GLOBAL",%bg2_chapter_4%)
 !Global("chapter","GLOBAL",%bg2_chapter_5%)
-!Global("chapter","GLOBAL",%bg2_chapter_7%)~ + ~I'd rather we part ways for the moment.~ + a1.2a
+!Global("chapter","GLOBAL",%bg2_chapter_7%)~ + ~我宁愿我们暂时分开。~ + a1.2a
 + ~OR(3)
 Global("chapter","GLOBAL",%bg2_chapter_4%)
 Global("chapter","GLOBAL",%bg2_chapter_5%)
-Global("chapter","GLOBAL",%bg2_chapter_7%)~ + ~I'd rather we part ways for the moment.~ + a1.2b
+Global("chapter","GLOBAL",%bg2_chapter_7%)~ + ~我宁愿我们暂时分开。~ + a1.2b
 END
 
 IF ~~ a1.1
-SAY ~Okay. Let's continue as we were, then.~
+SAY ~好。那我们就照原样继续。~
 IF ~~ DO ~JoinParty()~ EXIT
 END
 
 IF ~~ a1.2a
-SAY ~If you say so. I'll make my way back to the workshop. If you need my help in any way, look for me there.~
-++ ~Very well. See you there.~ + a1.3
-+ ~!AreaCheck("c0au01")~ + ~Remain here for now. I'll come back for you.~ + a1.4
-++ ~Actually, I've changed my mind. Stay.~ + a1.1
+SAY ~你这么说的话。我回工坊去。你若需要我帮什么，去那儿找我。~
+++ ~很好。那儿见。~ + a1.3
++ ~!AreaCheck("c0au01")~ + ~暂时留在这儿。我会回来找你。~ + a1.4
+++ ~其实我改主意了。留下。~ + a1.1
 END
 
 IF ~~ a1.2b
-SAY ~Well, this... is kinda unfortunate, but if I must, I'll try and find a way to escape this place. I'm not sure how long it'll be before we meet again, if at all. Are you sure you want me to go?~
-++ ~I am sure. Good luck, Aura.~ + a1.3
-++ ~Actually, I've changed my mind. Stay.~ + a1.1
+SAY ~嗯，这……有点不幸，可若必须，我会想办法逃出这地方。我不确定我们还能不能再见，若能的话也不知要多久。你真要我去？~
+++ ~我确定。祝你好运，奥拉。~ + a1.3
+++ ~其实我改主意了。留下。~ + a1.1
 END
 
 IF ~~ a1.3
-SAY ~Alright. See you around, <CHARNAME>.~
+SAY ~好。回头见，<CHARNAME>。~
 IF ~!AreaCheck("c0au01")~ DO ~SetGlobal("KickedOut","LOCALS",1)
 EscapeAreaMove("C0AU01",433,196,NW)
 ActionOverride("c0auin3",EscapeAreaMove("C0AU01",214,370,S))~ EXIT
@@ -726,59 +726,59 @@ IF ~AreaCheck("c0au01")~ DO ~SetGlobal("KickedOut","LOCALS",1)
 ActionOverride("c0auin3",MoveToPoint([214.370])~ EXIT
 END
 IF ~~ a1.4
-SAY ~Ugh, if you insist. Come back soon, okay?~
+SAY ~呃，你坚持的话。早点回来，好吗？~
 IF ~~ DO ~SetGlobal("KickedOut","LOCALS",1)~ EXIT
 END
 
 IF ~~ a2.1
-SAY ~Sure thing. I'm all set to go!~
+SAY ~当然。我准备好了，走吧！~
 IF ~~ DO ~SetGlobal("KickedOut","LOCALS",0)
 JoinParty()~ EXIT
 END
 
 IF ~~ a2.2
-SAY ~Oh. Well, if you're ever in need of anything, I'll be here!~
+SAY ~哦。那好，你若需要什么，我就在这儿！~
 IF ~~ EXIT
 END
 
 IF ~~ a3.1
-SAY ~Okay, fine... I guess I'll just keep waiting here.~
+SAY ~好，好吧……我想我就在这儿等着。~
 IF ~~ EXIT
 END
 
 END
 
 CHAIN IF WEIGHT #-1 ~Global("C0AuraFinishedCrafting","GLOBAL",1)~ THEN C0AURA2P FINISH-CRAFT
-~Ta-da! Isn't it perfect? I'm sure we'll make great use of it, too. I'll leave it up to you how exactly to use it, of course. I'm exhausted, though... who wants some tea?~
+~嗒——哒！是不是完美？我确定我们会好好用上它。当然，具体怎么用由你决定。可我累坏了……谁想喝茶？~
 DO ~SetGlobal("C0AuraFinishedCrafting","GLOBAL",0)~
 EXIT
 
 CHAIN IF ~IsGabber(Player1) CombatCounter(0) !Detect([ENEMY]) Global("C0AuraInsulted","GLOBAL",0)~ THEN C0AURA2J pid
-~Yep?~ [C0AU022]
+~嗯？~ [C0AU022]
 END
- + ~!AreaCheck("C0AU01") Global("NoCraftOnlyOnce","LOCALS",0)~ + ~I'd like you to craft something for me.~ DO ~SetGlobal("NoCraftOnlyOnce","LOCALS",1)~ + NOCRAFT
- + ~AreaCheck("C0AU01")~ + ~I'd like you to craft something for me.~ EXTERN BC0AURA2 CRAFT
- + ~OR(2) Global("C0AuraRomanceActive","GLOBAL",1) Global("C0AuraRomanceActive","GLOBAL",2)~ + ~(Flirt)~ + FLIRT
- ++ ~Do you have any advice?~ + ADVICE
- ++ ~What are you thinking about?~ + RANDTALK
- ++ ~Can I ask you something?~ + QUESTIONS
- ++ ~I think there's a problem with your voice.~ + stringfix
- ++ ~I need nothing at the moment.~ EXIT
+ + ~!AreaCheck("C0AU01") Global("NoCraftOnlyOnce","LOCALS",0)~ + ~我想请你造点东西。~ DO ~SetGlobal("NoCraftOnlyOnce","LOCALS",1)~ + NOCRAFT
+ + ~AreaCheck("C0AU01")~ + ~我想请你造点东西。~ EXTERN BC0AURA2 CRAFT
+ + ~OR(2) Global("C0AuraRomanceActive","GLOBAL",1) Global("C0AuraRomanceActive","GLOBAL",2)~ + ~（调情）~ + FLIRT
+ ++ ~你有什么建议吗？~ + ADVICE
+ ++ ~你在想什么？~ + RANDTALK
+ ++ ~我能问你件事吗？~ + QUESTIONS
+ ++ ~我觉得你的声音有点问题。~ + stringfix
+ ++ ~我眼下什么都不需要。~ EXIT
 
 CHAIN C0AURA2J NOCRAFT
-~Oh, well... I'd love to, but you know, I don't have my important tools with me right now. Let's get back to my workshop, and then we can talk.~
+~哦，嗯……我很乐意，可你知道，我重要的工具现在不在身上。我们回我工坊，再谈。~
 EXIT
 
 CHAIN BC0AURA2 CRAFT
-~Sure thing! Remember, if I'm going to make anything, I need both the schematics and components. Let's see what I can do with what you've got...~
-== BC0AURA2 IF ~PartyHasItem("c0anotea")~ THEN ~There's that schematic Jan wrote for improving his launcher. I'm, uh, not sure how successful it will be, but it's worth a shot.~ [C0SCROLL]
-== BC0AURA2 IF ~PartyHasItem("c0anote3")~ THEN ~The Runic Armor of Grounding... my great-granduncle designed that, you know. Just a heads-up, though... it's a little more technical than just wearing the armor. If you aren't intelligent enough to understand how it works, you're more in danger of getting shocked by it than the enemy.~ [C0SCROLL]
-== BC0AURA2 IF ~PartyHasItem("c0anote4")~ THEN ~Ooh, Blinking Boots. Those are real fun to make, and a lot more reliable to wear on your feet than the Boots of Phasing. Not too expensive, either.~ [C0SCROLL]
-== BC0AURA2 IF ~PartyHasItem("c0anote5")~ THEN ~There's the Greater Bracers of Archery. Anyone who wears those won't miss a shot. Very tricky to make, but powerful.~ [C0SCROLL]
-== BC0AURA2 IF ~PartyHasItem("c0anote6")~ THEN ~Aah... there's master Galarin's orb. I've never tried making it, but it's a powerful antimagic tool. A little expensive to make, though.~ [C0SCROLL]
-== BC0AURA2 IF ~PartyHasItem("c0anote7")~ THEN ~The Ring of the Ram, huh? That's a neat magical item. With the improvements detailed on the schematics, I can make its magic a lot more impactful.~ [C0SCROLL]
-== BC0AURA2 IF ~PartyHasItem("c0anote8")~ THEN ~The Headband of Intellect! Uncle Marius had one with unique enhancements that he designed. I think I managed to theorize his technique, so I could replicate it with the right components.~ [C0SCROLL]
-== BC0AURA2 IF ~PartyHasItem("c0anote9")~ THEN ~And there's the Spellbreaker, patented by Craftmistress Avalee... the design is restricted knowledge within Lantan because of people abusing their powers, but I, uh... learned the technique on my own. Don't ask how. It'll break any magical defense.~ [C0SCROLL]
+~当然！记住，我要造什么，都需要设计图和零件。看看你手上的东西我能做什么……~
+== BC0AURA2 IF ~PartyHasItem("c0anotea")~ THEN ~那是扬写的改进他发射器的设计图。我，呃，不确定能有多成功，可值得一试。~ [C0SCROLL]
+== BC0AURA2 IF ~PartyHasItem("c0anote3")~ THEN ~接地符文护甲……是我曾叔祖设计的，你知道。先提醒一句……它比穿上护甲要讲究些技术。你若不够聪明、弄不懂它怎么运作，你被它电着的危险比敌人还大。~ [C0SCROLL]
+== BC0AURA2 IF ~PartyHasItem("c0anote4")~ THEN ~哦，闪现之靴。造起来真好玩，穿在脚上也比相位之靴可靠得多。也不贵。~ [C0SCROLL]
+== BC0AURA2 IF ~PartyHasItem("c0anote5")~ THEN ~还有高等射手护腕。谁戴上它都不会射偏。造起来很棘手，可很强。~ [C0SCROLL]
+== BC0AURA2 IF ~PartyHasItem("c0anote6")~ THEN ~啊……还有加拉林大师的宝珠。我从没试过造它，可它是强大的反魔法工具。不过造起来有点贵。~ [C0SCROLL]
+== BC0AURA2 IF ~PartyHasItem("c0anote7")~ THEN ~公羊之戒，嗯？那是件精巧的魔法物品。照设计图上详述的改进，我能让它的魔力冲击强得多。~ [C0SCROLL]
+== BC0AURA2 IF ~PartyHasItem("c0anote8")~ THEN ~智力头带！马里乌斯叔叔有一条他设计的、带独特强化的。我想我总算把他的技法理出来了，只要有对的零件就能复制。~ [C0SCROLL]
+== BC0AURA2 IF ~PartyHasItem("c0anote9")~ THEN ~还有破法者，由工艺女师阿瓦莉注册专利……那设计在兰坦是受限知识，因为有人滥用力量，可我，呃……自己学会了那技法。别问怎么学的。它能破任何魔法防护。~ [C0SCROLL]
 END
 IF ~OR(8)
 PartyHasItem("c0anote3")
@@ -799,11 +799,11 @@ IF ~!PartyHasItem("c0anote3")
 !PartyHasItem("c0anotea")~ + CRAFT-NO-SCHEMATICS
 
 CHAIN BC0AURA2 CRAFT-NO-SCHEMATICS
-~Hmm... it doesn't look like you have any design schematics with you. When you find one, gather the components needed to make the item and I'll do my part, okay?~
+~嗯……看来你身上没带任何设计图。等你找到一份，凑齐造那件物品所需的零件，我来做我这部分，好吗？~
 EXIT
 
 CHAIN BC0AURA2 CRAFT-SCHEMATICS
-~If you've got the components for any of those, we can get right to work. What do you think?~
+~你若凑齐了其中任何一件的零件，我们就能马上动手。你觉得呢？~
 END
 + ~PartyHasItem("c0anotea")
 PartyHasItem("xbow12")
@@ -811,7 +811,7 @@ PartyHasItem("xbow06")
 PartyHasItem("scrl1n")
 PartyHasItem("misc43")
 PartyHasItem("misc42")
-PartyGoldGT(5999)~ + ~I've got the components for the Flasher Launcher mk.II. Let's work on that.~ DO ~SetGlobal("C0AuraCraftItem","C0AU01",8)
+PartyGoldGT(5999)~ + ~我凑齐了闪光者发射器二型的零件。我们做那个。~ DO ~SetGlobal("C0AuraCraftItem","C0AU01",8)
 ActionOverride("CraftForge",TakePartyItemNum("xbow12",1))
 ActionOverride("CraftForge",TakePartyItemNum("xbow06",1))
 ActionOverride("CraftForge",TakePartyItemNum("scrl1n",1))
@@ -824,7 +824,7 @@ PartyHasItem("chan12")
 NumItemsPartyGT("scrl05",1)
 PartyHasItem("wand07")
 PartyHasItem("misc6z")
-PartyGoldGT(9999)~ + ~I've got the components for the Runic Armor of Grounding. Let's work on that.~ DO ~SetGlobal("C0AuraCraftItem","C0AU01",1)
+PartyGoldGT(9999)~ + ~我凑齐了接地符文护甲的零件。我们做那个。~ DO ~SetGlobal("C0AuraCraftItem","C0AU01",1)
 ActionOverride("CraftForge",TakePartyItemNum("chan12",1))
 ActionOverride("CraftForge",TakePartyItemNum("wand07",1))
 ActionOverride("CraftForge",TakePartyItemNum("scrl05",2))
@@ -836,7 +836,7 @@ PartyHasItem("boot08")
 PartyHasItem("scrl6q")
 PartyHasItem("scrl1h")
 PartyHasItem("misc45")
-PartyGoldGT(4999)~ + ~I've got the components for the Blinking Boots. Let's work on that.~ DO ~SetGlobal("C0AuraCraftItem","C0AU01",2)
+PartyGoldGT(4999)~ + ~我凑齐了闪现之靴的零件。我们做那个。~ DO ~SetGlobal("C0AuraCraftItem","C0AU01",2)
 ActionOverride("CraftForge",TakePartyItemNum("boot08",1))
 ActionOverride("CraftForge",TakePartyItemNum("scrl6q",1))
 ActionOverride("CraftForge",TakePartyItemNum("scrl1h",1))
@@ -848,7 +848,7 @@ PartyHasItem("brac04")
 PartyHasItem("helm20")
 PartyHasItem("potn41")
 NumItemsPartyGT("misc42",1)
-PartyGoldGT(7499)~ + ~I've got the components for the Greater Bracers of Archery. Let's work on that.~ DO ~SetGlobal("C0AuraCraftItem","C0AU01",3)
+PartyGoldGT(7499)~ + ~我凑齐了高等射手护腕的零件。我们做那个。~ DO ~SetGlobal("C0AuraCraftItem","C0AU01",3)
 ActionOverride("CraftForge",TakePartyItemNum("brac04",1))
 ActionOverride("CraftForge",TakePartyItemNum("helm20",1))
 ActionOverride("CraftForge",TakePartyItemNum("potn41",1))
@@ -859,7 +859,7 @@ ActionOverride("CraftForge",TakePartyItem("c0anote5"))~ + CRAFT-CUTSCENE
 NumItemsPartyGT("misc41",1)
 PartyHasItem("scrl07")
 PartyHasItem("amul19")
-PartyGoldGT(7999)~ + ~I've got the components for Galarin's Orb of Warding. Let's work on that.~ DO ~SetGlobal("C0AuraCraftItem","C0AU01",4)
+PartyGoldGT(7999)~ + ~我凑齐了加拉林守护宝珠的零件。我们做那个。~ DO ~SetGlobal("C0AuraCraftItem","C0AU01",4)
 ActionOverride("CraftForge",TakePartyItemNum("misc41",2))
 ActionOverride("CraftForge",TakePartyItemNum("scrl07",1))
 ActionOverride("CraftForge",TakePartyItemNum("amul19",1))
@@ -870,7 +870,7 @@ NumItemsPartyGT("scrl91",2)
 PartyHasItem("ring33")
 PartyHasItem("scrl8q")
 NumItemsPartyGT("misc42",1)
-PartyGoldGT(4999)~ + ~I've got the components for the Improved Ring of the Ram. Let's work on that.~ DO ~SetGlobal("C0AuraCraftItem","C0AU01",5)
+PartyGoldGT(4999)~ + ~我凑齐了改进型公羊之戒的零件。我们做那个。~ DO ~SetGlobal("C0AuraCraftItem","C0AU01",5)
 ActionOverride("CraftForge",TakePartyItemNum("scrl91",3))
 ActionOverride("CraftForge",TakePartyItemNum("ring33",1))
 ActionOverride("CraftForge",TakePartyItemNum("scrl8q",1))
@@ -881,7 +881,7 @@ ActionOverride("CraftForge",TakePartyItem("c0anote7"))~ + CRAFT-CUTSCENE
 PartyHasItem("ring40")
 PartyHasItem("amul16")
 PartyHasItem("misc44")
-PartyGoldGT(9999)~ + ~I've got the components for the Headband of Intellect. Let's work on that.~ DO ~SetGlobal("C0AuraCraftItem","C0AU01",6)
+PartyGoldGT(9999)~ + ~我凑齐了智力头带的零件。我们做那个。~ DO ~SetGlobal("C0AuraCraftItem","C0AU01",6)
 ActionOverride("CraftForge",TakePartyItemNum("ring40",1))
 ActionOverride("CraftForge",TakePartyItemNum("amul16",1))
 ActionOverride("CraftForge",TakePartyItemNum("misc44",1))
@@ -891,36 +891,36 @@ ActionOverride("CraftForge",TakePartyItem("c0anote8"))~ + CRAFT-CUTSCENE
 PartyHasItem("scrl9m")
 NumItemsPartyGT("scrl7L",2)
 NumItemsPartyGT("misc44",1)
-PartyGoldGT(11999)~ + ~I've got the components for the Spellbreaker. Let's work on that.~ DO ~SetGlobal("C0AuraCraftItem","C0AU01",7)
+PartyGoldGT(11999)~ + ~我凑齐了破法者的零件。我们做那个。~ DO ~SetGlobal("C0AuraCraftItem","C0AU01",7)
 ActionOverride("CraftForge",TakePartyItemNum("scrl9m",1))
 ActionOverride("CraftForge",TakePartyItemNum("scrl7L",3))
 ActionOverride("CraftForge",TakePartyItemNum("misc44",2))
 ActionOverride("CraftForge",TakePartyGold(12000))
 ActionOverride("CraftForge",TakePartyItem("c0anote9"))~ + CRAFT-CUTSCENE
-++ ~I'd rather not work on anything right now.~ + CRAFT-EXIT
+++ ~我现在不想做任何东西。~ + CRAFT-EXIT
 
 CHAIN BC0AURA2 CRAFT-CUTSCENE
-~Sure thing! I'll guide you through the process on the schematics, and we'll make the item together. Let's get started!~
+~当然！我照设计图带你走一遍流程，我们一起做。开始吧！~
 DO ~StartCutSceneMode()
 StartCutScene("C0ACRAFT")~ EXIT
 
 CHAIN IF WEIGHT #-1 ~Global("C0AuraFinishedCrafting","GLOBAL",1)~ THEN C0AURA2J FINISH-CRAFT
-~Ta-da! Isn't it perfect? I'm sure we'll make great use of it, too. I'll leave it up to you how exactly to use it, of course. I'm exhausted, though... who wants some tea?~
+~嗒——哒！是不是完美？我确定我们会好好用上它。当然，具体怎么用由你决定。可我累坏了……谁想喝茶？~
 DO ~SetGlobal("C0AuraFinishedCrafting","GLOBAL",0)~
 EXIT
 
 CHAIN BC0AURA2 CRAFT-EXIT
-~Okay. If you want me to craft anything, come back here and we can discuss it again.~
+~好。你若想让我造什么，回这儿来我们再商量。~
 EXIT
 
 CHAIN C0AURA2J stringfix
-~Ick. I'll have to see what I can do about that. *ahem* 'La, la...'~
+~呃。我得想办法处理一下这个。*咳* “啦，啦……”~
 DO ~ClearAllActions() 
       StartCutSceneMode() 
       StartCutScene("c0areset")~ EXIT
 
 CHAIN C0AURA2J ADVICE
-~You're asking me for advice? Umm, let me think...~
+~你问我建议？呃，让我想想……~
 END
 IF ~Global("Chapter","GLOBAL",%bg2_chapter_2%)~ + CHAPTER-2-DEFAULT-1
 IF ~RandomNum(4,1)
@@ -975,89 +975,89 @@ AreaCheck("AR2904")
 AreaCheck("AR2905")~ + CHAPTER-7-HELL
 
 CHAIN C0AURA2J CHAPTER-2-DEFAULT-1
-~Oh, I don't know. Athkatla's not a very friendly place, so I don't go outdoors much. But I'm sure there's plenty of tasks for us to earn some gold if you look hard enough.~
+~哦，我不知道。阿斯卡特拉不是个友善的地方，所以我不太出门。可你若仔细找，我确定有不少活儿能让我们挣些金币。~
 EXIT
 
 CHAIN C0AURA2J CHAPTER-2-MAGE
-~You know that big Sphere in the Slums, close to where the Jansen home is? I've heard the Cowled Wizards have been looking into a way to get inside it. I think they have a representative in the Government District. Why don't we meet them and see if there's something for us to do?~
+~你知道贫民区那个大球体吗，就在简森家附近？我听说兜帽法师一直在找进去的办法。我想他们在行政区有个代表。我们何不去见见他们，看有没有活给我们干？~
 EXIT
 
 CHAIN C0AURA2J CHAPTER-2-BARD
-~You know the Five Flagons, <CHARNAME>? The Sigil troupe are a band of actors who perform at the stage beneath the tavern. I've been to a few of their plays... they're amazing. Why don't we check them out when we have a chance?~
+~你知道五弦琴酒馆吗，<CHARNAME>？印记剧团是一班在酒馆下面戏台上演戏的伶人。我看过他们几出戏……太棒了。我们有机会何不去看看？~
 EXIT
 
 CHAIN C0AURA2J CHAPTER-2-CLERIC
-~I was out at the Temple District this one time and got screeched at by a creepy man with his eyes gouged out, can you believe it? They were going on about some god called the Unseeing Eye. Freaky. I hear the churches aren't so happy about them.~
+~有次我去神殿区，被一个眼睛被挖掉的怪人尖叫着吼了一通，你信吗？他们在讲一个叫“无眼者”的神。真瘆人。我听说各教会对他们不太满意。~
 EXIT
 
 CHAIN C0AURA2J CHAPTER-2-DRUID
-~I've wanted to go to Trademeet ever since I came to Amn. It's supposed to be one of the wealthiest trade centers outside of the city. Maybe we could even find some Lantanese crafts!~
+~我来安姆后一直想去贸市。据说它是城外最富的贸易中心之一。也许我们还能找到些兰坦的手艺品！~
 EXIT
 
 CHAIN C0AURA2J CHAPTER-2-ALLGOLD
-~I think we've all the gold we need now, so why don't we go and find out who our mysterious ally might be?~
+~我想我们现在金币够了，何不去查查我们那位神秘盟友是谁？~
 EXIT
 
 CHAIN C0AURA2J CHAPTER-3-ARAN
-~I'm not worried about the Shadow Thieves betraying us. I'm more worried they'll force us to do their dirty work. But it's not like we have any other choice... do we?~
+~我不担心影贼出卖我们。我更担心他们逼我们干他们的脏活。可我们也没别的选择……对吧？~
 EXIT
 
 CHAIN C0AURA2J CHAPTER-3-BODHI-1
-~Do you think Bodhi really means to help us, <CHARNAME>?~
+~你觉得波蒂真打算帮我们吗，<CHARNAME>？~
 END
-++ ~I think so.~ + CHAPTER-3-BODHI-1-1
-++ ~Who knows.~ + CHAPTER-3-BODHI-1-2
-++ ~Do you distrust her?~ + CHAPTER-3-BODHI-1-2
+++ ~我想是的。~ + CHAPTER-3-BODHI-1-1
+++ ~谁知道。~ + CHAPTER-3-BODHI-1-2
+++ ~你不信她？~ + CHAPTER-3-BODHI-1-2
 
 CHAIN C0AURA2J CHAPTER-3-BODHI-1-1
-~Really? I mean... I think I can trust in your leadership, so it's not just because you're too trusting. Still...~
+~真的？我是说……我想我能信任你的领导，所以这不只是因为你太好骗。不过……~
 EXTERN C0AURA2J CHAPTER-3-BODHI-1-2
 
 CHAIN C0AURA2J CHAPTER-3-BODHI-1-2
-~It's just that... I can believe she has a reason to help us right now. But afterwards... aren't you worried she might work against our best interest if she gets... whatever it is she wants?~
+~只是……我现在能相信她有理由帮我们。可之后呢……你不担心她一旦得到……她想要的东西，就可能反过来害我们？~
 END
-++ ~We'll worry about that when the time comes. For now, we need her help.~ + CHAPTER-3-BODHI-1-3
-++ ~This is a temporary alliance. I'm fully prepared for any sort of treachery.~ + CHAPTER-3-BODHI-1-3
-++ ~I guess we'll just have to hope for the best.~ + CHAPTER-3-BODHI-1-3
+++ ~到时候再担心。现在我们需要她帮忙。~ + CHAPTER-3-BODHI-1-3
+++ ~这是暂时的同盟。我对任何背叛都做好了准备。~ + CHAPTER-3-BODHI-1-3
+++ ~我想我们只能往好处指望。~ + CHAPTER-3-BODHI-1-3
 
 CHAIN C0AURA2J CHAPTER-3-BODHI-1-3
-~*sigh* Guess that's the best answer I can hope for. Maybe I'm just a little too on edge. I can't help but get goosebumps every time she speaks.~
+~*叹气* 这大概是我能指望的最好答案。也许我只是有点太紧张了。她一开口我就忍不住起鸡皮疙瘩。~
 EXIT
 
 CHAIN C0AURA2J CHAPTER-3-BODHI-2
-~You've heard my piece, <CHARNAME>. I'm not too comfortable with the sort of help we're getting, but I have to put my trust in you... so follow what course you think is right.~
+~我的话都说完了，<CHARNAME>。我对我们得到的这种帮助不太安心，可我必须信任你……所以你按你认为对的路走。~
 EXIT
 
 CHAIN C0AURA2J CHAPTER-4-BEFORE-SPELLHOLD
-~I'm... still getting my bearings after getting off the ship, <CHARNAME>. I'm sorry... I can't put my thoughts in order right now. Maybe later.~
+~我……下船后还在适应，<CHARNAME>。对不起……我现在理不清头绪。也许以后吧。~
 EXIT
 
 CHAIN C0AURA2J CHAPTER-4-IN-SPELLHOLD
-~Well... we're in now. And I absolutely hate every inch of it. Please, let's just... do our part and get out of here.~
+~嗯……我们进来了。而且我恨这里的每一寸。求你，我们只管……干完我们那部分，然后离开这儿。~
 EXIT
 
 CHAIN C0AURA2J CHAPTER-5
-~The Underdark is a strange, terrifying, yet... mystifying place. This is the first time I've ever been here, and I know it's dangerous... but I can't help but want to see more of it. And maybe some of my underground cousins, if they're willing to talk to us...~
+~幽暗地域是个奇异、可怕，可又……神秘的地方。这是我第一次来，我知道危险……可我忍不住想多看些。也许还有我地下的同族，若他们愿意跟我们说话……~
 EXIT
 
 CHAIN C0AURA2J CHAPTER-6-BODHI-ALIVE
-~After everything Bodhi's done to us and others, I'm not even going to pretend I'm not glad we'll have a chance to stop their evil. Even if it's just another task left to us, let's... do our best and finish this.~
+~波蒂对我们和对别人做了这么多之后，我甚至不打算假装我不高兴有机会阻止他们的邪恶。就算这只是留给我们的又一个任务，我们也……尽力把它做完。~
 EXIT
 
 CHAIN C0AURA2J CHAPTER-6-BODHI-DEAD
-~<CHARNAME>, I think you know better than I do what the next step should be. I'll just follow your lead.~
+~<CHARNAME>，下一步该怎么走，我想你比我清楚。我就跟着你。~
 EXIT
 
 CHAIN C0AURA2J CHAPTER-7-SULDAN
-~Suldanessellar, it's... beautiful. It's so beautiful, I could compare it to my homeland... I only wish there wasn't this much destruction and death. I want to stop it. Please, let's save them. All of them.~
+~苏达尼斯尔，它……很美。太美了，我简直能拿它跟我的故乡比……我只希望没有这么多破坏和死亡。我想阻止它。求你，我们救他们。所有人。~
 EXIT
 
 CHAIN C0AURA2J CHAPTER-7-HELL
-~This won't be the end of the road for us, <CHARNAME>... not if we keep looking out for each other. I'm ready for our last stand.~
+~这不会是我们路的尽头，<CHARNAME>……只要我们继续彼此照看就不会。我准备好最后一战了。~
 EXIT
 
 CHAIN C0AURA2J RANDTALK
-~Right now? Well...~
+~现在？嗯……~
 END
 IF ~RandomNum(9,1)~ + RANDTALK-1
 IF ~RandomNum(9,2)~ + RANDTALK-2
@@ -1073,780 +1073,780 @@ IF ~RandomNum(9,9) Global("C0AuraKnowsBG1","GLOBAL",1) GlobalGT("Chapter","GLOBA
 IF ~CheckStatGT(Myself,8,FATIGUE)~ + RANDTALK-TIRED
 
 CHAIN C0AURA2J RANDTALK-1
-~Have you ever heard that myth that trolls were once walking trees? I thought it was rather ridiculous, but sometimes I wonder...~
+~你听过那个传说吗，说巨魔曾是会走路的树？我觉得相当荒唐，可有时我会想……~
 EXIT
 
 CHAIN C0AURA2J RANDTALK-2
-~I think Muffy needs to have his rivets replaced. His tail fell off again yesterday... actually, maybe he just picked a fight with another live squirrel. *sigh*~
+~我想穆菲该换铆钉了。他尾巴昨天又掉了……其实，也许他只是跟另一只活松鼠打了一架。*叹气*~
 EXIT
 
 CHAIN C0AURA2J RANDTALK-3
-~Is my natural hair colour showing at the roots again, <CHARNAME>? I wonder if I should leave it like that. Do you think platinum blonde and pink go together well?~
+~我本来的发色又在发根露出来了吗，<CHARNAME>？我在想是不是就留着。你觉得白金和粉色搭得好吗？~
 EXIT
 
 CHAIN C0AURA2J RANDTALK-4
-~I've been trying to figure out if I can nock and fire with the Sunshooter using just my left hand. But then I'd have to draw the arrow with my teeth... hmm, I could build something to get around that.~
-= ~Maybe a shoulder-mounted third arm? Nah, that's too obvious. I'll have to think...~
+~我一直在试能不能只用左手给太阳射手搭箭开弓。可那样我就得用牙叼箭……嗯，我可以造点什么绕过这问题。~
+= ~也许肩上装第三条手臂？不，太显眼了。我得想想……~
 EXIT
 
 CHAIN C0AURA2J RANDTALK-5
-~I want strawberry tarts. Yum... strawberry tarts! Let's go pick berry-picking when we have time, <CHARNAME>! I'll get my hands on some tarts even if I have to bake them myself!~
+~我想吃草莓挞。好吃……草莓挞！我们有空去采莓子吧，<CHARNAME>！就算得自己烤，我也要弄到几块挞！~
 EXIT
 
 CHAIN C0AURA2J RANDTALK-6
-~Nandemo-nai... nothing much.~
+~Nandemo-nai……没什么。~
 EXIT
 
 CHAIN C0AURA2J RANDTALK-7
-~I've been thinking of dyeing my hair a different colour. Change things up once in a while. Do you think lavender would look good? Or how about azure? Maybe lime green? Hmm...~
+~我一直在想把头发染成别的颜色。偶尔换换花样。你觉得淡紫会好看吗？还是天蓝？也许青柠绿？嗯……~
 EXIT
 
 CHAIN C0AURA2J RANDTALK-8
-~I was just thinking about how nice it'd be if we had a chance to stop for tea and a picnic. But that isn't really possible right now, is it?~
+~我只是在想，若有机会停下来喝茶野餐该多好。可现在真做不到，对吧？~
 EXIT
 
 CHAIN C0AURA2J RANDTALK-9
-~Nah, just some random thoughts. Don't we have something to do?~
+~没什么，只是些乱想。我们不是有事要做吗？~
 EXIT
 
 CHAIN C0AURA2J RANDTALK-9a
-~*sigh* Nothing... I was just thinking about poor Imoen, probably locked up in a cell somewhere, scared and lonely... we'll be there for her soon, right?~
+~*叹气* 没什么……我只是在想可怜的爱蒙，大概被关在某个牢房里，又怕又孤单……我们很快就会到她那儿，对吧？~
 EXIT
 
 CHAIN C0AURA2J RANDTALK-9b
-~I'm glad we've got Imoen back. I just hope we'll be able to see her smile like she used to again. Even if I have to endure her really tight hugs again... a-haha...~
+~我很高兴我们把爱蒙救回来了。我只希望能再看到她像从前那样笑。就算我得再忍她那种紧得吓人的拥抱……啊哈哈……~
 EXIT
 
 CHAIN C0AURA2J RANDTALK-TIRED
-~*yawn* I'm exhausted... do you think it's be childish if I let my automaton carry me for a bit?~
+~*哈欠* 我累坏了……你觉得让我的发条仆役背我一段会不会太孩子气？~
 EXIT
 
 CHAIN C0AURA2J QUESTIONS
-~Oh... sure. What about?~
+~哦……当然。什么事？~
 END
 + ~Global("C0AuraBG2Quest1","GLOBAL",40)
-   GlobalGT("C0AuraBG2Quest1Retrospective","GLOBAL",0)~ + ~You seemed pretty shaken by what you saw with Asclepios. Do you want to talk about it?~ DO ~SetGlobal("C0AuraBG2Quest1Retrospective","GLOBAL",1)~ + QUEST1RETROSPECTIVE
-+ ~Global("C0AuraBookMerchant","GLOBAL",1)~ + ~So, tell me about 'Aurelia White'...~ DO ~SetGlobal("C0AuraBookMerchant","GLOBAL",2)~ + STORYBOOK
-++ ~I'd like to know a little more about Lantan.~ + LANTAN
-+ ~NumInPartyGT(2)~ + ~What do you think of our companions?~ + COMPANIONS
-++ ~Never mind.~ EXIT
+   GlobalGT("C0AuraBG2Quest1Retrospective","GLOBAL",0)~ + ~你看到阿斯克勒庇俄斯那些之后似乎很受震动。你想谈吗？~ DO ~SetGlobal("C0AuraBG2Quest1Retrospective","GLOBAL",1)~ + QUEST1RETROSPECTIVE
++ ~Global("C0AuraBookMerchant","GLOBAL",1)~ + ~那么，跟我说说“奥瑞莉亚·怀特”……~ DO ~SetGlobal("C0AuraBookMerchant","GLOBAL",2)~ + STORYBOOK
+++ ~我想多了解一点兰坦。~ + LANTAN
++ ~NumInPartyGT(2)~ + ~你觉得我们的同伴怎么样？~ + COMPANIONS
+++ ~算了。~ EXIT
 
 CHAIN C0AURA2J STORYBOOK
-      ~Wha—*ahem* No.~
+      ~什——*咳* 不。~
       END
-      ++ ~Come on, pretty please?~ + STORYBOOK-1A
-      ++ ~Why not? She's definitely not here in front of us at the moment.~ + STORYBOOK-1A
-      ++ ~Fine. Keep your little secret.~ + STORYBOOK-1B
+      ++ ~来嘛，求你了？~ + STORYBOOK-1A
+      ++ ~为什么不？她此刻肯定不在我们面前。~ + STORYBOOK-1A
+      ++ ~好。留着你的小秘密吧。~ + STORYBOOK-1B
 
 CHAIN C0AURA2J QUEST1RETROSPECTIVE
-      ~Oh... if you're worried about how I feel about that whole situation, <CHARNAME>, thanks, but... don't worry. I've had some time to think about it.~
-            = ~I couldn't refute him at the time. And I still can't. But that's just how researchers are, isn't it? We spend our whole lives searching for answers we might never find.~
-            = ~And in the end, it's too easy to give up. I don't think I have yet... but master Asclepios was right. I'm not moving forward as I am now.~
-            = ~It's just like he said. I have no right to pity him. He might have walked down a road of nothing but darkness, but I'm the one who's lost and confused.~
+      ~哦……你若担心我对那整件事的感受，<CHARNAME>，谢谢，可……别担心。我有些时间想过了。~
+            = ~当时我没法驳他。现在也不能。可研究者就是这样，不是吗？我们一辈子都在寻找也许永远找不到的答案。~
+            = ~到头来，放弃太容易。我想我还没放弃……可阿斯克勒庇俄斯大师说得对。照我现在的样子，我没有前进。~
+            = ~正如他说的。我没资格可怜他。他也许走上了一条只有黑暗的路，可迷失困惑的人是我。~
       END
-            ++ ~I disagree. You are moving forward. You're just being wisely cautious about it.~ + QUEST1RETROSPECTIVE-1A
-            ++ ~Still, unlike him, you can still choose a brighter path. You have nothing to be ashamed of.~ + QUEST1RETROSPECTIVE-1B
-            ++ ~Well, he's most likely dead now, and you're not. I'd say that puts you above him.~ + QUEST1RETROSPECTIVE-1C
-            ++ ~This is all a bit too complicated for me. I'm not a student of knowledge like you.~ + QUEST1RETROSPECTIVE-2
+            ++ ~我不同意。你在前进。你只是明智地谨慎。~ + QUEST1RETROSPECTIVE-1A
+            ++ ~不过，跟他不同，你仍能选择更光明的路。你没什么可羞愧的。~ + QUEST1RETROSPECTIVE-1B
+            ++ ~嗯，他现在多半死了，你没有。我说这让你比他强。~ + QUEST1RETROSPECTIVE-1C
+            ++ ~这对我来说有点太复杂。我不像你是个钻研学问的人。~ + QUEST1RETROSPECTIVE-2
 
 CHAIN C0AURA2J QUEST1RETROSPECTIVE-1A
-      ~Well, I have the luxury of time, and some like you to protect me from my mistakes. Where would I be if I didn't have...~
+      ~嗯，我有时间的奢侈，还有像你这样的人保护我不犯错。若不是有……~
       EXTERN C0AURA2J QUEST1RETROSPECTIVE-2
 
 CHAIN C0AURA2J QUEST1RETROSPECTIVE-1B
-      ~I'm lucky. No, I'd go as far as to say I'm overly privileged. I haven't had to face a truly difficult decision yet. I don't know if I could...~
+      ~我运气好。不，我甚至要说我太受优待了。我还没被迫面对真正艰难的选择。我不知道我能不能……~
       EXTERN C0AURA2J QUEST1RETROSPECTIVE-2
 
 CHAIN C0AURA2J QUEST1RETROSPECTIVE-1C
-      ~*sigh* I don't know, <CHARNAME>. This shouldn't have anything to do with winning or losing. Those who pursue knowledge should work together. I just wish...~
+      ~*叹气* 我不知道，<CHARNAME>。这不该跟输赢有关。追求知识的人该合作。我只希望……~
       EXTERN C0AURA2J QUEST1RETROSPECTIVE-2
 
 CHAIN C0AURA2J QUEST1RETROSPECTIVE-2
-      ~Sorry, <CHARNAME>. I guess I haven't figured it out as much as I thought I did. I'll stop now before I lead you on in circles for longer... still, thanks for hearing me out. It's easier to put it all into perspective when I've talked about it a bit.~
-      = ~I'm glad you're here. Really glad.~
+      ~抱歉，<CHARNAME>。我想我没自己以为的那么想通了。我就在带你绕圈更久之前停下……不过，谢谢你听我说。说一点之后，整件事反而容易看清。~
+      = ~我很高兴你在。真的很高兴。~
       EXIT
 
 CHAIN C0AURA2J STORYBOOK-1A
-      ~That's not—oh, alright. I'll tell you a little bit.~
-      = ~Once upon a time, in Lantan, there was a girl who spent her whole life as a little sister. Then, one day, she found herself becoming a big sister... when a pair of the sweetest twins in the realms suddenly entered her life.~
-      = ~By that point, her own big sisters were long gone to live their own lives... the responsibility of these twins was now all hers. So she helped to raise them, taught them how to walk, played with them, told them stories...~
-      = ~Oh, and they really did love stories. So much that the girl couldn't make them up quick enough on the spot anymore. So she started writing, and drawing.~
-      = ~And she really did put her soul into every picture she drew. Because she wanted to keep seeing the sparkles in the twins' eyes whenever Lucky Lilla would find the golden treasure, or the stream that sang elvish songs, or...~
-      = ~*ahem* Anyway, that was what all I... she really expected for herself. But the girl's papa was a publisher... and even though he's seen books written by sages and famed scholars all, he still loved those silly little books that brought joy into childrens' hearts.~
-      = ~So, he told the girl, "Why not give your gift to all children in the world?" And the girl agreed... but she was too embarrassed to let anyone know those childish stories really came from. So she thought of a pseudonym and... well, you can figure it out from there.~
-      = ~That's as far as the story goes. Maybe one day, Aurelia White might come up with her next great story... and it might even have to do with you, who knows? But I think it's still too early for that.~
+      ~不是——哦，好吧。我讲一点。~
+      = ~从前，在兰坦，有个女孩一辈子都做妹妹。然后有一天，她发现自己成了姐姐……一对全诸国度最可爱的双胞胎忽然进了她的生活。~
+      = ~那时，她自己的姐姐们早已离家过自己的生活……这对双胞胎的责任就全落在她身上。于是她帮着养他们，教他们走路、跟他们玩、给他们讲故事……~
+      = ~哦，他们真爱故事。爱到那女孩再也来不及现编。于是她开始写，开始画。~
+      = ~每一幅画她都真的倾注了灵魂。因为她想一直看到双胞胎眼里的光——每当幸运的莉拉找到黄金宝藏，或那唱着精灵歌的小溪，或……~
+      = ~*咳* 总之，那就是我……她真为自己盼的。可女孩的爸爸是出版商……虽然他见过贤人和著名学者写的书，他仍爱那些让孩子们心里欢喜的傻小书。~
+      = ~所以他对女孩说：“为何不把你的天赋献给世上所有孩子？”女孩答应了……可她太害羞，不肯让人知道那些幼稚的故事真出自谁。于是她想了个笔名……然后，你就猜得到了。~
+      = ~故事就到这里。也许有一天，奥瑞莉亚·怀特会想出她下一个了不起的故事……甚至可能跟你有关，谁知道？可我觉得那还太早。~
       EXIT
 
 CHAIN C0AURA2J STORYBOOK-1B
-      ~Sorry. Maybe one day, you'll be able to talk to Aurelia White as she's composing her next piece... but that'll be a story for another time.~
+      ~抱歉。也许有一天，你能在奥瑞莉亚·怀特写下一篇时跟她说话……可那是另一个时候的故事了。~
       EXIT
 
 CHAIN C0AURA2J LANTAN
-~I'd be happy to talk about my homeland! What were you curious about in particlar?~
+~我很乐意聊聊我的故乡！你具体好奇什么？~
 END
-++ ~Can you tell me about the different parts of Lantan?~ DO ~SetGlobal("C0AuraTalkLantanIslands","GLOBAL",1)~ + TOWNS
-+ ~Global("C0AuraTalkLantanIslands","GLOBAL",1)~ + ~What are the settlements of Lantan like?~ + SETTLEMENTS
-+ ~Global("C0AuraTalkLantanWorkshops","GLOBAL",1)~ + ~Tell me about the workshops.~ + LANTAN-WORKSHOPS
-++ ~How is magic viewed as by the people of Lantan?~ + LANTANMAGIC
-++ ~What is the ruling government of Lantan like?~ + RULERS
-++ ~Why is it we don't see many of your people outside of the islands?~ + OUTSIDE
-++ ~Never mind. There's nothing I wanted to know.~ EXIT
+++ ~能跟我说说兰坦各部分吗？~ DO ~SetGlobal("C0AuraTalkLantanIslands","GLOBAL",1)~ + TOWNS
++ ~Global("C0AuraTalkLantanIslands","GLOBAL",1)~ + ~兰坦的聚落是什么样？~ + SETTLEMENTS
++ ~Global("C0AuraTalkLantanWorkshops","GLOBAL",1)~ + ~跟我说说那些工坊。~ + LANTAN-WORKSHOPS
+++ ~兰坦人怎么看魔法？~ + LANTANMAGIC
+++ ~兰坦的统治政府是什么样？~ + RULERS
+++ ~为什么我们在岛外见不到多少你的族人？~ + OUTSIDE
+++ ~算了。没什么想知道的。~ EXIT
 
 CHAIN C0AURA2J TOWNS
-~Sure. Let's see... you'll probably want to know about the most interesting places, right? Well, to start off, there's Sambar—that's our capital city. The Sambaran Academy is the main institute of study in the whole nation. Anyone who's ever wanted a place in the major guilds of Lantan is going to learn from there—yours truly included, of course!~
-= ~Next is Anchoril. That's where I was born, by the way. It's a lovely town that's right by the eastern coast of the island. It's not as grand as the bigger cities, but it's known as the center of foreign trade for the nation. That makes it quite a lively place, too!~
-= ~Illul is the western side of Lantan, and it's home to the High Holy Crafthouse of Inspiration, which makes it the centerpiece of the church of Gond. I haven't been there all too often, but my sister Luna serves there as a Seeker... that's sort of like a cross of an artificer and a priestess.~
-= ~The rest are mostly settlements where our clans make their homes—Darluj, Dtakkar, and others. Oh, and the island of Orlil... that's the least inhabited place in Lantan, but it's where our bards and arcanists reside.~
+~当然。让我想想……你大概想知道最有意思的地方，对吧？那先说吧，有桑巴尔——那是我们的都城。桑巴尔学院是全国主要的研习机构。想在兰坦各大行会占一席之地的，都得去那儿学——当然也包括本人！~
+= ~然后是安科里尔。顺便说，我就在那儿出生的。那是座可爱的镇子，就在岛的东岸。它不如大城宏伟，可是全国的对外贸易中心。所以那儿也相当热闹！~
+= ~伊卢尔在兰坦西边，那里有“灵感至上圣工坊”，是贡德教团的核心。我不常去，可我姐姐露娜在那儿做“探求者”……大概算奇械师和女祭司的结合。~
+= ~其余多是各氏族安家的聚落——达尔卢吉、德塔卡尔等等。哦，还有奥尔利尔岛……那是兰坦人最少的地方，可我们的吟游诗人和奥术师住在那里。~
 END
-++ ~What are the settlements of Lantan like?~ + SETTLEMENTS
-++ ~I see. There's something else I wanted to know.~ + LANTAN
-++ ~Very interesting. That's all for now, though.~ EXIT
+++ ~兰坦的聚落是什么样？~ + SETTLEMENTS
+++ ~我明白了。我还有别的想知道。~ + LANTAN
+++ ~很有意思。暂时就这些。~ EXIT
 
 CHAIN C0AURA2J SETTLEMENTS
-~Ooh, you'd have to see for yourself to understand... it's nothing like the cities you'd see anywhere else. Lantan is full of lush jungle that gets thicker the closer you get to the center of the islands. It's not possible to build settlements on the ground without harming the ecosystem, so we build our homes up high among the trees.~
-= ~You might not even realize you're in a Lantanese city unless you thought to look up. Then you'd see the platforms on which our houses are built, all connected to each other via bridges and ladders. It's really something unique.~
-= ~I grew up in Anchoril, though, which is right by the coast. It's much closer to the kind of port town you might be familiar with. Our community is focused on fishing, agriculture and foreign trade, so we're a bit more connected to the outside world than the other settlements.~
+~哦，那得你亲眼看看才明白……跟你别处见的城市完全不同。兰坦满是茂密的丛林，越靠近群岛中心越浓密。在地面建聚落会破坏生态，所以我们把家建在树高处。~
+= ~你若没想到抬头看，甚至不会察觉自己在兰坦的城市里。然后你会看见我们房屋所在的平台，全靠桥和梯子相连。真是独一无二。~
+= ~不过我是在安科里尔长大的，那就在海岸边。它更接近你可能熟悉的港口城镇。我们社区以捕鱼、农业和外贸为主，所以比别的聚落更连着外面的世界。~
 END
-++ ~I see. There's something else I wanted to know.~ + LANTAN
-++ ~Very interesting. That's all for now, though.~ EXIT
+++ ~我明白了。我还有别的想知道。~ + LANTAN
+++ ~很有意思。暂时就这些。~ EXIT
 
 CHAIN C0AURA2J LANTANMAGIC
-~That's... a difficult question to answer. Not everyone has the same views on magic, even within the same settlements. It really depends on who you're asking.~
-= ~Most Lantanese don't think too much about magic in general. Our clans mostly all have specialized fields of study that they focus on for their entire lives, so they wouldn't even think about studying something different like magic.~
-= ~The church of Gond is rather divided on their stance on magic, but their views aren't entirely opposed for the most part. Some believe magic should be treated like any other tool or craft, while others believe everything done by magic has a non-magical alternative. There are some Lantanese who oppose magic entirely, but they're... rare, and not looked upon favorably.~
-= ~Although we don't have any proper institution for studying magic, so anyone who has an interest in it has to travel to other regions like Neverwinter, Waterdeep or Silverymoon, or be apprenticed to the few arcanists who live in Orlil. My younger brother Eridanus was born a sorcerer, but is too sickly to travel away from Lantan, so he studies under my uncle Marius instead.~
+~这……是个难答的问题。就算在同一聚落，每个人对魔法的看法也不一样。真得看你问谁。~
+= ~多数兰坦人一般不太想魔法。我们各氏族多半各有终身专注的专门学问，所以根本不会想到去学魔法这种别的东西。~
+= ~贡德教团对魔法的立场颇为分歧，可大体上并不完全反对。有人认为魔法该像任何工具或手艺一样对待，有人相信魔法所做的一切都有非魔法的替代。也有兰坦人完全反对魔法，可他们……很少，也不受看好。~
+= ~不过我们没有正式研习魔法的机构，所以对魔法有兴趣的人得去无冬城、深水城或银月城等别的地区，或者拜奥尔利尔少数奥术师为师。我弟弟埃里达努斯天生是术士，可身体太弱离不开兰坦，所以在我叔叔马里乌斯门下学习。~
 END
-++ ~I see. There's something else I wanted to know.~ + LANTAN
-++ ~Very interesting. That's all for now, though.~ EXIT
+++ ~我明白了。我还有别的想知道。~ + LANTAN
+++ ~很有意思。暂时就这些。~ EXIT
 
 CHAIN C0AURA2J RULERS
-~We have the Ayrorch. They're a council of twelve that consist of the most knowledgable and influencial people in Lantan. One member is elected as the Ayrar, the speaker, while another is the Lantar, who acts as our representative to other nations. The rest are known as Santar.~
-= ~My uncle on my father's side, Dedalus, used to be the Lantar of the Ayrorch, but he left the position years ago to serve as Head Artificer of the Eleventh Workshop, which specializes in developing weapons to protect the nation.~
+~我们有艾罗奇。那是由十二人组成的议会，全是兰坦最有学识和影响力的人。一人被选为“艾拉”，即议长；另一人为“兰塔”，充任我们对其他国度的代表。其余称“桑塔”。~
+= ~我父系的叔叔戴达罗斯曾任艾罗奇的兰塔，可多年前他离任，去做第十一工坊的首席奇械师，那工坊专研保家卫国的武器。~
 DO ~SetGlobal("C0AuraTalkLantanWorkshops","GLOBAL",1)~
 END
-++ ~Lantan has an entire workshop dedicated to weapons development?~ + LANTAN-WEAPONS
-++ ~Tell me about these workshops.~ + LANTAN-WORKSHOPS
-++ ~I see. There's something else I wanted to know.~ + LANTAN
-++ ~Very interesting. That's all for now, though.~ EXIT
+++ ~兰坦有一整座工坊专门研发武器？~ + LANTAN-WEAPONS
+++ ~跟我说说这些工坊。~ + LANTAN-WORKSHOPS
+++ ~我明白了。我还有别的想知道。~ + LANTAN
+++ ~很有意思。暂时就这些。~ EXIT
 
 CHAIN C0AURA2J LANTAN-WEAPONS
-~Oh... yeah. We're not really supposed to talk about what they make there, since our weapons affect our national security. Most Lantanese don't have a positive opinion of using artifice as a weapon, but the Eleventh Workshop is agreed to be a necessity.~
-= ~I've actually been there. When I was working on inventing my Sunshooter. It's... about what you'd expect, really. Some of the most serious and dedicated inventors in the nation, working on destructive inventions made for the safety of the nation.~
-= ~My father isn't too fond of it—he's always worried about my uncle's health and wellbeing, with how dangerous and stressful his role as the Head Artificer is. Having to personally supervise all those dangerous experiments can't be an easy job.~
+~哦……是。我们其实不该谈他们在那里造什么，因为我们的武器关系国家安全。多数兰坦人对把奇械用作武器没有好看法，可第十一工坊被认为是必要的。~
+= ~其实我去过那儿。在我发明太阳射手的时候。那……就跟你预想的差不多。全国最认真、最专注的一些发明家，为国家安全研制破坏性的发明。~
+= ~我父亲不太喜欢它——他总担心我叔叔的健康和安危，毕竟首席奇械师这角色又危险又压人。要亲自监督那些危险实验，绝不是轻松活。~
 END
-++ ~I see. There's something else I wanted to know.~ + LANTAN
-++ ~Very interesting. That's all for now, though.~ EXIT
+++ ~我明白了。我还有别的想知道。~ + LANTAN
+++ ~很有意思。暂时就这些。~ EXIT
 
 CHAIN C0AURA2J LANTAN-WORKSHOPS
-~The workshops are where the greatest specialists in Lantan work together to focus on specific studies for the advancement of Lantan. They design, manufacture and compose treatises on their works which then become officially sanctioned by the Ayrorchs.~
-= ~Each specializes in their own facet of design. The First Workshop is composed of experts in Metallurgy, the Second on Botany and Zoology, the Third specializes in Alchemy, the Fifth, Sixth, and Seventh on harnessing different types of natural energies, and so on. The Eleventh specializes in inventions meant for use as weapons.~
+~工坊是兰坦最顶尖的专家聚在一起、专攻特定学问以推进兰坦的地方。他们设计、制造，并撰写关于自己作品的论著，再由艾罗奇正式认可。~
+= ~各工坊专精自己那一面。第一工坊是冶金专家，第二是植物与动物，第三专精炼金，第五、第六、第七研究不同种类的自然能量，等等。第十一专精于用作武器的发明。~
 END
-++ ~What about the Fourth Workshop? What do they specialise in?~ + LANTAN-4TH-WORKSHOP
-++ ~Lantan has an entire workshop dedicated to weapons development?~ + LANTAN-WEAPONS
-++ ~I see. There's something else I wanted to know.~ + LANTAN
-++ ~Very interesting. That's all for now, though.~ EXIT
+++ ~那第四工坊呢？他们专精什么？~ + LANTAN-4TH-WORKSHOP
+++ ~兰坦有一整座工坊专门研发武器？~ + LANTAN-WEAPONS
+++ ~我明白了。我还有别的想知道。~ + LANTAN
+++ ~很有意思。暂时就这些。~ EXIT
 
 CHAIN C0AURA2J LANTAN-4TH-WORKSHOP
-~I... don't know. The Fourth Workshop has been inactive for several decades now, I think, and as far as I know there's never been any talk among the Ayrorchs or the church about restoring it.~
-= ~There's also no collections or documents that detail what it used to do in any of the libraries. Actually, for that matter, nobody I've talked to even seems to know where it is. Even my father doesn't know.~
+~我……不知道。第四工坊我想已停了几十年了，据我所知艾罗奇和教会从没谈过要恢复它。~
+= ~而且任何图书馆里也没有详述它旧日作为的藏档或文件。其实，说到这个，跟我聊过的人似乎连它在哪儿都不知道。连我父亲都不知道。~
 END
-++ ~Strange. Let's talk about something else.~ + LANTAN
-++ ~Very interesting. That's all for now, though.~ EXIT
+++ ~奇怪。我们说点别的吧。~ + LANTAN
+++ ~很有意思。暂时就这些。~ EXIT
 
 CHAIN C0AURA2J OUTSIDE
-~That... well, for starters, what you're hearing is mostly just from me, okay? I don't speak as a proper authority on my people and their thoughts, but I can try my best to give you a loose idea.~
-= ~The Lantanna are... well, I wouldn't go as far as to say isolationists, but we've lived our way of life with minimal influence from the outside for generations now, and... well, it's not an easy thing for us to acclimate to life elsewhere.~
+~那……嗯，先说好，你听到的多半只是我一家之言，好吗？我不算我族人及其想法的正式权威，可我能尽力给你个大概。~
+= ~兰坦人……嗯，我不会说我们是孤立主义者，可我们这生活方式传承了几代，受外界影响极少，而且……嗯，我们不太容易适应别处的生活。~
 END
 IF ~Global("C0AuraTalkLantanOutsiders","GLOBAL",0)~ DO ~SetGlobal("C0AuraTalkLantanOutsiders","GLOBAL",1)~ + OUTSIDE-1
 IF ~!Global("C0AuraTalkLantanOutsiders","GLOBAL",0)~ + OUTSIDE-1
 
 CHAIN C0AURA2J OUTSIDE-1
-~It'd be like... well, what was it like for you, <CHARNAME>? I remember you spent almost your entire life in Candlekeep. Did the whole world outside seem strange and difficult when you left?~
+~那就好比……嗯，你当初是什么感觉，<CHARNAME>？我记得你几乎一辈子都在烛堡。你离开时，外面的世界是不是又陌生又难？~
 END
-++ ~It did. I couldn't take trusting anyone for granted, and I've encountered dangers I never even imagined.~ + OUTSIDE-2
-++ ~I felt like I had a lot to learn, but the culture and people weren't as unfamiliar as it would be to travel to a different land. I got used to it quickly.~ + OUTSIDE-2
+++ ~是的。我没法把信任任何人当作理所当然，也遇上了从没想象过的危险。~ + OUTSIDE-2
+++ ~我觉得我有很多要学，可那文化和人并不像去另一片土地那样陌生。我很快就习惯了。~ + OUTSIDE-2
 
 CHAIN C0AURA2J OUTSIDE-2
-~I guess it's an unfair comparison. Most people aren't thrown into the kind of life you've had. It's actually inspiring when I think about everything you've accomplished so quickly.~
-= ~And people called me talented while I was growing up... haha, I guess I've been in need of a humbling this entire time.~
+~我想这比较不公平。多数人不会被扔进你那样的生活。想到你这么快做成的一切，真让人受鼓舞。~
+= ~我小时候还有人夸我有天赋……哈哈，看来我一直都需要被敲打一下。~
 EXTERN C0AURA2J OUTSIDE-3
 
 CHAIN C0AURA2J OUTSIDE-3
-~Anything else you wanted to talk about?~
+~还有别的想聊吗？~
 END
-++ ~Let's go back to my previous questions.~ + LANTAN
-++ ~No, that's all for now.~ EXIT
+++ ~回到我刚才的问题。~ + LANTAN
+++ ~不，暂时就这些。~ EXIT
 
 CHAIN C0AURA2J COMPANIONS
-~I really shouldn't gossip, but... oh, go on then. Which one?~
+~我真不该嚼舌根，可……好吧，那就说吧。哪一位？~
 END
 + ~InParty("AERIE")
-Global("C0AuraAerieFriendship","GLOBAL",0)~ + ~What do you think of Aerie?~ + AERIE-NOFRIEND
+Global("C0AuraAerieFriendship","GLOBAL",0)~ + ~你觉得艾黎怎么样？~ + AERIE-NOFRIEND
 + ~InParty("AERIE")
-GlobalGT("C0AuraAerieFriendship","GLOBAL",0)~ + ~What do you think of Aerie?~ + AERIE-FRIEND
+GlobalGT("C0AuraAerieFriendship","GLOBAL",0)~ + ~你觉得艾黎怎么样？~ + AERIE-FRIEND
 + ~!Global("AnomenIsKnight","GLOBAL",1)
 !Global("TalkedCor","GLOBAL",1)
 !Global("AnomenIsNotKnight","GLOBAL",1)
-InParty("ANOMEN")~ + ~What do you think of Anomen?~ + ASKANOMEN-LN
+InParty("ANOMEN")~ + ~你觉得阿诺门怎么样？~ + ASKANOMEN-LN
 + ~!Global("AnomenIsKnight","GLOBAL",1)
 Global("TalkedCor","GLOBAL",1)
 !Global("AnomenIsNotKnight","GLOBAL",1)
-InParty("ANOMEN")~ + ~What do you think of Anomen?~ + ASKANOMEN-LN-AFTERDAD
+InParty("ANOMEN")~ + ~你觉得阿诺门怎么样？~ + ASKANOMEN-LN-AFTERDAD
 + ~Global("AnomenIsKnight","GLOBAL",1)
-InParty("ANOMEN")~ + ~What do you think of Anomen?~ + ASKANOMEN-LG
+InParty("ANOMEN")~ + ~你觉得阿诺门怎么样？~ + ASKANOMEN-LG
 + ~Global("AnomenIsNotKnight","GLOBAL",1)
-InParty("ANOMEN")~ + ~What do you think of Anomen?~ + ASKANOMEN-CN
-+ ~InParty("CERND")~ + ~What do you think of Cernd?~ + ASKCERND
-+ ~InParty("DORN")~ + ~What do you think of Dorn?~ + ASKDORN
-+ ~InParty("C0DRAKE")~ + ~What do you think of Drake?~ + ASKDRAKE
+InParty("ANOMEN")~ + ~你觉得阿诺门怎么样？~ + ASKANOMEN-CN
++ ~InParty("CERND")~ + ~你觉得瑟恩德怎么样？~ + ASKCERND
++ ~InParty("DORN")~ + ~你觉得多恩怎么样？~ + ASKDORN
++ ~InParty("C0DRAKE")~ + ~你觉得德雷克怎么样？~ + ASKDRAKE
 + ~Gender("EDWIN",MALE)
-InParty("EDWIN")~ + ~What do you think of Edwin?~ + ASKEDWIN-MALE
+InParty("EDWIN")~ + ~你觉得埃德温怎么样？~ + ASKEDWIN-MALE
 + ~!Gender("EDWIN",MALE)
-InParty("EDWIN")~ + ~What do you think of Edwin?~ + ASKEDWIN-FEMALE
-+ ~InParty("E3FADE")~ + ~What do you think of Fade?~ + ASKFADE
-+ ~InParty("L#FOU")~ + ~What do you think of Foundling?~ + ASKFOUNDLING
-+ ~InParty("C0GLEY")~ + ~What do you think of Gleya?~ + ASKGLEYA
-+ ~InParty("HAERDALIS")~ + ~What do you think of Haer'Dalis?~ + ASKHAERDALIS
-+ ~InParty("OHHFAK")~ + ~What do you think of Hexxat?~ + ASKCLARA
-+ ~InParty("HEXXAT")~ + ~What do you think of Hexxat?~ + ASKHEXXAT
-+ ~!Global("C0AuraKnowsBG1","GLOBAL",1) InParty("IMOEN2")~ + ~What do you think of Imoen?~ + ASKIMOEN-NOBG1
-+ ~Global("C0AuraKnowsBG1","GLOBAL",1) InParty("IMOEN2")~ + ~What do you think of Imoen?~ + ASKIMOEN-BG1
-+ ~InParty("JAHEIRA")~ + ~What do you think of Jaheira?~ + ASKJAHEIRA
-+ ~InParty("JAN")~ + ~What do you think of Jan?~ + ASKJAN
-+ ~InParty("KELDORN")~ + ~What do you think of Keldorn?~ + ASKKELDORN
-+ ~InParty("C0KERAH")~ + ~What do you think of Kerahn?~ + ASKKERAHN
-+ ~InParty("KORGAN")~ + ~What do you think of Korgan?~ + ASKKORGAN
-+ ~InParty("MAZZY")~ + ~What do you think of Mazzy?~ + ASKMAZZY
-+ ~InParty("MINSC")~ + ~What do you think of Minsc?~ + ASKMINSC
-+ ~InParty("NALIA") Global("C0AuraNalia1","GLOBAL",0)~ + ~What do you think of Nalia?~ + ASKNALIA
-+ ~InParty("NALIA") GlobalGT("C0AuraNalia1","GLOBAL",0)~ + ~What do you think of Nalia?~ + ASKNALIA-2
-+ ~InParty("NEERA")~ + ~What do you think of Neera?~ + ASKNEERA
-+ ~InParty("C0OPHEL")~ + ~What do you think of Ophelia?~ + ASKOPHELIA
-+ ~InParty("C0PAINA")~ + ~What do you think of Pai'Na?~ + ASKPAINA
-+ ~InParty("L#2PHAL")~ + ~What do you think of Phalh?~ + ASKPHALH
-+ ~InParty("RASAAD")~ + ~What do you think of Rasaad?~ + ASKRASAAD
-+ ~InParty("C0SIRENE")~ + ~What do you think of Sirene?~ + ASKSIRENE
+InParty("EDWIN")~ + ~你觉得埃德温怎么样？~ + ASKEDWIN-FEMALE
++ ~InParty("E3FADE")~ + ~你觉得菲德怎么样？~ + ASKFADE
++ ~InParty("L#FOU")~ + ~你觉得芬德灵怎么样？~ + ASKFOUNDLING
++ ~InParty("C0GLEY")~ + ~你觉得格蕾雅怎么样？~ + ASKGLEYA
++ ~InParty("HAERDALIS")~ + ~你觉得海尔达利怎么样？~ + ASKHAERDALIS
++ ~InParty("OHHFAK")~ + ~你觉得赫克萨特怎么样？~ + ASKCLARA
++ ~InParty("HEXXAT")~ + ~你觉得赫克萨特怎么样？~ + ASKHEXXAT
++ ~!Global("C0AuraKnowsBG1","GLOBAL",1) InParty("IMOEN2")~ + ~你觉得爱蒙怎么样？~ + ASKIMOEN-NOBG1
++ ~Global("C0AuraKnowsBG1","GLOBAL",1) InParty("IMOEN2")~ + ~你觉得爱蒙怎么样？~ + ASKIMOEN-BG1
++ ~InParty("JAHEIRA")~ + ~你觉得贾希拉怎么样？~ + ASKJAHEIRA
++ ~InParty("JAN")~ + ~你觉得扬怎么样？~ + ASKJAN
++ ~InParty("KELDORN")~ + ~你觉得凯尔东怎么样？~ + ASKKELDORN
++ ~InParty("C0KERAH")~ + ~你觉得凯兰怎么样？~ + ASKKERAHN
++ ~InParty("KORGAN")~ + ~你觉得库尔甘怎么样？~ + ASKKORGAN
++ ~InParty("MAZZY")~ + ~你觉得玛兹怎么样？~ + ASKMAZZY
++ ~InParty("MINSC")~ + ~你觉得明斯克怎么样？~ + ASKMINSC
++ ~InParty("NALIA") Global("C0AuraNalia1","GLOBAL",0)~ + ~你觉得娜莉亚怎么样？~ + ASKNALIA
++ ~InParty("NALIA") GlobalGT("C0AuraNalia1","GLOBAL",0)~ + ~你觉得娜莉亚怎么样？~ + ASKNALIA-2
++ ~InParty("NEERA")~ + ~你觉得妮拉怎么样？~ + ASKNEERA
++ ~InParty("C0OPHEL")~ + ~你觉得奥菲莉亚怎么样？~ + ASKOPHELIA
++ ~InParty("C0PAINA")~ + ~你觉得派娜怎么样？~ + ASKPAINA
++ ~InParty("L#2PHAL")~ + ~你觉得法尔怎么样？~ + ASKPHALH
++ ~InParty("RASAAD")~ + ~你觉得拉沙德怎么样？~ + ASKRASAAD
++ ~InParty("C0SIRENE")~ + ~你觉得塞琳怎么样？~ + ASKSIRENE
 + ~!InParty("L#2PHAL")
-InParty("L#2VERR")~ + ~What do you think of Verr'Sza?~ + ASKVERRSZA-NOPHALH
+InParty("L#2VERR")~ + ~你觉得维尔莎怎么样？~ + ASKVERRSZA-NOPHALH
 + ~InParty("L#2PHAL")
-InParty("L#2VERR")~ + ~What do you think of Verr'Sza?~ + ASKVERRSZA-PHALH
-+ ~InParty("VICONIA")~ + ~What do you think of Viconia?~ + ASKVICONIA
-+ ~InParty("VALYGAR") !Dead("lavok") !Dead("lavok02")~ + ~What do you think of Valygar?~ + ASKVALYGAR
-+ ~InParty("VALYGAR") OR(2) Dead("lavok") Dead("lavok02") Global("C0AuraVALYGARJ107","GLOBAL",1)~ + ~What do you think of Valygar?~ + ASKVALYGAR-AFTERQUEST-INPARTY
-+ ~InParty("VALYGAR") OR(2) Dead("lavok") Dead("lavok02") !Global("C0AuraVALYGARJ107","GLOBAL",1)~ + ~What do you think of Valygar?~ + ASKVALYGAR-AFTERQUEST-NOTINPARTY
-+ ~InParty("L0WILL")~ + ~What do you think of Will?~ + ASKWILL
+InParty("L#2VERR")~ + ~你觉得维尔莎怎么样？~ + ASKVERRSZA-PHALH
++ ~InParty("VICONIA")~ + ~你觉得维康妮亚怎么样？~ + ASKVICONIA
++ ~InParty("VALYGAR") !Dead("lavok") !Dead("lavok02")~ + ~你觉得瓦里格怎么样？~ + ASKVALYGAR
++ ~InParty("VALYGAR") OR(2) Dead("lavok") Dead("lavok02") Global("C0AuraVALYGARJ107","GLOBAL",1)~ + ~你觉得瓦里格怎么样？~ + ASKVALYGAR-AFTERQUEST-INPARTY
++ ~InParty("VALYGAR") OR(2) Dead("lavok") Dead("lavok02") !Global("C0AuraVALYGARJ107","GLOBAL",1)~ + ~你觉得瓦里格怎么样？~ + ASKVALYGAR-AFTERQUEST-NOTINPARTY
++ ~InParty("L0WILL")~ + ~你觉得威尔怎么样？~ + ASKWILL
 + ~InParty("YOSHIMO")
-Global("C0AuraYoshimoFriendship","GLOBAL",0)~ + ~What do you think of Yoshimo?~ + ASKYOSHIMO-NOFRIEND
+Global("C0AuraYoshimoFriendship","GLOBAL",0)~ + ~你觉得吉野怎么样？~ + ASKYOSHIMO-NOFRIEND
 + ~InParty("YOSHIMO")
-GlobalGT("C0AuraYoshimoFriendship","GLOBAL",0)~ + ~What do you think of Yoshimo?~ + ASKYOSHIMO-FRIEND
+GlobalGT("C0AuraYoshimoFriendship","GLOBAL",0)~ + ~你觉得吉野怎么样？~ + ASKYOSHIMO-FRIEND
 + ~Global("C0AuraYoshimoBetrayal","GLOBAL",0)
 Dead("YOSHIMO")
 !GlobalGT("C0AuraYoshimo2","GLOBAL",4)
-Global("C0AuraYoshimoFriendshipDeadTalk","GLOBAL",0)~ + ~What do you think of Yoshimo?~ DO ~SetGlobal("C0AuraYoshimoFriendshipDeadTalk","GLOBAL",-1)~ + ASKYOSHIMO-DEAD-NOFRIEND
+Global("C0AuraYoshimoFriendshipDeadTalk","GLOBAL",0)~ + ~你觉得吉野怎么样？~ DO ~SetGlobal("C0AuraYoshimoFriendshipDeadTalk","GLOBAL",-1)~ + ASKYOSHIMO-DEAD-NOFRIEND
 + ~Global("C0AuraYoshimoBetrayal","GLOBAL",1)
 Dead("YOSHIMO")
 GlobalGT("C0AuraYoshimo2","GLOBAL",4)
 OR(2)
 Global("C0AuraYoshimoFriendshipDeadTalk","GLOBAL",0)
-!GlobalTimerExpired("C0AuraYoshimoFriendshipDeadTimer","GLOBAL")~ + ~What do you think of Yoshimo?~ DO ~SetGlobal("C0AuraYoshimoFriendshipDeadTalk","GLOBAL",1) SetGlobalTimer("C0AuraYoshimoFriendshipDeadTimer","GLOBAL",THREE_DAYS)~ + ASKYOSHIMO-FRIEND-BEFORETIMER
+!GlobalTimerExpired("C0AuraYoshimoFriendshipDeadTimer","GLOBAL")~ + ~你觉得吉野怎么样？~ DO ~SetGlobal("C0AuraYoshimoFriendshipDeadTalk","GLOBAL",1) SetGlobalTimer("C0AuraYoshimoFriendshipDeadTimer","GLOBAL",THREE_DAYS)~ + ASKYOSHIMO-FRIEND-BEFORETIMER
 + ~Global("C0AuraYoshimoBetrayal","GLOBAL",1)
 Dead("YOSHIMO")
 GlobalGT("C0AuraYoshimo2","GLOBAL",4)
 Global("C0AuraYoshimoFriendshipDeadTalk","GLOBAL",1)
-GlobalTimerExpired("C0AuraYoshimoFriendshipDeadTimer","GLOBAL")~ + ~What do you think of Yoshimo?~ DO ~SetGlobal("C0AuraYoshimoFriendshipDeadTalk","GLOBAL",2)~ + ASKYOSHIMO-FRIEND-AFTERTIMER
-+ ~InParty("YXYVE")~ + ~What do you think of Yvette?~ + ASKYVETTE
-++ ~Never mind.~ EXIT
+GlobalTimerExpired("C0AuraYoshimoFriendshipDeadTimer","GLOBAL")~ + ~你觉得吉野怎么样？~ DO ~SetGlobal("C0AuraYoshimoFriendshipDeadTalk","GLOBAL",2)~ + ASKYOSHIMO-FRIEND-AFTERTIMER
++ ~InParty("YXYVE")~ + ~你觉得伊薇特怎么样？~ + ASKYVETTE
+++ ~算了。~ EXIT
 
 CHAIN C0AURA2J COMPANIONS-NEXT
-~Anything else you wanted to know?~
+~还有别的想知道吗？~
 END
-+ ~NumInPartyGT(3)~ + ~There was another companion I wanted your opinion on.~ + COMPANIONS
-++ ~I wanted to ask something else.~ + QUESTIONS
-++ ~Nothing right now.~ EXIT
++ ~NumInPartyGT(3)~ + ~还有一位同伴我想听听你的看法。~ + COMPANIONS
+++ ~我还想问点别的。~ + QUESTIONS
+++ ~现在没什么。~ EXIT
 
 CHAIN C0AURA2J AERIE-NOFRIEND
-~She's very shy, so I haven't had many chances to talk to her yet. But I'd like to.~
+~她很害羞，我还没多少机会跟她说话。可我想多聊聊。~
 EXTERN C0AURA2J COMPANIONS-NEXT
 
 CHAIN C0AURA2J AERIE-FRIEND
-~I really like her. She's so kind and dependable. And she's stronger than you'd think too, <CHARNAME>.~
+~我真喜欢她。她那么善良可靠。而且她比你想象的更强，<CHARNAME>。~
 EXTERN C0AURA2J COMPANIONS-NEXT
 
 CHAIN C0AURA2J ASKANOMEN-LN
-~Anomen's kinda prickly, but I try not to take it too personally. He doesn't really mean any harm by it... I think.~
+~阿诺门有点尖酸，可我尽量不往心里去。他其实没恶意……我想。~
 EXTERN C0AURA2J COMPANIONS-NEXT
 
 CHAIN C0AURA2J ASKANOMEN-LN-AFTERDAD
-~After what happened between him and his father, I think I've been a little hard on him. Someone like me, who came from a loving family, can't possibly understand the sort of hardship he's been through. I hope he can make it through though.~
+~在他和他父亲那事之后，我觉得我对他有点太严了。像我这样出自和睦家庭的人，不可能理解他经历的那种苦。不过我希望他能挺过去。~
 EXTERN C0AURA2J COMPANIONS-NEXT
 
 CHAIN C0AURA2J ASKANOMEN-LG
-~He's a pretty good person after all. I don't have any problems with him anymore, not since he got knighted. I think he's genuinely happier now.~
+~他毕竟是个相当好的人。自他受封骑士后，我对他没什么意见了。我觉得他现在真的更快乐了。~
 EXTERN C0AURA2J COMPANIONS-NEXT
 
 CHAIN C0AURA2J ASKANOMEN-CN
-~I'm actually a little afraid of him, <CHARNAME>. He's so... angry and bitter, and doesn't seem to want to be consoled either.~
-== C0AURA2J IF ~Global("AnomenChasesAerie","GLOBAL",1) Global("C0AuraAboutAngryAnomen","GLOBAL",1)~ THEN ~After he lashed out at Aerie, I don't even think I can talk to him anymore. I just try to stay out of sight and hope he doesn't notice me.~ 
+~其实我有点怕他，<CHARNAME>。他那么……愤怒苦涩，而且似乎也不想被安慰。~
+== C0AURA2J IF ~Global("AnomenChasesAerie","GLOBAL",1) Global("C0AuraAboutAngryAnomen","GLOBAL",1)~ THEN ~他对艾黎发了那一通之后，我觉得我都没法再跟他说话了。我只尽量躲开，盼他别注意到我。~ 
 EXTERN C0AURA2J COMPANIONS-NEXT
 
 CHAIN C0AURA2J ASKCERND
-~There's something really soothing about talking with Cernd. Don't you think so? Oh, you probably don't... I get it, but I quite like him. Plus, he's got great taste in tea.~
+~跟瑟恩德说话真让人安宁。你不觉得吗？哦，你大概不觉得……我明白，可我很喜欢他。再说，他挑茶的品味极好。~
 EXTERN C0AURA2J COMPANIONS-NEXT
 
 CHAIN C0AURA2J ASKDORN
-~I don't like him, <CHARNAME>... I get the feeling he's never really one of us, even if he's with us... you know?~
+~我不喜欢他，<CHARNAME>……我总觉得，就算他在我们中间，也从不真是我们的一员……你懂吗？~
 EXTERN C0AURA2J COMPANIONS-NEXT
 
 CHAIN C0AURA2J ASKDRAKE
-~There's something about him... I can't quite put my finger on it, but I can't shake the feeling he's cleverer than he comes off as. Half the time, I think he's just pretending not to understand things.~
+~他身上有点什么……我说不清，可我总甩不掉一个感觉：他比表现出来的更精明。有一半时候，我觉得他只是装作不懂。~
 EXTERN C0AURA2J COMPANIONS-NEXT
 
 CHAIN C0AURA2J ASKEDWIN-MALE
-~Heehee, I really shouldn't like him, but he's so much fun to tease. Plus, his knowledge of magical theory is astounding. If you know the right words around him, you can learn a lot.~
+~嘿嘿，我真不该喜欢他，可逗他太好玩了。再说，他对魔法理论的见识令人惊叹。在他面前说对词，你能学到很多。~
 EXTERN C0AURA2J COMPANIONS-NEXT
 
 CHAIN C0AURA2J ASKEDWIN-FEMALE
-~Pfft... heehee, he's become even more fun to tease ever since the Nether Scroll went awry on him. Serves him right, though. I wonder when he'll figure out a way to turn back?~
+~噗……嘿嘿，自打耐色卷轴在他身上出了岔子，逗他就更好玩了。不过也是活该。我在想他什么时候能想出变回去的办法？~
 EXTERN C0AURA2J COMPANIONS-NEXT
 
 CHAIN C0AURA2J ASKFADE
-~She's a lot nicer than I thought she'd be, seeing the tail and eyes and all. I'm more than a little relieved... especially since she's so pretty, as well. At least when she's not angry.~
+~看那尾巴和眼睛什么的，她比我以为的友善多了。我松了一大口气……尤其她还这么漂亮。至少她不生气的时候。~
 EXTERN C0AURA2J COMPANIONS-NEXT
 
 CHAIN C0AURA2J ASKFOUNDLING
-~He's interesting. I have to wonder sometimes if he's really human, though. The Plane of Shadow can really change you a lot, huh?~
+~他很有意思。不过有时我忍不住想他到底是不是真的人类。影之界真能把你改变很多，是吧？~
 EXTERN C0AURA2J COMPANIONS-NEXT
 
 CHAIN C0AURA2J ASKGLEYA
-~You know, the more I talk to her, the more I wish I had another big sister like her. She's just so easy to talk to.~
+~你知道，跟她聊得越多，我越希望自己也有个像她那样的大姐姐。跟她说话太轻松了。~
 EXTERN C0AURA2J COMPANIONS-NEXT
 
 CHAIN C0AURA2J ASKHAERDALIS
-~His stories make my head spin. So much drama and excitement and tension... it's all so romanticized that I have a hard time believing any of it's real. But still, they're fun to listen to.~
+~他那些故事绕得我头晕。那么多戏剧、刺激和紧张……全被浪漫化得让我很难相信有哪件是真的。可听还是很好玩。~
 EXTERN C0AURA2J COMPANIONS-NEXT
 
 CHAIN C0AURA2J ASKCLARA
-~She's... I dunno, she's kinda weird. Something about her just seems off, you know? It's like she's not really herself.~
+~她……我不知道，她有点怪。她身上有点什么不对劲，你懂吗？就像她不是真正的自己。~
 EXTERN C0AURA2J COMPANIONS-NEXT
 
 CHAIN C0AURA2J ASKHEXXAT
-~I... wish she wasn't here. That sounds awful, I know. But... it's just hard to wake up and see that she's so close to you, always awake, with that look in her eyes... *shudder* Don't tell her I said any of that.~
+~我……希望她不在这儿。我知道这听着很糟。可是……一睁眼就看见她离你那么近，总是醒着，眼里那种神气……*打颤* 别告诉她我说过这些。~
 EXTERN C0AURA2J COMPANIONS-NEXT
 
 CHAIN C0AURA2J ASKIMOEN-NOBG1
-~Imoen's great. I could talk to her for days. Actually, the more I think about it, the more envious I am that you've known her your whole life, <CHARNAME>. You're really lucky.~
+~爱蒙真棒。我能跟她聊好几天。其实越想我越嫉妒你一辈子都认识她，<CHARNAME>。你真走运。~
 EXTERN C0AURA2J COMPANIONS-NEXT
 
 CHAIN C0AURA2J ASKIMOEN-BG1
-~She's... oh, come on, do I really need to say anything, <CHARNAME>? She's *Imoen*. I just don't feel like our circle's complete without her.~
+~她……哦，得了吧，我还需要说什么吗，<CHARNAME>？她就是*爱蒙*。没有她，我总觉得我们这圈子不完整。~
 EXTERN C0AURA2J COMPANIONS-NEXT
 
 CHAIN C0AURA2J ASKJAHEIRA
-~I can't get over how serious Jaheira is, but then I think about every time she's helped me when I fall over, or take an injury, and how kind she is under that frown she always wears... oh, she's glaring at me. I'll shut up now.~
+~我总适应不了贾希拉那股严肃，可一想到每次我摔倒受伤她都帮我，想到她那总皱着的眉下多善良……哦，她在瞪我。我闭嘴。~
 EXTERN C0AURA2J COMPANIONS-NEXT
 
 CHAIN C0AURA2J ASKJAN
-~Jan is... *sigh* oh, I really don't know. I can't shake the feeling he's just as good as I am, but his mind goes in just about every direction at once, it's crazy. I'm surprised he never gets tired.~
+~扬是……*叹气* 哦，我真不知道。我甩不掉一个感觉：他跟我一样行，可他的心思同时往所有方向跑，简直疯。我奇怪他怎么从不累。~
 EXTERN C0AURA2J COMPANIONS-NEXT
 
 CHAIN C0AURA2J ASKKELDORN
-~He's so different from my parents, but I still can't help but get that fatherly vibe from him. It's so hard to get over the fact that he's actually not much older than I am.~
+~他跟我父母差别那么大，可我还是忍不住从他身上感到一种父亲的气息。真难接受他其实比我大不了多少。~
 EXTERN C0AURA2J COMPANIONS-NEXT
 
 CHAIN C0AURA2J ASKKERAHN
-~He doesn't talk much. But he seems pretty nice. Just don't try playing cards with him. His face never changes.~
+~他话不多。可看着挺和气。只是别跟他打牌。他脸上从不变色。~
 EXTERN C0AURA2J COMPANIONS-NEXT
 
 CHAIN C0AURA2J ASKKORGAN
-~I used to meet a lot of dwarves in the Western Heartlands, and they were always very kind to me, once I got to know them a little. Korgan... well, he's rough around the edges, and kills a little too easily, but I don't dislike him.~
+~我在西腹地常遇见矮人，熟了之后他们总对我很好。库尔甘……嗯，他粗鲁，杀人也太轻易，可我不讨厌他。~
 EXTERN C0AURA2J COMPANIONS-NEXT
 
 CHAIN C0AURA2J ASKMAZZY
-~I never thought I'd meet someone who was so much like my big sister Juno. Even their faces look kinda similar... but maybe that's just my own bias showing.~
+~我从没想到会遇见一个这么像我大姐朱诺的人。连脸都有点像……不过也许只是我自己的偏心。~
 EXTERN C0AURA2J COMPANIONS-NEXT
 
 CHAIN C0AURA2J ASKMINSC
-~*giggle* Oh, Minsc... he makes me wish I had a hamster. But I really shouldn't... Muffy would get jealous. Or maybe he'd like having a little brother around to pick on? I'll have to think about it...~
+~*轻笑* 哦，明斯克……他让我想要一只仓鼠。可我真不该……穆菲会吃醋。也许他会喜欢有个小弟可以欺负？我得想想……~
 EXTERN C0AURA2J COMPANIONS-NEXT
 
 CHAIN C0AURA2J ASKNALIA
-~She's... I don't know. I can't help but be reminded of the upper-class girls back in the academy, always so intimidating to talk to, but I'm not sure Nalia's anything like that. I need to work up the courage to talk to her some time if we're going to work together...~
+~她……我不知道。我总忍不住想起学院里那些上层女孩，跟她们说话总让人怯，可我不确定娜莉亚是那样的人。若我们要合作，我得找机会鼓起勇气跟她说话……~
 EXTERN C0AURA2J COMPANIONS-NEXT
 
 CHAIN C0AURA2J ASKNALIA-2
-~Nalia's pretty great. I thought she'd be harder to connect with, being a noble and all, but we have more common interests than I thought. Books, magic, helping others... I've grown to like having her around.~
+~娜莉亚真不错。我以为她是贵族，会难亲近，可我们的共同兴趣比我想的多。书、魔法、帮助别人……我越来越喜欢有她在。~
 EXTERN C0AURA2J COMPANIONS-NEXT
 
 CHAIN C0AURA2J ASKNEERA
-~Her magic really gives me a headache. Not just from seeing it, even thinking about how it's supposed to work is so... argh. She tells me I think too hard on it. I can't help it! It's just what I've been raised to do.~
+~她的魔法真让我头疼。不只是看着，连想它该怎么运作都那么……啊。她说我想太多。我没办法！我从小就是这么被教的。~
 EXTERN C0AURA2J COMPANIONS-NEXT
 
 CHAIN C0AURA2J ASKOPHELIA
-~I think the dark aesthetic she has looks great. Wouldn't work on me, of course, I'm just not the type... what, you weren't asking about that? Oh, I don't know... she's been very friendly to me since we met. I don't really have anything bad to say about her.~
+~我觉得她那种暗色审美很好看。当然不适合我，我不是那类型……什么，你不是问这个？哦，我不知道……我们认识以来她对我一直很友善。我对她真没什么坏话可说。~
 EXTERN C0AURA2J COMPANIONS-NEXT
 
 CHAIN C0AURA2J ASKPAINA
-~I know this sounds strange, but I actually kind of like her. If you've seen her talk to her spiders like a mom, you'd understand... I think it's kind of cute. Especially when she turns around and acts all frosty towards us afterwards.~
+~我知道这听着怪，可其实我有点喜欢她。你若见过她像妈妈一样跟她的蜘蛛说话，就会懂……我觉得挺可爱。尤其她转过身又对我们冷冰冰的时候。~
 EXTERN C0AURA2J COMPANIONS-NEXT
 
 CHAIN C0AURA2J ASKPHALH
-~Phalh's actually really clever. I think he'd be the type to do well in the academies back home, if he went. He didn't seem too interested when I brought it up, though. Oh well.~
+~法尔其实很聪明。我觉得他若是去，会是那种在家乡学院里出类拔萃的人。可我提起时他似乎不太感兴趣。算了。~
 EXTERN C0AURA2J COMPANIONS-NEXT
 
 CHAIN C0AURA2J ASKRASAAD
-~He makes me wish I could balance myself upside down. And climb up a tree without using my hands. And shatter rocks using my cranium... well, maybe not that last one. But I do envy how he's managed to take his body to levels most would never achieve.~
+~他让我希望能倒立平衡。还能不用手爬树。还能用脑袋砸碎石头……嗯，最后那个也许不必。可我确实羡慕他把身体练到多数人达不到的地步。~
 EXTERN C0AURA2J COMPANIONS-NEXT
 
 CHAIN C0AURA2J ASKSIRENE
-~I feel a lot safer with her around. Not just because she's strong and protective, either. She's just so gentle, I feel like I could talk to her about anything.~
+~有她在身边我觉得安全多了。不只是因为她强壮护人。她就是那么温柔，我觉得什么都能跟她说。~
 EXTERN C0AURA2J COMPANIONS-NEXT
 
 CHAIN C0AURA2J ASKVERRSZA-NOPHALH
-~*sigh* I wish he were friendlier and cuddlier, like Koko-chan, but I guess he's not too bad. At least I can trust him to have my back, most of the time... although I'm not sure he likes me all that much.~
+~*叹气* 我希望他更友善、更想被抱，像可可酱那样，可我想他也没那么糟。至少多数时候我能信他会护着我……虽然我不确定他有多喜欢我。~
 EXTERN C0AURA2J COMPANIONS-NEXT
 
 CHAIN C0AURA2J ASKVERRSZA-PHALH
-~I can't stop calling him 'Phalh's crazy uncle' in my head. Don't tell him that! I mean, Phalh turned out okay, so he can't be all bad either, I guess.~
+~我脑子里总叫他“法尔的疯叔叔”，停不下来。别告诉他！我是说，法尔都长成这样了，他大概也没那么坏，我想。~
 EXTERN C0AURA2J COMPANIONS-NEXT
 
 CHAIN C0AURA2J ASKVALYGAR
-~It's a little disheartening to see his aversion to magic, but I'm glad he doesn't have anything against me personally. I wish I could learn more about him, honestly. He seems so interesting under all that secrecy.~
+~看他对魔法的厌恶有点让人泄气，可我很高兴他个人对我没意见。老实说，我希望能多了解他。他在那层秘密底下似乎很有意思。~
 EXTERN C0AURA2J COMPANIONS-NEXT
 
 CHAIN C0AURA2J ASKVALYGAR-AFTERQUEST-INPARTY
-~I'm still a little sad that Master Lavok ended up dying the way he did... obviously I didn't know him, but if he and Valygar had more time to understand each other... I think it'd have been easier for Valygar to let go of that weight on his shoulders.~
-= ~But maybe that's just wishful thinking. I'm just glad we were able to help Valygar through his burdens.~
+~拉沃克大师最后那样死去，我还是有点难过……显然我不认识他，可他若和瓦里格有更多时间互相理解……我想瓦里格会更容易放下肩上的重担。~
+= ~可也许这只是我一厢情愿。我只高兴我们能帮瓦里格走过他的重负。~
 DO ~SetGlobal("C0AuraVALYGARJ107","GLOBAL",2)~
 EXTERN C0AURA2J COMPANIONS-NEXT
 
 CHAIN C0AURA2J ASKVALYGAR-AFTERQUEST-NOTINPARTY
-~Valygar's a little quiet, but I think he's strong and reliable. He's fairly kind to me too, from the few times we've talked.~
+~瓦里格话少，可我觉得他坚强可靠。就我们聊过的那几次看，他对我也挺和善。~
 EXTERN C0AURA2J COMPANIONS-NEXT
 
 CHAIN C0AURA2J ASKVICONIA
-~She still scares me a little. I wish I could see her gentle face once in a while, though... I've always wondered what she looks like when she's not scowling.~
+~她还是有点让我怕。不过我希望偶尔能看见她温柔的脸……我一直好奇她不皱眉时是什么样子。~
 EXTERN C0AURA2J COMPANIONS-NEXT
 
 CHAIN C0AURA2J ASKWILL
-~Ooh, there's a lot I'd love to ask him. I've never seen a spirit like him that hasn't tried to kill me, so it's an opportunity I can't pass up.~
+~哦，我有好多想问他。我从没见过像他这样没想杀我的灵体，这机会不能错过。~
 EXTERN C0AURA2J COMPANIONS-NEXT
 
 CHAIN C0AURA2J ASKYOSHIMO-NOFRIEND
-~He's very different from the people I knew while living in Mikedono. I guess venturing out in the world really changes your habits.~
+~他跟我在御剑殿生活时认识的人差别很大。我想出去闯世界真能改变人的习惯。~
 EXTERN C0AURA2J COMPANIONS-NEXT
 
 CHAIN C0AURA2J ASKYOSHIMO-FRIEND
-~Yoshi-san? He's great. Even though he's not what I expected at all, I'm still glad he's with us.~
+~吉野先生？他很好。虽然他完全不是我预想的样子，我还是高兴他跟我们在。~
 EXTERN C0AURA2J COMPANIONS-NEXT
 
 CHAIN C0AURA2J ASKYOSHIMO-DEAD-NOFRIEND
-~I–I'm still a little shaken, but... to be honest, I feel like I deserve it. Somehow, I thought I could trust him even though I didn't really know anything about him. I knew I shouldn't have.~
+~我——我还是有点受震，可……老实说，我觉得我活该。不知怎么，我明明对他一无所知，却以为能信他。我知道我不该。~
 EXTERN C0AURA2J COMPANIONS-NEXT
 
 CHAIN C0AURA2J ASKYOSHIMO-FRIEND-BEFORETIMER
-~He... well...~
-= ~I–I'm sorry, <CHARNAME>, I don't want to talk about it right now.~
+~他……嗯……~
+= ~我——对不起，<CHARNAME>，我现在不想谈这个。~
 EXTERN C0AURA2J COMPANIONS-NEXT
 
 CHAIN C0AURA2J ASKYOSHIMO-FRIEND-AFTERTIMER
-~I still can't believe what happened... it was bad enough to know that Yoshi-san betrayed us, but then... I thought I'd never get the chance to ask him his reasons, but seeing him face us after Irenicus... somehow, that was worse.~
-= ~Did you believe him when he said he was bound by a geas, <CHARNAME>? I... I think it was the truth. If anything I thought I knew about Yoshi-san was real, he wouldn't have fought a battle he had no chance of winning. But he couldn't. No matter how much he may have wanted to... I don't know, take it all back, or run away... he couldn't. Isn't that just horrifying?~
-= ~N–not saying that absolves him of guilt, though! What he did was absolutely wrong, no question about it. But I can't help but know what would drive him to... to give so much up to betray us. And now we'll never know...~
-= ~If only... *sigh* I wish it hadn't happened. Neither the beginning nor the end of it. I should probably feel betrayed, but right now... I just regret what happened. I wish I had a chance to do something.~
-= ~I... I'm feeling a little tired now, <CHARNAME>. Could we talk later?~
+~我还是不敢信发生的事……知道吉野先生背叛我们已经够糟，可后来……我以为再没机会问他原因，可看他在爱瑞尼库斯之后面对我们……不知怎么，那更糟。~
+= ~他说他被慑令束缚，你信吗，<CHARNAME>？我……我觉得那是真的。若我以为知道的关于吉野先生的任何一点是真的，他就不会去打一场毫无胜算的仗。可他不能不打。不管他多想……我不知道，收回一切，或者逃走……他都不能。这不就是可怕之处吗？~
+= ~可——可这不是说他无罪！他做的绝对错了，毫无疑问。可我忍不住明白是什么逼他……舍弃这么多来背叛我们。而现在我们永远也不会知道了……~
+= ~要是……*叹气* 我希望这事没发生。开头结尾都不希望。我大概该觉得被背叛，可现在……我只是后悔发生了。我希望有机会做点什么。~
+= ~我……我现在有点累了，<CHARNAME>。我们晚点再谈好吗？~
 EXIT
 
 CHAIN C0AURA2J ASKYVETTE
-~She's even lovelier in person than she was in the drawing—I mean, as the drawing. That's such a strange thing to say.~
+~她本人比画里还可爱——我是说，比那幅画。这话说得真怪。~
 EXTERN C0AURA2J COMPANIONS-NEXT
 
 CHAIN C0AURA2J FLIRT
-~Hmm?~
+~嗯？~
 END
-+ ~RandomNum(4,1) Global("C0AuraRomanceActive","GLOBAL",2)~ + ~(Kiss her lips)~ + FLIRT-2-1A
-+ ~RandomNum(4,2) Global("C0AuraRomanceActive","GLOBAL",2)~ + ~(Kiss her lips)~ + FLIRT-2-1B
-+ ~RandomNum(4,3) Global("C0AuraRomanceActive","GLOBAL",2)~ + ~(Kiss her lips)~ + FLIRT-2-1C
-+ ~RandomNum(4,4) Global("C0AuraRomanceActive","GLOBAL",2)~ + ~(Kiss her lips)~ + FLIRT-2-1D
-+ ~RandomNum(4,1)~ + ~(Kiss her cheek)~ + FLIRT-1-1A
-+ ~RandomNum(4,2)~ + ~(Kiss her cheek)~ + FLIRT-1-1B
-+ ~RandomNum(4,3)~ + ~(Kiss her cheek)~ + FLIRT-1-1C
-+ ~RandomNum(4,4)~ + ~(Kiss her cheek)~ + FLIRT-1-1D
-+ ~RandomNum(3,1)~ + ~(Kiss her nose)~ + FLIRT-1-2A
-+ ~RandomNum(3,2)~ + ~(Kiss her nose)~ + FLIRT-1-2B
-+ ~RandomNum(3,3)~ + ~(Kiss her nose)~ + FLIRT-1-2C
-+ ~RandomNum(4,1) Global("C0AuraRomanceActive","GLOBAL",2)~ + ~(Hold her close and squeeze tightly)~ + FLIRT-2-2A
-+ ~RandomNum(4,2) Global("C0AuraRomanceActive","GLOBAL",2)~ + ~(Hold her close and squeeze tightly)~ + FLIRT-2-2B
-+ ~RandomNum(4,3) Global("C0AuraRomanceActive","GLOBAL",2)~ + ~(Hold her close and squeeze tightly)~ + FLIRT-2-2C
-+ ~RandomNum(4,4) Global("C0AuraRomanceActive","GLOBAL",2) !InParty("IMOEN2")~ + ~(Hold her close and squeeze tightly)~ + FLIRT-2-2A
-+ ~RandomNum(4,4) Global("C0AuraRomanceActive","GLOBAL",2) InParty("IMOEN2")~ + ~(Hold her close and squeeze tightly)~ + FLIRT-2-2D
-+ ~RandomNum(3,1) !Race(Player1,HALFLING) !Race(Player1,DWARF) !Race(Player1,GNOME)~ + ~(Lift her up and hug her)~ + FLIRT-1-3A
-+ ~RandomNum(3,2) !Race(Player1,HALFLING) !Race(Player1,DWARF) !Race(Player1,GNOME)~ + ~(Lift her up and hug her)~ + FLIRT-1-3B
-+ ~RandomNum(3,3) !Race(Player1,HALFLING) !Race(Player1,DWARF) !Race(Player1,GNOME)~ + ~(Lift her up and hug her)~ + FLIRT-1-3C
-+ ~RandomNum(3,1) OR(3) Race(Player1,HALFLING) Race(Player1,DWARF) Race(Player1,GNOME)~ + ~(Hug her)~ + FLIRT-1-3A
-+ ~RandomNum(3,2) OR(3) Race(Player1,HALFLING) Race(Player1,DWARF) Race(Player1,GNOME)~ + ~(Hug her)~ + FLIRT-1-3B
-+ ~RandomNum(3,3) OR(3) Race(Player1,HALFLING) Race(Player1,DWARF) Race(Player1,GNOME)~ + ~(Hug her)~ + FLIRT-1-3D
-+ ~RandomNum(3,1)~ + ~(Wink at her)~ + FLIRT-1-4A
-+ ~RandomNum(3,2)~ + ~(Wink at her)~ + FLIRT-1-4B
-+ ~RandomNum(3,3)~ + ~(Wink at her)~ + FLIRT-1-4C
-+ ~RandomNum(3,1)~ + ~(Tickle her)~ + FLIRT-1-5A
-+ ~RandomNum(3,2)~ + ~(Tickle her)~ + FLIRT-1-5B
-+ ~RandomNum(3,3)~ + ~(Tickle her)~ + FLIRT-1-5C
-+ ~RandomNum(3,1)~ + ~(Pinch her cheeks)~ + FLIRT-1-6A
-+ ~RandomNum(3,2)~ + ~(Pinch her cheeks)~ + FLIRT-1-6B
-+ ~RandomNum(3,3)~ + ~(Pinch her cheeks)~ + FLIRT-1-6C
-+ ~RandomNum(3,1)~ + ~(Poke her nose)~ + FLIRT-1-7A
-+ ~RandomNum(3,2)~ + ~(Poke her nose)~ + FLIRT-1-7B
-+ ~RandomNum(3,3) !Race(Player1,HALFLING) !Race(Player1,DWARF) !Race(Player1,GNOME)~ + ~(Poke her nose)~ + FLIRT-1-7C
-+ ~RandomNum(3,3) OR(3) Race(Player1,HALFLING) Race(Player1,DWARF) Race(Player1,GNOME)~ + ~(Poke her nose)~ + FLIRT-1-7D
-+ ~RandomNum(3,1)~ + ~(Stroke her hair)~ + FLIRT-1-8A
-+ ~RandomNum(3,2)~ + ~(Stroke her hair)~ + FLIRT-1-8B
-+ ~RandomNum(3,3)~ + ~(Stroke her hair)~ + FLIRT-1-8C
-+ ~RandomNum(3,1)~ + ~(Playfully tug her ear)~ + FLIRT-1-9A
-+ ~RandomNum(3,2)~ + ~(Playfully tug her ear)~ + FLIRT-1-9B
-+ ~RandomNum(3,3)~ + ~(Playfully tug her ear)~ + FLIRT-1-9C
-/*+ ~RandomNum(3,1)~ + ~(Tease her)~ + FLIRT-1-10A
-+ ~RandomNum(3,2)~ + ~(Tease her)~ + FLIRT-1-10B
-+ ~RandomNum(3,3)~ + ~(Tease her)~ + FLIRT-1-10C
-+ ~RandomNum(3,1)~ + ~Care for a spot of tea?~ + FLIRT-1-11A
-+ ~RandomNum(3,2)~ + ~Care for a spot of tea?~ + FLIRT-1-11B
-+ ~RandomNum(3,3)~ + ~Care for a spot of tea?~ + FLIRT-1-11C
-+ ~RandomNum(3,1) Global("C0AuraRomanceActive","GLOBAL",2)~ + ~I love you, Aura.~ + FLIRT-2-3A
-+ ~RandomNum(3,2) Global("C0AuraRomanceActive","GLOBAL",2)~ + ~I love you, Aura.~ + FLIRT-2-3B
-+ ~RandomNum(3,3) Global("C0AuraRomanceActive","GLOBAL",2)~ + ~I love you, Aura.~ + FLIRT-2-3C
-+ ~Global("C0AuraRomanceActive","GLOBAL",1)~ + ~Sweetie, there's something I need to tell you...~ + FLIRT-TALK
-+ ~Global("C0AuraRomanceActive","GLOBAL",2)~ + ~Sweetie, there's something I need to tell you...~ + FLIRT-TALK*/
-++ ~No, nothing.~ EXIT
++ ~RandomNum(4,1) Global("C0AuraRomanceActive","GLOBAL",2)~ + ~（吻她的唇）~ + FLIRT-2-1A
++ ~RandomNum(4,2) Global("C0AuraRomanceActive","GLOBAL",2)~ + ~（吻她的唇）~ + FLIRT-2-1B
++ ~RandomNum(4,3) Global("C0AuraRomanceActive","GLOBAL",2)~ + ~（吻她的唇）~ + FLIRT-2-1C
++ ~RandomNum(4,4) Global("C0AuraRomanceActive","GLOBAL",2)~ + ~（吻她的唇）~ + FLIRT-2-1D
++ ~RandomNum(4,1)~ + ~（吻她的脸颊）~ + FLIRT-1-1A
++ ~RandomNum(4,2)~ + ~（吻她的脸颊）~ + FLIRT-1-1B
++ ~RandomNum(4,3)~ + ~（吻她的脸颊）~ + FLIRT-1-1C
++ ~RandomNum(4,4)~ + ~（吻她的脸颊）~ + FLIRT-1-1D
++ ~RandomNum(3,1)~ + ~（吻她的鼻尖）~ + FLIRT-1-2A
++ ~RandomNum(3,2)~ + ~（吻她的鼻尖）~ + FLIRT-1-2B
++ ~RandomNum(3,3)~ + ~（吻她的鼻尖）~ + FLIRT-1-2C
++ ~RandomNum(4,1) Global("C0AuraRomanceActive","GLOBAL",2)~ + ~（紧紧抱住她）~ + FLIRT-2-2A
++ ~RandomNum(4,2) Global("C0AuraRomanceActive","GLOBAL",2)~ + ~（紧紧抱住她）~ + FLIRT-2-2B
++ ~RandomNum(4,3) Global("C0AuraRomanceActive","GLOBAL",2)~ + ~（紧紧抱住她）~ + FLIRT-2-2C
++ ~RandomNum(4,4) Global("C0AuraRomanceActive","GLOBAL",2) !InParty("IMOEN2")~ + ~（紧紧抱住她）~ + FLIRT-2-2A
++ ~RandomNum(4,4) Global("C0AuraRomanceActive","GLOBAL",2) InParty("IMOEN2")~ + ~（紧紧抱住她）~ + FLIRT-2-2D
++ ~RandomNum(3,1) !Race(Player1,HALFLING) !Race(Player1,DWARF) !Race(Player1,GNOME)~ + ~（把她抱起来）~ + FLIRT-1-3A
++ ~RandomNum(3,2) !Race(Player1,HALFLING) !Race(Player1,DWARF) !Race(Player1,GNOME)~ + ~（把她抱起来）~ + FLIRT-1-3B
++ ~RandomNum(3,3) !Race(Player1,HALFLING) !Race(Player1,DWARF) !Race(Player1,GNOME)~ + ~（把她抱起来）~ + FLIRT-1-3C
++ ~RandomNum(3,1) OR(3) Race(Player1,HALFLING) Race(Player1,DWARF) Race(Player1,GNOME)~ + ~（抱她）~ + FLIRT-1-3A
++ ~RandomNum(3,2) OR(3) Race(Player1,HALFLING) Race(Player1,DWARF) Race(Player1,GNOME)~ + ~（抱她）~ + FLIRT-1-3B
++ ~RandomNum(3,3) OR(3) Race(Player1,HALFLING) Race(Player1,DWARF) Race(Player1,GNOME)~ + ~（抱她）~ + FLIRT-1-3D
++ ~RandomNum(3,1)~ + ~（向她眨眼）~ + FLIRT-1-4A
++ ~RandomNum(3,2)~ + ~（向她眨眼）~ + FLIRT-1-4B
++ ~RandomNum(3,3)~ + ~（向她眨眼）~ + FLIRT-1-4C
++ ~RandomNum(3,1)~ + ~（挠她痒）~ + FLIRT-1-5A
++ ~RandomNum(3,2)~ + ~（挠她痒）~ + FLIRT-1-5B
++ ~RandomNum(3,3)~ + ~（挠她痒）~ + FLIRT-1-5C
++ ~RandomNum(3,1)~ + ~（捏她的脸）~ + FLIRT-1-6A
++ ~RandomNum(3,2)~ + ~（捏她的脸）~ + FLIRT-1-6B
++ ~RandomNum(3,3)~ + ~（捏她的脸）~ + FLIRT-1-6C
++ ~RandomNum(3,1)~ + ~（戳她的鼻子）~ + FLIRT-1-7A
++ ~RandomNum(3,2)~ + ~（戳她的鼻子）~ + FLIRT-1-7B
++ ~RandomNum(3,3) !Race(Player1,HALFLING) !Race(Player1,DWARF) !Race(Player1,GNOME)~ + ~（戳她的鼻子）~ + FLIRT-1-7C
++ ~RandomNum(3,3) OR(3) Race(Player1,HALFLING) Race(Player1,DWARF) Race(Player1,GNOME)~ + ~（戳她的鼻子）~ + FLIRT-1-7D
++ ~RandomNum(3,1)~ + ~（抚她的头发）~ + FLIRT-1-8A
++ ~RandomNum(3,2)~ + ~（抚她的头发）~ + FLIRT-1-8B
++ ~RandomNum(3,3)~ + ~（抚她的头发）~ + FLIRT-1-8C
++ ~RandomNum(3,1)~ + ~（玩笑地扯她的耳朵）~ + FLIRT-1-9A
++ ~RandomNum(3,2)~ + ~（玩笑地扯她的耳朵）~ + FLIRT-1-9B
++ ~RandomNum(3,3)~ + ~（玩笑地扯她的耳朵）~ + FLIRT-1-9C
+/*+ ~RandomNum(3,1)~ + ~（逗她）~ + FLIRT-1-10A
++ ~RandomNum(3,2)~ + ~（逗她）~ + FLIRT-1-10B
++ ~RandomNum(3,3)~ + ~（逗她）~ + FLIRT-1-10C
++ ~RandomNum(3,1)~ + ~要不要喝杯茶？~ + FLIRT-1-11A
++ ~RandomNum(3,2)~ + ~要不要喝杯茶？~ + FLIRT-1-11B
++ ~RandomNum(3,3)~ + ~要不要喝杯茶？~ + FLIRT-1-11C
++ ~RandomNum(3,1) Global("C0AuraRomanceActive","GLOBAL",2)~ + ~我爱你，奥拉。~ + FLIRT-2-3A
++ ~RandomNum(3,2) Global("C0AuraRomanceActive","GLOBAL",2)~ + ~我爱你，奥拉。~ + FLIRT-2-3B
++ ~RandomNum(3,3) Global("C0AuraRomanceActive","GLOBAL",2)~ + ~我爱你，奥拉。~ + FLIRT-2-3C
++ ~Global("C0AuraRomanceActive","GLOBAL",1)~ + ~亲爱的，有件事我得告诉你……~ + FLIRT-TALK
++ ~Global("C0AuraRomanceActive","GLOBAL",2)~ + ~亲爱的，有件事我得告诉你……~ + FLIRT-TALK*/
+++ ~不，没什么。~ EXIT
 
 CHAIN C0AURA2J FLIRT-2-1A
-~Mmm...~
-= ~I could never get enough of that. *giggle* One more?~
+~嗯……~
+= ~我怎么也嫌不够。*轻笑* 再来一次？~
 EXIT
 
 CHAIN C0AURA2J FLIRT-2-1B
-~(Aura closes her bright eyes in contentment in response to your kiss. When you finally part, she opens them slowly with a shy smile.)~
+~（奥拉满足地闭上明亮的眼睛回应你的吻。终于分开时，她带着害羞的笑慢慢睁开。）~
 EXIT
 
 CHAIN C0AURA2J FLIRT-2-1C
-~(You feel Aura's small hands holding you as closely as your bodies will allow as you hold the kiss. There is a pleading look on her face when she reluctantly releases you.)~
+~（你感到奥拉的小手尽可能紧地抱着你，同时你继续这个吻。她不情愿地放开你时，脸上带着恳求的神情。）~
 EXIT
 
 CHAIN C0AURA2J FLIRT-2-1D
-~(You hold Aura closely as your lips touch hers, faintly tasting the sweetness of sugar and wildberries.)~
+~（你紧紧抱着奥拉，唇触到她的，隐约尝到糖和野莓的甜味。）~
 END
-++ ~(Teasingly brush your tongue against her lips)~ + FLIRT-2-1D1
-++ ~Mmm, now nice... strawberry tarts, hmm?~ + FLIRT-2-1D2
-++ ~(Break away from her)~ EXIT
+++ ~（顽皮地用舌尖刷过她的唇）~ + FLIRT-2-1D1
+++ ~嗯嗯……现在真好……草莓挞，嗯？~ + FLIRT-2-1D2
+++ ~（从她怀里退开）~ EXIT
 
 CHAIN C0AURA2J FLIRT-2-1D1
-~Hey... *giggle* hey, stop that! That tickles!~
+~嘿……*轻笑* 嘿，停下！好痒！~
 EXIT
 
 CHAIN C0AURA2J FLIRT-2-1D2
-~(She laughs and licks her lips with a flustered expression on her face.) They're my favorite...~
+~（她笑着，脸上带着慌乱地舔了舔嘴唇。）那是我最喜欢的……~
 EXIT
 
 CHAIN C0AURA2J FLIRT-1-1A
-~(As you lay a soft peck on Aura's dimpled cheek, a pink flush immediately rises at the spot you kissed.)~
+~（你在奥拉有酒窝的脸颊上轻轻一啄，被吻处立刻泛起粉红。）~
 EXIT
 
 CHAIN C0AURA2J FLIRT-1-1B
-~(Aura's skin is soft, smooth and warm, without the slightest trace of roughness. She remains perfectly still, perhaps overwhelmed by the straightforwardness of your affection.)~
+~（奥拉的皮肤柔软、光滑、温暖，没有一丝粗糙。她一动不动，也许是被你直白的亲昵弄得不知所措。）~
 EXIT
 
 CHAIN C0AURA2J FLIRT-1-1C
-~(When you press your lips against Aura's cheek, she gives a contented sigh and then a look of endearment in response.)~
-= ~Ahaha... I can't help but feel warm every time you do that.~
+~（你的唇贴上奥拉的脸颊时，她满足地叹了一声，随后露出爱怜的神情。）~
+= ~啊哈哈……每次你这么做，我都忍不住心里发热。~
 EXIT
 
 CHAIN C0AURA2J FLIRT-1-1D
-~(As you lean forward, Aura presses a hand against your shoulder to stop you.)~
-= ~No, no, not right now, I've got a spot of grease on my face. Wait until I've had a chance to wash up, okay?~
+~（你俯身靠近，奥拉一只手抵在你肩上拦住你。）~
+= ~不，不，现在不行，我脸上蹭了点油污。等我洗一下，好吗？~
 EXIT
 
 CHAIN C0AURA2J FLIRT-1-2A
-~(You taste faintly of sweat on the bridge of Aura's nose. She makes a small gasp and pulls back, wiping her face hurriedly.)~
-= ~S–sorry! I should've paid more attention before you... well... you can go again now. Please?~
+~（你在奥拉鼻梁上尝到一点汗味。她轻吸一口气，往后缩，急忙擦脸。）~
+= ~对——对不起！你亲之前我该多注意些……好吧……你现在可以再来。行吗？~
 EXIT
 
 CHAIN C0AURA2J FLIRT-1-2B
-~(As your lips touch Aura's nose, you feel her breath upon your neck, drawn from no small amount of nervousness. She tilts her head slightly forward, however, laying a faint kiss on your chin before you part.)~
+~（你的唇触到奥拉的鼻子时，你感到她紧张的呼吸拂在你颈上。可她把头稍稍前倾，在你分开前在你下巴上轻轻印了一吻。）~
 EXIT
 
 CHAIN C0AURA2J FLIRT-1-2C
-~(As close as you are to Aura's face, you notice how her nose, despite being slightly larger than average by any other race's standards, is unusually smaller and fey-like, with a sharper, more defined shape that complements her youthful features.)~
-= ~(When you finally pull away, Aura smiles at you, only for a strange expression to suddenly take over as her nose twitches. A second later, she sneezes.)~
+~（离奥拉的脸这么近，你注意到她的鼻子虽然按其他种族的标准略大，却异常小巧、带着妖精般的样子，形状更尖更分明，正衬她年轻的面貌。）~
+= ~（你终于退开时，奥拉朝你笑，可随即表情古怪，鼻子抽动。一秒后，她打了个喷嚏。）~
 EXIT
 
 CHAIN C0AURA2J FLIRT-2-2A
-~(While Aura sighs in resignation at first when you take her in your arms, as you hold her closely she lays her face against your chest, giving a hum of contentment while resting in your embrace.)~
+~（你把她揽进怀里时，奥拉起初无奈地叹气，可你抱紧她后，她把脸贴在你胸口，在你怀里满足地哼了一声。）~
 EXIT
 
 CHAIN C0AURA2J FLIRT-2-2B
-~(Aura barely struggles as you cuddle her tightly, finally giving up and wrapping her arms around your neck.)~
+~（你紧紧搂住她，奥拉几乎没挣扎，最后放弃，双臂环上你的脖子。）~
 EXIT
 
 CHAIN C0AURA2J FLIRT-2-2C
-~H–hey...! This again...? I'm not a doll!~
+~嘿——嘿……！又来这套……？我不是娃娃！~
 END
-++ ~I can't help it... you're just too adorable!~ + FLIRT-2-2C1
-++ ~Okay, okay... I'll let go...~ + FLIRT-2-2C2
+++ ~我没办法……你太可爱了！~ + FLIRT-2-2C1
+++ ~好，好……我放开……~ + FLIRT-2-2C2
 
 CHAIN C0AURA2J FLIRT-2-2C1
-~Hmph, okay... I guess I can deal with it...~
+~哼，好吧……我想我能忍……~
 EXIT
 
 CHAIN C0AURA2J FLIRT-2-2C2
-~I–I didn't say you *had* to let go... I didn't mind it that much.~
+~我——我没说你*非得*放开……我不太介意。~
 EXIT
 
 CHAIN C0AURA2J FLIRT-2-2D
-~Oof! Goodness, i–it's so hard to decide whether you or Imoen gives the tighter hugs...~
+~哎哟！天哪，真——真难判断你跟爱蒙谁的拥抱更紧……~
 EXIT
 
 CHAIN C0AURA2J FLIRT-1-3A
-~M-hmmmm... that's nice. You're so nice and warm, <CHARNAME>.~
+~嗯——嗯嗯……真好。你真暖和，<CHARNAME>。~
 EXIT
 
 CHAIN C0AURA2J FLIRT-1-3B
-~(As you wrap your arms around Aura's waist and bring her close, she presses herself against you, and you enjoy the softness of her body closely against yours.)~
+~（你双臂环住奥拉的腰把她拉近，她贴向你，你享受她柔软的身子紧贴着你的感觉。）~
 EXIT
 
 CHAIN C0AURA2J FLIRT-1-3C
-~(Aura gives a cry of shock as you lift her from the ground, her arms reaching for you as you pull her close to you for an embrace. She nuzzles your neck as you hold her by the waist.)~
+~（你把她从地上抱起来时奥拉惊叫一声，你把她拉近拥抱，她双臂伸向你。你扶着她腰时，她把脸蹭向你的脖子。）~
 EXIT
 
 CHAIN C0AURA2J FLIRT-1-3D
-~Hmm, it's so comforting to be held like this...~
-= ~(She nuzzles her face against your neck as you hold onto her, sighing in contentment.)~
+~嗯，这样被抱着真让人安心……~
+= ~（你抱着她时，她把脸蹭向你的脖子，满足地叹气。）~
 EXIT
 
 CHAIN C0AURA2J FLIRT-1-4A
-~(Aura blinks bemusedly in response to your gesture.)~
-= ~Uh oh... what are you planning this time?~
+~（奥拉对你的举动困惑地眨眼。）~
+= ~哦不……你这次又在打什么主意？~
 END
-++ ~I'm not telling.~ + FLIRT-1-4A1
-++ ~Nothing... I just wanted to see how your smile.~ + FLIRT-1-4A2
+++ ~我不告诉你。~ + FLIRT-1-4A1
+++ ~没什么……我只是想看看你笑的样子。~ + FLIRT-1-4A2
 
 CHAIN C0AURA2J FLIRT-1-4A1
-~A-haha... I'm already terrified... *shudder*~
+~啊哈哈……我已经怕了……*打颤*~
 EXIT
 
 CHAIN C0AURA2J FLIRT-1-4A2
-~Oh. Well then...~
-= ~(She gives you a gentle, slightly teasing smile and winks back at you in response.)~
+~哦。那好吧……~
+= ~（她给你一个温和、略带逗弄的笑，回你一个眼色。）~
 EXIT
 
 CHAIN C0AURA2J FLIRT-1-4B
-~What? Is there something on my face? Or is my hair mussed up again? C'mon, tell me what's going on!~
+~什么？我脸上有东西？还是我头发又乱了？快告诉我怎么回事！~
 EXIT
 
 CHAIN C0AURA2J FLIRT-1-4C
-~(Aura giggles and grins sheepishly for a moment, before nervously running her fingers along her long hair expectantly.)~
+~（奥拉傻笑了一下、羞怯地咧嘴，随后紧张地用手指顺着自己的长发。）~
 EXIT
 
 CHAIN C0AURA2J FLIRT-1-5A
-~Oh... no, nononono! A-hahaha! Stop it, <CHARNAME>―no, not there! Hahahahaha―aah!~
+~哦……不，不不不不！啊哈哈！停下，<CHARNAME>——不，别挠那儿！哈哈哈哈哈——啊！~
 EXIT
 
 CHAIN C0AURA2J FLIRT-1-5B
-~Eep! Ahahahah, not the waist, not the waist... eeek!~
+~呀！啊哈哈哈哈，别挠腰，别挠腰……咿！~
 EXIT
 
 CHAIN C0AURA2J FLIRT-1-5C
-~(Surprisingly, Aura puts up a meager resistance as you playfully attack her ticklish spots. When you detect a glint of mischief in her eyes, you realize—a little too late—that you've made a careless mistake.)~
-= ~Haha! You've fallen for my trap! Get her, Muffy!~
-= ~(The small squirrel construct leaps onto you and runs crazily over your body in circles from head to toe, its tiny metal paws tickling you endlessly as you struggle to capture it.)~
+~（出乎意料，你顽皮地攻她的痒处时，奥拉只做了微弱的抵抗。当你察觉她眼里闪过一抹淘气，你才——稍微晚了一点——意识到自己犯了个粗心的错。）~
+= ~哈哈！你中了我的圈套！上，穆菲！~
+= ~（那只小松鼠构造体扑到你身上，从你头顶到脚疯狂地绕圈乱跑，细小的金属爪挠得你没完没了，你挣扎着想抓住它。）~
 END
-++ ~Eeeeek! Call him off, Aura!~ + FLIRT-1-5C1
-++ ~Okay, okay, I surrender!~ + FLIRT-1-5C1
-++ ~No, you don't, you little... ah ha, gotcha!~ + FLIRT-1-5C2
+++ ~咿——！叫它停下，奥拉！~ + FLIRT-1-5C1
+++ ~好，好，我投降！~ + FLIRT-1-5C1
+++ ~不，你不行，你这小……啊哈，抓住你了！~ + FLIRT-1-5C2
 
 CHAIN C0AURA2J FLIRT-1-5C1
-~*giggle* Looks like I win this time, <CHARNAME>!~
+~*轻笑* 看来这次是我赢了，<CHARNAME>！~
 EXIT
 
 CHAIN C0AURA2J FLIRT-1-5C2
-~Aww. I never get one over you, do I, <CHARNAME>?~
-= ~Er, can you give him back now?~
+~唉。我从来赢不了你，对吧，<CHARNAME>？~
+= ~呃，你能把它还给我了吗？~
 EXIT
 
 CHAIN C0AURA2J FLIRT-1-6A
-~Oof! My goodness, you're worse than my sisters, <CHARNAME>...~
+~哎哟！天哪，你比我姐姐们还过分，<CHARNAME>……~
 EXIT
 
 CHAIN C0AURA2J FLIRT-1-6B
-~*sigh* Sometimes I wish I'd outgrow my own face so my cheeks wouldn't be so tempting to other people.~
+~*叹气* 有时我希望自己的脸能长成熟点，这样我的脸颊就不会那么招人捏。~
 EXIT
 
 CHAIN C0AURA2J FLIRT-1-6C
-~(Aura gives an unconvincingly disapproving pout as you gently rub her cheek using two fingers, while struggling to hide her approval with contented eyes and a barely-restrained smile.)~
+~（你用两根手指轻搓奥拉的脸颊，她不以为然地嘟嘴，可那模样一点也不像，眼里满是满足，嘴角也几乎压不住笑。）~
 EXIT
 
 CHAIN C0AURA2J FLIRT-1-7A
-~(Aura flushes furiously as you lay a finger teasingly on her nose.)~
+~（你逗弄地把一根手指放在奥拉鼻尖上，她脸腾地红了。）~
 EXIT
 
 CHAIN C0AURA2J FLIRT-1-7B
-~(Aura gives a nervous giggle at the affectionate touch. You notice a glint of excitement in her eyes for a brief moment, and as you withdraw, she catches your hand and gently kisses your finger.)~
+~（这亲昵的触碰让奥拉紧张地笑了一声。你注意到她眼里短暂地闪过兴奋，你收回手时，她抓住你的手，轻轻吻了你的手指。）~
 EXIT
 
 CHAIN C0AURA2J FLIRT-1-7C
-~(As you raise a finger to the tip of Aura's nose, she beckons you to lean closer with a candid smile on her face and raises a finger to touch your cheek in return.)~
+~（你把一根手指抬到奥拉鼻尖，她带着坦率的笑示意你靠近，也抬手指碰你的脸。）~
 EXIT
 
 CHAIN C0AURA2J FLIRT-1-7D
-~(As you bend down and raise a finger to the tip of Aura's nose, she beckons you to lean closer with a candid smile on her face and lifts her own finger to touch your cheek in return.)~
+~（你弯下身把手指抬到奥拉鼻尖，她带着坦率的笑示意你靠近，也抬起自己的手指碰你的脸。）~
 EXIT
 
 CHAIN C0AURA2J FLIRT-1-8A
-~(As you tenderly stroke the long, straight strands of Aura's hair, you notice how well-tended it is. Her hair is clean, even, and smells faintly of rose and lavender. You cannot help but wonder just how much time she spends tending to her hair at night to make up for the roughness of your daily travels.)~
+~（你温柔地抚着奥拉长而直的头发，注意到它养护得多好。她的发丝干净、齐整，隐约有玫瑰和淡紫的香。你忍不住想，她夜里要花多少时间打理头发，才补得上你日常旅行的粗砺。）~
 EXIT
 
 CHAIN C0AURA2J FLIRT-1-8B
-~(After you brush against Aura's hair for a while, she clasps your hand and holds it against her cheek, gently caressing your fingers with a slight smile.)~
-= ~(Suddenly she blushes, and with a flustered expression, reaches in her pack hurriedly to take out a small wooden brush.)~
-= ~Umm... would you mind brushing my hair a bit, <CHARNAME>? I'd like that.~
+~（你抚了一阵奥拉的头发后，她握住你的手贴在自己脸颊上，带着浅笑轻轻摩挲你的手指。）~
+= ~（她忽然脸红，神情慌乱地在包里急忙掏出一把小木梳。）~
+= ~呃……你介意帮我梳一下头发吗，<CHARNAME>？我会喜欢的。~
 EXIT
 
 CHAIN C0AURA2J FLIRT-1-8C
-~(As you trace a strand of Aura's rose-colored hair to its roots on her head, you see the faint change of colour to its natural pale―almost silvery―blonde.~
-= ~Aura lets off a giggle as your finger slides against her head, clearly ticklish.)~
+~（你把奥拉一缕玫瑰色的头发顺到发根，看见颜色淡淡变回她本来的淡——几乎银白——金。~
+= ~你的手指滑过她头顶时，奥拉轻笑出声，明显怕痒。~
 END
-++ ~You have very lovely hair, Aura.~ + FLIRT-1-8C1
-++ ~I want to see your normal hair colour one day.~ + FLIRT-1-8C2
+++ ~你的头发很美，奥拉。~ + FLIRT-1-8C1
+++ ~我想有一天看看你本来的发色。~ + FLIRT-1-8C2
 
 CHAIN C0AURA2J FLIRT-1-8C1
-~*giggle* Thank you, <CHARNAME>... I'm really glad you like it.~
+~*轻笑* 谢谢你，<CHARNAME>……我真高兴你喜欢。~
 EXIT
 
 CHAIN C0AURA2J FLIRT-1-8C2
-~Really? I'll let my hair grow out without dyeing it for a while then, if that's what you'd like.~
+~真的？那我有一阵不染，让头发长出来，如果你想要那样。~
 EXIT
 
 CHAIN C0AURA2J FLIRT-1-9A
-~(You sneak up on Aura from behind and teasingly nip on the point of her ear that is slightly sticking out from under her hair. She makes a startled squeak and turns to face you.)~
-= ~Eep! Oh, it's just you, <CHARNAME>... um, I don't mind you doing something like that... *blush* ...but could you give me some warning first?~
+~（你从背后悄悄靠近奥拉，逗弄地咬了一下她从头发出微微露出的耳尖。她惊叫一声转过身面对你。）~
+= ~呀！哦，是你，<CHARNAME>……呃，我不介意你做这种事……*脸红* ……可你能不能先给我个提醒？~
 EXIT
 
 CHAIN C0AURA2J FLIRT-1-9B
-~(You give a few teasing pinches to Aura's small, elfin ears.)~
+~（你逗弄地捏了几下奥拉小巧的精灵耳。）~
 EXIT
 
 CHAIN C0AURA2J FLIRT-1-9C
-~No fair, <CHARNAME>! Let me pull your ears once in a while.~
+~不公平，<CHARNAME>！让我也偶尔扯扯你的耳朵。~
 EXIT
 
 CHAIN IF ~IsGabber(Player1) CombatCounter(0) !Detect([ENEMY]) Global("C0AuraInsulted","GLOBAL",0)~ THEN C0AUR25J pid
-~Yep?~ [C0AU022]
+~嗯？~ [C0AU022]
 END
- + ~PartyHasItem("c0aubo6") PartyHasItem("COMPON10")~ + ~I'll give you the Bowstring of Gond, Aura. See how you can enhance the Sunshooter.~ + TOB-SUNSHOOTER
- + ~OR(2) Global("C0AuraRomanceActive","GLOBAL",1) Global("C0AuraRomanceActive","GLOBAL",2)~ + ~(Flirt)~ + FLIRT
- ++ ~I think there's a problem with your voice.~ + stringfix
- ++ ~I need nothing at the moment.~ EXIT
+ + ~PartyHasItem("c0aubo6") PartyHasItem("COMPON10")~ + ~我把贡德的弓弦给你，奥拉。看看你能怎么强化太阳射手。~ + TOB-SUNSHOOTER
+ + ~OR(2) Global("C0AuraRomanceActive","GLOBAL",1) Global("C0AuraRomanceActive","GLOBAL",2)~ + ~（调情）~ + FLIRT
+ ++ ~我觉得你的声音有点问题。~ + stringfix
+ ++ ~我眼下什么都不需要。~ EXIT
 
 CHAIN C0AUR25J TOB-SUNSHOOTER
-~You... you're really giving me this opportunity, <CHARNAME>? I'm, I'm honored twice over!~
-= ~Alright... let's see what I can do...~
+~你……你真要把这机会给我，<CHARNAME>？我，我荣幸了两次！~
+= ~好……看看我能做什么……~
 DO ~SetGlobal("C0AuraToBBowstring","GLOBAL",3)
 ClearAllActions()
 StartCutSceneMode()
@@ -1864,283 +1864,283 @@ Wait(2)
 StartDialogNoSet(Player1)~ EXIT
 
 CHAIN C0AUR25J FLIRT
-~Hmm?~
+~嗯？~
 END
-+ ~RandomNum(4,1) Global("C0AuraRomanceActive","GLOBAL",2)~ + ~(Kiss her lips)~ + FLIRT-2-1A
-+ ~RandomNum(4,2) Global("C0AuraRomanceActive","GLOBAL",2)~ + ~(Kiss her lips)~ + FLIRT-2-1B
-+ ~RandomNum(4,3) Global("C0AuraRomanceActive","GLOBAL",2)~ + ~(Kiss her lips)~ + FLIRT-2-1C
-+ ~RandomNum(4,4) Global("C0AuraRomanceActive","GLOBAL",2)~ + ~(Kiss her lips)~ + FLIRT-2-1D
-+ ~RandomNum(4,1)~ + ~(Kiss her cheek)~ + FLIRT-1-1A
-+ ~RandomNum(4,2)~ + ~(Kiss her cheek)~ + FLIRT-1-1B
-+ ~RandomNum(4,3)~ + ~(Kiss her cheek)~ + FLIRT-1-1C
-+ ~RandomNum(4,4)~ + ~(Kiss her cheek)~ + FLIRT-1-1D
-+ ~RandomNum(3,1)~ + ~(Kiss her nose)~ + FLIRT-1-2A
-+ ~RandomNum(3,2)~ + ~(Kiss her nose)~ + FLIRT-1-2B
-+ ~RandomNum(3,3)~ + ~(Kiss her nose)~ + FLIRT-1-2C
-+ ~RandomNum(4,1) Global("C0AuraRomanceActive","GLOBAL",2)~ + ~(Hold her close and squeeze tightly)~ + FLIRT-2-2A
-+ ~RandomNum(4,2) Global("C0AuraRomanceActive","GLOBAL",2)~ + ~(Hold her close and squeeze tightly)~ + FLIRT-2-2B
-+ ~RandomNum(4,3) Global("C0AuraRomanceActive","GLOBAL",2)~ + ~(Hold her close and squeeze tightly)~ + FLIRT-2-2C
-+ ~RandomNum(4,4) Global("C0AuraRomanceActive","GLOBAL",2) !InParty("IMOEN2")~ + ~(Hold her close and squeeze tightly)~ + FLIRT-2-2A
-+ ~RandomNum(4,4) Global("C0AuraRomanceActive","GLOBAL",2) InParty("IMOEN2")~ + ~(Hold her close and squeeze tightly)~ + FLIRT-2-2D
-+ ~RandomNum(3,1) !Race(Player1,HALFLING) !Race(Player1,DWARF) !Race(Player1,GNOME)~ + ~(Lift her up and hug her)~ + FLIRT-1-3A
-+ ~RandomNum(3,2) !Race(Player1,HALFLING) !Race(Player1,DWARF) !Race(Player1,GNOME)~ + ~(Lift her up and hug her)~ + FLIRT-1-3B
-+ ~RandomNum(3,3) !Race(Player1,HALFLING) !Race(Player1,DWARF) !Race(Player1,GNOME)~ + ~(Lift her up and hug her)~ + FLIRT-1-3C
-+ ~RandomNum(3,1) OR(3) Race(Player1,HALFLING) Race(Player1,DWARF) Race(Player1,GNOME)~ + ~(Hug her)~ + FLIRT-1-3A
-+ ~RandomNum(3,2) OR(3) Race(Player1,HALFLING) Race(Player1,DWARF) Race(Player1,GNOME)~ + ~(Hug her)~ + FLIRT-1-3B
-+ ~RandomNum(3,3) OR(3) Race(Player1,HALFLING) Race(Player1,DWARF) Race(Player1,GNOME)~ + ~(Hug her)~ + FLIRT-1-3D
-+ ~RandomNum(3,1)~ + ~(Wink at her)~ + FLIRT-1-4A
-+ ~RandomNum(3,2)~ + ~(Wink at her)~ + FLIRT-1-4B
-+ ~RandomNum(3,3)~ + ~(Wink at her)~ + FLIRT-1-4C
-+ ~RandomNum(3,1)~ + ~(Tickle her)~ + FLIRT-1-5A
-+ ~RandomNum(3,2)~ + ~(Tickle her)~ + FLIRT-1-5B
-+ ~RandomNum(3,3)~ + ~(Tickle her)~ + FLIRT-1-5C
-+ ~RandomNum(3,1)~ + ~(Pinch her cheeks)~ + FLIRT-1-6A
-+ ~RandomNum(3,2)~ + ~(Pinch her cheeks)~ + FLIRT-1-6B
-+ ~RandomNum(3,3)~ + ~(Pinch her cheeks)~ + FLIRT-1-6C
-+ ~RandomNum(3,1)~ + ~(Poke her nose)~ + FLIRT-1-7A
-+ ~RandomNum(3,2)~ + ~(Poke her nose)~ + FLIRT-1-7B
-+ ~RandomNum(3,3) !Race(Player1,HALFLING) !Race(Player1,DWARF) !Race(Player1,GNOME)~ + ~(Poke her nose)~ + FLIRT-1-7C
-+ ~RandomNum(3,3) OR(3) Race(Player1,HALFLING) Race(Player1,DWARF) Race(Player1,GNOME)~ + ~(Poke her nose)~ + FLIRT-1-7D
-+ ~RandomNum(3,1)~ + ~(Stroke her hair)~ + FLIRT-1-8A
-+ ~RandomNum(3,2)~ + ~(Stroke her hair)~ + FLIRT-1-8B
-+ ~RandomNum(3,3)~ + ~(Stroke her hair)~ + FLIRT-1-8C
-+ ~RandomNum(3,1)~ + ~(Playfully tug her ear)~ + FLIRT-1-9A
-+ ~RandomNum(3,2)~ + ~(Playfully tug her ear)~ + FLIRT-1-9B
-+ ~RandomNum(3,3)~ + ~(Playfully tug her ear)~ + FLIRT-1-9C
-/*+ ~RandomNum(3,1)~ + ~(Tease her)~ + FLIRT-1-10A
-+ ~RandomNum(3,2)~ + ~(Tease her)~ + FLIRT-1-10B
-+ ~RandomNum(3,3)~ + ~(Tease her)~ + FLIRT-1-10C
-+ ~RandomNum(3,1)~ + ~Care for a spot of tea?~ + FLIRT-1-11A
-+ ~RandomNum(3,2)~ + ~Care for a spot of tea?~ + FLIRT-1-11B
-+ ~RandomNum(3,3)~ + ~Care for a spot of tea?~ + FLIRT-1-11C
-+ ~RandomNum(3,1) Global("C0AuraRomanceActive","GLOBAL",2)~ + ~I love you, Aura.~ + FLIRT-2-3A
-+ ~RandomNum(3,2) Global("C0AuraRomanceActive","GLOBAL",2)~ + ~I love you, Aura.~ + FLIRT-2-3B
-+ ~RandomNum(3,3) Global("C0AuraRomanceActive","GLOBAL",2)~ + ~I love you, Aura.~ + FLIRT-2-3C
-+ ~Global("C0AuraRomanceActive","GLOBAL",1)~ + ~Sweetie, there's something I need to tell you...~ + FLIRT-TALK
-+ ~Global("C0AuraRomanceActive","GLOBAL",2)~ + ~Sweetie, there's something I need to tell you...~ + FLIRT-TALK*/
-++ ~No, nothing.~ EXIT
++ ~RandomNum(4,1) Global("C0AuraRomanceActive","GLOBAL",2)~ + ~（吻她的唇）~ + FLIRT-2-1A
++ ~RandomNum(4,2) Global("C0AuraRomanceActive","GLOBAL",2)~ + ~（吻她的唇）~ + FLIRT-2-1B
++ ~RandomNum(4,3) Global("C0AuraRomanceActive","GLOBAL",2)~ + ~（吻她的唇）~ + FLIRT-2-1C
++ ~RandomNum(4,4) Global("C0AuraRomanceActive","GLOBAL",2)~ + ~（吻她的唇）~ + FLIRT-2-1D
++ ~RandomNum(4,1)~ + ~（吻她的脸颊）~ + FLIRT-1-1A
++ ~RandomNum(4,2)~ + ~（吻她的脸颊）~ + FLIRT-1-1B
++ ~RandomNum(4,3)~ + ~（吻她的脸颊）~ + FLIRT-1-1C
++ ~RandomNum(4,4)~ + ~（吻她的脸颊）~ + FLIRT-1-1D
++ ~RandomNum(3,1)~ + ~（吻她的鼻尖）~ + FLIRT-1-2A
++ ~RandomNum(3,2)~ + ~（吻她的鼻尖）~ + FLIRT-1-2B
++ ~RandomNum(3,3)~ + ~（吻她的鼻尖）~ + FLIRT-1-2C
++ ~RandomNum(4,1) Global("C0AuraRomanceActive","GLOBAL",2)~ + ~（紧紧抱住她）~ + FLIRT-2-2A
++ ~RandomNum(4,2) Global("C0AuraRomanceActive","GLOBAL",2)~ + ~（紧紧抱住她）~ + FLIRT-2-2B
++ ~RandomNum(4,3) Global("C0AuraRomanceActive","GLOBAL",2)~ + ~（紧紧抱住她）~ + FLIRT-2-2C
++ ~RandomNum(4,4) Global("C0AuraRomanceActive","GLOBAL",2) !InParty("IMOEN2")~ + ~（紧紧抱住她）~ + FLIRT-2-2A
++ ~RandomNum(4,4) Global("C0AuraRomanceActive","GLOBAL",2) InParty("IMOEN2")~ + ~（紧紧抱住她）~ + FLIRT-2-2D
++ ~RandomNum(3,1) !Race(Player1,HALFLING) !Race(Player1,DWARF) !Race(Player1,GNOME)~ + ~（把她抱起来）~ + FLIRT-1-3A
++ ~RandomNum(3,2) !Race(Player1,HALFLING) !Race(Player1,DWARF) !Race(Player1,GNOME)~ + ~（把她抱起来）~ + FLIRT-1-3B
++ ~RandomNum(3,3) !Race(Player1,HALFLING) !Race(Player1,DWARF) !Race(Player1,GNOME)~ + ~（把她抱起来）~ + FLIRT-1-3C
++ ~RandomNum(3,1) OR(3) Race(Player1,HALFLING) Race(Player1,DWARF) Race(Player1,GNOME)~ + ~（抱她）~ + FLIRT-1-3A
++ ~RandomNum(3,2) OR(3) Race(Player1,HALFLING) Race(Player1,DWARF) Race(Player1,GNOME)~ + ~（抱她）~ + FLIRT-1-3B
++ ~RandomNum(3,3) OR(3) Race(Player1,HALFLING) Race(Player1,DWARF) Race(Player1,GNOME)~ + ~（抱她）~ + FLIRT-1-3D
++ ~RandomNum(3,1)~ + ~（向她眨眼）~ + FLIRT-1-4A
++ ~RandomNum(3,2)~ + ~（向她眨眼）~ + FLIRT-1-4B
++ ~RandomNum(3,3)~ + ~（向她眨眼）~ + FLIRT-1-4C
++ ~RandomNum(3,1)~ + ~（挠她痒）~ + FLIRT-1-5A
++ ~RandomNum(3,2)~ + ~（挠她痒）~ + FLIRT-1-5B
++ ~RandomNum(3,3)~ + ~（挠她痒）~ + FLIRT-1-5C
++ ~RandomNum(3,1)~ + ~（捏她的脸）~ + FLIRT-1-6A
++ ~RandomNum(3,2)~ + ~（捏她的脸）~ + FLIRT-1-6B
++ ~RandomNum(3,3)~ + ~（捏她的脸）~ + FLIRT-1-6C
++ ~RandomNum(3,1)~ + ~（戳她的鼻子）~ + FLIRT-1-7A
++ ~RandomNum(3,2)~ + ~（戳她的鼻子）~ + FLIRT-1-7B
++ ~RandomNum(3,3) !Race(Player1,HALFLING) !Race(Player1,DWARF) !Race(Player1,GNOME)~ + ~（戳她的鼻子）~ + FLIRT-1-7C
++ ~RandomNum(3,3) OR(3) Race(Player1,HALFLING) Race(Player1,DWARF) Race(Player1,GNOME)~ + ~（戳她的鼻子）~ + FLIRT-1-7D
++ ~RandomNum(3,1)~ + ~（抚她的头发）~ + FLIRT-1-8A
++ ~RandomNum(3,2)~ + ~（抚她的头发）~ + FLIRT-1-8B
++ ~RandomNum(3,3)~ + ~（抚她的头发）~ + FLIRT-1-8C
++ ~RandomNum(3,1)~ + ~（玩笑地扯她的耳朵）~ + FLIRT-1-9A
++ ~RandomNum(3,2)~ + ~（玩笑地扯她的耳朵）~ + FLIRT-1-9B
++ ~RandomNum(3,3)~ + ~（玩笑地扯她的耳朵）~ + FLIRT-1-9C
+/*+ ~RandomNum(3,1)~ + ~（逗她）~ + FLIRT-1-10A
++ ~RandomNum(3,2)~ + ~（逗她）~ + FLIRT-1-10B
++ ~RandomNum(3,3)~ + ~（逗她）~ + FLIRT-1-10C
++ ~RandomNum(3,1)~ + ~要不要喝杯茶？~ + FLIRT-1-11A
++ ~RandomNum(3,2)~ + ~要不要喝杯茶？~ + FLIRT-1-11B
++ ~RandomNum(3,3)~ + ~要不要喝杯茶？~ + FLIRT-1-11C
++ ~RandomNum(3,1) Global("C0AuraRomanceActive","GLOBAL",2)~ + ~我爱你，奥拉。~ + FLIRT-2-3A
++ ~RandomNum(3,2) Global("C0AuraRomanceActive","GLOBAL",2)~ + ~我爱你，奥拉。~ + FLIRT-2-3B
++ ~RandomNum(3,3) Global("C0AuraRomanceActive","GLOBAL",2)~ + ~我爱你，奥拉。~ + FLIRT-2-3C
++ ~Global("C0AuraRomanceActive","GLOBAL",1)~ + ~亲爱的，有件事我得告诉你……~ + FLIRT-TALK
++ ~Global("C0AuraRomanceActive","GLOBAL",2)~ + ~亲爱的，有件事我得告诉你……~ + FLIRT-TALK*/
+++ ~不，没什么。~ EXIT
 
 CHAIN C0AUR25J FLIRT-2-1A
-~Mmm...~
-= ~I could never get enough of that. *giggle* One more?~
+~嗯……~
+= ~我怎么也嫌不够。*轻笑* 再来一次？~
 EXIT
 
 CHAIN C0AUR25J FLIRT-2-1B
-~(Aura closes her bright eyes in contentment in response to your kiss. When you finally part, she opens them slowly with a shy smile.)~
+~（奥拉满足地闭上明亮的眼睛回应你的吻。终于分开时，她带着害羞的笑慢慢睁开。）~
 EXIT
 
 CHAIN C0AUR25J FLIRT-2-1C
-~(You feel Aura's small hands holding you as closely as your bodies will allow as you hold the kiss. There is a pleading look on her face when she reluctantly releases you.)~
+~（你感到奥拉的小手尽可能紧地抱着你，同时你继续这个吻。她不情愿地放开你时，脸上带着恳求的神情。）~
 EXIT
 
 CHAIN C0AUR25J FLIRT-2-1D
-~(You hold Aura closely as your lips touch hers, faintly tasting the sweetness of sugar and wildberries.)~
+~（你紧紧抱着奥拉，唇触到她的，隐约尝到糖和野莓的甜味。）~
 END
-++ ~(Teasingly brush your tongue against her lips)~ + FLIRT-2-1D1
-++ ~Mmm, now nice... strawberry tarts, hmm?~ + FLIRT-2-1D2
-++ ~(Break away from her)~ EXIT
+++ ~（顽皮地用舌尖刷过她的唇）~ + FLIRT-2-1D1
+++ ~嗯嗯……现在真好……草莓挞，嗯？~ + FLIRT-2-1D2
+++ ~（从她怀里退开）~ EXIT
 
 CHAIN C0AUR25J FLIRT-2-1D1
-~Hey... *giggle* hey, stop that! That tickles!~
+~嘿……*轻笑* 嘿，停下！好痒！~
 EXIT
 
 CHAIN C0AUR25J FLIRT-2-1D2
-~(She laughs and licks her lips with a flustered expression on her face.) They're my favorite...~
+~（她笑着，脸上带着慌乱地舔了舔嘴唇。）那是我最喜欢的……~
 EXIT
 
 CHAIN C0AUR25J FLIRT-1-1A
-~(As you lay a soft peck on Aura's dimpled cheek, a pink flush immediately rises at the spot you kissed.)~
+~（你在奥拉有酒窝的脸颊上轻轻一啄，被吻处立刻泛起粉红。）~
 EXIT
 
 CHAIN C0AUR25J FLIRT-1-1B
-~(Aura's skin is soft, smooth and warm, without the slightest trace of roughness. She remains perfectly still, perhaps overwhelmed by the straightforwardness of your affection.)~
+~（奥拉的皮肤柔软、光滑、温暖，没有一丝粗糙。她一动不动，也许是被你直白的亲昵弄得不知所措。）~
 EXIT
 
 CHAIN C0AUR25J FLIRT-1-1C
-~(When you press your lips against Aura's cheek, she gives a contented sigh and then a look of endearment in response.)~
-= ~Ahaha... I can't help but feel warm every time you do that.~
+~（你的唇贴上奥拉的脸颊时，她满足地叹了一声，随后露出爱怜的神情。）~
+= ~啊哈哈……每次你这么做，我都忍不住心里发热。~
 EXIT
 
 CHAIN C0AUR25J FLIRT-1-1D
-~(As you lean forward, Aura presses a hand against your shoulder to stop you.)~
-= ~No, no, not right now, I've got a spot of grease on my face. Wait until I've had a chance to wash up, okay?~
+~（你俯身靠近，奥拉一只手抵在你肩上拦住你。）~
+= ~不，不，现在不行，我脸上蹭了点油污。等我洗一下，好吗？~
 EXIT
 
 CHAIN C0AUR25J FLIRT-1-2A
-~(You taste faintly of sweat on the bridge of Aura's nose. She makes a small gasp and pulls back, wiping her face hurriedly.)~
-= ~S–sorry! I should've paid more attention before you... well... you can go again now. Please?~
+~（你在奥拉鼻梁上尝到一点汗味。她轻吸一口气，往后缩，急忙擦脸。）~
+= ~对——对不起！你亲之前我该多注意些……好吧……你现在可以再来。行吗？~
 EXIT
 
 CHAIN C0AUR25J FLIRT-1-2B
-~(As your lips touch Aura's nose, you feel her breath upon your neck, drawn from no small amount of nervousness. She tilts her head slightly forward, however, laying a faint kiss on your chin before you part.)~
+~（你的唇触到奥拉的鼻子时，你感到她紧张的呼吸拂在你颈上。可她把头稍稍前倾，在你分开前在你下巴上轻轻印了一吻。）~
 EXIT
 
 CHAIN C0AUR25J FLIRT-1-2C
-~(As close as you are to Aura's face, you notice how her nose, despite being slightly larger than average by any other race's standards, is unusually smaller and fey-like, with a sharper, more defined shape that complements her youthful features.)~
-= ~(When you finally pull away, Aura smiles at you, only for a strange expression to suddenly take over as her nose twitches. A second later, she sneezes.)~
+~（离奥拉的脸这么近，你注意到她的鼻子虽然按其他种族的标准略大，却异常小巧、带着妖精般的样子，形状更尖更分明，正衬她年轻的面貌。）~
+= ~（你终于退开时，奥拉朝你笑，可随即表情古怪，鼻子抽动。一秒后，她打了个喷嚏。）~
 EXIT
 
 CHAIN C0AUR25J FLIRT-2-2A
-~(While Aura sighs in resignation at first when you take her in your arms, as you hold her closely she lays her face against your chest, giving a hum of contentment while resting in your embrace.)~
+~（你把她揽进怀里时，奥拉起初无奈地叹气，可你抱紧她后，她把脸贴在你胸口，在你怀里满足地哼了一声。）~
 EXIT
 
 CHAIN C0AUR25J FLIRT-2-2B
-~(Aura barely struggles as you cuddle her tightly, finally giving up and wrapping her arms around your neck.)~
+~（你紧紧搂住她，奥拉几乎没挣扎，最后放弃，双臂环上你的脖子。）~
 EXIT
 
 CHAIN C0AUR25J FLIRT-2-2C
-~H–hey...! This again...? I'm not a doll!~
+~嘿——嘿……！又来这套……？我不是娃娃！~
 END
-++ ~I can't help it... you're just too adorable!~ + FLIRT-2-2C1
-++ ~Okay, okay... I'll let go...~ + FLIRT-2-2C2
+++ ~我没办法……你太可爱了！~ + FLIRT-2-2C1
+++ ~好，好……我放开……~ + FLIRT-2-2C2
 
 CHAIN C0AUR25J FLIRT-2-2C1
-~Hmph, okay... I guess I can deal with it...~
+~哼，好吧……我想我能忍……~
 EXIT
 
 CHAIN C0AUR25J FLIRT-2-2C2
-~I–I didn't say you *had* to let go... I didn't mind it that much.~
+~我——我没说你*非得*放开……我不太介意。~
 EXIT
 
 CHAIN C0AUR25J FLIRT-2-2D
-~Oof! Goodness, i–it's so hard to decide whether you or Imoen gives the tighter hugs...~
+~哎哟！天哪，真——真难判断你跟爱蒙谁的拥抱更紧……~
 EXIT
 
 CHAIN C0AUR25J FLIRT-1-3A
-~M-hmmmm... that's nice. You're so nice and warm, <CHARNAME>.~
+~嗯——嗯嗯……真好。你真暖和，<CHARNAME>。~
 EXIT
 
 CHAIN C0AUR25J FLIRT-1-3B
-~(As you wrap your arms around Aura's waist and bring her close, she presses herself against you, and you enjoy the softness of her body closely against yours.)~
+~（你双臂环住奥拉的腰把她拉近，她贴向你，你享受她柔软的身子紧贴着你的感觉。）~
 EXIT
 
 CHAIN C0AUR25J FLIRT-1-3C
-~(Aura gives a cry of shock as you lift her from the ground, her arms reaching for you as you pull her close to you for an embrace. She nuzzles your neck as you hold her by the waist.)~
+~（你把她从地上抱起来时奥拉惊叫一声，你把她拉近拥抱，她双臂伸向你。你扶着她腰时，她把脸蹭向你的脖子。）~
 EXIT
 
 CHAIN C0AUR25J FLIRT-1-3D
-~Hmm, it's so comforting to be held like this...~
-= ~(She nuzzles her face against your neck as you hold onto her, sighing in contentment.)~
+~嗯，这样被抱着真让人安心……~
+= ~（你抱着她时，她把脸蹭向你的脖子，满足地叹气。）~
 EXIT
 
 CHAIN C0AUR25J FLIRT-1-4A
-~(Aura blinks bemusedly in response to your gesture.)~
-= ~Uh oh... what are you planning this time?~
+~（奥拉对你的举动困惑地眨眼。）~
+= ~哦不……你这次又在打什么主意？~
 END
-++ ~I'm not telling.~ + FLIRT-1-4A1
-++ ~Nothing... I just wanted to see how your smile.~ + FLIRT-1-4A2
+++ ~我不告诉你。~ + FLIRT-1-4A1
+++ ~没什么……我只是想看看你笑的样子。~ + FLIRT-1-4A2
 
 CHAIN C0AUR25J FLIRT-1-4A1
-~A-haha... I'm already terrified... *shudder*~
+~啊哈哈……我已经怕了……*打颤*~
 EXIT
 
 CHAIN C0AUR25J FLIRT-1-4A2
-~Oh. Well then...~
-= ~(She gives you a gentle, slightly teasing smile and winks back at you in response.)~
+~哦。那好吧……~
+= ~（她给你一个温和、略带逗弄的笑，回你一个眼色。）~
 EXIT
 
 CHAIN C0AUR25J FLIRT-1-4B
-~What? Is there something on my face? Or is my hair mussed up again? C'mon, tell me what's going on!~
+~什么？我脸上有东西？还是我头发又乱了？快告诉我怎么回事！~
 EXIT
 
 CHAIN C0AUR25J FLIRT-1-4C
-~(Aura giggles and grins sheepishly for a moment, before nervously running her fingers along her long hair expectantly.)~
+~（奥拉傻笑了一下、羞怯地咧嘴，随后紧张地用手指顺着自己的长发。）~
 EXIT
 
 CHAIN C0AUR25J FLIRT-1-5A
-~Oh... no, nononono! A-hahaha! Stop it, <CHARNAME>―no, not there! Hahahahaha―aah!~
+~哦……不，不不不不！啊哈哈！停下，<CHARNAME>——不，别挠那儿！哈哈哈哈哈——啊！~
 EXIT
 
 CHAIN C0AUR25J FLIRT-1-5B
-~Eep! Ahahahah, not the waist, not the waist... eeek!~
+~呀！啊哈哈哈哈，别挠腰，别挠腰……咿！~
 EXIT
 
 CHAIN C0AUR25J FLIRT-1-5C
-~(Surprisingly, Aura puts up a meager resistance as you playfully attack her ticklish spots. When you detect a glint of mischief in her eyes, you realize―a little too late―that you've made a careless mistake.~
-= ~Haha! You've fallen for my trap! Get her, Muffy!~
-= ~(The small squirrel construct leaps onto you and runs crazily over your body in circles from head to toe, its tiny metal paws tickling you endlessly as you struggle to capture it.)~
+~（出乎意料，你顽皮地攻她的痒处时，奥拉只做了微弱的抵抗。当你察觉她眼里闪过一抹淘气，你才——稍微晚了一点——意识到自己犯了个粗心的错。~
+= ~哈哈！你中了我的圈套！上，穆菲！~
+= ~（那只小松鼠构造体扑到你身上，从你头顶到脚疯狂地绕圈乱跑，细小的金属爪挠得你没完没了，你挣扎着想抓住它。）~
 END
-++ ~Eeeeek! Call him off, Aura!~ + FLIRT-1-5C1
-++ ~Okay, okay, I surrender!~ + FLIRT-1-5C1
-++ ~No, you don't, you little... ah ha, gotcha!~ + FLIRT-1-5C2
+++ ~咿——！叫它停下，奥拉！~ + FLIRT-1-5C1
+++ ~好，好，我投降！~ + FLIRT-1-5C1
+++ ~不，你不行，你这小……啊哈，抓住你了！~ + FLIRT-1-5C2
 
 CHAIN C0AUR25J FLIRT-1-5C1
-~*giggle* Looks like I win this time, <CHARNAME>!~
+~*轻笑* 看来这次是我赢了，<CHARNAME>！~
 EXIT
 
 CHAIN C0AUR25J FLIRT-1-5C2
-~Aww. I never get one over you, do I, <CHARNAME>?~
-= ~Er, can you give him back now?~
+~唉。我从来赢不了你，对吧，<CHARNAME>？~
+= ~呃，你能把它还给我了吗？~
 EXIT
 
 CHAIN C0AUR25J FLIRT-1-6A
-~Oof! My goodness, you're worse than my sisters, <CHARNAME>...~
+~哎哟！天哪，你比我姐姐们还过分，<CHARNAME>……~
 EXIT
 
 CHAIN C0AUR25J FLIRT-1-6B
-~*sigh* Sometimes I wish I'd outgrow my own face so my cheeks wouldn't be so tempting to other people.~
+~*叹气* 有时我希望自己的脸能长成熟点，这样我的脸颊就不会那么招人捏。~
 EXIT
 
 CHAIN C0AUR25J FLIRT-1-6C
-~(Aura gives an unconvincingly disapproving pout as you gently rub her cheek using two fingers, while struggling to hide her approval with contented eyes and a barely-restrained smile.)~
+~（你用两根手指轻搓奥拉的脸颊，她不以为然地嘟嘴，可那模样一点也不像，眼里满是满足，嘴角也几乎压不住笑。）~
 EXIT
 
 CHAIN C0AUR25J FLIRT-1-7A
-~(Aura flushes furiously as you lay a finger teasingly on her nose.)~
+~（你逗弄地把一根手指放在奥拉鼻尖上，她脸腾地红了。）~
 EXIT
 
 CHAIN C0AUR25J FLIRT-1-7B
-~(Aura gives a nervous giggle at the affectionate touch. You notice a glint of excitement in her eyes for a brief moment, and as you withdraw, she catches your hand and gently kisses your finger.)~
+~（这亲昵的触碰让奥拉紧张地笑了一声。你注意到她眼里短暂地闪过兴奋，你收回手时，她抓住你的手，轻轻吻了你的手指。）~
 EXIT
 
 CHAIN C0AUR25J FLIRT-1-7C
-~(As you raise a finger to the tip of Aura's nose, she beckons you to lean closer with a candid smile on her face and raises a finger to touch your cheek in return.)~
+~（你把一根手指抬到奥拉鼻尖，她带着坦率的笑示意你靠近，也抬手指碰你的脸。）~
 EXIT
 
 CHAIN C0AUR25J FLIRT-1-7D
-~(As you bend down and raise a finger to the tip of Aura's nose, she beckons you to lean closer with a candid smile on her face and lifts her own finger to touch your cheek in return.)~
+~（你弯下身把手指抬到奥拉鼻尖，她带着坦率的笑示意你靠近，也抬起自己的手指碰你的脸。）~
 EXIT
 
 CHAIN C0AUR25J FLIRT-1-8A
-~(As you tenderly stroke the long, straight strands of Aura's hair, you notice how well-tended it is. Her hair is clean, even, and smells faintly of rose and lavender. You cannot help but wonder just how much time she spends tending to her hair at night to make up for the roughness of your daily travels.)~
+~（你温柔地抚着奥拉长而直的头发，注意到它养护得多好。她的发丝干净、齐整，隐约有玫瑰和淡紫的香。你忍不住想，她夜里要花多少时间打理头发，才补得上你日常旅行的粗砺。）~
 EXIT
 
 CHAIN C0AUR25J FLIRT-1-8B
-~(After you brush against Aura's hair for a while, she clasps your hand and holds it against her cheek, gently caressing your fingers with a slight smile.)~
-= ~(Suddenly she blushes, and with a flustered expression, reaches in her pack hurriedly to take out a small wooden brush.)~
-= ~Umm... would you mind brushing my hair a bit, <CHARNAME>? I'd like that.~
+~（你抚了一阵奥拉的头发后，她握住你的手贴在自己脸颊上，带着浅笑轻轻摩挲你的手指。）~
+= ~（她忽然脸红，神情慌乱地在包里急忙掏出一把小木梳。）~
+= ~呃……你介意帮我梳一下头发吗，<CHARNAME>？我会喜欢的。~
 EXIT
 
 CHAIN C0AUR25J FLIRT-1-8C
-~(As you trace a strand of Aura's rose-colored hair to its roots on her head, you see the faint change of colour to its natural pale―almost silvery―blonde.~
-= ~Aura lets off a giggle as your finger slides against her head, clearly ticklish.)~
+~（你把奥拉一缕玫瑰色的头发顺到发根，看见颜色淡淡变回她本来的淡——几乎银白——金。~
+= ~你的手指滑过她头顶时，奥拉轻笑出声，明显怕痒。~
 END
-++ ~You have very lovely hair, Aura.~ + FLIRT-1-8C1
-++ ~I want to see your normal hair colour one day.~ + FLIRT-1-8C2
+++ ~你的头发很美，奥拉。~ + FLIRT-1-8C1
+++ ~我想有一天看看你本来的发色。~ + FLIRT-1-8C2
 
 CHAIN C0AUR25J FLIRT-1-8C1
-~*giggle* Thank you, <CHARNAME>... I'm really glad you like it.~
+~*轻笑* 谢谢你，<CHARNAME>……我真高兴你喜欢。~
 EXIT
 
 CHAIN C0AUR25J FLIRT-1-8C2
-~Really? I'll let my hair grow out without dyeing it for a while then, if that's what you'd like.~
+~真的？那我有一阵不染，让头发长出来，如果你想要那样。~
 EXIT
 
 CHAIN C0AUR25J FLIRT-1-9A
-~(You sneak up on Aura from behind and teasingly nip on the point of her ear that is slightly sticking out from under her hair. She makes a startled squeak and turns to face you.)~
-= ~Eep! Oh, it's just you, <CHARNAME>... um, I don't mind you doing something like that... *blush* ...but could you give me some warning first?~
+~（你从背后悄悄靠近奥拉，逗弄地咬了一下她从头发出微微露出的耳尖。她惊叫一声转过身面对你。）~
+= ~呀！哦，是你，<CHARNAME>……呃，我不介意你做这种事……*脸红* ……可你能不能先给我个提醒？~
 EXIT
 
 CHAIN C0AUR25J FLIRT-1-9B
-~(You give a few teasing pinches to Aura's small, elfin ears.)~
+~（你逗弄地捏了几下奥拉小巧的精灵耳。）~
 EXIT
 
 CHAIN C0AUR25J FLIRT-1-9C
-~No fair, <CHARNAME>! Let me pull your ears once in a while.~
+~不公平，<CHARNAME>！让我也偶尔扯扯你的耳朵。~
 EXIT
 
 CHAIN C0AUR25J stringfix
-~Ick. I'll have to see what I can do about that. *ahem* 'La, la...'~
+~呃。我得想办法处理一下这个。*咳* “啦，啦……”~
 DO ~ClearAllActions() 
       StartCutSceneMode() 
       StartCutScene("c0areset")~ EXIT

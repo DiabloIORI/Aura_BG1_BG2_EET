@@ -1,7 +1,7 @@
 BEGIN C0AUBOW
 
 IF ~True()~ THEN BEGIN SUNSHOOTER
-SAY ~Change configuration?~ [C0BLANK]
+SAY ~切换配置？~ [C0BLANK]
 + ~OR(10)
 HasItemEquiped("C0AUBO1B",Myself)
 HasItemEquiped("C0AUBO1C",Myself)
@@ -12,7 +12,7 @@ HasItemEquiped("C0AUBO3C",Myself)
 HasItemEquiped("C0AUBO4B",Myself)
 HasItemEquiped("C0AUBO4C",Myself)
 HasItemEquiped("C0AUBO5B",Myself)
-HasItemEquiped("C0AUBO5C",Myself)~ + ~Rapid Shot~ DO ~SetInterrupt(FALSE)
+HasItemEquiped("C0AUBO5C",Myself)~ + ~速射~ DO ~SetInterrupt(FALSE)
 EquipMostDamagingMelee()
 PlaySound("C0AUBOW")
 TransformItem("C0AUBO1B","C0AUBO1A")
@@ -38,7 +38,7 @@ HasItemEquiped("C0AUBO3C",Myself)
 HasItemEquiped("C0AUBO4A",Myself)
 HasItemEquiped("C0AUBO4C",Myself)
 HasItemEquiped("C0AUBO5A",Myself)
-HasItemEquiped("C0AUBO5C",Myself)~ + ~Precise Shot~ DO ~SetInterrupt(FALSE)
+HasItemEquiped("C0AUBO5C",Myself)~ + ~精准射击~ DO ~SetInterrupt(FALSE)
 EquipMostDamagingMelee()
 PlaySound("C0AUBOW")
 TransformItem("C0AUBO1A","C0AUBO1B")
@@ -62,7 +62,7 @@ HasItemEquiped("C0AUBO3A",Myself)
 HasItemEquiped("C0AUBO4B",Myself)
 HasItemEquiped("C0AUBO4A",Myself)
 HasItemEquiped("C0AUBO5B",Myself)
-HasItemEquiped("C0AUBO5A",Myself)~ + ~Power Shot~ DO ~SetInterrupt(FALSE)
+HasItemEquiped("C0AUBO5A",Myself)~ + ~强力射击~ DO ~SetInterrupt(FALSE)
 EquipMostDamagingMelee()
 PlaySound("C0AUBOW")
 TransformItem("C0AUBO2B","C0AUBO2C")
@@ -76,7 +76,7 @@ TransformItem("C0AUBO5A","C0AUBO5C")
 EquipRanged()
 SetSequence(8)
 SetInterrupt(TRUE)~ EXIT
-+ ~HasItem("c0amisc8",Myself)~ + ~Attach Precision Lens~ DO ~
++ ~HasItem("c0amisc8",Myself)~ + ~装上精准镜片~ DO ~
 EquipMostDamagingMelee()
 SetInterrupt(FALSE)
 PlaySound("C0AUBOW")
@@ -85,5 +85,5 @@ ApplySpellRES("C0AQEF26",Myself)
 EquipRanged()
 SetSequence(8)
 SetInterrupt(TRUE)~ EXIT
-++ ~Exit~ EXIT
+++ ~离开~ EXIT
 END

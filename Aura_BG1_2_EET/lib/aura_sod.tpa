@@ -68,8 +68,8 @@ UNLESS ~C0Aura~
 // CREATURES
 
 COPY ~%MOD_FOLDER%/creatures/SoD/c02akoko.cre~ ~override~
-  SAY NAME1 ~Koko~
-  SAY NAME2 ~Koko~
+  SAY NAME1 ~可可~
+  SAY NAME2 ~可可~
   WRITE_ASCII 0x248 ~c02akoko~ #8  //override script
   WRITE_ASCII 0x280 ~c02akoko~ #32  //DV
   WRITE_ASCII 0x2cc ~c02akoko~ #8   //pre-joining dialogue file
@@ -81,8 +81,8 @@ COPY_EXISTING ~orc01.cre~ ~override/c02aorc2.cre~
   WRITE_ASCII 0x280 ~c02aorc2~ #32  //DV
   
 COPY_EXISTING ~%MOD_FOLDER%/creatures/SoD/c02auto.cre~ ~override~
-  SAY NAME1 ~Bronze Automaton~
-  SAY NAME2 ~Bronze Automaton~
+  SAY NAME1 ~青铜自动机械~
+  SAY NAME2 ~青铜自动机械~
   WRITE_ASCII 0x248 ~c02auto~ #8  //override script
   WRITE_ASCII 0x2cc ~c02auto~  #8  // dialogue
   WRITE_ASCII 0x280 ~c02auto~ #32  //DV
@@ -105,34 +105,34 @@ COPY_EXISTING ~c0abomba.itm~ ~override~
 	  parameter1 = (IDS_OF_SYMBOL (~kit~ ~C0AURA~))
 	  parameter2 = 9
 	  power = 1
-	  special = RESOLVE_STR_REF (~Artificer~)
+	  special = RESOLVE_STR_REF (~奇械师~)
 END
-SAY NAME1 ~Firebomb~
-SAY NAME2 ~Screaming Void~
-SAY DESC ~This malignant explosive was crafted using dust from the voidstone which caused a negative energy field within Bridgefort. As unsettling as the dark sludge-like substance appears, it can deal an indisputably massive amount of harm to any being unfortunate enough to be caught within its radius.
+SAY NAME1 ~燃烧弹~
+SAY NAME2 ~尖啸虚空~
+SAY DESC ~这枚恶性的爆炸物是用虚空石的粉末制成的，那块石头曾在桥堡内造成一片负能量场。这团深色的、泥浆般的物质看着就令人不安，却无疑能对任何不幸身处其半径内的生物造成巨大伤害。
 
-STATISTICS
+属性
 
-When thrown, unleashes a burst of negative energy which deals Magic Damage and reduces all creatures' Strength. Has no effect against undead.
-  1st level: 6d6+4 Magic Damage (Save vs. Spells for half), -1 Strength (5 rounds)
-  10th level: 6d8+6 Magic Damage (Save vs. Spells at -1 for half), -2 Strength (7 rounds)
-  20th level: 6d10+8 Magic Damage (Save vs. Spells at -2 for half), -3 Strength (1 turn)
-  30th level: 8d10+10 Magic Damage (Save vs. Spells at -3 for half), -4 Strength (2 turns)
-  40th level: 10d10+12 Magic Damage (Save vs. Spells at -4 for half), -5 Strength (3 turns)
+投掷出去后释放一阵负能量，造成魔法伤害并降低所有生物的力量。对不死生物无效。
+  1 级：6d6+4 魔法伤害（对抗法术豁免成功则减半）、力量 -1（5 轮）
+  10 级：6d8+6 魔法伤害（对抗法术豁免 -1 成功则减半）、力量 -2（7 轮）
+  20 级：6d10+8 魔法伤害（对抗法术豁免 -2 成功则减半）、力量 -3（1 回合）
+  30 级：8d10+10 魔法伤害（对抗法术豁免 -3 成功则减半）、力量 -4（2 回合）
+  40 级：10d10+12 魔法伤害（对抗法术豁免 -4 成功则减半）、力量 -5（3 回合）
 
-Weight: 0~
+重量：0~
 WRITE_SHORT 0x9C ~%c0aproj0%~
 WRITE_LONG 0x34 4000
 
 COPY_EXISTING ~c02aucat.itm~ ~override~
-SAY NAME1 ~Cat~
-SAY NAME2 ~"Koko-chan"~
-SAY DESC ~This small, grey cat is quite cute, yet it looks at you warily while you are within eyeshot. At the moment, it is contentedly taking a nap inside of Aura's backpack.
+SAY NAME1 ~猫~
+SAY NAME2 ~「可可酱」~
+SAY DESC ~这只灰色的小猫相当可爱，可当你目光落在它身上时，它却警惕地看着你。此刻它正惬意地在奥拉的背包里打盹。
 
-STATISTICS:
+属性：
 
-Weight: 0~
-OUTER_SET strref = RESOLVE_STR_REF (~The cat growls and hisses menacingly when you attempt to move it from its resting place.~ [FAMCAT01])
+重量：0~
+OUTER_SET strref = RESOLVE_STR_REF (~你想把它从休息的地方挪开时，这猫威胁地低吼嘶叫起来。~ [FAMCAT01])
 APPEND item_use.2da ~c02aucat Aura %strref% 3~
 
 COPY_EXISTING ~c0auaro4.itm~ ~override~
@@ -148,82 +148,82 @@ COPY_EXISTING ~c0auaro4.itm~ ~override~
       check_globals = 1
       check_headers = 1
       match_opcode = 139 // display string
- parameter1 = RESOLVE_STR_REF (~Burning~)
+ parameter1 = RESOLVE_STR_REF (~燃烧~)
 END
-SAY NAME1 ~Trollbane Arrow~
-SAY NAME2 ~Trollbane Arrow~
-SAY DESC ~This unusual arrow, designed and crafted by Aura to fight trolls, is filled with a flammable concoction which alters a troll's physiology, preventing them from regenerating their wounds.
+SAY NAME1 ~灭巨魔箭~
+SAY NAME2 ~灭巨魔箭~
+SAY DESC ~这种不寻常的箭由奥拉设计并制作，用来对付巨魔，内装易燃的调配物，能改变巨魔的生理，使其无法再生伤口。
 
-STATISTICS:
+属性：
 
-Combat abilities:
-- Targets struck by this arrow must make a save vs. death at -4 or suffer two points of fire damage per round for three rounds. If the target is a troll, it permanently loses its regenerative abilities.
+战斗能力：
+- 被此箭射中的目标须通过对抗死亡豁免（-4），否则三轮内每轮受两点火焰伤害。若目标是巨魔，它将永久失去再生能力。
 
-THAC0: +2
-Damage: 1d6+4 fire
-Damage type: piercing
-Launcher: Bow
+THAC0：+2
+伤害：1d6+4 火焰
+伤害类型：穿刺
+发射器：弓
 
-Weight: 0~
+重量：0~
 WRITE_SHORT 0x9C ~%c0auaro4%~
 
 COPY_EXISTING ~c02apotn.itm~ ~override~
-SAY NAME1 ~Potion~
-SAY NAME2 ~Sleeping Potion~
-SAY DESC ~This phial contains a milky-white liquid with strong sedative properties. Even the scent of it is enough to make you feel drowsy. A few drops would be capable of putting any living creature to sleep.
+SAY NAME1 ~药水~
+SAY NAME2 ~催眠药水~
+SAY DESC ~这只小瓶里装着乳白色的液体，有很强的镇静作用。光是闻到它的气味就足以让人昏昏欲睡。几滴便足以让任何活物入睡。
 
-STATISTICS:
+属性：
 
-Weight: 0~
+重量：0~
 
 COPY_EXISTING ~c02afish.itm~ ~override~
-SAY NAME1 ~Sardine~
-SAY NAME2 ~Sardine~
-SAY DESC ~Sardines, also known as pilchards, are small, oily fish that travel in large schools and feed on sea plankton. They are commonly consumed by both larger fish and mammals alike. Cats are known for being especially fond of sardines.
+SAY NAME1 ~沙丁鱼~
+SAY NAME2 ~沙丁鱼~
+SAY DESC ~沙丁鱼又称小鲱鱼，是一种体型小、油脂多的鱼，成群游动，以海中浮游生物为食。它们常被更大的鱼类与哺乳类捕食。众所周知，猫尤其爱吃沙丁鱼。
 
-STATISTICS:
+属性：
 
-Weight: 0~
+重量：0~
 
 COPY_EXISTING ~c02aring.spl~ ~override~
 COPY_EXISTING ~c02aring.itm~ ~override~
-SAY NAME1 ~Ring of Moon's Eye~
-SAY NAME2 ~Ring of Moon's Eye~
-SAY DESC ~This roughly crafted ring appears unremarkable at first glance aside from a small crescent-shaped carving on the inner side. When worn, the bearer's skin becomes faintly illuminated, as though bathed in moonlight.
+SAY NAME1 ~月眼之戒~
+SAY NAME2 ~月眼之戒~
+SAY DESC ~这枚做工粗糙的戒指乍看平平无奇，只有内侧刻着一弯小小的新月。戴上后，佩戴者的皮肤会泛起淡淡的光，仿佛沐浴在月光中。
 
-STATISTICS:
+属性：
 
-Equipped abilities:
-- When struck in combat, the wearer has a 25% chance to cast Reflected Image on <PRO_HIMHER>self
-- Immunity to fear and holding effects
+装备能力：
+- 在战斗中被击中时，佩戴者有 25% 几率对自身施放“反射影像”
+- 免疫恐惧与定身效果
 
-Weight: 0~
+重量：0~
 
 COPY_EXISTING ~c02asack.itm~ ~override~
-SAY NAME1 ~Bag~
-SAY NAME2 ~Bag of Seeds~
-SAY DESC ~This bag contains a small handful of fat, brown sunflower seeds.
+SAY NAME1 ~袋子~
+SAY NAME2 ~种子袋~
+SAY DESC ~这只袋子里装着一小把饱满的棕色葵花籽。
 
-STATISTICS:
+属性：
 
-Weight: 1~
+重量：1~
 
 COPY_EXISTING ~c02asunf.itm~ ~override~
-SAY NAME1 ~Sunflowers~
-SAY NAME2 ~Sunflowers~
-SAY DESC ~These dried sunflowers are full of large seeds. They give off a pleasant aroma.
+SAY NAME1 ~向日葵~
+SAY NAME2 ~向日葵~
+SAY DESC ~这些干枯的向日葵满是硕大的种子，散发着一股好闻的香气。
 
-STATISTICS:
+属性：
 
-Weight: 1~
+重量：1~
 
 COPY_EXISTING ~scrl2j.itm~ ~override/c02apoem.itm~
-SAY NAME1 ~Strange Poem~
-SAY NAME2 ~Strange Poem~
-SAY DESC ~The writing on this scrap of paper appears to be some kind of poem.
+SAY NAME1 ~奇怪的诗~
+SAY NAME2 ~奇怪的诗~
+SAY DESC ~这张纸片上的字迹似乎是一首诗。
 
-"I follow in her steps
-She turns, a smile parts her lips
-Warm flush, cross'd my cheeks..."
+“我随在她身后
+她一回身，笑意启开双唇
+暖意，染上了我的脸颊……”
 
-The handwriting is somewhat familiar.~
+这笔迹看着有些眼熟。~

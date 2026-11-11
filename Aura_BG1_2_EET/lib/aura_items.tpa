@@ -1,57 +1,57 @@
 // ITEMS
 
 COPY_EXISTING ~c0audye.itm~ ~override~
-SAY NAME1 ~SeLandra's Permanent Leather Dye and Remover<TM>~
-SAY NAME2 ~SeLandra's Permanent Leather Dye and Remover<TM>~
-SAY DESC ~This bottle of pink-colored leather dye is a Lantanese brand, produced by SeLandra Tanners and Dyers.
+SAY NAME1 ~塞兰德拉永久皮革染色剂与去除剂<TM>~
+SAY NAME2 ~塞兰德拉永久皮革染色剂与去除剂<TM>~
+SAY DESC ~这瓶粉色皮革染料是兰坦品牌，由塞兰德拉制革与染坊出品。
 
-STATISTICS:
+属性：
 
-Special: Use in Quick Slot to permanently dye your leathers pink. Use dye remover to reverse the effect.
+特殊：在快捷栏中使用，可永久把你的皮甲染成粉色。使用去除剂可还原效果。
 
-Weight: 1~
+重量：1~
 
 COPY_EXISTING ~c0aule01.itm~ ~override~
-SAY NAME1 ~Cherry-tinted Leather Armor~
-SAY NAME2 ~Cherry-tinted Leather Armor~
-SAY DESC ~This basic armor is made of thick wax or water-hardened leather. It is sturdy protection, not supple like boots or a cloak. Soft garment leathers like that would offer no more protection than common clothing. Magical enchantments have improved the protective abilities of this particular suit.
+SAY NAME1 ~樱染皮甲~
+SAY NAME2 ~樱染皮甲~
+SAY DESC ~这件基础护甲由厚蜡皮或水鞣皮制成。它是结实的防护，不像靴子或斗篷那样柔软。那种柔软的成衣皮革提供的防护不会比普通衣物更多。这具体甲上的魔法附魔进一步提升了防护性能。
 
-Aura's custom-made leather armor is dyed a bright pinkish red colour that is, according to Aura, reminiscent of Kara-Turan cherry blossoms, designed to repel stains and unpleasant odors.
+奥拉自制的皮甲被染成明亮的粉红色，据奥拉说，这令人想起卡拉图的樱花；染料设计成能防污、防异味。
 
-STATISTICS:
+属性：
 
-Equipped abilities:
-– Save vs. Breath Weapons: +3
+装备能力：
+– 对抗吐息武器豁免：+3
 
-Armor Class: 7 (9 vs. piercing and missile)
-Requires:
- 4 Strength
+防御等级：7（对穿刺与投射为 9）
+需求：
+ 力量 4
 
-Weight: 10~
+重量：10~
 
 COPY_EXISTING ~c0aule02.itm~ ~override~
-SAY NAME1 ~Cherry-tinted Leather Armor +3~
-SAY NAME2 ~Cherry-tinted Leather Armor +3~
-SAY DESC ~This basic armor is made of thick wax or water-hardened leather. It is sturdy protection, not supple like boots or a cloak. Soft garment leathers like that would offer no more protection than common clothing. Magical enchantments have improved the protective abilities of this particular suit.
+SAY NAME1 ~樱染皮甲 +3~
+SAY NAME2 ~樱染皮甲 +3~
+SAY DESC ~这件基础护甲由厚蜡皮或水鞣皮制成。它是结实的防护，不像靴子或斗篷那样柔软。那种柔软的成衣皮革提供的防护不会比普通衣物更多。这具体甲上的魔法附魔进一步提升了防护性能。
 
-Aura's custom-made leather armor is dyed a bright pinkish red colour that is, according to Aura, reminiscent of Kara-Turan cherry blossoms, designed to repel stains and unpleasant odors, as well as protect from the hazards of her experiments, such as extreme heat or cold, electrical shocks, and chemical burns.
+奥拉自制的皮甲被染成明亮的粉红色，据奥拉说，这令人想起卡拉图的樱花；染料设计成能防污、防异味，也能抵御她实验中的危险，例如极端高温或严寒、电击与化学灼伤。
 
-STATISTICS:
+属性：
 
-Equipped abilities:
-– Save vs. Breath Weapons: +3
-– Elemental Resistance: +20%
+装备能力：
+– 对抗吐息武器豁免：+3
+– 元素抗性：+20%
 
-Armor Class: 5 (7 vs. piercing and missile)
-Requires:
- 4 Strength
+防御等级：5（对穿刺与投射为 7）
+需求：
+ 力量 4
 
-Weight: 10~
+重量：10~
 
 COPY_EXISTING ~c0abadge.itm~ ~override~
-SAY NAME1 ~Glimmershine Family Insignia~
-SAY NAME2 ~Glimmershine Family Insignia~
-SAY DESC ~This brass insignia is small enough to fit inside of your palm. Engraved upon it is the image of a vaguely sunflower-shaped emblem and letters of a strange language you can't understand. Along the edges are carved the words "Aurelia M. Glimmershine".~
+SAY NAME1 ~格利默夏恩家族徽记~
+SAY NAME2 ~格利默夏恩家族徽记~
+SAY DESC ~这枚黄铜徽记小得可以握在掌心。上面刻着一个大致呈向日葵形状的纹章，以及一些你看不懂的陌生文字。边缘刻着一行字：“奥瑞莉娅·M·格利默夏恩”。~
 	
 COPY_EXISTING ~c0amaga1.itm~ ~override~
   LPF ADD_ITEM_EQEFFECT
@@ -61,7 +61,7 @@ COPY_EXISTING ~c0amaga1.itm~ ~override~
 	  timing = 2
 	  parameter2 = 11
 	  power = 1
-	  special = RESOLVE_STR_REF (~Aura~)
+	  special = RESOLVE_STR_REF (~奥拉~)
 	STR_VAR
 	  resource = C0Aura
 END
@@ -70,7 +70,7 @@ END
       opcode = 180
 	  target = 1
 	  timing = 2
-	  parameter1 = RESOLVE_STR_REF (~Aura refuses to equip this weapon.~)
+	  parameter1 = RESOLVE_STR_REF (~奥拉拒绝装备这件武器。~)
 	STR_VAR
 	  resource = c0ausw01
 END
@@ -79,7 +79,7 @@ END
       opcode = 180
 	  target = 1
 	  timing = 2
-	  parameter1 = RESOLVE_STR_REF (~Aura shakes her head. "Eugh... no thanks, <CHARNAME>. I don't eat meat.~)
+	  parameter1 = RESOLVE_STR_REF (~奥拉摇摇头。“呃……谢了，<CHARNAME>。我不吃肉。”~)
 	STR_VAR
 	  resource = ISHF001
 END
@@ -89,21 +89,21 @@ END
         match_parameter1  = 999    // Called Shot icon
         parameter2        = c0aicon8
       END
-SAY NAME1 ~Amulet~
-SAY NAME2 ~Aura's Magatama~
-SAY DESC ~This mysterious, curved stone is called a 'magatama'. Though you have never seen anything like it before, it is apparently a fairly common decorative design in its place of origin, Kara-Tur. These jewels are sometimes blessed by priestesses of the Way and carried as protective talismans against chaotic and malevolent spirits.
+SAY NAME1 ~护身符~
+SAY NAME2 ~奥拉的勾玉~
+SAY DESC ~这块神秘的弯石叫做“勾玉”。你以前从未见过类似的东西，但在它的原产地卡拉图，据说这是相当常见的装饰造型。这类玉石有时会由“道”的女祭司祝圣，作为护符随身携带，用以抵御混乱与邪恶的灵体。
 
-Aura's magatama is carved from a piece of green jade and was enchanted by the Kozakuran priestess Reika Amakagami, her mentor, and as such carries great sentimental value to her, so much that she is unwilling to ever remove it.
+奥拉的勾玉由一块绿玉雕成，由她的导师、小仓女祭司丽华·天之镜施以附魔，因此对她有极大的纪念意义——大到她无论如何也不肯摘下。
 
-STATISTICS:
+属性：
 
-Equipped abilities:
-– Saving Throws: +2
-– Tamanoya: The wearer is protected by Death Ward, Protection from Chaos and Protection from Evil
-– Yasakani: If the wearer would suffer fatal damage, she instead survives with one hit point and is healed for 10% of her maximum hit points. This blessing is only effective once per eight hours, or after being raised.
+装备能力：
+– 豁免检定：+2
+– 玉藻前：佩戴者受到防死结界、防护混乱与防护邪恶的守护
+– 八尺琼：若佩戴者将受致命伤害，她反而以 1 点生命值存活，并恢复其最大生命值的 10%。此祝福每八小时只能生效一次，被复活后也会重置。
 
-Weight: 0~
-OUTER_SET strref = RESOLVE_STR_REF (~Aura bats your hand away with the hint of a frown on her face. "Hey, hands off!"~ [GAM_47])
+重量：0~
+OUTER_SET strref = RESOLVE_STR_REF (~奥拉带着一丝不悦把她的手拍开。“嘿，别动手动脚！”~ [GAM_47])
 APPEND item_use.2da ~c0amaga1 Aura %strref% 3~
 
 COPY_EXISTING ~c0amaga.spl~ ~override~
@@ -111,9 +111,9 @@ COPY_EXISTING ~c0amaga2.spl~ ~override~
   LPF ALTER_EFFECT INT_VAR match_opcode = 142 parameter2 = c0aicon7 END
 COPY_EXISTING ~c0amaga3.spl~ ~override~
   LPF ALTER_EFFECT INT_VAR
-      match_opcode = 139 match_special = 1 parameter1 = RESOLVE_STR_REF (~Protected from Fatal Damage~) END
+      match_opcode = 139 match_special = 1 parameter1 = RESOLVE_STR_REF (~受致命伤害保护~) END
   LPF ALTER_EFFECT INT_VAR
-      match_opcode = 139 match_special = 2 parameter1 = RESOLVE_STR_REF (~Healed~) END
+      match_opcode = 139 match_special = 2 parameter1 = RESOLVE_STR_REF (~已治疗~) END
 
 COPY_EXISTING ~c0amaga2.itm~ ~override~
       LPF ALTER_EFFECT
@@ -123,19 +123,19 @@ COPY_EXISTING ~c0amaga2.itm~ ~override~
         parameter2        = c0aicon8
       END
 LPF ALTER_EFFECT INT_VAR match_opcode = 319 special = RESOLVE_STR_REF (~<CHARNAME>~) END
-SAY NAME1 ~Amulet~
-SAY NAME2 ~<CHARNAME>'s Magatama~
-SAY DESC ~This mysterious, curved stone is called a 'magatama'. Though you have never seen anything like it before, it is apparently a fairly common decorative design in its place of origin, Kara-Tur. These jewels are sometimes blessed by priestesses of the Way and carried as protective talismans against chaotic and malevolent spirits.
+SAY NAME1 ~护身符~
+SAY NAME2 ~<CHARNAME>的勾玉~
+SAY DESC ~这块神秘的弯石叫做“勾玉”。你以前从未见过类似的东西，但在它的原产地卡拉图，据说这是相当常见的装饰造型。这类玉石有时会由“道”的女祭司祝圣，作为护符随身携带，用以抵御混乱与邪恶的灵体。
 
-This magatama was by Aura created as a gift to <CHARNAME> using a small piece of white jade. While its material value is low, there is a sort of simple beauty to its design.
+这枚勾玉是奥拉用一小块白玉雕成、送给<CHARNAME>的礼物。它的材质价值不高，造型却有一种朴素的美。
 
-STATISTICS:
+属性：
 
-Equipped abilities:
-– Saving Throws: +1
-– Tamanoya: The wearer is protected by Death Ward, Protection from Chaos and Protection from Evil
+装备能力：
+– 豁免检定：+1
+– 玉藻前：佩戴者受到防死结界、防护混乱与防护邪恶的守护
 
-Weight: 0~
+重量：0~
 
 APPEND ~ITEMSPEC.2da~ ~C0AUIDEN  1~
 
@@ -148,8 +148,8 @@ COPY_EXISTING ~c0asaku.spl~ ~override~
         match_parameter1  = 1    // Called Shot icon
         parameter2        = c0aicon4
       END
-SAY NAME1 ~Amatsugami~
-SAY NAME2 ~Amatsugami~
+SAY NAME1 ~天津神~
+SAY NAME2 ~天津神~
 
 COPY_EXISTING ~c0auide2.spl~ ~override~
 READ_LONG 0x64 "abil_off"
@@ -167,7 +167,7 @@ COPY_EXISTING ~c0auiden.spl~ ~override~
         match_parameter2  = 82    // Called Shot icon
         parameter2        = c0aicon2
       END
-SAY NAME1 ~Reveal Magic~
+SAY NAME1 ~揭露魔法~
 COPY_EXISTING ~c0auiden.itm~ ~override~
   LPF ADD_ITEM_EQEFFECT
     INT_VAR
@@ -176,58 +176,58 @@ COPY_EXISTING ~c0auiden.itm~ ~override~
 	  timing = 2
 	  parameter2 = 11
 	  power = 1
-	  special = RESOLVE_STR_REF (~Aura~)
+	  special = RESOLVE_STR_REF (~奥拉~)
 	STR_VAR
 	  resource = C0Aura
 END
-SAY NAME1 ~Aura's Multipurpose Protective Goggles~
-SAY NAME2 ~Aura's Multipurpose Protective Goggles~
-SAY DESC ~Eyewear of this sort are mass-produced in Lantanese workshops, with specific designs made for archaeologists, botanists, alchemists and those of various other professions. Aura's particular pair has been customized, combining the functionalities of several different brands to assist her in her multidisciplinary line of work.
+SAY NAME1 ~奥拉的多用途防护护目镜~
+SAY NAME2 ~奥拉的多用途防护护目镜~
+SAY DESC ~这类护目用具在兰坦工坊里大量生产，针对考古学家、植物学家、炼金师及其他不同职业各有专门设计。奥拉这一副是定制的，把好几个不同品牌的功能合在一起，好协助她跨领域的工作。
 
-STATISTICS:
+属性：
 
-Charge abilities (three times per day):
-– Identify
-– Reveal Magic: Reveal all dispellable enchantments within 50' and gain +2 to attack rolls vs. arcane casters (bards, mages, sorcerers) for one turn
+充能能力（每日三次）：
+– 鉴定术
+– 揭露魔法：揭露 50 尺内一切可驱散的附魔，并在一回合内对奥术施法者（吟游诗人、法师、术士）的攻击检定 +2
 
-Equipped abilities:
-– Find Traps: +20%
-– Detect Illusions: +20%
-– Protection from gaze attacks
-– Immunity to blindness~
+装备能力：
+– 发现陷阱：+20%
+– 侦测幻象：+20%
+– 防护凝视攻击
+– 免疫目盲~
 
 COPY_EXISTING ~c0muffy.itm~ ~override~
-SAY NAME1 ~Muffy the Clockwork Squirrel~
-SAY NAME2 ~Muffy the Clockwork Squirrel~
-SAY DESC ~Muffy is a strange machine made of metal and clockwork that serves as Aura's pet. It has a strange degree of sentience, understanding human speech and exhibiting behaviour just like a real, living squirrel, to the point where its state as an animated construct is debatable. Aura claims to have crafted Muffy herself, though how she gave it life is a secret she keeps to herself.
+SAY NAME1 ~发条松鼠穆菲~
+SAY NAME2 ~发条松鼠穆菲~
+SAY DESC ~穆菲是一台由金属与发条构成的奇特机器，充当奥拉的宠物。它拥有某种奇特的知觉，能听懂人话，举止就像一只活生生的松鼠，以至于它究竟算不算一具被赋予生命的构装体都值得商榷。奥拉声称穆菲是她亲手做的，至于她如何赋予它生命，那是她自己保守的秘密。
 
-Regardless of how it is able to act as though it were alive, Muffy is doubtlessly a useful creation – the squirrel's stomach is a hollow compartment capable of storing small objects such as gems or keys. Though the act of opening up Muffy seems rather morbid, the squirrel seems rather happy to have its 'belly' filled with valuables.
+不管它凭什么能表现得像活着一样，穆菲无疑是一件有用的造物——松鼠的肚子是个中空隔层，能存放宝石或钥匙之类的小物件。虽说把穆菲打开来看着有些病态，但这只松鼠似乎挺乐意让“肚子”装满值钱的东西。
 
-STATISTICS:
+属性：
 
-Capacity: 40 items
-Weight: 0~
-OUTER_SET strref = RESOLVE_STR_REF (~Muffy scurries away in fear of you, its contents clattering as it runs. "Hey, get back here!" Aura sighs. "Hope he hasn't broken anything this time..."~ [C0MUFFY])
+容量：40 件
+重量：0~
+OUTER_SET strref = RESOLVE_STR_REF (~穆菲害怕你，吱吱地跑开了，肚子里的东西哐当作响。“嘿，回来！”奥拉叹了口气。“希望这次它没弄坏什么……”~ [C0MUFFY])
 APPEND item_use.2da ~c0muffy Aura %strref% 3~
 
 COPY_EXISTING ~c0muffy.sto~ ~override~
 SAY 0xc ~Muffy~
 
 COPY_EXISTING ~c0aubook.itm~ ~override~
-SAY NAME1 ~Aura's Rune Book~
-SAY NAME2 ~Aura's Rune Book~
-SAY DESC ~This large metal-bound book is designed to hold runes and scrolls of all kind and protect them from all sorts of natural and magical hazards.
+SAY NAME1 ~奥拉的符文之书~
+SAY NAME2 ~奥拉的符文之书~
+SAY DESC ~这本大书以金属包边，用来存放各类符文与卷轴，并保护它们免受各种自然与魔法的危害。
 
-STATISTICS:
+属性：
 
-Capacity: 100
-Weight: 0~
+容量：100
+重量：0~
 
 COPY_EXISTING ~c0aubook.sto~ ~override~
 SAY 0xc ~Aura's Rune Book~
 
 COPY_EXISTING ~c0aubow.spl~ ~override~
-SAY NAME1 ~Create Sunshooter Arrows~
+SAY NAME1 ~制造太阳射手之箭~
 
 COPY_EXISTING ~c0auar1a.spl~ ~override/c0auar1b.spl~
   LPF ALTER_SPELL_HEADER
@@ -496,7 +496,7 @@ COPY_EXISTING ~c0auar6a.spl~ ~override/c0auar6b.spl~
       parameter1 = 5
 END
 
-OUTER_SET bow_strref = RESOLVE_STR_REF (~Aura hugs her bow close while shaking her head slightly. "Mmm... sorry, but I don't think I'd feel right without my Sunshooter."~ [GAM_47])
+OUTER_SET bow_strref = RESOLVE_STR_REF (~奥拉把弓紧紧抱住，轻轻摇头。“唔……抱歉，可要我不用太阳射手，我会觉得不对劲。”~ [GAM_47])
 APPEND item_use.2da ~c0aubo1a Aura %bow_strref% 3
 c0aubo1b Aura %bow_strref% 3
 c0aubo2a Aura %bow_strref% 3
@@ -514,7 +514,7 @@ c0aubo5c Aura %bow_strref% 3
 c0aubo6  Aura %bow_strref% 3
 c0aubo7  Aura %bow_strref% 3~
 
-OUTER_SET sunshooter = RESOLVE_STR_REF (~Configure~)
+OUTER_SET sunshooter = RESOLVE_STR_REF (~调节~)
 APPEND ~ITEMDIAL.2da~ ~C0AUBO1A    %sunshooter%    C0AUBOW
 C0AUBO1B    %sunshooter%    C0AUBOW
 C0AUBO1C    %sunshooter%    C0AUBOW
@@ -540,37 +540,37 @@ COPY_EXISTING ~c0aubo1a.itm~ ~override~
 	  timing = 2
 	  parameter2 = 11
 	  power = 1
-	  special = RESOLVE_STR_REF (~Aura~)
+	  special = RESOLVE_STR_REF (~奥拉~)
 	STR_VAR
 	  resource = C0Aura
 END
-SAY NAME1 ~Sunshooter I (Rapid)~
-SAY NAME2 ~Sunshooter I (Rapid)~
-SAY DESC ~The Sunshooter is Aura's personal weapon, a metallic bow of unusual design that fires arrows with almost inhuman speed and accuracy. Various attachments decorate the arc of the bow, some useful (such as enchantments that alter the effects of nocked arrows) and others purely for accessory. Its complexity is so great that no one besides its creator is likely capable of understanding how to properly wield it.
+SAY NAME1 ~太阳射手 I（迅捷）~
+SAY NAME2 ~太阳射手 I（迅捷）~
+SAY DESC ~太阳射手是奥拉的专属武器，一把造型奇特的金属弓，射箭的速度与准度近乎非人。弓臂上装点着各种附件，有些是有用的（例如改变搭箭效果的附魔），有些纯粹是装饰。它的构造复杂到除了它的制造者，恐怕没人能弄懂该怎么正确使用它。
 
-STATISTICS:
+属性：
 
-– Configuration: Rapid
-  Attacks cannot critically hit
-  2.5 attacks per round
+– 调节方式：迅捷
+  攻击不会造成暴击
+  每轮 2.5 次攻击
 
-Charge abilities (1x/day):
-– Create Sunshooter Arrows
+充能能力（每日一次）：
+– 制造太阳射手之箭
 
-Combat abilities:
-– Magnetism: Each hit reduces target's Armor Class vs. Ranged Weapons by 1 for 5 rounds
-– Analytical Archery: This bow uses Intelligence, if higher, for bonuses to ranged THAC0 instead of Dexterity.
+战斗能力：
+– 磁力：每次命中使目标对抗远程武器的防御等级在 5 轮内降低 1
+– 解析射术：此弓以智力（若更高）而非敏捷提供远程 THAC0 加成。
 
-THAC0: +1
-Damage: -2 (missile)
-Speed Factor: 0
-Proficiency Type: Shortbow
-Type: Two-handed
-Requires:
- 6 Strength
- 19 Intelligence
+THAC0：+1
+伤害：-2（投射）
+速度系数：0
+熟练类型：短弓
+类型：双手
+需求：
+ 力量 6
+ 智力 19
 
-Weight: 0~
+重量：0~
 
 COPY_EXISTING ~c0aubo1b.itm~ ~override~
   LPF ADD_ITEM_EQEFFECT
@@ -580,37 +580,37 @@ COPY_EXISTING ~c0aubo1b.itm~ ~override~
 	  timing = 2
 	  parameter2 = 11
 	  power = 1
-	  special = RESOLVE_STR_REF (~Aura~)
+	  special = RESOLVE_STR_REF (~奥拉~)
 	STR_VAR
 	  resource = C0Aura
 END
-SAY NAME1 ~Sunshooter I (Precise)~
-SAY NAME2 ~Sunshooter I (Precise)~
-SAY DESC ~The Sunshooter is Aura's personal weapon, a metallic bow of unusual design that fires arrows with almost inhuman speed and accuracy. Various attachments decorate the arc of the bow, some useful (such as enchantments that alter the effects of nocked arrows) and others purely for accessory. Its complexity is so great that no one besides its creator is likely capable of understanding how to properly wield it.
+SAY NAME1 ~太阳射手 I（精准）~
+SAY NAME2 ~太阳射手 I（精准）~
+SAY DESC ~太阳射手是奥拉的专属武器，一把造型奇特的金属弓，射箭的速度与准度近乎非人。弓臂上装点着各种附件，有些是有用的（例如改变搭箭效果的附魔），有些纯粹是装饰。它的构造复杂到除了它的制造者，恐怕没人能弄懂该怎么正确使用它。
 
-STATISTICS:
+属性：
 
-– Configuration: Precise
-  Attacks never critically miss
-  Critical Hit Chance: +5%
-  1.5 attacks per round
+– 调节方式：精准
+  攻击绝不会严重失误
+  暴击率：+5%
+  每轮 1.5 次攻击
 
-Charge abilities (1x/day):
-– Create Sunshooter Arrows
+充能能力（每日一次）：
+– 制造太阳射手之箭
 
-Combat abilities:
-– Magnetism: Each hit reduces target's Armor Class vs. Ranged Weapons by 1 for 5 rounds
-– Analytical Archery: This bow uses Intelligence, if higher, for bonuses to ranged THAC0 instead of Dexterity.
+战斗能力：
+– 磁力：每次命中使目标对抗远程武器的防御等级在 5 轮内降低 1
+– 解析射术：此弓以智力（若更高）而非敏捷提供远程 THAC0 加成。
 
-THAC0: +3
-Speed Factor: 4
-Proficiency Type: Shortbow
-Type: Two-handed
-Requires:
- 6 Strength
- 19 Intelligence
+THAC0：+3
+速度系数：4
+熟练类型：短弓
+类型：双手
+需求：
+ 力量 6
+ 智力 19
 
-Weight: 0~
+重量：0~
 
 COPY_EXISTING ~c0aubo2a.itm~ ~override~
   LPF ADD_ITEM_EQEFFECT
@@ -620,37 +620,37 @@ COPY_EXISTING ~c0aubo2a.itm~ ~override~
 	  timing = 2
 	  parameter2 = 11
 	  power = 1
-	  special = RESOLVE_STR_REF (~Aura~)
+	  special = RESOLVE_STR_REF (~奥拉~)
 	STR_VAR
 	  resource = C0Aura
 END
-SAY NAME1 ~Sunshooter II (Rapid)~
-SAY NAME2 ~Sunshooter II (Rapid)~
-SAY DESC ~The Sunshooter is Aura's personal weapon, a metallic bow of unusual design that fires arrows with almost inhuman speed and accuracy. Various attachments decorate the arc of the bow, some useful (such as enchantments that alter the effects of nocked arrows) and others purely for accessory. Its complexity is so great that no one besides its creator is likely capable of understanding how to properly wield it.
+SAY NAME1 ~太阳射手 II（迅捷）~
+SAY NAME2 ~太阳射手 II（迅捷）~
+SAY DESC ~太阳射手是奥拉的专属武器，一把造型奇特的金属弓，射箭的速度与准度近乎非人。弓臂上装点着各种附件，有些是有用的（例如改变搭箭效果的附魔），有些纯粹是装饰。它的构造复杂到除了它的制造者，恐怕没人能弄懂该怎么正确使用它。
 
-STATISTICS:
+属性：
 
-– Configuration: Rapid
-  Attacks cannot critically hit
-  2.5 attacks per round
+– 调节方式：迅捷
+  攻击不会造成暴击
+  每轮 2.5 次攻击
 
-Charge abilities (1x/day):
-– Create Sunshooter Arrows
+充能能力（每日一次）：
+– 制造太阳射手之箭
 
-Combat abilities:
-– Magnetism: Each hit reduces target's Armor Class vs. Ranged Weapons by 1 and Missile Resistance by 3% for 5 rounds
-– Analytical Archery: This bow uses Intelligence, if higher, for bonuses to ranged THAC0 instead of Dexterity.
+战斗能力：
+– 磁力：每次命中使目标对抗远程武器的防御等级降低 1、投射抗性降低 3%，持续 5 轮
+– 解析射术：此弓以智力（若更高）而非敏捷提供远程 THAC0 加成。
 
-THAC0: +2
-Damage: -1 (missile)
-Speed Factor: 0
-Proficiency Type: Shortbow
-Type: Two-handed
-Requires:
- 6 Strength
- 19 Intelligence
+THAC0：+2
+伤害：-1（投射）
+速度系数：0
+熟练类型：短弓
+类型：双手
+需求：
+ 力量 6
+ 智力 19
 
-Weight: 0~
+重量：0~
 
 COPY_EXISTING ~c0aubo2b.itm~ ~override~
   LPF ADD_ITEM_EQEFFECT
@@ -660,37 +660,37 @@ COPY_EXISTING ~c0aubo2b.itm~ ~override~
 	  timing = 2
 	  parameter2 = 11
 	  power = 1
-	  special = RESOLVE_STR_REF (~Aura~)
+	  special = RESOLVE_STR_REF (~奥拉~)
 	STR_VAR
 	  resource = C0Aura
 END
-SAY NAME1 ~Sunshooter II (Precise)~
-SAY NAME2 ~Sunshooter II (Precise)~
-SAY DESC ~The Sunshooter is Aura's personal weapon, a metallic bow of unusual design that fires arrows with almost inhuman speed and accuracy. Various attachments decorate the arc of the bow, some useful (such as enchantments that alter the effects of nocked arrows) and others purely for accessory. Its complexity is so great that no one besides its creator is likely capable of understanding how to properly wield it.
+SAY NAME1 ~太阳射手 II（精准）~
+SAY NAME2 ~太阳射手 II（精准）~
+SAY DESC ~太阳射手是奥拉的专属武器，一把造型奇特的金属弓，射箭的速度与准度近乎非人。弓臂上装点着各种附件，有些是有用的（例如改变搭箭效果的附魔），有些纯粹是装饰。它的构造复杂到除了它的制造者，恐怕没人能弄懂该怎么正确使用它。
 
-STATISTICS:
+属性：
 
-– Configuration: Precise
-  Attacks never critically miss
-  Critical Hit Chance: +5%
-  1.5 attacks per round
+– 调节方式：精准
+  攻击绝不会严重失误
+  暴击率：+5%
+  每轮 1.5 次攻击
 
-Charge abilities (1x/day):
-– Create Sunshooter Arrows
+充能能力（每日一次）：
+– 制造太阳射手之箭
 
-Combat abilities:
-– Magnetism: Each hit reduces target's Armor Class vs. Ranged Weapons by 1 and Missile Resistance by 3% for 5 rounds
-– Analytical Archery: This bow uses Intelligence, if higher, for bonuses to ranged THAC0 instead of Dexterity.
+战斗能力：
+– 磁力：每次命中使目标对抗远程武器的防御等级降低 1、投射抗性降低 3%，持续 5 轮
+– 解析射术：此弓以智力（若更高）而非敏捷提供远程 THAC0 加成。
 
-THAC0: +4
-Speed Factor: 4
-Proficiency Type: Shortbow
-Type: Two-handed
-Requires:
- 6 Strength
- 19 Intelligence
+THAC0：+4
+速度系数：4
+熟练类型：短弓
+类型：双手
+需求：
+ 力量 6
+ 智力 19
 
-Weight: 0~
+重量：0~
 
 COPY_EXISTING ~c0aubo2c.itm~ ~override~
   LPF ADD_ITEM_EQEFFECT
@@ -700,37 +700,37 @@ COPY_EXISTING ~c0aubo2c.itm~ ~override~
 	  timing = 2
 	  parameter2 = 11
 	  power = 1
-	  special = RESOLVE_STR_REF (~Aura~)
+	  special = RESOLVE_STR_REF (~奥拉~)
 	STR_VAR
 	  resource = C0Aura
 END
-SAY NAME1 ~Sunshooter II (Power)~
-SAY NAME2 ~Sunshooter II (Power)~
-SAY DESC ~The Sunshooter is Aura's personal weapon, a metallic bow of unusual design that fires arrows with almost inhuman speed and accuracy. Various attachments decorate the arc of the bow, some useful (such as enchantments that alter the effects of nocked arrows) and others purely for accessory. Its complexity is so great that no one besides its creator is likely capable of understanding how to properly wield it.
+SAY NAME1 ~太阳射手 II（威力）~
+SAY NAME2 ~太阳射手 II（威力）~
+SAY DESC ~太阳射手是奥拉的专属武器，一把造型奇特的金属弓，射箭的速度与准度近乎非人。弓臂上装点着各种附件，有些是有用的（例如改变搭箭效果的附魔），有些纯粹是装饰。它的构造复杂到除了它的制造者，恐怕没人能弄懂该怎么正确使用它。
 
-STATISTICS:
+属性：
 
-– Configuration: Power
-  Attacks deal maximum damage
-  2 attacks per round
+– 调节方式：威力
+  攻击造成最大伤害
+  每轮 2 次攻击
 
-Charge abilities (1x/day):
-– Create Sunshooter Arrows
+充能能力（每日一次）：
+– 制造太阳射手之箭
 
-Combat abilities:
-– Magnetism: Each hit reduces target's Armor Class vs. Ranged Weapons by 1 and Missile Resistance by 3% for 5 rounds
-– Analytical Archery: This bow uses Intelligence, if higher, for bonuses to ranged THAC0 instead of Dexterity.
+战斗能力：
+– 磁力：每次命中使目标对抗远程武器的防御等级降低 1、投射抗性降低 3%，持续 5 轮
+– 解析射术：此弓以智力（若更高）而非敏捷提供远程 THAC0 加成。
 
-THAC0: -2
-Damage: +1 (missile)
-Speed Factor: 2
-Proficiency Type: Shortbow
-Type: Two-handed
-Requires:
- 6 Strength
- 19 Intelligence
+THAC0：-2
+伤害：+1（投射）
+速度系数：2
+熟练类型：短弓
+类型：双手
+需求：
+ 力量 6
+ 智力 19
 
-Weight: 0~
+重量：0~
 
 COPY_EXISTING ~c0aubo3a.itm~ ~override~
   LPF ADD_ITEM_EQEFFECT
@@ -740,38 +740,38 @@ COPY_EXISTING ~c0aubo3a.itm~ ~override~
 	  timing = 2
 	  parameter2 = 11
 	  power = 1
-	  special = RESOLVE_STR_REF (~Aura~)
+	  special = RESOLVE_STR_REF (~奥拉~)
 	STR_VAR
 	  resource = C0Aura
 END
-SAY NAME1 ~Sunshooter III (Rapid)~
-SAY NAME2 ~Sunshooter III (Rapid)~
-SAY DESC ~The Sunshooter is Aura's personal weapon, a metallic bow of unusual design that fires arrows with almost inhuman speed and accuracy. Various attachments decorate the arc of the bow, some useful (such as enchantments that alter the effects of nocked arrows) and others purely for accessory. Its complexity is so great that no one besides its creator is likely capable of understanding how to properly wield it.
+SAY NAME1 ~太阳射手 III（迅捷）~
+SAY NAME2 ~太阳射手 III（迅捷）~
+SAY DESC ~太阳射手是奥拉的专属武器，一把造型奇特的金属弓，射箭的速度与准度近乎非人。弓臂上装点着各种附件，有些是有用的（例如改变搭箭效果的附魔），有些纯粹是装饰。它的构造复杂到除了它的制造者，恐怕没人能弄懂该怎么正确使用它。
 
-STATISTICS:
+属性：
 
-– Configuration: Rapid
-  Attacks cannot critically hit
-  3 attacks per round
+– 调节方式：迅捷
+  攻击不会造成暴击
+  每轮 3 次攻击
 
-Charge abilities (1x/day):
-– Create Sunshooter Arrows
+充能能力（每日一次）：
+– 制造太阳射手之箭
 
-Combat abilities:
-– Eminence: All arrows launched by this bow strike with at least +1 enchantment
-– Magnetism: Each hit reduces target's Armor Class vs. Ranged Weapons by 1 and Missile Resistance by 3% for 5 rounds
-– Analytical Archery: This bow uses Intelligence, if higher, for bonuses to ranged THAC0 instead of Dexterity.
+战斗能力：
+– 卓越：此弓射出的所有箭矢都至少视为 +1 附魔
+– 磁力：每次命中使目标对抗远程武器的防御等级降低 1、投射抗性降低 3%，持续 5 轮
+– 解析射术：此弓以智力（若更高）而非敏捷提供远程 THAC0 加成。
 
-THAC0: +3
-Damage: -1 (missile)
-Speed Factor: 0
-Proficiency Type: Shortbow
-Type: Two-handed
-Requires:
- 6 Strength
- 19 Intelligence
+THAC0：+3
+伤害：-1（投射）
+速度系数：0
+熟练类型：短弓
+类型：双手
+需求：
+ 力量 6
+ 智力 19
 
-Weight: 0~
+重量：0~
 
 COPY_EXISTING ~c0aubo3b.itm~ ~override~
   LPF ADD_ITEM_EQEFFECT
@@ -781,38 +781,38 @@ COPY_EXISTING ~c0aubo3b.itm~ ~override~
 	  timing = 2
 	  parameter2 = 11
 	  power = 1
-	  special = RESOLVE_STR_REF (~Aura~)
+	  special = RESOLVE_STR_REF (~奥拉~)
 	STR_VAR
 	  resource = C0Aura
 END
-SAY NAME1 ~Sunshooter III (Precise)~
-SAY NAME2 ~Sunshooter III (Precise)~
-SAY DESC ~The Sunshooter is Aura's personal weapon, a metallic bow of unusual design that fires arrows with almost inhuman speed and accuracy. Various attachments decorate the arc of the bow, some useful (such as enchantments that alter the effects of nocked arrows) and others purely for accessory. Its complexity is so great that no one besides its creator is likely capable of understanding how to properly wield it.
+SAY NAME1 ~太阳射手 III（精准）~
+SAY NAME2 ~太阳射手 III（精准）~
+SAY DESC ~太阳射手是奥拉的专属武器，一把造型奇特的金属弓，射箭的速度与准度近乎非人。弓臂上装点着各种附件，有些是有用的（例如改变搭箭效果的附魔），有些纯粹是装饰。它的构造复杂到除了它的制造者，恐怕没人能弄懂该怎么正确使用它。
 
-STATISTICS:
+属性：
 
-– Configuration: Precise
-  Attacks never critically miss
-  Critical Hit Chance: +10%
-  1.5 attacks per round
+– 调节方式：精准
+  攻击绝不会严重失误
+  暴击率：+10%
+  每轮 1.5 次攻击
 
-Charge abilities (1x/day):
-– Create Sunshooter Arrows
+充能能力（每日一次）：
+– 制造太阳射手之箭
 
-Combat abilities:
-– Eminence: All arrows launched by this bow strike with at least +1 enchantment
-– Magnetism: Each hit reduces target's Armor Class vs. Ranged Weapons by 1 and Missile Resistance by 3% for 5 rounds
-– Analytical Archery: This bow uses Intelligence, if higher, for bonuses to ranged THAC0 instead of Dexterity.
+战斗能力：
+– 卓越：此弓射出的所有箭矢都至少视为 +1 附魔
+– 磁力：每次命中使目标对抗远程武器的防御等级降低 1、投射抗性降低 3%，持续 5 轮
+– 解析射术：此弓以智力（若更高）而非敏捷提供远程 THAC0 加成。
 
-THAC0: +5
-Speed Factor: 4
-Proficiency Type: Shortbow
-Type: Two-handed
-Requires:
- 6 Strength
- 19 Intelligence
+THAC0：+5
+速度系数：4
+熟练类型：短弓
+类型：双手
+需求：
+ 力量 6
+ 智力 19
 
-Weight: 0~
+重量：0~
 
 COPY_EXISTING ~c0aubo3c.itm~ ~override~
   LPF ADD_ITEM_EQEFFECT
@@ -822,38 +822,38 @@ COPY_EXISTING ~c0aubo3c.itm~ ~override~
 	  timing = 2
 	  parameter2 = 11
 	  power = 1
-	  special = RESOLVE_STR_REF (~Aura~)
+	  special = RESOLVE_STR_REF (~奥拉~)
 	STR_VAR
 	  resource = C0Aura
 END
-SAY NAME1 ~Sunshooter III (Power)~
-SAY NAME2 ~Sunshooter III (Power)~
-SAY DESC ~The Sunshooter is Aura's personal weapon, a metallic bow of unusual design that fires arrows with almost inhuman speed and accuracy. Various attachments decorate the arc of the bow, some useful (such as enchantments that alter the effects of nocked arrows) and others purely for accessory. Its complexity is so great that no one besides its creator is likely capable of understanding how to properly wield it.
+SAY NAME1 ~太阳射手 III（威力）~
+SAY NAME2 ~太阳射手 III（威力）~
+SAY DESC ~太阳射手是奥拉的专属武器，一把造型奇特的金属弓，射箭的速度与准度近乎非人。弓臂上装点着各种附件，有些是有用的（例如改变搭箭效果的附魔），有些纯粹是装饰。它的构造复杂到除了它的制造者，恐怕没人能弄懂该怎么正确使用它。
 
-STATISTICS:
+属性：
 
-– Configuration: Power
-  Attacks deal maximum damage
-  2 attacks per round
+– 调节方式：威力
+  攻击造成最大伤害
+  每轮 2 次攻击
 
-Charge abilities (1x/day):
-– Create Sunshooter Arrows
+充能能力（每日一次）：
+– 制造太阳射手之箭
 
-Combat abilities:
-– Eminence: All arrows launched by this bow strike with at least +1 enchantment
-– Magnetism: Each hit reduces target's Armor Class vs. Ranged Weapons by 1 and Missile Resistance by 3% for 5 rounds
-– Analytical Archery: This bow uses Intelligence, if higher, for bonuses to ranged THAC0 instead of Dexterity.
+战斗能力：
+– 卓越：此弓射出的所有箭矢都至少视为 +1 附魔
+– 磁力：每次命中使目标对抗远程武器的防御等级降低 1、投射抗性降低 3%，持续 5 轮
+– 解析射术：此弓以智力（若更高）而非敏捷提供远程 THAC0 加成。
 
-THAC0: -1
-Damage: +2 (missile)
-Speed Factor: 2
-Proficiency Type: Shortbow
-Type: Two-handed
-Requires:
- 6 Strength
- 19 Intelligence
+THAC0：-1
+伤害：+2（投射）
+速度系数：2
+熟练类型：短弓
+类型：双手
+需求：
+ 力量 6
+ 智力 19
 
-Weight: 0~
+重量：0~
 
 COPY_EXISTING ~c0aubo4a.itm~ ~override~
   LPF ADD_ITEM_EQEFFECT
@@ -863,42 +863,42 @@ COPY_EXISTING ~c0aubo4a.itm~ ~override~
 	  timing = 2
 	  parameter2 = 11
 	  power = 1
-	  special = RESOLVE_STR_REF (~Aura~)
+	  special = RESOLVE_STR_REF (~奥拉~)
 	STR_VAR
 	  resource = C0Aura
 END
-SAY NAME1 ~Sunshooter IV (Rapid)~
-SAY NAME2 ~Sunshooter IV (Rapid)~
-SAY DESC ~The Sunshooter is Aura's personal weapon, a metallic bow of unusual design that fires arrows with almost inhuman speed and accuracy. Various attachments decorate the arc of the bow, some useful (such as enchantments that alter the effects of nocked arrows) and others purely for accessory. Its complexity is so great that no one besides its creator is likely capable of understanding how to properly wield it.
+SAY NAME1 ~太阳射手 IV（迅捷）~
+SAY NAME2 ~太阳射手 IV（迅捷）~
+SAY DESC ~太阳射手是奥拉的专属武器，一把造型奇特的金属弓，射箭的速度与准度近乎非人。弓臂上装点着各种附件，有些是有用的（例如改变搭箭效果的附魔），有些纯粹是装饰。它的构造复杂到除了它的制造者，恐怕没人能弄懂该怎么正确使用它。
 
-STATISTICS:
+属性：
 
-– Configuration: Rapid
-  Attacks cannot critically hit
-  3 attacks per round
+– 调节方式：迅捷
+  攻击不会造成暴击
+  每轮 3 次攻击
   
-  May use 'Rain of Arrows' once per day
-  Special: Fires 5 volleys of +5 arrows in a cone briefly reducing movement rate by 99%, 10 attacks per round for the duration
-  Damage: 1d2+1 magic
+  每日可使用一次“箭雨”
+  特殊：以锥形射出 5 波 +5 箭矢，短时间内使移动速度降低 99%，持续期间每轮 10 次攻击
+  伤害：1d2+1 魔法
 
-Charge abilities (1x/day):
-– Create Sunshooter Arrows
+充能能力（每日一次）：
+– 制造太阳射手之箭
 
-Combat abilities:
-– Eminence: All arrows launched by this bow strike with at least +2 enchantment
-– Magnetism: Each hit reduces target's Armor Class vs. Ranged Weapons by 1 and Missile Resistance by 3% for 5 rounds
-– Analytical Archery: This bow uses Intelligence, if higher, for bonuses to ranged THAC0 instead of Dexterity.
+战斗能力：
+– 卓越：此弓射出的所有箭矢都至少视为 +2 附魔
+– 磁力：每次命中使目标对抗远程武器的防御等级降低 1、投射抗性降低 3%，持续 5 轮
+– 解析射术：此弓以智力（若更高）而非敏捷提供远程 THAC0 加成。
 
-THAC0: +4
-Damage: -1 (missile)
-Speed Factor: 0
-Proficiency Type: Shortbow
-Type: Two-handed
-Requires:
- 6 Strength
- 19 Intelligence
+THAC0：+4
+伤害：-1（投射）
+速度系数：0
+熟练类型：短弓
+类型：双手
+需求：
+ 力量 6
+ 智力 19
 
-Weight: 0~
+重量：0~
 
 COPY_EXISTING ~c0aubo4b.itm~ ~override~
   LPF ADD_ITEM_EQEFFECT
@@ -908,42 +908,42 @@ COPY_EXISTING ~c0aubo4b.itm~ ~override~
 	  timing = 2
 	  parameter2 = 11
 	  power = 1
-	  special = RESOLVE_STR_REF (~Aura~)
+	  special = RESOLVE_STR_REF (~奥拉~)
 	STR_VAR
 	  resource = C0Aura
 END
-SAY NAME1 ~Sunshooter IV (Precise)~
-SAY NAME2 ~Sunshooter IV (Precise)~
-SAY DESC ~The Sunshooter is Aura's personal weapon, a metallic bow of unusual design that fires arrows with almost inhuman speed and accuracy. Various attachments decorate the arc of the bow, some useful (such as enchantments that alter the effects of nocked arrows) and others purely for accessory. Its complexity is so great that no one besides its creator is likely capable of understanding how to properly wield it.
+SAY NAME1 ~太阳射手 IV（精准）~
+SAY NAME2 ~太阳射手 IV（精准）~
+SAY DESC ~太阳射手是奥拉的专属武器，一把造型奇特的金属弓，射箭的速度与准度近乎非人。弓臂上装点着各种附件，有些是有用的（例如改变搭箭效果的附魔），有些纯粹是装饰。它的构造复杂到除了它的制造者，恐怕没人能弄懂该怎么正确使用它。
 
-STATISTICS:
+属性：
 
-– Configuration: Precise
-  Attacks never critically miss
-  Critical Hit Chance: +10%
-  1.5 attacks per round
+– 调节方式：精准
+  攻击绝不会严重失误
+  暴击率：+10%
+  每轮 1.5 次攻击
   
-  May use 'Sniper Shot' once per day
-  Special: Launch a +5 arrow from increased visual range, dealing critical damage and reducing physical resistance to three-quarters of its original value for 5 rounds
-  Damage: 1d6+10 piercing
+  每日可使用一次“狙击射击”
+  特殊：从更远的视野射出一支 +5 箭，造成暴击伤害，并在 5 轮内使目标的物理抗性降为原本的四分之三
+  伤害：1d6+10 穿刺
 
-Charge abilities (1x/day):
-– Create Sunshooter Arrows
+充能能力（每日一次）：
+– 制造太阳射手之箭
 
-Combat abilities:
-– Eminence: All arrows launched by this bow strike with at least +2 enchantment
-– Magnetism: Each hit reduces target's Armor Class vs. Ranged Weapons by 1 and Missile Resistance by 3% for 5 rounds
-– Analytical Archery: This bow uses Intelligence, if higher, for bonuses to ranged THAC0 instead of Dexterity.
+战斗能力：
+– 卓越：此弓射出的所有箭矢都至少视为 +2 附魔
+– 磁力：每次命中使目标对抗远程武器的防御等级降低 1、投射抗性降低 3%，持续 5 轮
+– 解析射术：此弓以智力（若更高）而非敏捷提供远程 THAC0 加成。
 
-THAC0: +6
-Speed Factor: 4
-Proficiency Type: Shortbow
-Type: Two-handed
-Requires:
- 6 Strength
- 19 Intelligence
+THAC0：+6
+速度系数：4
+熟练类型：短弓
+类型：双手
+需求：
+ 力量 6
+ 智力 19
 
-Weight: 0~
+重量：0~
 
 COPY_EXISTING ~c0aubo4c.itm~ ~override~
   LPF ADD_ITEM_EQEFFECT
@@ -953,41 +953,41 @@ COPY_EXISTING ~c0aubo4c.itm~ ~override~
 	  timing = 2
 	  parameter2 = 11
 	  power = 1
-	  special = RESOLVE_STR_REF (~Aura~)
+	  special = RESOLVE_STR_REF (~奥拉~)
 	STR_VAR
 	  resource = C0Aura
 END
-SAY NAME1 ~Sunshooter IV (Power)~
-SAY NAME2 ~Sunshooter IV (Power)~
-SAY DESC ~The Sunshooter is Aura's personal weapon, a metallic bow of unusual design that fires arrows with almost inhuman speed and accuracy. Various attachments decorate the arc of the bow, some useful (such as enchantments that alter the effects of nocked arrows) and others purely for accessory. Its complexity is so great that no one besides its creator is likely capable of understanding how to properly wield it.
+SAY NAME1 ~太阳射手 IV（威力）~
+SAY NAME2 ~太阳射手 IV（威力）~
+SAY DESC ~太阳射手是奥拉的专属武器，一把造型奇特的金属弓，射箭的速度与准度近乎非人。弓臂上装点着各种附件，有些是有用的（例如改变搭箭效果的附魔），有些纯粹是装饰。它的构造复杂到除了它的制造者，恐怕没人能弄懂该怎么正确使用它。
 
-STATISTICS:
+属性：
 
-– Configuration: Power
-  Attacks deal maximum damage
-  2 attacks per round
+– 调节方式：威力
+  攻击造成最大伤害
+  每轮 2 次攻击
   
-  May use 'Blazing Shot' once per day
-  Special: Launch a +5 arrow, stunning for 5 rounds on a failed Save vs. Death
-  Damage: 1d6+5 piercing, 6d10 fire (Save vs. Death for half)
+  每日可使用一次“炽烈射击”
+  特殊：射出一支 +5 箭，未通过对抗死亡豁免则震慑 5 轮
+  伤害：1d6+5 穿刺、6d10 火焰（对抗死亡豁免成功则减半）
 
-Charge abilities (1x/day):
-– Create Sunshooter Arrows
+充能能力（每日一次）：
+– 制造太阳射手之箭
 
-Combat abilities:
-– Eminence: All arrows launched by this bow strike with at least +2 enchantment
-– Magnetism: Each hit reduces target's Armor Class vs. Ranged Weapons by 1 and Missile Resistance by 3% for 5 rounds
-– Analytical Archery: This bow uses Intelligence, if higher, for bonuses to ranged THAC0 instead of Dexterity.
+战斗能力：
+– 卓越：此弓射出的所有箭矢都至少视为 +2 附魔
+– 磁力：每次命中使目标对抗远程武器的防御等级降低 1、投射抗性降低 3%，持续 5 轮
+– 解析射术：此弓以智力（若更高）而非敏捷提供远程 THAC0 加成。
 
-Damage: +2 (missile)
-Speed Factor: 2
-Proficiency Type: Shortbow
-Type: Two-handed
-Requires:
- 6 Strength
- 19 Intelligence
+伤害：+2（投射）
+速度系数：2
+熟练类型：短弓
+类型：双手
+需求：
+ 力量 6
+ 智力 19
 
-Weight: 0~
+重量：0~
 
 COPY_EXISTING ~c0aubo5a.itm~ ~override~
   LPF ADD_ITEM_EQEFFECT
@@ -997,42 +997,42 @@ COPY_EXISTING ~c0aubo5a.itm~ ~override~
 	  timing = 2
 	  parameter2 = 11
 	  power = 1
-	  special = RESOLVE_STR_REF (~Aura~)
+	  special = RESOLVE_STR_REF (~奥拉~)
 	STR_VAR
 	  resource = C0Aura
 END
-SAY NAME1 ~Sunshooter V (Rapid)~
-SAY NAME2 ~Sunshooter V (Rapid)~
-SAY DESC ~The Sunshooter is Aura's personal weapon, a metallic bow of unusual design that fires arrows with almost inhuman speed and accuracy. Various attachments decorate the arc of the bow, some useful (such as enchantments that alter the effects of nocked arrows) and others purely for accessory. Its complexity is so great that no one besides its creator is likely capable of understanding how to properly wield it.
+SAY NAME1 ~太阳射手 V（迅捷）~
+SAY NAME2 ~太阳射手 V（迅捷）~
+SAY DESC ~太阳射手是奥拉的专属武器，一把造型奇特的金属弓，射箭的速度与准度近乎非人。弓臂上装点着各种附件，有些是有用的（例如改变搭箭效果的附魔），有些纯粹是装饰。它的构造复杂到除了它的制造者，恐怕没人能弄懂该怎么正确使用它。
 
-STATISTICS:
+属性：
 
-– Configuration: Rapid
-  Attacks cannot critically hit
-  3.5 attacks per round
+– 调节方式：迅捷
+  攻击不会造成暴击
+  每轮 3.5 次攻击
   
-  May use 'Rain of Arrows' once per day
-  Special: Fires 10 volleys of +5 arrows in a cone briefly reducing movement rate by 99%, 10 attacks per round for the duration
-  Damage: 1d2+1 magic
+  每日可使用一次“箭雨”
+  特殊：以锥形射出 10 波 +5 箭矢，短时间内使移动速度降低 99%，持续期间每轮 10 次攻击
+  伤害：1d2+1 魔法
 
-Charge abilities (1x/day):
-– Create Sunshooter Arrows
+充能能力（每日一次）：
+– 制造太阳射手之箭
 
-Combat abilities:
-– Eminence: All arrows launched by this bow strike with at least +3 enchantment
-– Magnetism: Each hit reduces target's Armor Class vs. Ranged Weapons by 1 and Missile Resistance by 3% for 5 rounds
-– Analytical Archery: This bow uses Intelligence, if higher, for bonuses to ranged THAC0 instead of Dexterity.
+战斗能力：
+– 卓越：此弓射出的所有箭矢都至少视为 +3 附魔
+– 磁力：每次命中使目标对抗远程武器的防御等级降低 1、投射抗性降低 3%，持续 5 轮
+– 解析射术：此弓以智力（若更高）而非敏捷提供远程 THAC0 加成。
 
-THAC0: +5
-Damage: -1 (missile)
-Speed Factor: 0
-Proficiency Type: Shortbow
-Type: Two-handed
-Requires:
- 6 Strength
- 19 Intelligence
+THAC0：+5
+伤害：-1（投射）
+速度系数：0
+熟练类型：短弓
+类型：双手
+需求：
+ 力量 6
+ 智力 19
 
-Weight: 0~
+重量：0~
 
 COPY_EXISTING ~c0aubo5b.itm~ ~override~
   LPF ADD_ITEM_EQEFFECT
@@ -1042,42 +1042,42 @@ COPY_EXISTING ~c0aubo5b.itm~ ~override~
 	  timing = 2
 	  parameter2 = 11
 	  power = 1
-	  special = RESOLVE_STR_REF (~Aura~)
+	  special = RESOLVE_STR_REF (~奥拉~)
 	STR_VAR
 	  resource = C0Aura
 END
-SAY NAME1 ~Sunshooter V (Precise)~
-SAY NAME2 ~Sunshooter V (Precise)~
-SAY DESC ~The Sunshooter is Aura's personal weapon, a metallic bow of unusual design that fires arrows with almost inhuman speed and accuracy. Various attachments decorate the arc of the bow, some useful (such as enchantments that alter the effects of nocked arrows) and others purely for accessory. Its complexity is so great that no one besides its creator is likely capable of understanding how to properly wield it.
+SAY NAME1 ~太阳射手 V（精准）~
+SAY NAME2 ~太阳射手 V（精准）~
+SAY DESC ~太阳射手是奥拉的专属武器，一把造型奇特的金属弓，射箭的速度与准度近乎非人。弓臂上装点着各种附件，有些是有用的（例如改变搭箭效果的附魔），有些纯粹是装饰。它的构造复杂到除了它的制造者，恐怕没人能弄懂该怎么正确使用它。
 
-STATISTICS:
+属性：
 
-– Configuration: Precise
-  Attacks never critically miss
-  Critical Hit Chance: +15%
-  1.5 attacks per round
+– 调节方式：精准
+  攻击绝不会严重失误
+  暴击率：+15%
+  每轮 1.5 次攻击
   
-  May use 'Sniper Shot' once per day
-  Special: Launch a +5 arrow from increased visual range, dealing critical damage and reducing physical resistance to three-quarters of its original value
-  Damage: 1d6+15 piercing
+  每日可使用一次“狙击射击”
+  特殊：从更远的视野射出一支 +5 箭，造成暴击伤害，并使目标的物理抗性降为原本的四分之三
+  伤害：1d6+15 穿刺
 
-Charge abilities (1x/day):
-– Create Sunshooter Arrows
+充能能力（每日一次）：
+– 制造太阳射手之箭
 
-Combat abilities:
-– Eminence: All arrows launched by this bow strike with at least +3 enchantment
-– Magnetism: Each hit reduces target's Armor Class vs. Ranged Weapons by 1 and Missile Resistance by 3% for 5 rounds
-– Analytical Archery: This bow uses Intelligence, if higher, for bonuses to ranged THAC0 instead of Dexterity.
+战斗能力：
+– 卓越：此弓射出的所有箭矢都至少视为 +3 附魔
+– 磁力：每次命中使目标对抗远程武器的防御等级降低 1、投射抗性降低 3%，持续 5 轮
+– 解析射术：此弓以智力（若更高）而非敏捷提供远程 THAC0 加成。
 
-THAC0: +7
-Speed Factor: 4
-Proficiency Type: Shortbow
-Type: Two-handed
-Requires:
- 6 Strength
- 19 Intelligence
+THAC0：+7
+速度系数：4
+熟练类型：短弓
+类型：双手
+需求：
+ 力量 6
+ 智力 19
 
-Weight: 0~
+重量：0~
 
 COPY_EXISTING ~c0aubo5c.itm~ ~override~
   LPF ADD_ITEM_EQEFFECT
@@ -1087,41 +1087,41 @@ COPY_EXISTING ~c0aubo5c.itm~ ~override~
 	  timing = 2
 	  parameter2 = 11
 	  power = 1
-	  special = RESOLVE_STR_REF (~Aura~)
+	  special = RESOLVE_STR_REF (~奥拉~)
 	STR_VAR
 	  resource = C0Aura
 END
-SAY NAME1 ~Sunshooter V (Power)~
-SAY NAME2 ~Sunshooter V (Power)~
-SAY DESC ~The Sunshooter is Aura's personal weapon, a metallic bow of unusual design that fires arrows with almost inhuman speed and accuracy. Various attachments decorate the arc of the bow, some useful (such as enchantments that alter the effects of nocked arrows) and others purely for accessory. Its complexity is so great that no one besides its creator is likely capable of understanding how to properly wield it.
+SAY NAME1 ~太阳射手 V（威力）~
+SAY NAME2 ~太阳射手 V（威力）~
+SAY DESC ~太阳射手是奥拉的专属武器，一把造型奇特的金属弓，射箭的速度与准度近乎非人。弓臂上装点着各种附件，有些是有用的（例如改变搭箭效果的附魔），有些纯粹是装饰。它的构造复杂到除了它的制造者，恐怕没人能弄懂该怎么正确使用它。
 
-STATISTICS:
+属性：
 
-– Configuration: Power
-  Attacks deal maximum damage
-  2 attacks per round
+– 调节方式：威力
+  攻击造成最大伤害
+  每轮 2 次攻击
   
-  May use 'Blazing Shot' once per day
-  Special: Launch a +5 arrow, stunning for 5 rounds on a failed Save vs. Death at -2
-  Damage: 1d6+5 piercing, 10d10 fire (Save vs. Death at -2 for half)
+  每日可使用一次“炽烈射击”
+  特殊：射出一支 +5 箭，未通过对抗死亡豁免（-2）则震慑 5 轮
+  伤害：1d6+5 穿刺、10d10 火焰（对抗死亡豁免 -2 成功则减半）
 
-Charge abilities (1x/day):
-– Create Sunshooter Arrows
+充能能力（每日一次）：
+– 制造太阳射手之箭
 
-Combat abilities:
-– Eminence: All arrows launched by this bow strike with at least +3 enchantment
-– Magnetism: Each hit reduces target's Armor Class vs. Ranged Weapons by 1 and Missile Resistance by 3% for 5 rounds
-– Analytical Archery: This bow uses Intelligence, if higher, for bonuses to ranged THAC0 instead of Dexterity.
+战斗能力：
+– 卓越：此弓射出的所有箭矢都至少视为 +3 附魔
+– 磁力：每次命中使目标对抗远程武器的防御等级降低 1、投射抗性降低 3%，持续 5 轮
+– 解析射术：此弓以智力（若更高）而非敏捷提供远程 THAC0 加成。
 
-Damage: +3 (missile)
-Speed Factor: 2
-Proficiency Type: Shortbow
-Type: Two-handed
-Requires:
- 6 Strength
- 19 Intelligence
+伤害：+3（投射）
+速度系数：2
+熟练类型：短弓
+类型：双手
+需求：
+ 力量 6
+ 智力 19
 
-Weight: 0~
+重量：0~
 
 COPY_EXISTING ~c0aubo6.itm~ ~override~
   LPF ADD_ITEM_EQEFFECT
@@ -1131,55 +1131,55 @@ COPY_EXISTING ~c0aubo6.itm~ ~override~
 	  timing = 2
 	  parameter2 = 11
 	  power = 1
-	  special = RESOLVE_STR_REF (~Aura~)
+	  special = RESOLVE_STR_REF (~奥拉~)
 	STR_VAR
 	  resource = C0Aura
 END
-SAY NAME1 ~Perfect Sunshooter~
-SAY NAME2 ~Perfect Sunshooter~
-SAY DESC ~The Sunshooter is Aura's personal weapon, a metallic bow of unusual design that fires arrows with almost inhuman speed and accuracy. Various attachments decorate the arc of the bow, some useful (such as enchantments that alter the effects of nocked arrows) and others purely for accessory. Its complexity is so great that no one besides its creator is likely capable of understanding how to properly wield it. The Perfect Sunshooter is the product of a master artificer's craft, combining all the strengths of the bow's various configurations.
+SAY NAME1 ~完美太阳射手~
+SAY NAME2 ~完美太阳射手~
+SAY DESC ~太阳射手是奥拉的专属武器，一把造型奇特的金属弓，射箭的速度与准度近乎非人。弓臂上装点着各种附件，有些是有用的（例如改变搭箭效果的附魔），有些纯粹是装饰。它的构造复杂到除了它的制造者，恐怕没人能弄懂该怎么正确使用它。完美太阳射手是大师级奇械师的手笔，融合了这把弓各种调节方式的所有长处。
 
-Additionally, Aura gains a +4 bonus to Armor Class vs. Melee Weapons whilst wielding the Sunshooter.
+此外，手持太阳射手时，奥拉对抗近战武器的防御等级 +4。
 
-STATISTICS:
+属性：
 
-– Configuration: Perfect
-  3.5 attacks per round
-  Attacks never critically miss
-  +15% Critical Hit Chance
-  Attacks deal maximum damage
-  May use 'Rain of Arrows', 'Sniper Shot' or 'Blazing Shot' two times per day
+– 调节方式：完美
+  每轮 3.5 次攻击
+  攻击绝不会严重失误
+  暴击率 +15%
+  攻击造成最大伤害
+  每日可使用两次“箭雨”“狙击射击”或“炽烈射击”
 
-  'Rain of Arrows'
-  Special: Fires 15 volleys of +5 arrows in a cone briefly reducing movement rate by 99%, 10 attacks per round for the duration
-  Damage: 1d2+1 magic
+  “箭雨”
+  特殊：以锥形射出 15 波 +5 箭矢，短时间内使移动速度降低 99%，持续期间每轮 10 次攻击
+  伤害：1d2+1 魔法
 
-  'Sniper Shot'
-  Special: Launch a +5 arrow from increased visual range, dealing critical damage and reducing physical resistance to half of its original value for 5 rounds
-  Damage: 1d6+20 piercing
+  “狙击射击”
+  特殊：从更远的视野射出一支 +5 箭，造成暴击伤害，并在 5 轮内使目标的物理抗性降为原本的一半
+  伤害：1d6+20 穿刺
   
-  'Blazing Shot'
-  Special: Launch a +5 arrow, stunning for 5 rounds on a failed Save vs. Death at -4
-  Damage: 1d6+5 missile, 12d10 fire (Save vs. Death at -4 for half)
+  “炽烈射击”
+  特殊：射出一支 +5 箭，未通过对抗死亡豁免（-4）则震慑 5 轮
+  伤害：1d6+5 投射、12d10 火焰（对抗死亡豁免 -4 成功则减半）
 
-Charge abilities (1x/day):
-– Create Sunshooter Arrows
+充能能力（每日一次）：
+– 制造太阳射手之箭
 
-Combat abilities:
-– Eminence: All arrows launched by this bow strike with at least +4 enchantment
-– Magnetism: Each hit reduces target's Armor Class vs. Ranged Weapons by 1 and Missile Resistance by 3% for 5 rounds
-– Analytical Archery: This bow uses Intelligence, if higher, for bonuses to ranged THAC0 instead of Dexterity.
+战斗能力：
+– 卓越：此弓射出的所有箭矢都至少视为 +4 附魔
+– 磁力：每次命中使目标对抗远程武器的防御等级降低 1、投射抗性降低 3%，持续 5 轮
+– 解析射术：此弓以智力（若更高）而非敏捷提供远程 THAC0 加成。
 
-THAC0: +7
-Damage: +3 (missile)
-Speed Factor: 0
-Proficiency Type: Shortbow
-Type: Two-handed
-Requires:
- 6 Strength
- 19 Intelligence
+THAC0：+7
+伤害：+3（投射）
+速度系数：0
+熟练类型：短弓
+类型：双手
+需求：
+ 力量 6
+ 智力 19
 
-Weight: 0~
+重量：0~
 
 COPY_EXISTING ~c0aubo7.itm~ ~override~
   LPF ADD_ITEM_EQEFFECT
@@ -1189,55 +1189,55 @@ COPY_EXISTING ~c0aubo7.itm~ ~override~
 	  timing = 2
 	  parameter2 = 11
 	  power = 1
-	  special = RESOLVE_STR_REF (~Aura~)
+	  special = RESOLVE_STR_REF (~奥拉~)
 	STR_VAR
 	  resource = C0Aura
 END
-SAY NAME1 ~Sunshooter Opus~
-SAY NAME2 ~Sunshooter Opus~
-SAY DESC ~The Sunshooter is Aura's personal weapon, a metallic bow of unusual design that fires arrows with almost inhuman speed and accuracy. Various attachments decorate the arc of the bow, some useful (such as enchantments that alter the effects of nocked arrows) and others purely for accessory. Its complexity is so great that no one besides its creator is likely capable of understanding how to properly wield it. The Sunshooter Opus is the product of a master artificer's craft, combining all the strengths of the bow's various configurations.
+SAY NAME1 ~太阳射手·大成之作~
+SAY NAME2 ~太阳射手·大成之作~
+SAY DESC ~太阳射手是奥拉的专属武器，一把造型奇特的金属弓，射箭的速度与准度近乎非人。弓臂上装点着各种附件，有些是有用的（例如改变搭箭效果的附魔），有些纯粹是装饰。它的构造复杂到除了它的制造者，恐怕没人能弄懂该怎么正确使用它。太阳射手·大成之作是大师级奇械师的手笔，融合了这把弓各种调节方式的所有长处。
 
-The magical bowstring of Gond has made the bow even more powerful, allowing it to launch arrows of pure magical energy. Additionally, Aura gains a +4 bonus to Armor Class vs. Melee Weapons whilst wielding the Sunshooter.
+贡德的魔法弓弦让这把弓更强，能射出纯魔法能量的箭矢。此外，手持太阳射手时，奥拉对抗近战武器的防御等级 +4。
 
-STATISTICS:
+属性：
 
-– Configuration: Perfect
-  4 attacks per round
-  Attacks never critically miss
-  +20% Critical Hit Chance
-  Attacks deal maximum damage
-  May use 'Rain of Arrows', 'Sniper Shot' or 'Blazing Shot' three times per day
+– 调节方式：完美
+  每轮 4 次攻击
+  攻击绝不会严重失误
+  暴击率 +20%
+  攻击造成最大伤害
+  每日可使用三次“箭雨”“狙击射击”或“炽烈射击”
 
-  'Rain of Arrows'
-  Special: Fires 15 volleys of +5 arrows in a cone briefly reducing movement rate by 99%, 10 attacks per round for the duration
-  Damage: 1d2+1 magic
+  “箭雨”
+  特殊：以锥形射出 15 波 +5 箭矢，短时间内使移动速度降低 99%，持续期间每轮 10 次攻击
+  伤害：1d2+1 魔法
 
-  'Sniper Shot'
-  Special: Launch a +5 arrow from increased visual range, dealing critical damage and reducing physical resistance to half of its original value for 5 rounds
-  Damage: 1d6+20 piercing
+  “狙击射击”
+  特殊：从更远的视野射出一支 +5 箭，造成暴击伤害，并在 5 轮内使目标的物理抗性降为原本的一半
+  伤害：1d6+20 穿刺
   
-  'Blazing Shot'
-  Special: Launch a +5 arrow, stunning for 5 rounds on a failed Save vs. Death at -4
-  Damage: 1d6+5 missile, 12d10 fire (Save vs. Death at -4 for half)
+  “炽烈射击”
+  特殊：射出一支 +5 箭，未通过对抗死亡豁免（-4）则震慑 5 轮
+  伤害：1d6+5 投射、12d10 火焰（对抗死亡豁免 -4 成功则减半）
 
-Charge abilities (1x/day):
-– Create Sunshooter Arrows
+充能能力（每日一次）：
+– 制造太阳射手之箭
 
-Combat abilities:
-– Eminence and Divinity: All arrows launched by this bow strike with at least +5 enchantment. When no arrows are equipped, the bow fires missiles that are treated as +5 for the purposes of determining what enemies they can damage. The missiles receive +8 to hit and deal a total of 4 piercing and 1d4 magical damage
-– Magnetism: Each hit reduces target's Armor Class vs. Ranged Weapons by 1 and Missile Resistance by 5% for 5 rounds
-– Analytical Archery: This bow uses Intelligence, if higher, for bonuses to ranged THAC0 instead of Dexterity.
+战斗能力：
+– 卓越与神性：此弓射出的所有箭矢都至少视为 +5 附魔。未装备箭矢时，此弓射出的投射物在判定可伤害何种敌人时视为 +5，命中 +8，并造成 4 点穿刺与 1d4 魔法伤害
+– 磁力：每次命中使目标对抗远程武器的防御等级降低 1、投射抗性降低 5%，持续 5 轮
+– 解析射术：此弓以智力（若更高）而非敏捷提供远程 THAC0 加成。
 
-THAC0: +8
-Damage: +4 (missile)
-Speed Factor: 0
-Proficiency Type: Shortbow
-Type: Two-handed
-Requires:
- 6 Strength
- 19 Intelligence
+THAC0：+8
+伤害：+4（投射）
+速度系数：0
+熟练类型：短弓
+类型：双手
+需求：
+ 力量 6
+ 智力 19
 
-Weight: 0~
+重量：0~
 WRITE_SHORT 0x9C ~%c0auaro8%~
 
 COPY_EXISTING ~c0auboa1.itm~ ~override~
@@ -1246,9 +1246,9 @@ COPY_EXISTING ~c0auboa1.itm~ ~override~
       check_globals = 1
       check_headers = 1
       match_opcode = 139 // display string
-	  parameter1 = RESOLVE_STR_REF (~Armor Pierced~)
+	  parameter1 = RESOLVE_STR_REF (~护甲被击穿~)
   END
-SAY NAME2 ~Sniper Shot +5~
+SAY NAME2 ~狙击射击 +5~
 WRITE_SHORT 0x9C ~%c0auaro8%~
 COPY_EXISTING ~c0auboa2.itm~ ~override~
   LPF ALTER_EFFECT
@@ -1256,9 +1256,9 @@ COPY_EXISTING ~c0auboa2.itm~ ~override~
       check_globals = 1
       check_headers = 1
       match_opcode = 139 // display string
-	  parameter1 = RESOLVE_STR_REF (~Armor Pierced~)
+	  parameter1 = RESOLVE_STR_REF (~护甲被击穿~)
   END
-SAY NAME2 ~Sniper Shot +5~
+SAY NAME2 ~狙击射击 +5~
 WRITE_SHORT 0x9C ~%c0auaro8%~
 COPY_EXISTING ~c0auboa3.itm~ ~override~
   LPF ALTER_EFFECT
@@ -1266,9 +1266,9 @@ COPY_EXISTING ~c0auboa3.itm~ ~override~
       check_globals = 1
       check_headers = 1
       match_opcode = 139 // display string
-	  parameter1 = RESOLVE_STR_REF (~Armor Pierced~)
+	  parameter1 = RESOLVE_STR_REF (~护甲被击穿~)
   END
-SAY NAME2 ~Sniper Shot +5~
+SAY NAME2 ~狙击射击 +5~
 WRITE_SHORT 0x9C ~%c0auaro8%~
 
 COPY_EXISTING ~c0aubob1.itm~ ~override~
@@ -1277,9 +1277,9 @@ COPY_EXISTING ~c0aubob1.itm~ ~override~
       check_globals = 1
       check_headers = 1
       match_opcode = 139 // display string
-	  parameter1 = RESOLVE_STR_REF (~Stunned~)
+	  parameter1 = RESOLVE_STR_REF (~震慑~)
   END
-SAY NAME2 ~Blazing Shot +5~
+SAY NAME2 ~炽烈射击 +5~
 WRITE_SHORT 0x9C ~%c0auaro4%~
 COPY_EXISTING ~c0aubob2.itm~ ~override~
   LPF ALTER_EFFECT
@@ -1287,9 +1287,9 @@ COPY_EXISTING ~c0aubob2.itm~ ~override~
       check_globals = 1
       check_headers = 1
       match_opcode = 139 // display string
-	  parameter1 = RESOLVE_STR_REF (~Stunned~)
+	  parameter1 = RESOLVE_STR_REF (~震慑~)
   END
-SAY NAME2 ~Blazing Shot +5~
+SAY NAME2 ~炽烈射击 +5~
 WRITE_SHORT 0x9C ~%c0auaro4%~
 COPY_EXISTING ~c0aubob3.itm~ ~override~
   LPF ALTER_EFFECT
@@ -1297,9 +1297,9 @@ COPY_EXISTING ~c0aubob3.itm~ ~override~
       check_globals = 1
       check_headers = 1
       match_opcode = 139 // display string
-	  parameter1 = RESOLVE_STR_REF (~Stunned~)
+	  parameter1 = RESOLVE_STR_REF (~震慑~)
   END
-SAY NAME2 ~Blazing Shot +5~
+SAY NAME2 ~炽烈射击 +5~
 WRITE_SHORT 0x9C ~%c0auaro4%~
 
 COPY_EXISTING ~c0auboc.itm~ ~override~
@@ -1307,8 +1307,8 @@ COPY_EXISTING ~c0auboc.itm~ ~override~
 	INT_VAR
 		projectile = c0arain
 END
-SAY NAME1 ~Arrow Rain +5~
-SAY NAME2 ~Arrow Rain +5~
+SAY NAME1 ~箭雨 +5~
+SAY NAME2 ~箭雨 +5~
 
 COPY_EXISTING ~c0auarow.spl~ ~override~
 	LPF ALTER_SPELL_HEADER INT_VAR header = 2 projectile = c0auheal END
@@ -1320,24 +1320,24 @@ COPY_EXISTING ~c0auarow.itm~ ~override~
 	  timing = 2
 	  parameter2 = 11
 	  power = 1
-	  special = RESOLVE_STR_REF (~Aura~)
+	  special = RESOLVE_STR_REF (~奥拉~)
 	STR_VAR
 	  resource = C0Aura
 END
-SAY NAME1 ~Healing Arrow~
-SAY NAME2 ~Healing Arrow~
-SAY DESC ~This unusual arrow, designed and crafted by Aura, deals no damage to its target, instead injecting a healing solution into their bloodstream causing their wounds to regenerate.
+SAY NAME1 ~治疗箭~
+SAY NAME2 ~治疗箭~
+SAY DESC ~这种不寻常的箭由奥拉设计并制作，它不对目标造成伤害，而是把一剂治疗液注入其血流，使伤口再生。
 
-STATISTICS:
+属性：
 
-Combat abilities:
-– Target is healed for 4 hit points and regenerates 1 additional hit point for a number of seconds equal to the user's level (non-cumulative)
-– This arrow does not apply Magnetism
+战斗能力：
+– 目标恢复 4 点生命值，并在等同于使用者等级的秒数内额外每秒再生 1 点生命值（不叠加）
+– 此箭不会施加“磁力”
 
-Damage: None
-Launcher: Sunshooter Bow
+伤害：无
+发射器：太阳射手弓
 
-Weight: 0~
+重量：0~
 WRITE_SHORT 0x9C ~%c0auaro1%~
 
 COPY_EXISTING ~c0auaro2.itm~ ~override~
@@ -1348,24 +1348,24 @@ COPY_EXISTING ~c0auaro2.itm~ ~override~
 	  timing = 2
 	  parameter2 = 11
 	  power = 1
-	  special = RESOLVE_STR_REF (~Aura~)
+	  special = RESOLVE_STR_REF (~奥拉~)
 	STR_VAR
 	  resource = C0Aura
 END
-SAY NAME1 ~Lightning Arrow +3~
-SAY NAME2 ~Lightning Arrow +3~
-SAY DESC ~This unusual arrow, designed and crafted by Aura, is charged with a huge amount of electricity which is released when the arrow strikes at a target, electrocuting them as well as all enemies around them.
+SAY NAME1 ~闪电箭 +3~
+SAY NAME2 ~闪电箭 +3~
+SAY DESC ~这种不寻常的箭由奥拉设计并制作，其中充有大量电能，箭矢击中目标时释放，电击目标及其周围所有敌人。
 
-STATISTICS:
+属性：
 
-Combat abilities:
-– Deals electrical damage that chains to up to five additional targets, applying Magnetism (-2 penalty to AC vs. missiles and -20% missile damage resistance) to all creatures struck for five rounds
+战斗能力：
+– 造成电击伤害，并连锁至最多五个额外目标，对所有被击中的生物施加“磁力”（对抗投射的防御等级 -2、投射伤害抗性 -20%），持续五轮
 
-THAC0: +4
-Damage: 1d6+4 electrical
-Launcher: Sunshooter Bow
+THAC0：+4
+伤害：1d6+4 电击
+发射器：太阳射手弓
 
-Weight: 0~
+重量：0~
 WRITE_SHORT 0x9C ~%c0auaro2%~
 
 COPY_EXISTING ~c0auaro2.spl~ ~override~
@@ -1380,7 +1380,7 @@ COPY_EXISTING ~c0auaro3.itm~ ~override~
       check_globals = 1
       check_headers = 1
       match_opcode = 139 // display string
- parameter1 = RESOLVE_STR_REF (~Paralyzed~)
+ parameter1 = RESOLVE_STR_REF (~麻痹~)
 END
   LPF ADD_ITEM_EQEFFECT
     INT_VAR
@@ -1389,24 +1389,24 @@ END
 	  timing = 2
 	  parameter2 = 11
 	  power = 1
-	  special = RESOLVE_STR_REF (~Aura~)
+	  special = RESOLVE_STR_REF (~奥拉~)
 	STR_VAR
 	  resource = C0Aura
 END
-SAY NAME1 ~Static Arrow +3~
-SAY NAME2 ~Static Arrow +3~
-SAY DESC ~This unusual arrow, designed and crafted by Aura, is charged with a huge amount of electricity which is released when the arrow strikes a target, trapping them in a web-like formation.
+SAY NAME1 ~静电箭 +3~
+SAY NAME2 ~静电箭 +3~
+SAY DESC ~这种不寻常的箭由奥拉设计并制作，其中充有大量电能，箭矢击中目标时释放，把目标困在蛛网般的结构里。
 
-STATISTICS:
+属性：
 
-Combat abilities:
-– Target must make a save vs. death at -2 or be paralyzed and suffer from a -50% penalty to electrical resistance for five rounds
+战斗能力：
+– 目标须通过对抗死亡豁免（-2），否则被麻痹，并在五轮内承受 50% 电击抗性惩罚
 
-THAC0: +2
-Damage: 1d6+4 electrical
-Launcher: Sunshooter Bow
+THAC0：+2
+伤害：1d6+4 电击
+发射器：太阳射手弓
 
-Weight: 0~
+重量：0~
 WRITE_SHORT 0x9C ~%c0auaro3%~
 
 COPY_EXISTING ~c0auaro5.itm~ ~override~
@@ -1415,7 +1415,7 @@ COPY_EXISTING ~c0auaro5.itm~ ~override~
       check_globals = 1
       check_headers = 1
       match_opcode = 139 // display string
- parameter1 = RESOLVE_STR_REF (~Spell Protections Removed~)
+ parameter1 = RESOLVE_STR_REF (~法术防护已移除~)
 END
   LPF ADD_ITEM_EQEFFECT
     INT_VAR
@@ -1424,24 +1424,24 @@ END
 	  timing = 2
 	  parameter2 = 11
 	  power = 1
-	  special = RESOLVE_STR_REF (~Aura~)
+	  special = RESOLVE_STR_REF (~奥拉~)
 	STR_VAR
 	  resource = C0Aura
 END
-SAY NAME1 ~Disruptor Arrow +4~
-SAY NAME2 ~Disruptor Arrow +4~
-SAY DESC ~This unusual arrow, designed and crafted by Aura, is enchanted with antimagic, allowing it to disrupt a spellcaster's magical defenses.
+SAY NAME1 ~干扰箭 +4~
+SAY NAME2 ~干扰箭 +4~
+SAY DESC ~这种不寻常的箭由奥拉设计并制作，附有反魔法之力，能破坏施法者的魔法防御。
 
-STATISTICS:
+属性：
 
-Combat abilities:
-– Target loses one 8th- or lower level spell protection and -10% magic resistance for one turn
+战斗能力：
+– 目标失去一道 8 级或更低等级的法术防护，并在一回合内魔法抗性 -10%
 
-THAC0: +10
-Damage: 2d6+4 magic
-Launcher: Sunshooter Bow
+THAC0：+10
+伤害：2d6+4 魔法
+发射器：太阳射手弓
 
-Weight: 0~
+重量：0~
 WRITE_SHORT 0x9C ~%c0auaro5%~
 
 COPY_EXISTING ~c0auaro6.spl~ ~override~
@@ -1450,7 +1450,7 @@ COPY_EXISTING ~c0auaro6.spl~ ~override~
       check_globals = 1
       check_headers = 1
       match_opcode = 139 // display string
- parameter1 = RESOLVE_STR_REF (~Warped into another dimension~)
+ parameter1 = RESOLVE_STR_REF (~被扭曲到另一维度~)
 END
 COPY_EXISTING ~c0auaro6.itm~ ~override~
   LPF ADD_ITEM_EQEFFECT
@@ -1460,24 +1460,24 @@ COPY_EXISTING ~c0auaro6.itm~ ~override~
 	  timing = 2
 	  parameter2 = 11
 	  power = 1
-	  special = RESOLVE_STR_REF (~Aura~)
+	  special = RESOLVE_STR_REF (~奥拉~)
 	STR_VAR
 	  resource = C0Aura
 END
-SAY NAME1 ~Warp Arrow +4~
-SAY NAME2 ~Warp Arrow +4~
-SAY DESC ~This unusual arrow, designed and crafted by Aura, is capable of warping the target to another dimension where they are trapped for a short duration.
+SAY NAME1 ~次元箭 +4~
+SAY NAME2 ~次元箭 +4~
+SAY DESC ~这种不寻常的箭由奥拉设计并制作，能把目标扭曲到另一维度，将其困在其中一小段时间。
 
-STATISTICS:
+属性：
 
-Combat abilities:
-– Target is Warped into another dimension for one turn. Enemies may make a Saving Throw vs. Spells at -4 to avoid the effects.
+战斗能力：
+– 目标被扭曲到另一维度一回合。敌人可通过对抗法术豁免（-4）以避开此效果。
 
-THAC0: +10
-Damage: None
-Launcher: Sunshooter Bow
+THAC0：+10
+伤害：无
+发射器：太阳射手弓
 
-Weight: 0~
+重量：0~
 WRITE_SHORT 0x9C ~%c0auaro6%~
 
 COPY_EXISTING ~c0auaro7.itm~ ~override~
@@ -1487,7 +1487,7 @@ COPY_EXISTING ~c0auaro7.itm~ ~override~
       check_headers = 1
       match_opcode = 139 // display string
       match_parameter1 = 0
- parameter1 = RESOLVE_STR_REF (~Stunned~)
+ parameter1 = RESOLVE_STR_REF (~震慑~)
 END
   LPF ADD_ITEM_EQEFFECT
     INT_VAR
@@ -1496,53 +1496,53 @@ END
 	  timing = 2
 	  parameter2 = 11
 	  power = 1
-	  special = RESOLVE_STR_REF (~Aura~)
+	  special = RESOLVE_STR_REF (~奥拉~)
 	STR_VAR
 	  resource = C0Aura
 END
-SAY NAME1 ~Detonator Arrow +5~
-SAY NAME2 ~Detonator Arrow +5~
-SAY DESC ~This unusual arrow, designed and crafted by Aura, contains a small amount of Lantanese smokepowder which explodes violently upon impact.
+SAY NAME1 ~引爆箭 +5~
+SAY NAME2 ~引爆箭 +5~
+SAY DESC ~这种不寻常的箭由奥拉设计并制作，内装少量兰坦火药，撞击时猛烈爆炸。
 
-STATISTICS:
+属性：
 
-Combat abilities:
-– Target must make a Save vs. Spell at -4 or be stunned for one round
+战斗能力：
+– 目标须通过对抗法术豁免（-4），否则被震慑一轮
 
-Damage: 6d6+4 explosion upon impact (Save vs. Spell at -4 for half)
-Area of Effect: 15' radius
-Launcher: Sunshooter Bow
+伤害：撞击时爆炸造成 6d6+4 伤害（对抗法术豁免 -4 成功则减半）
+效果范围：15 尺半径
+发射器：太阳射手弓
 
-Weight: 0~
+重量：0~
 WRITE_SHORT 0x9C ~%c0auaro7%~
 
 COPY_EXISTING ~c0autt01.itm~ ~override~
-SAY NAME1 ~Burst Orb~
-SAY NAME2 ~Burst Orb~
-SAY DESC ~This shimmering glass orb, roughly the size of a clenched fist, crackles with electricity.
+SAY NAME1 ~爆裂法球~
+SAY NAME2 ~爆裂法球~
+SAY DESC ~这颗约拳头大小、泛着微光的玻璃球噼啪作响，内有电流。
 
-STATISTICS:
+属性：
 
-Charge abilities (one use):
-– When a Burst Orb is launched at the targeted area, it erupts into a mass of energy, dealing electrical damage and sending all targets away from the center of impact as well as knocking them unconscious for one round.
-  Damage: 4d6+2 electrical
-  Range: 30 ft.
-  Area of Effect: 10' radius
+充能能力（一次）：
+– 把爆裂法球投向目标区域时，它会炸开成一团能量，造成电击伤害，把所有目标从爆心推开，并使其昏迷一轮。
+  伤害：4d6+2 电击
+  范围：30 尺
+  效果范围：10 尺半径
   
-Requires:
-  9 Intelligence
+需求：
+  智力 9
   
-Weight: 1~
+重量：1~
 WRITE_SHORT 0x9C ~%c0aburst%~
 
 COPY_EXISTING ~c0agem1.itm~ ~override~
-SAY NAME1 ~Ice Crystal~
-SAY NAME2 ~Ice Crystal~
-SAY DESC ~This crystal initially appears to be a normal shard of ice, though it does not melt even when held in hand. It seems to almost hum with latent magical energy.
+SAY NAME1 ~冰晶~
+SAY NAME2 ~冰晶~
+SAY DESC ~这块晶体起初看来只是普通的冰片，可即便握在手里也不会融化。它似乎在隐隐嗡鸣，蕴含未发动的魔法能量。
 
-STATISTICS:
+属性：
 
-Weight: 0~
+重量：0~
 
 COPY_EXISTING ~c0autt02.spl~ ~override~
   LPF ALTER_EFFECT
@@ -1550,7 +1550,7 @@ COPY_EXISTING ~c0autt02.spl~ ~override~
       check_globals = 1
       check_headers = 1
       match_opcode = 139 // display string
-	  parameter1 = RESOLVE_STR_REF (~Shattered~)
+	  parameter1 = RESOLVE_STR_REF (~碎裂~)
   END
 COPY_EXISTING ~c0freeze.spl~ ~override~
 		LPF	ADD_SPELL_EFFECT
@@ -1576,27 +1576,27 @@ COPY_EXISTING ~c0freeze.spl~ ~override~
       check_globals = 1
       check_headers = 1
       match_opcode = 139 // display string
-	  parameter1 = RESOLVE_STR_REF (~Frozen~)
+	  parameter1 = RESOLVE_STR_REF (~冻结~)
   END
 COPY_EXISTING ~c0autt02.itm~ ~override~
-SAY NAME1 ~Cryonics Rod~
-SAY NAME2 ~Cryonics Rod~
-SAY DESC ~This thin metallic rod contains an essence of ice, a crystal developed in the Para-Elemental Plane of Ice which somehow found its way into the Prime Material Plane. Aura used the crystal as a power source for this rod, which focuses its energy into a weaponized beam of cold capable of freezing its targets solid.
+SAY NAME1 ~低温法杖~
+SAY NAME2 ~低温法杖~
+SAY DESC ~这根细金属杖内蕴冰之精华——一块在冰元素副位面生成、不知怎么流入主物质位面的晶体。奥拉以这块晶体作为法杖的能量源，把它的能量聚成一道武器化的寒光，足以把目标冻成硬块。
 
-Unlike most magical wands, it is activated through pressing a button at the base of the rod instead of a magical command word, allowing it to be used by anyone.
+与大多数魔法魔杖不同，它是靠按下杖底按钮而非魔法口令激活的，任何人都能使用。
 
-STATISTICS:
+属性：
 
-Charge abilities (once per day):
-– Launches a ray of extreme cold towards the target, dealing cold damage and freezing the target for one turn on a failed Save vs. Wands at -2. While frozen, the target suffers double damage from physical and fire damage but is immune to cold damage. After five rounds have passed or upon taking damage, the target will be Shattered, becoming unfrozen and suffering a -2 penalty to Armor Class and Strength for one turn.
-  Damage: 6d6 cold (Save vs. Wand at -2 for half)
-  Range: 30 ft.
-  Area of Effect: 1 creature
+充能能力（每日一次）：
+– 向目标射出一道极寒射线，造成寒冷伤害，并在目标未通过对抗法杖豁免（-2）时将其冻结一回合。冻结期间，目标受到的物理与火焰伤害翻倍，但免疫寒冷伤害。五轮过后或受到伤害时，目标会“碎裂”，解除冻结，并在一回合内防御等级与力量 -2。
+  伤害：6d6 寒冷（对抗法杖豁免 -2 成功则减半）
+  范围：30 尺
+  效果范围：1 个生物
   
-Requires:
-  9 Intelligence
+需求：
+  智力 9
   
-Weight: 1~
+重量：1~
 
 COPY_EXISTING ~c0autt03.itm~ ~override~
   LPF ADD_ITEM_EQEFFECT
@@ -1606,50 +1606,50 @@ COPY_EXISTING ~c0autt03.itm~ ~override~
 	  timing = 2
 	  parameter2 = 11
 	  power = 1
-	  special = RESOLVE_STR_REF (~Neera~)
+	  special = RESOLVE_STR_REF (~妮拉~)
 	STR_VAR
 	  resource = neera
 END
-SAY NAME1 ~Aura's Wildsurge Amplifier~
-SAY NAME2 ~Aura's Wildsurge Amplifier~
-SAY DESC ~This experimental device is designed by Aura to amplify the abilities of a wild mage and allow them to surge at will. It appears to do so successfully, though Neera seems none too thrilled for wearing it, as its design is less than appealing.
+SAY NAME1 ~奥拉的狂野波动增幅器~
+SAY NAME2 ~奥拉的狂野波动增幅器~
+SAY DESC ~这台实验性装置由奥拉设计，用来增幅狂野法师的能力，让他们可以随意引发波动。看起来它确实做得到，不过妮拉似乎并不太乐意戴它，因为它的造型实在谈不上好看。
 
-STATISTICS:
+属性：
 
-Charge abilities (once per day):
-– Rapid Surge: For the next round, the wearer may cast without delay and has casting time reduced by 4. However, every spell cast during this time will incur a wild surge.
+充能能力（每日一次）：
+– 急速波动：在接下来一轮内，佩戴者可无延迟施法，施法时间减少 4。但在此期间施放的每个法术都会引发一次狂野波动。
 
-Equipped abilities:
-– +10% probability that a wild surge will have positive effect
-– +2 bonus 1st level spells
+装备能力：
+– 狂野波动产生正面效果的几率 +10%
+– 1 级法术位 +2
 
-Weight: 0~
+重量：0~
 
 COPY_EXISTING ~c0autt04.itm~ ~override~
-SAY NAME1 ~Aura's Invisibility Device~
-SAY NAME2 ~Aura's Invisibility Device~
-SAY DESC ~This unusual looking metal device appears to function like a wand, except that it is activated through the push of a button rather than a command word, allowing anyone to use it with ease. When activated, it releases a shimmering sphere of light which envelops the user and <PRO_HISHER> allies, turning them invisible. It has apparently seen frequent use, as Aura claimed to have used it to evade bandits during her travels.
+SAY NAME1 ~奥拉的隐身装置~
+SAY NAME2 ~奥拉的隐身装置~
+SAY DESC ~这台造型奇特的金属装置用起来像魔杖，只不过它是靠按钮而非口令激活的，任何人都能轻松使用。激活时，它会释放一个微光闪烁的光球，包住使用者及其盟友，使其隐身。它显然被频繁使用过，因为奥拉说她曾靠它在旅途中躲开强盗。
 
-STATISTICS:
+属性：
 
-Charge abilities:
-– Causes all allied creatures within the radius to turn invisible
-  Range: Self
-  Radius: 30'
-  Duration: 10 turns
+充能能力：
+– 使半径内所有友方生物隐身
+  范围：自身
+  半径：30 尺
+  持续时间：10 回合
  
-Weight: 1~
+重量：1~
 
 COPY_EXISTING ~c0bandol.itm~ ~override~
-SAY NAME1 ~Aura's Potion Bag~
-SAY NAME2 ~Aura's Potion Bag~
-SAY DESC ~This bag was designed by Aura to safely carry fragile objects such as potion bottles, firebombs and explosives of all kinds.
+SAY NAME1 ~奥拉的药水袋~
+SAY NAME2 ~奥拉的药水袋~
+SAY DESC ~这只袋子由奥拉设计，用来安全携带易碎物品，例如药水瓶、燃烧弹和各类爆炸物。
 
-STATISTICS:
+属性：
 
-Capacity: 100
+容量：100
 
-Weight: 0~
+重量：0~
 
 COPY_EXISTING ~c0bandol.sto~ ~override~
 SAY 0xc ~Aura's Potion Bag~
@@ -1657,19 +1657,19 @@ WRITE_SHORT 0xa0 ~%grenade%~
 
 COPY_EXISTING ~c0amask1.spl~ ~override~
 COPY_EXISTING ~c0amask1.itm~ ~override~
-SAY NAME1 ~Oni Mask~
-SAY NAME2 ~Oni Mask~
-SAY DESC ~This ceramic mask is a depiction of an oni, a terrifying demonic spirit from Kozakura. Its mere appearance is capable of instilling dread within those who look upon it.
+SAY NAME1 ~鬼面~
+SAY NAME2 ~鬼面~
+SAY DESC ~这张陶制面具描绘的是一头“鬼”——小仓传说中可怕的邪灵。它光是外观就能让看到它的人心生恐惧。
 
-STATISTICS:
+属性：
 
-Equipped abilities:
-– Armor Class: +1
-– Wisdom: +1
-– Charisma: -2
-– All enemies within 5 ft of the wearer suffer a -1 penalty to THAC0, damage, armor class and all saving throws.
+装备能力：
+– 防御等级：+1
+– 感知：+1
+– 魅力：-2
+– 佩戴者 5 尺内所有敌人 THAC0、伤害、防御等级与所有豁免检定 -1。
 
-Weight: 1~
+重量：1~
 
 COPY_EXISTING ~c0aclub1.spl~ ~override~
 COPY_EXISTING ~c0aclub1.itm~ ~override~
@@ -1681,333 +1681,333 @@ COPY_EXISTING ~c0aclub1.itm~ ~override~
         match_parameter2  = 82    // Called Shot icon
         parameter2        = c0aicon3
       END
-SAY NAME1 ~Onibi-no-kozuchi +2~
-SAY NAME2 ~Onibi-no-kozuchi +2~
-SAY DESC ~This heavy bludgeon is known as a kanabo, a spiked club wielded by warriors of Kara-Tur. The jagged cracks and bloodstains on the hard laquered wood suggest a past history of warfare and bloodshed. Its former owner, the violent warrior priest Kagutsuchi, enhanced it with the power of fire magic and fury.
+SAY NAME1 ~鬼火小槌 +2~
+SAY NAME2 ~鬼火小槌 +2~
+SAY DESC ~这根沉重的钝器叫做“金棒”，是卡拉图武士使用的带钉棍棒。硬漆木上那些参差的裂缝与血迹，暗示着它过去经历过战争与杀戮。它从前的主人——暴烈的武僧神卡古土——以火焰魔法与狂怒之力强化了它。
 
-STATISTICS:
+属性：
 
-Combat abilities:
-– Each hit has a 20% chance to inflict the target with Burning Thorns, dealing 1d6 immediate piercing damage and an additional point of fire damage every round for three rounds.
+战斗能力：
+– 每次命中有 20% 几率使目标染上“燃烧荆棘”，立即受 1d6 穿刺伤害，并在之后三轮内每轮额外受 1 点火焰伤害。
 
-Equipped abilities:
-– When the wielder falls below 50% maximum hit points, <PRO_HESHE> gains a +2 bonus to damage but a -2 penalty to Armor Class.
+装备能力：
+– 当持用者生命值低于最大值的 50% 时，伤害 +2，但防御等级 -2。
 
-THAC0: +2
-Damage: 1d6+2, +1d4 fire damage
-Damage type: crushing
-Speed Factor: 4
-Proficiency Type: Club
-Type: One-handed
-Requires:
- 5 Strength
+THAC0：+2
+伤害：1d6+2，另加 1d4 火焰伤害
+伤害类型：钝击
+速度系数：4
+熟练类型：棍棒
+类型：单手
+需求：
+ 力量 5
 
-Weight: 3~
+重量：3~
 
 COPY_EXISTING ~c0auswfa.itm~ ~override~
-SAY NAME1 ~Katana~
-SAY NAME2 ~Masterwork Katana~
-SAY DESC ~This katana was designed by Aura for her former friend, Tadahashi Saito, an exiled Kozakuran samurai. With the samurai slain, what Aura intends to do with the sword is unknown.
+SAY NAME1 ~武士刀~
+SAY NAME2 ~精制武士刀~
+SAY DESC ~这把武士刀是奥拉为她昔日的好友——被流放的小仓武士斋藤忠桥——设计的。如今武士已死，奥拉打算如何处置这把刀，无人知晓。
 
-Weight: 4~
+重量：4~
 
 COPY_EXISTING ~c0ausw01.itm~ ~override~
-SAY NAME1 ~Katana~
-SAY NAME2 ~Blade of Howling Souls +2~
-SAY UNIDENTIFIED_DESC ~The katana is a single-edged, slightly curved sword that ends with a chisel point. The katana is perhaps one of the finest swords ever made, the steps to its creation a long and secret process that is more art form than anything else. This blade is an important facet of Kara-Turan culture. To touch or wield a samurai's katana is to insult the samurai and to incite his wrath. For a gaijin, or foreigner, to own such a blade is a rare occurrence. Either the gaijin is a greatly honored friend of an important minister, or the gaijin has murdered a samurai.
+SAY NAME1 ~武士刀~
+SAY NAME2 ~嚎魂之刃 +2~
+SAY UNIDENTIFIED_DESC ~武士刀是单刃、略带弧度的刀，末端收成凿形刀尖。它也许是有史以来最精良的刀剑之一，其制作工序漫长而隐秘，更像一种艺术形式而非工艺。这种刀是卡拉图文化的重要一环。触碰或持握一名武士的武士刀，等于侮辱他、激起他的怒火。对一个“外人”（gaijin）来说，拥有这样一把刀极为罕见：要么这外人是某位重臣的至交，要么他杀了一名武士。
 
-STATISTICS:
+属性：
 
-Damage: 1d10 (slashing)
-Speed Factor: 4
-Proficiency Type: Katana
-Type: One-handed
-Requires:
- 6 Strength
- 16 Dexterity
- 14 Intelligence
+伤害：1d10（挥砍）
+速度系数：4
+熟练类型：武士刀
+类型：单手
+需求：
+ 力量 6
+ 敏捷 16
+ 智力 14
 
-Weight: 6~
-SAY DESC ~This masterwork katana, claimed to be blessed by a Kara-Turan deity, was the finest creation of Aura, yet its history is a gruesome one stained with the blood of countless innocents. Although at first glance it appears to simply be a standard yet flawless blade, a wielder that is aware of its secret may reshape it to function as a deadly throwing weapon.
+重量：6~
+SAY DESC ~这把精制武士刀据称受过卡拉图某位神祇的祝福，是奥拉最出色的作品，可它的历史却血腥可怖，沾满无数无辜者的血。乍看之下它只是一把完美无瑕的普通刀，但知晓其秘密的持用者可重塑它，使之成为致命的投掷武器。
 
-STATISTICS:
+属性：
 
-Combat abilities:
-– Returns to the wielder's hand when thrown
-– Disarm: 10% chance (40% chance in melee) to disarm opponent, reducing their attacks per round to 0 for 1 round (save vs. death to avoid)
-– Critical hits deal an additional 1d10+4 slashing damage
+战斗能力：
+– 投掷后会回到持用者手中
+– 缴械：10% 几率（近战中 40%）缴下对手武器，使其每轮攻击次数在一轮内降为 0（对抗死亡豁免可避免）
+– 暴击额外造成 1d10+4 挥砍伤害
 
-Equipped abilities:
-– 1/2 extra attack per round
+装备能力：
+– 每轮额外 1/2 次攻击
 
-THAC0: +2
-Damage (melee): 1d10+4
-Damage (ranged): 1d4+2
-Damage type: slashing
-Speed Factor: 2
-Proficiency Type: Katana
-Type: One-handed
-Requires:
- 6 Strength
- 16 Dexterity
- 14 Intelligence
+THAC0：+2
+伤害（近战）：1d10+4
+伤害（远程）：1d4+2
+伤害类型：挥砍
+速度系数：2
+熟练类型：武士刀
+类型：单手
+需求：
+ 力量 6
+ 敏捷 16
+ 智力 14
 
-Weight: 4~
+重量：4~
 SAY 0x1D6 ~Disarmed~
 SAY 0x206 ~Disarmed~
 
 COPY_EXISTING ~c0ausw02.itm~ ~override~
-SAY NAME1 ~Wakizashi~
-SAY NAME2 ~Jin'u +1~
-SAY UNIDENTIFIED_DESC ~The wakizashi, or companion sword, is extremely important to samurai. It is worn at all times, even indoors, and is near the samurai when he sleeps at night. As finely made as the katana, the wakizashi, a shorter sword with a length between twelve and twenty-four inches, is a dangerous weapon in the hands of a skilled user.
+SAY NAME1 ~胁差~
+SAY NAME2 ~迅羽 +1~
+SAY UNIDENTIFIED_DESC ~胁差，即“伴随之刀”，对武士而言极其重要。它时刻佩在身上，即便在室内也不例外，夜里睡觉时也放在近旁。做工与武士刀一样精良，刃长十二到二十四英寸，在熟练者手中是危险的武器。
 
-STATISTICS:
+属性：
 
-Damage: 1d8 (piercing)
-Speed Factor: 3
-Proficiency Type: Scimitar/Wakizashi/Ninja-to
-Type: One-handed
-Requires:
- 5 Strength
+伤害：1d8（穿刺）
+速度系数：3
+熟练类型：弯刀/胁差/忍者刀
+类型：单手
+需求：
+ 力量 5
 
-Weight: 3~
-SAY DESC ~This wakizashi has a blade sharper and finer than any other weapon you have seen, as though the slightest touch from its edge could sever steel. Its lightness and fine balance is only matched by its powerful enchantments and its beauty, decorated with faint etchings on the blade that resemble a strange hybrid of birds and clouds.
+重量：3~
+SAY DESC ~这把胁差的刃口比你见过的任何武器都更锋利细腻，仿佛轻轻一触就能割断钢铁。它的轻巧与绝佳的平衡，只有其强大的附魔与美感能相比——刃身上饰着淡淡的蚀刻，形似飞鸟与流云的奇异混合。
 
-According to Aura, the sword's name roughly translates to 'Swift Wing'.
+据奥拉说，此刀之名大致可译为“迅羽”。
 
-STATISTICS:
+属性：
 
-Combat abilities:
-– Critical Hit Chance: +5%
+战斗能力：
+– 暴击率：+5%
 
-Equipped abilities:
-– Dexterity: +1
-– Movement Rate: +2
+装备能力：
+– 敏捷：+1
+– 移动速度：+2
 
-THAC0: +1
-Damage: 1d8+3 (piercing)
-Speed Factor: 2
-Proficiency Type: Scimitar/Wakizashi/Ninja-to
-Type: One-handed
-Requires:
- 5 Strength
+THAC0：+1
+伤害：1d8+3（穿刺）
+速度系数：2
+熟练类型：弯刀/胁差/忍者刀
+类型：单手
+需求：
+ 力量 5
 
-Weight: 2~
+重量：2~
 
 COPY_EXISTING ~c0ausw03.spl~ ~override~
 LPF ALTER_EFFECT
 	INT_VAR
 	match_opcode = 139
-	parameter1 = RESOLVE_STR_REF (~Bleeding~)
+	parameter1 = RESOLVE_STR_REF (~流血~)
 END
 COPY_EXISTING ~c0ausw03.itm~ ~override~
-SAY NAME1 ~Ninja-to~
-SAY NAME2 ~Death's Razor +2~
-SAY UNIDENTIFIED_DESC ~The sword of the ninja, the ninjato, is of lower quality than other Kara-Turan blades such as the katana. The ninjato is short with a straight blade, making it ideal for subterfuge. The ninjato is also more suited to fighting in closed places, sometimes giving the ninja an advantage over the longer blades that the samurai use.
+SAY NAME1 ~忍者刀~
+SAY NAME2 ~死亡剃刀 +2~
+SAY UNIDENTIFIED_DESC ~忍者所用的刀，即“忍者刀”，品质低于武士刀等其他卡拉图刀剑。忍者刀较短、刃身平直，正适合暗中行事。它也更适合在狭窄处搏斗，有时能让忍者比武士所用的长刀更占优势。
 
-STATISTICS:
+属性：
 
-Damage: 1d8 (slashing)
-Speed Factor: 4
-Proficiency Type: Scimitar/Wakizashi/Ninjato
-Type: One-handed
-Requires:
- 6 Strength
+伤害：1d8（挥砍）
+速度系数：4
+熟练类型：弯刀/胁差/忍者刀
+类型：单手
+需求：
+ 力量 6
 
-Weight: 2~
-SAY DESC ~While the outward trappings of this finely made bluesteel blade appear plain, its edge is sharp enough to cleave metal despite being as thin and delicate as parchment, to the point that one could almost see it as translucent. The blade of the ninja-to is unblemished, appearing wholly new despite the rather worn appearance of its handle and sheath. Whether from its exotic design or its thinness, the blade is lightweight and almost seems to move freely of its own will, dancing in one's hand while penetrating even the sturdiest of defenses with lethal strikes that often leave deep, lacerating cuts that bleed out, making it a perfect assassin's tool. Such a useful weapon requires a careful hand, however, as clumsy wielders may find the weapon more dangerous to themselves than their intended victims.
+重量：2~
+SAY DESC ~这把做工精良的蓝钢刀外表看似朴素，刃口却锋利得足以斩断金属，刃身薄得像羊皮纸，几乎近乎半透明。忍者刀的刃身毫无瑕疵，看起来崭新如初，尽管刀柄与刀鞘已相当陈旧。不知是因为造型奇异还是因为薄，这刀轻若无物，几乎像是凭自己的意志行动，在手中起舞，以致命的斩击穿透最坚固的防御，往往留下深而撕裂、不断流血的伤口，堪称刺客的完美工具。不过这样一件好用的武器需要一双谨慎的手——笨拙的持用者或许会发现，这刀对他们自己比对目标更危险。
 
-The name 'Musou' is engraved in tiny, barely noticeable letters in the Kozakuran language on the hand guard. Whether it is the name of the weapon's creator or some form of code, you do not know.
+护手上以细小的、几乎看不出的字迹，用的小仓语刻着“无双”。那是制作者的名字，还是某种暗号，你不得而知。
 
-STATISTICS:
+属性：
 
-Combat abilities:
-– Critical Hit Chance: +10%
-– Upon inflicting a critical hit with this weapon, the target bleeds for two points of piercing damage per round for six rounds (no save).
+战斗能力：
+– 暴击率：+10%
+– 以此武器造成暴击时，目标每轮流失两点穿刺伤害的“流血”状态，持续六轮（无法豁免）。
 
-THAC0: +4
-Damage: 1d8+2 (slashing)
-Speed Factor: 1
-Proficiency Type: Scimitar/Wakizashi/Ninjato
-Type: One-handed
-Requires:
- 4 Strength
- 16 Dexterity
+THAC0：+4
+伤害：1d8+2（挥砍）
+速度系数：1
+熟练类型：弯刀/胁差/忍者刀
+类型：单手
+需求：
+ 力量 4
+ 敏捷 16
 
-Weight: 2~
+重量：2~
 
 COPY_EXISTING ~c0auim01.itm~ ~override~
-SAY NAME1 ~Two-handed Sword~
-SAY NAME2 ~Sword of Wrath +3~
-SAY DESC ~This was once a cursed sword which performs perfectly under every test, save the heat of battle. Upon entering combat, the wielder will immediately go berserk, killing everything within reach until either calming down or falling unconscious. A very powerful sword, but one must decide whether or not it is worth the risk. Even once the battle fury has ended, this sword can only be removed via an exorcism using a Remove Curse spell.
+SAY NAME1 ~双手剑~
+SAY NAME2 ~愤怒之剑 +3~
+SAY DESC ~这曾是一把诅咒之剑：除战斗之中，它在一切考验下都表现得完美无缺。一旦进入战斗，持用者会立刻陷入狂乱，见什么杀什么，直到冷静下来或失去意识。这是把非常强大的剑，但使用者必须判断是否值得冒这个险。即便战斗狂怒结束，也只能通过施放“解除诅咒”进行驱邪，才能取下这把剑。
 
-With Aura's enhancements to the weapon, the curse of the weapon has been broken, but an aura of rage still permeates through the weapon, often causing its wielder to become more reckless in combat. However, it has been controlled to the extent that those who carry it can tell friend from foe.
+经奥拉强化后，此剑的诅咒已被破除，但仍有一股怒意萦绕剑身，常使持用者在战斗中变得更为莽撞。不过它已被控制到持用者仍能分清敌我的程度。
 
-STATISTICS:
+属性：
 
-Equipped abilities:
-– Armor Class: -2 penalty
+装备能力：
+– 防御等级 -2 惩罚
 
-THAC0: +3
-Damage: 1d10+3 (slashing)
-Speed Factor: 7
-Proficiency Type: Two-handed Sword
-Type: Two-handed
-Requires:
- 14 Strength
+THAC0：+3
+伤害：1d10+3（挥砍）
+速度系数：7
+熟练类型：双手剑
+类型：双手
+需求：
+ 力量 14
 
-Weight: 15~
+重量：15~
 
 COPY_EXISTING ~c0auim02.itm~ ~override~
-LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1 = RESOLVE_STR_REF (~Bleeding~) END
-SAY NAME1 ~Spear~
-SAY NAME2 ~Biting Thorns +3~
-SAY DESC ~Once a cursed spear which struck the wielder as they struck the enemy, this weapon is now a powerful asset after Aura's enhancements. The barbed thorns that once threatened its wielder now are now its greatest asset, lodging themseves into their foe and causing deep bleeding. However, the weapon has not been fully tamed, as it requires great finesse to wield without self-injury.
+LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1 = RESOLVE_STR_REF (~流血~) END
+SAY NAME1 ~长矛~
+SAY NAME2 ~噬刺 +3~
+SAY DESC ~这曾是一把诅咒长矛，持用者刺向敌人时也会刺伤自己；经奥拉强化后，它已成为一件强力利器。曾威胁持用者的倒钩荆棘，如今成了它最大的本钱：钩入敌身，造成深深的流血。不过这件武器并未被完全驯服，要不受自伤地使用它，需极高的技巧。
 
-STATISTICS:
+属性：
 
-Combat abilities:
-– Target bleeds for 1 piercing damage per 2 seconds for 1 round on a failed Save vs. Breath
+战斗能力：
+– 目标未通过对抗吐息豁免时，每轮在 1 轮内每 2 秒流失 1 点穿刺伤害的“流血”
 
-THAC0: +3
-Damage: 1d6+3 (piercing)
-Speed Factor: 3
-Proficiency Type: Spear
-Type: Two-handed
-Requires:
- 5 Strength
- 17 Dexterity
+THAC0：+3
+伤害：1d6+3（穿刺）
+速度系数：3
+熟练类型：长矛
+类型：双手
+需求：
+ 力量 5
+ 敏捷 17
 
-Weight: 5~
+重量：5~
 
 COPY_EXISTING ~c0auim03.itm~ ~override~
-SAY NAME1 ~Bracers~
-SAY NAME2 ~Bracers of Precision~
-SAY DESC ~The bracers appear to be Bracers of Specialization, but were in fact once a cruel joke designed by the drow, meant to trick unsuspecting rivals into wearing them and having their wrists bound by a curse. Now, however, their curse has been transformed into a boon thanks to Lantanese artifice. These bracers now enhance the wearer's precision while wielding melee weapons, allowing them to make more accurate and deadly strikes.
+SAY NAME1 ~护腕~
+SAY NAME2 ~精准护腕~
+SAY DESC ~这对护腕看起来像“专精护腕”，实际上曾是一出恶毒的玩笑，由卓尔设计，用来诱使毫无防备的对手戴上，让诅咒缚住其手腕。不过如今借兰坦奇械之术，它们的诅咒已转为福祉。这对护腕现在能提升佩戴者持用近战武器时的精准，使其攻击更准、更致命。
 
-STATISTICS:
+属性：
 
-Equipped abilities:
-– THAC0: +2 (melee only)
-– Critical Hit Chance: +5% (melee only)
+装备能力：
+– THAC0：+2（仅近战）
+– 暴击率：+5%（仅近战）
 
-Weight: 1~
+重量：1~
 
 COPY_EXISTING ~c0auim04.itm~ ~override~
-SAY NAME1 ~Idol~
-SAY NAME2 ~Idol of Kozah~
-SAY DESC ~This idol depicts Kozah the Stormstar, a long-extinct god who was venerated and feared among the less-powerful strata of ancient Netherese society. Worship of this god of storms, earthquakes, strife, and rebellion was outlawed by many of the civilization's powerful archwizards. Many Kozahyn shrines and temples were therefore built in secretive, underground locations where the devout were better able to escape detection.
+SAY NAME1 ~神像~
+SAY NAME2 ~科扎神像~
+SAY DESC ~这尊神像描绘的是风暴之星科扎，一位早已消亡的神祇，在古代耐色瑞尔社会较弱势的阶层中受敬畏与崇拜。对这位司掌风暴、地震、纷争与叛乱的神祇的崇拜，曾被该文明许多强大的大法师明令禁止。因此，许多科扎的神龛与神殿都建在隐秘的地下处所，好让信众更易避开查缉。
 
-Aura's tinkering has somehow awakened a part of the power that lingers within the idol, making it a useful magical item. While held in one's hand, the idol can call down bolts of lightning from the sky to strike down enemies around them or create a Storm Shield around the bearer. However, the bearer's mind is wearied from constant battling against the rage induced by holding the idol close.
+奥拉的摆弄不知怎么唤醒了神像内残留的一部分力量，使它成为一件有用的魔法物品。握在手中时，神像可从天空召下雷电击打周围的敌人，或在持用者周围形成“风暴护盾”。然而，因须不断与紧握神像所引发的怒意相抗，持用者的心神会日渐疲惫。
 
-STATISTICS:
+属性：
 
-Charge abilities:
-– Storm Shield once per day
+充能能力：
+– 每日一次“风暴护盾”
 
-Equipped abilities:
-– 5% chance each nearby foe will be struck by lightning for 2d8 electrical damage
-– Wearer is immune to lightning strikes, Call Lightning and Lightning Bolt
-– Electrical Resistance: +20%
-– All electrical damage inflicted by the wearer is increased by 15%
-– Save vs. Spells: -3 penalty
+装备能力：
+– 附近每个敌人各有 5% 几率被雷电击中，受 2d8 电击伤害
+– 佩戴者免疫雷击、“召雷术”与“闪电束”
+– 电击抗性：+20%
+– 佩戴者造成的所有电击伤害提高 15%
+– 对抗法术豁免：-3 惩罚
 
-Weight: 1~
+重量：1~
 
 COPY_EXISTING ~c0auim05.itm~ ~override~
-SAY NAME1 ~Gauntlets~
-SAY NAME2 ~Gauntlets of Security~
-SAY DESC ~Gauntlets of Security
-With mischief in mind, the impetuous Elander set out to craft these cursed gauntlets to best a rival. It turns out his malice got the best of him, when he mistook these gloves for another pair. Fortunately, thanks to some clever enhancements made by Aura, such errors will not be made again by another.
+SAY NAME1 ~护手~
+SAY NAME2 ~稳妥护手~
+SAY DESC ~稳妥护手
+怀着恶作剧的心思，莽撞的埃兰德尔造出这对诅咒护手，想借此击败一位对手。结果他的恶意反噬了自己——他竟把这对护手误认成了另一双。所幸经奥拉巧妙的强化，这样的错误不会再由别人犯下。
 
-STATISTICS:
+属性：
 
-Equipped abilities:
-– Off-Hand THAC0: +2
-– Pick Pockets: +25%
-– Open Locks: +25%
+装备能力：
+– 副手 THAC0：+2
+– 扒窃：+25%
+– 开锁：+25%
 
-Weight: 2~
+重量：2~
 
 COPY_EXISTING ~c0auim06.itm~ ~override~
-SAY NAME1 ~Ring~
-SAY NAME2 ~Ring of Discipline~
-SAY DESC ~Ring of Discipline: The Trained Mind
-Oft the bane of the careless Mage, this ring was actually used to promote humility. Hergat Norin, a grand wizard of Narfell, would give the Discipliner to his most skilled and most egotistical students. Through their blind arrogance, they would mistake the ring as a reward for their "obvious brilliance," and not the punishment of a disapproving teacher. On the other hand, a hardworking and inquisitive student earns their reward, and with the enhancements made to this ring, its magic now supports the mind of the truly brilliant.
+SAY NAME1 ~戒指~
+SAY NAME2 ~戒律之戒~
+SAY DESC ~戒律之戒：受训之心
+这枚戒指常是粗心法师的祸根，实际上却被用来教人谦逊。纳菲尔的大法师赫加特·诺林会把“戒律者”交给他技艺最高、也最自负的学生。这些学生因盲目的傲慢，会把这戒指当成对自己“显而易见的才华”的奖赏，而非一位失望导师的惩罚。反过来说，勤勉好问的学生才会赢得这份奖赏；经对此戒的强化，它的魔法如今会支撑真正睿智者的心智。
 
-STATISTICS:
+属性：
 
-Equipped abilities: 
-– Intelligence: +1
-– Casting Speed: +1
+装备能力： 
+– 智力：+1
+– 施法速度：+1
 
-Requires:
-  16 Intelligence
-  14 Wisdom
+需求：
+  智力 16
+  感知 14
 
-Weight: 0~
+重量：0~
 
 COPY_EXISTING ~c0auim07.itm~ ~override~
-SAY NAME1 ~Ring~
-SAY NAME2 ~Ring of Agility~
-SAY DESC ~Ring of Agility
-The most notorious owner of this ring made a substantial living exploiting its once-cursed nature. Gregoria the Foole, a Jester by trade, would use his incomparable sleight of hand to switch this ring with that of a patsy taken from his audience. The rest of his performance would involve the mocking of the newly clumsy individual, much to the delight of their comrades. The ring was removed (by a method known only to the wily Jester) only once the stooge had promised no reprisals for the treatment he had received, though Gregoria frequently still had to make a hasty retreat. His last known performance was rumored to have been an ill-humored mage in Zhentil Keep: a show from which he did not flee quite fast enough.
+SAY NAME1 ~戒指~
+SAY NAME2 ~灵巧之戒~
+SAY DESC ~灵巧之戒
+这枚戒指最臭名昭著的主人，靠利用它昔日的诅咒性质大赚其钱。以弄臣为业的愚人葛雷戈里亚，会用他那无人能及的手法，把这枚戒指和从观众里挑出的冤大头的戒指掉包。接下来的表演，就是嘲笑这位忽然变得笨手笨脚的家伙，让他的同伴乐不可支。直到这倒霉蛋承诺不为此报复，戒指才会被取回（方法只有这位狡猾的弄臣知道），不过葛雷戈里亚往往还是得赶紧跑路。据传他最后一次演出，是在森提尔堡给一位脾气不佳的法师表演——那一次他没能跑得够快。
 
-Aura's enhancements have excised the ring of its negative qualities, and now it provides its wearer with newfound grace.
+奥拉的强化驱除了这枚戒指的负面特性，如今它为佩戴者带来新的优雅。
 
-STATISTICS:
+属性：
 
-Equipped abilities:
-– Dexterity: +1
-– Armor Class vs. Missiles: +3
+装备能力：
+– 敏捷：+1
+– 对抗投射的防御等级：+3
 
-Weight: 0~
+重量：0~
 
 COPY_EXISTING ~c0auim08.itm~ ~override~
-SAY NAME1 ~Girdle~
-SAY NAME2 ~Girdle of Masculinity/Femininity~
-SAY DESC ~The cursed Girdle of Femininity and Masculinity, a rare yet oft-discussed magical item, is wrought with a most powerful magic. Anyone unfortunate enough to secure it around their waist instantly finds their gender to be transformed. It is said that not fifty years past, a nameless court jester was beheaded for presenting the girdle as a gift to Duke Lobelahn's lover.
+SAY NAME1 ~腰带~
+SAY NAME2 ~雄雌腰带~
+SAY DESC ~被诅咒的“雄雌腰带”是一件稀有却常被谈论的魔法物品，缠着极强大的魔法。任何不幸把它系在腰上的人，都会立刻发现自己的性别被转换。据说不到五十年前，一位无名的宫廷弄臣就因把这腰带当作礼物献给洛贝兰公爵的情人而被斩首。
 
-While Aura has managed to break the curse, the enchantments left behind appear to be no different. That said, those who wear it now may do so with intent, making them more confident—and attractive—to onlookers.
+虽然奥拉设法破除了诅咒，留下的附魔看起来却与从前无异。话虽如此，如今佩戴它的人可以是有意为之，从而更加自信——在旁人眼中也更具魅力。
 
-STATISTICS:
+属性：
 
-Equipped abilities:
-– Changes the wearer's gender
-– Charisma: +1
+装备能力：
+– 改变佩戴者的性别
+– 魅力：+1
 
-Weight: 2~
+重量：2~
 
 COPY_EXISTING ~c0auim09.itm~ ~override~
-SAY NAME1 ~Morningstar~
-SAY NAME2 ~Kiel's Morning Star +3~
-SAY DESC ~This is the morning star of Kiel the Legion Killer, firstborn son of Durlag Trollkiller and Clan-prince of his father's ill-fated tower. He was wielding it in his final hour as he rushed to warn his father of the doppelgangers' infiltration of their Clan-home. It is said that the intensity of his rage in these final moments permanently imprinted itself upon the weapon. All who wield it are overcome with this battle anger whenever an enemy is sighted.
+SAY NAME1 ~晨星锤~
+SAY NAME2 ~基尔之晨星 +3~
+SAY DESC ~这是“军团屠夫”基尔的晨星锤，他是“巨魔杀手”杜拉格的长子，也是其父那座命运多舛之塔的族中子裔。他持着它度过最后时刻——那时他正赶去警告父亲：变形怪已潜入他们的族居。据说他临终的怒火之烈，永久地烙进了这件武器。凡持用它的人，一见敌人便会被这股战怒淹没。
 
-Aura claims that no magicks of artifice could suffice to quell the rage within this weapon—only the rites taught to her by her Kozakuran mentor managed to grant the vengeful spirit any measure of peace. Now, the weapon embodies its former master's undying will.
+奥拉称，任何奇械魔法都不足以平息这武器中的怒意——只有她的小仓导师传授的仪式，才让这复仇之魂得到几分安宁。如今，这件武器体现着它旧主不灭的意志。
 
-STATISTICS:
+属性：
 
-Combat abilities:
-– Saving Throws: +2
+战斗能力：
+– 豁免检定：+2
 
-THAC0: +3
-Damage: 2d4+3 (crushing)
-Speed Factor: 4
-Proficiency Type: Flail/Morning Star
-Type: One-handed
-Requires:
- 10 Strength
+THAC0：+3
+伤害：2d4+3（钝击）
+速度系数：4
+熟练类型：链枷/晨星锤
+类型：单手
+需求：
+ 力量 10
 
-Weight: 10~
+重量：10~
 
 COPY_EXISTING ~c0afish.itm~ ~override~
-SAY NAME1 ~Sardine~
-SAY NAME2 ~Sardine~
-SAY DESC ~Sardines, also known as pilchards, are small, oily fish that travel in large schools and feed on sea plankton. They are commonly consumed by both larger fish and mammals alike. Cats are known for being especially fond of sardines.
+SAY NAME1 ~沙丁鱼~
+SAY NAME2 ~沙丁鱼~
+SAY DESC ~沙丁鱼又称小鲱鱼，是一种体型小、油脂多的鱼，成群游动，以海中浮游生物为食。它们常被更大的鱼类与哺乳类捕食。众所周知，猫尤其爱吃沙丁鱼。
 
-STATISTICS:
+属性：
 
-Weight: 0~
+重量：0~
 
 COPY_EXISTING ~c0auaro4.itm~ ~override~
       LPF ALTER_EFFECT
@@ -2022,23 +2022,23 @@ COPY_EXISTING ~c0auaro4.itm~ ~override~
       check_globals = 1
       check_headers = 1
       match_opcode = 139 // display string
- parameter1 = RESOLVE_STR_REF (~Burning~)
+ parameter1 = RESOLVE_STR_REF (~燃烧~)
 END
-SAY NAME1 ~Trollbane Arrow~
-SAY NAME2 ~Trollbane Arrow~
-SAY DESC ~Trollbane is a concoction made from various flammable chemicals, making it effectively poisonous for, as it might suggest, trollkin. When this arrow strikes a troll, the trollbane bursts into flame and comes into effect, altering the troll's physiology and preventing them from regenerating their wounds.
+SAY NAME1 ~灭巨魔箭~
+SAY NAME2 ~灭巨魔箭~
+SAY DESC ~“灭巨魔”是由多种易燃化学品调成的制剂，顾名思义，对巨魔类生物有致命毒性。此箭射中巨魔时，灭巨魔药会腾起火焰并生效，改变巨魔的生理，使其无法再生伤口。
 
-STATISTICS:
+属性：
 
-Combat abilities:
-– Targets struck by this arrow must make a save vs. death at -4 or suffer two points of fire damage per round for three rounds. If the target is a troll, it permanently loses its regenerative abilities.
+战斗能力：
+– 被此箭射中的目标须通过对抗死亡豁免（-4），否则三轮内每轮受两点火焰伤害。若目标是巨魔，它将永久失去再生能力。
 
-THAC0: +2
-Damage: 1d6+4 fire
-Damage type: piercing
-Launcher: Bow
+THAC0：+2
+伤害：1d6+4 火焰
+伤害类型：穿刺
+发射器：弓
 
-Weight: 0~
+重量：0~
 WRITE_SHORT 0x9C ~%c0auaro4%~
 
 COPY_EXISTING ~c0abomba.spl~ ~override~
@@ -2057,49 +2057,49 @@ COPY_EXISTING ~c0abomba.itm~ ~override~
 	  parameter1 = (IDS_OF_SYMBOL (~kit~ ~C0AURA~))
 	  parameter2 = 9
 	  power = 1
-	  special = RESOLVE_STR_REF (~Artificer~)
+	  special = RESOLVE_STR_REF (~奇械师~)
 END
-SAY NAME1 ~Firebomb~
-SAY NAME2 ~Screaming Void~
-SAY DESC ~This malignant explosive was crafted using dust from the voidstone which caused a negative energy field within Bridgefort. As unsettling as the dark sludge-like substance appears, it can deal an indisputably massive amount of harm to any being unfortunate enough to be caught within its radius.
+SAY NAME1 ~燃烧弹~
+SAY NAME2 ~尖啸虚空~
+SAY DESC ~这枚恶性的爆炸物是用虚空石的粉末制成的，那块石头曾在桥堡内造成一片负能量场。这团深色的、泥浆般的物质看着就令人不安，却无疑能对任何不幸身处其半径内的生物造成巨大伤害。
 
-STATISTICS
+属性
 
-When thrown, unleashes a burst of negative energy which deals Magic Damage and reduces all creatures' Strength. Has no effect against undead.
-  1st level: 6d6+4 Magic Damage (Save vs. Spells for half), -1 Strength (5 rounds)
-  10th level: 6d8+6 Magic Damage (Save vs. Spells at -1 for half), -2 Strength (7 rounds)
-  20th level: 6d10+8 Magic Damage (Save vs. Spells at -2 for half), -3 Strength (1 turn)
-  30th level: 8d10+10 Magic Damage (Save vs. Spells at -3 for half), -4 Strength (2 turns)
-  40th level: 10d10+12 Magic Damage (Save vs. Spells at -4 for half), -5 Strength (3 turns)
+投掷出去后释放一阵负能量，造成魔法伤害并降低所有生物的力量。对不死生物无效。
+  1 级：6d6+4 魔法伤害（对抗法术豁免成功则减半）、力量 -1（5 轮）
+  10 级：6d8+6 魔法伤害（对抗法术豁免 -1 成功则减半）、力量 -2（7 轮）
+  20 级：6d10+8 魔法伤害（对抗法术豁免 -2 成功则减半）、力量 -3（1 回合）
+  30 级：8d10+10 魔法伤害（对抗法术豁免 -3 成功则减半）、力量 -4（2 回合）
+  40 级：10d10+12 魔法伤害（对抗法术豁免 -4 成功则减半）、力量 -5（3 回合）
 
-Weight: 0~
+重量：0~
 	WRITE_SHORT 0x001c	~%grenade%~
 WRITE_SHORT 0x9C ~%c0aproj0%~
 WRITE_LONG 0x34 6000
 
 COPY_EXISTING ~c0apotx1.itm~ ~override~
-SAY NAME2 ~Lantanese Violet Potion~
-SAY DESC ~This is one of the oddest potions you have ever examined. Once drunk, this mixture causes one's muscles to immediately bulge to completely inhuman proportions, titan-like actually, while Dexterity and Constitution are both reduced essentially to that of a slug. This variant of the Violet Potion is a near identical replica, albeit greatly distilled to reduce the longevity of its dubious effects to a fraction of its original amount.
+SAY NAME2 ~兰坦紫色药水~
+SAY DESC ~这是你检验过的最古怪的药水之一。饮下后，这剂调配会让人的肌肉立刻鼓胀到完全非人的比例——简直像泰坦——而敏捷与体质却会被削到与蛞蝓无异。这种紫色药水的变体几乎是原版的复刻，只是经过大幅蒸馏，使其可疑效果的持续时间缩短到原本的一小部分。
 
-STATISTICS:
+属性：
 
-Strength: 25
-Dexterity: 3
-Constitution: 3
-Duration: 2 hours
+力量：25
+敏捷：3
+体质：3
+持续时间：2 小时
 
-Weight: 1~
+重量：1~
 
 COPY_EXISTING ~c0apotx2.itm~ ~override~
-SAY NAME2 ~Lantanese Red Potion~
-SAY DESC ~Close examination reveals this liquid to be very peculiar in nature. It could be a sorcerer's dream, but that would depend entirely on who you asked. After ingesting the mixture, the drinker becomes the weakest, most unwise, yet incredibly intelligent person to have ever lived, with an innate 50% Magic Damage Resistance as well. This variant of the Red Potion is a near identical replica, albeit greatly distilled to reduce the longevity of its dubious effects to a fraction of its original amount.
+SAY NAME2 ~兰坦红色药水~
+SAY DESC ~仔细检验可见这种液体性质十分奇特。它可能是术士的梦想，不过这完全取决于你问的是谁。饮下这剂调配后，饮用者会成为有史以来最孱弱、最不明智、却极其聪慧的人，并天生带有 50% 魔法伤害抗性。这种红色药水的变体几乎是原版的复刻，只是经过大幅蒸馏，使其可疑效果的持续时间缩短到原本的一小部分。
 
-STATISTICS:
+属性：
 
-Special: +50% resistance to all magical damage
-Intelligence: 25
-Wisdom: 3
-Strength: 3
-Duration: 24 hours
+特殊：对一切魔法伤害抗性 +50%
+智力：25
+感知：3
+力量：3
+持续时间：24 小时
 
-Weight: 1~
+重量：1~

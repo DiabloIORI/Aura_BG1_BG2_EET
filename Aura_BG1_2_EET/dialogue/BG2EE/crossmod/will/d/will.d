@@ -4,14 +4,14 @@ Range("C0Aura",15)
 !StateCheck("L0Will",CD_STATE_NOTVALID)
 !StateCheck("C0Aura",CD_STATE_NOTVALID)
 Global("C0AuraL0Will1","GLOBAL",0)~ THEN L0WILLB C0AuraWill1
-~Please don't squint so hard when you're looking at me, Aura. Frankly, it makes me a bit uncomfortable.~ [C0BLANK]
+~奥拉，看我时请别那样使劲眯眼。说实话，那让我有点不自在。~ [C0BLANK]
 DO ~SetGlobal("C0AuraL0Will1","GLOBAL",1)~
-== BC0AURA2 ~Oh! I'm sorry, that is a little rude, isn't it? I've just never had a companion I could see through before.~
-== L0WILLB ~Fair enough. I guess I've just been like this for long enough that I've forgotten how unusual this is.~
-== BC0AURA2 ~Teehee. You're not unusual at all, Will. Once I get over the fact that you don't cast a shadow, or need to breathe and eat, there's nothing that strange about you. You don't think you're too different from yourself when you were still living, do you?~
-== L0WILLB ~No, not that much. I have fewer things to worry about, certainly, but I still remember and love the same things I did in life. That's enough.~
-== BC0AURA2 ~Did I mention I'm normally dead terrified of ghosts? Not you, though. I don't see you as being scary.~
-== L0WILLB ~Thank you.~
+== BC0AURA2 ~哦！对不起，那有点无礼，是吧？我只是从没有过一位能让我看穿的同伴。~
+== L0WILLB ~说得对。我想我这样已经够久了，久到忘了这有多不寻常。~
+== BC0AURA2 ~嘻嘻。你一点也不奇怪，威尔。等我习惯了你没有影子、不用呼吸进食这件事之后，你身上就没什么古怪的了。你不觉得自己跟还活着的时候有什么两样吧？~
+== L0WILLB ~不，没有那么严重。要说，我操心的事确实少了，可我依然记得、也依然爱着我生前所爱的一切。这就够了。~
+== BC0AURA2 ~我提过没有，我平常其实怕鬼怕得要命？不过不是你。我不觉得你可怕。~
+== L0WILLB ~谢谢。~
 EXIT
 
 CHAIN
@@ -20,13 +20,13 @@ Range("L0Will",15)
 !StateCheck("L0Will",CD_STATE_NOTVALID)
 !StateCheck("C0Aura",CD_STATE_NOTVALID)
 Global("C0AuraL0Will1","GLOBAL",1)~ THEN BC0AURA2 C0AuraWill1
-~Will, I have a question for you... when does a spirit know that it's time to move on?~ [C0BLANK]
+~威尔，我有个问题想问你……一个魂灵怎么知道什么时候该走了？~ [C0BLANK]
 DO ~SetGlobal("C0AuraL0Will1","GLOBAL",2)~
-== L0WILLB ~I feel I'm not the most suited person to answer that, Aura. I have yet to feel that calling into the afterlife.~
-== BC0AURA2 ~Oh, I see... so that means you don't have anything anchoring you here against your will. No lasting regrets or unfulfilled desires?~
-== L0WILLB ~Everything living—though I suppose I only 'live' in the metaphorical sense—can have regrets, Aura. But I'm not a revenant, or any other being that is keeping myself in this plane by force. I suppose that's why I haven't gone mad or become a monster.~
-== BC0AURA2 ~That... makes a lot of sense, actually. But doesn't it feel strange, not knowing when you'll finally be able to rest?~
-== L0WILLB ~Perhaps a little. But I know my time will come. Until then, I'm happy to be among friends, and this state lets me help as best I can, for as long as I can.~
+== L0WILLB ~我觉得我不是回答这个问题最合适的人，奥拉。我还没感到那种往生后的召引。~
+== BC0AURA2 ~哦，我明白了……所以那就是说，并没有什么东西强行把你留在此地。没有挥之不去的悔恨，也没有未了的愿望？~
+== L0WILLB ~凡有生命者——不过我大概只是比喻意义上的“活”——都会有悔恨，奥拉。可我不是亡魂，也不是任何靠蛮力把自己留在这个位面的存在。我想正因如此，我才没有发疯，也没有变成怪物。~
+== BC0AURA2 ~这……其实很说得通。可不知道自己什么时候才能最终安息，这不奇怪吗？~
+== L0WILLB ~也许有一点。可我知道我的时限总会到。在那之前，我很高兴与朋友为伴；而这样的状态让我能尽力帮忙，能帮多久就帮多久。~
 EXIT
 
 CHAIN
@@ -35,13 +35,13 @@ Range("L0Will",15)
 !StateCheck("L0Will",CD_STATE_NOTVALID)
 !StateCheck("C0Aura",CD_STATE_NOTVALID)
 Global("C0AuraL0WillToB","GLOBAL",0)~ THEN BC0AUR25 C0AuraWillToB
-~You'll go back to your grave when all this over, won't you, Will?~ [C0BLANK]
+~这一切结束后，你会回到自己的坟里去，对吧，威尔？~ [C0BLANK]
 DO ~SetGlobal("C0AuraL0WillToB","GLOBAL",1)~
-== L0WIL25B ~I'll continue wandering for a while, but eventually I'll return. Where else could I go?~
-== BC0AUR25 ~But... is there a chance it won't sustain you anymore? You've become bound to <CHARNAME>'s plane, so...~
-== L0WIL25B ~Ah, but I didn't say I'd go back to keep my existence going. I feel like I've accomplished something important travelling with you all. If I had to finally rest, it'd be as good time as any.~
-== BC0AUR25 ~Maybe... that's for the best... but I'll still miss you.~
-== L0WIL25B ~Perhaps, if I remember all this, wherever I end up next... I will miss you too.~
-== BC0AUR25 ~I still remember the way... when I have a chance, I'll plant some higanbana for you. As an offering... and so other people who find you might know the resting place of a good friend, and a gentle spirit.~
-== L0WIL25B ~I'd appreciate that.~
+== L0WIL25B ~我会再游荡一阵，不过最终我会回去。我还能去哪儿？~
+== BC0AUR25 ~可是……有没有可能它再也维持不了你？你已经与<CHARNAME>的位面相绑，所以……~
+== L0WIL25B ~哦，可我没说我要回去维持自己的存在。我觉得跟你们同行，我已经做成了一件要紧的事。若非要就此安息，现在也跟任何时候一样合适。~
+== BC0AUR25 ~也许……那样最好……可我还是会想念你。~
+== L0WIL25B ~也许，要是我还记得这一切，无论下一站到哪儿……我也会想念你。~
+== BC0AUR25 ~那条路我还记得……等有机会，我会为你种些彼岸花。算是供奉……也好让后来找到你的人知道，这里安息着一位好友，一个温柔的魂灵。~
+== L0WIL25B ~那就多谢了。~
 EXIT

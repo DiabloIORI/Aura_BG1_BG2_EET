@@ -1,16 +1,16 @@
 I_C_T O#XAN 0 C0AuraBG2XanStart
-== C0AURA2J IF ~Global("C0AuraKnowsBG1","GLOBAL",1) IsValidForPartyDialog("C0Aura")~ THEN ~Hey, <CHARNAME>, look! It's Xan!~
-== O#XAN ~Ah... and Aurelia is with you as well. It's a relief to see you haven't fallen prey to some overreaching experiment.~
-== C0AURA2J ~Teehee. Coming from you, Xan, I'll just take it to mean you've been worried about my safety. Thanks.~
-== O#XAN ~*sigh* Still as positive-minded as ever. That is good too, I suppose...~
+== C0AURA2J IF ~Global("C0AuraKnowsBG1","GLOBAL",1) IsValidForPartyDialog("C0Aura")~ THEN ~嘿，<CHARNAME>，你看！是山！~
+== O#XAN ~啊……奥瑞莉亚也跟你在一起。看到你没有沦为某个越界实验的牺牲品，我放心了。~
+== C0AURA2J ~嘻嘻。这话从你嘴里说出来，我就当你是担心我的安危了。谢谢。~
+== O#XAN ~*叹气* 还是一样满脑子积极念头。我想那也好……~
 END
 
 I_C_T O#TAIRA 8 C0AuraBG2XanTairaQuest1
-== C0AURA2J IF ~IsValidForPartyDialog("C0Aura")~ THEN ~Look at the poor child! We need to help her, right, Xan?~
+== C0AURA2J IF ~IsValidForPartyDialog("C0Aura")~ THEN ~看看这可怜的孩子！我们得帮她，对吧，山？~
 END
 
 I_C_T O#TAIRA 9 C0AuraBG2XanTairaQuest2
-== C0AURA2J IF ~Global("C0AuraKnowsBG1","GLOBAL",1) IsValidForPartyDialog("C0Aura")~ THEN ~Oh dear. Kozah, as in the Netherese god? I knew I shouldn't have fiddled with that horrible idol back then...~
+== C0AURA2J IF ~Global("C0AuraKnowsBG1","GLOBAL",1) IsValidForPartyDialog("C0Aura")~ THEN ~哦，天哪。科扎，是说那位耐瑟瑞尔的神？我早知道那会儿不该乱摆弄那尊可怕的雕像……~
 END
 
 CHAIN
@@ -21,17 +21,17 @@ Range("C0Aura",15)
 !StateCheck("O#XAN",CD_STATE_NOTVALID)
 !StateCheck("C0Aura",CD_STATE_NOTVALID)
 Global("C0AuraO#Xan","GLOBAL",0)~ THEN BO#XAN banter1
-~I cannot deny my respect for your ingenious art, Aurelia. A pity you were not born an elf. Perhaps then, your legacy would be more lasting.~ [C0BLANK]
+~我不能否认对你精巧技艺的敬意，奥瑞莉亚。可惜你没生为精灵。也许那样，你的遗泽会更长久。~ [C0BLANK]
 DO ~SetGlobal("C0AuraO#Xan","GLOBAL",1)~
-== BC0AURA2 ~Thank you, Xan. But I have faith that whatever discoveries I leave behind will be followed by greater minds.~
-== BO#XAN ~Oh, I do not doubt your name will be remembered long after your time. But can you guarantee the soul behind your works will be be eternal?~
-== BC0AURA2 ~It... it doesn't matter. As long as whatever I leave behind makes the world better, I'm content.~
-== BO#XAN ~Who can say that will be the case? Many things made with the purest intentions have been corrupted for darker ends, far from what their creators intended.~
-== BC0AURA2 ~I know. But that's inevitable, isn't it? We can hold onto our knowledge and use it to serve only our own intentions, but that can only apply as long as we're alive. No matter how long we live, whether it be ten years, a hundred, or even a thousand... we have to let it go eventually.~
-== BO#XAN ~Touché. Even my people are far from infallible. We created the mythal believing it to be the infallible protection of our kind, and yet, examples of where it was inevitably corrupted led to our downfall. We have Myth Drannor to serve as our eternal warning.~
-== BO#XAN ~In retrospect, perhaps my initial belief was wrong—it will not matter what lifespan you have, whether it be an elf, gnome or human. Sooner or later, your aspirations will be forgotten by your successors, and they will use what you have left behind as they see fit, whether it be for good or ill.~
-== BC0AURA2 ~...~
-== BO#XAN ~Forgive me. I know it may be difficult to accept. Perhaps it is a mistake to even think on it—after all, we can do nothing to change what comes after our deaths.~
+== BC0AURA2 ~谢谢你，山。不过我相信我留下的发现，会被更出色的头脑接续下去。~
+== BO#XAN ~哦，我不怀疑你的名字会在你去后很久仍被人记得。可你能保证你作品背后的那个灵魂是永恒的吗？~
+== BC0AURA2 ~那……那不要紧。只要我留下的东西能让这世界好些，我就知足。~
+== BO#XAN ~谁能说一定会那样？许多怀着最纯粹意图做出来的东西，都被腐化用于更阴暗的目的，远非造物者所愿。~
+== BC0AURA2 ~我知道。可那是躲不掉的，不是吗？我们可以守着自己的学问，只让它为自己的意图服务，可那也只在我们活着时才行。无论我们活多久——十年、一百年，哪怕一千年……终究得放手。~
+== BO#XAN ~说得有理。就连我的族人也不是不会犯错。我们造出迷锁，以为那是我族万无一失的屏障，可它终究被腐蚀的那些例子，导致了我们的衰亡。我们有迷斯·德诺作永恒的警诫。~
+== BO#XAN ~回头看来，也许我起初的看法是错的——你的寿命有多长并不重要，无论是精灵、侏儒还是人类。迟早，你的抱负会被后继者遗忘，他们会按自己的意思使用你留下的东西，无论用于善还是恶。~
+== BC0AURA2 ~……~
+== BO#XAN ~原谅我。我知道这或许难以接受。也许连想这件事都是错的——毕竟，我们无法改变死后会发生的事。~
 EXIT
 
 CHAIN
@@ -42,15 +42,15 @@ Range("C0Aura",15)
 !StateCheck("O#XAN",CD_STATE_NOTVALID)
 !StateCheck("C0Aura",CD_STATE_NOTVALID)
 Global("C0AuraO#Xan","GLOBAL",1)~ THEN BC0AURA2 banter2
-~Xan, would you allow me to examine your moonblade?~ [C0BLANK]
+~山，你允许我看看你的月刃吗？~ [C0BLANK]
 DO ~SetGlobal("C0AuraO#Xan","GLOBAL",2)~
-== BO#XAN ~That is impossible, I fear. Not that I distrust you, of course, but I cannot promise you will be unscathed, should the blade perceive your tampering as a threat.~
-== BC0AURA2 ~I don't intend to tamper, Xan. I just wanted to learn... no Lantanna's ever had a chance to study the ancient craft of elvenkind before. And here we are, and I believe that you trust me... even if I learned a little, I'd be satisfied.~
-== BO#XAN ~And what good would such knowledge do you, Aurelia? You cannot replicate the works of High Elven Magic, even had you the wisdom of a hundred lifetimes, nor would any facsimile that could be forged by your hands be of any more worth than any other magical blade. It would be pointless.~
-== BC0AURA2 ~Is knowledge for its own sake not something meaningful?~
-== BO#XAN ~I sympathize, and I do not mean to disrespect your skill. But I would much prefer that your knowledge be used for more meaningful purposes, whether it be designing the next trap to keep us safe during dangerous nights, or the next potion that may save any one of our lives, if only for a little longer.~
-== BO#XAN ~Devoting yourself to a hopeless study is not merely wasteful, but detrimental. And as I hold the position to stop you, I will.~
-== BC0AURA2 ~But—no, I understand. You have the right to refuse, Xan. I'm sorry for insisting.~
+== BO#XAN ~恐怕那不可能。倒不是我不信你，而是我不敢保证你不会受伤——万一那兵刃把你的碰触当作威胁。~
+== BC0AURA2 ~我没打算乱动，山。我只是想学……从来没有哪个兰坦人有幸研习精灵族的古老工艺。而我们如今在这里，我相信你信我……哪怕只学到一点，我也满足。~
+== BO#XAN ~这样的学问对你又有什么好处，奥瑞莉亚？就算你有百世的智慧，也复制不出高等精灵魔法的造物；你亲手能仿出的东西，也不会比任何一件寻常魔法兵刃更有价值。那毫无意义。~
+== BC0AURA2 ~为知识而求知识，不也是有意义的事吗？~
+== BO#XAN ~我同情你，也无意轻慢你的技艺。不过我宁愿你的学问被用在更有意义的用途上——无论是设计下一个陷阱，好让我们在危险的夜里保命，还是调出下一剂也许能救我们中任何一人性命、哪怕只多撑一会儿的药水。~
+== BO#XAN ~把自己投进一场无望的钻研，不只是浪费，而且有害。既然我有权阻止你，我就会阻止。~
+== BC0AURA2 ~可是——不，我明白。你有权拒绝，山。抱歉我一直坚持。~
 EXIT
 
 CHAIN
@@ -61,26 +61,26 @@ Range("C0Aura",15)
 !StateCheck("O#XAN",CD_STATE_NOTVALID)
 !StateCheck("C0Aura",CD_STATE_NOTVALID)
 Global("C0AuraO#XanToB","GLOBAL",0)~ THEN BO#XAN25 bantertob
-~If I may have a moment, Aurelia... there is something I've been meaning to ask you.~ [C0BLANK]
+~能借一步说话吗，奥瑞莉亚……有件事我一直想问你。~ [C0BLANK]
 DO ~SetGlobal("C0AuraO#XanToB","GLOBAL",1)~
-== BC0AUR25 ~Of course, Xan. What is it?~
-== BO#XAN25 ~It is regarding your grandmother, Minerva. She was one of the heroes who ventured to the Ten Towns, if I am not mistaken. I believe she wrote a book on her experiences?~
-== BC0AUR25 ~That's right. The tales of the devil invasion. It was the first record of the fiend Belhifet's attempt to conquer the North.~
-== BO#XAN25 ~Before we even met, I had some intention of reading that particular book for myself, yet between my misfortunes followed by joining <CHARNAME>'s cause, I never had a chance to find it. But you know the tale well, do you not?~
-== BC0AUR25 ~I do, yes. I'm sorry I don't have a copy with me, but if there's any part of the story you want to know, just ask.~
-== BO#XAN25 ~Perchance... was my cousin Erevain mentioned within, at all?~
-== BC0AUR25 ~Xan...~
-== BO#XAN25 ~To tell you the truth, I am not even sure I wish to know. But he was among those who was lured to the North by his thirst for adventure. And I learned that he died there. I went to see his resting place, and to pay my respects. None knew of him beyond the name on his grave.~
-== BO#XAN25 ~I believed that was the end of it. But when I learned of your lineage, I held a weak hope that your kin, who may have met him, would have paid some respect to his memory.~
-== BC0AUR25 ~His... his name was mentioned. But it was very brief. He wasn't one of the heroes who had been with my grandmother to the very end.~
-== BO#XAN25 ~That much I already knew. But I care less of the glory associated with his name, and more of whether he was remembered well. No, less than that. I care whether he was remembered at all.~
-== BC0AUR25 ~My grandmother met him. It was in Easthaven. I don't think they were as close as friends, but she dedicated a chapter to him, early in the book... "it was a sunny morning, and Minerva Glimmershine was perched atop a fisherman's home, feasting on trout and singing an old halfling tune she once heard and liked."~
-== BC0AUR25 ~"She sang alone, and believed it would remain so, but as though beckoned, her voice was matched by a gentle male soprano. Pleasantly surprised, she searched in the fields of snow, hoping to see the source of the sudden duet. And there he stood—an elf, golden-haired and earnest-faced, meeting her eyes with a pleasant smile. She waved, and the elf waved back."~
-== BC0AUR25 ~"For a moment, she hoped the elf would approach, and she would surprise him with a display of supreme acrobatics, and a new friendship, to add to those soon to come, would be born. But the elf merely nodded politely, and turned towards his intended path. Minerva did not resume her song, and her eyes followed the elf's back as it faded into the distance. She wondered if she would see him again."~
-== BO#XAN25 ~Ah.~
-== BC0AUR25 ~Sorry. I'm not the best storyteller, and... to be honest, my grandmother was a better inventor than she was a writer.~
-== BO#XAN25 ~No, it is... better than I expected. Even the recounting of his appearance and mannerisms is as I knew him.~
-== BC0AUR25 ~That's good. I hope it helped, Xan. I understand why you wanted to ask.~
-== BO#XAN25 ~I thank you for this.~
-== BC0AUR25 ~Not at all, Xan. I wouldn't do any less for a friend.~
+== BC0AUR25 ~当然，山。什么事？~
+== BO#XAN25 ~是关于你祖母密涅瓦。要是我没记错，她是那些前往十镇冒险的英雄之一。我相信她写过一本讲自己经历的书？~
+== BC0AUR25 ~没错。就是恶魔入侵的那些故事。那是关于恶魔贝尔海菲特企图征服北方的第一份记载。~
+== BO#XAN25 ~在我们相识之前，我就有意自己读读那本书，可先是遭逢不幸，后来又加入<CHARNAME>的事业，一直没机会找到它。不过你对那故事很熟，对吧？~
+== BC0AUR25 ~我知道，是的。抱歉我身边没带一本，不过故事里哪一段你想知道，问就是。~
+== BO#XAN25 ~不知……我表亲埃瑞文在书里可有被提到？~
+== BC0AUR25 ~山……~
+== BO#XAN25 ~说实话，我甚至不确定自己想知道。可他是那些被冒险的渴望引到北方去的人之一。我后来得知他死在了那里。我去看过他的安息之处，以表敬意。除了墓碑上的名字，没有人知道他。~
+== BO#XAN25 ~我以为事情就到此为止了。可当我得知你的血脉，我便抱了一丝微弱的希望：你的族人或许见过他，或许曾对他的记忆有过些许敬意。~
+== BC0AUR25 ~他……他的名字被提到过。不过只是短短一提。他并不是那些陪我祖母走到最后的英雄之一。~
+== BO#XAN25 ~这些我早已知道。可我更在意的不是他名字带来的荣光，而是他有没有被好好记住。不，比那还少。我在意的是他到底有没有被记住。~
+== BC0AUR25 ~我祖母见过他。是在东港。我想他们算不上多亲近的朋友，可她在书的前头专门给他写了一章……“那是个晴朗的早晨，密涅瓦·格利默夏恩栖在一个渔夫家的屋顶上，一边吃着鳟鱼，一边唱着一支她曾听过、很喜欢的古老半身人小调。”~
+== BC0AUR25 ~“她独自唱着，以为会一直如此，可像是被召唤一般，一个温和的男高音接上了她的声音。她又惊又喜，在雪原上四处寻找这突然的二重唱从何而来。他就站在那儿——一个金发、面容真挚的精灵，带着愉快的笑容迎上她的目光。她挥了挥手，那精灵也挥手回应。”~
+== BC0AUR25 ~“有一瞬，她盼着那精灵会走过来，她便用一场绝顶的杂技惊他一惊，于是又多了一段新的友谊，日后还会有更多。可那精灵只是礼貌地点了点头，转身走向他要走的路。密涅瓦没有再接着唱，目光追着那精灵的背影，直到它消失在远处。她不知道还会不会再见到他。”~
+== BO#XAN25 ~啊。~
+== BC0AUR25 ~抱歉。我不太会讲故事，而且……说实话，我祖母做发明比写文章强。~
+== BO#XAN25 ~不，它……比我预想的好。连对他外貌和举止的记述，都跟我记忆中的他一样。~
+== BC0AUR25 ~那就好。希望它帮上了忙，山。我明白你为什么想问。~
+== BO#XAN25 ~为此我谢谢你。~
+== BC0AUR25 ~一点也不，山。为朋友我不会少做半分。~
 EXIT

@@ -24,106 +24,106 @@ LAF HANDLE_AUDIO END
 // SINGLE-CLASS ARTIFICER
 ACTION_IF (auraclass = 1) THEN BEGIN
 COPY ~%MOD_FOLDER%/creatures/C0Aura.cre~ ~override/C0Aura.cre~
-  SAY NAME1 ~Aura~
-  SAY NAME2 ~Aura~
+  SAY NAME1 ~奥拉~
+  SAY NAME2 ~奥拉~
   WRITE_ASCII 0x248 ~C0Aura~ #8  //override script
   WRITE_ASCII 0x280 ~C0Aura~ #32  //DV
   WRITE_ASCII 0x2cc ~C0Aura~ #8   //pre-joining dialogue file
   WRITE_ASCII 0X34 ~C0AuraM~ #8   //small portrait
   WRITE_ASCII 0x3c ~C0AuraL~ #8   //medium portrait
-  SAY BIO ~When asked about her past, AURA tells you a long and convoluted tale of her life from her childhood to her life spent in faraway Kozakura. Born from the prestigious Glimmershine family in the "enlightened" island nation of Lantan, known for their skills in invention and artifice. Aura's talent for artifice and creation at a young age coupled with a wide-eyed curiosity of the world beyond her home led her to travel to distant lands looking to advance her knowledge of cultures and exchange knowledge to other, less advanced societies. 
+  SAY BIO ~问起过去，奥拉会给你讲一段漫长曲折的生平，自童年一直讲到她在遥远科祖库拉的日子。她出身于“开化”岛国兰坦的名门格利默夏恩家族，那里以发明与制造之术闻名。奥拉年幼便在制造与创造上显露天赋，又对家外的世界满怀好奇，于是远行异域以求长进文化见识，并把知识传授给较为落后的社会。 
   
-While few Lantanese venture far from the western side of Faerun, Aura is unusually well travelled, having ventured to the most distant parts of and even beyond Faerun. Among such places, she claims to have taken a temporary residence in faraway Kozakura, a nation in the eastern land of Kara-Tur. Aura's talents in creation gave her a place among the locals of the village in which she made her new home for three years, after which a certain course of events led her to leave on a journey towards the Sword Coast.~
-  SAY MORALE ~Run away! Run away!~ [C0AU001]
-  SAY HAPPY ~I'm glad I decided to travel with you.~ [C0AU002]
-  SAY UNHAPPY_ANNOYED ~That was just an honest mistake... right?~ [C0AU003]
-  SAY UNHAPPY_SERIOUS ~I can't believe anyone could be this terrible.~ [C0AU004]
-  SAY UNHAPPY_BREAKING_POINT ~That's... that's enough. I can't deal with this anymore. I'm leaving.~ [C0AU005]
-  SAY LEADER ~Umm... okay. I'll try my best!~ [C0AU006]
-  SAY TIRED ~Can we please take a break? I want tea and biscuits...~ [C0AU007]
-  SAY BORED ~Don't worry, I'll just work on my next invention while you do, uh, nothing I guess.~ [C0AU008]
-  SAY BATTLE_CRY1 ~I didn't want to have to fight!~ [C0AU009]
-  SAY BATTLE_CRY2 ~Ready, aim and fire!~ [C0AU010]
-  SAY BATTLE_CRY3 ~I never miss!~ [C0AU011]
-  SAY BATTLE_CRY4 ~You're not getting away from me!~ [C0AU012]
-  SAY BATTLE_CRY5 ~Okay, I got this!~ [C0AU013]
-  SAY DAMAGE ~Ow!~ [C0AU014]
-  SAY DYING ~Ah...~ [C0AU015]
-  SAY HURT ~It hurts so much...~ [C0AU016]
-  SAY AREA_FOREST ~Oh, I love the forest. It reminds me of home.~ [C0AU017]
-  SAY AREA_CITY ~These cities are so different from my homeland.~ [C0AU018]
-  SAY AREA_DUNGEON ~Careful, Muffy, there might be ghosts nearby.~ [C0AU019]
-  SAY AREA_DAY ~The sunlight's nice on my hair. See how it glitters?~ [C0AU020]
-  SAY AREA_NIGHT ~I'm not afraid of the dark. Really, I'm not!~ [C0AU021]
-  SAY SELECT_COMMON1 ~Yep?~ [C0AU022]
-  SAY SELECT_COMMON2 ~Mm-hmm?~ [C0AU023]
-  SAY SELECT_COMMON3 ~I'm listening.~ [C0AU024]
-  SAY SELECT_ACTION1 ~Okay.~ [C0AU028]
-  SAY SELECT_ACTION2 ~Here I go.~ [C0AU029]
-  SAY SELECT_ACTION3 ~I'm the girl for the job.~ [C0AU030]
-  SAY CRITICAL_HIT ~Ha ha! Right on target!~ [C0AU036]
-  SAY CRITICAL_MISS ~Oops! I messed that one up.~ [C0AU037]
-  SAY TARGET_IMMUNE ~Ooh, interesting. It bounced right off.~ [C0AU038]
-  SAY INVENTORY_FULL ~Hey, I'm not big enough to carry all this.~ [C0AU039]
-  SAY SPELL_DISRUPTED ~Oh, nuts and bolts! I worked hard on that!~ [C0AU040]
-  SAY SET_A_TRAP ~That's how you use your gray matter.~ [C0AU041]
-  SAY HIDDEN_IN_SHADOWS ~I'll be as quiet as a mouse.~ [C0AU042]
-  SAY PICKED_POCKET ~Huh? What's this?~ [C0AU043]
+兰坦人少有远离费伦西部者，奥拉却游历异常广远，曾到过费伦最遥远的地方，甚至超乎其外。其中，她自称在遥远的科祖库拉暂居过——那是东方卡拉图的国度。奥拉的创造才能在所居村庄让她赢得当地人的接纳，她在那里安了新家三年，此后一连串事件使她动身前往剑湾。~
+  SAY MORALE ~快跑！快跑！~ [C0AU001]
+  SAY HAPPY ~我很高兴决定跟你一起旅行。~ [C0AU002]
+  SAY UNHAPPY_ANNOYED ~那只是个无心的失误……对吧？~ [C0AU003]
+  SAY UNHAPPY_SERIOUS ~真不敢信有人能这么差劲。~ [C0AU004]
+  SAY UNHAPPY_BREAKING_POINT ~够……够了。我受不了了。我走了。~ [C0AU005]
+  SAY LEADER ~呃……好。我尽力！~ [C0AU006]
+  SAY TIRED ~能不能歇一会儿？我想要茶和饼干……~ [C0AU007]
+  SAY BORED ~别担心，你干你的，呃，什么也不干，我就做我的下一个发明。~ [C0AU008]
+  SAY BATTLE_CRY1 ~我本不想打的！~ [C0AU009]
+  SAY BATTLE_CRY2 ~准备，瞄准，放！~ [C0AU010]
+  SAY BATTLE_CRY3 ~我从不会失手！~ [C0AU011]
+  SAY BATTLE_CRY4 ~你逃不出我的手心！~ [C0AU012]
+  SAY BATTLE_CRY5 ~好，我来！~ [C0AU013]
+  SAY DAMAGE ~哎哟！~ [C0AU014]
+  SAY DYING ~啊……~ [C0AU015]
+  SAY HURT ~好疼……~ [C0AU016]
+  SAY AREA_FOREST ~哦，我爱森林。它让我想起家。~ [C0AU017]
+  SAY AREA_CITY ~这些城跟我故乡差别太大了。~ [C0AU018]
+  SAY AREA_DUNGEON ~小心，穆菲，附近也许有鬼。~ [C0AU019]
+  SAY AREA_DAY ~阳光照在我头发上真好。看它闪闪的吗？~ [C0AU020]
+  SAY AREA_NIGHT ~我不怕黑。真的，我不怕！~ [C0AU021]
+  SAY SELECT_COMMON1 ~嗯？~ [C0AU022]
+  SAY SELECT_COMMON2 ~嗯——？~ [C0AU023]
+  SAY SELECT_COMMON3 ~我听着。~ [C0AU024]
+  SAY SELECT_ACTION1 ~好。~ [C0AU028]
+  SAY SELECT_ACTION2 ~我来了。~ [C0AU029]
+  SAY SELECT_ACTION3 ~这活正适合我。~ [C0AU030]
+  SAY CRITICAL_HIT ~哈哈！正中目标！~ [C0AU036]
+  SAY CRITICAL_MISS ~哎呀！那一下我弄砸了。~ [C0AU037]
+  SAY TARGET_IMMUNE ~哦，有意思。它直接弹开了。~ [C0AU038]
+  SAY INVENTORY_FULL ~嘿，我个子不够大，搬不动这些。~ [C0AU039]
+  SAY SPELL_DISRUPTED ~哦，螺母和螺栓！我费了好大劲做的！~ [C0AU040]
+  SAY SET_A_TRAP ~这才叫动脑子。~ [C0AU041]
+  SAY HIDDEN_IN_SHADOWS ~我会安静得像只老鼠。~ [C0AU042]
+  SAY PICKED_POCKET ~嗯？这是什么？~ [C0AU043]
   WRITE_SHORT 0x246 (IDS_OF_SYMBOL (~kit~ ~C0AURA~))
 
 ACTION_IF GAME_INCLUDES ~sod~
 THEN BEGIN
 COPY ~%MOD_FOLDER%/creatures/SoD/c02aura.cre~ ~override~
-  SAY NAME1 ~Aura~
-  SAY NAME2 ~Aura~
+  SAY NAME1 ~奥拉~
+  SAY NAME2 ~奥拉~
   WRITE_ASCII 0x248 ~C02Aura~ #8  //override script
   WRITE_ASCII 0x280 ~C0Aura~ #32  //DV
   WRITE_ASCII 0x2cc ~C02Aura~ #8   //pre-joining dialogue file
   WRITE_ASCII 0X34 ~C0AuraM~ #8   //small portrait
   WRITE_ASCII 0x3c ~C0AuraL~ #8   //medium portrait
-  SAY BIO ~When asked about her past, AURA tells you a long and convoluted tale of her life from her childhood to her life spent in faraway Kozakura. Born from the prestigious Glimmershine family in the "enlightened" island nation of Lantan, known for their skills in invention and artifice. Aura's talent for artifice and creation at a young age coupled with a wide-idea curiosity of the world beyond her home led her to travel to distant lands looking to advance her knowledge of cultures and exchange knowledge to other, less advanced societies. 
+  SAY BIO ~问起过去，奥拉会给你讲一段漫长曲折的生平，自童年一直讲到她在遥远科祖库拉的日子。她出身于“开化”岛国兰坦的名门格利默夏恩家族，那里以发明与制造之术闻名。奥拉年幼便在制造与创造上显露天赋，又对家外的世界满怀好奇，于是远行异域以求长进文化见识，并把知识传授给较为落后的社会。 
   
-While few Lantanese venture far from the western side of Faerun, Aura is unusually well travelled, having ventured to the most distant parts of and even beyond Faerun. Among such places, she claims to have taken a temporary residence in faraway Kozakura, a nation in the eastern land of Kara-Tur. Aura's talents in creation gave her a place among the locals of the village in which she made her new home for three years, until a disastrous commission led to her disgrace and her subsequent leaving of Kozakura. Within the Sword Coast, she eventually crossed paths with her adversary and former friend, the disgraced samurai Tadahashi Saito, and ended his life with great regret.
+兰坦人少有远离费伦西部者，奥拉却游历异常广远，曾到过费伦最遥远的地方，甚至超乎其外。其中，她自称在遥远的科祖库拉暂居过——那是东方卡拉图的国度。奥拉的创造才能在所居村庄让她赢得当地人的接纳，她在那里安了新家三年，直到一桩灾难性的委托令她蒙羞，随后她离开科祖库拉。在剑湾，她终与昔日的对手兼旧友、失势的武士斋藤忠桥相遇，满怀悔恨地结果了他的性命。
 
-During her travels north, Aura was repeatedly forced to evade or defend herself against crusaders who would doubtlessly force her to use her great technological intellect to further their goals. Though adverse to the idea of violence, she has allied herself with the Flaming Fist both for her own protection and to fight as her own choice.~
-  SAY MORALE ~Run away! Run away!~ [C0AU001]
-  SAY HAPPY ~I'm glad I decided to travel with you.~ [C0AU002]
-  SAY UNHAPPY_ANNOYED ~That was just an honest mistake... right?~ [C0AU003]
-  SAY UNHAPPY_SERIOUS ~I can't believe anyone could be this terrible.~ [C0AU004]
-  SAY UNHAPPY_BREAKING_POINT ~That's... that's enough. I can't deal with this anymore. I'm leaving.~ [C0AU005]
-  SAY LEADER ~Umm... okay. I'll try my best!~ [C0AU006]
-  SAY TIRED ~Can we please take a break? I want tea and biscuits...~ [C0AU007]
-  SAY BORED ~Don't worry, I'll just work on my next invention while you do, uh, nothing I guess.~ [C0AU008]
-  SAY BATTLE_CRY1 ~I didn't want to have to fight!~ [C0AU009]
-  SAY BATTLE_CRY2 ~Ready, aim and fire!~ [C0AU010]
-  SAY BATTLE_CRY3 ~I never miss!~ [C0AU011]
-  SAY BATTLE_CRY4 ~You're not getting away from me!~ [C0AU012]
-  SAY BATTLE_CRY5 ~Okay, I got this!~ [C0AU013]
-  SAY DAMAGE ~Ow!~ [C0AU014]
-  SAY DYING ~Ah...~ [C0AU015]
-  SAY HURT ~It hurts so much...~ [C0AU016]
-  SAY AREA_FOREST ~Oh, I love the forest. It reminds me of home.~ [C0AU017]
-  SAY AREA_CITY ~These cities are so different from my homeland.~ [C0AU018]
-  SAY AREA_DUNGEON ~Careful, Muffy, there might be ghosts nearby.~ [C0AU019]
-  SAY AREA_DAY ~The sunlight's nice on my hair. See how it glitters?~ [C0AU020]
-  SAY AREA_NIGHT ~I'm not afraid of the dark. Really, I'm not!~ [C0AU021]
-  SAY SELECT_COMMON1 ~Yep?~ [C0AU022]
-  SAY SELECT_COMMON2 ~Mm-hmm?~ [C0AU023]
-  SAY SELECT_COMMON3 ~I'm listening.~ [C0AU024]
-  SAY SELECT_COMMON4 ~Need a hand?~ [C0AU025]
-  SAY SELECT_COMMON5 ~Need a gadget?~ [C0AU026]
-  SAY SELECT_COMMON6 ~Anything you need!~ [C0AU027]
-  SAY SELECT_ACTION1 ~Okay.~ [C0AU028]
-  SAY SELECT_ACTION2 ~Here I go.~ [C0AU029]
-  SAY SELECT_ACTION3 ~I'm the girl for the job.~ [C0AU030]
-  SAY CRITICAL_HIT ~Ha ha! Right on target!~ [C0AU036]
-  SAY CRITICAL_MISS ~Oops! I messed that one up.~ [C0AU037]
-  SAY TARGET_IMMUNE ~Ooh, interesting. It bounced right off.~ [C0AU038]
-  SAY INVENTORY_FULL ~Hey, I'm not big enough to carry all this.~ [C0AU039]
-  SAY SPELL_DISRUPTED ~Oh, nuts and bolts! I worked hard on that!~ [C0AU040]
-  SAY SET_A_TRAP ~That's how you use your gray matter.~ [C0AU041]
-  SAY HIDDEN_IN_SHADOWS ~I'll be as quiet as a mouse.~ [C0AU042]
-  SAY PICKED_POCKET ~Huh? What's this?~ [C0AU043]
+北行途中，奥拉屡屡被迫躲避或自保，以应对那些无疑会逼她以技术才智为其大业效力的十字军。她虽不愿动武，却已与焰拳结盟，既为自保，也因那是她自己的选择。~
+  SAY MORALE ~快跑！快跑！~ [C0AU001]
+  SAY HAPPY ~我很高兴决定跟你一起旅行。~ [C0AU002]
+  SAY UNHAPPY_ANNOYED ~那只是个无心的失误……对吧？~ [C0AU003]
+  SAY UNHAPPY_SERIOUS ~真不敢信有人能这么差劲。~ [C0AU004]
+  SAY UNHAPPY_BREAKING_POINT ~够……够了。我受不了了。我走了。~ [C0AU005]
+  SAY LEADER ~呃……好。我尽力！~ [C0AU006]
+  SAY TIRED ~能不能歇一会儿？我想要茶和饼干……~ [C0AU007]
+  SAY BORED ~别担心，你干你的，呃，什么也不干，我就做我的下一个发明。~ [C0AU008]
+  SAY BATTLE_CRY1 ~我本不想打的！~ [C0AU009]
+  SAY BATTLE_CRY2 ~准备，瞄准，放！~ [C0AU010]
+  SAY BATTLE_CRY3 ~我从不会失手！~ [C0AU011]
+  SAY BATTLE_CRY4 ~你逃不出我的手心！~ [C0AU012]
+  SAY BATTLE_CRY5 ~好，我来！~ [C0AU013]
+  SAY DAMAGE ~哎哟！~ [C0AU014]
+  SAY DYING ~啊……~ [C0AU015]
+  SAY HURT ~好疼……~ [C0AU016]
+  SAY AREA_FOREST ~哦，我爱森林。它让我想起家。~ [C0AU017]
+  SAY AREA_CITY ~这些城跟我故乡差别太大了。~ [C0AU018]
+  SAY AREA_DUNGEON ~小心，穆菲，附近也许有鬼。~ [C0AU019]
+  SAY AREA_DAY ~阳光照在我头发上真好。看它闪闪的吗？~ [C0AU020]
+  SAY AREA_NIGHT ~我不怕黑。真的，我不怕！~ [C0AU021]
+  SAY SELECT_COMMON1 ~嗯？~ [C0AU022]
+  SAY SELECT_COMMON2 ~嗯——？~ [C0AU023]
+  SAY SELECT_COMMON3 ~我听着。~ [C0AU024]
+  SAY SELECT_COMMON4 ~要帮忙吗？~ [C0AU025]
+  SAY SELECT_COMMON5 ~要个小装置吗？~ [C0AU026]
+  SAY SELECT_COMMON6 ~你需要什么都行！~ [C0AU027]
+  SAY SELECT_ACTION1 ~好。~ [C0AU028]
+  SAY SELECT_ACTION2 ~我来了。~ [C0AU029]
+  SAY SELECT_ACTION3 ~这活正适合我。~ [C0AU030]
+  SAY CRITICAL_HIT ~哈哈！正中目标！~ [C0AU036]
+  SAY CRITICAL_MISS ~哎呀！那一下我弄砸了。~ [C0AU037]
+  SAY TARGET_IMMUNE ~哦，有意思。它直接弹开了。~ [C0AU038]
+  SAY INVENTORY_FULL ~嘿，我个子不够大，搬不动这些。~ [C0AU039]
+  SAY SPELL_DISRUPTED ~哦，螺母和螺栓！我费了好大劲做的！~ [C0AU040]
+  SAY SET_A_TRAP ~这才叫动脑子。~ [C0AU041]
+  SAY HIDDEN_IN_SHADOWS ~我会安静得像只老鼠。~ [C0AU042]
+  SAY PICKED_POCKET ~嗯？这是什么？~ [C0AU043]
   WRITE_SHORT 0x246 (IDS_OF_SYMBOL (~kit~ ~C0AURA~))
 END
 END
@@ -131,106 +131,106 @@ END
 // ILLUSIONIST / ARTIFICER
 ACTION_IF (auraclass = 2) THEN BEGIN
 COPY ~%MOD_FOLDER%/creatures/C0AuraMA.cre~ ~override/C0Aura.cre~
-  SAY NAME1 ~Aura~
-  SAY NAME2 ~Aura~
+  SAY NAME1 ~奥拉~
+  SAY NAME2 ~奥拉~
   WRITE_ASCII 0x248 ~C0Aura~ #8  //override script
   WRITE_ASCII 0x280 ~C0Aura~ #32  //DV
   WRITE_ASCII 0x2cc ~C0Aura~ #8   //pre-joining dialogue file
   WRITE_ASCII 0X34 ~C0AuraM~ #8   //small portrait
   WRITE_ASCII 0x3c ~C0AuraL~ #8   //medium portrait
-  SAY BIO ~When asked about her past, AURA tells you a long and convoluted tale of her life from her childhood to her life spent in faraway Kozakura. Born from the prestigious Glimmershine family in the "enlightened" island nation of Lantan, known for their skills in invention and artifice. Aura's talent for artifice and creation at a young age coupled with a wide-idea curiosity of the world beyond her home led her to travel to distant lands looking to advance her knowledge of cultures and exchange knowledge to other, less advanced societies. 
+  SAY BIO ~问起过去，奥拉会给你讲一段漫长曲折的生平，自童年一直讲到她在遥远科祖库拉的日子。她出身于“开化”岛国兰坦的名门格利默夏恩家族，那里以发明与制造之术闻名。奥拉年幼便在制造与创造上显露天赋，又对家外的世界满怀好奇，于是远行异域以求长进文化见识，并把知识传授给较为落后的社会。 
   
-While few Lantanese venture far from the western side of Faerun, Aura is unusually well travelled, having ventured to the most distant parts of and even beyond Faerun. Among such places, she claims to have taken a temporary residence in faraway Kozakura, a nation in the eastern land of Kara-Tur. Aura's talents in creation gave her a place among the locals of the village in which she made her new home for three years, after which a certain course of events led her to leave on a journey towards the Sword Coast.~
-  SAY MORALE ~Run away! Run away!~ [C0AU001]
-  SAY HAPPY ~I'm glad I decided to travel with you.~ [C0AU002]
-  SAY UNHAPPY_ANNOYED ~That was just an honest mistake... right?~ [C0AU003]
-  SAY UNHAPPY_SERIOUS ~I can't believe anyone could be this terrible.~ [C0AU004]
-  SAY UNHAPPY_BREAKING_POINT ~That's... that's enough. I can't deal with this anymore. I'm leaving.~ [C0AU005]
-  SAY LEADER ~Umm... okay. I'll try my best!~ [C0AU006]
-  SAY TIRED ~Can we please take a break? I want tea and biscuits...~ [C0AU007]
-  SAY BORED ~Don't worry, I'll just work on my next invention while you do, uh, nothing I guess.~ [C0AU008]
-  SAY BATTLE_CRY1 ~I didn't want to have to fight!~ [C0AU009]
-  SAY BATTLE_CRY2 ~Ready, aim and fire!~ [C0AU010]
-  SAY BATTLE_CRY3 ~I never miss!~ [C0AU011]
-  SAY BATTLE_CRY4 ~You're not getting away from me!~ [C0AU012]
-  SAY BATTLE_CRY5 ~Okay, I got this!~ [C0AU013]
-  SAY DAMAGE ~Ow!~ [C0AU014]
-  SAY DYING ~Ah...~ [C0AU015]
-  SAY HURT ~It hurts so much...~ [C0AU016]
-  SAY AREA_FOREST ~Oh, I love the forest. It reminds me of home.~ [C0AU017]
-  SAY AREA_CITY ~These cities are so different from my homeland.~ [C0AU018]
-  SAY AREA_DUNGEON ~Careful, Muffy, there might be ghosts nearby.~ [C0AU019]
-  SAY AREA_DAY ~The sunlight's nice on my hair. See how it glitters?~ [C0AU020]
-  SAY AREA_NIGHT ~I'm not afraid of the dark. Really, I'm not!~ [C0AU021]
-  SAY SELECT_COMMON1 ~Yep?~ [C0AU022]
-  SAY SELECT_COMMON2 ~Mm-hmm?~ [C0AU023]
-  SAY SELECT_COMMON3 ~I'm listening.~ [C0AU024]
-  SAY SELECT_ACTION1 ~Okay.~ [C0AU028]
-  SAY SELECT_ACTION2 ~Here I go.~ [C0AU029]
-  SAY SELECT_ACTION3 ~I'm the girl for the job.~ [C0AU030]
-  SAY CRITICAL_HIT ~Ha ha! Right on target!~ [C0AU036]
-  SAY CRITICAL_MISS ~Oops! I messed that one up.~ [C0AU037]
-  SAY TARGET_IMMUNE ~Ooh, interesting. It bounced right off.~ [C0AU038]
-  SAY INVENTORY_FULL ~Hey, I'm not big enough to carry all this.~ [C0AU039]
-  SAY SPELL_DISRUPTED ~Oh, nuts and bolts! I worked hard on that!~ [C0AU040]
-  SAY SET_A_TRAP ~That's how you use your gray matter.~ [C0AU041]
-  SAY HIDDEN_IN_SHADOWS ~I'll be as quiet as a mouse.~ [C0AU042]
-  SAY PICKED_POCKET ~Huh? What's this?~ [C0AU043]
+兰坦人少有远离费伦西部者，奥拉却游历异常广远，曾到过费伦最遥远的地方，甚至超乎其外。其中，她自称在遥远的科祖库拉暂居过——那是东方卡拉图的国度。奥拉的创造才能在所居村庄让她赢得当地人的接纳，她在那里安了新家三年，此后一连串事件使她动身前往剑湾。~
+  SAY MORALE ~快跑！快跑！~ [C0AU001]
+  SAY HAPPY ~我很高兴决定跟你一起旅行。~ [C0AU002]
+  SAY UNHAPPY_ANNOYED ~那只是个无心的失误……对吧？~ [C0AU003]
+  SAY UNHAPPY_SERIOUS ~真不敢信有人能这么差劲。~ [C0AU004]
+  SAY UNHAPPY_BREAKING_POINT ~够……够了。我受不了了。我走了。~ [C0AU005]
+  SAY LEADER ~呃……好。我尽力！~ [C0AU006]
+  SAY TIRED ~能不能歇一会儿？我想要茶和饼干……~ [C0AU007]
+  SAY BORED ~别担心，你干你的，呃，什么也不干，我就做我的下一个发明。~ [C0AU008]
+  SAY BATTLE_CRY1 ~我本不想打的！~ [C0AU009]
+  SAY BATTLE_CRY2 ~准备，瞄准，放！~ [C0AU010]
+  SAY BATTLE_CRY3 ~我从不会失手！~ [C0AU011]
+  SAY BATTLE_CRY4 ~你逃不出我的手心！~ [C0AU012]
+  SAY BATTLE_CRY5 ~好，我来！~ [C0AU013]
+  SAY DAMAGE ~哎哟！~ [C0AU014]
+  SAY DYING ~啊……~ [C0AU015]
+  SAY HURT ~好疼……~ [C0AU016]
+  SAY AREA_FOREST ~哦，我爱森林。它让我想起家。~ [C0AU017]
+  SAY AREA_CITY ~这些城跟我故乡差别太大了。~ [C0AU018]
+  SAY AREA_DUNGEON ~小心，穆菲，附近也许有鬼。~ [C0AU019]
+  SAY AREA_DAY ~阳光照在我头发上真好。看它闪闪的吗？~ [C0AU020]
+  SAY AREA_NIGHT ~我不怕黑。真的，我不怕！~ [C0AU021]
+  SAY SELECT_COMMON1 ~嗯？~ [C0AU022]
+  SAY SELECT_COMMON2 ~嗯——？~ [C0AU023]
+  SAY SELECT_COMMON3 ~我听着。~ [C0AU024]
+  SAY SELECT_ACTION1 ~好。~ [C0AU028]
+  SAY SELECT_ACTION2 ~我来了。~ [C0AU029]
+  SAY SELECT_ACTION3 ~这活正适合我。~ [C0AU030]
+  SAY CRITICAL_HIT ~哈哈！正中目标！~ [C0AU036]
+  SAY CRITICAL_MISS ~哎呀！那一下我弄砸了。~ [C0AU037]
+  SAY TARGET_IMMUNE ~哦，有意思。它直接弹开了。~ [C0AU038]
+  SAY INVENTORY_FULL ~嘿，我个子不够大，搬不动这些。~ [C0AU039]
+  SAY SPELL_DISRUPTED ~哦，螺母和螺栓！我费了好大劲做的！~ [C0AU040]
+  SAY SET_A_TRAP ~这才叫动脑子。~ [C0AU041]
+  SAY HIDDEN_IN_SHADOWS ~我会安静得像只老鼠。~ [C0AU042]
+  SAY PICKED_POCKET ~嗯？这是什么？~ [C0AU043]
   WRITE_SHORT 0x246 (IDS_OF_SYMBOL (~kit~ ~C0AURA~))
 
 ACTION_IF GAME_INCLUDES ~sod~
 THEN BEGIN
 COPY ~%MOD_FOLDER%/creatures/SoD/c02AuraM.cre~ ~override/C02Aura.cre~
-  SAY NAME1 ~Aura~
-  SAY NAME2 ~Aura~
+  SAY NAME1 ~奥拉~
+  SAY NAME2 ~奥拉~
   WRITE_ASCII 0x248 ~C02Aura~ #8  //override script
   WRITE_ASCII 0x280 ~C0Aura~ #32  //DV
   WRITE_ASCII 0x2cc ~C02Aura~ #8   //pre-joining dialogue file
   WRITE_ASCII 0X34 ~C0AuraM~ #8   //small portrait
   WRITE_ASCII 0x3c ~C0AuraL~ #8   //medium portrait
-  SAY BIO ~When asked about her past, AURA tells you a long and convoluted tale of her life from her childhood to her life spent in faraway Kozakura. Born from the prestigious Glimmershine family in the "enlightened" island nation of Lantan, known for their skills in invention and artifice. Aura's talent for artifice and creation at a young age coupled with a wide-idea curiosity of the world beyond her home led her to travel to distant lands looking to advance her knowledge of cultures and exchange knowledge to other, less advanced societies. 
+  SAY BIO ~问起过去，奥拉会给你讲一段漫长曲折的生平，自童年一直讲到她在遥远科祖库拉的日子。她出身于“开化”岛国兰坦的名门格利默夏恩家族，那里以发明与制造之术闻名。奥拉年幼便在制造与创造上显露天赋，又对家外的世界满怀好奇，于是远行异域以求长进文化见识，并把知识传授给较为落后的社会。 
   
-While few Lantanese venture far from the western side of Faerun, Aura is unusually well travelled, having ventured to the most distant parts of and even beyond Faerun. Among such places, she claims to have taken a temporary residence in faraway Kozakura, a nation in the eastern land of Kara-Tur. Aura's talents in creation gave her a place among the locals of the village in which she made her new home for three years, until a disastrous commission led to her disgrace and her subsequent leaving of Kozakura. Within the Sword Coast, she eventually crossed paths with her adversary and former friend, the disgraced samurai Tadahashi Saito, and ended his life with great regret.
+兰坦人少有远离费伦西部者，奥拉却游历异常广远，曾到过费伦最遥远的地方，甚至超乎其外。其中，她自称在遥远的科祖库拉暂居过——那是东方卡拉图的国度。奥拉的创造才能在所居村庄让她赢得当地人的接纳，她在那里安了新家三年，直到一桩灾难性的委托令她蒙羞，随后她离开科祖库拉。在剑湾，她终与昔日的对手兼旧友、失势的武士斋藤忠桥相遇，满怀悔恨地结果了他的性命。
 
-During her travels north, Aura was repeatedly forced to evade or defend herself against crusaders who would doubtlessly force her to use her great technological intellect to further their goals. Though adverse to the idea of violence, she has allied herself with the Flaming Fist both for her own protection and to fight as her own choice.~
-  SAY MORALE ~Run away! Run away!~ [C0AU001]
-  SAY HAPPY ~I'm glad I decided to travel with you.~ [C0AU002]
-  SAY UNHAPPY_ANNOYED ~That was just an honest mistake... right?~ [C0AU003]
-  SAY UNHAPPY_SERIOUS ~I can't believe anyone could be this terrible.~ [C0AU004]
-  SAY UNHAPPY_BREAKING_POINT ~That's... that's enough. I can't deal with this anymore. I'm leaving.~ [C0AU005]
-  SAY LEADER ~Umm... okay. I'll try my best!~ [C0AU006]
-  SAY TIRED ~Can we please take a break? I want tea and biscuits...~ [C0AU007]
-  SAY BORED ~Don't worry, I'll just work on my next invention while you do, uh, nothing I guess.~ [C0AU008]
-  SAY BATTLE_CRY1 ~I didn't want to have to fight!~ [C0AU009]
-  SAY BATTLE_CRY2 ~Ready, aim and fire!~ [C0AU010]
-  SAY BATTLE_CRY3 ~I never miss!~ [C0AU011]
-  SAY BATTLE_CRY4 ~You're not getting away from me!~ [C0AU012]
-  SAY BATTLE_CRY5 ~Okay, I got this!~ [C0AU013]
-  SAY DAMAGE ~Ow!~ [C0AU014]
-  SAY DYING ~Ah...~ [C0AU015]
-  SAY HURT ~It hurts so much...~ [C0AU016]
-  SAY AREA_FOREST ~Oh, I love the forest. It reminds me of home.~ [C0AU017]
-  SAY AREA_CITY ~These cities are so different from my homeland.~ [C0AU018]
-  SAY AREA_DUNGEON ~Careful, Muffy, there might be ghosts nearby.~ [C0AU019]
-  SAY AREA_DAY ~The sunlight's nice on my hair. See how it glitters?~ [C0AU020]
-  SAY AREA_NIGHT ~I'm not afraid of the dark. Really, I'm not!~ [C0AU021]
-  SAY SELECT_COMMON1 ~Yep?~ [C0AU022]
-  SAY SELECT_COMMON2 ~Mm-hmm?~ [C0AU023]
-  SAY SELECT_COMMON3 ~I'm listening.~ [C0AU024]
-  SAY SELECT_COMMON4 ~Need a hand?~ [C0AU025]
-  SAY SELECT_COMMON5 ~Need a gadget?~ [C0AU026]
-  SAY SELECT_COMMON6 ~Anything you need!~ [C0AU027]
-  SAY SELECT_ACTION1 ~Okay.~ [C0AU028]
-  SAY SELECT_ACTION2 ~Here I go.~ [C0AU029]
-  SAY SELECT_ACTION3 ~I'm the girl for the job.~ [C0AU030]
-  SAY CRITICAL_HIT ~Ha ha! Right on target!~ [C0AU036]
-  SAY CRITICAL_MISS ~Oops! I messed that one up.~ [C0AU037]
-  SAY TARGET_IMMUNE ~Ooh, interesting. It bounced right off.~ [C0AU038]
-  SAY INVENTORY_FULL ~Hey, I'm not big enough to carry all this.~ [C0AU039]
-  SAY SPELL_DISRUPTED ~Oh, nuts and bolts! I worked hard on that!~ [C0AU040]
-  SAY SET_A_TRAP ~That's how you use your gray matter.~ [C0AU041]
-  SAY HIDDEN_IN_SHADOWS ~I'll be as quiet as a mouse.~ [C0AU042]
-  SAY PICKED_POCKET ~Huh? What's this?~ [C0AU043]
+北行途中，奥拉屡屡被迫躲避或自保，以应对那些无疑会逼她以技术才智为其大业效力的十字军。她虽不愿动武，却已与焰拳结盟，既为自保，也因那是她自己的选择。~
+  SAY MORALE ~快跑！快跑！~ [C0AU001]
+  SAY HAPPY ~我很高兴决定跟你一起旅行。~ [C0AU002]
+  SAY UNHAPPY_ANNOYED ~那只是个无心的失误……对吧？~ [C0AU003]
+  SAY UNHAPPY_SERIOUS ~真不敢信有人能这么差劲。~ [C0AU004]
+  SAY UNHAPPY_BREAKING_POINT ~够……够了。我受不了了。我走了。~ [C0AU005]
+  SAY LEADER ~呃……好。我尽力！~ [C0AU006]
+  SAY TIRED ~能不能歇一会儿？我想要茶和饼干……~ [C0AU007]
+  SAY BORED ~别担心，你干你的，呃，什么也不干，我就做我的下一个发明。~ [C0AU008]
+  SAY BATTLE_CRY1 ~我本不想打的！~ [C0AU009]
+  SAY BATTLE_CRY2 ~准备，瞄准，放！~ [C0AU010]
+  SAY BATTLE_CRY3 ~我从不会失手！~ [C0AU011]
+  SAY BATTLE_CRY4 ~你逃不出我的手心！~ [C0AU012]
+  SAY BATTLE_CRY5 ~好，我来！~ [C0AU013]
+  SAY DAMAGE ~哎哟！~ [C0AU014]
+  SAY DYING ~啊……~ [C0AU015]
+  SAY HURT ~好疼……~ [C0AU016]
+  SAY AREA_FOREST ~哦，我爱森林。它让我想起家。~ [C0AU017]
+  SAY AREA_CITY ~这些城跟我故乡差别太大了。~ [C0AU018]
+  SAY AREA_DUNGEON ~小心，穆菲，附近也许有鬼。~ [C0AU019]
+  SAY AREA_DAY ~阳光照在我头发上真好。看它闪闪的吗？~ [C0AU020]
+  SAY AREA_NIGHT ~我不怕黑。真的，我不怕！~ [C0AU021]
+  SAY SELECT_COMMON1 ~嗯？~ [C0AU022]
+  SAY SELECT_COMMON2 ~嗯——？~ [C0AU023]
+  SAY SELECT_COMMON3 ~我听着。~ [C0AU024]
+  SAY SELECT_COMMON4 ~要帮忙吗？~ [C0AU025]
+  SAY SELECT_COMMON5 ~要个小装置吗？~ [C0AU026]
+  SAY SELECT_COMMON6 ~你需要什么都行！~ [C0AU027]
+  SAY SELECT_ACTION1 ~好。~ [C0AU028]
+  SAY SELECT_ACTION2 ~我来了。~ [C0AU029]
+  SAY SELECT_ACTION3 ~这活正适合我。~ [C0AU030]
+  SAY CRITICAL_HIT ~哈哈！正中目标！~ [C0AU036]
+  SAY CRITICAL_MISS ~哎呀！那一下我弄砸了。~ [C0AU037]
+  SAY TARGET_IMMUNE ~哦，有意思。它直接弹开了。~ [C0AU038]
+  SAY INVENTORY_FULL ~嘿，我个子不够大，搬不动这些。~ [C0AU039]
+  SAY SPELL_DISRUPTED ~哦，螺母和螺栓！我费了好大劲做的！~ [C0AU040]
+  SAY SET_A_TRAP ~这才叫动脑子。~ [C0AU041]
+  SAY HIDDEN_IN_SHADOWS ~我会安静得像只老鼠。~ [C0AU042]
+  SAY PICKED_POCKET ~嗯？这是什么？~ [C0AU043]
   WRITE_SHORT 0x246 (IDS_OF_SYMBOL (~kit~ ~C0AURA~))
 END
 
@@ -245,23 +245,23 @@ COPY_EXISTING ~c0aule01.itm~ ~override~
 	  match_parameter2 = 16
 	  parameter1 = 8
   END
-SAY NAME1 ~Cherry-tinted Leather Armor~
-SAY NAME2 ~Cherry-tinted Leather Armor~
-SAY DESC ~This basic armor is made of thick wax or water-hardened leather. It is sturdy protection, not supple like boots or a cloak. Soft garment leathers like that would offer no more protection than common clothing. Magical enchantments have improved the protective abilities of this particular suit.
+SAY NAME1 ~樱色皮甲~
+SAY NAME2 ~樱色皮甲~
+SAY DESC ~这种基础护甲以厚蜡或水浸硬化的皮革制成。它防护坚固，不像靴子或斗篷那样柔软。那种柔软衣料皮革的防护不会胜过普通衣物。魔法附魔提升了这一件的防护能力。
 
-Aura's custom-made leather armor is dyed a bright pinkish red color that is, according to Aura, reminiscent of Kara-Turan cherry blossoms, designed to repel stains and unpleasant odors.
+奥拉亲手制作的这件皮甲染成明艳的粉红色，据奥拉说，这颜色令人想起卡拉图的樱花；它经设计可抵御污渍与异味。
 
-STATISTICS:
+属性数据：
 
-Equipped abilities:
-- Save vs. Breath Weapons: +3
-- Spellcasting is not disabled
+装备能力：
+- 对抗吐息武器豁免：+3
+- 不禁止施法
 
-Armor Class: 8 (10 vs. piercing and missile)
-Requires:
- 4 Strength
+防御等级：8（对抗穿刺与远程为 10）
+需求：
+ 力量 4
 
-Weight: 10~
+重量：10~
   
 COPY_EXISTING ~c0aule02.itm~ ~override~
   LPF DELETE_EFFECT
@@ -274,129 +274,129 @@ COPY_EXISTING ~c0aule02.itm~ ~override~
 	  match_parameter2 = 16
 	  parameter1 = 6
   END
-SAY NAME1 ~Cherry-tinted Leather Armor +2~
-SAY NAME2 ~Cherry-tinted Leather Armor +2~
-SAY DESC ~This basic armor is made of thick wax or water-hardened leather. It is sturdy protection, not supple like boots or a cloak. Soft garment leathers like that would offer no more protection than common clothing. Magical enchantments have improved the protective abilities of this particular suit.
+SAY NAME1 ~樱色皮甲 +2~
+SAY NAME2 ~樱色皮甲 +2~
+SAY DESC ~这种基础护甲以厚蜡或水浸硬化的皮革制成。它防护坚固，不像靴子或斗篷那样柔软。那种柔软衣料皮革的防护不会胜过普通衣物。魔法附魔提升了这一件的防护能力。
 
-Aura's custom-made leather armor is dyed a bright pinkish red color that is, according to Aura, reminiscent of Kara-Turan cherry blossoms, designed to repel stains and unpleasant odors, as well as protect from the hazards of her experiments, such as extreme heat or cold, electrical shocks, and chemical burns.
+奥拉亲手制作的这件皮甲染成明艳的粉红色，据奥拉说，这颜色令人想起卡拉图的樱花；它经设计可抵御污渍与异味，也能抵挡她实验中的种种危险，例如极热、极寒、电击与化学灼伤。
 
-STATISTICS:
+属性数据：
 
-Equipped abilities:
-– Save vs. Breath Weapons: +3
-– Elemental Resistance: +20%
-– Spellcasting is not disabled
+装备能力：
+– 对抗吐息武器豁免：+3
+– 元素抗性：+20%
+– 不禁止施法
 
-Armor Class: 6 (8 vs. piercing and missile)
-Requires:
- 4 Strength
+防御等级：6（对抗穿刺与远程为 8）
+需求：
+ 力量 4
 
-Weight: 10~
+重量：10~
 END
 
 // PRIESTESS / ARTIFICER
 ACTION_IF (auraclass = 3) THEN BEGIN
 COPY ~%MOD_FOLDER%/creatures/C0AuraPR.cre~ ~override/C0Aura.cre~
-  SAY NAME1 ~Aura~
-  SAY NAME2 ~Aura~
+  SAY NAME1 ~奥拉~
+  SAY NAME2 ~奥拉~
   WRITE_ASCII 0x248 ~C0Aura~ #8  //override script
   WRITE_ASCII 0x280 ~C0Aura~ #32  //DV
   WRITE_ASCII 0x2cc ~C0Aura~ #8   //pre-joining dialogue file
   WRITE_ASCII 0X34 ~C0AuraM~ #8   //small portrait
   WRITE_ASCII 0x3c ~C0AuraL~ #8   //medium portrait
-  SAY BIO ~When asked about her past, AURA tells you a long and convoluted tale of her life from her childhood to her life spent in faraway Kozakura. Born from the prestigious Glimmershine family in the "enlightened" island nation of Lantan, known for their skills in invention and artifice. Aura's talent for artifice and creation at a young age coupled with a wide-idea curiosity of the world beyond her home led her to travel to distant lands looking to advance her knowledge of cultures and exchange knowledge to other, less advanced societies. 
+  SAY BIO ~问起过去，奥拉会给你讲一段漫长曲折的生平，自童年一直讲到她在遥远科祖库拉的日子。她出身于“开化”岛国兰坦的名门格利默夏恩家族，那里以发明与制造之术闻名。奥拉年幼便在制造与创造上显露天赋，又对家外的世界满怀好奇，于是远行异域以求长进文化见识，并把知识传授给较为落后的社会。 
   
-While few Lantanese venture far from the western side of Faerun, Aura is unusually well travelled, having ventured to the most distant parts of and even beyond Faerun. Among such places, she claims to have taken a temporary residence in faraway Kozakura, a nation in the eastern land of Kara-Tur. Aura's talents in creation gave her a place among the locals of the village in which she made her new home for three years, after which a certain course of events led her to leave on a journey towards the Sword Coast.~
-  SAY MORALE ~Run away! Run away!~ [C0AU001]
-  SAY HAPPY ~I'm glad I decided to travel with you.~ [C0AU002]
-  SAY UNHAPPY_ANNOYED ~That was just an honest mistake... right?~ [C0AU003]
-  SAY UNHAPPY_SERIOUS ~I can't believe anyone could be this terrible.~ [C0AU004]
-  SAY UNHAPPY_BREAKING_POINT ~That's... that's enough. I can't deal with this anymore. I'm leaving.~ [C0AU005]
-  SAY LEADER ~Umm... okay. I'll try my best!~ [C0AU006]
-  SAY TIRED ~Can we please take a break? I want tea and biscuits...~ [C0AU007]
-  SAY BORED ~Don't worry, I'll just work on my next invention while you do, uh, nothing I guess.~ [C0AU008]
-  SAY BATTLE_CRY1 ~I didn't want to have to fight!~ [C0AU009]
-  SAY BATTLE_CRY2 ~Ready, aim and fire!~ [C0AU010]
-  SAY BATTLE_CRY3 ~I never miss!~ [C0AU011]
-  SAY BATTLE_CRY4 ~You're not getting away from me!~ [C0AU012]
-  SAY BATTLE_CRY5 ~Okay, I got this!~ [C0AU013]
-  SAY DAMAGE ~Ow!~ [C0AU014]
-  SAY DYING ~Ah...~ [C0AU015]
-  SAY HURT ~It hurts so much...~ [C0AU016]
-  SAY AREA_FOREST ~Oh, I love the forest. It reminds me of home.~ [C0AU017]
-  SAY AREA_CITY ~These cities are so different from my homeland.~ [C0AU018]
-  SAY AREA_DUNGEON ~Careful, Muffy, there might be ghosts nearby.~ [C0AU019]
-  SAY AREA_DAY ~The sunlight's nice on my hair. See how it glitters?~ [C0AU020]
-  SAY AREA_NIGHT ~I'm not afraid of the dark. Really, I'm not!~ [C0AU021]
-  SAY SELECT_COMMON1 ~Yep?~ [C0AU022]
-  SAY SELECT_COMMON2 ~Mm-hmm?~ [C0AU023]
-  SAY SELECT_COMMON3 ~I'm listening.~ [C0AU024]
-  SAY SELECT_ACTION1 ~Okay.~ [C0AU028]
-  SAY SELECT_ACTION2 ~Here I go.~ [C0AU029]
-  SAY SELECT_ACTION3 ~I'm the girl for the job.~ [C0AU030]
-  SAY CRITICAL_HIT ~Ha ha! Right on target!~ [C0AU036]
-  SAY CRITICAL_MISS ~Oops! I messed that one up.~ [C0AU037]
-  SAY TARGET_IMMUNE ~Ooh, interesting. It bounced right off.~ [C0AU038]
-  SAY INVENTORY_FULL ~Hey, I'm not big enough to carry all this.~ [C0AU039]
-  SAY SPELL_DISRUPTED ~Oh, nuts and bolts! I worked hard on that!~ [C0AU040]
-  SAY SET_A_TRAP ~That's how you use your gray matter.~ [C0AU041]
-  SAY HIDDEN_IN_SHADOWS ~I'll be as quiet as a mouse.~ [C0AU042]
-  SAY PICKED_POCKET ~Huh? What's this?~ [C0AU043]
+兰坦人少有远离费伦西部者，奥拉却游历异常广远，曾到过费伦最遥远的地方，甚至超乎其外。其中，她自称在遥远的科祖库拉暂居过——那是东方卡拉图的国度。奥拉的创造才能在所居村庄让她赢得当地人的接纳，她在那里安了新家三年，此后一连串事件使她动身前往剑湾。~
+  SAY MORALE ~快跑！快跑！~ [C0AU001]
+  SAY HAPPY ~我很高兴决定跟你一起旅行。~ [C0AU002]
+  SAY UNHAPPY_ANNOYED ~那只是个无心的失误……对吧？~ [C0AU003]
+  SAY UNHAPPY_SERIOUS ~真不敢信有人能这么差劲。~ [C0AU004]
+  SAY UNHAPPY_BREAKING_POINT ~够……够了。我受不了了。我走了。~ [C0AU005]
+  SAY LEADER ~呃……好。我尽力！~ [C0AU006]
+  SAY TIRED ~能不能歇一会儿？我想要茶和饼干……~ [C0AU007]
+  SAY BORED ~别担心，你干你的，呃，什么也不干，我就做我的下一个发明。~ [C0AU008]
+  SAY BATTLE_CRY1 ~我本不想打的！~ [C0AU009]
+  SAY BATTLE_CRY2 ~准备，瞄准，放！~ [C0AU010]
+  SAY BATTLE_CRY3 ~我从不会失手！~ [C0AU011]
+  SAY BATTLE_CRY4 ~你逃不出我的手心！~ [C0AU012]
+  SAY BATTLE_CRY5 ~好，我来！~ [C0AU013]
+  SAY DAMAGE ~哎哟！~ [C0AU014]
+  SAY DYING ~啊……~ [C0AU015]
+  SAY HURT ~好疼……~ [C0AU016]
+  SAY AREA_FOREST ~哦，我爱森林。它让我想起家。~ [C0AU017]
+  SAY AREA_CITY ~这些城跟我故乡差别太大了。~ [C0AU018]
+  SAY AREA_DUNGEON ~小心，穆菲，附近也许有鬼。~ [C0AU019]
+  SAY AREA_DAY ~阳光照在我头发上真好。看它闪闪的吗？~ [C0AU020]
+  SAY AREA_NIGHT ~我不怕黑。真的，我不怕！~ [C0AU021]
+  SAY SELECT_COMMON1 ~嗯？~ [C0AU022]
+  SAY SELECT_COMMON2 ~嗯——？~ [C0AU023]
+  SAY SELECT_COMMON3 ~我听着。~ [C0AU024]
+  SAY SELECT_ACTION1 ~好。~ [C0AU028]
+  SAY SELECT_ACTION2 ~我来了。~ [C0AU029]
+  SAY SELECT_ACTION3 ~这活正适合我。~ [C0AU030]
+  SAY CRITICAL_HIT ~哈哈！正中目标！~ [C0AU036]
+  SAY CRITICAL_MISS ~哎呀！那一下我弄砸了。~ [C0AU037]
+  SAY TARGET_IMMUNE ~哦，有意思。它直接弹开了。~ [C0AU038]
+  SAY INVENTORY_FULL ~嘿，我个子不够大，搬不动这些。~ [C0AU039]
+  SAY SPELL_DISRUPTED ~哦，螺母和螺栓！我费了好大劲做的！~ [C0AU040]
+  SAY SET_A_TRAP ~这才叫动脑子。~ [C0AU041]
+  SAY HIDDEN_IN_SHADOWS ~我会安静得像只老鼠。~ [C0AU042]
+  SAY PICKED_POCKET ~嗯？这是什么？~ [C0AU043]
   WRITE_SHORT 0x246 (IDS_OF_SYMBOL (~kit~ ~C0AURA~))
 
 ACTION_IF GAME_INCLUDES ~sod~
 THEN BEGIN
 COPY ~%MOD_FOLDER%/creatures/SoD/c02AuraP.cre~ ~override/C02Aura.cre~
-  SAY NAME1 ~Aura~
-  SAY NAME2 ~Aura~
+  SAY NAME1 ~奥拉~
+  SAY NAME2 ~奥拉~
   WRITE_ASCII 0x248 ~C02Aura~ #8  //override script
   WRITE_ASCII 0x280 ~C0Aura~ #32  //DV
   WRITE_ASCII 0x2cc ~C02Aura~ #8   //pre-joining dialogue file
   WRITE_ASCII 0X34 ~C0AuraM~ #8   //small portrait
   WRITE_ASCII 0x3c ~C0AuraL~ #8   //medium portrait
-  SAY BIO ~When asked about her past, AURA tells you a long and convoluted tale of her life from her childhood to her life spent in faraway Kozakura. Born from the prestigious Glimmershine family in the "enlightened" island nation of Lantan, known for their skills in invention and artifice. Aura's talent for artifice and creation at a young age coupled with a wide-idea curiosity of the world beyond her home led her to travel to distant lands looking to advance her knowledge of cultures and exchange knowledge to other, less advanced societies. 
+  SAY BIO ~问起过去，奥拉会给你讲一段漫长曲折的生平，自童年一直讲到她在遥远科祖库拉的日子。她出身于“开化”岛国兰坦的名门格利默夏恩家族，那里以发明与制造之术闻名。奥拉年幼便在制造与创造上显露天赋，又对家外的世界满怀好奇，于是远行异域以求长进文化见识，并把知识传授给较为落后的社会。 
   
-While few Lantanese venture far from the western side of Faerun, Aura is unusually well travelled, having ventured to the most distant parts of and even beyond Faerun. Among such places, she claims to have taken a temporary residence in faraway Kozakura, a nation in the eastern land of Kara-Tur. Aura's talents in creation gave her a place among the locals of the village in which she made her new home for three years, until a disastrous commission led to her disgrace and her subsequent leaving of Kozakura. Within the Sword Coast, she eventually crossed paths with her adversary and former friend, the disgraced samurai Tadahashi Saito, and ended his life with great regret.
+兰坦人少有远离费伦西部者，奥拉却游历异常广远，曾到过费伦最遥远的地方，甚至超乎其外。其中，她自称在遥远的科祖库拉暂居过——那是东方卡拉图的国度。奥拉的创造才能在所居村庄让她赢得当地人的接纳，她在那里安了新家三年，直到一桩灾难性的委托令她蒙羞，随后她离开科祖库拉。在剑湾，她终与昔日的对手兼旧友、失势的武士斋藤忠桥相遇，满怀悔恨地结果了他的性命。
 
-During her travels north, Aura was repeatedly forced to evade or defend herself against crusaders who would doubtlessly force her to use her great technological intellect to further their goals. Though adverse to the idea of violence, she has allied herself with the Flaming Fist both for her own protection and to fight as her own choice.~
-  SAY MORALE ~Run away! Run away!~ [C0AU001]
-  SAY HAPPY ~I'm glad I decided to travel with you.~ [C0AU002]
-  SAY UNHAPPY_ANNOYED ~That was just an honest mistake... right?~ [C0AU003]
-  SAY UNHAPPY_SERIOUS ~I can't believe anyone could be this terrible.~ [C0AU004]
-  SAY UNHAPPY_BREAKING_POINT ~That's... that's enough. I can't deal with this anymore. I'm leaving.~ [C0AU005]
-  SAY LEADER ~Umm... okay. I'll try my best!~ [C0AU006]
-  SAY TIRED ~Can we please take a break? I want tea and biscuits...~ [C0AU007]
-  SAY BORED ~Don't worry, I'll just work on my next invention while you do, uh, nothing I guess.~ [C0AU008]
-  SAY BATTLE_CRY1 ~I didn't want to have to fight!~ [C0AU009]
-  SAY BATTLE_CRY2 ~Ready, aim and fire!~ [C0AU010]
-  SAY BATTLE_CRY3 ~I never miss!~ [C0AU011]
-  SAY BATTLE_CRY4 ~You're not getting away from me!~ [C0AU012]
-  SAY BATTLE_CRY5 ~Okay, I got this!~ [C0AU013]
-  SAY DAMAGE ~Ow!~ [C0AU014]
-  SAY DYING ~Ah...~ [C0AU015]
-  SAY HURT ~It hurts so much...~ [C0AU016]
-  SAY AREA_FOREST ~Oh, I love the forest. It reminds me of home.~ [C0AU017]
-  SAY AREA_CITY ~These cities are so different from my homeland.~ [C0AU018]
-  SAY AREA_DUNGEON ~Careful, Muffy, there might be ghosts nearby.~ [C0AU019]
-  SAY AREA_DAY ~The sunlight's nice on my hair. See how it glitters?~ [C0AU020]
-  SAY AREA_NIGHT ~I'm not afraid of the dark. Really, I'm not!~ [C0AU021]
-  SAY SELECT_COMMON1 ~Yep?~ [C0AU022]
-  SAY SELECT_COMMON2 ~Mm-hmm?~ [C0AU023]
-  SAY SELECT_COMMON3 ~I'm listening.~ [C0AU024]
-  SAY SELECT_COMMON4 ~Need a hand?~ [C0AU025]
-  SAY SELECT_COMMON5 ~Need a gadget?~ [C0AU026]
-  SAY SELECT_COMMON6 ~Anything you need!~ [C0AU027]
-  SAY SELECT_ACTION1 ~Okay.~ [C0AU028]
-  SAY SELECT_ACTION2 ~Here I go.~ [C0AU029]
-  SAY SELECT_ACTION3 ~I'm the girl for the job.~ [C0AU030]
-  SAY CRITICAL_HIT ~Ha ha! Right on target!~ [C0AU036]
-  SAY CRITICAL_MISS ~Oops! I messed that one up.~ [C0AU037]
-  SAY TARGET_IMMUNE ~Ooh, interesting. It bounced right off.~ [C0AU038]
-  SAY INVENTORY_FULL ~Hey, I'm not big enough to carry all this.~ [C0AU039]
-  SAY SPELL_DISRUPTED ~Oh, nuts and bolts! I worked hard on that!~ [C0AU040]
-  SAY SET_A_TRAP ~That's how you use your gray matter.~ [C0AU041]
-  SAY HIDDEN_IN_SHADOWS ~I'll be as quiet as a mouse.~ [C0AU042]
-  SAY PICKED_POCKET ~Huh? What's this?~ [C0AU043]
+北行途中，奥拉屡屡被迫躲避或自保，以应对那些无疑会逼她以技术才智为其大业效力的十字军。她虽不愿动武，却已与焰拳结盟，既为自保，也因那是她自己的选择。~
+  SAY MORALE ~快跑！快跑！~ [C0AU001]
+  SAY HAPPY ~我很高兴决定跟你一起旅行。~ [C0AU002]
+  SAY UNHAPPY_ANNOYED ~那只是个无心的失误……对吧？~ [C0AU003]
+  SAY UNHAPPY_SERIOUS ~真不敢信有人能这么差劲。~ [C0AU004]
+  SAY UNHAPPY_BREAKING_POINT ~够……够了。我受不了了。我走了。~ [C0AU005]
+  SAY LEADER ~呃……好。我尽力！~ [C0AU006]
+  SAY TIRED ~能不能歇一会儿？我想要茶和饼干……~ [C0AU007]
+  SAY BORED ~别担心，你干你的，呃，什么也不干，我就做我的下一个发明。~ [C0AU008]
+  SAY BATTLE_CRY1 ~我本不想打的！~ [C0AU009]
+  SAY BATTLE_CRY2 ~准备，瞄准，放！~ [C0AU010]
+  SAY BATTLE_CRY3 ~我从不会失手！~ [C0AU011]
+  SAY BATTLE_CRY4 ~你逃不出我的手心！~ [C0AU012]
+  SAY BATTLE_CRY5 ~好，我来！~ [C0AU013]
+  SAY DAMAGE ~哎哟！~ [C0AU014]
+  SAY DYING ~啊……~ [C0AU015]
+  SAY HURT ~好疼……~ [C0AU016]
+  SAY AREA_FOREST ~哦，我爱森林。它让我想起家。~ [C0AU017]
+  SAY AREA_CITY ~这些城跟我故乡差别太大了。~ [C0AU018]
+  SAY AREA_DUNGEON ~小心，穆菲，附近也许有鬼。~ [C0AU019]
+  SAY AREA_DAY ~阳光照在我头发上真好。看它闪闪的吗？~ [C0AU020]
+  SAY AREA_NIGHT ~我不怕黑。真的，我不怕！~ [C0AU021]
+  SAY SELECT_COMMON1 ~嗯？~ [C0AU022]
+  SAY SELECT_COMMON2 ~嗯——？~ [C0AU023]
+  SAY SELECT_COMMON3 ~我听着。~ [C0AU024]
+  SAY SELECT_COMMON4 ~要帮忙吗？~ [C0AU025]
+  SAY SELECT_COMMON5 ~要个小装置吗？~ [C0AU026]
+  SAY SELECT_COMMON6 ~你需要什么都行！~ [C0AU027]
+  SAY SELECT_ACTION1 ~好。~ [C0AU028]
+  SAY SELECT_ACTION2 ~我来了。~ [C0AU029]
+  SAY SELECT_ACTION3 ~这活正适合我。~ [C0AU030]
+  SAY CRITICAL_HIT ~哈哈！正中目标！~ [C0AU036]
+  SAY CRITICAL_MISS ~哎呀！那一下我弄砸了。~ [C0AU037]
+  SAY TARGET_IMMUNE ~哦，有意思。它直接弹开了。~ [C0AU038]
+  SAY INVENTORY_FULL ~嘿，我个子不够大，搬不动这些。~ [C0AU039]
+  SAY SPELL_DISRUPTED ~哦，螺母和螺栓！我费了好大劲做的！~ [C0AU040]
+  SAY SET_A_TRAP ~这才叫动脑子。~ [C0AU041]
+  SAY HIDDEN_IN_SHADOWS ~我会安静得像只老鼠。~ [C0AU042]
+  SAY PICKED_POCKET ~嗯？这是什么？~ [C0AU043]
   WRITE_SHORT 0x246 (IDS_OF_SYMBOL (~kit~ ~C0AURA~))
 END
 END
@@ -404,106 +404,106 @@ END
 // SINGLE-CLASS ARTIFICER (EEex version)
 ACTION_IF (auraclass = 4) THEN BEGIN
 COPY ~%MOD_FOLDER%/creatures/C0AuraE.cre~ ~override/C0Aura.cre~
-  SAY NAME1 ~Aura~
-  SAY NAME2 ~Aura~
+  SAY NAME1 ~奥拉~
+  SAY NAME2 ~奥拉~
   WRITE_ASCII 0x248 ~C0Aura~ #8  //override script
   WRITE_ASCII 0x280 ~C0Aura~ #32  //DV
   WRITE_ASCII 0x2cc ~C0Aura~ #8   //pre-joining dialogue file
   WRITE_ASCII 0X34 ~C0AuraM~ #8   //small portrait
   WRITE_ASCII 0x3c ~C0AuraL~ #8   //medium portrait
-  SAY BIO ~When asked about her past, AURA tells you a long and convoluted tale of her life from her childhood to her life spent in faraway Kozakura. Born from the prestigious Glimmershine family in the "enlightened" island nation of Lantan, known for their skills in invention and artifice. Aura's talent for artifice and creation at a young age coupled with a wide-idea curiosity of the world beyond her home led her to travel to distant lands looking to advance her knowledge of cultures and exchange knowledge to other, less advanced societies. 
+  SAY BIO ~问起过去，奥拉会给你讲一段漫长曲折的生平，自童年一直讲到她在遥远科祖库拉的日子。她出身于“开化”岛国兰坦的名门格利默夏恩家族，那里以发明与制造之术闻名。奥拉年幼便在制造与创造上显露天赋，又对家外的世界满怀好奇，于是远行异域以求长进文化见识，并把知识传授给较为落后的社会。 
   
-While few Lantanese venture far from the western side of Faerun, Aura is unusually well travelled, having ventured to the most distant parts of and even beyond Faerun. Among such places, she claims to have taken a temporary residence in faraway Kozakura, a nation in the eastern land of Kara-Tur. Aura's talents in creation gave her a place among the locals of the village in which she made her new home for three years, after which a certain course of events led her to leave on a journey towards the Sword Coast.~
-  SAY MORALE ~Run away! Run away!~ [C0AU001]
-  SAY HAPPY ~I'm glad I decided to travel with you.~ [C0AU002]
-  SAY UNHAPPY_ANNOYED ~That was just an honest mistake... right?~ [C0AU003]
-  SAY UNHAPPY_SERIOUS ~I can't believe anyone could be this terrible.~ [C0AU004]
-  SAY UNHAPPY_BREAKING_POINT ~That's... that's enough. I can't deal with this anymore. I'm leaving.~ [C0AU005]
-  SAY LEADER ~Umm... okay. I'll try my best!~ [C0AU006]
-  SAY TIRED ~Can we please take a break? I want tea and biscuits...~ [C0AU007]
-  SAY BORED ~Don't worry, I'll just work on my next invention while you do, uh, nothing I guess.~ [C0AU008]
-  SAY BATTLE_CRY1 ~I didn't want to have to fight!~ [C0AU009]
-  SAY BATTLE_CRY2 ~Ready, aim and fire!~ [C0AU010]
-  SAY BATTLE_CRY3 ~I never miss!~ [C0AU011]
-  SAY BATTLE_CRY4 ~You're not getting away from me!~ [C0AU012]
-  SAY BATTLE_CRY5 ~Okay, I got this!~ [C0AU013]
-  SAY DAMAGE ~Ow!~ [C0AU014]
-  SAY DYING ~Ah...~ [C0AU015]
-  SAY HURT ~It hurts so much...~ [C0AU016]
-  SAY AREA_FOREST ~Oh, I love the forest. It reminds me of home.~ [C0AU017]
-  SAY AREA_CITY ~These cities are so different from my homeland.~ [C0AU018]
-  SAY AREA_DUNGEON ~Careful, Muffy, there might be ghosts nearby.~ [C0AU019]
-  SAY AREA_DAY ~The sunlight's nice on my hair. See how it glitters?~ [C0AU020]
-  SAY AREA_NIGHT ~I'm not afraid of the dark. Really, I'm not!~ [C0AU021]
-  SAY SELECT_COMMON1 ~Yep?~ [C0AU022]
-  SAY SELECT_COMMON2 ~Mm-hmm?~ [C0AU023]
-  SAY SELECT_COMMON3 ~I'm listening.~ [C0AU024]
-  SAY SELECT_ACTION1 ~Okay.~ [C0AU028]
-  SAY SELECT_ACTION2 ~Here I go.~ [C0AU029]
-  SAY SELECT_ACTION3 ~I'm the girl for the job.~ [C0AU030]
-  SAY CRITICAL_HIT ~Ha ha! Right on target!~ [C0AU036]
-  SAY CRITICAL_MISS ~Oops! I messed that one up.~ [C0AU037]
-  SAY TARGET_IMMUNE ~Ooh, interesting. It bounced right off.~ [C0AU038]
-  SAY INVENTORY_FULL ~Hey, I'm not big enough to carry all this.~ [C0AU039]
-  SAY SPELL_DISRUPTED ~Oh, nuts and bolts! I worked hard on that!~ [C0AU040]
-  SAY SET_A_TRAP ~That's how you use your gray matter.~ [C0AU041]
-  SAY HIDDEN_IN_SHADOWS ~I'll be as quiet as a mouse.~ [C0AU042]
-  SAY PICKED_POCKET ~Huh? What's this?~ [C0AU043]
+兰坦人少有远离费伦西部者，奥拉却游历异常广远，曾到过费伦最遥远的地方，甚至超乎其外。其中，她自称在遥远的科祖库拉暂居过——那是东方卡拉图的国度。奥拉的创造才能在所居村庄让她赢得当地人的接纳，她在那里安了新家三年，此后一连串事件使她动身前往剑湾。~
+  SAY MORALE ~快跑！快跑！~ [C0AU001]
+  SAY HAPPY ~我很高兴决定跟你一起旅行。~ [C0AU002]
+  SAY UNHAPPY_ANNOYED ~那只是个无心的失误……对吧？~ [C0AU003]
+  SAY UNHAPPY_SERIOUS ~真不敢信有人能这么差劲。~ [C0AU004]
+  SAY UNHAPPY_BREAKING_POINT ~够……够了。我受不了了。我走了。~ [C0AU005]
+  SAY LEADER ~呃……好。我尽力！~ [C0AU006]
+  SAY TIRED ~能不能歇一会儿？我想要茶和饼干……~ [C0AU007]
+  SAY BORED ~别担心，你干你的，呃，什么也不干，我就做我的下一个发明。~ [C0AU008]
+  SAY BATTLE_CRY1 ~我本不想打的！~ [C0AU009]
+  SAY BATTLE_CRY2 ~准备，瞄准，放！~ [C0AU010]
+  SAY BATTLE_CRY3 ~我从不会失手！~ [C0AU011]
+  SAY BATTLE_CRY4 ~你逃不出我的手心！~ [C0AU012]
+  SAY BATTLE_CRY5 ~好，我来！~ [C0AU013]
+  SAY DAMAGE ~哎哟！~ [C0AU014]
+  SAY DYING ~啊……~ [C0AU015]
+  SAY HURT ~好疼……~ [C0AU016]
+  SAY AREA_FOREST ~哦，我爱森林。它让我想起家。~ [C0AU017]
+  SAY AREA_CITY ~这些城跟我故乡差别太大了。~ [C0AU018]
+  SAY AREA_DUNGEON ~小心，穆菲，附近也许有鬼。~ [C0AU019]
+  SAY AREA_DAY ~阳光照在我头发上真好。看它闪闪的吗？~ [C0AU020]
+  SAY AREA_NIGHT ~我不怕黑。真的，我不怕！~ [C0AU021]
+  SAY SELECT_COMMON1 ~嗯？~ [C0AU022]
+  SAY SELECT_COMMON2 ~嗯——？~ [C0AU023]
+  SAY SELECT_COMMON3 ~我听着。~ [C0AU024]
+  SAY SELECT_ACTION1 ~好。~ [C0AU028]
+  SAY SELECT_ACTION2 ~我来了。~ [C0AU029]
+  SAY SELECT_ACTION3 ~这活正适合我。~ [C0AU030]
+  SAY CRITICAL_HIT ~哈哈！正中目标！~ [C0AU036]
+  SAY CRITICAL_MISS ~哎呀！那一下我弄砸了。~ [C0AU037]
+  SAY TARGET_IMMUNE ~哦，有意思。它直接弹开了。~ [C0AU038]
+  SAY INVENTORY_FULL ~嘿，我个子不够大，搬不动这些。~ [C0AU039]
+  SAY SPELL_DISRUPTED ~哦，螺母和螺栓！我费了好大劲做的！~ [C0AU040]
+  SAY SET_A_TRAP ~这才叫动脑子。~ [C0AU041]
+  SAY HIDDEN_IN_SHADOWS ~我会安静得像只老鼠。~ [C0AU042]
+  SAY PICKED_POCKET ~嗯？这是什么？~ [C0AU043]
   WRITE_SHORT 0x246 (IDS_OF_SYMBOL (~kit~ ~C0AURA~))
 
 ACTION_IF GAME_INCLUDES ~sod~
 THEN BEGIN
 COPY ~%MOD_FOLDER%/creatures/SoD/c02AuraE.cre~ ~override/C02Aura.cre~
-  SAY NAME1 ~Aura~
-  SAY NAME2 ~Aura~
+  SAY NAME1 ~奥拉~
+  SAY NAME2 ~奥拉~
   WRITE_ASCII 0x248 ~C02Aura~ #8  //override script
   WRITE_ASCII 0x280 ~C0Aura~ #32  //DV
   WRITE_ASCII 0x2cc ~C02Aura~ #8   //pre-joining dialogue file
   WRITE_ASCII 0X34 ~C0AuraM~ #8   //small portrait
   WRITE_ASCII 0x3c ~C0AuraL~ #8   //medium portrait
-  SAY BIO ~When asked about her past, AURA tells you a long and convoluted tale of her life from her childhood to her life spent in faraway Kozakura. Born from the prestigious Glimmershine family in the "enlightened" island nation of Lantan, known for their skills in invention and artifice. Aura's talent for artifice and creation at a young age coupled with a wide-idea curiosity of the world beyond her home led her to travel to distant lands looking to advance her knowledge of cultures and exchange knowledge to other, less advanced societies. 
+  SAY BIO ~问起过去，奥拉会给你讲一段漫长曲折的生平，自童年一直讲到她在遥远科祖库拉的日子。她出身于“开化”岛国兰坦的名门格利默夏恩家族，那里以发明与制造之术闻名。奥拉年幼便在制造与创造上显露天赋，又对家外的世界满怀好奇，于是远行异域以求长进文化见识，并把知识传授给较为落后的社会。 
   
-While few Lantanese venture far from the western side of Faerun, Aura is unusually well travelled, having ventured to the most distant parts of and even beyond Faerun. Among such places, she claims to have taken a temporary residence in faraway Kozakura, a nation in the eastern land of Kara-Tur. Aura's talents in creation gave her a place among the locals of the village in which she made her new home for three years, until a disastrous commission led to her disgrace and her subsequent leaving of Kozakura. Within the Sword Coast, she eventually crossed paths with her adversary and former friend, the disgraced samurai Tadahashi Saito, and ended his life with great regret.
+兰坦人少有远离费伦西部者，奥拉却游历异常广远，曾到过费伦最遥远的地方，甚至超乎其外。其中，她自称在遥远的科祖库拉暂居过——那是东方卡拉图的国度。奥拉的创造才能在所居村庄让她赢得当地人的接纳，她在那里安了新家三年，直到一桩灾难性的委托令她蒙羞，随后她离开科祖库拉。在剑湾，她终与昔日的对手兼旧友、失势的武士斋藤忠桥相遇，满怀悔恨地结果了他的性命。
 
-During her travels north, Aura was repeatedly forced to evade or defend herself against crusaders who would doubtlessly force her to use her great technological intellect to further their goals. Though adverse to the idea of violence, she has allied herself with the Flaming Fist both for her own protection and to fight as her own choice.~
-  SAY MORALE ~Run away! Run away!~ [C0AU001]
-  SAY HAPPY ~I'm glad I decided to travel with you.~ [C0AU002]
-  SAY UNHAPPY_ANNOYED ~That was just an honest mistake... right?~ [C0AU003]
-  SAY UNHAPPY_SERIOUS ~I can't believe anyone could be this terrible.~ [C0AU004]
-  SAY UNHAPPY_BREAKING_POINT ~That's... that's enough. I can't deal with this anymore. I'm leaving.~ [C0AU005]
-  SAY LEADER ~Umm... okay. I'll try my best!~ [C0AU006]
-  SAY TIRED ~Can we please take a break? I want tea and biscuits...~ [C0AU007]
-  SAY BORED ~Don't worry, I'll just work on my next invention while you do, uh, nothing I guess.~ [C0AU008]
-  SAY BATTLE_CRY1 ~I didn't want to have to fight!~ [C0AU009]
-  SAY BATTLE_CRY2 ~Ready, aim and fire!~ [C0AU010]
-  SAY BATTLE_CRY3 ~I never miss!~ [C0AU011]
-  SAY BATTLE_CRY4 ~You're not getting away from me!~ [C0AU012]
-  SAY BATTLE_CRY5 ~Okay, I got this!~ [C0AU013]
-  SAY DAMAGE ~Ow!~ [C0AU014]
-  SAY DYING ~Ah...~ [C0AU015]
-  SAY HURT ~It hurts so much...~ [C0AU016]
-  SAY AREA_FOREST ~Oh, I love the forest. It reminds me of home.~ [C0AU017]
-  SAY AREA_CITY ~These cities are so different from my homeland.~ [C0AU018]
-  SAY AREA_DUNGEON ~Careful, Muffy, there might be ghosts nearby.~ [C0AU019]
-  SAY AREA_DAY ~The sunlight's nice on my hair. See how it glitters?~ [C0AU020]
-  SAY AREA_NIGHT ~I'm not afraid of the dark. Really, I'm not!~ [C0AU021]
-  SAY SELECT_COMMON1 ~Yep?~ [C0AU022]
-  SAY SELECT_COMMON2 ~Mm-hmm?~ [C0AU023]
-  SAY SELECT_COMMON3 ~I'm listening.~ [C0AU024]
-  SAY SELECT_COMMON4 ~Need a hand?~ [C0AU025]
-  SAY SELECT_COMMON5 ~Need a gadget?~ [C0AU026]
-  SAY SELECT_COMMON6 ~Anything you need!~ [C0AU027]
-  SAY SELECT_ACTION1 ~Okay.~ [C0AU028]
-  SAY SELECT_ACTION2 ~Here I go.~ [C0AU029]
-  SAY SELECT_ACTION3 ~I'm the girl for the job.~ [C0AU030]
-  SAY CRITICAL_HIT ~Ha ha! Right on target!~ [C0AU036]
-  SAY CRITICAL_MISS ~Oops! I messed that one up.~ [C0AU037]
-  SAY TARGET_IMMUNE ~Ooh, interesting. It bounced right off.~ [C0AU038]
-  SAY INVENTORY_FULL ~Hey, I'm not big enough to carry all this.~ [C0AU039]
-  SAY SPELL_DISRUPTED ~Oh, nuts and bolts! I worked hard on that!~ [C0AU040]
-  SAY SET_A_TRAP ~That's how you use your gray matter.~ [C0AU041]
-  SAY HIDDEN_IN_SHADOWS ~I'll be as quiet as a mouse.~ [C0AU042]
-  SAY PICKED_POCKET ~Huh? What's this?~ [C0AU043]
+北行途中，奥拉屡屡被迫躲避或自保，以应对那些无疑会逼她以技术才智为其大业效力的十字军。她虽不愿动武，却已与焰拳结盟，既为自保，也因那是她自己的选择。~
+  SAY MORALE ~快跑！快跑！~ [C0AU001]
+  SAY HAPPY ~我很高兴决定跟你一起旅行。~ [C0AU002]
+  SAY UNHAPPY_ANNOYED ~那只是个无心的失误……对吧？~ [C0AU003]
+  SAY UNHAPPY_SERIOUS ~真不敢信有人能这么差劲。~ [C0AU004]
+  SAY UNHAPPY_BREAKING_POINT ~够……够了。我受不了了。我走了。~ [C0AU005]
+  SAY LEADER ~呃……好。我尽力！~ [C0AU006]
+  SAY TIRED ~能不能歇一会儿？我想要茶和饼干……~ [C0AU007]
+  SAY BORED ~别担心，你干你的，呃，什么也不干，我就做我的下一个发明。~ [C0AU008]
+  SAY BATTLE_CRY1 ~我本不想打的！~ [C0AU009]
+  SAY BATTLE_CRY2 ~准备，瞄准，放！~ [C0AU010]
+  SAY BATTLE_CRY3 ~我从不会失手！~ [C0AU011]
+  SAY BATTLE_CRY4 ~你逃不出我的手心！~ [C0AU012]
+  SAY BATTLE_CRY5 ~好，我来！~ [C0AU013]
+  SAY DAMAGE ~哎哟！~ [C0AU014]
+  SAY DYING ~啊……~ [C0AU015]
+  SAY HURT ~好疼……~ [C0AU016]
+  SAY AREA_FOREST ~哦，我爱森林。它让我想起家。~ [C0AU017]
+  SAY AREA_CITY ~这些城跟我故乡差别太大了。~ [C0AU018]
+  SAY AREA_DUNGEON ~小心，穆菲，附近也许有鬼。~ [C0AU019]
+  SAY AREA_DAY ~阳光照在我头发上真好。看它闪闪的吗？~ [C0AU020]
+  SAY AREA_NIGHT ~我不怕黑。真的，我不怕！~ [C0AU021]
+  SAY SELECT_COMMON1 ~嗯？~ [C0AU022]
+  SAY SELECT_COMMON2 ~嗯——？~ [C0AU023]
+  SAY SELECT_COMMON3 ~我听着。~ [C0AU024]
+  SAY SELECT_COMMON4 ~要帮忙吗？~ [C0AU025]
+  SAY SELECT_COMMON5 ~要个小装置吗？~ [C0AU026]
+  SAY SELECT_COMMON6 ~你需要什么都行！~ [C0AU027]
+  SAY SELECT_ACTION1 ~好。~ [C0AU028]
+  SAY SELECT_ACTION2 ~我来了。~ [C0AU029]
+  SAY SELECT_ACTION3 ~这活正适合我。~ [C0AU030]
+  SAY CRITICAL_HIT ~哈哈！正中目标！~ [C0AU036]
+  SAY CRITICAL_MISS ~哎呀！那一下我弄砸了。~ [C0AU037]
+  SAY TARGET_IMMUNE ~哦，有意思。它直接弹开了。~ [C0AU038]
+  SAY INVENTORY_FULL ~嘿，我个子不够大，搬不动这些。~ [C0AU039]
+  SAY SPELL_DISRUPTED ~哦，螺母和螺栓！我费了好大劲做的！~ [C0AU040]
+  SAY SET_A_TRAP ~这才叫动脑子。~ [C0AU041]
+  SAY HIDDEN_IN_SHADOWS ~我会安静得像只老鼠。~ [C0AU042]
+  SAY PICKED_POCKET ~嗯？这是什么？~ [C0AU043]
   WRITE_SHORT 0x246 (IDS_OF_SYMBOL (~kit~ ~C0AURA~))
 END
 
@@ -518,23 +518,23 @@ COPY_EXISTING ~c0aule01.itm~ ~override~
 	  match_parameter2 = 16
 	  parameter1 = 8
   END
-SAY NAME1 ~Cherry-tinted Leather Armor~
-SAY NAME2 ~Cherry-tinted Leather Armor~
-SAY DESC ~This basic armor is made of thick wax or water-hardened leather. It is sturdy protection, not supple like boots or a cloak. Soft garment leathers like that would offer no more protection than common clothing. Magical enchantments have improved the protective abilities of this particular suit.
+SAY NAME1 ~樱色皮甲~
+SAY NAME2 ~樱色皮甲~
+SAY DESC ~这种基础护甲以厚蜡或水浸硬化的皮革制成。它防护坚固，不像靴子或斗篷那样柔软。那种柔软衣料皮革的防护不会胜过普通衣物。魔法附魔提升了这一件的防护能力。
 
-Aura's custom-made leather armor is dyed a bright pinkish red color that is, according to Aura, reminiscent of Kara-Turan cherry blossoms, designed to repel stains and unpleasant odors.
+奥拉亲手制作的这件皮甲染成明艳的粉红色，据奥拉说，这颜色令人想起卡拉图的樱花；它经设计可抵御污渍与异味。
 
-STATISTICS:
+属性数据：
 
-Equipped abilities:
-- Save vs. Breath Weapons: +3
-- Spellcasting is not disabled
+装备能力：
+- 对抗吐息武器豁免：+3
+- 不禁止施法
 
-Armor Class: 8 (10 vs. piercing and missile)
-Requires:
- 4 Strength
+防御等级：8（对抗穿刺与远程为 10）
+需求：
+ 力量 4
 
-Weight: 10~
+重量：10~
   
 COPY_EXISTING ~c0aule02.itm~ ~override~
   LPF DELETE_EFFECT
@@ -547,24 +547,24 @@ COPY_EXISTING ~c0aule02.itm~ ~override~
 	  match_parameter2 = 16
 	  parameter1 = 6
   END
-SAY NAME1 ~Cherry-tinted Leather Armor +2~
-SAY NAME2 ~Cherry-tinted Leather Armor +2~
-SAY DESC ~This basic armor is made of thick wax or water-hardened leather. It is sturdy protection, not supple like boots or a cloak. Soft garment leathers like that would offer no more protection than common clothing. Magical enchantments have improved the protective abilities of this particular suit.
+SAY NAME1 ~樱色皮甲 +2~
+SAY NAME2 ~樱色皮甲 +2~
+SAY DESC ~这种基础护甲以厚蜡或水浸硬化的皮革制成。它防护坚固，不像靴子或斗篷那样柔软。那种柔软衣料皮革的防护不会胜过普通衣物。魔法附魔提升了这一件的防护能力。
 
-Aura's custom-made leather armor is dyed a bright pinkish red color that is, according to Aura, reminiscent of Kara-Turan cherry blossoms, designed to repel stains and unpleasant odors, as well as protect from the hazards of her experiments, such as extreme heat or cold, electrical shocks, and chemical burns.
+奥拉亲手制作的这件皮甲染成明艳的粉红色，据奥拉说，这颜色令人想起卡拉图的樱花；它经设计可抵御污渍与异味，也能抵挡她实验中的种种危险，例如极热、极寒、电击与化学灼伤。
 
-STATISTICS:
+属性数据：
 
-Equipped abilities:
-– Save vs. Breath Weapons: +3
-– Elemental Resistance: +20%
-– Spellcasting is not disabled
+装备能力：
+– 对抗吐息武器豁免：+3
+– 元素抗性：+20%
+– 不禁止施法
 
-Armor Class: 6 (8 vs. piercing and missile)
-Requires:
- 4 Strength
+防御等级：6（对抗穿刺与远程为 8）
+需求：
+ 力量 4
 
-Weight: 10~
+重量：10~
 END
 
 // JOURNAL
@@ -606,8 +606,8 @@ ADD_JOURNAL TITLE (%Amanokagami Reika%) @20001 @20002 USING ~%MOD_FOLDER%/tra/en
   COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/scripts/BGEE/c0ninja3.baf~
 
 COPY_EXISTING ~c0aubear.spl~ ~override~
-SAY NAME1 ~I Hate Bears!~
-SAY NAME2 ~I Hate Bears!~
+SAY NAME1 ~我恨熊！~
+SAY NAME2 ~我恨熊！~
 
 // CREATURES
   
@@ -641,110 +641,110 @@ COPY ~%MOD_FOLDER%/creatures/c0ninja.cre~ ~override~
 WRITE_ASCII 0x248 ~c0ninja~  #8  // override
 WRITE_ASCII 0x2cc ~c0ninja~  #8  // dialogue
 WRITE_ASCII 0x280 ~c0ninja~ #32 // death variable
-SAY NAME1 ~Ninja~
-SAY NAME2 ~Ninja~
+SAY NAME1 ~忍者~
+SAY NAME2 ~忍者~
 
 COPY ~%MOD_FOLDER%/creatures/c0ninja2.cre~ ~override~
 WRITE_ASCII 0x248 ~c0ninja~  #8  // override
 WRITE_ASCII 0x2cc ~c0ninja~  #8  // dialogue
 WRITE_ASCII 0x280 ~c0ninja2~ #32 // death variable
-SAY NAME1 ~Elite Ninja~
-SAY NAME2 ~Elite Ninja~
+SAY NAME1 ~精锐忍者~
+SAY NAME2 ~精锐忍者~
 
 COPY ~%MOD_FOLDER%/creatures/c0ninja3.cre~ ~override~
 WRITE_ASCII 0x248 ~c0ninja3~  #8  // override
 WRITE_ASCII 0x2cc ~c0ninja~  #8  // dialogue
 WRITE_ASCII 0x280 ~c0ninja3~ #32 // death variable
-SAY NAME1 ~Rinkou~
-SAY NAME2 ~Rinkou~
+SAY NAME1 ~凛光~
+SAY NAME2 ~凛光~
 
 COPY ~%MOD_FOLDER%/creatures/c0ninja4.cre~ ~override~
 WRITE_ASCII 0x248 ~c0ninja~  #8  // override
 WRITE_ASCII 0x2cc ~c0ninja~  #8  // dialogue
 WRITE_ASCII 0x280 ~c0ninja4~ #32 // death variable
-SAY NAME1 ~Mayoi~
-SAY NAME2 ~Mayoi~
+SAY NAME1 ~迷~
+SAY NAME2 ~迷~
 
 COPY ~%MOD_FOLDER%/creatures/c0ninja5.cre~ ~override~
 WRITE_ASCII 0x248 ~c0ninja~  #8  // override
 WRITE_ASCII 0x2cc ~c0ninja~  #8  // dialogue
 WRITE_ASCII 0x280 ~c0ninja5~ #32 // death variable
-SAY NAME1 ~Kotaro~
-SAY NAME2 ~Kotaro~
+SAY NAME1 ~小太郎~
+SAY NAME2 ~小太郎~
 
 COPY ~%MOD_FOLDER%/creatures/c0saito.cre~ ~override~
 WRITE_ASCII 0x248 ~c0saito~  #8  // override
 WRITE_ASCII 0x2cc ~c0saito~  #8  // dialogue
 WRITE_ASCII 0x280 ~c0saito~ #32 // death variable
-SAY NAME1 ~Tadahashi Saito~
-SAY NAME2 ~Tadahashi Saito~
+SAY NAME1 ~斋藤忠桥~
+SAY NAME2 ~斋藤忠桥~
 
 COPY ~%MOD_FOLDER%/creatures/c0fubuki.cre~ ~override~
 WRITE_ASCII 0x248 ~c0fubuki~  #8  // override
 WRITE_ASCII 0x2cc ~c0fubuki~  #8  // dialogue
 WRITE_ASCII 0x280 ~c0fubuki~ #32 // death variable
-SAY NAME1 ~Fubuki~
-SAY NAME2 ~Fubuki~
+SAY NAME1 ~吹雪~
+SAY NAME2 ~吹雪~
 
 COPY ~%MOD_FOLDER%/creatures/c0aukagu.cre~ ~override~
 WRITE_ASCII 0x248 ~c0aukagu~  #8  // override
 WRITE_ASCII 0x2cc ~c0aukagu~  #8  // dialogue
 WRITE_ASCII 0x280 ~c0aukagu~ #32 // death variable
-SAY NAME1 ~Kagutsuchi~
-SAY NAME2 ~Kagutsuchi~
+SAY NAME1 ~卡古土~
+SAY NAME2 ~卡古土~
 
 COPY ~%MOD_FOLDER%/creatures/c0auayak.cre~ ~override~
 WRITE_ASCII 0x248 ~c0auayak~  #8  // override
 WRITE_ASCII 0x2cc ~c0auayak~  #8  // dialogue
 WRITE_ASCII 0x280 ~c0auayak~ #32 // death variable
-SAY NAME1 ~Ayakashi~
-SAY NAME2 ~Ayakashi~
+SAY NAME1 ~妖~
+SAY NAME2 ~妖~
 
 COPY ~%MOD_FOLDER%/creatures/c0aumizu.cre~ ~override~
 WRITE_ASCII 0x248 ~c0aumizu~  #8  // override
 WRITE_ASCII 0x2cc ~c0aumizu~  #8  // dialogue
 WRITE_ASCII 0x280 ~c0aumizu~ #32 // death variable
-SAY NAME1 ~Mizuchi~
-SAY NAME2 ~Mizuchi~
+SAY NAME1 ~蛟~
+SAY NAME2 ~蛟~
 
 COPY ~%MOD_FOLDER%/creatures/c0aukuon.cre~ ~override~
 WRITE_ASCII 0x248 ~c0aukuon~  #8  // override
 WRITE_ASCII 0x2cc ~c0aukuon~  #8  // dialogue
 WRITE_ASCII 0x280 ~c0aukuon~ #32 // death variable
-SAY NAME1 ~Ku'on Myodo~
-SAY NAME2 ~Ku'on Myodo~
+SAY NAME1 ~空音明道~
+SAY NAME2 ~空音明道~
 
 // ITEMS
 
 COPY_EXISTING ~c0agem1.itm~ ~override~
-SAY NAME1 ~Ice Crystal~
-SAY NAME2 ~Ice Crystal~
-SAY DESC ~This crystal initially appears to be a normal shard of ice, though it does not melt even when held in hand. It seems to almost hum with latent magical energy.
+SAY NAME1 ~冰水晶~
+SAY NAME2 ~冰水晶~
+SAY DESC ~这颗水晶初看只是寻常冰片，握在手中却不融化。它似乎随着潜藏的魔力微微嗡鸣。
 
-STATISTICS:
+属性数据：
 
-Weight: 0~
+重量：0~
 
 COPY_EXISTING ~scrl2j.itm~ ~override/c0ascrl1.itm~
-SAY NAME1 ~Strange Letter~
-SAY NAME2 ~Strange Letter~
-SAY UNIDENTIFIED_DESC ~This letter was left behind on the bodies of one of the elite ninja sent to capture Aura.
+SAY NAME1 ~奇怪的信~
+SAY NAME2 ~奇怪的信~
+SAY UNIDENTIFIED_DESC ~这封信留在一名奉命捉拿奥拉的精锐忍者尸身上。
 
-"Our quarry has entered into our domain. Seek her out and kill all who try to stand in your way. Capture her alive if possible, but if she chooses to resist, do not hesitate to eliminate her. When the task is complete, raise the signal at the city's bridge during the midnight hour and await my arrival.
+“我们的猎物已进入我们的领地。找出她，杀掉一切胆敢拦路者。尽可能活捉她，若她选择抵抗，便毫不犹豫地除掉她。事成之后，于午夜时分在城中桥上升起信号，等候我到来。
 
-Remember the oaths you have sworn and know that your success will free us from the curse of which we have been bound. Do not fail me."~
+记住你们立下的誓，要知道你们的成功将使我们摆脱束缚我们的诅咒。不要让我失望。”~
 
 COPY_EXISTING ~scrl2j.itm~ ~override/c0ascrl2.itm~
-SAY NAME1 ~Note~
-SAY NAME2 ~Note~
-SAY UNIDENTIFIED_DESC ~This hastily-scribbled note was left behind by Aura.
+SAY NAME1 ~字条~
+SAY NAME2 ~字条~
+SAY UNIDENTIFIED_DESC ~这张潦草写就的字条是奥拉留下的。
 
-"Thank you for everything we've done together, but I can't ask you to fight this battle for my sake. Hopefully I'll make it back, but if I don't... please don't miss me."~
+“谢谢我们一起做的一切，可我不能要你为我去打这一仗。希望我能回来，若我不能……请别惦记我。”~
 
 COPY_EXISTING ~misc1c.itm~ ~override/c0ascrl3.itm~
-SAY NAME1 ~Scroll~
-SAY NAME2 ~Fubuki's Records~
-SAY UNIDENTIFIED_DESC ~This heavy scroll's contents are written entirely in Kara-Turan. According to Aura, they contain several years' worth of Fubuki's gathered records and information on past events involving Tadahashi Saito's war against the holy temples of Kozakura.~
+SAY NAME1 ~卷轴~
+SAY NAME2 ~吹雪的记录~
+SAY UNIDENTIFIED_DESC ~这卷厚重的卷轴内容全以卡拉图文写成。据奥拉说，其中记载着吹雪数年搜集的记录，以及关于斋藤忠桥对科祖库拉圣殿诸寺发动战争之往事的种种情报。~
 
 COPY_EXISTING ~dezkie.cre~ ~override/dezkie.cre~
 	PATCH_IF (SOURCE_SIZE > 0x2d3) THEN BEGIN
@@ -756,6 +756,6 @@ INCLUDE ~%MOD_FOLDER%/lib/crossmod_bg1.tpa~
 
 ACTION_IF GAME_INCLUDES ~sod~
 THEN BEGIN
-  PRINT ~Installing content for Siege of Dragonspear...~
+  PRINT ~正在安装《龙矛围攻》内容……~
 INCLUDE ~%MOD_FOLDER%/lib/aura_sod.tpa~
 END

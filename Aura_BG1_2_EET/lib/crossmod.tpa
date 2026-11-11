@@ -2,14 +2,14 @@
 // Aura-Sirene
 ACTION_IF FILE_EXISTS_IN_GAME ~bc0aura.dlg~ AND FILE_EXISTS_IN_GAME ~bc0siren.dlg~
 THEN BEGIN
-  PRINT ~Adding crossmod banters between Aura and Sirene~
+  PRINT ~添加奥拉与塞琳的交叉对话~
 COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/dialogue/BGEE/crossmod/sirene.d~
 END
   
 // Aura-Drake
 ACTION_IF FILE_EXISTS_IN_GAME ~bc0aura.dlg~ AND FILE_EXISTS_IN_GAME ~bc0drake.dlg~
 THEN BEGIN
-  PRINT ~Adding crossmod banters between Aura and Drake~
+  PRINT ~添加奥拉与德雷克的交叉对话~
 COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/dialogue/BGEE/crossmod/drake.d~
 END
 */
@@ -17,7 +17,7 @@ END
 // Aura-Brynnlaw
 ACTION_IF MOD_IS_INSTALLED ~BACKBRYNNLAW.TP2~ ~0~
 THEN BEGIN
-  PRINT ~Adding crossmod for Aura and Back to Brynnlaw~
+  PRINT ~添加奥拉与《重返布林罗》的交叉对话~
 	COMPILE ~%MOD_FOLDER%/dialogue/BG2EE/crossmod/brynnlaw/d/dialog.d~
 	EXTEND_BOTTOM ~c0aura2.bcs~ ~%MOD_FOLDER%/dialogue/BG2EE/crossmod/brynnlaw/baf/scripts.baf~
 END
@@ -25,28 +25,28 @@ END
 // Aura-Dvaradime
 ACTION_IF FILE_EXISTS_IN_GAME ~bc0aura2.dlg~ AND FILE_EXISTS_IN_GAME ~l#dvab.dlg~
 THEN BEGIN
-  PRINT ~Adding crossmod banters between Aura and Dvaradime~
+  PRINT ~添加奥拉与德瓦拉迪梅的交叉对话~
 COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/dialogue/BG2EE/crossmod/dvaradime/d/banter.d~
 END
 
 // Aura-Fade
 ACTION_IF FILE_EXISTS_IN_GAME ~BE3FADE.dlg~
 THEN BEGIN
-  PRINT ~Adding crossmod for Aura and Fade~
+  PRINT ~添加奥拉与菲德的交叉对话~
 	COMPILE ~%MOD_FOLDER%/dialogue/BG2EE/crossmod/fade/d/banter.d~
 END
   
 // Aura-Faldorn
 ACTION_IF FILE_EXISTS_IN_GAME ~L#FALB.dlg~
 THEN BEGIN
-  PRINT ~Adding crossmod for Aura and Faldorn~
+  PRINT ~添加奥拉与法尔多恩的交叉对话~
 	COMPILE ~%MOD_FOLDER%/dialogue/BG2EE/crossmod/faldorn/d/banter.d~
 END
   
 // Aura-Foundling
 ACTION_IF MOD_IS_INSTALLED ~FOUNDLING/FOUNDLING.TP2~ ~0~
 THEN BEGIN
-  PRINT ~Adding crossmod for Aura and Foundling~
+  PRINT ~添加奥拉与弃儿的交叉对话~
 	COMPILE ~%MOD_FOLDER%/dialogue/BG2EE/crossmod/foundling/d/foundling.d~
 	COMPILE ~%MOD_FOLDER%/dialogue/BG2EE/crossmod/foundling/d/interjections.d~
 END
@@ -54,14 +54,14 @@ END
 // Aura-Lhannd
 ACTION_IF FILE_EXISTS_IN_GAME ~L#LHAB.dlg~
 THEN BEGIN
-  PRINT ~Adding crossmod for Aura and Lhannd~
+  PRINT ~添加奥拉与兰恩德的交叉对话~
 	COMPILE ~%MOD_FOLDER%/dialogue/BG2EE/crossmod/lhannd/d/banter.d~
 END
   
 // Aura-Ooze's Lounge
 ACTION_IF MOD_IS_INSTALLED ~OOZE/OOZE.TP2~ ~0~
 THEN BEGIN
-  PRINT ~Adding crossmod for Aura and The Ooze's Lounge~
+  PRINT ~添加奥拉与《软泥酒廊》的交叉对话~
 	COMPILE ~%MOD_FOLDER%/dialogue/BG2EE/crossmod/ooze_lounge/d/interjections.d~
 	EXTEND_BOTTOM ~c0aura2.bcs~ ~%MOD_FOLDER%/dialogue/BG2EE/crossmod/ooze_lounge/baf/scripts.baf~
 END
@@ -69,14 +69,14 @@ END
 // Aura-Pai'Na
 ACTION_IF MOD_IS_INSTALLED ~PaiNa/PaiNa.tp2~ ~0~
 THEN BEGIN
-  PRINT ~Adding crossmod for Aura and Pai'Na~
+  PRINT ~添加奥拉与派娜的交叉对话~
 	COMPILE ~%MOD_FOLDER%/dialogue/BG2EE/crossmod/paina/d/banter.d~
 END
   
 // Aura-Sellswords
 ACTION_IF MOD_IS_INSTALLED ~SELLSWORDS.TP2~ ~0~
 THEN BEGIN
-  PRINT ~Adding crossmod for Aura and Sellswords~
+  PRINT ~添加奥拉与《佣兵》的交叉对话~
 	COMPILE ~%MOD_FOLDER%/dialogue/BG2EE/crossmod/sellswords/d/dialog.d~
 	EXTEND_BOTTOM ~c0aura2.bcs~ ~%MOD_FOLDER%/dialogue/BG2EE/crossmod/sellswords/baf/scripts.baf~
 END
@@ -84,28 +84,28 @@ END
 // Aura-Skie
 ACTION_IF FILE_EXISTS_IN_GAME ~L#2SDSKB.dlg~
 THEN BEGIN
-  PRINT ~Adding crossmod for Aura and Skie: The Cost of One Soul~
+  PRINT ~添加奥拉与《斯基：一个灵魂的代价》的交叉对话~
 	COMPILE ~%MOD_FOLDER%/dialogue/BG2EE/crossmod/skie/d/skie.d~
 END
 
 // Aura-Eddard
 ACTION_IF FILE_EXISTS_IN_GAME ~L#2EDB.dlg~
 THEN BEGIN
-  PRINT ~Adding crossmod for Aura and Eddard from Skie: The Cost of One Soul~
+  PRINT ~添加奥拉与《斯基：一个灵魂的代价》中埃达德的交叉对话~
 	COMPILE ~%MOD_FOLDER%/dialogue/BG2EE/crossmod/skie/d/eddard.d~
 END
 
 // Aura-Skitia's NPCs
 ACTION_IF MOD_IS_INSTALLED ~SKITIANPCS\SETUP-SKITIANPCS.tp2~ ~0~
 THEN BEGIN
-  PRINT ~Adding crossmod for Aura and Skitia's NPCs~
+  PRINT ~添加奥拉与斯基蒂亚诸NPC的交叉对话~
 	COMPILE ~%MOD_FOLDER%/dialogue/BG2EE/crossmod/skitia/d/skitia.d~
 END
   
 // Aura-Southern Edge
 ACTION_IF MOD_IS_INSTALLED ~SOUTHERNEDGE.TP2~ ~0~ OR MOD_IS_INSTALLED ~SOUTHERNEDGE.TP2~ ~1~
 THEN BEGIN
-  PRINT ~Adding crossmod for Aura and The Southern Edge~
+  PRINT ~添加奥拉与《南境》的交叉对话~
 	COMPILE ~%MOD_FOLDER%/dialogue/BG2EE/crossmod/southern_edge/d/interjections.d~
 	EXTEND_BOTTOM ~c0aura2.bcs~ ~%MOD_FOLDER%/dialogue/BG2EE/crossmod/southern_edge/baf/scripts.baf~
 END
@@ -113,7 +113,7 @@ END
 // Aura-Tales of the Deep Gardens
 ACTION_IF MOD_IS_INSTALLED ~TOTDG/SETUP-TOTDG.TP2~ ~0~
 THEN BEGIN
-  PRINT ~Adding crossmod for Aura and Tales of the Deep Gardens~
+  PRINT ~添加奥拉与《深园传说》的交叉对话~
     COPY_EXISTING ~0XGIRLDG.CRE~ ~OVERRIDE/C0DGGIRL.CRE~
 		WRITE_ASCII DIALOG ~C0DGGIRL~ // dialogue
 		WRITE_ASCII SCRIPT_OVERRIDE ~C0DGGIRL~  // override
@@ -121,11 +121,11 @@ THEN BEGIN
 	COPY ~%MOD_FOLDER%/dialogue/BG2EE/crossmod/totdg/itm~ ~override~
 	COPY ~%MOD_FOLDER%/dialogue/BG2EE/crossmod/totdg/spl~ ~override~
 	COPY_EXISTING ~C0DGCoin.ITM~ ~OVERRIDE~
-	SAY NAME1 ~Gold Coin~
-	SAY NAME2 ~Gold Coin~
-	SAY DESC ~This coin was given to Aura from the strange little girl in the Deep Gardens in exchange for a lock of her hair. It is indistinguishable from any other coin, save for the smiling face of a girl stamped onto one side—the same girl who gave Aura the coin. There is a faint hint of warmth that emanates from the light reflected from the coin's sheen.
+	SAY NAME1 ~金币~
+	SAY NAME2 ~金币~
+	SAY DESC ~这枚金币是深园里那个古怪的小姑娘拿奥拉一绺头发换给她的。除了正面铸着一个小姑娘的笑脸——就是给奥拉这枚币的那个姑娘——它与别的金币毫无分别。币面的光泽映出一丝隐约的暖意。
 
-Weight: 1~
+重量：1~
 	COMPILE ~%MOD_FOLDER%/dialogue/BG2EE/crossmod/totdg/d/dialog.d~
 	EXTEND_TOP ~ARLDV1.BCS~ ~%MOD_FOLDER%/dialogue/BG2EE/crossmod/totdg/BAF/ARLDV1.BAF~
 	EXTEND_TOP ~AR1000.BCS~ ~%MOD_FOLDER%/dialogue/BG2EE/crossmod/totdg/BAF/AR1000.BAF~
@@ -134,7 +134,7 @@ END
 // Aura-Tangled Oak
 ACTION_IF MOD_IS_INSTALLED ~TANGLEDISLE.TP2~ ~0~ OR MOD_IS_INSTALLED ~TANGLEDISLE.TP2~ ~1~
 THEN BEGIN
-  PRINT ~Adding crossmod for Aura and Tangled Oak's Isle~
+  PRINT ~添加奥拉与缠橡岛的交叉对话~
 	COMPILE ~%MOD_FOLDER%/dialogue/BG2EE/crossmod/tangled_oak/d/dialog.d~
 	EXTEND_BOTTOM ~c0aura2.bcs~ ~%MOD_FOLDER%/dialogue/BG2EE/crossmod/tangled_oak/baf/scripts.baf~
 END
@@ -142,21 +142,21 @@ END
 // Aura-Verr
 ACTION_IF FILE_EXISTS_IN_GAME ~bc0aura2.dlg~ AND FILE_EXISTS_IN_GAME ~L#2VERRB.dlg~
 THEN BEGIN
-  PRINT ~Adding crossmod between Aura and Verr'Sza + Phalh~
+  PRINT ~添加奥拉与维尔莎、法尔的交叉对话~
 	INCLUDE ~%MOD_FOLDER%/dialogue/BG2EE/crossmod/verrsza/verrsza.tpa~
 END
 
 // Aura-Walahnan
 ACTION_IF FILE_EXISTS_IN_GAME ~L#2WHB.dlg~
 THEN BEGIN
-  PRINT ~Adding crossmod for Aura and Walahnan~
+  PRINT ~添加奥拉与瓦拉南的交叉对话~
 	COMPILE ~%MOD_FOLDER%/dialogue/BG2EE/crossmod/walahnan/d/banter.d~
 END
 
 // Aura-Whin Hill
 ACTION_IF FILE_EXISTS_IN_GAME ~L#AFUB.dlg~
 THEN BEGIN
-  PRINT ~Adding crossmod for Aura and Whin Hill~
+  PRINT ~添加奥拉与荆棘丘的交叉对话~
 	COMPILE ~%MOD_FOLDER%/dialogue/BG2EE/crossmod/whin_hill/d/dialog.d~
 	EXTEND_BOTTOM ~c0aura2.bcs~ ~%MOD_FOLDER%/dialogue/BG2EE/crossmod/whin_hill/baf/scripts.baf~
 END
@@ -164,42 +164,42 @@ END
 // Aura-Will
 ACTION_IF FILE_EXISTS_IN_GAME ~L0WILLB.dlg~
 THEN BEGIN
-  PRINT ~Adding crossmod for Aura and Will~
+  PRINT ~添加奥拉与威尔的交叉对话~
 	COMPILE ~%MOD_FOLDER%/dialogue/BG2EE/crossmod/will/d/will.d~
 END
 
 // Aura-Xan
 ACTION_IF FILE_EXISTS_IN_GAME ~bc0aura2.dlg~ AND FILE_EXISTS_IN_GAME ~O#XAN.dlg~
 THEN BEGIN
-  PRINT ~Adding crossmod between Aura and Kulyok's Xan~
+  PRINT ~添加奥拉与库柳克版“山”的交叉对话~
 	COMPILE ~%MOD_FOLDER%/dialogue/BG2EE/crossmod/xan/xan.d~
 END
 
 // Aura-Xzele
 ACTION_IF FILE_EXISTS_IN_GAME ~L#XZEB.dlg~
 THEN BEGIN
-  PRINT ~Adding crossmod between Aura and Xzelë~
+  PRINT ~添加奥拉与泽莱的交叉对话~
 	COMPILE ~%MOD_FOLDER%/dialogue/BG2EE/crossmod/xzele/d/banter.d~
 END
 
 // Aura-Yeslick
 ACTION_IF FILE_EXISTS_IN_GAME ~BLK#YES.dlg~
 THEN BEGIN
-  PRINT ~Adding crossmod between Aura and Yeslick~
+  PRINT ~添加奥拉与耶斯利克的交叉对话~
 	COMPILE ~%MOD_FOLDER%/dialogue/BG2EE/crossmod/yeslick/d/banter.d~
 END
 
 // Aura-Yoshimo Romance
 ACTION_IF FILE_EXISTS_IN_GAME ~YRXYOS.dlg~
 THEN BEGIN
-  PRINT ~Adding crossmod for Aura and Yoshimo Romance~
+  PRINT ~添加奥拉与《义桑恋爱》的交叉对话~
 	COMPILE ~%MOD_FOLDER%/dialogue/BG2EE/crossmod/yoshimo_romance/d/dialog.d~
 END
 
 // Aura-Yvette
 ACTION_IF MOD_IS_INSTALLED ~Yvette/Setup-Yvette.tp2~ ~0~
 THEN BEGIN
-  PRINT ~Adding crossmod for Aura and Yvette~
+  PRINT ~添加奥拉与伊薇特的交叉对话~
 	COMPILE ~%MOD_FOLDER%/dialogue/BG2EE/crossmod/yvette/d/interjections.d~
 	EXTEND_BOTTOM ~c0aura2.bcs~ ~%MOD_FOLDER%/dialogue/BG2EE/crossmod/yvette/baf/scripts.baf~
 
@@ -211,28 +211,28 @@ COPY ~%MOD_FOLDER%/dialogue/BG2EE/crossmod/yvette/itm/C0YXY3.ITM~ ~OVERRIDE~
 	  timing = 2
 	  parameter2 = 11
 	  power = 1
-	  special = RESOLVE_STR_REF (~Yvette~)
+	  special = RESOLVE_STR_REF (~伊薇特~)
 	STR_VAR
 	  resource = YxYve
 END
-SAY NAME1 ~Shortbow~
-SAY NAME2 ~Serene Daydreamer~
-SAY DESC ~This bow is another favorite weapon of the Heartwarder of Sune, Yvette. It is made of fine wood and a perfectly taut string. Its solid craftsmanship has been enhanced with modifications by an earnest Lantanese artificer, making it shoot faster and more accurately than before.
+SAY NAME1 ~短弓~
+SAY NAME2 ~宁静白日梦~
+SAY DESC ~这把弓是太阳女神淑妮的护心者伊薇特的另一件爱用武器。上等木料，弓弦紧得恰到好处。一位认真的兰坦奇械师又为它精巧的工艺添了改良，使它射得更快、更准。
 
-STATISTICS:
+属性数据：
 
-Combat abilities:
-– 2.5 shots per round
-– When no arrows are equipped, the bow fires missiles that are treated as +3 for the purposes of determining what enemies they can damage. The missiles receive +2 to hit, including the bonus listed below, and deal a total of 1d4+2 piercing damage
+战斗能力：
+– 每回合射击 2.5 次
+– 未装备箭矢时，弓射出的弹丸在判定能否伤害敌人时视作 +3；弹丸获得 +2 命中（已含下列加值），并造成 1d4+2 穿刺伤害
 
-Equipped abilities:
-– Immunity to fear
+装备能力：
+– 免疫恐惧
 
-THAC0: +2
-Damage type: Piercing
-Weight: 2 lbs
-Speed factor: 2
-Profiency type: Shortbow
-Type: 2-handed~
+零级命中值：+2
+伤害类型：穿刺
+重量：2 磅
+速度值：2
+擅长类型：短弓
+类型：双手~
 
 END

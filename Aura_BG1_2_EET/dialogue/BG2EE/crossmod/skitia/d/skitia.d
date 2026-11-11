@@ -1,7 +1,7 @@
 I_C_T X3REB 1 C0AuraX3REB1
-== C0AURA2J IF ~IsValidForPartyDialog("C0Aura")~ THEN ~Oh! Hello, Recorder!~
-== X3REB ~Aura! It's so nice to see you. Have you come looking for another tome or manual? I might know what you want.~
-== C0AURA2J ~Not today, but thank you. I can always count on you to find what I need.~
+== C0AURA2J IF ~IsValidForPartyDialog("C0Aura")~ THEN ~哦！你好，记录者！~
+== X3REB ~奥拉！见到你真高兴。你是来找典籍或手册的吗？我或许知道你想要什么。~
+== C0AURA2J ~今天不用了，不过谢谢你。我总能指望你找到我需要的东西。~
 END
 
 CHAIN
@@ -10,19 +10,19 @@ Range("C0Aura",15)
 !StateCheck("X3Emi",CD_STATE_NOTVALID)
 !StateCheck("C0Aura",CD_STATE_NOTVALID)
 Global("C0AuraX3Emi1","GLOBAL",0)~ THEN BX3Emi C0AuraEmily1
-~Hey, Aura? Could I ask just a tiny favor from you?~ [C0BLANK]
+~诶，奥拉？我能请你帮个小小的忙吗？~ [C0BLANK]
 DO ~SetGlobal("C0AuraX3Emi1","GLOBAL",1)~
-== BC0AURA2 ~Sure thing! It could be a big favor too, if you need. I don't mind.~
-== BX3Emi ~Thanks, but just a little one will do. Could I try shooting with your bow?~
-== BC0AURA2 ~With my Sunshooter? Umm... that's...~
-== BX3Emi ~A little too much to ask? Never mind, then. I understand that bow means a lot to you.~
-== BC0AURA2 ~Well... yes, but I do trust you, Emily, so... it's just that it's not easy to use.~
-== BX3Emi ~I'm sure I can figure it out. You make it look so easy, after all. I'll just hold it like any other bow and...~
-== BX3Emi ~Oh, dear. Is this where the arrow goes? That's so strange. And the way these limbs bend is completely different. And what are these little wheels supposed to do?~
-== BC0AURA2 ~Those are... they're for adjusting the configuration of the... no, wait! Don't pull it like that!~
-== BX3Emi ~Ah! Umm... it, it snapped. I'm so sorry.~
-== BC0AURA2 ~No, the parts aren't broken. I can put them back together. Are you okay, though? The axle sprang awfully close to your face.~
-== BX3Emi ~I think I'm fine. But I guess I should leave this sort of instrument to the expert. *sigh* I really wanted to try shooting with it, too...~
+== BC0AURA2 ~当然！要真是个大忙也行，我不介意。~
+== BX3Emi ~谢谢，不过一点点就够。我能试试用你的弓射一箭吗？~
+== BC0AURA2 ~用我的太阳射手？呃……那个……~
+== BX3Emi ~问得有点太过分了？那就算了。我明白那把弓对你很要紧。~
+== BC0AURA2 ~嗯……是，不过我确实信你，艾米莉，所以……只是它不太好用。~
+== BX3Emi ~我肯定能弄明白。毕竟你用得那么轻松。我就照寻常的弓那样拿，然后……~
+== BX3Emi ~哦，天哪。箭是从这儿放进去的吗？真奇怪。这些肢节弯的方向也完全不一样。这些小轮子又是做什么用的？~
+== BC0AURA2 ~那些是……是用来调整……的构造的，不，等等！别那样拉！~
+== BX3Emi ~啊！呃……它、它断了。真对不起。~
+== BC0AURA2 ~不，零件没坏。我能装回去。不过你没事吧？那轮轴弹起来的时候离你的脸太近了。~
+== BX3Emi ~我想我没事。不过这类器械还是该交给行家。*叹气* 我还真想试试用它射一箭……~
 EXIT
 
 CHAIN
@@ -31,15 +31,15 @@ Range("C0Aura",15)
 !StateCheck("X3Vie",CD_STATE_NOTVALID)
 !StateCheck("C0Aura",CD_STATE_NOTVALID)
 Global("C0AuraX3Vie1","GLOBAL",0)~ THEN BC0AURA2 C0AuraVienxay1
-~Vienxay, do you have a moment?~ [C0BLANK]
+~维恩赛，你有空吗？~ [C0BLANK]
 DO ~SetGlobal("C0AuraX3Vie1","GLOBAL",1)~
-== BX3Vie ~So long as you promise not to go on one of your long-winded explanations about some irrelevant matter... what is it?~
-== BC0AURA2 ~I was just hoping you could clarify on some parts of this Elvish text I was translating. Just for... uh, academic purposes. I've got most of it, but there's a few parts here and there... "faerzress", "Adoessuour", and "leva"... "levarithen"...~
-== BX3Vie ~Levari-*thin*. By the Seldarine, if the words of my people must come from your tongue, at least make a better effort not to mangle the pronunciation.~
-== BC0AURA2 ~Oops. Yep, I understand. Sorry for that. Could you help me with these other passages too? I'll make it up to you with the best tea and baked treats I have.~
-== BX3Vie ~It sounds like a tiresome task. I've other things I would sooner do in my spare time... ugh, very well. Do not look at me like that. It is disturbing, how effective those wide eyes can be.~
-== BC0AURA2 ~Thank you!~
-== BX3Vie ~I will hold you to that promise of tea and desserts. And should this translated work become a widespread publication, I expect to be appropriately credited.~
+== BX3Vie ~只要你别又长篇大论讲些不相干的事……怎么了？~
+== BC0AURA2 ~我只是希望你能帮我厘清这段我在译的精灵文里的几处。就……呃，学术用途。大部分我都弄懂了，可这里那里有几处……“faerzress”、“Adoessuour”，还有“leva”……“levarithen”……~
+== BX3Vie ~Levari-*thin*。以席尔达林之名，既然我族的言语要从你嘴里出来，至少费点劲别把音读得七零八落。~
+== BC0AURA2 ~哎呀。嗯，我明白了。抱歉。这几段你也能帮我吗？我用我最好的茶和烘焙点心补偿你。~
+== BX3Vie ~听起来就是件累人的差事。我闲下来更情愿做别的事……唉，算了。别那样看我。你那双大眼睛还真管用，怪吓人的。~
+== BC0AURA2 ~谢谢！~
+== BX3Vie ~这茶和点心的承诺我可是记住了。还有，要是这份译文将来流传开来，我希望得到应有的署名。~
 EXIT
 
 CHAIN
@@ -48,31 +48,31 @@ Range("C0Aura",15)
 !StateCheck("X3Rec",CD_STATE_NOTVALID)
 !StateCheck("C0Aura",CD_STATE_NOTVALID)
 Global("C0AuraX3Rec1","GLOBAL",1)~ THEN BX3Reb C0AuraRecorder1
-~"Hmm-hm-hmm-hmm..."~ [C0BLANK]
+~“哼—哼—哼哼……”~ [C0BLANK]
 DO ~SetGlobal("C0AuraX3Rec1","GLOBAL",2)~
-== BX3Reb ~"Free of the Dungeons Deep, to be wet by rain's boon." 
-Then sun gave night away, clouds hiding rising moon.
-Colder than dungeon depths, By campfire we all lay.
-To rest our weary heads, until break ere of day."~
-== BC0AURA2 ~Care for a spot of tea, Recorder? I just finished brewing some on the kettle, and there's more than enough to go around.~
-== BX3Reb ~Oh, how kind. I just realized how parched my throat was. I'll have it with lemon and a teaspoon of honey, if we have any.~
-== BC0AURA2 ~Lemon and honey, coming up! Here you go. Let's drink up while it's still nice and hot.~
-== BX3Reb ~Mmm, valerian tea from Anchoril. I haven't had this in far too long... the relaxing scent is so nostalgic.~
-== BC0AURA2 ~Wow, and you even know where it came from? Although... you were born in Lantan, weren't you, Recorder? Then it would make sense.~
-== BX3Reb ~Indeed. I lived close to Hyacinth Fields, where valerian tea was harvested. The breeze would often carry the fragrance through our home. That's why I called it nostalgic.~
-== BC0AURA2 ~You're from Anchoril too? I didn't even know that! We grew up so close to each other. It's such a shame we never met! I wish we did.~
-== BX3Reb ~I agree, that would have been a lovely coincidence. But did you not leave to Sambar to study under the academy at a young age? I don't believe we would have been there at the same time for long.~
-== BC0AURA2 ~That's true. Still, I would've been happy to know you sooner.~
-== BX3Reb ~I believe I have met one of your sisters, however. She was a Seeker-in-training at the High Holy Crafthouse of Inspiration, I believe. Luna, was it? Violet hair?~
-== BC0AURA2 ~Heehee, that's her. Hasn't ever tried a different colour as far as I remember. Oh... she wasn't, um, rude to you in any way, was she?~
-== BX3Reb ~No, not at all. She wasn't the friendliest, I admit, but she was as accomodating as anyone could ask for. She seemed worthy of her station.~
-== BC0AURA2 ~That's... good to hear. I remember she was never particularly happy about joining the clergy... not that she ever complained, but...~
-== BX3Reb ~Aura... if this is a family matter, you don't have to tell me.~
-== BC0AURA2 ~Thank you, Recorder. It's not that big of a deal. I just... wasn't thinking of it at all until now.~
-== BX3Reb ~I'm so sorry. I didn't mean to bring up unhappy memories.~
-== BC0AURA2 ~It's okay. I'm glad we talked anyway. After I learned we share a birthplace, I feel like we're closer than before.~
-== BX3Reb ~Heehee, absolutely. It's wonderful to find such connections among friends.~
-== BC0AURA2 ~Anyways, let's get back to finishing this tea before it gets cold. We should spend more time together like this, don't you agree?~
+== BX3Reb ~“地牢深处已脱身，任凭雨露沾衣襟。”
+随后日轮让位给夜，云遮初升月。
+比地牢深处更寒，我们围着篝火同卧。
+让疲乏的头得以歇息，直到黎明破晓。~
+== BC0AURA2 ~记录者，来杯茶吗？我刚在壶里煮好一些，够大家分的。~
+== BX3Reb ~哦，你真好心。我这才发觉自己渴得厉害。要是有的话，给我加片柠檬和一匙蜂蜜。~
+== BC0AURA2 ~柠檬加蜂蜜，马上来！给你。趁还热乎，我们喝了吧。~
+== BX3Reb ~嗯，安科里尔的缬草茶。我太久没喝到了……这股安神的香气真叫人怀念。~
+== BC0AURA2 ~哇，你连它是哪儿来的都知道？不过……记录者，你是在兰坦出生的，对吧？那就说得通了。~
+== BX3Reb ~确实。我住在风信子田附近，那儿收缬草做茶。风常把那香气吹进我们家里。所以我才说它令人怀念。~
+== BC0AURA2 ~你也是安科里尔人？我竟不知道！我们小时候住得那么近。一直没遇见，真是太可惜了！真希望当时能碰上。~
+== BX3Reb ~我也这么想，那本会是个可爱的巧合。可你不是年纪小小就去桑巴尔学院求学了？我想我们不会在那儿碰上太久。~
+== BC0AURA2 ~这话没错。不过我还是希望早些认识你。~
+== BX3Reb ~不过我大概见过你的一位姐妹。我想她当时在灵感圣工堂受训，做见习探求者。是叫露娜吗？紫头发？~
+== BC0AURA2 ~嘿嘿，就是她。我记得她从没试过别的颜色。哦……她没，呃，对你无礼吧？~
+== BX3Reb ~不，一点也不。我承认她不是最和善的人，可她待人接物的周到，谁也说不出什么。她似乎配得上她的身份。~
+== BC0AURA2 ~那……听你这么说就好。我记得她对入教团从来不怎么高兴……倒不是她抱怨过，只是……~
+== BX3Reb ~奥拉……要是这是家里的事，你不必跟我说。~
+== BC0AURA2 ~谢谢你，记录者。这没什么大不了的。我只是……到现在才想到这件事。~
+== BX3Reb ~真抱歉。我不是有意提起不快的往事。~
+== BC0AURA2 ~没事。不管怎样，我很高兴我们聊了。知道我们同乡之后，我觉得我们比以前近了。~
+== BX3Reb ~嘿嘿，当然。在朋友之间找到这样的渊源，真好。~
+== BC0AURA2 ~总之，趁茶还没凉，我们把它喝完吧。我们该多这样待在一起，你不觉得吗？~
 EXIT
 
 CHAIN
@@ -81,16 +81,16 @@ Range("C0Aura",15)
 !StateCheck("X3Rec",CD_STATE_NOTVALID)
 !StateCheck("C0Aura",CD_STATE_NOTVALID)
 Global("C0AuraX3Rec2","GLOBAL",0)~ THEN BX3Reb C0AuraRecorder2
-~Pardon me, Aura, but I had a question... your grandmother was Minerva Glimmershine, correct?~ [C0BLANK]
+~抱歉，奥拉，我有个问题……你祖母是密涅瓦·格利默夏恩，对吧？~ [C0BLANK]
 DO ~SetGlobal("C0AuraX3Rec2","GLOBAL",1)~
-== BC0AURA2 ~That's right. We're related on my father's side. Although I never met her...~
-== BX3Reb ~It just crossed my mind to ask because of a book I recently had the chance to revisit. It was written by her, and it spoke of her adventures in Icewind Dale, in distant Frozenfar.~
-== BC0AURA2 ~Ooh, that... haha, yep. I've read that one too. My father has so many copies in his study, mother actually had to order him to stop collecting them. I think it's his way of remembering her. What do you think of the book?~
-== BX3Reb ~Such a thrilling read. If all those tales were true, of serpents and demons and white dragons, your grandmother must have been an incredible adventurer.~
-== BC0AURA2 ~That's what father told me, too. She was as adventurous as her mind was brilliant. She hasn't returned to Lantan in decades, though... that book was the last time she was heard from at all, eighty years ago.~
-== BX3Reb ~Eighty years... even for our kin, that is too long to spend apart. I hope she returns to Lantan one day.~
-== BC0AURA2 ~Kinda funny how she didn't give her book a name, though. I've seen it under at least eight different titles. That's just like her... I've been told so many stories of how lackadaisical she was with things like that.~
-== BX3Reb ~Truly? She must have had an interesting character. Now I want to meet her even more.~
-== BC0AURA2 ~That makes both of us. If either of us do one day, let's tell the other about it. She must have even more stories to tell than in that book!~
-== BX3Reb ~I concur. I'll be there with pen and parchment in hand, ready to scribe down every tale.~
+== BC0AURA2 ~没错。我们是我父亲那一支的亲戚。只是我从没见过她……~
+== BX3Reb ~我会问起，是因为我最近有机会重读了一本书。那是她写的，讲她在遥远的霜原、冰风谷的冒险。~
+== BC0AURA2 ~哦，那本……哈哈，对。那本我也读过。我父亲书房里有好多本，我母亲后来不得不下令让他别再收了。我想那是他记着她的法子。你觉得那本书怎么样？~
+== BX3Reb ~读起来真是惊心动魄。要是那些关于巨蛇、恶魔与白龙的故事都是真的，你祖母一定是位了不起的冒险者。~
+== BC0AURA2 ~父亲也是这么跟我说的。她有多爱冒险，脑子就有多灵光。可她几十年没回兰坦了……那本书是八十年前最后一次有她消息。~
+== BX3Reb ~八十年……就算对我们这一族来说，分开也太久了。希望她有一天回兰坦。~
+== BC0AURA2 ~不过说来好笑，她没给自己的书取名。我至少见过八个不同的书名。就像她的作风……我听人讲过好多她在这种事上多散漫的故事。~
+== BX3Reb ~当真？她的性子一定很有意思。我现在更想见到她了。~
+== BC0AURA2 ~那我们俩都一样。要是哪天我们谁真找着了她，就告诉另一个。她的故事一定比那本书里的还多！~
+== BX3Reb ~我同意。到时我会带着笔和羊皮纸到场，把每个故事都记下来。~
 EXIT
