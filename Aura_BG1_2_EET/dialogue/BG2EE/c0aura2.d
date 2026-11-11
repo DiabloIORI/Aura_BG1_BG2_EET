@@ -432,7 +432,7 @@ Kit(Player1,FERALAN)~ + ~你是学者，可我注意到你穿着盔甲，也看�
 
 CHAIN C0AURA2 INTRO-DIALOG-2-7
 ~嗯，全数出来要些时间，可真是各种各样。谷区、阿格拉隆德、琼达斯……北方去得少些，听说在那儿活下来很苦……也去过费伦以外的几片土地——玛兹特克和卡拉图……其实我不久前还在科祖库拉住过几年。~
-DO ~SetGlobal("C0AuraBackgroundTalk","GLOBAL",1)~ 
+DO ~SetGlobal("C0AuraBackgroundTalk","MYAREA",1)~ 
 = ~多半时候我不是一个人，可我很久前失散了随行的人，早在我定居这儿之前……那可是个长故事。~
 END
 + ~!Global("C0AuraBattleTalk","GLOBAL",1)

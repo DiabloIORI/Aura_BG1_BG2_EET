@@ -188,7 +188,7 @@ Range("C0Aura",15)
 OR(2)
 !Global("C0AuraMatch","GLOBAL",1)
 Global("C0AuraRomanceActive","GLOBAL",3)
-Global("C0AuraImoenToB","GLOBAL",1)~ THEN BC0AUR25 C0AuraImoenToB2
+Global("C0AuraImoenToB1","GLOBAL",1)~ THEN BC0AUR25 C0AuraImoenToB2
 ~嘿，呃……爱蒙……~ [C0BLANK]
 DO ~SetGlobal("C0AuraImoenToB1","GLOBAL",2)~
 == BIMOEN25 ~怎么了？~

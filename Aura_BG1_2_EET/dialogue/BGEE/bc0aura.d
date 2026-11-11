@@ -403,7 +403,7 @@ AreaType(CITY)
 ClassLevelGT("Faldorn",PRIEST,6)
 Global("C0AuraFaldorn2","GLOBAL",0)~ THEN %FALDORN_BANTER% C0AuraFaldorn1
 ~呃！可憎的造物，自然的亵渎者！我全都憎恨。~
-DO ~SetGlobal("C0AuraFaldorn1","GLOBAL",1)~
+DO ~SetGlobal("C0AuraFaldorn2","GLOBAL",1)~
 == BC0AURA ~你看着气得不轻，法尔多恩。你——你不会是要变成熊吧？~
 == %FALDORN_BANTER% ~那倒是个合适的表演，能给这些无知的凡人心里种下恐惧！自然赐我变化之赋，就该以她之名使用！~
 == BC0AURA ~呀！我不是认真的！求你，变成什么都行，就是别变熊！~
