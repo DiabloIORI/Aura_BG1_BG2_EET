@@ -58,6 +58,10 @@ LANGUAGE
   ~english~
   ~%MOD_FOLDER%/tra/english/setup.tra~
 
+  ~Schinese~ 
+  ~schinese~
+  ~%MOD_FOLDER%/tra/schinese/setup.tra~
+
 BEGIN ~Aura NPC for Baldur's Gate: Enhanced Edition~ DESIGNATED 0
   REQUIRE_PREDICATE (GAME_IS ~BGEE~) ~This component must be installed on BG:EE.~
 
