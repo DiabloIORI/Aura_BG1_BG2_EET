@@ -1,4 +1,4 @@
-LOAD_TRA ~%MOD_FOLDER%/tra/english/BG1/setup.tra~
+LOAD_TRA ~%MOD_FOLDER%/tra/%LANGUAGE%/setup.tra~
 
 APPEND ~STATE.IDS~ // adds custom IsValidForPartyDialogue state
   ~0x80101FEF CD_STATE_NOTVALID~
@@ -569,8 +569,8 @@ END
 
 // JOURNAL
 
-ADD_JOURNAL TITLE (%Aura's Tale%) @10001 @10002 @10003 @10004 @10005 @10006 @10007 @10008 @10009 USING ~%MOD_FOLDER%/tra/english/setup.tra~
-ADD_JOURNAL TITLE (%Amanokagami Reika%) @20001 @20002 USING ~%MOD_FOLDER%/tra/english/setup.tra~
+ADD_JOURNAL TITLE (%Aura's Tale%) @10001 @10002 @10003 @10004 @10005 @10006 @10007 @10008 @10009 USING ~%MOD_FOLDER%/tra/%LANGUAGE%/setup.tra~
+ADD_JOURNAL TITLE (%Amanokagami Reika%) @20001 @20002 USING ~%MOD_FOLDER%/tra/%LANGUAGE%/setup.tra~
 
 // DIALOGUE
   

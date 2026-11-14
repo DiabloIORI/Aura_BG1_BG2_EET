@@ -369,7 +369,7 @@ OUTER_SET %quest_snow_kiss% = RESOLVE_STR_REF (~永久加成：雪女之吻
 与异界存在产生联系时，结果或危险，或意外地亲昵。冬之精怪雪女的好感，是种奇特的暖心之物，那份温柔的记忆会伴你经年。因受雪女之吻，你永久获得寒冷抗性 +10%、寒冷伤害 +10%，以及对抗死亡豁免 +1。~)
 
 LOAD_TRA ~%MOD_FOLDER%/tra/%LANGUAGE%/BG2/journal.tra~
-ADD_JOURNAL EXISTING TITLE (#74427) @1 USING ~%MOD_FOLDER%/tra/english/BG2/journal.tra~
+ADD_JOURNAL EXISTING TITLE (#74427) @1 USING ~%MOD_FOLDER%/tra/%LANGUAGE%/BG2/journal.tra~
 OUTER_SET %Aura_Quest_Skinner_Entry% = RESOLVE_STR_REF (@1)
 
 ADD_JOURNAL TITLE (~Experto crede~) @1001 USING ~%MOD_FOLDER%/tra/%LANGUAGE%/BG2/journal.tra~
