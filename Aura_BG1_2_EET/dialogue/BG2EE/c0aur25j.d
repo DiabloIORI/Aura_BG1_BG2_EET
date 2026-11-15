@@ -440,11 +440,11 @@ EXTEND_BOTTOM FSRIDD 3
 END
 
 CHAIN C0AUR25J watch.imp.riddle
-~嗯……让我想想……只有当这小恶魔是雌性才说得通，那答案只能是……七？~
+~嗯……让我想想……只有当这小魔鬼是雌性才说得通，那答案只能是……七？~
 EXTERN FSRIDD watch.imp.riddle.1
 
 CHAIN C0AURA2J watch.imp.riddle
-~嗯……让我想想……只有当这小恶魔是雌性才说得通，那答案只能是……七？~
+~嗯……让我想想……只有当这小魔鬼是雌性才说得通，那答案只能是……七？~
 EXTERN FSRIDD watch.imp.riddle.1
 
 EXTEND_BOTTOM FSRIDD 4
