@@ -1384,7 +1384,7 @@ SAY UNIDENTIFIED_DESC ~能量弹幕
 COPY_EXISTING ~c0rune1.spl~ ~override/c0rune4.spl~
 SAY NAME1 ~月蝶~
 SAY UNIDENTIFIED_DESC ~月蝶
-（幻术/幻影系）
+（幻术系/幻影系）
 
 范围：40 尺
 持续时间：特殊
@@ -1556,7 +1556,7 @@ SAY NAME2 ~月狂符文~
 SAY DESC ~此符文可像普通魔杖一样激活。使用时，所刻法术可以立即释放，也可灌注到目标身上，在特定触发条件下（发现敌人、被击中、生命值降至 50%、生命值降至 25%、陷入无力）发动。灌注的符文集从刻制时起可维持八小时，每个目标身上只能灌注一枚。
 
 月蝶
-（幻术/幻影系）
+（幻术系/幻影系）
 
 范围：40 尺
 持续时间：特殊
@@ -1988,7 +1988,7 @@ SAY UNIDENTIFIED_DESC ~能量弹幕
 COPY_EXISTING ~c0arune4.spl~ ~override~
 SAY NAME1 ~月蝶~
 SAY UNIDENTIFIED_DESC ~月蝶
-（幻术/幻影系）
+（幻术系/幻影系）
 
 范围：40 尺
 持续时间：特殊

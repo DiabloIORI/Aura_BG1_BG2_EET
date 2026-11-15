@@ -123,7 +123,7 @@ END
 ++ ~我不掺和这个。~ EXTERN BC0AURA2 C0AuraAerieKorganConflict4
 
 CHAIN BC0AURA2 C0AuraAerieKorganConflict2
-~你看。<CHARNAME>站我这边。你至少听<PRO_HIMHER>的吧？~
+~你看。<CHARNAME>站我这边。你至少听<PRO_HESHE>的吧？~
 == BKORGAN ~呸！你们这么惯着她，那软骨头丫头早晚被捂死。~
 EXTERN BC0AURA2 C0AuraAerieKorganConflict5
 
@@ -346,7 +346,7 @@ DO ~SetGlobal("C0AuraAnomen1","GLOBAL",1)~
 == BC0AURA2 ~哎，真没礼貌！我还没做什么冒犯你的事吧？~
 == BANOMEN ~我在农民里见过太多你这类人，至今没见一个配得上他占的那块地。我不会让你白占我们的善意、什么都不给。~ 
 == BANOMEN ~你若自认是个例外，就证明自己。~
-== BC0AURA2 ~证明我——<CHARNAME>才是这儿的队长，所以我要向<PRO_HIMHER>证明自己，多谢了！你怎么不证明你自己，嗯？~
+== BC0AURA2 ~证明我——<CHARNAME>才是这儿的队长，所以我要向<PRO_HESHE>证明自己，多谢了！你怎么不证明你自己，嗯？~
 == BANOMEN ~那大可不必。我是极负声望的骑士团的尊贵成员，出身贵族，与你不同。我有什么要证明的？~
 == BC0AURA2 ~呸。你是个大混蛋，你知道吗？~
 EXIT

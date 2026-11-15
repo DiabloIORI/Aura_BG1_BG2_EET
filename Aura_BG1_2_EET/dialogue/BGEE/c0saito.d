@@ -67,7 +67,7 @@ CHAIN IF ~Global("C0AuraQuest","GLOBAL",9)~ THEN C0SAITO saito3
 ~我明白了……你为我布下这华丽的陷阱。真是了不起，近卫……我完全没料到。这一定就是你们这族人引以为傲的武器……用你们的话叫什么？“烟粉”？~
 == C0AURAP ~没错。你已经见过了，斋藤先生……第一次，也是最后一次。~
 == C0SAITO ~可你低估了我。如你所见，我还活得好好的。你只有这一次机会……而你失手了。~
-== C0AURAP ~不……还不是时候。<CHARNAME>还站在我身边。我要相信<PRO_HIMHER>。斋藤先生……对不起。该结束这一切了。~
+== C0AURAP ~不……还不是时候。<CHARNAME>还站在我身边。我要相信<PRO_HESHE>。斋藤先生……对不起。该结束这一切了。~
 == C0SAITO ~很好。我斋藤忠桥在战阵上从未尝过败绩。手持此刀，我刀锋所向，几近无敌。来吧，蠢货们，有胆就来面对我。~
 DO ~ActionOverride("C0Aura",JoinParty())
 ActionOverride("C0Aura",SetGlobal("%KICKED_OUT%","LOCALS",0))

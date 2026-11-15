@@ -475,7 +475,7 @@ CHAIN C0AURAJ t7.3
 EXTERN C0AURAJ t7.4
 
 CHAIN C0AURAJ t7.4
-~来，坐下随便挑！壶里有玫瑰茶，点心也多得是。酪乳饼干、杏仁饼干、卡拉图米糕、巧克力蛋糕、柠檬蛋糕、蜜饯果子……~
+~来，坐下随便挑！壶里有玫瑰茶，点心也多得是。酪乳饼干、杏仁饼干、卡拉-图米糕、巧克力蛋糕、柠檬蛋糕、蜜饯果子……~
 END
 ++ ~这点心种类又多又杂。你都是从哪儿弄来的？~ + t7.5
 ++ ~那我就挑了。谢了，奥拉。~ + t7.6
@@ -689,7 +689,7 @@ EXTERN C0AURAJ t10.7
 
 CHAIN C0AURAJ t10.7
 ~呃……总之，我请你坐过来不是为了谈我们的感受。我确实有样东西想分享。~
-= ~给。这是“清酒”，卡拉图的酒。这一小壶我一直带在身边……从我离开科祖库拉起。我平时不喝酒，不过……这是跟亲近的人分享的好东西。~
+= ~给。这是“清酒”，卡拉-图的酒。这一小壶我一直带在身边……从我离开科祖库拉起。我平时不喝酒，不过……这是跟亲近的人分享的好东西。~
 END
 ++ ~你怎么会有这种东西？~ + t10.9
 ++ ~呃……“清——酒”？是用什么做的？~ + t10.10
@@ -862,13 +862,13 @@ I_C_T CHESS 0 C0AuraCHESS0
 END
 
 INTERJECT CORAN 4 C0AuraCORAN
-== C0AURAJ IF ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~哦……可以吗，<CHARNAME>？求你了？我从没见过活的翼龙，不过据说它们很可爱！~
+== C0AURAJ IF ~InParty("C0Aura") InMyArea("C0Aura") !StateCheck("C0Aura",CD_STATE_NOTVALID)~ THEN ~哦……可以吗，<CHARNAME>？求你了？我从没见过活的双足飞龙，不过据说它们很可爱！~
 END
-++ ~你觉得翼龙……可爱？~ EXTERN C0AURAJ C0AuraCORAN2
+++ ~你觉得双足飞龙……可爱？~ EXTERN C0AURAJ C0AuraCORAN2
 
 CHAIN C0AuraJ C0AuraCORAN2
 ~这什么意思？你不觉得它们可爱？~
-== CORAN ~换我我可不愿让这位小姐失望，朋友。去打点翼龙怎么样？~
+== CORAN ~换我我可不愿让这位小姐失望，朋友。去打点双足飞龙怎么样？~
 COPY_TRANS CORAN 4
 
 I_C_T CUTCHAR 0 C0AuraCUTCHAR0
@@ -1960,7 +1960,7 @@ IF ~Global("EndofBG1","GLOBAL",0) IsGabber(Player1) CombatCounter(0) !Detect([EN
  Global("C0AuraAskBears","GLOBAL",0)~ + ~那么……你为什么怕熊？~ DO ~SetGlobal("C0AuraAskBears","GLOBAL",1)~ + bears
  + ~Global("C0AuraAskRunes","GLOBAL",0)~ + ~你铭刻魔法符文的本事是从哪儿学的？~ DO ~SetGlobal("C0AuraAskRunes","GLOBAL",1)~ + runes
  ++ ~我想问你几件关于兰坦的事。~ + lantan
- + ~GlobalGT("C0AuraTalk","GLOBAL",8)~ + ~我想问你几件关于卡拉图的事。~ + karatur
+ + ~GlobalGT("C0AuraTalk","GLOBAL",8)~ + ~我想问你几件关于卡拉-图的事。~ + karatur
  + ~GlobalGT("C0AuraQuest","GLOBAL",8)
 	Global("C0AuraAskExplosives","GLOBAL",0)~ + ~你会做爆炸性武器，对吧？能不能做一些帮我们打仗？~ DO ~SetGlobal("C0AuraAskExplosives","GLOBAL",1)~ + explosives
  + ~Global("C0AuraTalkStopped","GLOBAL",0)~ + ~我想让你停一阵子别再来找我说话。~ DO ~SetGlobal("C0AuraTalkStopped","GLOBAL",1)~ + notalk
@@ -1988,7 +1988,7 @@ IF ~~ pid2
  Global("C0AuraAskBears","GLOBAL",0)~ + ~那么……你为什么怕熊？~ DO ~SetGlobal("C0AuraAskBears","GLOBAL",1)~ + bears
  + ~Global("C0AuraAskRunes","GLOBAL",0)~ + ~你铭刻魔法符文的本事是从哪儿学的？~ DO ~SetGlobal("C0AuraAskRunes","GLOBAL",1)~ + runes
  ++ ~我想问你几件关于兰坦的事。~ + lantan
- + ~GlobalGT("C0AuraTalk","GLOBAL",8)~ + ~我想问你几件关于卡拉图的事。~ + karatur
+ + ~GlobalGT("C0AuraTalk","GLOBAL",8)~ + ~我想问你几件关于卡拉-图的事。~ + karatur
  + ~GlobalGT("C0AuraQuest","GLOBAL",8)
 	Global("C0AuraAskExplosives","GLOBAL",0)~ + ~你会做爆炸性武器，对吧？能不能做一些帮我们打仗？~ DO ~SetGlobal("C0AuraAskExplosives","GLOBAL",1)~ + explosives
  + ~Global("C0AuraTalkStopped","GLOBAL",0)~ + ~我想让你停一阵子别再来找我说话。~ DO ~SetGlobal("C0AuraTalkStopped","GLOBAL",1)~ + notalk
@@ -2140,10 +2140,10 @@ END
 
 IF ~~ karatur
 SAY ~当然，尽管问。我知道的都告诉你。~
-++ ~给我讲讲卡拉图的基本地理。~ + karatur.geography
+++ ~给我讲讲卡拉-图的基本地理。~ + karatur.geography
 ++ ~住在科祖库拉是什么感觉？~ + karatur.living
 + ~Class("C0Aura",CLERIC_ALL)~ + ~你能使用神术，却从不呼唤神名。这怎么可能？~ + karatur.priestess
-+ ~Global("C0AuraKaraLanguage","GLOBAL",0)~ + ~你会说卡拉图的语言吗？~ DO ~SetGlobal("C0AuraKaraLanguage","GLOBAL",1)~ + karatur.language
++ ~Global("C0AuraKaraLanguage","GLOBAL",0)~ + ~你会说卡拉-图的语言吗？~ DO ~SetGlobal("C0AuraKaraLanguage","GLOBAL",1)~ + karatur.language
 + ~Global("C0AuraKaraLanguage","GLOBAL",1) RandomNum(3,1)~ + ~你能用科祖库拉话说点什么吗？~ + karatur.language.proverb1
 + ~Global("C0AuraKaraLanguage","GLOBAL",1) RandomNum(3,2)~ + ~你能用科祖库拉话说点什么吗？~ + karatur.language.proverb2
 + ~Global("C0AuraKaraLanguage","GLOBAL",1) RandomNum(3,3)~ + ~你能用科祖库拉话说点什么吗？~ + karatur.language.proverb3
@@ -2156,14 +2156,14 @@ END
 
 IF ~~ karatur.priestess
 SAY ~嗯……这说起来复杂。科祖库拉的神明跟我们更熟悉的那类不太一样。它更像是……追随某一种理想，而不是某个有名有姓的存在。我知道这听着怪，可是……它更像是向世间的自然之力祈求医治、守护或伤害。没有特定的神明可呼唤。~
-= ~让我觉得奇怪的是……即便离开了科祖库拉，我从丽华小姐那里学来的祷文仍然有回应，效力一点也没减，尽管出了卡拉图就不一样了……~
+= ~让我觉得奇怪的是……即便离开了科祖库拉，我从丽华小姐那里学来的祷文仍然有回应，效力一点也没减，尽管出了卡拉-图就不一样了……~
 = ~这我真解释不了。我不是真正的女祭司，我只是学会了正确的祷文、熟悉了那些声音的人。只有真正受过道的教导的信徒才可能知道。~
 ++ ~我明白了。我还有别的想问。~ + karatur
 ++ ~目前就这些。~ + end
 END
 
 IF ~~ karatur.geography
-SAY ~卡拉图在极东之地。你可能听说过它治下的一些国家。守龙、塔博特、马拉特拉、倭、科祖库拉……这只是其中几个。~
+SAY ~卡拉-图在极东之地。你可能听说过它治下的一些国家。守龙、塔博特、马拉特拉、倭、科祖库拉……这只是其中几个。~
 = ~科祖库拉跟别的国家有点不同。它由几座大岛组成，很像兰坦。我住在南方四座主岛之一的御剑殿。~
 = ~它不像都城土州那样大、那样富，但仍是个美丽的地方，有看不尽的森林和雾气弥漫的山谷。~
 ++ ~我明白了。我还有别的想问。~ + karatur
@@ -2207,7 +2207,7 @@ SAY ~“猫得金币”——把宝物给不识其价值的人，讲的正是这
 END
 
 IF ~~ reika
-SAY ~丽华小姐是我被冲上岸的那座科祖库拉岛——御剑殿——上一座神社的女祭司。我初到异乡时是个迷途的孩子，茫然失措，记忆大半都失了……可丽华小姐待我很好，教我卡拉图的语言，像母亲一样对我。~
+SAY ~丽华小姐是我被冲上岸的那座科祖库拉岛——御剑殿——上一座神社的女祭司。我初到异乡时是个迷途的孩子，茫然失措，记忆大半都失了……可丽华小姐待我很好，教我卡拉-图的语言，像母亲一样对我。~
 = ~她是个孤僻的人，独居，日子都用来照料神社、遵行开悟之道，跟我认识的大多数向八百万神祈祷的科祖库拉人不同。她临终前要我去给她的侄女传话——那侄女背弃了道……~
 + ~GlobalGT("C0AuraTamoko","GLOBAL",1) Global("C0AuraAskTamoko","GLOBAL",0)~ + ~你知道塔摩科是她侄女吗？~ + reika.tamoko
 ++ ~我明白了。我还有别的想问。~ + karatur

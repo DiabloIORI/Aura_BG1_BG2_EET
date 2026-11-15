@@ -382,7 +382,7 @@ SetGlobal("Upgraded","LOCALS",1)~ EXIT
 ClassLevelGT(Lasttalkedtoby(Myself),ROGUE,11)
 PartyHasItem("scrl6m")
 PartyGoldGT(4999)
-PartyHasItem("blun21")~ + ~\[钉头锤 +2\] 升级为强化锋刃 II。~ DO ~SetGlobal("C0AutoUpgradeOffense1","GLOBAL",1)
+PartyHasItem("blun21")~ + ~\[硬头锤 +2\] 升级为强化锋刃 II。~ DO ~SetGlobal("C0AutoUpgradeOffense1","GLOBAL",1)
 TakePartyItem("blun21")
 DestroyItem("blun21")
 TakePartyItemNum("scrl6m",1)
@@ -577,7 +577,7 @@ SetGlobal("Upgraded","LOCALS",1)~ EXIT
 CHAIN C0AUIN3 UPGRADE-WEAPON-IMPACT-3
 ~冲击武器 III：本机的钝击攻击造成额外 15% 钝击伤害，且其钝击攻击有 25% 几率使目标在对抗死亡豁免 -4 的检定失败时陷入震慑。
 
-需求：18 级奇械师，战锤 +3 一把，毕格比粉碎掌卷轴一张，12,000 金币~
+需求：18 级奇械师，战锤 +3 一把，比格拜粉碎掌卷轴一张，12,000 金币~
 END
 + ~Kit(Lasttalkedtoby(Myself),C0AURA)
 ClassLevelGT(Lasttalkedtoby(Myself),ROGUE,17)
